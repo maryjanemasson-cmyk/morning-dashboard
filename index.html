@@ -126,8 +126,20 @@
     }
     .mini-cal td {
       text-align: center; padding: 0.25rem; font-size: 0.72rem; color: #6b5d4d;
-      cursor: default; position: relative;
+      cursor: pointer; position: relative;
+      transition: background 0.15s;
     }
+    .mini-cal td:hover:not(.other-month) { background: #f5f0e8; border-radius: 4px; }
+    .mini-cal td.selected {
+      font-weight: 700; color: #fff;
+    }
+    .mini-cal td.selected::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #c9b99a; z-index: 0;
+    }
+    .mini-cal td.selected span { position: relative; z-index: 1; }
     .mini-cal td.today {
       font-weight: 700; color: #fff;
     }
@@ -630,7 +642,65 @@
       } catch(e) { document.getElementById('weather-content').innerHTML = '<span style="color:#b8a48e">Unavailable</span>'; }
     }
 
-    // ── Mini Calendar ──
+    // ── Mini Calendar (interactive) ──
+    let selectedCalDate = null;
+
+    function getEventsForDate(dateStr) {
+      const monthEvents = window.MONTH_EVENTS || [];
+      const results = [];
+      for (const ev of monthEvents) {
+        const evDate = ev.startTime ? ev.startTime.slice(0, 10) : (ev.startDate || '');
+        const evEnd = ev.endDate || evDate;
+        // Check if dateStr falls within a multi-day event range
+        if (ev.startDate && ev.endDate) {
+          if (dateStr >= ev.startDate && dateStr < ev.endDate) results.push(ev);
+        } else if (evDate === dateStr) {
+          results.push(ev);
+        }
+      }
+      return results;
+    }
+
+    function onCalDayClick(day) {
+      const now = new Date();
+      const dateStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      selectedCalDate = dateStr;
+      renderMiniCalendar();
+      showDayEvents(dateStr, day);
+    }
+
+    function showDayEvents(dateStr, day) {
+      const events = getEventsForDate(dateStr);
+      const d = new Date(dateStr + 'T12:00:00');
+      const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const label = `${dayNames[d.getDay()]}, ${d.toLocaleDateString('en-US', {month:'long', day:'numeric'})}`;
+
+      function fmtTime(s) { if (!s) return null; return new Date(s).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}); }
+
+      let html = `<div class="cal-day-section">
+        <div class="cal-day-header">${label}</div>`;
+      if (events.length === 0) {
+        html += '<div class="cal-empty">Nothing scheduled</div>';
+      } else {
+        events.forEach(ev => {
+          const s = fmtTime(ev.startTime), e = fmtTime(ev.endTime);
+          const t = s ? `${s} \u2013 ${e}` : 'All day';
+          const loc = ev.location ? `<div class="cal-location">${ev.location}</div>` : '';
+          html += `<div class="cal-event"><div class="cal-time-pip"></div><div class="cal-info"><div class="cal-title">${ev.summary}</div><div class="cal-time">${t}</div>${loc}</div></div>`;
+        });
+      }
+      html += '</div>';
+      // Add a "back to today" link
+      html += `<div style="text-align:center;margin-top:0.5rem;"><span style="font-size:0.7rem;color:#b8a48e;cursor:pointer;text-decoration:underline dotted;" onclick="resetToToday()">Back to today/tomorrow</span></div>`;
+      document.getElementById('calendar-events').innerHTML = html;
+    }
+
+    function resetToToday() {
+      selectedCalDate = null;
+      renderMiniCalendar();
+      renderCalendar();
+    }
+
     function renderMiniCalendar() {
       const now = new Date();
       const year = now.getFullYear(), month = now.getMonth();
@@ -640,14 +710,23 @@
       const today = now.getDate();
       const monthName = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
-      // Collect event dates
+      // Collect event dates from MONTH_EVENTS
       const eventDates = new Set();
-      const events = window.CALENDAR_EVENTS || [];
-      const weekData = window.WEEK_DATA || [];
-      [...events, ...weekData].forEach(ev => {
-        const ds = ev.startTime ? ev.startTime.slice(8,10) : (ev.startDate ? ev.startDate.slice(8,10) : (ev.date ? ev.date.slice(8,10) : ''));
+      const monthEvents = window.MONTH_EVENTS || [];
+      monthEvents.forEach(ev => {
+        const ds = ev.startTime ? ev.startTime.slice(8,10) : (ev.startDate ? ev.startDate.slice(8,10) : '');
         if (ds) eventDates.add(parseInt(ds));
+        // Multi-day events
+        if (ev.startDate && ev.endDate) {
+          const s = new Date(ev.startDate + 'T12:00:00');
+          const e = new Date(ev.endDate + 'T12:00:00');
+          for (let d = new Date(s); d < e; d.setDate(d.getDate()+1)) {
+            if (d.getMonth() === month) eventDates.add(d.getDate());
+          }
+        }
       });
+
+      const selectedDay = selectedCalDate ? parseInt(selectedCalDate.slice(8,10)) : null;
 
       let html = `<div class="mini-cal"><div class="mini-cal-header"><span class="mini-cal-month">${monthName}</span></div>`;
       html += '<table><tr>';
@@ -663,8 +742,9 @@
       for (let d = 1; d <= daysInMonth; d++) {
         let cls = '';
         if (d === today) cls += ' today';
+        if (d === selectedDay && d !== today) cls += ' selected';
         if (eventDates.has(d)) cls += ' has-event';
-        html += `<td class="${cls.trim()}"><span>${d}</span></td>`;
+        html += `<td class="${cls.trim()}" onclick="onCalDayClick(${d})"><span>${d}</span></td>`;
         dayCount++;
         if (dayCount % 7 === 0 && d < daysInMonth) html += '</tr><tr>';
       }
