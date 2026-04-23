@@ -531,7 +531,33 @@
     <div class="last-updated" id="last-updated"></div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="calendar-data.js"></script>
+  <script>
+    // ── Firebase Setup ──
+    const firebaseConfig = {
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+      storageBucket: "morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId: "289564921391",
+      appId: "1:289564921391:web:4ed9e388d5f63218f780da"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Helper: sync a key between Firebase and render
+    function fbSet(key, data) {
+      db.ref(key).set(data);
+    }
+    function fbGet(key, callback) {
+      db.ref(key).on('value', snap => {
+        callback(snap.val());
+      });
+    }
+  </script>
   <script>
     // ── Greeting ──
     (function() {
@@ -767,25 +793,12 @@
     }
     renderWeeklyReminders();
 
-    // ── To-Do List (localStorage) ──
-    // Seed todos if empty
-    (function() {
-      const existing = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
-      if (existing.length === 0) {
-        const seed = [
-          { text: 'Add doorknobs to basement', done: false },
-          { text: 'Return clothing', done: false },
-          { text: 'Organize closet', done: false },
-        ];
-        localStorage.setItem('dashboard-todos', JSON.stringify(seed));
-      }
-    })();
-
+    // ── To-Do List (Firebase) ──
+    let _todos = [];
     function renderTodos() {
-      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
       let html = `<div class="todo-input-row"><input type="text" class="todo-input" id="todo-input" placeholder="Add a task..." /><button class="todo-add-btn" onclick="addTodo()">Add</button></div>`;
       html += '<ul class="todo-list">';
-      todos.forEach((t, i) => {
+      _todos.forEach((t, i) => {
         html += `<li>
           <div class="todo-cb ${t.done?'checked':''}" onclick="toggleTodo(${i})">${t.done?'\u2713':''}</div>
           <span class="todo-text ${t.done?'done':''}">${t.text}</span>
@@ -794,7 +807,6 @@
       });
       html += '</ul>';
       document.getElementById('todo-section').innerHTML = html;
-      // Re-bind enter key
       setTimeout(() => {
         const inp = document.getElementById('todo-input');
         if (inp) inp.addEventListener('keydown', e => { if(e.key==='Enter') addTodo(); });
@@ -804,24 +816,31 @@
       const inp = document.getElementById('todo-input');
       const text = inp.value.trim();
       if (!text) return;
-      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
-      todos.push({ text, done: false });
-      localStorage.setItem('dashboard-todos', JSON.stringify(todos));
-      renderTodos();
+      _todos.push({ text, done: false });
+      fbSet('todos', _todos);
     }
     function toggleTodo(i) {
-      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
-      todos[i].done = !todos[i].done;
-      localStorage.setItem('dashboard-todos', JSON.stringify(todos));
-      renderTodos();
+      _todos[i].done = !_todos[i].done;
+      fbSet('todos', _todos);
     }
     function deleteTodo(i) {
-      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
-      todos.splice(i, 1);
-      localStorage.setItem('dashboard-todos', JSON.stringify(todos));
-      renderTodos();
+      _todos.splice(i, 1);
+      fbSet('todos', _todos);
     }
-    renderTodos();
+    // Seed and listen
+    fbGet('todos', data => {
+      if (data === null) {
+        _todos = [
+          { text: 'Add doorknobs to basement', done: false },
+          { text: 'Return clothing', done: false },
+          { text: 'Organize closet', done: false },
+        ];
+        fbSet('todos', _todos);
+      } else {
+        _todos = Array.isArray(data) ? data : Object.values(data);
+      }
+      renderTodos();
+    });
 
     // ── Upcoming Events (holidays, etc.) ──
     function renderUpcoming() {
@@ -853,33 +872,25 @@
     }
     renderUpcoming();
 
-    // ── Meal Planner ──
-    function getMealData() {
-      return JSON.parse(localStorage.getItem('dashboard-meals') || '{}');
-    }
+    // ── Meal Planner (Firebase) ──
+    let _meals = {};
     function saveMeal(dayKey, value) {
-      const data = getMealData();
-      data[dayKey] = value;
-      localStorage.setItem('dashboard-meals', JSON.stringify(data));
+      _meals[dayKey] = value;
+      fbSet('meals', _meals);
     }
-
     function renderMealPlanner() {
-      const data = getMealData();
       const now = new Date();
       const todayDay = now.getDay();
       const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-
-      // Show current week (Sun-Sat)
       const startOfWeek = new Date(now);
       startOfWeek.setDate(now.getDate() - todayDay);
-
       let html = '';
       for (let i = 0; i < 7; i++) {
         const d = new Date(startOfWeek);
         d.setDate(startOfWeek.getDate() + i);
         const key = d.toISOString().slice(0, 10);
         const isToday = i === todayDay;
-        const val = data[key] || '';
+        const val = _meals[key] || '';
         html += `<div class="meal-row">
           <span class="meal-day ${isToday ? 'is-today' : ''}">${dayNames[i]}</span>
           <input class="meal-input" type="text" placeholder="What's for lunch?"
@@ -889,17 +900,17 @@
       }
       document.getElementById('meal-planner').innerHTML = html;
     }
-    renderMealPlanner();
+    fbGet('meals', data => { _meals = data || {}; renderMealPlanner(); });
 
-    // ── Grocery List ──
+    // ── Grocery List (Firebase) ──
+    let _groceries = [];
     function renderGroceries() {
-      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
       let html = `<div class="grocery-input-row">
         <input type="text" class="grocery-input" id="grocery-input" placeholder="Add item..." />
         <button class="todo-add-btn" onclick="addGrocery()">Add</button>
       </div>`;
       html += '<ul class="grocery-list">';
-      items.forEach((item, i) => {
+      _groceries.forEach((item, i) => {
         html += `<li>
           <div class="grocery-cb ${item.done ? 'checked' : ''}" onclick="toggleGrocery(${i})">${item.done ? '\u2713' : ''}</div>
           <span class="grocery-text ${item.done ? 'done' : ''}">${item.text}</span>
@@ -907,7 +918,7 @@
         </li>`;
       });
       html += '</ul>';
-      const checkedCount = items.filter(i => i.done).length;
+      const checkedCount = _groceries.filter(i => i.done).length;
       if (checkedCount > 0) {
         html += `<div class="grocery-clear" onclick="clearCheckedGroceries()">Clear ${checkedCount} checked item${checkedCount > 1 ? 's' : ''}</div>`;
       }
@@ -921,30 +932,13 @@
       const inp = document.getElementById('grocery-input');
       const text = inp.value.trim();
       if (!text) return;
-      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
-      items.push({ text, done: false });
-      localStorage.setItem('dashboard-groceries', JSON.stringify(items));
-      renderGroceries();
+      _groceries.push({ text, done: false });
+      fbSet('groceries', _groceries);
     }
-    function toggleGrocery(i) {
-      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
-      items[i].done = !items[i].done;
-      localStorage.setItem('dashboard-groceries', JSON.stringify(items));
-      renderGroceries();
-    }
-    function deleteGrocery(i) {
-      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
-      items.splice(i, 1);
-      localStorage.setItem('dashboard-groceries', JSON.stringify(items));
-      renderGroceries();
-    }
-    function clearCheckedGroceries() {
-      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
-      const remaining = items.filter(i => !i.done);
-      localStorage.setItem('dashboard-groceries', JSON.stringify(remaining));
-      renderGroceries();
-    }
-    renderGroceries();
+    function toggleGrocery(i) { _groceries[i].done = !_groceries[i].done; fbSet('groceries', _groceries); }
+    function deleteGrocery(i) { _groceries.splice(i, 1); fbSet('groceries', _groceries); }
+    function clearCheckedGroceries() { _groceries = _groceries.filter(i => !i.done); fbSet('groceries', _groceries); }
+    fbGet('groceries', data => { _groceries = data ? (Array.isArray(data) ? data : Object.values(data)) : []; renderGroceries(); });
 
     // ── Chores ──
     const CHORE_TYPES = [
@@ -954,15 +948,9 @@
       { id: 'weeding', name: 'Weed the garden', icon: '\uD83C\uDF3B', dueDays: 14 },
     ];
 
-    function getChoreData() {
-      return JSON.parse(localStorage.getItem('dashboard-chores') || '{}');
-    }
-    function saveChoreData(data) {
-      localStorage.setItem('dashboard-chores', JSON.stringify(data));
-    }
-
+    let _chores = {};
     function renderChores() {
-      const data = getChoreData();
+      const data = _chores;
       const now = new Date(); now.setHours(0,0,0,0);
       let html = '';
       CHORE_TYPES.forEach(c => {
@@ -990,13 +978,10 @@
     }
 
     function markChoreDone(id) {
-      const data = getChoreData();
-      data[id] = new Date().toISOString().slice(0, 10);
-      saveChoreData(data);
-      renderChores();
+      _chores[id] = new Date().toISOString().slice(0, 10);
+      fbSet('chores', _chores);
     }
-
-    renderChores();
+    fbGet('chores', data => { _chores = data || {}; renderChores(); });
 
     // ── Checkups ──
     const CHECKUP_TYPES = [
@@ -1008,15 +993,9 @@
       { id: 'gyn', name: 'GYN', months: 12 },
     ];
 
-    function getCheckupData() {
-      return JSON.parse(localStorage.getItem('dashboard-checkups') || '{}');
-    }
-    function saveCheckupData(data) {
-      localStorage.setItem('dashboard-checkups', JSON.stringify(data));
-    }
-
+    let _checkups = {};
     function renderCheckups() {
-      const data = getCheckupData();
+      const data = _checkups;
       const now = new Date();
       let html = '';
       CHECKUP_TYPES.forEach(c => {
@@ -1058,13 +1037,10 @@
       if (!input) return;
       const parsed = new Date(input);
       if (isNaN(parsed.getTime())) { alert('Could not parse that date. Try again.'); return; }
-      const data = getCheckupData();
-      data[id] = parsed.toISOString().slice(0, 10);
-      saveCheckupData(data);
-      renderCheckups();
+      _checkups[id] = parsed.toISOString().slice(0, 10);
+      fbSet('checkups', _checkups);
     }
-
-    renderCheckups();
+    fbGet('checkups', data => { _checkups = data || {}; renderCheckups(); });
 
     // ── News ──
     const categories = {
