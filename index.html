@@ -1055,29 +1055,35 @@
     }
     async function loadNews() {
       try {
-        // Quality sources: AP/Reuters for top stories, Politico for politics,
-        // STAT News for biotech, Reuters for economy
+        // Free or soft-paywall sources only
+        // Free: AP, Reuters, NPR, The Hill, PBS, BBC, ProPublica
+        // Soft paywall (few free/month): NYT, Politico, STAT News
         const feedGroups = {
           top: [
             'https://feeds.apnews.com/rss/apf-topnews',
-            'https://news.google.com/rss',
+            'https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml',
           ],
           politics: [
             'https://rss.politico.com/politics-news.xml',
             'https://feeds.npr.org/1014/rss.xml',
-            'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
+            'https://thehill.com/feed/',
+            'https://feeds.feedburner.com/propublica/main',
           ],
           biotech: [
             'https://www.statnews.com/feed/',
-            'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml',
+            'https://feeds.npr.org/103537970/rss.xml',
             'https://news.google.com/rss/search?q=biotech+pharma+FDA',
           ],
           economy: [
             'https://feeds.reuters.com/reuters/businessNews',
-            'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
+            'https://feeds.npr.org/1006/rss.xml',
             'https://news.google.com/rss/search?q=economy+markets+wall+street',
           ]
         };
+
+        // Hard paywall sources to filter out
+        const paywallDomains = ['wsj.com','bloomberg.com','ft.com','economist.com',
+          'washingtonpost.com','theathletic.com','barrons.com','seekingalpha.com'];
 
         // Fetch all feeds
         const allUrls = Object.values(feedGroups).flat();
@@ -1088,14 +1094,16 @@
           )
         );
 
-        // Collect all items with dedup
+        // Collect all items with dedup, filter hard paywalls
         const seen = new Set();
         const allItems = [];
         for (const r of results) {
           if (r.status === 'fulfilled' && r.value.items) {
             for (const item of r.value.items) {
               const ct = item.title.replace(/ - .*$/, '').trim();
-              if (!seen.has(ct)) { seen.add(ct); allItems.push(item); }
+              const url = (item.link || '').toLowerCase();
+              const isPaywalled = paywallDomains.some(d => url.includes(d));
+              if (!seen.has(ct) && !isPaywalled) { seen.add(ct); allItems.push(item); }
             }
           }
         }
