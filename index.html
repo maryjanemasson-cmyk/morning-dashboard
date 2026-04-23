@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Dashboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5;
+      color: #3d3529;
+      min-height: 100vh;
+    }
+
+    .banner {
+      height: 120px;
+      background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%);
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40px;
+      background: linear-gradient(to top, #faf8f5, transparent);
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: -30px auto 0;
+      padding: 0 2.5rem 2rem;
+      position: relative;
+    }
+
+    .header { margin-bottom: 1.75rem; }
+    .header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem; font-weight: 600; color: #2c2418;
+    }
+    .header .date { font-size: 0.85rem; color: #9c8b76; margin-top: 0.2rem; }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 280px;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ebe5dc;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .card:hover { border-color: #d4c5b5; }
+
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem; font-weight: 600; color: #2c2418;
+      margin-bottom: 0.85rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .card-title .icon { font-size: 1.1rem; }
+
+    /* Weather */
+    .wx-top-row {
+      display: flex; gap: 0.75rem; margin-bottom: 0.5rem;
+    }
+    .wx-now, .wx-today-forecast {
+      flex: 1; text-align: center;
+      padding: 0.5rem 0;
+    }
+    .wx-now {
+      border-right: 1px solid #f0ebe4;
+    }
+    .wx-col-label {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #b8a48e; margin-bottom: 0.3rem;
+    }
+    .wx-big-icon { font-size: 1.8rem; margin-bottom: 0.15rem; }
+    .wx-big-temp {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem; font-weight: 400; color: #2c2418; line-height: 1;
+    }
+    .wx-big-temp .deg { font-size: 0.9rem; color: #9c8b76; }
+    .wx-cond-text { font-size: 0.78rem; color: #6b5d4d; font-weight: 500; margin-top: 0.2rem; }
+    .wx-hilo {
+      font-size: 0.8rem; color: #6b5d4d; margin-top: 0.2rem;
+    }
+    .wx-hilo .hi { font-weight: 600; color: #3d3529; }
+    .wx-hilo .lo { color: #9c8b76; }
+    .wx-location { font-size: 0.72rem; color: #9c8b76; text-align: center; margin-bottom: 0.5rem; }
+    .wx-details {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;
+      padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+      font-size: 0.72rem; color: #9c8b76;
+    }
+    .wx-forecast-row {
+      display: flex; justify-content: space-between;
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+    }
+    .wx-fday { text-align: center; flex: 1; }
+    .wx-fday .fname { font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #9c8b76; }
+    .wx-fday .ficon { font-size: 1rem; margin: 0.15rem 0; }
+    .wx-fday .ftemps { font-size: 0.72rem; color: #6b5d4d; }
+    .wx-fday .ftemps .fhi { font-weight: 500; color: #3d3529; }
+    .wx-fday .frain { font-size: 0.58rem; color: #7ca3c7; margin-top: 0.1rem; }
+    .wx-fday .frain.none { color: #4a8c6f; }
+
+    /* Mini Calendar */
+    .mini-cal { width: 100%; }
+    .mini-cal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .mini-cal-month { font-size: 0.8rem; font-weight: 600; color: #3d3529; }
+    .mini-cal table { width: 100%; border-collapse: collapse; }
+    .mini-cal th {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #b8a48e; padding: 0.2rem;
+      text-align: center;
+    }
+    .mini-cal td {
+      text-align: center; padding: 0.25rem; font-size: 0.72rem; color: #6b5d4d;
+      cursor: default; position: relative;
+    }
+    .mini-cal td.today {
+      font-weight: 700; color: #fff;
+    }
+    .mini-cal td.today::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #c2553a; z-index: 0;
+    }
+    .mini-cal td.today span { position: relative; z-index: 1; }
+    .mini-cal td.has-event::after {
+      content: ''; position: absolute;
+      bottom: 1px; left: 50%; transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: #c9b99a;
+    }
+    .mini-cal td.other-month { color: #d4c5b5; }
+
+    /* Schedule */
+    .cal-day-section { margin-bottom: 1rem; }
+    .cal-day-section:last-child { margin-bottom: 0; }
+    .cal-day-header {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.5px; color: #9c8b76;
+      margin-bottom: 0.6rem; padding-bottom: 0.4rem; border-bottom: 1px solid #f0ebe4;
+    }
+    .cal-event { display: flex; gap: 0.6rem; padding: 0.45rem 0; align-items: flex-start; }
+    .cal-time-pip {
+      width: 3px; min-height: 28px; border-radius: 2px;
+      background: #d4c5b5; margin-top: 2px; flex-shrink: 0;
+    }
+    .cal-info { flex: 1; }
+    .cal-title { font-size: 0.85rem; color: #3d3529; font-weight: 500; }
+    .cal-time { font-size: 0.72rem; color: #9c8b76; margin-top: 0.1rem; }
+    .cal-location { font-size: 0.7rem; color: #b8a48e; margin-top: 0.1rem; }
+    .cal-tag {
+      font-size: 0.55rem; color: #9c8b76; background: #f5f0e8;
+      padding: 0.1rem 0.4rem; border-radius: 3px; margin-top: 0.15rem;
+      display: inline-block; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .cal-empty { font-size: 0.8rem; color: #b8a48e; font-style: italic; padding: 0.25rem 0; }
+
+    /* This Week */
+    .week-row {
+      display: flex; gap: 0.5rem; padding: 0.35rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: flex-start;
+    }
+    .week-row:last-child { border-bottom: none; }
+    .week-day-label {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #9c8b76; min-width: 2.2rem;
+      padding-top: 0.1rem;
+    }
+    .week-day-label.is-today { color: #c2553a; }
+    .week-events { flex: 1; }
+    .week-event-item {
+      font-size: 0.75rem; color: #3d3529; padding: 0.1rem 0;
+    }
+    .week-event-time { color: #b8a48e; font-size: 0.68rem; }
+    .week-empty { font-size: 0.72rem; color: #d4c5b5; font-style: italic; }
+
+    /* Travel */
+    .trip-item {
+      display: flex; gap: 0.6rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #f0ebe4; align-items: center;
+    }
+    .trip-item:last-child { border-bottom: none; }
+    .trip-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .trip-info { flex: 1; }
+    .trip-dest { font-size: 0.82rem; font-weight: 500; color: #3d3529; }
+    .trip-dates { font-size: 0.7rem; color: #9c8b76; margin-top: 0.1rem; }
+    .trip-countdown {
+      font-size: 0.65rem; font-weight: 600; color: #fff;
+      background: #c9b99a; padding: 0.15rem 0.45rem; border-radius: 10px;
+      white-space: nowrap;
+    }
+    .trip-countdown.soon { background: #c2553a; }
+    .trip-countdown.now { background: #4a8c6f; }
+
+    /* Countdown */
+    .countdown-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.55rem 0; border-bottom: 1px solid #f5f0e8;
+    }
+    .countdown-item:last-child { border-bottom: none; }
+    .countdown-days {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem; font-weight: 600; color: #2c2418;
+      min-width: 2.5rem; text-align: center; line-height: 1;
+    }
+    .countdown-unit { font-size: 0.55rem; color: #9c8b76; font-weight: 400; display: block; }
+    .countdown-label { flex: 1; }
+    .countdown-dest { font-size: 0.82rem; font-weight: 500; color: #3d3529; }
+    .countdown-dates { font-size: 0.68rem; color: #9c8b76; }
+    .countdown-icon { font-size: 1rem; }
+
+    /* Weekly Reminders */
+    .reminder-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.8rem;
+    }
+    .reminder-item:last-child { border-bottom: none; }
+    .reminder-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .reminder-text { flex: 1; color: #3d3529; }
+    .reminder-day {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #9c8b76;
+      background: #f5f0e8; padding: 0.15rem 0.4rem; border-radius: 4px;
+    }
+    .reminder-day.is-today {
+      color: #fff; background: #c2553a;
+    }
+
+    /* To-Do List */
+    .todo-input-row { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .todo-input {
+      flex: 1; border: 1px solid #ebe5dc; border-radius: 5px;
+      padding: 0.4rem 0.6rem; font-size: 0.78rem; font-family: inherit;
+      color: #3d3529; background: #faf8f5; outline: none;
+    }
+    .todo-input:focus { border-color: #c9b99a; }
+    .todo-input::placeholder { color: #c9bfb0; }
+    .todo-add-btn {
+      border: 1px solid #d4c5b5; background: #f5f0e8; border-radius: 5px;
+      padding: 0.4rem 0.65rem; font-size: 0.75rem; color: #6b5d4d;
+      cursor: pointer; font-family: inherit;
+    }
+    .todo-add-btn:hover { background: #ebe5dc; }
+    .todo-list { list-style: none; }
+    .todo-list li {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.35rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.8rem; color: #3d3529;
+    }
+    .todo-list li:last-child { border-bottom: none; }
+    .todo-cb {
+      width: 14px; height: 14px; border: 1.5px solid #c9b99a;
+      border-radius: 3px; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.6rem; color: transparent;
+      transition: all 0.15s;
+    }
+    .todo-cb.checked { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .todo-text { flex: 1; }
+    .todo-text.done { text-decoration: line-through; color: #c9bfb0; }
+    .todo-del {
+      font-size: 0.7rem; color: #d4c5b5; cursor: pointer; padding: 0 0.2rem;
+      transition: color 0.15s;
+    }
+    .todo-del:hover { color: #c2553a; }
+
+    /* Upcoming Events */
+    .upcoming-event {
+      display: flex; gap: 0.6rem; padding: 0.45rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: center;
+    }
+    .upcoming-event:last-child { border-bottom: none; }
+    .upcoming-days {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2rem; font-weight: 600; color: #2c2418;
+      min-width: 2rem; text-align: center; line-height: 1;
+    }
+    .upcoming-days-unit { font-size: 0.5rem; color: #9c8b76; font-weight: 400; display: block; }
+    .upcoming-days.imminent { color: #c2553a; }
+    .upcoming-info { flex: 1; }
+    .upcoming-name { font-size: 0.78rem; color: #3d3529; }
+    .upcoming-date-label { font-size: 0.65rem; color: #b8a48e; }
+
+    /* Chores */
+    .chore-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0; border-bottom: 1px solid #f5f0e8;
+    }
+    .chore-item:last-child { border-bottom: none; }
+    .chore-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .chore-name { flex: 1; font-size: 0.78rem; color: #3d3529; font-weight: 500; }
+    .chore-ago {
+      font-size: 0.63rem; font-weight: 600;
+      padding: 0.15rem 0.4rem; border-radius: 10px; white-space: nowrap;
+    }
+    .chore-ago.overdue { background: #fde8e8; color: #c2553a; }
+    .chore-ago.soon { background: #fef3cd; color: #b8860b; }
+    .chore-ago.ok { background: #e8f5e8; color: #4a8c6f; }
+    .chore-ago.never { background: #f5f0e8; color: #b8a48e; }
+    .chore-done-btn {
+      font-size: 0.6rem; color: #4a8c6f; cursor: pointer;
+      border: 1px solid #c9e8d8; background: #f0faf5;
+      border-radius: 4px; padding: 0.15rem 0.35rem;
+      font-family: inherit; white-space: nowrap;
+    }
+    .chore-done-btn:hover { background: #c9e8d8; }
+
+    /* Checkups */
+    .checkup-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.78rem;
+    }
+    .checkup-item:last-child { border-bottom: none; }
+    .checkup-name { flex: 1; color: #3d3529; font-weight: 500; }
+    .checkup-status {
+      font-size: 0.65rem; font-weight: 600;
+      padding: 0.15rem 0.45rem; border-radius: 10px;
+      white-space: nowrap; cursor: default;
+    }
+    .checkup-status.overdue { background: #fde8e8; color: #c2553a; }
+    .checkup-status.due-soon { background: #fef3cd; color: #b8860b; }
+    .checkup-status.ok { background: #e8f5e8; color: #4a8c6f; }
+    .checkup-date {
+      font-size: 0.65rem; color: #b8a48e;
+      cursor: pointer; text-decoration: underline dotted;
+      text-underline-offset: 2px;
+    }
+    .checkup-date:hover { color: #6b5d4d; }
+    .checkup-never { font-size: 0.65rem; color: #d4c5b5; font-style: italic; }
+
+    /* News */
+    .section-label {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; margin-bottom: 0.65rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ebe5dc;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .section-label.politics { color: #c2553a; }
+    .section-label.biotech { color: #4a8c6f; }
+    .section-label.economy { color: #b8860b; }
+    .section-label.other { color: #9c8b76; }
+    .cat-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 0.3rem; }
+    .cat-dot.politics { background: #c2553a; }
+    .cat-dot.biotech { background: #4a8c6f; }
+    .cat-dot.economy { background: #b8860b; }
+    .news-list { list-style: none; }
+    .news-list li { padding: 0.5rem 0; border-bottom: 1px solid #f5f0e8; line-height: 1.5; }
+    .news-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-list li:first-child { padding-top: 0; }
+    .news-list a { color: #3d3529; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .news-list a:hover { color: #c2553a; text-decoration: underline; }
+    .news-source { font-size: 0.68rem; color: #b8a48e; margin-left: 0.3rem; }
+    .news-section { margin-bottom: 1.25rem; }
+    .news-section:last-child { margin-bottom: 0; }
+
+    /* Grocery List */
+    .grocery-input-row { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .grocery-input {
+      flex: 1; border: 1px solid #ebe5dc; border-radius: 5px;
+      padding: 0.4rem 0.6rem; font-size: 0.78rem; font-family: inherit;
+      color: #3d3529; background: #faf8f5; outline: none;
+    }
+    .grocery-input:focus { border-color: #c9b99a; }
+    .grocery-input::placeholder { color: #c9bfb0; }
+    .grocery-list { list-style: none; }
+    .grocery-list li {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.3rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.78rem; color: #3d3529;
+    }
+    .grocery-list li:last-child { border-bottom: none; }
+    .grocery-cb {
+      width: 13px; height: 13px; border: 1.5px solid #c9b99a;
+      border-radius: 3px; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.55rem; color: transparent;
+      transition: all 0.15s;
+    }
+    .grocery-cb.checked { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .grocery-text { flex: 1; }
+    .grocery-text.done { text-decoration: line-through; color: #c9bfb0; }
+    .grocery-del {
+      font-size: 0.65rem; color: #d4c5b5; cursor: pointer; padding: 0 0.2rem;
+    }
+    .grocery-del:hover { color: #c2553a; }
+    .grocery-clear {
+      font-size: 0.65rem; color: #b8a48e; cursor: pointer; text-align: right;
+      margin-top: 0.4rem; text-decoration: underline dotted;
+    }
+    .grocery-clear:hover { color: #c2553a; }
+
+    /* Meal Planner */
+    .meal-row {
+      display: flex; gap: 0.5rem; padding: 0.35rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: center;
+    }
+    .meal-row:last-child { border-bottom: none; }
+    .meal-day {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #9c8b76; min-width: 2.2rem;
+    }
+    .meal-day.is-today { color: #c2553a; }
+    .meal-input {
+      flex: 1; border: none; border-bottom: 1px solid #f0ebe4;
+      padding: 0.25rem 0.3rem; font-size: 0.75rem; font-family: inherit;
+      color: #3d3529; background: transparent; outline: none;
+    }
+    .meal-input:focus { border-bottom-color: #c9b99a; }
+    .meal-input::placeholder { color: #d4c5b5; }
+
+    .loading { text-align: center; padding: 1.5rem; color: #b8a48e; font-size: 0.8rem; }
+    .spinner {
+      display: inline-block; width: 16px; height: 16px;
+      border: 2px solid #ebe5dc; border-top-color: #c9b99a;
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 0.3rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .last-updated { text-align: center; font-size: 0.65rem; color: #c9bfb0; margin-top: 1.5rem; }
+
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .dashboard { padding: 0 1.25rem 1.5rem; }
+      .banner { height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="dashboard">
+    <div class="header">
+      <h1 id="greeting">Good Morning</h1>
+      <div class="date" id="date-display"></div>
+    </div>
+
+    <div class="main-grid">
+      <!-- LEFT -->
+      <div class="col-left">
+        <div class="card">
+          <div class="card-title"><span class="icon">~</span> Weather</div>
+          <div id="weather-content" class="loading"><div class="spinner"></div></div>
+        </div>
+
+        <div class="card">
+          <div id="mini-calendar"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">+</span> Schedule</div>
+          <div id="calendar-events"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&rarr;</span> This Week</div>
+          <div id="week-view"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Lunch Planner</div>
+          <div id="meal-planner"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Grocery List</div>
+          <div id="grocery-section"></div>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <div class="col-center">
+        <div class="card" style="padding:1.5rem">
+          <div class="card-title" style="font-size:1.15rem;margin-bottom:1rem"><span class="icon">&gt;</span> Headlines</div>
+          <div id="news-sections"><div class="loading"><div class="spinner"></div><br>Loading headlines...</div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-right">
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Upcoming Travel</div>
+          <div id="travel-list"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Weekly Reminders</div>
+          <div id="weekly-reminders"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Chores</div>
+          <div id="chores-section"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&check;</span> To Do</div>
+          <div id="todo-section"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Checkups</div>
+          <div id="checkups-section"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Coming Up</div>
+          <div id="upcoming-events"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Sunrise &amp; Sunset</div>
+          <div id="sun-times" style="font-size:0.8rem;color:#9c8b76;"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="last-updated" id="last-updated"></div>
+  </div>
+
+  <script src="calendar-data.js"></script>
+  <script>
+    // ── Greeting ──
+    (function() {
+      const hour = new Date().getHours();
+      let greet = 'Good Morning';
+      if (hour >= 12 && hour < 17) greet = 'Good Afternoon';
+      else if (hour >= 17) greet = 'Good Evening';
+      document.getElementById('greeting').textContent = greet;
+      const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('date-display').textContent = new Date().toLocaleDateString('en-US', opts);
+    })();
+
+    function weatherIcon(desc) {
+      const d = desc.toLowerCase();
+      if (d.includes('sunny') || d.includes('clear')) return '\u2600\uFE0F';
+      if (d.includes('partly') || d.includes('cloud')) return '\u26C5';
+      if (d.includes('overcast')) return '\u2601\uFE0F';
+      if (d.includes('rain') || d.includes('drizzle') || d.includes('shower')) return '\uD83C\uDF27\uFE0F';
+      if (d.includes('thunder') || d.includes('storm')) return '\u26C8\uFE0F';
+      if (d.includes('snow') || d.includes('blizzard')) return '\uD83C\uDF28\uFE0F';
+      if (d.includes('fog') || d.includes('mist')) return '\uD83C\uDF2B\uFE0F';
+      return '\uD83C\uDF24\uFE0F';
+    }
+
+    // ── Weather ──
+    async function loadWeather() {
+      try {
+        const res = await fetch('https://wttr.in/?format=j1');
+        const data = await res.json();
+        const cur = data.current_condition[0];
+        const loc = data.nearest_area[0];
+        const desc = cur.weatherDesc[0].value;
+        const days = data.weather;
+        const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        const today = days[0];
+        const todayDesc = today.hourly[4].weatherDesc[0].value;
+        const todayRain = Math.max(...today.hourly.map(h => parseInt(h.chanceofrain)));
+
+        // Future days only (skip today)
+        let fHTML = '<div class="wx-forecast-row">';
+        days.slice(1).forEach(day => {
+          const date = new Date(day.date + 'T12:00:00');
+          const name = dayNames[date.getDay()];
+          const dd = day.hourly[4].weatherDesc[0].value;
+          const mr = Math.max(...day.hourly.map(h => parseInt(h.chanceofrain)));
+          fHTML += `<div class="wx-fday"><div class="fname">${name}</div><div class="ficon">${weatherIcon(dd)}</div><div class="ftemps"><span class="fhi">${day.maxtempF}\u00B0</span> ${day.mintempF}\u00B0</div><div class="frain ${mr===0?'none':''}">${mr>0?mr+'%':'dry'}</div></div>`;
+        });
+        fHTML += '</div>';
+
+        document.getElementById('weather-content').innerHTML = `
+          <div class="wx-location">${loc.areaName[0].value}, ${loc.region[0].value}</div>
+          <div class="wx-top-row">
+            <div class="wx-now">
+              <div class="wx-col-label">Now</div>
+              <div class="wx-big-icon">${weatherIcon(desc)}</div>
+              <div class="wx-big-temp">${cur.temp_F}<span class="deg">\u00B0</span></div>
+              <div class="wx-cond-text">${desc}</div>
+            </div>
+            <div class="wx-today-forecast">
+              <div class="wx-col-label">Today</div>
+              <div class="wx-big-icon">${weatherIcon(todayDesc)}</div>
+              <div class="wx-hilo"><span class="hi">${today.maxtempF}\u00B0</span> <span class="lo">${today.mintempF}\u00B0</span></div>
+              <div class="wx-cond-text">${todayDesc}</div>
+              ${todayRain > 0 ? '<div style="font-size:0.7rem;color:#7ca3c7;margin-top:0.15rem;">' + todayRain + '% rain</div>' : ''}
+            </div>
+          </div>
+          <div class="wx-details"><span>Humidity ${cur.humidity}%</span><span>Wind ${cur.windspeedMiles}mph</span><span>Feels ${cur.FeelsLikeF}\u00B0</span><span>Vis ${cur.visibility}mi</span></div>
+          ${fHTML}`;
+        document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>\uD83C\uDF05 ${days[0].astronomy[0].sunrise}</span><span>\uD83C\uDF07 ${days[0].astronomy[0].sunset}</span></div>`;
+      } catch(e) { document.getElementById('weather-content').innerHTML = '<span style="color:#b8a48e">Unavailable</span>'; }
+    }
+
+    // ── Mini Calendar ──
+    function renderMiniCalendar() {
+      const now = new Date();
+      const year = now.getFullYear(), month = now.getMonth();
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const daysInPrev = new Date(year, month, 0).getDate();
+      const today = now.getDate();
+      const monthName = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+      // Collect event dates
+      const eventDates = new Set();
+      const events = window.CALENDAR_EVENTS || [];
+      const weekData = window.WEEK_DATA || [];
+      [...events, ...weekData].forEach(ev => {
+        const ds = ev.startTime ? ev.startTime.slice(8,10) : (ev.startDate ? ev.startDate.slice(8,10) : (ev.date ? ev.date.slice(8,10) : ''));
+        if (ds) eventDates.add(parseInt(ds));
+      });
+
+      let html = `<div class="mini-cal"><div class="mini-cal-header"><span class="mini-cal-month">${monthName}</span></div>`;
+      html += '<table><tr>';
+      ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(d => html += `<th>${d}</th>`);
+      html += '</tr><tr>';
+
+      let dayCount = 0;
+      for (let i = 0; i < firstDay; i++) {
+        const d = daysInPrev - firstDay + i + 1;
+        html += `<td class="other-month"><span>${d}</span></td>`;
+        dayCount++;
+      }
+      for (let d = 1; d <= daysInMonth; d++) {
+        let cls = '';
+        if (d === today) cls += ' today';
+        if (eventDates.has(d)) cls += ' has-event';
+        html += `<td class="${cls.trim()}"><span>${d}</span></td>`;
+        dayCount++;
+        if (dayCount % 7 === 0 && d < daysInMonth) html += '</tr><tr>';
+      }
+      const remaining = 7 - (dayCount % 7);
+      if (remaining < 7) {
+        for (let i = 1; i <= remaining; i++) {
+          html += `<td class="other-month"><span>${i}</span></td>`;
+        }
+      }
+      html += '</tr></table></div>';
+      document.getElementById('mini-calendar').innerHTML = html;
+    }
+    renderMiniCalendar();
+
+    // ── Schedule (Today/Tomorrow) ──
+    function renderCalendar() {
+      const events = window.CALENDAR_EVENTS || [];
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0,10);
+      const tomorrow = new Date(now); tomorrow.setDate(tomorrow.getDate()+1);
+      const tomorrowStr = tomorrow.toISOString().slice(0,10);
+      const todayEv = [], tomorrowEv = [];
+      for (const ev of events) {
+        const ds = ev.startTime ? ev.startTime.slice(0,10) : ev.startDate;
+        if (ds === todayStr) todayEv.push(ev);
+        else if (ds === tomorrowStr) tomorrowEv.push(ev);
+      }
+      function fmtTime(s) { if (!s) return null; return new Date(s).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}); }
+      function renderEv(list) {
+        if (!list.length) return '<div class="cal-empty">Nothing scheduled</div>';
+        return list.map(ev => {
+          const s=fmtTime(ev.startTime),e=fmtTime(ev.endTime);
+          const t=s?`${s} \u2013 ${e}`:'All day';
+          const loc=ev.location?`<div class="cal-location">${ev.location}</div>`:'';
+          const tag=ev.calendar&&ev.calendar!=='Personal'?`<span class="cal-tag">${ev.calendar}</span>`:'';
+          return `<div class="cal-event"><div class="cal-time-pip"></div><div class="cal-info"><div class="cal-title">${ev.summary}</div><div class="cal-time">${t}</div>${loc}${tag}</div></div>`;
+        }).join('');
+      }
+      const dn=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      document.getElementById('calendar-events').innerHTML =
+        `<div class="cal-day-section"><div class="cal-day-header">Today \u2014 ${dn[now.getDay()]}</div>${renderEv(todayEv)}</div>` +
+        `<div class="cal-day-section"><div class="cal-day-header">Tomorrow \u2014 ${dn[tomorrow.getDay()]}</div>${renderEv(tomorrowEv)}</div>`;
+    }
+    renderCalendar();
+
+    // ── This Week ──
+    function renderWeekView() {
+      const weekData = window.WEEK_DATA || [];
+      if (!weekData.length) {
+        document.getElementById('week-view').innerHTML = '<div class="cal-empty">No week data</div>';
+        return;
+      }
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0,10);
+      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      const grouped = {};
+      weekData.forEach(ev => {
+        const ds = ev.date || (ev.startTime ? ev.startTime.slice(0,10) : ev.startDate);
+        if (!grouped[ds]) grouped[ds] = [];
+        grouped[ds].push(ev);
+      });
+      const sortedDates = Object.keys(grouped).sort();
+      let html = '';
+      sortedDates.forEach(ds => {
+        const d = new Date(ds + 'T12:00:00');
+        const isToday = ds === todayStr;
+        const label = dayNames[d.getDay()];
+        html += `<div class="week-row"><div class="week-day-label ${isToday?'is-today':''}">${label}</div><div class="week-events">`;
+        grouped[ds].forEach(ev => {
+          const time = ev.time || '';
+          html += `<div class="week-event-item">${ev.summary} <span class="week-event-time">${time}</span></div>`;
+        });
+        html += '</div></div>';
+      });
+      document.getElementById('week-view').innerHTML = html;
+    }
+    renderWeekView();
+
+    // ── Travel + Countdown ──
+    function renderTravel() {
+      const trips = window.TRAVEL_DATA || [];
+      if (!trips.length) { document.getElementById('travel-list').innerHTML='<div class="cal-empty">No upcoming trips</div>'; return; }
+      const now = new Date(); now.setHours(0,0,0,0);
+      let html = '';
+      trips.forEach(trip => {
+        const s = new Date(trip.start+'T00:00:00');
+        const e = new Date(trip.end+'T00:00:00');
+        const diff = Math.ceil((s - now) / 86400000);
+        const ss = s.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+        const es = e.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+        let dayLabel, unitLabel;
+        if (diff < 0 && now <= e) { dayLabel = 'Now'; unitLabel = ''; }
+        else if (diff === 0) { dayLabel = 'Today'; unitLabel = ''; }
+        else { dayLabel = diff; unitLabel = 'days'; }
+        html += `<div class="countdown-item">
+          <div class="countdown-days">${dayLabel}<span class="countdown-unit">${unitLabel}</span></div>
+          <div class="countdown-label">
+            <div class="countdown-dest">${trip.destination}</div>
+            <div class="countdown-dates">${ss} \u2013 ${es}</div>
+          </div>
+          <span class="countdown-icon">${trip.icon||'\u2708\uFE0F'}</span>
+        </div>`;
+      });
+      document.getElementById('travel-list').innerHTML = html;
+    }
+    renderTravel();
+
+    // ── Weekly Reminders ──
+    function renderWeeklyReminders() {
+      const reminders = [
+        { day: 1, icon: '\uD83E\uDDD8', text: 'Book Pilates & OTF classes' },
+        { day: 6, icon: '\uD83E\uDDE5', text: 'Drop off dry cleaning' },
+      ];
+      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      const today = new Date().getDay();
+      let html = '';
+      reminders.forEach(r => {
+        const isToday = r.day === today;
+        html += `<div class="reminder-item">
+          <span class="reminder-icon">${r.icon}</span>
+          <span class="reminder-text">${r.text}</span>
+          <span class="reminder-day ${isToday ? 'is-today' : ''}">${isToday ? 'Today!' : dayNames[r.day]}</span>
+        </div>`;
+      });
+      document.getElementById('weekly-reminders').innerHTML = html;
+    }
+    renderWeeklyReminders();
+
+    // ── To-Do List (localStorage) ──
+    // Seed todos if empty
+    (function() {
+      const existing = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
+      if (existing.length === 0) {
+        const seed = [
+          { text: 'Add doorknobs to basement', done: false },
+          { text: 'Return clothing', done: false },
+          { text: 'Organize closet', done: false },
+        ];
+        localStorage.setItem('dashboard-todos', JSON.stringify(seed));
+      }
+    })();
+
+    function renderTodos() {
+      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
+      let html = `<div class="todo-input-row"><input type="text" class="todo-input" id="todo-input" placeholder="Add a task..." /><button class="todo-add-btn" onclick="addTodo()">Add</button></div>`;
+      html += '<ul class="todo-list">';
+      todos.forEach((t, i) => {
+        html += `<li>
+          <div class="todo-cb ${t.done?'checked':''}" onclick="toggleTodo(${i})">${t.done?'\u2713':''}</div>
+          <span class="todo-text ${t.done?'done':''}">${t.text}</span>
+          <span class="todo-del" onclick="deleteTodo(${i})">\u2715</span>
+        </li>`;
+      });
+      html += '</ul>';
+      document.getElementById('todo-section').innerHTML = html;
+      // Re-bind enter key
+      setTimeout(() => {
+        const inp = document.getElementById('todo-input');
+        if (inp) inp.addEventListener('keydown', e => { if(e.key==='Enter') addTodo(); });
+      }, 0);
+    }
+    function addTodo() {
+      const inp = document.getElementById('todo-input');
+      const text = inp.value.trim();
+      if (!text) return;
+      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
+      todos.push({ text, done: false });
+      localStorage.setItem('dashboard-todos', JSON.stringify(todos));
+      renderTodos();
+    }
+    function toggleTodo(i) {
+      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
+      todos[i].done = !todos[i].done;
+      localStorage.setItem('dashboard-todos', JSON.stringify(todos));
+      renderTodos();
+    }
+    function deleteTodo(i) {
+      const todos = JSON.parse(localStorage.getItem('dashboard-todos') || '[]');
+      todos.splice(i, 1);
+      localStorage.setItem('dashboard-todos', JSON.stringify(todos));
+      renderTodos();
+    }
+    renderTodos();
+
+    // ── Upcoming Events (holidays, etc.) ──
+    function renderUpcoming() {
+      const events = window.UPCOMING_EVENTS || [];
+      if (!events.length) { document.getElementById('upcoming-events').innerHTML='<div class="cal-empty">Nothing coming up</div>'; return; }
+      const now = new Date(); now.setHours(0,0,0,0);
+      // Filter to future events and show next 8
+      const future = events.filter(ev => new Date(ev.date + 'T12:00:00') >= now).slice(0, 8);
+      let html = '';
+      future.forEach(ev => {
+        const d = new Date(ev.date + 'T12:00:00');
+        const diff = Math.ceil((d - now) / 86400000);
+        const ds = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const imminent = diff <= 7 ? ' imminent' : '';
+        let dayLabel, unitLabel;
+        if (diff === 0) { dayLabel = '!'; unitLabel = 'today'; }
+        else if (diff === 1) { dayLabel = '1'; unitLabel = 'day'; }
+        else { dayLabel = diff; unitLabel = 'days'; }
+        const nameStyle = diff <= 7 ? 'font-weight:500;color:#c2553a;' : '';
+        html += `<div class="upcoming-event">
+          <div class="upcoming-days${imminent}">${dayLabel}<span class="upcoming-days-unit">${unitLabel}</span></div>
+          <div class="upcoming-info">
+            <div class="upcoming-name" style="${nameStyle}">${ev.name}</div>
+            <div class="upcoming-date-label">${ds}</div>
+          </div>
+        </div>`;
+      });
+      document.getElementById('upcoming-events').innerHTML = html;
+    }
+    renderUpcoming();
+
+    // ── Meal Planner ──
+    function getMealData() {
+      return JSON.parse(localStorage.getItem('dashboard-meals') || '{}');
+    }
+    function saveMeal(dayKey, value) {
+      const data = getMealData();
+      data[dayKey] = value;
+      localStorage.setItem('dashboard-meals', JSON.stringify(data));
+    }
+
+    function renderMealPlanner() {
+      const data = getMealData();
+      const now = new Date();
+      const todayDay = now.getDay();
+      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+      // Show current week (Sun-Sat)
+      const startOfWeek = new Date(now);
+      startOfWeek.setDate(now.getDate() - todayDay);
+
+      let html = '';
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(startOfWeek);
+        d.setDate(startOfWeek.getDate() + i);
+        const key = d.toISOString().slice(0, 10);
+        const isToday = i === todayDay;
+        const val = data[key] || '';
+        html += `<div class="meal-row">
+          <span class="meal-day ${isToday ? 'is-today' : ''}">${dayNames[i]}</span>
+          <input class="meal-input" type="text" placeholder="What's for lunch?"
+            value="${val.replace(/"/g, '&quot;')}"
+            onchange="saveMeal('${key}', this.value)" />
+        </div>`;
+      }
+      document.getElementById('meal-planner').innerHTML = html;
+    }
+    renderMealPlanner();
+
+    // ── Grocery List ──
+    function renderGroceries() {
+      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
+      let html = `<div class="grocery-input-row">
+        <input type="text" class="grocery-input" id="grocery-input" placeholder="Add item..." />
+        <button class="todo-add-btn" onclick="addGrocery()">Add</button>
+      </div>`;
+      html += '<ul class="grocery-list">';
+      items.forEach((item, i) => {
+        html += `<li>
+          <div class="grocery-cb ${item.done ? 'checked' : ''}" onclick="toggleGrocery(${i})">${item.done ? '\u2713' : ''}</div>
+          <span class="grocery-text ${item.done ? 'done' : ''}">${item.text}</span>
+          <span class="grocery-del" onclick="deleteGrocery(${i})">\u2715</span>
+        </li>`;
+      });
+      html += '</ul>';
+      const checkedCount = items.filter(i => i.done).length;
+      if (checkedCount > 0) {
+        html += `<div class="grocery-clear" onclick="clearCheckedGroceries()">Clear ${checkedCount} checked item${checkedCount > 1 ? 's' : ''}</div>`;
+      }
+      document.getElementById('grocery-section').innerHTML = html;
+      setTimeout(() => {
+        const inp = document.getElementById('grocery-input');
+        if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') addGrocery(); });
+      }, 0);
+    }
+    function addGrocery() {
+      const inp = document.getElementById('grocery-input');
+      const text = inp.value.trim();
+      if (!text) return;
+      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
+      items.push({ text, done: false });
+      localStorage.setItem('dashboard-groceries', JSON.stringify(items));
+      renderGroceries();
+    }
+    function toggleGrocery(i) {
+      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
+      items[i].done = !items[i].done;
+      localStorage.setItem('dashboard-groceries', JSON.stringify(items));
+      renderGroceries();
+    }
+    function deleteGrocery(i) {
+      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
+      items.splice(i, 1);
+      localStorage.setItem('dashboard-groceries', JSON.stringify(items));
+      renderGroceries();
+    }
+    function clearCheckedGroceries() {
+      const items = JSON.parse(localStorage.getItem('dashboard-groceries') || '[]');
+      const remaining = items.filter(i => !i.done);
+      localStorage.setItem('dashboard-groceries', JSON.stringify(remaining));
+      renderGroceries();
+    }
+    renderGroceries();
+
+    // ── Chores ──
+    const CHORE_TYPES = [
+      { id: 'call-mom', name: 'Call Mom', icon: '\uD83D\uDCDE', dueDays: 7 },
+      { id: 'dog-poop', name: 'Pick up dog poop', icon: '\uD83D\uDC36', dueDays: 7 },
+      { id: 'water-plants', name: 'Water plants', icon: '\uD83C\uDF31', dueDays: 7 },
+      { id: 'weeding', name: 'Weed the garden', icon: '\uD83C\uDF3B', dueDays: 14 },
+    ];
+
+    function getChoreData() {
+      return JSON.parse(localStorage.getItem('dashboard-chores') || '{}');
+    }
+    function saveChoreData(data) {
+      localStorage.setItem('dashboard-chores', JSON.stringify(data));
+    }
+
+    function renderChores() {
+      const data = getChoreData();
+      const now = new Date(); now.setHours(0,0,0,0);
+      let html = '';
+      CHORE_TYPES.forEach(c => {
+        const lastDate = data[c.id];
+        let agoHtml;
+        if (!lastDate) {
+          agoHtml = '<span class="chore-ago never">No date</span>';
+        } else {
+          const last = new Date(lastDate);
+          const daysAgo = Math.floor((now - last) / 86400000);
+          let cls = 'ok';
+          if (daysAgo >= c.dueDays) cls = 'overdue';
+          else if (daysAgo >= c.dueDays - 2) cls = 'soon';
+          const label = daysAgo === 0 ? 'Today' : daysAgo === 1 ? '1d ago' : daysAgo + 'd ago';
+          agoHtml = `<span class="chore-ago ${cls}">${label}</span>`;
+        }
+        html += `<div class="chore-item">
+          <span class="chore-icon">${c.icon}</span>
+          <span class="chore-name">${c.name}</span>
+          ${agoHtml}
+          <button class="chore-done-btn" onclick="markChoreDone('${c.id}')">Done</button>
+        </div>`;
+      });
+      document.getElementById('chores-section').innerHTML = html;
+    }
+
+    function markChoreDone(id) {
+      const data = getChoreData();
+      data[id] = new Date().toISOString().slice(0, 10);
+      saveChoreData(data);
+      renderChores();
+    }
+
+    renderChores();
+
+    // ── Checkups ──
+    const CHECKUP_TYPES = [
+      { id: 'physical', name: 'Annual Physical', months: 12 },
+      { id: 'dentist', name: 'Dentist', months: 6 },
+      { id: 'dermatologist', name: 'Dermatologist', months: 12 },
+      { id: 'eye', name: 'Eye Exam', months: 12 },
+      { id: 'mammogram', name: 'Mammogram', months: 12 },
+      { id: 'gyn', name: 'GYN', months: 12 },
+    ];
+
+    function getCheckupData() {
+      return JSON.parse(localStorage.getItem('dashboard-checkups') || '{}');
+    }
+    function saveCheckupData(data) {
+      localStorage.setItem('dashboard-checkups', JSON.stringify(data));
+    }
+
+    function renderCheckups() {
+      const data = getCheckupData();
+      const now = new Date();
+      let html = '';
+      CHECKUP_TYPES.forEach(c => {
+        const lastDate = data[c.id];
+        let statusHtml, dateHtml;
+        if (!lastDate) {
+          statusHtml = '<span class="checkup-status overdue">Schedule</span>';
+          dateHtml = '<span class="checkup-never">No date set</span>';
+        } else {
+          const last = new Date(lastDate);
+          const due = new Date(last);
+          due.setMonth(due.getMonth() + c.months);
+          const daysUntil = Math.ceil((due - now) / 86400000);
+          const lastStr = last.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+          if (daysUntil < 0) {
+            const overdueDays = Math.abs(daysUntil);
+            statusHtml = `<span class="checkup-status overdue">${overdueDays}d overdue</span>`;
+          } else if (daysUntil <= 60) {
+            statusHtml = `<span class="checkup-status due-soon">Due in ${daysUntil}d</span>`;
+          } else {
+            statusHtml = `<span class="checkup-status ok">${daysUntil}d</span>`;
+          }
+          dateHtml = `<span class="checkup-date" onclick="updateCheckup('${c.id}')" title="Click to update">${lastStr}</span>`;
+        }
+        html += `<div class="checkup-item">
+          <div class="checkup-name">${c.name}</div>
+          <div style="text-align:right">
+            ${statusHtml}<br>${dateHtml}
+            ${!lastDate ? '<br><span class="checkup-date" onclick="updateCheckup(\'' + c.id + '\')">Set date</span>' : ''}
+          </div>
+        </div>`;
+      });
+      document.getElementById('checkups-section').innerHTML = html;
+    }
+
+    function updateCheckup(id) {
+      const input = prompt('When was your last visit? (e.g. "March 15, 2026" or "2026-03-15")');
+      if (!input) return;
+      const parsed = new Date(input);
+      if (isNaN(parsed.getTime())) { alert('Could not parse that date. Try again.'); return; }
+      const data = getCheckupData();
+      data[id] = parsed.toISOString().slice(0, 10);
+      saveCheckupData(data);
+      renderCheckups();
+    }
+
+    renderCheckups();
+
+    // ── News ──
+    const categories = {
+      politics: { label:'US Politics',color:'politics',keywords:['trump','biden','congress','senate','house','republican','democrat','gop','election','vote','poll','legislat','governor','white house','supreme court','political','party','campaign','impeach','filibuster','bipartisan','lawmaker','washington','capitol','oval office','attorney general','doj','fbi','cia','secretary','cabinet','executive order','veto','amendment','redistrict','ballot','swing state','primary','caucus','lobby','pac','midterm','inaugur','pardon','indictment','special counsel','nomination','confirmation','appropriation','shutdown','debt ceiling','state of the union','virginia','georgia','california','navy secretary','federal appeals','federal agents']},
+      biotech: { label:'Biotech & Health',color:'biotech',keywords:['biotech','pharma','drug','fda','vaccine','gene','crispr','therapy','clinical trial','medical','health','cancer','disease','hospital','doctor','patient','treatment','diagnosis','biologic','molecule','protein','antibod','mrna','genomic','stem cell','rare disease','orphan drug','nih','cdc','epidemic','pandemic','outbreak','mental health','opioid','insulin','pharmaceutical','biomarker','diagnostic','surgical','transplant','chemical','lab','science','research','study finds']},
+      economy: { label:'Economy & Markets',color:'economy',keywords:['economy','economic','market','stock','inflation','fed','interest rate','gdp','trade','tariff','bank','financial','wall street','dow','nasdaq','s&p','treasury','debt','deficit','recession','jobs','employment','unemployment','wage','labor','consumer','retail','oil','energy','crypto','bitcoin','commodity','bond','yield','currency','dollar','euro','import','export','supply chain','manufacturing','housing','mortgage','real estate','pipeline','loan','investor','ipo','merger','acquisition','earnings','revenue','profit','sanction','budget','spending','tax','fiscal']}
+    };
+    function categorize(title) {
+      const t=title.toLowerCase(); let best=null,bc=0;
+      for (const [cat,info] of Object.entries(categories)) { const c=info.keywords.filter(k=>t.includes(k)).length; if(c>bc){bc=c;best=cat;} }
+      return best;
+    }
+    async function loadNews() {
+      try {
+        // Quality sources: AP/Reuters for top stories, Politico for politics,
+        // STAT News for biotech, Reuters for economy
+        const feedGroups = {
+          top: [
+            'https://feeds.apnews.com/rss/apf-topnews',
+            'https://news.google.com/rss',
+          ],
+          politics: [
+            'https://rss.politico.com/politics-news.xml',
+            'https://feeds.npr.org/1014/rss.xml',
+            'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
+          ],
+          biotech: [
+            'https://www.statnews.com/feed/',
+            'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml',
+            'https://news.google.com/rss/search?q=biotech+pharma+FDA',
+          ],
+          economy: [
+            'https://feeds.reuters.com/reuters/businessNews',
+            'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
+            'https://news.google.com/rss/search?q=economy+markets+wall+street',
+          ]
+        };
+
+        // Fetch all feeds
+        const allUrls = Object.values(feedGroups).flat();
+        const results = await Promise.allSettled(
+          allUrls.map(u =>
+            fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(u))
+              .then(r => r.json())
+          )
+        );
+
+        // Collect all items with dedup
+        const seen = new Set();
+        const allItems = [];
+        for (const r of results) {
+          if (r.status === 'fulfilled' && r.value.items) {
+            for (const item of r.value.items) {
+              const ct = item.title.replace(/ - .*$/, '').trim();
+              if (!seen.has(ct)) { seen.add(ct); allItems.push(item); }
+            }
+          }
+        }
+
+        // Categorize
+        const buckets = { politics: [], biotech: [], economy: [], other: [] };
+        for (const item of allItems) {
+          const cat = categorize(item.title);
+          buckets[cat || 'other'].push(item);
+        }
+
+        function rl(items, max) {
+          if (!items.length) return '<p style="color:#b8a48e;font-size:0.8rem;font-style:italic;">No stories right now</p>';
+          let h = '<ul class="news-list">';
+          items.slice(0, max).forEach(item => {
+            const hl = item.title.replace(/ - .*$/, '');
+            const src = item.title.includes(' - ') ? item.title.split(' - ').pop() : '';
+            h += `<li><a href="${item.link}" target="_blank">${hl}</a><span class="news-source">${src}</span></li>`;
+          });
+          return h + '</ul>';
+        }
+
+        // Show fewer, higher quality headlines
+        let html = '';
+        html += `<div class="news-section"><div class="section-label politics"><span class="cat-dot politics"></span> US Politics</div>${rl(buckets.politics, 5)}</div>`;
+        html += `<div class="news-section"><div class="section-label biotech"><span class="cat-dot biotech"></span> Biotech & Health</div>${rl(buckets.biotech, 5)}</div>`;
+        html += `<div class="news-section"><div class="section-label economy"><span class="cat-dot economy"></span> Economy & Markets</div>${rl(buckets.economy, 5)}</div>`;
+        if (buckets.other.length) html += `<div class="news-section" style="opacity:0.7"><div class="section-label other">Other Headlines</div>${rl(buckets.other, 3)}</div>`;
+        document.getElementById('news-sections').innerHTML = html;
+      } catch(e) { document.getElementById('news-sections').innerHTML = '<p style="color:#b8a48e">Unable to load news.</p>'; }
+    }
+
+    loadWeather(); loadNews();
+    function stamp(){document.getElementById('last-updated').textContent='Last updated \u2022 '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});}
+    stamp();
+    setInterval(()=>{loadWeather();loadNews();stamp();},15*60*1000);
+    function scheduleRefreshAt5am(){const now=new Date(),n5=new Date(now);n5.setHours(5,0,0,0);if(now>=n5)n5.setDate(n5.getDate()+1);setTimeout(()=>location.reload(),n5-now);}
+    scheduleRefreshAt5am();
+  </script>
+</body>
+</html>
