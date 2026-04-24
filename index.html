@@ -437,6 +437,56 @@
     .meal-input:focus { border-bottom-color: #c9b99a; }
     .meal-input::placeholder { color: #d4c5b5; }
 
+    /* TV Watchlist */
+    .watchlist-scroll {
+      max-height: 400px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #d4c5b5 transparent;
+    }
+    .watchlist-scroll::-webkit-scrollbar { width: 4px; }
+    .watchlist-scroll::-webkit-scrollbar-thumb { background: #d4c5b5; border-radius: 4px; }
+    .wl-item {
+      display: flex; gap: 0.5rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: flex-start;
+    }
+    .wl-item:last-child { border-bottom: none; }
+    .wl-item.watched { opacity: 0.5; }
+    .wl-cb {
+      width: 14px; height: 14px; border: 1.5px solid #c9b99a;
+      border-radius: 3px; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.6rem; color: transparent;
+      transition: all 0.15s; margin-top: 2px;
+    }
+    .wl-cb.checked { background: #4a8c6f; color: #fff; border-color: #4a8c6f; }
+    .wl-info { flex: 1; min-width: 0; }
+    .wl-title { font-size: 0.82rem; color: #3d3529; font-weight: 500; }
+    .wl-title.done { text-decoration: line-through; color: #b8a48e; }
+    .wl-meta { font-size: 0.65rem; color: #9c8b76; margin-top: 0.1rem; }
+    .wl-genre {
+      font-size: 0.55rem; color: #9c8b76; background: #f5f0e8;
+      padding: 0.1rem 0.35rem; border-radius: 3px;
+      display: inline-block; margin-right: 0.3rem;
+    }
+    .wl-rating {
+      font-size: 0.6rem; font-weight: 600; color: #4a8c6f;
+      white-space: nowrap;
+    }
+    .wl-rating.low { color: #c2553a; }
+    .wl-rating.mid { color: #b8860b; }
+    .wl-filter-row {
+      display: flex; gap: 0.3rem; margin-bottom: 0.6rem; flex-wrap: wrap;
+    }
+    .wl-filter-btn {
+      font-size: 0.6rem; padding: 0.2rem 0.5rem; border-radius: 10px;
+      border: 1px solid #ebe5dc; background: #fff; color: #9c8b76;
+      cursor: pointer; font-family: inherit;
+    }
+    .wl-filter-btn:hover { border-color: #c9b99a; }
+    .wl-filter-btn.active { background: #3d3529; color: #fff; border-color: #3d3529; }
+    .wl-count { font-size: 0.65rem; color: #b8a48e; margin-top: 0.5rem; text-align: right; }
+
     .loading { text-align: center; padding: 1.5rem; color: #b8a48e; font-size: 0.8rem; }
     .spinner {
       display: inline-block; width: 16px; height: 16px;
@@ -499,6 +549,14 @@
         <div class="card" style="padding:1.5rem">
           <div class="card-title" style="font-size:1.15rem;margin-bottom:1rem"><span class="icon">&gt;</span> Headlines</div>
           <div id="news-sections"><div class="loading"><div class="spinner"></div><br>Loading headlines...</div></div>
+        </div>
+      </div>
+
+        <div class="card" style="padding:1.5rem">
+          <div class="card-title" style="font-size:1.05rem"><span class="icon">&bull;</span> TV Watchlist</div>
+          <div id="watchlist-filters" class="wl-filter-row"></div>
+          <div id="watchlist" class="watchlist-scroll"></div>
+          <div id="watchlist-count" class="wl-count"></div>
         </div>
       </div>
 
@@ -1215,6 +1273,81 @@
         document.getElementById('news-sections').innerHTML = html;
       } catch(e) { document.getElementById('news-sections').innerHTML = '<p style="color:#b8a48e">Unable to load news.</p>'; }
     }
+
+    // ── TV Watchlist (Firebase) ──
+    const WATCHLIST = [
+      {id:'love-story',title:'Love Story: JFK Jr. & Carolyn Bessette',where:'FX / Hulu',genre:'Biographical Drama',rating:'RT 81%',score:81},
+      {id:'hunting-wives',title:'The Hunting Wives',where:'Netflix',genre:'Drama / Thriller',rating:'RT 80%',score:80},
+      {id:'tokyo-vice',title:'Tokyo Vice',where:'Max (HBO)',genre:'Crime Drama',rating:'RT 90%',score:90},
+      {id:'degrassi',title:'Degrassi',where:'Paramount+ / Prime',genre:'Teen Drama',rating:'IMDb 7.6',score:76},
+      {id:'reggie-dinkins',title:'The Fall and Rise of Reggie Dinkins',where:'NBC / Peacock',genre:'Sports Sitcom',rating:'RT 100%',score:100},
+      {id:'f1-movie',title:'F1: The Movie',where:'Apple TV+',genre:'Sports Drama',rating:'RT 82%',score:82},
+      {id:'karen-pirie',title:'Karen Pirie',where:'BritBox',genre:'Crime / Mystery',rating:'RT 91%',score:91},
+      {id:'ludwig',title:'Ludwig',where:'BritBox',genre:'Comedy / Mystery',rating:'RT 97%',score:97},
+      {id:'the-burbs',title:"The 'Burbs",where:'Rent/buy',genre:'Comedy (Film)',rating:'IMDb 7.0',score:70},
+      {id:'dark-winds',title:'Dark Winds',where:'AMC+ / Netflix',genre:'Crime Drama',rating:'RT 100%',score:100},
+      {id:'stranger-things',title:'Stranger Things',where:'Netflix',genre:'Sci-Fi / Horror',rating:'IMDb 8.7',score:87},
+      {id:'the-madison',title:'The Madison',where:'Paramount+',genre:'Family Drama',rating:'IMDb 8.0',score:80},
+      {id:'ladies-london',title:'Ladies of London',where:'Peacock',genre:'Reality',rating:'IMDb 7.4',score:74},
+      {id:'scarpetta',title:'Scarpetta',where:'Prime Video',genre:'Crime Drama',rating:'RT 58%',score:58},
+      {id:'paradise',title:'Paradise',where:'Hulu / Disney+',genre:'Sci-Fi Thriller',rating:'RT 90%',score:90},
+      {id:'scrubs',title:'Scrubs',where:'Hulu / Disney+',genre:'Medical Comedy',rating:'IMDb 8.3',score:83},
+      {id:'jury-duty',title:'Jury Duty',where:'Prime Video',genre:'Mockumentary Comedy',rating:'RT 94%',score:94},
+      {id:'other-bennet',title:'The Other Bennet Sister',where:'BritBox (May 6)',genre:'Period Drama',rating:'RT 92%',score:92},
+      {id:'lord-flies',title:'Lord of the Flies',where:'Netflix (May 4)',genre:'Drama / Thriller',rating:'RT 91%',score:91},
+      {id:'his-hers',title:'His & Hers',where:'Netflix',genre:'Psychological Thriller',rating:'IMDb 7.2',score:72},
+      {id:'copenhagen',title:'The Copenhagen Test',where:'Peacock',genre:'Sci-Fi Spy Thriller',rating:'RT 71%',score:71},
+      {id:'criminal-record',title:'Criminal Record',where:'Apple TV+',genre:'Crime Drama',rating:'RT 86%',score:86},
+    ];
+
+    let _watchedShows = {};
+    let _wlFilter = 'all';
+
+    function renderWatchlist() {
+      // Filters
+      const genres = [...new Set(WATCHLIST.map(w => w.genre))].sort();
+      let filterHtml = `<button class="wl-filter-btn ${_wlFilter==='all'?'active':''}" onclick="setWlFilter('all')">All</button>`;
+      filterHtml += `<button class="wl-filter-btn ${_wlFilter==='unwatched'?'active':''}" onclick="setWlFilter('unwatched')">Unwatched</button>`;
+      document.getElementById('watchlist-filters').innerHTML = filterHtml;
+
+      // Filter items
+      let items = WATCHLIST;
+      if (_wlFilter === 'unwatched') items = items.filter(w => !_watchedShows[w.id]);
+
+      let html = '';
+      items.forEach(w => {
+        const watched = _watchedShows[w.id] || false;
+        const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
+        html += `<div class="wl-item ${watched?'watched':''}">
+          <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'\u2713':''}</div>
+          <div class="wl-info">
+            <div class="wl-title ${watched?'done':''}">${w.title}</div>
+            <div class="wl-meta">
+              <span class="wl-genre">${w.genre}</span>
+              ${w.where}
+            </div>
+          </div>
+          <span class="wl-rating ${ratingClass}">${w.rating}</span>
+        </div>`;
+      });
+      document.getElementById('watchlist').innerHTML = html || '<div class="cal-empty">All caught up!</div>';
+
+      const watchedCount = WATCHLIST.filter(w => _watchedShows[w.id]).length;
+      document.getElementById('watchlist-count').textContent = `${watchedCount} of ${WATCHLIST.length} watched`;
+    }
+
+    function toggleWatched(id) {
+      _watchedShows[id] = !_watchedShows[id];
+      if (!_watchedShows[id]) delete _watchedShows[id];
+      fbSet('watchlist', _watchedShows);
+    }
+
+    function setWlFilter(f) {
+      _wlFilter = f;
+      renderWatchlist();
+    }
+
+    fbGet('watchlist', data => { _watchedShows = data || {}; renderWatchlist(); });
 
     loadWeather(); loadNews();
     function stamp(){document.getElementById('last-updated').textContent='Last updated \u2022 '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});}
