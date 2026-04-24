@@ -84,6 +84,10 @@
     }
     .recipe-card:hover { border-color: #c9b99a; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
 
+    .rc-image {
+      width: 100%; height: 140px; object-fit: cover; border-radius: 6px;
+      margin-bottom: 0.6rem; background: #f0ebe4;
+    }
     .rc-title {
       font-family: 'Playfair Display', Georgia, serif;
       font-size: 1.05rem; font-weight: 600; color: #2c2418; margin-bottom: 0.4rem;
@@ -277,6 +281,11 @@
       </div>
 
       <div class="form-group">
+        <label class="form-label">Photo URL</label>
+        <input class="form-input" id="f-image" placeholder="Paste an image URL (right-click image > Copy Image Address)" />
+      </div>
+
+      <div class="form-group">
         <label class="form-label">Source / URL</label>
         <input class="form-input" id="f-source" placeholder="e.g. https://... or Grandma's cookbook" />
       </div>
@@ -391,6 +400,7 @@
         if (r.servings) meta.push('Serves: ' + r.servings);
 
         html += `<div class="recipe-card" onclick="viewRecipe('${id}')">
+          ${r.image ? '<img class="rc-image" src="'+r.image+'" alt="" onerror="this.style.display=\'none\'" />' : ''}
           <div class="rc-title">${r.name || 'Untitled'}</div>
           <div class="rc-tags">${tagHtml}</div>
           ${meta.length ? '<div class="rc-meta">' + meta.join(' &middot; ') + '</div>' : ''}
@@ -417,7 +427,9 @@
       if (r.cuisine) tagHtml += `<span class="rc-tag">${r.cuisine}</span>`;
       tags.forEach(t => tagHtml += `<span class="rc-tag">${t}</span>`);
 
-      let html = `<div class="modal-title" style="margin-bottom:0.5rem">${r.name}</div>`;
+      let html = '';
+      if (r.image) html += `<img src="${r.image}" alt="" style="width:100%;max-height:250px;object-fit:cover;border-radius:8px;margin-bottom:1rem;" onerror="this.style.display='none'" />`;
+      html += `<div class="modal-title" style="margin-bottom:0.5rem">${r.name}</div>`;
       html += `<div style="margin-bottom:1rem">${tagHtml}</div>`;
       html += `<div class="view-stars" style="margin-bottom:1rem">${stars}</div>`;
 
@@ -471,6 +483,7 @@
       document.getElementById('f-tags').value = r.tags || '';
       document.getElementById('f-ingredients').value = r.ingredients || '';
       document.getElementById('f-instructions').value = r.instructions || '';
+      document.getElementById('f-image').value = r.image || '';
       document.getElementById('f-source').value = r.source || '';
       document.getElementById('f-notes').value = r.notes || '';
       updateStarPicker();
@@ -478,7 +491,7 @@
     }
 
     function clearForm() {
-      ['f-name','f-cuisine','f-prep','f-cook','f-servings','f-tags','f-ingredients','f-instructions','f-source','f-notes'].forEach(id => {
+      ['f-name','f-cuisine','f-prep','f-cook','f-servings','f-tags','f-ingredients','f-instructions','f-image','f-source','f-notes'].forEach(id => {
         document.getElementById(id).value = '';
       });
       document.getElementById('f-category').value = 'Dinner';
@@ -506,6 +519,7 @@
         tags: document.getElementById('f-tags').value.trim(),
         ingredients: document.getElementById('f-ingredients').value.trim(),
         instructions: document.getElementById('f-instructions').value.trim(),
+        image: document.getElementById('f-image').value.trim(),
         source: document.getElementById('f-source').value.trim(),
         notes: document.getElementById('f-notes').value.trim(),
         rating: currentRating,
