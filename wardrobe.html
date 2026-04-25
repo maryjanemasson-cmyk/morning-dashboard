@@ -68,6 +68,8 @@
       cursor:pointer; transition:border-color 0.2s, box-shadow 0.2s;
     }
     .cat-item:hover { border-color:#c9b99a; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+    .cat-item.dragging { opacity:0.3; }
+    .cat-item.drag-over { border-color:#c9b99a; box-shadow:0 0 0 2px #c9b99a; }
     .cat-item img { width:100%; height:170px; object-fit:cover; display:block; border-bottom:1px solid #f0ebe4; }
     .cat-item-info { padding:0.4rem 0.6rem; }
     .cat-item-cat { font-size:0.58rem; color:#9c8b76; text-transform:uppercase; letter-spacing:0.5px; }
@@ -300,6 +302,19 @@
     });
 
     function renderCatalogue() {
+      // Apply saved order if available
+      const orderKey = catFilter !== 'All' ? catFilter.replace(/[.#$/\[\]]/g, '_') : 'all';
+      const savedOrder = _itemOrder[orderKey];
+      if (savedOrder && Array.isArray(savedOrder)) {
+        const orderMap = {};
+        savedOrder.forEach((id, idx) => orderMap[id] = idx);
+        items.sort((a, b) => {
+          const oa = orderMap[a.id] !== undefined ? orderMap[a.id] : 99999;
+          const ob = orderMap[b.id] !== undefined ? orderMap[b.id] : 99999;
+          return oa - ob;
+        });
+      }
+
       const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
       let filtered = items.filter(i => {
         if (catFilter !== 'All' && i.category !== catFilter) return false;
@@ -326,7 +341,12 @@
         const outfitBadge = outfitSlides.length > 0
           ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>`
           : '';
-        gridHtml += `<div class="cat-item">
+        gridHtml += `<div class="cat-item" draggable="true"
+          data-id="${i.id}"
+          ondragstart="startItemDrag(event,'${i.id}')"
+          ondragover="event.preventDefault();this.classList.add('drag-over')"
+          ondragleave="this.classList.remove('drag-over')"
+          ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')">
           <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i.file}')" />
           <div class="cat-item-info">
             <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
@@ -366,6 +386,64 @@
         if (e.key === 'Escape') { el.textContent = currentVal; }
       });
     }
+
+    // Drag to reorder
+    let _dragItemId = null;
+    let _itemOrder = {};
+
+    db.ref('wardrobeOrder').on('value', snap => {
+      _itemOrder = snap.val() || {};
+    });
+
+    function startItemDrag(e, id) {
+      _dragItemId = id;
+      e.dataTransfer.effectAllowed = 'move';
+      setTimeout(() => {
+        const el = document.querySelector(`[data-id="${id}"]`);
+        if (el) el.classList.add('dragging');
+      }, 0);
+    }
+
+    function dropItem(e, targetId) {
+      e.preventDefault();
+      if (!_dragItemId || _dragItemId === targetId) return;
+
+      // Find indices in current filtered view
+      const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
+      let filtered = items.filter(i => {
+        if (catFilter !== 'All' && i.category !== catFilter) return false;
+        if (search) {
+          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
+          if (!h.includes(search)) return false;
+        }
+        return true;
+      });
+
+      const srcIdx = filtered.findIndex(i => i.id === _dragItemId);
+      const tgtIdx = filtered.findIndex(i => i.id === targetId);
+      if (srcIdx === -1 || tgtIdx === -1) return;
+
+      // Move item in the master items array
+      const masterSrcIdx = items.findIndex(i => i.id === _dragItemId);
+      const masterTgtIdx = items.findIndex(i => i.id === targetId);
+      if (masterSrcIdx === -1 || masterTgtIdx === -1) return;
+
+      const [moved] = items.splice(masterSrcIdx, 1);
+      items.splice(masterTgtIdx, 0, moved);
+
+      // Save new order to Firebase (just store array of IDs)
+      const orderKey = catFilter !== 'All' ? catFilter : 'all';
+      const newOrder = items.filter(i => catFilter === 'All' || i.category === catFilter).map(i => i.id);
+      db.ref('wardrobeOrder/' + orderKey.replace(/[.#$/\[\]]/g, '_')).set(newOrder);
+
+      _dragItemId = null;
+      renderCatalogue();
+    }
+
+    document.addEventListener('dragend', () => {
+      document.querySelectorAll('.cat-item.dragging').forEach(el => el.classList.remove('dragging'));
+      _dragItemId = null;
+    });
 
     function viewOutfitsForItem(file) {
       const slides = outfitMap[file] || [];
