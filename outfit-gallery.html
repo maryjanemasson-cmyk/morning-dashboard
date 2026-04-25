@@ -467,10 +467,12 @@
         // Quick filter buttons
         const qf = document.getElementById('add-quick-filters');
         if (qf) {
-          const cats = ['Tops', 'Pants', 'Dresses', 'Skirts', 'Shoes', 'Bags', 'Jewelry', 'Knitwear', 'Jackets & Coats'];
-          qf.innerHTML = cats.map(c =>
-            `<button style="font-size:0.55rem;padding:0.15rem 0.4rem;border-radius:10px;border:1px solid #ddd;background:#fff;color:#5a5a6e;cursor:pointer;font-family:inherit;"
-              onclick="document.getElementById('add-search').value='${c}';renderAddPanel();">${c}</button>`
+          const cats = ['Tops', 'Pants', 'Dresses', 'Skirts', 'Shoes', 'Bags', 'Jewelry', 'Knitwear', 'Jackets & Coats', 'Casual', 'Shorts', 'Accessories'];
+          qf.innerHTML = `<button style="font-size:0.55rem;padding:0.15rem 0.4rem;border-radius:10px;border:1px solid #ddd;background:${!_addCatFilter?'#013E7D':'#fff'};color:${!_addCatFilter?'#fff':'#5a5a6e'};cursor:pointer;font-family:inherit;"
+              onclick="_addCatFilter=null;document.getElementById('add-search').value='';renderAddPanel();">All</button>` +
+            cats.map(c =>
+            `<button style="font-size:0.55rem;padding:0.15rem 0.4rem;border-radius:10px;border:1px solid #ddd;background:${_addCatFilter===c?'#013E7D':'#fff'};color:${_addCatFilter===c?'#fff':'#5a5a6e'};cursor:pointer;font-family:inherit;"
+              onclick="setAddCatFilter('${c}')">${c}</button>`
           ).join('');
         }
       }
@@ -516,11 +518,27 @@
       renderDetail();
     }
 
+    let _addCatFilter = null;
+
+    function setAddCatFilter(cat) {
+      _addCatFilter = cat;
+      const searchEl = document.getElementById('add-search');
+      if (searchEl) searchEl.value = '';
+      renderAddPanel();
+    }
+
     function renderAddPanel() {
       const search = (document.getElementById('add-search')?.value || '').toLowerCase();
       const wardrobeItems = window.WARDROBE_ITEMS || [];
       let filtered = wardrobeItems;
+
+      if (_addCatFilter) {
+        // Category button was clicked - exact category match
+        filtered = filtered.filter(i => i.category === _addCatFilter);
+      }
+
       if (search) {
+        _addCatFilter = null; // clear category filter when typing
         const terms = search.split(/\s+/);
         filtered = wardrobeItems.filter(i => {
           const haystack = [
