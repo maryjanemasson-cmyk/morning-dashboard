@@ -154,9 +154,9 @@
     .edit-btn.active { background:#006FED; color:#fff; border-color:#006FED; }
 
     .add-piece-panel {
-      display:none; position:absolute; top:0; right:-220px; width:200px;
+      display:none; position:absolute; top:0; right:-240px; width:220px;
       background:#fff; border:1px solid #ebe5dc; border-radius:8px;
-      padding:0.5rem; max-height:100%; overflow-y:auto; z-index:30;
+      padding:0.5rem; max-height:500px; overflow-y:auto; z-index:30;
     }
     .add-piece-panel.open { display:block; }
     .add-piece-panel input {
@@ -233,7 +233,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="outfit-data.js"></script>
-  <script src="wardrobe-data.js?v=6"></script>
+  <script src="wardrobe-data.js?v=7"></script>
   <script>
     firebase.initializeApp({
       apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
@@ -534,7 +534,8 @@
       }
       const grid = document.getElementById('add-grid');
       if (!grid) return;
-      grid.innerHTML = filtered.slice(0, 40).map(i => {
+      const MAX_SHOW = 200;
+      grid.innerHTML = filtered.slice(0, MAX_SHOW).map(i => {
         const tooltip = [i.subcategory, ...(i.labels || []), ...(i.colors || [])].join(', ');
         return `<img src="wardrobe-thumbs/${i.file}" alt="${i.subcategory}" title="${tooltip}"
           onclick="addPieceFromWardrobe('wardrobe-thumbs/${i.file}')" />`;
@@ -543,7 +544,7 @@
       // Show result count
       const countEl = document.createElement('div');
       countEl.style.cssText = 'font-size:0.65rem;color:#8A8A9A;margin-top:0.3rem;';
-      countEl.textContent = filtered.length + ' items' + (filtered.length > 40 ? ' (showing 40)' : '');
+      countEl.textContent = filtered.length + ' items' + (filtered.length > MAX_SHOW ? ` (showing ${MAX_SHOW})` : '');
       grid.parentNode.appendChild(countEl);
     }
 
