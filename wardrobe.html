@@ -64,6 +64,16 @@
     .cat-item-info { padding:0.4rem 0.6rem; }
     .cat-item-cat { font-size:0.58rem; color:#9c8b76; text-transform:uppercase; letter-spacing:0.5px; }
     .cat-item-sub { font-size:0.7rem; color:#6b5d4d; }
+    .cat-item-cat, .cat-item-sub {
+      cursor:pointer; padding:0.1rem 0.2rem; border-radius:3px; margin:-0.1rem -0.2rem;
+      transition:background 0.15s;
+    }
+    .cat-item-cat:hover, .cat-item-sub:hover { background:#f0ebe4; }
+    .edit-input {
+      border:1px solid #c9b99a; border-radius:3px; padding:0.1rem 0.3rem;
+      font-size:inherit; font-family:inherit; color:#3d3529;
+      background:#fff; outline:none; width:100%;
+    }
     .cat-item-outfits {
       font-size:0.6rem; color:#fff; background:#c9b99a;
       padding:0.12rem 0.4rem; border-radius:10px; display:inline-block; margin-top:0.2rem;
@@ -264,6 +274,22 @@
     }
 
     const outfitMap = window.WARDROBE_OUTFIT_MAP || {};
+    let _itemOverrides = {}; // Firebase overrides for category/subcategory
+
+    // Load overrides from Firebase
+    db.ref('wardrobeEdits').on('value', snap => {
+      _itemOverrides = snap.val() || {};
+      // Apply overrides to items
+      items.forEach(i => {
+        const ov = _itemOverrides[i.id];
+        if (ov) {
+          if (ov.category) i.category = ov.category;
+          if (ov.subcategory) i.subcategory = ov.subcategory;
+        }
+      });
+      renderCatFilters();
+      renderCatalogue();
+    });
 
     function renderCatalogue() {
       const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
@@ -282,15 +308,44 @@
         const outfitBadge = outfitSlides.length > 0
           ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>`
           : '';
-        return `<div class="cat-item" onclick="zoomImage('${i.file}')">
-          <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" />
+        return `<div class="cat-item">
+          <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i.file}')" />
           <div class="cat-item-info">
-            <div class="cat-item-cat">${i.category}</div>
-            <div class="cat-item-sub">${i.subcategory}</div>
+            <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
+            <div class="cat-item-sub" onclick="event.stopPropagation();editField('${i.id}','subcategory',this)" title="Click to edit subcategory">${i.subcategory}</div>
             ${outfitBadge}
           </div>
         </div>`;
       }).join('');
+    }
+
+    function editField(itemId, field, el) {
+      const currentVal = el.textContent;
+      const input = document.createElement('input');
+      input.className = 'edit-input';
+      input.value = currentVal;
+      el.textContent = '';
+      el.appendChild(input);
+      input.focus();
+      input.select();
+
+      function save() {
+        const newVal = input.value.trim();
+        if (newVal && newVal !== currentVal) {
+          // Save override to Firebase
+          const updates = _itemOverrides[itemId] || {};
+          updates[field] = newVal;
+          db.ref('wardrobeEdits/' + itemId).set(updates);
+        } else {
+          el.textContent = currentVal;
+        }
+      }
+
+      input.addEventListener('blur', save);
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
+        if (e.key === 'Escape') { el.textContent = currentVal; }
+      });
     }
 
     function viewOutfitsForItem(file) {
