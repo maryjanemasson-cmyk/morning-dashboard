@@ -387,7 +387,7 @@
         "left": 33.6,
         "top": 52.1,
         "width": 9.0,
-        "height": 2.1
+        "height": 10
       },
       {
         "file": "outfit_s03_009.png",
@@ -929,14 +929,14 @@
       {
         "file": "outfit_s05_011.jpg",
         "left": 13.9,
-        "top": 91.4,
+        "top": 86.2,
         "width": 24.9,
         "height": 13.8
       },
       {
         "file": "outfit_s05_012.png",
         "left": 11.3,
-        "top": -0.3,
+        "top": 0,
         "width": 8.5,
         "height": 17.2
       },
@@ -973,7 +973,7 @@
         "left": 66.1,
         "top": 51.6,
         "width": 6.6,
-        "height": 2.4
+        "height": 10
       },
       {
         "file": "outfit_s05_018.png",
@@ -985,7 +985,7 @@
       {
         "file": "outfit_s05_019.png",
         "left": 76.7,
-        "top": 59.1,
+        "top": 53.9,
         "width": 15.6,
         "height": 46.1
       },
@@ -1238,7 +1238,7 @@
       },
       {
         "file": "outfit_s06_013.png",
-        "left": -1.3,
+        "left": 0,
         "top": 9.3,
         "width": 17.0,
         "height": 48.6
@@ -1447,7 +1447,7 @@
       },
       {
         "file": "outfit_s07_008.png",
-        "left": -0.4,
+        "left": 0,
         "top": 23.2,
         "width": 17.9,
         "height": 51.0
@@ -1503,7 +1503,7 @@
       },
       {
         "file": "outfit_s07_016.png",
-        "left": 118.5,
+        "left": 85,
         "top": 54.3,
         "width": 12.7,
         "height": 28.0
@@ -1663,7 +1663,7 @@
       {
         "file": "outfit_s08_002.png",
         "left": 21.7,
-        "top": 76.1,
+        "top": 72.2,
         "width": 18.8,
         "height": 27.8
       },
@@ -1912,7 +1912,7 @@
       },
       {
         "file": "outfit_s09_002.png",
-        "left": -0.4,
+        "left": 0,
         "top": 23.2,
         "width": 17.9,
         "height": 51.0
@@ -1929,7 +1929,7 @@
         "left": 20.4,
         "top": 39.6,
         "width": 7.4,
-        "height": 2.6
+        "height": 10
       },
       {
         "file": "outfit_s09_005.png",
@@ -1961,7 +1961,7 @@
       },
       {
         "file": "outfit_s09_009.png",
-        "left": 93.2,
+        "left": 90.5,
         "top": 53.7,
         "width": 9.5,
         "height": 28.7
@@ -2478,7 +2478,7 @@
         "left": 1.2,
         "top": 8.8,
         "width": 15.4,
-        "height": 65.4
+        "height": 55
       },
       {
         "file": "outfit_s11_016.png",
@@ -2913,7 +2913,7 @@
       },
       {
         "file": "outfit_s13_006.png",
-        "left": 84.4,
+        "left": 83.9,
         "top": 12.9,
         "width": 16.1,
         "height": 31.2
@@ -2951,7 +2951,7 @@
         "left": 55.3,
         "top": 11.5,
         "width": 6.9,
-        "height": 2.8
+        "height": 10
       },
       {
         "file": "outfit_s13_012.png",
@@ -2984,7 +2984,7 @@
       {
         "file": "outfit_s13_016.png",
         "left": 79.1,
-        "top": 81.5,
+        "top": 81.3,
         "width": 9.3,
         "height": 18.7
       },
@@ -2998,14 +2998,14 @@
       {
         "file": "outfit_s13_018.jpg",
         "left": 48.2,
-        "top": 94.6,
+        "top": 86.2,
         "width": 24.9,
         "height": 13.8
       },
       {
         "file": "outfit_s13_019.png",
         "left": 12.7,
-        "top": 106.5,
+        "top": 85,
         "width": 6.3,
         "height": 8.8
       },
@@ -3014,7 +3014,7 @@
         "left": 70.7,
         "top": 14.7,
         "width": 15.0,
-        "height": 70.2
+        "height": 55
       },
       {
         "file": "outfit_s13_021.jpg",
@@ -3215,7 +3215,7 @@
       {
         "file": "outfit_s14_010.jpg",
         "left": 74.7,
-        "top": 90.5,
+        "top": 84.8,
         "width": 24.7,
         "height": 15.2
       },
@@ -3231,12 +3231,12 @@
         "left": 51.8,
         "top": 39.9,
         "width": 6.9,
-        "height": 2.8
+        "height": 10
       },
       {
         "file": "outfit_s14_013.jpg",
         "left": 46.3,
-        "top": 122.3,
+        "top": 85,
         "width": 8.2,
         "height": 8.8
       },
@@ -4094,7 +4094,7 @@
         "left": 59.4,
         "top": 49.0,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       }
     ]
   },
@@ -5451,7 +5451,7 @@
       {
         "file": "outfit_s22_013.jpg",
         "left": 38.0,
-        "top": 82.3,
+        "top": 80.6,
         "width": 6.1,
         "height": 19.4
       },
@@ -5873,7 +5873,7 @@
       },
       {
         "file": "outfit_s24_007.jpg",
-        "left": -19.4,
+        "left": 0,
         "top": 36.8,
         "width": 10.3,
         "height": 7.8
@@ -6282,7 +6282,7 @@
       {
         "file": "outfit_s26_005.png",
         "left": 71.7,
-        "top": -0.9,
+        "top": 0,
         "width": 14.0,
         "height": 30.8
       },
@@ -6548,7 +6548,7 @@
       },
       {
         "file": "outfit_s27_009.png",
-        "left": -1.0,
+        "left": 0,
         "top": 24.9,
         "width": 17.7,
         "height": 38.3
@@ -6769,7 +6769,7 @@
         "left": 34.7,
         "top": 42.6,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "outfit_s28_004.jpg",
@@ -6914,7 +6914,7 @@
       {
         "file": "outfit_s28_024.jpg",
         "left": 37.9,
-        "top": 93.8,
+        "top": 88.4,
         "width": 15.3,
         "height": 11.6
       }
@@ -8558,7 +8558,7 @@
       },
       {
         "file": "outfit_s36_011.png",
-        "left": -0.3,
+        "left": 0,
         "top": 6.2,
         "width": 18.7,
         "height": 41.5
@@ -8782,7 +8782,7 @@
       },
       {
         "file": "outfit_s37_014.jpg",
-        "left": 83.0,
+        "left": 82.8,
         "top": 59.1,
         "width": 17.2,
         "height": 8.6
@@ -8983,7 +8983,7 @@
       },
       {
         "file": "outfit_s38_012.png",
-        "left": -0.4,
+        "left": 0,
         "top": 16.8,
         "width": 20.4,
         "height": 33.2
@@ -9166,7 +9166,7 @@
       },
       {
         "file": "outfit_s39_009.png",
-        "left": -21.3,
+        "left": 0,
         "top": 56.3,
         "width": 15.3,
         "height": 22.7
@@ -9905,7 +9905,7 @@
       },
       {
         "file": "outfit_s43_005.png",
-        "left": -0.4,
+        "left": 0,
         "top": 21.4,
         "width": 16.4,
         "height": 39.6
@@ -10119,7 +10119,7 @@
       },
       {
         "file": "outfit_s44_005.png",
-        "left": -0.4,
+        "left": 0,
         "top": 20.3,
         "width": 18.8,
         "height": 40.2
@@ -10190,7 +10190,7 @@
       {
         "file": "outfit_s44_015.png",
         "left": 65.9,
-        "top": 70.4,
+        "top": 69.3,
         "width": 15.2,
         "height": 30.7
       },
@@ -10552,7 +10552,7 @@
       },
       {
         "file": "outfit_s46_006.png",
-        "left": 81.8,
+        "left": 81.7,
         "top": 5.4,
         "width": 18.3,
         "height": 40.5
@@ -11964,7 +11964,7 @@
       {
         "file": "outfit_s52_008.png",
         "left": 82.7,
-        "top": 84.0,
+        "top": 83.8,
         "width": 15.2,
         "height": 16.2
       },
@@ -12357,7 +12357,7 @@
       {
         "file": "outfit_s54_004.png",
         "left": 56.5,
-        "top": 82.3,
+        "top": 81.7,
         "width": 17.2,
         "height": 18.3
       },
@@ -13230,7 +13230,7 @@
       },
       {
         "file": "outfit_s58_009.png",
-        "left": 86.8,
+        "left": 86.4,
         "top": 24.3,
         "width": 13.6,
         "height": 29.2
@@ -16484,14 +16484,14 @@
       {
         "file": "outfit_s73_010.png",
         "left": 16.9,
-        "top": 68.8,
+        "top": 68.3,
         "width": 9.2,
         "height": 31.7
       },
       {
         "file": "outfit_s73_011.png",
         "left": 1.1,
-        "top": 69.6,
+        "top": 69.1,
         "width": 15.3,
         "height": 30.9
       },
@@ -17240,7 +17240,7 @@
       {
         "file": "outfit_s77_013.jpg",
         "left": 69.5,
-        "top": 89.6,
+        "top": 89.1,
         "width": 19.6,
         "height": 10.9
       },
@@ -17253,7 +17253,7 @@
       },
       {
         "file": "outfit_s77_015.png",
-        "left": 90.7,
+        "left": 89.0,
         "top": 84.3,
         "width": 11.0,
         "height": 12.1
@@ -17635,7 +17635,7 @@
       {
         "file": "outfit_s79_016.jpg",
         "left": 77.5,
-        "top": 99.6,
+        "top": 85,
         "width": 12.4,
         "height": 12.6
       },
@@ -17775,7 +17775,7 @@
       {
         "file": "outfit_s80_005.jpg",
         "left": 46.0,
-        "top": 85.8,
+        "top": 84.8,
         "width": 9.7,
         "height": 15.2
       },
@@ -17966,7 +17966,7 @@
         "left": 35.6,
         "top": 20.3,
         "width": 20.3,
-        "height": 72.8
+        "height": 55
       },
       {
         "file": "outfit_s81_002.png",
@@ -18576,7 +18576,7 @@
       {
         "file": "ss25_s003_003.png",
         "left": 56.4,
-        "top": 98.9,
+        "top": 85,
         "width": 6.1,
         "height": 4.5
       },
@@ -18923,7 +18923,7 @@
         "file": "ss25_s004_023.png",
         "left": 18.8,
         "top": 50.4,
-        "width": 2.3,
+        "width": 8,
         "height": 35.5
       },
       {
@@ -18942,7 +18942,7 @@
       },
       {
         "file": "ss25_s004_026.png",
-        "left": 99.9,
+        "left": 85,
         "top": 75.8,
         "width": 5.4,
         "height": 18.9
@@ -19198,9 +19198,9 @@
       {
         "file": "ss25_s006_003.png",
         "left": 50.6,
-        "top": 52.6,
+        "top": 45,
         "width": 18.6,
-        "height": 68.9
+        "height": 55
       },
       {
         "file": "ss25_s006_004.jpg",
@@ -19254,7 +19254,7 @@
       {
         "file": "ss25_s006_011.jpg",
         "left": 20.5,
-        "top": 86.9,
+        "top": 69.2,
         "width": 19.8,
         "height": 30.8
       },
@@ -19394,7 +19394,7 @@
       {
         "file": "ss25_s007_007.png",
         "left": 52.6,
-        "top": 94.4,
+        "top": 94.0,
         "width": 7.1,
         "height": 6.0
       },
@@ -19484,7 +19484,7 @@
       },
       {
         "file": "ss25_s007_020.png",
-        "left": 127.0,
+        "left": 85,
         "top": 47.4,
         "width": 6.6,
         "height": 18.7
@@ -19499,7 +19499,7 @@
       {
         "file": "ss25_s007_022.jpg",
         "left": 77.6,
-        "top": 99.1,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
@@ -19638,7 +19638,7 @@
       },
       {
         "file": "ss25_s008_014.png",
-        "left": 127.0,
+        "left": 85,
         "top": 47.4,
         "width": 6.6,
         "height": 18.7
@@ -19801,7 +19801,7 @@
       },
       {
         "file": "ss25_s009_010.png",
-        "left": 101.7,
+        "left": 85,
         "top": 56.9,
         "width": 6.7,
         "height": 7.4
@@ -19843,7 +19843,7 @@
       },
       {
         "file": "ss25_s009_016.jpg",
-        "left": 94.9,
+        "left": 94.4,
         "top": 87.2,
         "width": 5.6,
         "height": 9.5
@@ -19938,14 +19938,14 @@
         "file": "ss25_s010_007.jpg",
         "left": 36.8,
         "top": 9.1,
-        "width": 2.7,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "ss25_s010_008.jpg",
         "left": 40.1,
         "top": 9.4,
-        "width": 2.7,
+        "width": 8,
         "height": 28.4
       },
       {
@@ -19985,7 +19985,7 @@
       },
       {
         "file": "ss25_s010_014.png",
-        "left": 96.0,
+        "left": 85,
         "top": 4.1,
         "width": 3.9,
         "height": 9.4
@@ -20165,14 +20165,14 @@
         "file": "ss25_s011_017.jpg",
         "left": 34.5,
         "top": 69.9,
-        "width": 2.7,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "ss25_s011_018.jpg",
         "left": 37.8,
         "top": 70.1,
-        "width": 2.7,
+        "width": 8,
         "height": 28.4
       },
       {
@@ -20277,7 +20277,7 @@
       },
       {
         "file": "ss25_s012_010.jpg",
-        "left": -0.1,
+        "left": 0,
         "top": 17.4,
         "width": 18.6,
         "height": 40.0
@@ -20328,14 +20328,14 @@
         "file": "ss25_s012_017.jpg",
         "left": 18.0,
         "top": 15.2,
-        "width": 2.7,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "ss25_s012_018.jpg",
         "left": 18.5,
         "top": 44.9,
-        "width": 2.7,
+        "width": 8,
         "height": 28.4
       }
     ],
@@ -20419,7 +20419,7 @@
       {
         "file": "ss25_s013_009.png",
         "left": 12.6,
-        "top": 92.8,
+        "top": 92.3,
         "width": 6.4,
         "height": 7.7
       },
@@ -20608,22 +20608,22 @@
       {
         "file": "ss25_s014_021.jpg",
         "left": 85.3,
-        "top": 105.7,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
       {
         "file": "ss25_s014_022.jpg",
         "left": 44.5,
-        "top": -7.2,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "ss25_s014_023.jpg",
         "left": 61.5,
-        "top": -7.7,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.4
       }
     ],
@@ -20770,7 +20770,7 @@
       {
         "file": "ss25_s015_016.jpg",
         "left": 87.1,
-        "top": 124.1,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
@@ -20805,15 +20805,15 @@
       {
         "file": "ss25_s015_021.jpg",
         "left": 44.5,
-        "top": -7.2,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "ss25_s015_022.jpg",
         "left": 61.5,
-        "top": -7.7,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.4
       },
       {
@@ -20960,7 +20960,7 @@
       },
       {
         "file": "ss25_s016_014.png",
-        "left": 110.0,
+        "left": 85,
         "top": 48.0,
         "width": 6.0,
         "height": 6.1
@@ -21031,7 +21031,7 @@
       {
         "file": "ss25_s016_024.jpg",
         "left": 5.5,
-        "top": 96.8,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
@@ -21190,7 +21190,7 @@
       },
       {
         "file": "ss25_s017_017.png",
-        "left": 95.8,
+        "left": 85,
         "top": 17.7,
         "width": 3.9,
         "height": 9.4
@@ -21376,7 +21376,7 @@
       {
         "file": "ss25_s018_017.png",
         "left": 81.3,
-        "top": 102.5,
+        "top": 85,
         "width": 5.1,
         "height": 10.1
       },
@@ -21564,7 +21564,7 @@
         "left": 12.9,
         "top": 54.5,
         "width": 12.4,
-        "height": 2.5
+        "height": 10
       }
     ],
     "image_count": 20
@@ -21702,7 +21702,7 @@
         "left": 13.4,
         "top": 56.7,
         "width": 12.4,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "ss25_s020_016.jpg",
@@ -21837,14 +21837,14 @@
       {
         "file": "ss25_s021_009.png",
         "left": 69.1,
-        "top": 84.2,
+        "top": 78.4,
         "width": 14.6,
         "height": 21.6
       },
       {
         "file": "ss25_s021_010.png",
         "left": 2.4,
-        "top": 81.4,
+        "top": 77.0,
         "width": 11.6,
         "height": 23.0
       },
@@ -21900,7 +21900,7 @@
       {
         "file": "ss25_s021_018.png",
         "left": 15.1,
-        "top": 104.5,
+        "top": 85,
         "width": 6.4,
         "height": 7.7
       },
@@ -21913,7 +21913,7 @@
       },
       {
         "file": "ss25_s021_020.png",
-        "left": 96.0,
+        "left": 85,
         "top": 48.2,
         "width": 4.5,
         "height": 9.4
@@ -22148,7 +22148,7 @@
       {
         "file": "ss25_s023_006.jpg",
         "left": 18.3,
-        "top": 95.8,
+        "top": 85,
         "width": 6.0,
         "height": 8.2
       },
@@ -22175,8 +22175,8 @@
       },
       {
         "file": "ss25_s023_010.png",
-        "left": 109.2,
-        "top": 106.5,
+        "left": 85,
+        "top": 81.8,
         "width": 5.3,
         "height": 18.2
       },
@@ -22314,7 +22314,7 @@
       },
       {
         "file": "ss25_s024_009.png",
-        "left": 102.0,
+        "left": 85,
         "top": 85.0,
         "width": 4.4,
         "height": 10.5
@@ -22363,7 +22363,7 @@
       },
       {
         "file": "ss25_s024_016.png",
-        "left": 105.3,
+        "left": 85,
         "top": 60.1,
         "width": 4.2,
         "height": 13.3
@@ -22592,7 +22592,7 @@
       {
         "file": "ss25_s026_004.jpg",
         "left": 9.3,
-        "top": 100.5,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -22853,7 +22853,7 @@
       {
         "file": "ss25_s027_016.png",
         "left": 74.2,
-        "top": 93.1,
+        "top": 91.3,
         "width": 5.9,
         "height": 8.7
       },
@@ -23047,7 +23047,7 @@
       {
         "file": "ss25_s028_014.png",
         "left": 35.0,
-        "top": 107.4,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -23075,14 +23075,14 @@
       {
         "file": "ss25_s028_018.jpg",
         "left": 70.6,
-        "top": 119.0,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
       {
         "file": "ss25_s028_019.png",
-        "left": 116.4,
-        "top": 105.7,
+        "left": 85,
+        "top": 85,
         "width": 7.1,
         "height": 6.0
       },
@@ -23091,7 +23091,7 @@
         "left": 48.7,
         "top": 37.4,
         "width": 7.3,
-        "height": 2.6
+        "height": 10
       },
       {
         "file": "ss25_s028_021.jpg",
@@ -23191,7 +23191,7 @@
       {
         "file": "ss25_s029_010.png",
         "left": 12.8,
-        "top": 117.6,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -23282,29 +23282,29 @@
       },
       {
         "file": "ss25_s030_006.png",
-        "left": 88.3,
+        "left": 88.0,
         "top": 71.8,
         "width": 12.0,
         "height": 12.9
       },
       {
         "file": "ss25_s030_007.jpg",
-        "left": 112.2,
+        "left": 85,
         "top": 43.6,
         "width": 5.5,
         "height": 8.6
       },
       {
         "file": "ss25_s030_008.png",
-        "left": 100.1,
-        "top": 103.6,
+        "left": 85,
+        "top": 85,
         "width": 5.3,
         "height": 7.0
       },
       {
         "file": "ss25_s030_009.jpg",
         "left": 90.6,
-        "top": 119.2,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -23461,14 +23461,14 @@
       {
         "file": "ss25_s031_011.jpg",
         "left": 16.7,
-        "top": 110.9,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
       {
         "file": "ss25_s031_012.png",
         "left": 18.9,
-        "top": 118.2,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       }
@@ -23529,7 +23529,7 @@
         "left": 54.4,
         "top": 19.3,
         "width": 13.6,
-        "height": 61.3
+        "height": 55
       },
       {
         "file": "ss25_s032_006.png",
@@ -23647,7 +23647,7 @@
       {
         "file": "ss25_s033_007.png",
         "left": 4.2,
-        "top": 115.4,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -24038,7 +24038,7 @@
       },
       {
         "file": "ss25_s036_006.png",
-        "left": 114.8,
+        "left": 85,
         "top": 39.6,
         "width": 3.9,
         "height": 10.6
@@ -24067,7 +24067,7 @@
       {
         "file": "ss25_s036_010.jpg",
         "left": 30.9,
-        "top": 109.5,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -24158,7 +24158,7 @@
       },
       {
         "file": "ss25_s037_006.png",
-        "left": 97.9,
+        "left": 85,
         "top": 28.9,
         "width": 3.9,
         "height": 10.6
@@ -24172,7 +24172,7 @@
       },
       {
         "file": "ss25_s037_008.jpg",
-        "left": 102.1,
+        "left": 85,
         "top": 66.5,
         "width": 5.5,
         "height": 8.6
@@ -24180,14 +24180,14 @@
       {
         "file": "ss25_s037_009.jpg",
         "left": 66.1,
-        "top": 116.2,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
       {
         "file": "ss25_s037_010.png",
         "left": 77.5,
-        "top": 104.0,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -24306,7 +24306,7 @@
       {
         "file": "ss25_s038_006.jpg",
         "left": 12.4,
-        "top": 115.0,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -24326,7 +24326,7 @@
       },
       {
         "file": "ss25_s038_009.jpg",
-        "left": 127.5,
+        "left": 85,
         "top": 84.9,
         "width": 5.5,
         "height": 8.6
@@ -24361,7 +24361,7 @@
       },
       {
         "file": "ss25_s038_014.png",
-        "left": 106.1,
+        "left": 85,
         "top": 33.6,
         "width": 3.9,
         "height": 10.6
@@ -24472,7 +24472,7 @@
       {
         "file": "ss25_s039_010.jpg",
         "left": 54.0,
-        "top": 94.7,
+        "top": 92.6,
         "width": 6.9,
         "height": 7.4
       },
@@ -24619,7 +24619,7 @@
         "left": 37.7,
         "top": 16.7,
         "width": 17.6,
-        "height": 61.1
+        "height": 55
       },
       {
         "file": "ss25_s041_003.jpg",
@@ -24651,7 +24651,7 @@
       },
       {
         "file": "ss25_s041_007.jpg",
-        "left": 79.8,
+        "left": 79.3,
         "top": 39.7,
         "width": 20.7,
         "height": 34.2
@@ -24733,7 +24733,7 @@
         "left": 29.2,
         "top": 10.3,
         "width": 16.7,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s042_009.jpg",
@@ -24781,7 +24781,7 @@
         "left": 48.7,
         "top": 35.7,
         "width": 15.4,
-        "height": 62.4
+        "height": 55
       },
       {
         "file": "ss25_s043_002.jpg",
@@ -24806,7 +24806,7 @@
       },
       {
         "file": "ss25_s043_005.jpg",
-        "left": -1.7,
+        "left": 0,
         "top": 10.1,
         "width": 22.6,
         "height": 35.1
@@ -24924,7 +24924,7 @@
         "left": 39.2,
         "top": 21.9,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s045_002.jpg",
@@ -24956,14 +24956,14 @@
       },
       {
         "file": "ss25_s045_006.jpg",
-        "left": -6.2,
+        "left": 0,
         "top": 18.1,
         "width": 26.1,
         "height": 36.5
       },
       {
         "file": "ss25_s045_007.jpg",
-        "left": 83.5,
+        "left": 81.3,
         "top": 17.4,
         "width": 18.7,
         "height": 35.0
@@ -25106,7 +25106,7 @@
         "left": 44.3,
         "top": 17.1,
         "width": 17.8,
-        "height": 79.6
+        "height": 55
       },
       {
         "file": "ss25_s048_005.jpg",
@@ -25177,7 +25177,7 @@
       {
         "file": "ss25_s049_003.jpg",
         "left": 81.1,
-        "top": 70.4,
+        "top": 64.3,
         "width": 16.4,
         "height": 35.7
       },
@@ -25190,7 +25190,7 @@
       },
       {
         "file": "ss25_s049_005.jpg",
-        "left": -0.4,
+        "left": 0,
         "top": 38.6,
         "width": 20.4,
         "height": 22.8
@@ -25232,7 +25232,7 @@
       },
       {
         "file": "ss25_s049_011.jpg",
-        "left": -0.1,
+        "left": 0,
         "top": 62.0,
         "width": 22.6,
         "height": 34.0
@@ -25270,14 +25270,14 @@
     "layout": [
       {
         "file": "ss25_s050_001.jpg",
-        "left": 80.1,
+        "left": 79.1,
         "top": 66.8,
         "width": 20.9,
         "height": 32.7
       },
       {
         "file": "ss25_s050_002.jpg",
-        "left": -0.4,
+        "left": 0,
         "top": 38.6,
         "width": 20.4,
         "height": 22.8
@@ -25298,7 +25298,7 @@
       },
       {
         "file": "ss25_s050_005.jpg",
-        "left": -0.1,
+        "left": 0,
         "top": 62.0,
         "width": 22.6,
         "height": 34.0
@@ -25315,14 +25315,14 @@
         "left": 44.3,
         "top": 13.1,
         "width": 17.4,
-        "height": 67.5
+        "height": 55
       },
       {
         "file": "ss25_s050_008.jpg",
         "left": 28.5,
         "top": 13.5,
         "width": 14.9,
-        "height": 63.1
+        "height": 55
       },
       {
         "file": "ss25_s050_009.jpg",
@@ -25379,14 +25379,14 @@
     "layout": [
       {
         "file": "ss25_s051_001.jpg",
-        "left": 80.1,
+        "left": 79.1,
         "top": 66.8,
         "width": 20.9,
         "height": 32.7
       },
       {
         "file": "ss25_s051_002.jpg",
-        "left": -0.4,
+        "left": 0,
         "top": 38.6,
         "width": 20.4,
         "height": 22.8
@@ -25407,7 +25407,7 @@
       },
       {
         "file": "ss25_s051_005.jpg",
-        "left": -0.1,
+        "left": 0,
         "top": 62.0,
         "width": 22.6,
         "height": 34.0
@@ -25450,7 +25450,7 @@
       {
         "file": "ss25_s051_011.jpg",
         "left": 22.9,
-        "top": 68.6,
+        "top": 65.2,
         "width": 20.1,
         "height": 34.8
       },
@@ -25495,14 +25495,14 @@
     "layout": [
       {
         "file": "ss25_s052_001.jpg",
-        "left": 80.1,
+        "left": 79.1,
         "top": 66.8,
         "width": 20.9,
         "height": 32.7
       },
       {
         "file": "ss25_s052_002.jpg",
-        "left": -0.4,
+        "left": 0,
         "top": 38.6,
         "width": 20.4,
         "height": 22.8
@@ -25516,7 +25516,7 @@
       },
       {
         "file": "ss25_s052_004.jpg",
-        "left": -0.1,
+        "left": 0,
         "top": 62.0,
         "width": 22.6,
         "height": 34.0
@@ -25559,7 +25559,7 @@
       {
         "file": "ss25_s052_010.jpg",
         "left": 59.8,
-        "top": 69.6,
+        "top": 63.5,
         "width": 20.4,
         "height": 36.5
       },
@@ -25575,14 +25575,14 @@
         "left": 54.4,
         "top": 15.3,
         "width": 12.2,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s052_013.jpg",
         "left": 36.2,
         "top": 14.9,
         "width": 15.4,
-        "height": 62.5
+        "height": 55
       }
     ],
     "image_count": 13
@@ -25609,14 +25609,14 @@
     "layout": [
       {
         "file": "ss25_s053_001.jpg",
-        "left": 79.4,
+        "left": 79.1,
         "top": 45.3,
         "width": 20.9,
         "height": 32.7
       },
       {
         "file": "ss25_s053_002.jpg",
-        "left": -0.4,
+        "left": 0,
         "top": 38.6,
         "width": 20.4,
         "height": 22.8
@@ -25630,7 +25630,7 @@
       },
       {
         "file": "ss25_s053_004.jpg",
-        "left": -0.1,
+        "left": 0,
         "top": 62.0,
         "width": 22.6,
         "height": 34.0
@@ -25638,7 +25638,7 @@
       {
         "file": "ss25_s053_005.jpg",
         "left": 82.1,
-        "top": 74.4,
+        "top": 72.4,
         "width": 13.1,
         "height": 27.6
       },
@@ -25652,7 +25652,7 @@
       {
         "file": "ss25_s053_007.jpg",
         "left": 44.9,
-        "top": 77.6,
+        "top": 74.7,
         "width": 14.7,
         "height": 25.3
       },
@@ -25661,7 +25661,7 @@
         "left": 44.3,
         "top": 19.6,
         "width": 14.2,
-        "height": 60.9
+        "height": 55
       },
       {
         "file": "ss25_s053_009.jpg",
@@ -25708,7 +25708,7 @@
         "left": 38.5,
         "top": 31.3,
         "width": 18.0,
-        "height": 60.8
+        "height": 55
       },
       {
         "file": "ss25_s054_002.jpg",
@@ -25727,7 +25727,7 @@
       {
         "file": "ss25_s054_004.jpg",
         "left": 11.1,
-        "top": 75.5,
+        "top": 75.1,
         "width": 21.5,
         "height": 24.9
       },
@@ -25835,7 +25835,7 @@
       {
         "file": "ss25_s056_009.jpg",
         "left": 6.9,
-        "top": 74.7,
+        "top": 70.5,
         "width": 17.0,
         "height": 29.5
       },
@@ -25950,7 +25950,7 @@
       {
         "file": "ss25_s057_010.jpg",
         "left": 28.5,
-        "top": 75.9,
+        "top": 74.3,
         "width": 17.7,
         "height": 25.7
       },
@@ -25963,7 +25963,7 @@
       },
       {
         "file": "ss25_s057_012.png",
-        "left": 85.2,
+        "left": 83.4,
         "top": 58.3,
         "width": 16.6,
         "height": 38.6
@@ -26059,7 +26059,7 @@
         "left": 76.6,
         "top": 12.6,
         "width": 19.9,
-        "height": 63.8
+        "height": 55
       },
       {
         "file": "ss25_s058_011.jpg",
@@ -26259,7 +26259,7 @@
         "left": 79.6,
         "top": 9.2,
         "width": 17.8,
-        "height": 68.1
+        "height": 55
       },
       {
         "file": "ss25_s060_011.jpg",
@@ -26945,7 +26945,7 @@
       {
         "file": "ss25_s067_007.jpg",
         "left": 3.2,
-        "top": 65.2,
+        "top": 62.7,
         "width": 13.2,
         "height": 37.3
       },
@@ -26972,7 +26972,7 @@
       },
       {
         "file": "ss25_s067_011.jpg",
-        "left": -0.2,
+        "left": 0,
         "top": 23.0,
         "width": 23.2,
         "height": 29.1
@@ -27013,14 +27013,14 @@
         "left": 35.2,
         "top": 35.9,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s068_002.jpg",
         "left": 49.1,
         "top": 33.2,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s068_003.png",
@@ -27039,7 +27039,7 @@
       {
         "file": "ss25_s068_005.jpg",
         "left": 3.2,
-        "top": 65.2,
+        "top": 62.7,
         "width": 13.2,
         "height": 37.3
       },
@@ -27066,7 +27066,7 @@
       },
       {
         "file": "ss25_s068_009.jpg",
-        "left": -0.2,
+        "left": 0,
         "top": 23.0,
         "width": 23.2,
         "height": 29.1
@@ -27121,14 +27121,14 @@
         "left": 31.5,
         "top": 39.7,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s069_002.jpg",
         "left": 45.5,
         "top": 40.6,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s069_003.png",
@@ -27147,7 +27147,7 @@
       {
         "file": "ss25_s069_005.jpg",
         "left": 3.2,
-        "top": 65.2,
+        "top": 62.7,
         "width": 13.2,
         "height": 37.3
       },
@@ -27167,7 +27167,7 @@
       },
       {
         "file": "ss25_s069_008.jpg",
-        "left": -0.2,
+        "left": 0,
         "top": 23.0,
         "width": 23.2,
         "height": 29.1
@@ -27196,7 +27196,7 @@
       {
         "file": "ss25_s069_012.jpg",
         "left": 64.9,
-        "top": 46.0,
+        "top": 44.3,
         "width": 12.4,
         "height": 55.7
       }
@@ -27228,14 +27228,14 @@
         "left": 35.2,
         "top": 35.9,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s070_002.jpg",
         "left": 53.9,
         "top": 38.3,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s070_003.jpg",
@@ -27254,13 +27254,13 @@
       {
         "file": "ss25_s070_005.jpg",
         "left": 26.3,
-        "top": 66.9,
+        "top": 66.6,
         "width": 8.6,
         "height": 33.4
       },
       {
         "file": "ss25_s070_006.jpg",
-        "left": 89.2,
+        "left": 87.8,
         "top": 66.2,
         "width": 12.2,
         "height": 31.4
@@ -27282,7 +27282,7 @@
       {
         "file": "ss25_s070_009.jpg",
         "left": 72.3,
-        "top": 42.8,
+        "top": 41.2,
         "width": 17.9,
         "height": 58.8
       },
@@ -27295,7 +27295,7 @@
       },
       {
         "file": "ss25_s070_011.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 15.8,
         "width": 21.3,
         "height": 50.7
@@ -27339,13 +27339,13 @@
       {
         "file": "ss25_s071_003.jpg",
         "left": 26.3,
-        "top": 66.9,
+        "top": 66.6,
         "width": 8.6,
         "height": 33.4
       },
       {
         "file": "ss25_s071_004.jpg",
-        "left": 89.2,
+        "left": 87.8,
         "top": 66.2,
         "width": 12.2,
         "height": 31.4
@@ -27367,7 +27367,7 @@
       {
         "file": "ss25_s071_007.jpg",
         "left": 72.3,
-        "top": 42.8,
+        "top": 41.2,
         "width": 17.9,
         "height": 58.8
       },
@@ -27380,7 +27380,7 @@
       },
       {
         "file": "ss25_s071_009.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 15.8,
         "width": 21.3,
         "height": 50.7
@@ -27390,7 +27390,7 @@
         "left": 43.7,
         "top": 43.5,
         "width": 16.0,
-        "height": 71.8
+        "height": 55
       }
     ],
     "image_count": 10
@@ -27421,25 +27421,25 @@
         "left": 35.2,
         "top": 35.9,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s072_002.jpg",
         "left": 53.9,
         "top": 38.3,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s072_003.jpg",
         "left": 26.3,
-        "top": 66.9,
+        "top": 66.6,
         "width": 8.6,
         "height": 33.4
       },
       {
         "file": "ss25_s072_004.jpg",
-        "left": 89.2,
+        "left": 87.8,
         "top": 66.2,
         "width": 12.2,
         "height": 31.4
@@ -27461,7 +27461,7 @@
       {
         "file": "ss25_s072_007.jpg",
         "left": 72.3,
-        "top": 42.8,
+        "top": 41.2,
         "width": 17.9,
         "height": 58.8
       },
@@ -27474,7 +27474,7 @@
       },
       {
         "file": "ss25_s072_009.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 15.8,
         "width": 21.3,
         "height": 50.7
@@ -27495,7 +27495,7 @@
       },
       {
         "file": "ss25_s072_012.jpg",
-        "left": 86.8,
+        "left": 80.5,
         "top": 38.6,
         "width": 19.5,
         "height": 26.5
@@ -27526,13 +27526,13 @@
       {
         "file": "ss25_s073_001.jpg",
         "left": 26.3,
-        "top": 66.9,
+        "top": 66.6,
         "width": 8.6,
         "height": 33.4
       },
       {
         "file": "ss25_s073_002.jpg",
-        "left": 89.2,
+        "left": 87.8,
         "top": 66.2,
         "width": 12.2,
         "height": 31.4
@@ -27554,7 +27554,7 @@
       {
         "file": "ss25_s073_005.jpg",
         "left": 72.3,
-        "top": 42.8,
+        "top": 41.2,
         "width": 17.9,
         "height": 58.8
       },
@@ -27567,7 +27567,7 @@
       },
       {
         "file": "ss25_s073_007.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 15.8,
         "width": 21.3,
         "height": 50.7
@@ -27588,7 +27588,7 @@
       },
       {
         "file": "ss25_s073_010.jpg",
-        "left": 86.8,
+        "left": 80.5,
         "top": 38.6,
         "width": 19.5,
         "height": 26.5
@@ -27596,7 +27596,7 @@
       {
         "file": "ss25_s073_011.jpg",
         "left": 48.4,
-        "top": 46.5,
+        "top": 44.3,
         "width": 12.4,
         "height": 55.7
       }
@@ -27629,25 +27629,25 @@
         "left": 35.2,
         "top": 35.9,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s074_002.jpg",
         "left": 53.9,
         "top": 38.3,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s074_003.jpg",
         "left": 26.3,
-        "top": 66.9,
+        "top": 66.6,
         "width": 8.6,
         "height": 33.4
       },
       {
         "file": "ss25_s074_004.jpg",
-        "left": 89.2,
+        "left": 87.8,
         "top": 66.2,
         "width": 12.2,
         "height": 31.4
@@ -27669,7 +27669,7 @@
       {
         "file": "ss25_s074_007.jpg",
         "left": 72.3,
-        "top": 42.8,
+        "top": 41.2,
         "width": 17.9,
         "height": 58.8
       },
@@ -27682,7 +27682,7 @@
       },
       {
         "file": "ss25_s074_009.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 15.8,
         "width": 21.3,
         "height": 50.7
@@ -27696,7 +27696,7 @@
       },
       {
         "file": "ss25_s074_011.jpg",
-        "left": 86.8,
+        "left": 80.5,
         "top": 38.6,
         "width": 19.5,
         "height": 26.5
@@ -27734,13 +27734,13 @@
       {
         "file": "ss25_s075_001.jpg",
         "left": 26.3,
-        "top": 66.9,
+        "top": 66.6,
         "width": 8.6,
         "height": 33.4
       },
       {
         "file": "ss25_s075_002.jpg",
-        "left": 89.2,
+        "left": 87.8,
         "top": 66.2,
         "width": 12.2,
         "height": 31.4
@@ -27762,7 +27762,7 @@
       {
         "file": "ss25_s075_005.jpg",
         "left": 72.3,
-        "top": 42.8,
+        "top": 41.2,
         "width": 17.9,
         "height": 58.8
       },
@@ -27775,7 +27775,7 @@
       },
       {
         "file": "ss25_s075_007.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 15.8,
         "width": 21.3,
         "height": 50.7
@@ -27789,7 +27789,7 @@
       },
       {
         "file": "ss25_s075_009.jpg",
-        "left": 86.8,
+        "left": 80.5,
         "top": 38.6,
         "width": 19.5,
         "height": 26.5
@@ -27806,7 +27806,7 @@
         "left": 45.3,
         "top": 41.1,
         "width": 16.0,
-        "height": 71.8
+        "height": 55
       }
     ],
     "image_count": 11
@@ -27835,14 +27835,14 @@
         "left": 35.2,
         "top": 35.9,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s076_002.jpg",
         "left": 53.9,
         "top": 38.3,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s076_003.jpg",
@@ -27875,7 +27875,7 @@
       {
         "file": "ss25_s076_007.jpg",
         "left": 5.0,
-        "top": 60.7,
+        "top": 60.0,
         "width": 13.6,
         "height": 40.0
       },
@@ -27952,7 +27952,7 @@
       {
         "file": "ss25_s077_005.jpg",
         "left": 5.0,
-        "top": 60.7,
+        "top": 60.0,
         "width": 13.6,
         "height": 40.0
       },
@@ -28012,14 +28012,14 @@
         "left": 35.2,
         "top": 35.9,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s078_002.jpg",
         "left": 53.9,
         "top": 38.3,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s078_003.jpg",
@@ -28045,7 +28045,7 @@
       {
         "file": "ss25_s078_006.jpg",
         "left": 5.0,
-        "top": 60.7,
+        "top": 60.0,
         "width": 13.6,
         "height": 40.0
       },
@@ -28111,14 +28111,14 @@
         "left": 30.6,
         "top": 37.4,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s079_002.jpg",
         "left": 57.8,
         "top": 39.7,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s079_003.jpg",
@@ -28172,7 +28172,7 @@
       {
         "file": "ss25_s079_010.jpg",
         "left": 45.5,
-        "top": 49.1,
+        "top": 45.3,
         "width": 12.2,
         "height": 54.7
       }
@@ -28203,14 +28203,14 @@
         "left": 30.6,
         "top": 37.4,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s080_002.jpg",
         "left": 57.8,
         "top": 39.7,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s080_003.jpg",
@@ -28264,7 +28264,7 @@
       {
         "file": "ss25_s080_010.jpg",
         "left": 46.2,
-        "top": 48.1,
+        "top": 44.3,
         "width": 12.4,
         "height": 55.7
       }
@@ -28294,14 +28294,14 @@
         "left": 30.6,
         "top": 37.4,
         "width": 14.5,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s081_002.jpg",
         "left": 57.8,
         "top": 39.7,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s081_003.jpg",
@@ -28377,7 +28377,7 @@
         "left": 39.2,
         "top": 21.9,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s082_002.jpg",
@@ -28423,7 +28423,7 @@
       },
       {
         "file": "ss25_s082_008.jpg",
-        "left": 75.4,
+        "left": 73.8,
         "top": 14.5,
         "width": 26.2,
         "height": 57.3
@@ -28455,7 +28455,7 @@
         "left": 51.8,
         "top": 25.1,
         "width": 17.1,
-        "height": 74.0
+        "height": 55
       },
       {
         "file": "ss25_s083_002.jpg",
@@ -28488,7 +28488,7 @@
       {
         "file": "ss25_s083_006.jpg",
         "left": 2.2,
-        "top": 63.3,
+        "top": 59.5,
         "width": 24.8,
         "height": 40.5
       },
@@ -28734,14 +28734,14 @@
       {
         "file": "ss25_s086_003.jpg",
         "left": 23.8,
-        "top": 62.9,
+        "top": 59.5,
         "width": 14.4,
         "height": 40.5
       },
       {
         "file": "ss25_s086_004.jpg",
         "left": 41.9,
-        "top": 70.5,
+        "top": 64.2,
         "width": 17.8,
         "height": 35.8
       },
@@ -28775,7 +28775,7 @@
       },
       {
         "file": "ss25_s086_009.jpg",
-        "left": 79.1,
+        "left": 76.1,
         "top": 24.6,
         "width": 23.9,
         "height": 28.2
@@ -28847,7 +28847,7 @@
       {
         "file": "ss25_s087_007.jpg",
         "left": 8.7,
-        "top": 55.7,
+        "top": 51.9,
         "width": 20.3,
         "height": 48.1
       },
@@ -28867,7 +28867,7 @@
       },
       {
         "file": "ss25_s087_010.jpg",
-        "left": 77.3,
+        "left": 75.6,
         "top": 69.6,
         "width": 24.4,
         "height": 29.2
@@ -29015,21 +29015,21 @@
       },
       {
         "file": "ss25_s089_006.jpg",
-        "left": -1.8,
+        "left": 0,
         "top": 68.9,
         "width": 21.9,
         "height": 19.0
       },
       {
         "file": "ss25_s089_007.jpg",
-        "left": 78.8,
+        "left": 78.3,
         "top": 56.7,
         "width": 21.7,
         "height": 36.2
       },
       {
         "file": "ss25_s089_008.jpg",
-        "left": 78.6,
+        "left": 78.0,
         "top": 18.8,
         "width": 22.0,
         "height": 24.8
@@ -29039,7 +29039,7 @@
         "left": 58.8,
         "top": 28.7,
         "width": 17.0,
-        "height": 67.9
+        "height": 55
       },
       {
         "file": "ss25_s089_010.png",
@@ -29081,7 +29081,7 @@
         "left": 44.1,
         "top": 32.9,
         "width": 16.5,
-        "height": 67.0
+        "height": 55
       },
       {
         "file": "ss25_s090_003.jpg",
@@ -29099,7 +29099,7 @@
       },
       {
         "file": "ss25_s090_005.jpg",
-        "left": 75.1,
+        "left": 72.5,
         "top": 59.3,
         "width": 27.5,
         "height": 35.2
@@ -29113,8 +29113,8 @@
       },
       {
         "file": "ss25_s090_007.jpg",
-        "left": -1.8,
-        "top": 73.4,
+        "left": 0,
+        "top": 72.9,
         "width": 17.4,
         "height": 27.1
       },
@@ -29193,7 +29193,7 @@
         "left": 0.3,
         "top": 14.9,
         "width": 11.0,
-        "height": 70.3
+        "height": 55
       },
       {
         "file": "ss25_s091_007.jpg",
@@ -29305,7 +29305,7 @@
       },
       {
         "file": "ss25_s092_010.jpg",
-        "left": 80.2,
+        "left": 79.7,
         "top": 72.0,
         "width": 20.3,
         "height": 12.5
@@ -29351,7 +29351,7 @@
       {
         "file": "ss25_s093_001.jpg",
         "left": 11.5,
-        "top": 47.9,
+        "top": 46.2,
         "width": 14.4,
         "height": 53.8
       },
@@ -29400,7 +29400,7 @@
       {
         "file": "ss25_s093_008.jpg",
         "left": 47.2,
-        "top": 65.3,
+        "top": 64.8,
         "width": 14.5,
         "height": 35.2
       },
@@ -29414,7 +29414,7 @@
       {
         "file": "ss25_s093_010.jpg",
         "left": 64.8,
-        "top": 45.4,
+        "top": 45.1,
         "width": 22.0,
         "height": 54.9
       },
@@ -29461,7 +29461,7 @@
       {
         "file": "ss25_s094_001.jpg",
         "left": 11.5,
-        "top": 47.9,
+        "top": 46.2,
         "width": 14.4,
         "height": 53.8
       },
@@ -29583,7 +29583,7 @@
       {
         "file": "ss25_s095_001.jpg",
         "left": 6.1,
-        "top": 47.4,
+        "top": 46.2,
         "width": 14.4,
         "height": 53.8
       },
@@ -29646,7 +29646,7 @@
       {
         "file": "ss25_s095_010.jpg",
         "left": 64.8,
-        "top": 45.4,
+        "top": 45.1,
         "width": 22.0,
         "height": 54.9
       },
@@ -29659,7 +29659,7 @@
       },
       {
         "file": "ss25_s095_012.jpg",
-        "left": 77.5,
+        "left": 76.4,
         "top": 86.0,
         "width": 23.6,
         "height": 8.1
@@ -29719,7 +29719,7 @@
         "left": 44.4,
         "top": 20.2,
         "width": 15.4,
-        "height": 75.7
+        "height": 55
       },
       {
         "file": "ss25_s097_006.jpg",
@@ -29783,7 +29783,7 @@
         "left": 41.7,
         "top": 18.1,
         "width": 17.9,
-        "height": 70.0
+        "height": 55
       },
       {
         "file": "ss25_s098_002.jpg",
@@ -29802,7 +29802,7 @@
       {
         "file": "ss25_s098_004.jpg",
         "left": 26.3,
-        "top": 71.2,
+        "top": 70.8,
         "width": 13.4,
         "height": 29.2
       },
@@ -29836,7 +29836,7 @@
       },
       {
         "file": "ss25_s098_009.jpg",
-        "left": 82.3,
+        "left": 81.4,
         "top": 74.6,
         "width": 18.6,
         "height": 18.9
@@ -29873,7 +29873,7 @@
         "left": 44.4,
         "top": 22.2,
         "width": 16.1,
-        "height": 75.6
+        "height": 55
       },
       {
         "file": "ss25_s099_002.jpg",
@@ -29962,7 +29962,7 @@
       {
         "file": "ss25_s100_003.jpg",
         "left": 81.1,
-        "top": 70.4,
+        "top": 64.3,
         "width": 16.4,
         "height": 35.7
       },
@@ -29978,7 +29978,7 @@
         "left": 42.4,
         "top": 18.0,
         "width": 15.2,
-        "height": 64.1
+        "height": 55
       },
       {
         "file": "ss25_s100_006.jpg",
@@ -29997,7 +29997,7 @@
       {
         "file": "ss25_s100_008.jpg",
         "left": 60.2,
-        "top": 63.8,
+        "top": 61.3,
         "width": 18.3,
         "height": 38.7
       },
@@ -30042,7 +30042,7 @@
         "left": 40.7,
         "top": 18.4,
         "width": 16.8,
-        "height": 63.1
+        "height": 55
       },
       {
         "file": "ss25_s101_003.jpg",
@@ -30054,7 +30054,7 @@
       {
         "file": "ss25_s101_004.jpg",
         "left": 59.0,
-        "top": 72.2,
+        "top": 64.3,
         "width": 16.4,
         "height": 35.7
       },
@@ -30089,7 +30089,7 @@
       {
         "file": "ss25_s101_009.jpg",
         "left": 7.0,
-        "top": 65.5,
+        "top": 62.7,
         "width": 19.0,
         "height": 37.3
       },
@@ -30165,7 +30165,7 @@
       },
       {
         "file": "ss25_s102_007.jpg",
-        "left": 78.6,
+        "left": 77.6,
         "top": 64.2,
         "width": 22.4,
         "height": 25.3
@@ -30245,7 +30245,7 @@
       },
       {
         "file": "ss25_s103_006.jpg",
-        "left": 78.4,
+        "left": 77.6,
         "top": 73.3,
         "width": 22.4,
         "height": 25.3
@@ -30267,7 +30267,7 @@
       {
         "file": "ss25_s103_009.jpg",
         "left": 42.9,
-        "top": 52.5,
+        "top": 51.5,
         "width": 16.3,
         "height": 48.5
       },
@@ -30280,7 +30280,7 @@
       },
       {
         "file": "ss25_s103_011.jpg",
-        "left": 84.9,
+        "left": 84.5,
         "top": 12.3,
         "width": 15.5,
         "height": 32.3
@@ -30351,7 +30351,7 @@
       },
       {
         "file": "ss25_s104_006.jpg",
-        "left": 78.6,
+        "left": 77.6,
         "top": 64.2,
         "width": 22.4,
         "height": 25.3
@@ -30429,7 +30429,7 @@
       },
       {
         "file": "ss25_s105_004.jpg",
-        "left": 78.6,
+        "left": 77.6,
         "top": 64.2,
         "width": 22.4,
         "height": 25.3
@@ -30612,7 +30612,7 @@
       {
         "file": "ss25_s106_016.png",
         "left": 28.2,
-        "top": 51.7,
+        "top": 51.4,
         "width": 15.6,
         "height": 48.6
       }
@@ -30689,7 +30689,7 @@
       },
       {
         "file": "ss25_s107_008.jpg",
-        "left": 82.4,
+        "left": 81.7,
         "top": 19.4,
         "width": 18.3,
         "height": 39.4
@@ -30747,7 +30747,7 @@
       },
       {
         "file": "ss25_s108_003.jpg",
-        "left": 78.6,
+        "left": 77.6,
         "top": 64.2,
         "width": 22.4,
         "height": 25.3
@@ -30948,7 +30948,7 @@
         "left": 49.0,
         "top": 18.4,
         "width": 16.4,
-        "height": 70.6
+        "height": 55
       },
       {
         "file": "ss25_s110_004.jpg",
@@ -30966,7 +30966,7 @@
       },
       {
         "file": "ss25_s110_006.jpg",
-        "left": 79.4,
+        "left": 77.7,
         "top": 33.7,
         "width": 22.3,
         "height": 46.3
@@ -31017,14 +31017,14 @@
         "left": 32.3,
         "top": 17.6,
         "width": 18.3,
-        "height": 69.7
+        "height": 55
       },
       {
         "file": "ss25_s111_002.jpg",
         "left": 50.9,
         "top": 18.3,
         "width": 20.4,
-        "height": 72.8
+        "height": 55
       },
       {
         "file": "ss25_s111_003.png",
@@ -31100,7 +31100,7 @@
       },
       {
         "file": "ss25_s112_002.jpg",
-        "left": 81.6,
+        "left": 79.1,
         "top": 12.1,
         "width": 20.9,
         "height": 41.1
@@ -31131,7 +31131,7 @@
         "left": 37.8,
         "top": 22.0,
         "width": 11.7,
-        "height": 78.0
+        "height": 55
       },
       {
         "file": "ss25_s112_007.jpg",
@@ -31166,7 +31166,7 @@
         "left": 48.8,
         "top": 14.2,
         "width": 15.2,
-        "height": 78.0
+        "height": 55
       }
     ],
     "image_count": 11
@@ -31199,7 +31199,7 @@
       },
       {
         "file": "ss25_s113_002.jpg",
-        "left": 81.6,
+        "left": 79.1,
         "top": 12.1,
         "width": 20.9,
         "height": 41.1
@@ -31258,7 +31258,7 @@
         "left": 38.8,
         "top": 19.8,
         "width": 18.7,
-        "height": 74.2
+        "height": 55
       }
     ],
     "image_count": 10
@@ -31322,7 +31322,7 @@
         "left": 47.0,
         "top": 22.5,
         "width": 14.7,
-        "height": 74.2
+        "height": 55
       },
       {
         "file": "ss25_s114_007.jpg",
@@ -31396,7 +31396,7 @@
       },
       {
         "file": "ss25_s115_004.jpg",
-        "left": 78.2,
+        "left": 74.5,
         "top": 21.2,
         "width": 25.5,
         "height": 48.5
@@ -31493,7 +31493,7 @@
       },
       {
         "file": "ss25_s116_006.jpg",
-        "left": 78.2,
+        "left": 74.5,
         "top": 21.2,
         "width": 25.5,
         "height": 48.5
@@ -31508,7 +31508,7 @@
       {
         "file": "ss25_s116_008.jpg",
         "left": 38.8,
-        "top": 48.5,
+        "top": 47.9,
         "width": 22.8,
         "height": 52.1
       }
@@ -31580,11 +31580,11 @@
         "left": 42.1,
         "top": 12.3,
         "width": 17.6,
-        "height": 63.7
+        "height": 55
       },
       {
         "file": "ss25_s117_008.jpg",
-        "left": 84.5,
+        "left": 81.0,
         "top": 42.1,
         "width": 19.0,
         "height": 22.2
@@ -31655,7 +31655,7 @@
       },
       {
         "file": "ss25_s118_006.jpg",
-        "left": 84.5,
+        "left": 81.0,
         "top": 42.1,
         "width": 19.0,
         "height": 22.2
@@ -31669,7 +31669,7 @@
       },
       {
         "file": "ss25_s118_008.jpg",
-        "left": -2.4,
+        "left": 0,
         "top": 66.8,
         "width": 23.9,
         "height": 27.7
@@ -31740,7 +31740,7 @@
       },
       {
         "file": "ss25_s119_005.jpg",
-        "left": 84.5,
+        "left": 81.0,
         "top": 42.1,
         "width": 19.0,
         "height": 22.2
@@ -31754,7 +31754,7 @@
       },
       {
         "file": "ss25_s119_007.jpg",
-        "left": -2.4,
+        "left": 0,
         "top": 66.8,
         "width": 23.9,
         "height": 27.7
@@ -31768,7 +31768,7 @@
       },
       {
         "file": "ss25_s119_009.jpg",
-        "left": -0.3,
+        "left": 0,
         "top": 14.9,
         "width": 19.6,
         "height": 22.1
@@ -31804,7 +31804,7 @@
         "left": 41.2,
         "top": 19.1,
         "width": 15.3,
-        "height": 75.4
+        "height": 55
       },
       {
         "file": "ss25_s120_002.png",
@@ -31832,12 +31832,12 @@
         "left": 58.2,
         "top": 17.6,
         "width": 17.7,
-        "height": 75.1
+        "height": 55
       },
       {
         "file": "ss25_s120_006.jpg",
         "left": 77.6,
-        "top": 60.5,
+        "top": 57.9,
         "width": 19.4,
         "height": 42.1
       },
@@ -31888,7 +31888,7 @@
       {
         "file": "ss25_s121_003.jpg",
         "left": 77.6,
-        "top": 60.5,
+        "top": 57.9,
         "width": 19.4,
         "height": 42.1
       },
@@ -31904,14 +31904,14 @@
         "left": 54.4,
         "top": 18.7,
         "width": 17.7,
-        "height": 70.6
+        "height": 55
       },
       {
         "file": "ss25_s121_006.jpg",
         "left": 38.6,
         "top": 17.8,
         "width": 14.9,
-        "height": 64.4
+        "height": 55
       },
       {
         "file": "ss25_s121_007.jpg",
@@ -31936,7 +31936,7 @@
       },
       {
         "file": "ss25_s121_010.jpg",
-        "left": -1.3,
+        "left": 0,
         "top": 0.1,
         "width": 13.9,
         "height": 39.6
@@ -31996,14 +31996,14 @@
       {
         "file": "ss25_s122_004.jpg",
         "left": 2.5,
-        "top": 55.4,
+        "top": 53.8,
         "width": 19.4,
         "height": 46.2
       },
       {
         "file": "ss25_s122_005.jpg",
         "left": 26.2,
-        "top": 56.1,
+        "top": 55.2,
         "width": 20.7,
         "height": 44.8
       },
@@ -32082,14 +32082,14 @@
       {
         "file": "ss25_s123_001.jpg",
         "left": 2.5,
-        "top": 55.4,
+        "top": 53.8,
         "width": 19.4,
         "height": 46.2
       },
       {
         "file": "ss25_s123_002.jpg",
         "left": 26.2,
-        "top": 56.1,
+        "top": 55.2,
         "width": 20.7,
         "height": 44.8
       },
@@ -32265,7 +32265,7 @@
         "left": 58.8,
         "top": 30.3,
         "width": 14.8,
-        "height": 62.8
+        "height": 55
       },
       {
         "file": "ss25_s125_002.jpg",
@@ -32341,7 +32341,7 @@
         "left": 58.8,
         "top": 30.3,
         "width": 14.8,
-        "height": 62.8
+        "height": 55
       },
       {
         "file": "ss25_s126_002.jpg",
@@ -32444,12 +32444,12 @@
         "left": 27.6,
         "top": 15.1,
         "width": 17.8,
-        "height": 69.7
+        "height": 55
       },
       {
         "file": "ss25_s127_006.jpg",
         "left": 10.4,
-        "top": 63.8,
+        "top": 63.4,
         "width": 14.6,
         "height": 36.6
       },
@@ -32578,13 +32578,13 @@
       {
         "file": "ss25_s129_005.jpg",
         "left": 44.9,
-        "top": 72.8,
+        "top": 70.6,
         "width": 19.6,
         "height": 29.4
       },
       {
         "file": "ss25_s129_006.jpg",
-        "left": 80.5,
+        "left": 76.9,
         "top": 26.9,
         "width": 23.1,
         "height": 28.9
@@ -32651,7 +32651,7 @@
       },
       {
         "file": "ss25_s130_005.jpg",
-        "left": 78.2,
+        "left": 77.4,
         "top": 46.8,
         "width": 22.6,
         "height": 22.2
@@ -32672,7 +32672,7 @@
       },
       {
         "file": "ss25_s130_008.jpg",
-        "left": 77.5,
+        "left": 76.1,
         "top": 32.6,
         "width": 23.9,
         "height": 6.9
@@ -32693,7 +32693,7 @@
       },
       {
         "file": "ss25_s130_011.jpg",
-        "left": 80.8,
+        "left": 79.9,
         "top": 19.9,
         "width": 20.1,
         "height": 10.1
@@ -32836,7 +32836,7 @@
       },
       {
         "file": "ss25_s132_004.jpg",
-        "left": 78.2,
+        "left": 77.4,
         "top": 46.8,
         "width": 22.6,
         "height": 22.2
@@ -32857,7 +32857,7 @@
       },
       {
         "file": "ss25_s132_007.jpg",
-        "left": 77.5,
+        "left": 76.1,
         "top": 32.6,
         "width": 23.9,
         "height": 6.9
@@ -32878,7 +32878,7 @@
       },
       {
         "file": "ss25_s132_010.jpg",
-        "left": 80.8,
+        "left": 79.9,
         "top": 19.9,
         "width": 20.1,
         "height": 10.1
@@ -32951,7 +32951,7 @@
       },
       {
         "file": "ss25_s133_004.jpg",
-        "left": 78.2,
+        "left": 77.4,
         "top": 46.8,
         "width": 22.6,
         "height": 22.2
@@ -32972,7 +32972,7 @@
       },
       {
         "file": "ss25_s133_007.jpg",
-        "left": 77.5,
+        "left": 76.1,
         "top": 32.6,
         "width": 23.9,
         "height": 6.9
@@ -32993,7 +32993,7 @@
       },
       {
         "file": "ss25_s133_010.jpg",
-        "left": 80.8,
+        "left": 79.9,
         "top": 19.9,
         "width": 20.1,
         "height": 10.1
@@ -33008,9 +33008,9 @@
       {
         "file": "ss25_s133_012.jpg",
         "left": 43.6,
-        "top": 49.3,
+        "top": 45,
         "width": 13.9,
-        "height": 62.6
+        "height": 55
       }
     ],
     "image_count": 12
@@ -33053,7 +33053,7 @@
         "left": 28.2,
         "top": 26.0,
         "width": 12.6,
-        "height": 61.7
+        "height": 55
       },
       {
         "file": "ss25_s134_004.jpg",
@@ -33086,7 +33086,7 @@
       {
         "file": "ss25_s134_008.jpg",
         "left": 79.3,
-        "top": 49.8,
+        "top": 49.1,
         "width": 19.1,
         "height": 50.9
       },
@@ -33131,7 +33131,7 @@
         "left": 37.5,
         "top": 19.0,
         "width": 16.7,
-        "height": 72.4
+        "height": 55
       },
       {
         "file": "ss25_s135_002.jpg",
@@ -33166,7 +33166,7 @@
         "left": 53.1,
         "top": 17.1,
         "width": 21.2,
-        "height": 65.8
+        "height": 55
       },
       {
         "file": "ss25_s135_007.jpg",
@@ -33222,7 +33222,7 @@
         "left": 37.0,
         "top": 20.7,
         "width": 16.7,
-        "height": 72.4
+        "height": 55
       },
       {
         "file": "ss25_s136_002.jpg",
@@ -33278,7 +33278,7 @@
         "left": 56.0,
         "top": 16.5,
         "width": 18.7,
-        "height": 62.7
+        "height": 55
       }
     ],
     "image_count": 9
@@ -33379,13 +33379,13 @@
       {
         "file": "ss25_s137_011.jpg",
         "left": 14.7,
-        "top": 64.2,
+        "top": 63.7,
         "width": 19.4,
         "height": 36.3
       },
       {
         "file": "ss25_s137_012.jpg",
-        "left": -3.0,
+        "left": 0,
         "top": 55.5,
         "width": 23.5,
         "height": 30.9
@@ -33481,13 +33481,13 @@
       {
         "file": "ss25_s138_008.jpg",
         "left": 14.7,
-        "top": 64.2,
+        "top": 63.7,
         "width": 19.4,
         "height": 36.3
       },
       {
         "file": "ss25_s138_009.jpg",
-        "left": -3.0,
+        "left": 0,
         "top": 55.5,
         "width": 23.5,
         "height": 30.9
@@ -33591,13 +33591,13 @@
       {
         "file": "ss25_s139_007.jpg",
         "left": 14.7,
-        "top": 64.2,
+        "top": 63.7,
         "width": 19.4,
         "height": 36.3
       },
       {
         "file": "ss25_s139_008.jpg",
-        "left": -3.0,
+        "left": 0,
         "top": 55.5,
         "width": 23.5,
         "height": 30.9
@@ -33628,7 +33628,7 @@
         "left": 81.2,
         "top": 2.4,
         "width": 18.7,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s139_013.jpg",
@@ -33736,13 +33736,13 @@
       {
         "file": "ss25_s140_010.jpg",
         "left": 14.7,
-        "top": 64.2,
+        "top": 63.7,
         "width": 19.4,
         "height": 36.3
       },
       {
         "file": "ss25_s140_011.jpg",
-        "left": -3.0,
+        "left": 0,
         "top": 55.5,
         "width": 23.5,
         "height": 30.9
@@ -33842,13 +33842,13 @@
       {
         "file": "ss25_s141_007.jpg",
         "left": 14.7,
-        "top": 64.2,
+        "top": 63.7,
         "width": 19.4,
         "height": 36.3
       },
       {
         "file": "ss25_s141_008.jpg",
-        "left": -3.0,
+        "left": 0,
         "top": 55.5,
         "width": 23.5,
         "height": 30.9
@@ -33870,7 +33870,7 @@
       {
         "file": "ss25_s141_011.jpg",
         "left": 62.8,
-        "top": 76.2,
+        "top": 76.1,
         "width": 16.5,
         "height": 23.9
       },
@@ -33988,13 +33988,13 @@
       {
         "file": "ss25_s142_007.jpg",
         "left": 14.7,
-        "top": 64.2,
+        "top": 63.7,
         "width": 19.4,
         "height": 36.3
       },
       {
         "file": "ss25_s142_008.jpg",
-        "left": -4.1,
+        "left": 0,
         "top": 64.2,
         "width": 23.5,
         "height": 30.9
@@ -34036,7 +34036,7 @@
       },
       {
         "file": "ss25_s142_014.jpg",
-        "left": -0.2,
+        "left": 0,
         "top": 0.7,
         "width": 15.7,
         "height": 36.5
@@ -34096,14 +34096,14 @@
         "left": 73.2,
         "top": 16.7,
         "width": 20.7,
-        "height": 66.7
+        "height": 55
       },
       {
         "file": "ss25_s143_005.jpg",
         "left": 0.4,
         "top": 15.9,
         "width": 18.7,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s143_006.jpg",
@@ -34180,7 +34180,7 @@
         "left": 39.9,
         "top": 15.0,
         "width": 16.8,
-        "height": 63.1
+        "height": 55
       },
       {
         "file": "ss25_s144_004.jpg",
@@ -34208,7 +34208,7 @@
         "left": 4.1,
         "top": 11.9,
         "width": 23.1,
-        "height": 76.1
+        "height": 55
       },
       {
         "file": "ss25_s144_008.jpg",
@@ -34272,14 +34272,14 @@
         "left": 73.2,
         "top": 16.7,
         "width": 20.7,
-        "height": 66.7
+        "height": 55
       },
       {
         "file": "ss25_s145_005.jpg",
         "left": 0.4,
         "top": 15.9,
         "width": 18.7,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s145_006.jpg",
@@ -34314,7 +34314,7 @@
         "left": 43.4,
         "top": 20.3,
         "width": 18.0,
-        "height": 79.0
+        "height": 55
       }
     ],
     "image_count": 10
@@ -34365,14 +34365,14 @@
         "left": 73.2,
         "top": 16.7,
         "width": 20.7,
-        "height": 66.7
+        "height": 55
       },
       {
         "file": "ss25_s146_005.jpg",
         "left": 0.4,
         "top": 15.9,
         "width": 18.7,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s146_006.jpg",
@@ -34443,14 +34443,14 @@
         "left": 73.2,
         "top": 16.7,
         "width": 20.7,
-        "height": 66.7
+        "height": 55
       },
       {
         "file": "ss25_s147_002.jpg",
         "left": 0.4,
         "top": 15.9,
         "width": 18.7,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s147_003.jpg",
@@ -34676,7 +34676,7 @@
       },
       {
         "file": "ss25_s149_009.jpg",
-        "left": 78.3,
+        "left": 74.7,
         "top": 57.0,
         "width": 25.3,
         "height": 15.5
@@ -34772,7 +34772,7 @@
       },
       {
         "file": "ss25_s150_005.jpg",
-        "left": 78.3,
+        "left": 77.8,
         "top": 55.1,
         "width": 22.2,
         "height": 13.6
@@ -34828,7 +34828,7 @@
       },
       {
         "file": "ss25_s150_013.jpg",
-        "left": 77.9,
+        "left": 74.2,
         "top": 18.3,
         "width": 25.8,
         "height": 39.0
@@ -34895,7 +34895,7 @@
       },
       {
         "file": "ss25_s151_005.jpg",
-        "left": 78.3,
+        "left": 77.8,
         "top": 55.1,
         "width": 22.2,
         "height": 13.6
@@ -35080,7 +35080,7 @@
         "left": 61.8,
         "top": 16.8,
         "width": 15.7,
-        "height": 60.1
+        "height": 55
       },
       {
         "file": "ss25_s153_004.jpg",
@@ -35092,14 +35092,14 @@
       {
         "file": "ss25_s153_005.jpg",
         "left": 42.7,
-        "top": 74.0,
+        "top": 73.7,
         "width": 18.1,
         "height": 26.3
       },
       {
         "file": "ss25_s153_006.jpg",
         "left": 65.8,
-        "top": 74.1,
+        "top": 74.0,
         "width": 17.3,
         "height": 26.0
       },
@@ -35148,7 +35148,7 @@
         "left": 32.2,
         "top": 15.9,
         "width": 15.7,
-        "height": 60.1
+        "height": 55
       },
       {
         "file": "ss25_s154_002.png",
@@ -35162,7 +35162,7 @@
         "left": 11.6,
         "top": 14.3,
         "width": 17.5,
-        "height": 71.5
+        "height": 55
       },
       {
         "file": "ss25_s154_004.jpg",
@@ -35173,10 +35173,10 @@
       },
       {
         "file": "ss25_s154_005.jpg",
-        "left": 79.8,
+        "left": 79.3,
         "top": 16.0,
         "width": 20.7,
-        "height": 68.1
+        "height": 55
       },
       {
         "file": "ss25_s154_006.jpg",
@@ -35225,7 +35225,7 @@
         "left": 82.4,
         "top": 12.4,
         "width": 15.7,
-        "height": 60.1
+        "height": 55
       },
       {
         "file": "ss25_s155_003.jpg",
@@ -35301,7 +35301,7 @@
     "layout": [
       {
         "file": "ss25_s156_001.jpg",
-        "left": 76.7,
+        "left": 76.4,
         "top": 49.6,
         "width": 23.6,
         "height": 14.4
@@ -35450,7 +35450,7 @@
       {
         "file": "ss25_s157_008.jpg",
         "left": 6.4,
-        "top": 71.4,
+        "top": 65.8,
         "width": 14.1,
         "height": 34.2
       },
@@ -35521,7 +35521,7 @@
       {
         "file": "ss25_s158_005.jpg",
         "left": 6.4,
-        "top": 71.4,
+        "top": 65.8,
         "width": 14.1,
         "height": 34.2
       },
@@ -35542,7 +35542,7 @@
       {
         "file": "ss25_s158_008.jpg",
         "left": 23.6,
-        "top": 57.8,
+        "top": 56.6,
         "width": 24.7,
         "height": 43.4
       },
@@ -35605,7 +35605,7 @@
       {
         "file": "ss25_s159_004.jpg",
         "left": 6.4,
-        "top": 71.4,
+        "top": 65.8,
         "width": 14.1,
         "height": 34.2
       },
@@ -35626,7 +35626,7 @@
       {
         "file": "ss25_s159_007.jpg",
         "left": 23.6,
-        "top": 57.8,
+        "top": 56.6,
         "width": 24.7,
         "height": 43.4
       },
@@ -35640,7 +35640,7 @@
       {
         "file": "ss25_s159_009.jpg",
         "left": 54.0,
-        "top": 53.5,
+        "top": 53.2,
         "width": 10.4,
         "height": 46.8
       }
@@ -35705,13 +35705,13 @@
       {
         "file": "ss25_s160_006.jpg",
         "left": 0.6,
-        "top": 66.6,
+        "top": 66.3,
         "width": 13.1,
         "height": 33.7
       },
       {
         "file": "ss25_s160_007.jpg",
-        "left": 77.0,
+        "left": 75.5,
         "top": 15.6,
         "width": 24.5,
         "height": 51.3
@@ -35733,7 +35733,7 @@
       {
         "file": "ss25_s160_010.jpg",
         "left": 29.7,
-        "top": 46.0,
+        "top": 44.3,
         "width": 15.7,
         "height": 55.7
       },
@@ -35773,7 +35773,7 @@
       {
         "file": "ss25_s161_001.jpg",
         "left": 49.3,
-        "top": 44.1,
+        "top": 43.4,
         "width": 12.4,
         "height": 56.6
       },
@@ -35787,7 +35787,7 @@
       {
         "file": "ss25_s161_003.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -35904,7 +35904,7 @@
       {
         "file": "ss25_s162_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36028,7 +36028,7 @@
       {
         "file": "ss25_s163_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36112,9 +36112,9 @@
       {
         "file": "ss25_s163_014.jpg",
         "left": 48.2,
-        "top": 46.1,
+        "top": 45,
         "width": 13.9,
-        "height": 62.6
+        "height": 55
       }
     ],
     "image_count": 14
@@ -36145,7 +36145,7 @@
       {
         "file": "ss25_s164_001.jpg",
         "left": 49.3,
-        "top": 44.1,
+        "top": 43.4,
         "width": 12.4,
         "height": 56.6
       },
@@ -36159,7 +36159,7 @@
       {
         "file": "ss25_s164_003.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36235,7 +36235,7 @@
       },
       {
         "file": "ss25_s164_014.jpg",
-        "left": 83.3,
+        "left": 82.9,
         "top": 14.2,
         "width": 17.1,
         "height": 29.2
@@ -36276,7 +36276,7 @@
       {
         "file": "ss25_s165_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36352,7 +36352,7 @@
       },
       {
         "file": "ss25_s165_013.jpg",
-        "left": 83.3,
+        "left": 82.9,
         "top": 14.2,
         "width": 17.1,
         "height": 29.2
@@ -36393,7 +36393,7 @@
       {
         "file": "ss25_s166_001.jpg",
         "left": 49.3,
-        "top": 44.1,
+        "top": 43.4,
         "width": 12.4,
         "height": 56.6
       },
@@ -36407,7 +36407,7 @@
       {
         "file": "ss25_s166_003.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36462,7 +36462,7 @@
       },
       {
         "file": "ss25_s166_011.jpg",
-        "left": 79.1,
+        "left": 78.8,
         "top": 71.9,
         "width": 21.2,
         "height": 23.8
@@ -36524,7 +36524,7 @@
       {
         "file": "ss25_s167_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36579,7 +36579,7 @@
       },
       {
         "file": "ss25_s167_010.jpg",
-        "left": 79.1,
+        "left": 78.8,
         "top": 71.9,
         "width": 21.2,
         "height": 23.8
@@ -36601,7 +36601,7 @@
       {
         "file": "ss25_s167_013.png",
         "left": 48.3,
-        "top": 53.2,
+        "top": 50.6,
         "width": 13.9,
         "height": 49.4
       },
@@ -36642,7 +36642,7 @@
       {
         "file": "ss25_s168_001.jpg",
         "left": 49.3,
-        "top": 44.1,
+        "top": 43.4,
         "width": 12.4,
         "height": 56.6
       },
@@ -36656,7 +36656,7 @@
       {
         "file": "ss25_s168_003.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36690,7 +36690,7 @@
       },
       {
         "file": "ss25_s168_008.jpg",
-        "left": 79.1,
+        "left": 78.8,
         "top": 71.9,
         "width": 21.2,
         "height": 23.8
@@ -36780,7 +36780,7 @@
       {
         "file": "ss25_s169_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36814,7 +36814,7 @@
       },
       {
         "file": "ss25_s169_007.jpg",
-        "left": 79.1,
+        "left": 78.8,
         "top": 71.9,
         "width": 21.2,
         "height": 23.8
@@ -36904,7 +36904,7 @@
       {
         "file": "ss25_s170_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -36938,7 +36938,7 @@
       },
       {
         "file": "ss25_s170_007.jpg",
-        "left": 79.1,
+        "left": 78.8,
         "top": 71.9,
         "width": 21.2,
         "height": 23.8
@@ -36988,9 +36988,9 @@
       {
         "file": "ss25_s170_014.jpg",
         "left": 48.2,
-        "top": 46.1,
+        "top": 45,
         "width": 13.9,
-        "height": 62.6
+        "height": 55
       }
     ],
     "image_count": 14
@@ -37028,7 +37028,7 @@
       {
         "file": "ss25_s171_002.jpg",
         "left": 7.9,
-        "top": 73.7,
+        "top": 71.8,
         "width": 13.3,
         "height": 28.2
       },
@@ -37062,7 +37062,7 @@
       },
       {
         "file": "ss25_s171_007.jpg",
-        "left": 79.1,
+        "left": 78.8,
         "top": 71.9,
         "width": 21.2,
         "height": 23.8
@@ -37484,7 +37484,7 @@
       {
         "file": "ss25_s174_014.jpg",
         "left": 52.0,
-        "top": 51.7,
+        "top": 51.6,
         "width": 9.9,
         "height": 48.4
       }
@@ -37595,7 +37595,7 @@
       {
         "file": "ss25_s175_012.jpg",
         "left": 52.0,
-        "top": 51.7,
+        "top": 51.6,
         "width": 9.9,
         "height": 48.4
       },
@@ -37980,7 +37980,7 @@
       {
         "file": "ss25_s178_013.jpg",
         "left": 50.1,
-        "top": 49.7,
+        "top": 46.6,
         "width": 10.9,
         "height": 53.4
       }
@@ -38012,7 +38012,7 @@
       {
         "file": "ss25_s179_001.jpg",
         "left": 49.3,
-        "top": 44.1,
+        "top": 43.4,
         "width": 12.4,
         "height": 56.6
       },
@@ -38060,7 +38060,7 @@
       },
       {
         "file": "ss25_s179_008.jpg",
-        "left": 81.5,
+        "left": 80.9,
         "top": 22.1,
         "width": 19.1,
         "height": 11.7
@@ -38149,7 +38149,7 @@
       },
       {
         "file": "ss25_s180_004.jpg",
-        "left": -0.9,
+        "left": 0,
         "top": 74.0,
         "width": 17.3,
         "height": 22.2
@@ -38170,7 +38170,7 @@
       },
       {
         "file": "ss25_s180_007.jpg",
-        "left": 81.5,
+        "left": 80.9,
         "top": 22.1,
         "width": 19.1,
         "height": 11.7
@@ -38220,9 +38220,9 @@
       {
         "file": "ss25_s180_014.jpg",
         "left": 43.0,
-        "top": 46.1,
+        "top": 45,
         "width": 13.9,
-        "height": 62.6
+        "height": 55
       }
     ],
     "image_count": 14
@@ -38568,9 +38568,9 @@
       {
         "file": "ss25_s183_013.jpg",
         "left": 48.2,
-        "top": 46.1,
+        "top": 45,
         "width": 13.9,
-        "height": 62.6
+        "height": 55
       }
     ],
     "image_count": 13
@@ -38625,13 +38625,13 @@
       {
         "file": "ss25_s184_005.jpg",
         "left": 0.6,
-        "top": 66.6,
+        "top": 66.3,
         "width": 13.1,
         "height": 33.7
       },
       {
         "file": "ss25_s184_006.jpg",
-        "left": 77.0,
+        "left": 75.5,
         "top": 15.6,
         "width": 24.5,
         "height": 51.3
@@ -38660,7 +38660,7 @@
       {
         "file": "ss25_s184_010.jpg",
         "left": 60.6,
-        "top": 46.0,
+        "top": 44.4,
         "width": 16.3,
         "height": 55.6
       }
@@ -38732,7 +38732,7 @@
       {
         "file": "ss25_s185_007.jpg",
         "left": 48.0,
-        "top": 48.3,
+        "top": 47.1,
         "width": 14.3,
         "height": 52.9
       },
@@ -38810,7 +38810,7 @@
       {
         "file": "ss25_s186_004.jpg",
         "left": 23.6,
-        "top": 57.8,
+        "top": 56.6,
         "width": 24.7,
         "height": 43.4
       },
@@ -38845,13 +38845,13 @@
       {
         "file": "ss25_s186_009.jpg",
         "left": 0.6,
-        "top": 66.6,
+        "top": 66.3,
         "width": 13.1,
         "height": 33.7
       },
       {
         "file": "ss25_s186_010.jpg",
-        "left": 77.0,
+        "left": 75.5,
         "top": 15.6,
         "width": 24.5,
         "height": 51.3
@@ -38938,7 +38938,7 @@
         "left": 4.8,
         "top": 14.1,
         "width": 23.1,
-        "height": 71.7
+        "height": 55
       }
     ],
     "image_count": 9
@@ -39015,7 +39015,7 @@
         "left": 20.0,
         "top": 17.3,
         "width": 15.2,
-        "height": 68.2
+        "height": 55
       },
       {
         "file": "ss25_s188_009.jpg",
@@ -39070,7 +39070,7 @@
       },
       {
         "file": "ss25_s189_004.jpg",
-        "left": -0.7,
+        "left": 0,
         "top": 21.4,
         "width": 26.5,
         "height": 34.8
@@ -39113,13 +39113,13 @@
       {
         "file": "ss25_s189_010.jpg",
         "left": 76.4,
-        "top": 63.8,
+        "top": 60.4,
         "width": 15.3,
         "height": 39.6
       },
       {
         "file": "ss25_s189_011.jpg",
-        "left": 76.4,
+        "left": 75.4,
         "top": 13.0,
         "width": 24.6,
         "height": 51.5
@@ -39177,7 +39177,7 @@
       {
         "file": "ss25_s190_005.jpg",
         "left": 76.4,
-        "top": 63.8,
+        "top": 60.4,
         "width": 15.3,
         "height": 39.6
       },
@@ -39200,7 +39200,7 @@
         "left": 1.2,
         "top": 13.1,
         "width": 19.9,
-        "height": 61.8
+        "height": 55
       },
       {
         "file": "ss25_s190_009.jpg",
@@ -39264,7 +39264,7 @@
       {
         "file": "ss25_s191_004.jpg",
         "left": 22.5,
-        "top": 70.3,
+        "top": 68.0,
         "width": 20.5,
         "height": 32.0
       },
@@ -39278,7 +39278,7 @@
       {
         "file": "ss25_s191_006.jpg",
         "left": 43.0,
-        "top": 73.7,
+        "top": 71.9,
         "width": 13.9,
         "height": 28.1
       },
@@ -39363,7 +39363,7 @@
       },
       {
         "file": "ss25_s192_003.jpg",
-        "left": -0.7,
+        "left": 0,
         "top": 21.4,
         "width": 26.5,
         "height": 34.8
@@ -39392,7 +39392,7 @@
       {
         "file": "ss25_s192_007.jpg",
         "left": 64.6,
-        "top": 70.7,
+        "top": 69.3,
         "width": 19.7,
         "height": 30.7
       },
@@ -39412,7 +39412,7 @@
       },
       {
         "file": "ss25_s192_010.jpg",
-        "left": 78.4,
+        "left": 77.6,
         "top": 51.3,
         "width": 22.4,
         "height": 22.3
@@ -39422,7 +39422,7 @@
         "left": 41.9,
         "top": 16.1,
         "width": 16.0,
-        "height": 61.7
+        "height": 55
       }
     ],
     "image_count": 11
@@ -39456,7 +39456,7 @@
       },
       {
         "file": "ss25_s193_002.jpg",
-        "left": -0.7,
+        "left": 0,
         "top": 21.4,
         "width": 26.5,
         "height": 34.8
@@ -39485,7 +39485,7 @@
       {
         "file": "ss25_s193_006.jpg",
         "left": 64.6,
-        "top": 70.7,
+        "top": 69.3,
         "width": 19.7,
         "height": 30.7
       },
@@ -39505,7 +39505,7 @@
       },
       {
         "file": "ss25_s193_009.jpg",
-        "left": 78.4,
+        "left": 77.6,
         "top": 51.3,
         "width": 22.4,
         "height": 22.3
@@ -39515,7 +39515,7 @@
         "left": 41.9,
         "top": 16.1,
         "width": 16.0,
-        "height": 61.7
+        "height": 55
       },
       {
         "file": "ss25_s193_011.jpg",
@@ -39563,7 +39563,7 @@
       },
       {
         "file": "ss25_s194_003.jpg",
-        "left": -0.7,
+        "left": 0,
         "top": 21.4,
         "width": 26.5,
         "height": 34.8
@@ -39592,7 +39592,7 @@
       {
         "file": "ss25_s194_007.jpg",
         "left": 64.6,
-        "top": 70.7,
+        "top": 69.3,
         "width": 19.7,
         "height": 30.7
       },
@@ -39612,7 +39612,7 @@
       },
       {
         "file": "ss25_s194_010.jpg",
-        "left": 78.4,
+        "left": 77.6,
         "top": 51.3,
         "width": 22.4,
         "height": 22.3
@@ -39657,7 +39657,7 @@
       },
       {
         "file": "ss25_s195_002.jpg",
-        "left": -0.7,
+        "left": 0,
         "top": 21.4,
         "width": 26.5,
         "height": 34.8
@@ -39686,7 +39686,7 @@
       {
         "file": "ss25_s195_006.jpg",
         "left": 64.6,
-        "top": 70.7,
+        "top": 69.3,
         "width": 19.7,
         "height": 30.7
       },
@@ -39706,7 +39706,7 @@
       },
       {
         "file": "ss25_s195_009.jpg",
-        "left": 78.4,
+        "left": 77.6,
         "top": 51.3,
         "width": 22.4,
         "height": 22.3
@@ -39793,7 +39793,7 @@
       },
       {
         "file": "ss25_s196_006.jpg",
-        "left": 76.4,
+        "left": 75.4,
         "top": 13.0,
         "width": 24.6,
         "height": 51.5
@@ -39829,7 +39829,7 @@
       {
         "file": "ss25_s196_011.jpg",
         "left": 38.3,
-        "top": 65.7,
+        "top": 65.3,
         "width": 11.5,
         "height": 34.7
       },
@@ -39922,7 +39922,7 @@
       },
       {
         "file": "ss25_s197_009.jpg",
-        "left": 75.5,
+        "left": 72.0,
         "top": 84.4,
         "width": 28.0,
         "height": 14.1
@@ -39936,7 +39936,7 @@
       },
       {
         "file": "ss25_s197_011.jpg",
-        "left": 87.0,
+        "left": 86.7,
         "top": 25.7,
         "width": 13.3,
         "height": 22.5
@@ -40023,7 +40023,7 @@
       },
       {
         "file": "ss25_s198_008.jpg",
-        "left": 75.5,
+        "left": 72.0,
         "top": 84.4,
         "width": 28.0,
         "height": 14.1
@@ -40037,7 +40037,7 @@
       },
       {
         "file": "ss25_s198_010.jpg",
-        "left": 87.0,
+        "left": 86.7,
         "top": 25.7,
         "width": 13.3,
         "height": 22.5
@@ -40154,7 +40154,7 @@
         "left": 80.4,
         "top": 2.5,
         "width": 18.4,
-        "height": 60.4
+        "height": 55
       }
     ],
     "image_count": 11
@@ -40233,7 +40233,7 @@
         "left": 80.4,
         "top": 2.5,
         "width": 18.4,
-        "height": 60.4
+        "height": 55
       },
       {
         "file": "ss25_s200_009.jpg",
@@ -40325,7 +40325,7 @@
         "left": 80.4,
         "top": 2.5,
         "width": 18.4,
-        "height": 60.4
+        "height": 55
       },
       {
         "file": "ss25_s201_008.jpg",
@@ -40417,7 +40417,7 @@
         "left": 80.4,
         "top": 2.5,
         "width": 18.4,
-        "height": 60.4
+        "height": 55
       },
       {
         "file": "ss25_s202_008.jpg",
@@ -40725,7 +40725,7 @@
       },
       {
         "file": "ss25_s205_007.jpg",
-        "left": 87.0,
+        "left": 86.7,
         "top": 25.7,
         "width": 13.3,
         "height": 22.5
@@ -40739,7 +40739,7 @@
       },
       {
         "file": "ss25_s205_009.jpg",
-        "left": 75.5,
+        "left": 72.0,
         "top": 84.4,
         "width": 28.0,
         "height": 14.1
@@ -40867,7 +40867,7 @@
       },
       {
         "file": "ss25_s206_011.jpg",
-        "left": 77.2,
+        "left": 75.4,
         "top": 6.6,
         "width": 24.6,
         "height": 51.5
@@ -41095,7 +41095,7 @@
         "left": 51.5,
         "top": 21.0,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s209_003.jpg",
@@ -41165,7 +41165,7 @@
         "left": 51.5,
         "top": 21.0,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s210_003.jpg",
@@ -41197,7 +41197,7 @@
       },
       {
         "file": "ss25_s210_007.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41214,7 +41214,7 @@
         "left": 5.7,
         "top": 5.8,
         "width": 17.2,
-        "height": 70.5
+        "height": 55
       }
     ],
     "image_count": 9
@@ -41249,7 +41249,7 @@
         "left": 51.5,
         "top": 21.0,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s211_003.jpg",
@@ -41274,7 +41274,7 @@
       },
       {
         "file": "ss25_s211_006.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41345,7 +41345,7 @@
       },
       {
         "file": "ss25_s212_004.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41362,7 +41362,7 @@
         "left": 55.4,
         "top": 24.2,
         "width": 16.5,
-        "height": 69.2
+        "height": 55
       },
       {
         "file": "ss25_s212_007.jpg",
@@ -41431,13 +41431,13 @@
       {
         "file": "ss25_s213_003.jpg",
         "left": 28.6,
-        "top": 67.4,
+        "top": 66.1,
         "width": 14.2,
         "height": 33.9
       },
       {
         "file": "ss25_s213_004.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41454,7 +41454,7 @@
         "left": 55.4,
         "top": 24.2,
         "width": 16.5,
-        "height": 69.2
+        "height": 55
       },
       {
         "file": "ss25_s213_007.jpg",
@@ -41465,7 +41465,7 @@
       },
       {
         "file": "ss25_s213_008.jpg",
-        "left": -1.2,
+        "left": 0,
         "top": 16.8,
         "width": 24.9,
         "height": 55.8
@@ -41482,7 +41482,7 @@
         "left": 42.6,
         "top": 17.2,
         "width": 15.0,
-        "height": 64.8
+        "height": 55
       }
     ],
     "image_count": 10
@@ -41522,7 +41522,7 @@
       },
       {
         "file": "ss25_s214_003.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41539,7 +41539,7 @@
         "left": 51.0,
         "top": 30.1,
         "width": 16.5,
-        "height": 69.2
+        "height": 55
       },
       {
         "file": "ss25_s214_006.jpg",
@@ -41564,7 +41564,7 @@
       },
       {
         "file": "ss25_s214_009.jpg",
-        "left": 84.9,
+        "left": 84.7,
         "top": 18.7,
         "width": 15.3,
         "height": 37.2
@@ -41615,7 +41615,7 @@
       },
       {
         "file": "ss25_s215_003.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41646,7 +41646,7 @@
         "left": 51.8,
         "top": 25.1,
         "width": 17.1,
-        "height": 74.0
+        "height": 55
       },
       {
         "file": "ss25_s215_008.jpg",
@@ -41657,14 +41657,14 @@
       },
       {
         "file": "ss25_s215_009.jpg",
-        "left": 82.5,
+        "left": 76.4,
         "top": 8.1,
         "width": 23.6,
         "height": 41.5
       },
       {
         "file": "ss25_s215_010.jpg",
-        "left": -2.5,
+        "left": 0,
         "top": 84.8,
         "width": 21.7,
         "height": 14.9
@@ -41715,7 +41715,7 @@
       },
       {
         "file": "ss25_s216_003.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41739,7 +41739,7 @@
         "left": 51.8,
         "top": 25.1,
         "width": 17.1,
-        "height": 74.0
+        "height": 55
       },
       {
         "file": "ss25_s216_007.jpg",
@@ -41750,14 +41750,14 @@
       },
       {
         "file": "ss25_s216_008.jpg",
-        "left": 82.5,
+        "left": 76.4,
         "top": 8.1,
         "width": 23.6,
         "height": 41.5
       },
       {
         "file": "ss25_s216_009.jpg",
-        "left": -2.5,
+        "left": 0,
         "top": 84.8,
         "width": 21.7,
         "height": 14.9
@@ -41816,7 +41816,7 @@
       },
       {
         "file": "ss25_s217_003.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41847,11 +41847,11 @@
         "left": 51.8,
         "top": 25.1,
         "width": 17.1,
-        "height": 74.0
+        "height": 55
       },
       {
         "file": "ss25_s217_008.jpg",
-        "left": -2.5,
+        "left": 0,
         "top": 84.8,
         "width": 21.7,
         "height": 14.9
@@ -41872,7 +41872,7 @@
       },
       {
         "file": "ss25_s217_011.jpg",
-        "left": 79.2,
+        "left": 74.4,
         "top": 16.5,
         "width": 25.6,
         "height": 37.3
@@ -41924,7 +41924,7 @@
       },
       {
         "file": "ss25_s218_003.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -41948,11 +41948,11 @@
         "left": 51.8,
         "top": 25.1,
         "width": 17.1,
-        "height": 74.0
+        "height": 55
       },
       {
         "file": "ss25_s218_007.jpg",
-        "left": -2.5,
+        "left": 0,
         "top": 84.8,
         "width": 21.7,
         "height": 14.9
@@ -41980,7 +41980,7 @@
       },
       {
         "file": "ss25_s218_011.jpg",
-        "left": 84.4,
+        "left": 81.8,
         "top": 6.9,
         "width": 18.2,
         "height": 50.2
@@ -42029,7 +42029,7 @@
       },
       {
         "file": "ss25_s219_003.jpg",
-        "left": 83.1,
+        "left": 82.8,
         "top": 58.4,
         "width": 17.2,
         "height": 40.2
@@ -42039,7 +42039,7 @@
         "left": 48.5,
         "top": 26.4,
         "width": 15.0,
-        "height": 62.7
+        "height": 55
       },
       {
         "file": "ss25_s219_005.jpg",
@@ -42050,14 +42050,14 @@
       },
       {
         "file": "ss25_s219_006.jpg",
-        "left": 84.9,
+        "left": 84.7,
         "top": 18.7,
         "width": 15.3,
         "height": 37.2
       },
       {
         "file": "ss25_s219_007.jpg",
-        "left": -1.9,
+        "left": 0,
         "top": 20.9,
         "width": 23.8,
         "height": 49.9
@@ -42102,7 +42102,7 @@
         "left": 41.4,
         "top": 22.1,
         "width": 17.1,
-        "height": 78.1
+        "height": 55
       },
       {
         "file": "ss25_s220_002.jpg",
@@ -42281,7 +42281,7 @@
         "left": 44.5,
         "top": 16.5,
         "width": 15.8,
-        "height": 77.1
+        "height": 55
       },
       {
         "file": "ss25_s222_002.jpg",
@@ -42313,7 +42313,7 @@
       },
       {
         "file": "ss25_s222_006.jpg",
-        "left": -2.4,
+        "left": 0,
         "top": 51.5,
         "width": 25.5,
         "height": 15.7
@@ -42434,7 +42434,7 @@
       },
       {
         "file": "ss25_s223_008.jpg",
-        "left": -2.5,
+        "left": 0,
         "top": 15.7,
         "width": 20.9,
         "height": 47.6
@@ -42442,7 +42442,7 @@
       {
         "file": "ss25_s223_009.jpg",
         "left": 1.9,
-        "top": 65.4,
+        "top": 64.9,
         "width": 22.6,
         "height": 35.1
       },
@@ -42485,7 +42485,7 @@
       {
         "file": "ss25_s224_001.jpg",
         "left": 35.4,
-        "top": 46.2,
+        "top": 43.2,
         "width": 14.0,
         "height": 56.8
       },
@@ -42501,7 +42501,7 @@
         "left": 90.3,
         "top": 34.5,
         "width": 5.2,
-        "height": 63.8
+        "height": 55
       },
       {
         "file": "ss25_s224_004.jpg",
@@ -42520,7 +42520,7 @@
       {
         "file": "ss25_s224_006.jpg",
         "left": 16.6,
-        "top": 75.1,
+        "top": 72.2,
         "width": 14.5,
         "height": 27.8
       },
@@ -42543,7 +42543,7 @@
         "left": 4.6,
         "top": 7.0,
         "width": 19.7,
-        "height": 78.3
+        "height": 55
       },
       {
         "file": "ss25_s224_010.jpg",
@@ -42584,12 +42584,12 @@
         "left": 90.3,
         "top": 34.5,
         "width": 5.2,
-        "height": 63.8
+        "height": 55
       },
       {
         "file": "ss25_s225_003.jpg",
         "left": 16.6,
-        "top": 75.1,
+        "top": 72.2,
         "width": 14.5,
         "height": 27.8
       },
@@ -42668,7 +42668,7 @@
         "left": 7.7,
         "top": 9.7,
         "width": 18.7,
-        "height": 74.3
+        "height": 55
       },
       {
         "file": "ss25_s226_004.jpg",
@@ -42736,7 +42736,7 @@
         "left": 7.7,
         "top": 9.7,
         "width": 18.7,
-        "height": 74.3
+        "height": 55
       },
       {
         "file": "ss25_s227_002.jpg",
@@ -42764,7 +42764,7 @@
         "left": 47.4,
         "top": 31.4,
         "width": 12.8,
-        "height": 60.9
+        "height": 55
       },
       {
         "file": "ss25_s227_006.jpg",
@@ -42805,7 +42805,7 @@
         "left": 51.5,
         "top": 21.0,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s228_002.jpg",
@@ -42852,7 +42852,7 @@
       {
         "file": "ss25_s228_008.jpg",
         "left": 4.9,
-        "top": 58.4,
+        "top": 58.3,
         "width": 17.1,
         "height": 41.7
       }
@@ -42881,7 +42881,7 @@
         "left": 51.5,
         "top": 21.0,
         "width": 18.2,
-        "height": 76.5
+        "height": 55
       },
       {
         "file": "ss25_s229_002.jpg",
@@ -42921,7 +42921,7 @@
       {
         "file": "ss25_s229_007.jpg",
         "left": 4.9,
-        "top": 58.4,
+        "top": 58.3,
         "width": 17.1,
         "height": 41.7
       },
@@ -42957,7 +42957,7 @@
         "left": 43.2,
         "top": 18.8,
         "width": 16.5,
-        "height": 77.0
+        "height": 55
       },
       {
         "file": "ss25_s230_002.jpg",
@@ -43003,10 +43003,10 @@
       },
       {
         "file": "ss25_s230_008.jpg",
-        "left": 80.1,
+        "left": 76.6,
         "top": 5.6,
         "width": 23.4,
-        "height": 78.4
+        "height": 55
       }
     ],
     "image_count": 8
@@ -43034,7 +43034,7 @@
         "left": 43.2,
         "top": 18.8,
         "width": 16.5,
-        "height": 77.0
+        "height": 55
       },
       {
         "file": "ss25_s231_002.jpg",
@@ -43119,14 +43119,14 @@
         "left": 30.1,
         "top": 10.5,
         "width": 14.4,
-        "height": 60.9
+        "height": 55
       },
       {
         "file": "ss25_s232_002.jpg",
         "left": 59.3,
         "top": 8.3,
         "width": 18.4,
-        "height": 62.2
+        "height": 55
       },
       {
         "file": "ss25_s232_003.jpg",
@@ -43152,7 +43152,7 @@
       {
         "file": "ss25_s232_006.jpg",
         "left": 8.2,
-        "top": 65.7,
+        "top": 63.1,
         "width": 19.7,
         "height": 36.9
       },
@@ -43237,7 +43237,7 @@
       {
         "file": "ss25_s233_005.jpg",
         "left": 8.2,
-        "top": 65.7,
+        "top": 63.1,
         "width": 19.7,
         "height": 36.9
       },
@@ -43267,7 +43267,7 @@
         "left": 60.2,
         "top": 39.4,
         "width": 16.4,
-        "height": 60.9
+        "height": 55
       },
       {
         "file": "ss25_s233_010.jpg",
@@ -43317,7 +43317,7 @@
         "left": 42.5,
         "top": 18.1,
         "width": 17.6,
-        "height": 78.3
+        "height": 55
       },
       {
         "file": "ss25_s234_004.jpg",
@@ -43352,7 +43352,7 @@
         "left": 60.1,
         "top": 17.6,
         "width": 23.4,
-        "height": 78.4
+        "height": 55
       },
       {
         "file": "ss25_s234_009.png",
@@ -43406,7 +43406,7 @@
         "left": 60.5,
         "top": 16.8,
         "width": 16.9,
-        "height": 80.1
+        "height": 55
       },
       {
         "file": "ss25_s235_004.jpg",
@@ -43817,14 +43817,14 @@
       },
       {
         "file": "fw25_s003_018.png",
-        "left": 108.2,
+        "left": 85,
         "top": 40.1,
         "width": 7.2,
         "height": 3.8
       },
       {
         "file": "fw25_s003_019.png",
-        "left": 108.2,
+        "left": 85,
         "top": 43.5,
         "width": 7.4,
         "height": 3.8
@@ -44027,7 +44027,7 @@
       },
       {
         "file": "fw25_s003_048.png",
-        "left": 92.0,
+        "left": 91.5,
         "top": 15.7,
         "width": 8.5,
         "height": 27.4
@@ -44409,7 +44409,7 @@
       },
       {
         "file": "fw25_s006_009.png",
-        "left": -0.1,
+        "left": 0,
         "top": 31.9,
         "width": 8.5,
         "height": 27.5
@@ -44437,9 +44437,9 @@
       },
       {
         "file": "fw25_s006_013.jpg",
-        "left": 93.2,
+        "left": 92,
         "top": 43.4,
-        "width": 2.0,
+        "width": 8,
         "height": 10.0
       },
       {
@@ -44496,7 +44496,7 @@
         "left": 54.0,
         "top": 44.4,
         "width": 5.3,
-        "height": 1.9
+        "height": 10
       },
       {
         "file": "fw25_s006_022.png",
@@ -44569,7 +44569,7 @@
       },
       {
         "file": "fw25_s007_002.png",
-        "left": -23.9,
+        "left": 0,
         "top": 61.3,
         "width": 6.2,
         "height": 10.4
@@ -44640,7 +44640,7 @@
       {
         "file": "fw25_s007_012.png",
         "left": 52.2,
-        "top": -1.5,
+        "top": 0,
         "width": 7.9,
         "height": 27.7
       },
@@ -44717,13 +44717,13 @@
       {
         "file": "fw25_s007_023.png",
         "left": 63.5,
-        "top": 83.4,
+        "top": 82.7,
         "width": 8.6,
         "height": 17.3
       },
       {
         "file": "fw25_s007_024.png",
-        "left": 92.1,
+        "left": 89.2,
         "top": 11.4,
         "width": 10.8,
         "height": 21.9
@@ -45096,7 +45096,7 @@
       },
       {
         "file": "fw25_s009_004.jpg",
-        "left": -54.9,
+        "left": 0,
         "top": 92.1,
         "width": 9.7,
         "height": 4.9
@@ -45152,7 +45152,7 @@
       },
       {
         "file": "fw25_s009_012.jpg",
-        "left": -3.9,
+        "left": 0,
         "top": 72.4,
         "width": 9.7,
         "height": 4.9
@@ -45250,7 +45250,7 @@
       },
       {
         "file": "fw25_s009_026.jpg",
-        "left": -36.0,
+        "left": 0,
         "top": 90.9,
         "width": 9.7,
         "height": 4.9
@@ -45336,7 +45336,7 @@
         "file": "fw25_s009_038.jpg",
         "left": 45.7,
         "top": 39.8,
-        "width": 2.2,
+        "width": 8,
         "height": 14.3
       }
     ],
@@ -45682,14 +45682,14 @@
       {
         "file": "fw25_s011_008.png",
         "left": 36.8,
-        "top": 81.3,
+        "top": 65.6,
         "width": 16.9,
         "height": 34.4
       },
       {
         "file": "fw25_s011_009.png",
         "left": 13.9,
-        "top": 82.4,
+        "top": 65.6,
         "width": 16.9,
         "height": 34.4
       },
@@ -45752,14 +45752,14 @@
       {
         "file": "fw25_s011_018.png",
         "left": 57.5,
-        "top": 75.4,
+        "top": 65.6,
         "width": 16.9,
         "height": 34.4
       },
       {
         "file": "fw25_s011_019.png",
-        "left": 83.8,
-        "top": 70.7,
+        "left": 83.1,
+        "top": 65.6,
         "width": 16.9,
         "height": 34.4
       },
@@ -45941,7 +45941,7 @@
         "left": 11.9,
         "top": 37.7,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s012_009.jpg",
@@ -45976,7 +45976,7 @@
         "left": 35.6,
         "top": 39.2,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s012_014.jpg",
@@ -46039,14 +46039,14 @@
         "left": 83.0,
         "top": 36.0,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s012_023.jpg",
         "left": 58.6,
         "top": 35.8,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s012_024.jpg",
@@ -46064,7 +46064,7 @@
       },
       {
         "file": "fw25_s012_026.png",
-        "left": 93.6,
+        "left": 91.5,
         "top": 14.6,
         "width": 8.5,
         "height": 20.8
@@ -46430,7 +46430,7 @@
         "left": 19.7,
         "top": 68.4,
         "width": 5.7,
-        "height": 2.0
+        "height": 10
       },
       {
         "file": "fw25_s013_030.png",
@@ -46490,7 +46490,7 @@
         "left": 24.6,
         "top": 31.3,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s014_004.png",
@@ -46665,7 +46665,7 @@
       },
       {
         "file": "fw25_s015_003.png",
-        "left": -116.2,
+        "left": 0,
         "top": 18.9,
         "width": 9.4,
         "height": 23.2
@@ -46878,7 +46878,7 @@
         "left": 21.4,
         "top": 41.5,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s016_009.jpg",
@@ -46920,7 +46920,7 @@
         "left": 49.8,
         "top": 41.5,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s016_015.png",
@@ -46976,7 +46976,7 @@
         "left": 77.9,
         "top": 40.8,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s016_023.png",
@@ -47079,7 +47079,7 @@
         "left": 11.9,
         "top": 37.7,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s017_007.png",
@@ -47100,7 +47100,7 @@
         "left": 35.6,
         "top": 39.2,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s017_010.jpg",
@@ -47118,7 +47118,7 @@
       },
       {
         "file": "fw25_s017_012.jpg",
-        "left": -23.5,
+        "left": 0,
         "top": 42.6,
         "width": 7.2,
         "height": 31.3
@@ -47212,7 +47212,7 @@
         "left": 84.1,
         "top": 42.6,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s017_026.png",
@@ -47359,12 +47359,12 @@
         "left": 12.5,
         "top": 39.3,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s018_004.png",
         "left": 7.9,
-        "top": 77.1,
+        "top": 76.8,
         "width": 6.8,
         "height": 23.2
       },
@@ -47394,14 +47394,14 @@
         "left": 87.7,
         "top": 37.2,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s018_009.jpg",
         "left": 59.8,
         "top": 36.3,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s018_010.jpg",
@@ -47429,7 +47429,7 @@
         "left": 36.3,
         "top": 37.0,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s018_014.jpg",
@@ -47483,14 +47483,14 @@
       {
         "file": "fw25_s018_021.png",
         "left": 65.0,
-        "top": 104.2,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s018_022.png",
         "left": 73.6,
-        "top": 102.8,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -47504,42 +47504,42 @@
       {
         "file": "fw25_s018_024.png",
         "left": 39.1,
-        "top": 105.7,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s018_025.png",
         "left": 47.6,
-        "top": 104.3,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
       {
         "file": "fw25_s018_026.png",
         "left": 87.7,
-        "top": 103.0,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s018_027.png",
-        "left": 96.3,
-        "top": 101.7,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
       {
         "file": "fw25_s018_028.png",
-        "left": 115.3,
-        "top": 104.5,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s018_029.png",
-        "left": 123.8,
-        "top": 103.1,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -47688,7 +47688,7 @@
         "left": 12.5,
         "top": 39.3,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s019_005.png",
@@ -47758,14 +47758,14 @@
         "left": 87.7,
         "top": 37.2,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s019_015.jpg",
         "left": 58.6,
         "top": 35.8,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s019_016.jpg",
@@ -47783,7 +47783,7 @@
       },
       {
         "file": "fw25_s019_018.png",
-        "left": 93.6,
+        "left": 91.5,
         "top": 14.6,
         "width": 8.5,
         "height": 20.8
@@ -47849,7 +47849,7 @@
         "left": 36.3,
         "top": 37.0,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s019_028.jpg",
@@ -48029,7 +48029,7 @@
         "left": 38.3,
         "top": 35.4,
         "width": 8.2,
-        "height": 2.9
+        "height": 10
       },
       {
         "file": "fw25_s020_003.png",
@@ -48371,7 +48371,7 @@
         "file": "fw25_s021_017.jpg",
         "left": 29.0,
         "top": 18.2,
-        "width": 2.9,
+        "width": 8,
         "height": 14.3
       },
       {
@@ -48385,7 +48385,7 @@
         "file": "fw25_s021_019.jpg",
         "left": 58.8,
         "top": 11.9,
-        "width": 2.9,
+        "width": 8,
         "height": 14.3
       },
       {
@@ -48399,7 +48399,7 @@
         "file": "fw25_s021_021.jpg",
         "left": 85.7,
         "top": 14.2,
-        "width": 2.9,
+        "width": 8,
         "height": 14.3
       },
       {
@@ -48532,7 +48532,7 @@
       {
         "file": "fw25_s022_008.png",
         "left": 10.7,
-        "top": 80.0,
+        "top": 60.2,
         "width": 14.8,
         "height": 39.8
       },
@@ -48553,7 +48553,7 @@
       {
         "file": "fw25_s022_011.png",
         "left": 31.6,
-        "top": 80.0,
+        "top": 60.2,
         "width": 14.8,
         "height": 39.8
       },
@@ -48574,7 +48574,7 @@
       {
         "file": "fw25_s022_014.png",
         "left": 50.0,
-        "top": 75.3,
+        "top": 60.2,
         "width": 14.8,
         "height": 39.8
       },
@@ -48594,7 +48594,7 @@
       },
       {
         "file": "fw25_s022_017.png",
-        "left": -0.6,
+        "left": 0,
         "top": 20.3,
         "width": 9.9,
         "height": 28.2
@@ -48637,7 +48637,7 @@
       {
         "file": "fw25_s022_023.png",
         "left": 70.1,
-        "top": 75.2,
+        "top": 60.2,
         "width": 14.8,
         "height": 39.8
       },
@@ -48678,8 +48678,8 @@
       },
       {
         "file": "fw25_s022_029.png",
-        "left": 92.6,
-        "top": 67.4,
+        "left": 85.2,
+        "top": 60.2,
         "width": 14.8,
         "height": 39.8
       },
@@ -48707,14 +48707,14 @@
       {
         "file": "fw25_s022_033.jpg",
         "left": 8.1,
-        "top": 95.5,
+        "top": 85,
         "width": 8.8,
         "height": 12.1
       },
       {
         "file": "fw25_s022_034.jpg",
         "left": 1.9,
-        "top": 96.7,
+        "top": 85,
         "width": 24.9,
         "height": 13.8
       },
@@ -48728,14 +48728,14 @@
       {
         "file": "fw25_s022_036.jpg",
         "left": 28.1,
-        "top": 93.1,
+        "top": 87.9,
         "width": 8.8,
         "height": 12.1
       },
       {
         "file": "fw25_s022_037.jpg",
         "left": 21.9,
-        "top": 94.3,
+        "top": 86.2,
         "width": 24.9,
         "height": 13.8
       },
@@ -48749,14 +48749,14 @@
       {
         "file": "fw25_s022_039.jpg",
         "left": 49.8,
-        "top": 97.3,
+        "top": 85,
         "width": 8.8,
         "height": 12.1
       },
       {
         "file": "fw25_s022_040.jpg",
         "left": 43.7,
-        "top": 98.4,
+        "top": 85,
         "width": 24.9,
         "height": 13.8
       },
@@ -48770,14 +48770,14 @@
       {
         "file": "fw25_s022_042.jpg",
         "left": 70.3,
-        "top": 97.6,
+        "top": 85,
         "width": 8.8,
         "height": 12.1
       },
       {
         "file": "fw25_s022_043.jpg",
         "left": 64.2,
-        "top": 98.7,
+        "top": 85,
         "width": 24.9,
         "height": 13.8
       },
@@ -48790,15 +48790,15 @@
       },
       {
         "file": "fw25_s022_045.jpg",
-        "left": 95.1,
-        "top": 96.0,
+        "left": 85,
+        "top": 85,
         "width": 8.8,
         "height": 12.1
       },
       {
         "file": "fw25_s022_046.jpg",
-        "left": 89.0,
-        "top": 97.2,
+        "left": 75.1,
+        "top": 85,
         "width": 24.9,
         "height": 13.8
       }
@@ -48877,7 +48877,7 @@
       },
       {
         "file": "fw25_s023_007.png",
-        "left": -117.8,
+        "left": 0,
         "top": 18.7,
         "width": 9.4,
         "height": 23.2
@@ -49179,7 +49179,7 @@
       },
       {
         "file": "fw25_s024_023.png",
-        "left": 93.4,
+        "left": 93.2,
         "top": 73.2,
         "width": 6.8,
         "height": 23.2
@@ -49353,7 +49353,7 @@
       },
       {
         "file": "fw25_s025_003.jpg",
-        "left": -4.1,
+        "left": 0,
         "top": 80.4,
         "width": 4.5,
         "height": 14.4
@@ -50092,7 +50092,7 @@
       },
       {
         "file": "fw25_s028_002.jpg",
-        "left": -4.1,
+        "left": 0,
         "top": 80.4,
         "width": 4.5,
         "height": 14.4
@@ -51461,8 +51461,8 @@
       },
       {
         "file": "fw25_s034_022.jpg",
-        "left": 91.6,
-        "top": 83.7,
+        "left": 84.8,
+        "top": 76.4,
         "width": 15.2,
         "height": 23.6
       },
@@ -51535,7 +51535,7 @@
       {
         "file": "fw25_s035_005.png",
         "left": 37.6,
-        "top": 95.7,
+        "top": 85,
         "width": 6.7,
         "height": 7.4
       },
@@ -51584,7 +51584,7 @@
       {
         "file": "fw25_s035_012.png",
         "left": 46.0,
-        "top": 95.1,
+        "top": 85,
         "width": 3.1,
         "height": 8.4
       },
@@ -51618,14 +51618,14 @@
       },
       {
         "file": "fw25_s035_017.png",
-        "left": 120.3,
-        "top": 111.0,
+        "left": 85,
+        "top": 85,
         "width": 8.7,
         "height": 14.8
       },
       {
         "file": "fw25_s035_018.png",
-        "left": 104.0,
+        "left": 85,
         "top": 77.8,
         "width": 11.1,
         "height": 12.3
@@ -51633,7 +51633,7 @@
       {
         "file": "fw25_s035_019.png",
         "left": 47.6,
-        "top": 102.0,
+        "top": 85,
         "width": 3.3,
         "height": 8.9
       },
@@ -52174,8 +52174,8 @@
       },
       {
         "file": "fw25_s038_016.png",
-        "left": -16.8,
-        "top": 94.9,
+        "left": 0,
+        "top": 85.0,
         "width": 9.1,
         "height": 15.0
       },
@@ -52387,7 +52387,7 @@
       {
         "file": "fw25_s039_018.jpg",
         "left": 37.9,
-        "top": 93.8,
+        "top": 88.4,
         "width": 15.3,
         "height": 11.6
       },
@@ -52445,28 +52445,28 @@
         "left": 12.7,
         "top": 38.0,
         "width": 7.4,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s039_027.jpg",
         "left": 35.5,
         "top": 36.8,
         "width": 7.2,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s039_028.jpg",
         "left": 60.7,
         "top": 35.5,
         "width": 7.2,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s039_029.jpg",
         "left": 89.3,
         "top": 34.6,
         "width": 7.2,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s039_030.png",
@@ -52625,7 +52625,7 @@
       },
       {
         "file": "fw25_s040_012.png",
-        "left": 92.9,
+        "left": 89.8,
         "top": 5.3,
         "width": 10.2,
         "height": 24.3
@@ -52717,7 +52717,7 @@
       {
         "file": "fw25_s040_025.jpg",
         "left": 36.7,
-        "top": 91.0,
+        "top": 88.4,
         "width": 15.3,
         "height": 11.6
       },
@@ -52738,7 +52738,7 @@
       {
         "file": "fw25_s040_028.jpg",
         "left": 70.7,
-        "top": 92.1,
+        "top": 88.4,
         "width": 15.3,
         "height": 11.6
       },
@@ -52759,7 +52759,7 @@
       {
         "file": "fw25_s040_031.png",
         "left": 40.7,
-        "top": -0.8,
+        "top": 0,
         "width": 8.1,
         "height": 20.4
       },
@@ -52913,21 +52913,21 @@
         "left": 15.3,
         "top": 31.9,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s041_011.jpg",
         "left": 89.8,
         "top": 30.0,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s041_012.jpg",
         "left": 46.8,
         "top": 29.6,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s041_013.png",
@@ -53210,21 +53210,21 @@
         "left": 15.3,
         "top": 31.9,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s042_011.jpg",
         "left": 89.8,
         "top": 30.0,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s042_012.jpg",
         "left": 46.8,
         "top": 29.6,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s042_013.png",
@@ -53660,21 +53660,21 @@
         "left": 14.7,
         "top": 43.1,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s044_011.jpg",
         "left": 89.8,
         "top": 30.0,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s044_012.jpg",
         "left": 46.8,
         "top": 29.6,
         "width": 6.3,
-        "height": 2.2
+        "height": 10
       },
       {
         "file": "fw25_s044_013.png",
@@ -54116,7 +54116,7 @@
       },
       {
         "file": "fw25_s045_031.png",
-        "left": 99.0,
+        "left": 85,
         "top": 92.2,
         "width": 4.9,
         "height": 5.0
@@ -54244,7 +54244,7 @@
       },
       {
         "file": "fw25_s046_012.jpg",
-        "left": -15.7,
+        "left": 0,
         "top": 75.8,
         "width": 10.8,
         "height": 6.0
@@ -54438,7 +54438,7 @@
       },
       {
         "file": "fw25_s047_008.jpg",
-        "left": -20.7,
+        "left": 0,
         "top": 77.0,
         "width": 10.8,
         "height": 6.0
@@ -54622,7 +54622,7 @@
       {
         "file": "fw25_s048_003.png",
         "left": 67.2,
-        "top": 60.5,
+        "top": 58.5,
         "width": 29.3,
         "height": 41.5
       },
@@ -54685,7 +54685,7 @@
       {
         "file": "fw25_s048_012.png",
         "left": 4.5,
-        "top": 82.4,
+        "top": 73.4,
         "width": 23.0,
         "height": 26.6
       },
@@ -54968,28 +54968,28 @@
         "left": 13.7,
         "top": 38.7,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s049_023.jpg",
         "left": 64.5,
         "top": 37.7,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s049_024.jpg",
         "left": 41.4,
         "top": 37.4,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s049_025.jpg",
         "left": 89.8,
         "top": 36.1,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s049_026.png",
@@ -55113,7 +55113,7 @@
         "left": 13.7,
         "top": 38.7,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s050_003.png",
@@ -55127,7 +55127,7 @@
         "left": 49.9,
         "top": 39.6,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s050_005.png",
@@ -55141,7 +55141,7 @@
         "left": 82.6,
         "top": 40.4,
         "width": 7.0,
-        "height": 2.5
+        "height": 10
       },
       {
         "file": "fw25_s050_007.png",
@@ -55216,14 +55216,14 @@
       {
         "file": "fw25_s050_017.jpg",
         "left": 69.8,
-        "top": 114.8,
+        "top": 85,
         "width": 6.4,
         "height": 6.5
       },
       {
         "file": "fw25_s050_018.jpg",
         "left": 73.9,
-        "top": 95.4,
+        "top": 85,
         "width": 6.0,
         "height": 8.2
       },
@@ -55237,7 +55237,7 @@
       {
         "file": "fw25_s050_020.jpg",
         "left": 65.7,
-        "top": 109.2,
+        "top": 85,
         "width": 5.6,
         "height": 9.5
       },
@@ -55357,7 +55357,7 @@
       {
         "file": "fw25_s051_005.png",
         "left": 13.4,
-        "top": 83.7,
+        "top": 76.3,
         "width": 20.3,
         "height": 23.7
       },
@@ -56384,7 +56384,7 @@
       },
       {
         "file": "fw25_s057_027.png",
-        "left": 89.5,
+        "left": 87.3,
         "top": 26.7,
         "width": 12.7,
         "height": 28.0
@@ -56781,8 +56781,8 @@
       },
       {
         "file": "fw25_s059_011.jpg",
-        "left": -32.5,
-        "top": 91.6,
+        "left": 0,
+        "top": 89.1,
         "width": 7.0,
         "height": 10.9
       },
@@ -56795,7 +56795,7 @@
       },
       {
         "file": "fw25_s059_013.png",
-        "left": -18.5,
+        "left": 0,
         "top": 81.8,
         "width": 8.2,
         "height": 9.0
@@ -56880,7 +56880,7 @@
       {
         "file": "fw25_s059_025.jpg",
         "left": 17.8,
-        "top": 90.6,
+        "top": 89.1,
         "width": 7.0,
         "height": 10.9
       },
@@ -56901,7 +56901,7 @@
       {
         "file": "fw25_s059_028.png",
         "left": 62.5,
-        "top": 73.1,
+        "top": 71.4,
         "width": 14.1,
         "height": 28.6
       },
@@ -56915,7 +56915,7 @@
       {
         "file": "fw25_s059_030.jpg",
         "left": 42.9,
-        "top": 90.5,
+        "top": 89.1,
         "width": 7.0,
         "height": 10.9
       },
@@ -56935,8 +56935,8 @@
       },
       {
         "file": "fw25_s059_033.png",
-        "left": 87.6,
-        "top": 73.0,
+        "left": 85.9,
+        "top": 71.4,
         "width": 14.1,
         "height": 28.6
       },
@@ -57019,8 +57019,8 @@
     "layout": [
       {
         "file": "fw25_s060_001.jpg",
-        "left": -31.0,
-        "top": 89.9,
+        "left": 0,
+        "top": 89.1,
         "width": 7.0,
         "height": 10.9
       },
@@ -57319,7 +57319,7 @@
       },
       {
         "file": "fw25_s061_010.png",
-        "left": 89.2,
+        "left": 88.4,
         "top": 17.4,
         "width": 11.6,
         "height": 24.8
@@ -57596,7 +57596,7 @@
       {
         "file": "fw25_s062_017.png",
         "left": 84.8,
-        "top": 85.1,
+        "top": 85.0,
         "width": 7.4,
         "height": 15.0
       },
@@ -57781,7 +57781,7 @@
         "left": 14.8,
         "top": 37.5,
         "width": 5.8,
-        "height": 2.1
+        "height": 10
       },
       {
         "file": "fw25_s063_015.png",
@@ -57919,7 +57919,7 @@
       },
       {
         "file": "fw25_s064_004.png",
-        "left": 90.6,
+        "left": 88.4,
         "top": 13.5,
         "width": 11.6,
         "height": 24.8
@@ -58752,15 +58752,15 @@
       },
       {
         "file": "fw25_s067_028.png",
-        "left": 108.1,
-        "top": 98.6,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s067_029.png",
-        "left": 110.4,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -59130,7 +59130,7 @@
       },
       {
         "file": "fw25_s069_017.png",
-        "left": 107.2,
+        "left": 85,
         "top": 79.9,
         "width": 11.1,
         "height": 12.3
@@ -59180,14 +59180,14 @@
       {
         "file": "fw25_s069_024.png",
         "left": 77.1,
-        "top": 101.9,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s069_025.png",
         "left": 79.4,
-        "top": 94.7,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -59505,7 +59505,7 @@
       },
       {
         "file": "fw25_s071_003.png",
-        "left": 115.2,
+        "left": 85,
         "top": 87.1,
         "width": 11.1,
         "height": 12.3
@@ -59702,14 +59702,14 @@
       {
         "file": "fw25_s071_031.png",
         "left": 79.9,
-        "top": 103.5,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s071_032.png",
         "left": 49.1,
-        "top": 92.6,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
@@ -60370,7 +60370,7 @@
       },
       {
         "file": "fw25_s075_007.png",
-        "left": -13.7,
+        "left": 0,
         "top": 79.0,
         "width": 10.7,
         "height": 10.9
@@ -60434,7 +60434,7 @@
       {
         "file": "fw25_s075_016.png",
         "left": 23.9,
-        "top": -30.8,
+        "top": 0,
         "width": 5.8,
         "height": 14.3
       },
@@ -60476,7 +60476,7 @@
       {
         "file": "fw25_s075_022.png",
         "left": 62.8,
-        "top": -32.5,
+        "top": 0,
         "width": 5.8,
         "height": 14.3
       }
@@ -60571,7 +60571,7 @@
       },
       {
         "file": "fw25_s076_009.png",
-        "left": -8.3,
+        "left": 0,
         "top": 68.2,
         "width": 10.4,
         "height": 11.5
@@ -60759,7 +60759,7 @@
       {
         "file": "fw25_s077_009.png",
         "left": 4.6,
-        "top": 83.1,
+        "top": 77.7,
         "width": 15.1,
         "height": 22.3
       },
@@ -60787,7 +60787,7 @@
       {
         "file": "fw25_s077_013.png",
         "left": 41.3,
-        "top": 80.4,
+        "top": 77.7,
         "width": 15.1,
         "height": 22.3
       },
@@ -60807,7 +60807,7 @@
       },
       {
         "file": "fw25_s077_016.jpg",
-        "left": 90.2,
+        "left": 86.0,
         "top": 71.1,
         "width": 14.0,
         "height": 21.8
@@ -60916,14 +60916,14 @@
       },
       {
         "file": "fw25_s078_006.png",
-        "left": -4.8,
+        "left": 0,
         "top": 83.9,
         "width": 6.6,
         "height": 13.5
       },
       {
         "file": "fw25_s078_007.jpg",
-        "left": -2.0,
+        "left": 0,
         "top": 82.8,
         "width": 8.2,
         "height": 6.2
@@ -60944,7 +60944,7 @@
       },
       {
         "file": "fw25_s078_010.png",
-        "left": -6.9,
+        "left": 0,
         "top": 16.0,
         "width": 7.5,
         "height": 20.5
@@ -61056,14 +61056,14 @@
       },
       {
         "file": "fw25_s078_026.png",
-        "left": 93.3,
+        "left": 92.6,
         "top": 24.6,
         "width": 7.4,
         "height": 17.0
       },
       {
         "file": "fw25_s078_027.jpg",
-        "left": 95.2,
+        "left": 85,
         "top": 8.3,
         "width": 9.2,
         "height": 14.9
@@ -61084,8 +61084,8 @@
       },
       {
         "file": "fw25_s078_030.jpg",
-        "left": 92.2,
-        "top": 83.2,
+        "left": 83.7,
+        "top": 74.6,
         "width": 16.3,
         "height": 25.4
       },
@@ -61211,7 +61211,7 @@
       {
         "file": "fw25_s079_009.jpg",
         "left": 2.7,
-        "top": 83.3,
+        "top": 69.3,
         "width": 11.9,
         "height": 30.7
       },
@@ -61246,7 +61246,7 @@
       {
         "file": "fw25_s079_014.jpg",
         "left": 26.3,
-        "top": 83.9,
+        "top": 69.3,
         "width": 11.9,
         "height": 30.7
       },
@@ -61290,7 +61290,7 @@
         "left": 72.8,
         "top": 58.5,
         "width": 5.5,
-        "height": 1.9
+        "height": 10
       },
       {
         "file": "fw25_s079_021.png",
@@ -61311,7 +61311,7 @@
         "left": 92.1,
         "top": 47.0,
         "width": 5.5,
-        "height": 1.9
+        "height": 10
       },
       {
         "file": "fw25_s079_024.png",
@@ -61344,7 +61344,7 @@
       {
         "file": "fw25_s079_028.jpg",
         "left": 52.3,
-        "top": 70.9,
+        "top": 69.3,
         "width": 11.9,
         "height": 30.7
       },
@@ -61443,7 +61443,7 @@
       },
       {
         "file": "fw25_s080_006.jpg",
-        "left": -42.1,
+        "left": 0,
         "top": 88.5,
         "width": 7.6,
         "height": 4.2
@@ -61714,7 +61714,7 @@
       },
       {
         "file": "fw25_s081_015.png",
-        "left": -1.9,
+        "left": 0,
         "top": 23.4,
         "width": 9.1,
         "height": 21.0
@@ -61729,7 +61729,7 @@
       {
         "file": "fw25_s081_017.jpg",
         "left": 45.1,
-        "top": 97.3,
+        "top": 85,
         "width": 20.3,
         "height": 12.4
       },
@@ -61756,7 +61756,7 @@
       },
       {
         "file": "fw25_s081_021.jpg",
-        "left": 80.2,
+        "left": 79.7,
         "top": 79.2,
         "width": 20.3,
         "height": 12.4
@@ -61777,7 +61777,7 @@
       },
       {
         "file": "fw25_s081_024.png",
-        "left": 93.8,
+        "left": 93.7,
         "top": 23.1,
         "width": 6.3,
         "height": 15.7
@@ -61859,7 +61859,7 @@
       },
       {
         "file": "fw25_s082_002.png",
-        "left": -24.4,
+        "left": 0,
         "top": 48.8,
         "width": 7.6,
         "height": 33.3
@@ -62062,14 +62062,14 @@
       },
       {
         "file": "fw25_s082_031.png",
-        "left": 90.2,
+        "left": 79.3,
         "top": 38.5,
         "width": 20.7,
         "height": 10.8
       },
       {
         "file": "fw25_s082_032.png",
-        "left": 90.2,
+        "left": 78.9,
         "top": 48.1,
         "width": 21.1,
         "height": 10.8
@@ -62281,7 +62281,7 @@
       },
       {
         "file": "fw25_s083_022.png",
-        "left": 98.2,
+        "left": 85,
         "top": 87.5,
         "width": 7.3,
         "height": 8.1
@@ -62337,14 +62337,14 @@
       },
       {
         "file": "fw25_s083_030.png",
-        "left": 92.4,
+        "left": 79.3,
         "top": 35.4,
         "width": 20.7,
         "height": 10.8
       },
       {
         "file": "fw25_s083_031.png",
-        "left": 92.4,
+        "left": 78.9,
         "top": 45.0,
         "width": 21.1,
         "height": 10.8
@@ -62432,7 +62432,7 @@
         "left": 14.1,
         "top": 37.7,
         "width": 7.4,
-        "height": 2.6
+        "height": 10
       },
       {
         "file": "fw25_s084_003.png",
@@ -62450,7 +62450,7 @@
       },
       {
         "file": "fw25_s084_005.png",
-        "left": -57.1,
+        "left": 0,
         "top": 26.7,
         "width": 10.6,
         "height": 30.2
@@ -62597,8 +62597,8 @@
       },
       {
         "file": "fw25_s084_026.png",
-        "left": 112.9,
-        "top": 98.5,
+        "left": 85,
+        "top": 85,
         "width": 8.2,
         "height": 13.5
       },
@@ -62690,7 +62690,7 @@
       },
       {
         "file": "fw25_s086_004.png",
-        "left": -29.0,
+        "left": 0,
         "top": 31.4,
         "width": 8.9,
         "height": 22.4
@@ -62782,7 +62782,7 @@
       {
         "file": "fw25_s086_017.png",
         "left": 36.8,
-        "top": 88.8,
+        "top": 76.4,
         "width": 20.4,
         "height": 23.6
       },
@@ -62908,7 +62908,7 @@
       {
         "file": "fw25_s087_009.png",
         "left": 3.9,
-        "top": 83.5,
+        "top": 72.6,
         "width": 13.5,
         "height": 27.4
       },
@@ -62929,7 +62929,7 @@
       {
         "file": "fw25_s087_012.png",
         "left": 11.5,
-        "top": 88.2,
+        "top": 76.7,
         "width": 14.1,
         "height": 23.3
       },
@@ -62950,7 +62950,7 @@
       {
         "file": "fw25_s087_015.png",
         "left": 38.3,
-        "top": 81.8,
+        "top": 72.6,
         "width": 13.5,
         "height": 27.4
       },
@@ -63041,7 +63041,7 @@
       {
         "file": "fw25_s087_028.png",
         "left": 72.1,
-        "top": 82.9,
+        "top": 72.6,
         "width": 13.5,
         "height": 27.4
       },
@@ -63055,13 +63055,13 @@
       {
         "file": "fw25_s087_030.png",
         "left": 79.7,
-        "top": 87.7,
+        "top": 76.7,
         "width": 14.1,
         "height": 23.3
       },
       {
         "file": "fw25_s087_031.png",
-        "left": 86.9,
+        "left": 84.2,
         "top": 35.1,
         "width": 15.8,
         "height": 35.1
@@ -63120,7 +63120,7 @@
       },
       {
         "file": "fw25_s088_002.jpg",
-        "left": -56.7,
+        "left": 0,
         "top": 83.2,
         "width": 6.3,
         "height": 16.3
@@ -63134,14 +63134,14 @@
       },
       {
         "file": "fw25_s088_004.png",
-        "left": -66.3,
+        "left": 0,
         "top": 60.0,
         "width": 8.9,
         "height": 16.7
       },
       {
         "file": "fw25_s088_005.png",
-        "left": -3.2,
+        "left": 0,
         "top": 4.6,
         "width": 8.6,
         "height": 19.7
@@ -63232,7 +63232,7 @@
         "left": 35.5,
         "top": 49.3,
         "width": 7.7,
-        "height": 2.7
+        "height": 10
       },
       {
         "file": "fw25_s089_008.png",
@@ -63300,9 +63300,9 @@
       {
         "file": "fw25_s089_017.png",
         "left": 44.0,
-        "top": 61.2,
+        "top": 45,
         "width": 18.6,
-        "height": 68.9
+        "height": 55
       },
       {
         "file": "fw25_s089_018.png",
@@ -63330,7 +63330,7 @@
         "left": 50.2,
         "top": 41.9,
         "width": 17.5,
-        "height": 65.5
+        "height": 55
       }
     ],
     "image_count": 21
@@ -63388,7 +63388,7 @@
       {
         "file": "fw25_s090_004.jpg",
         "left": 87.6,
-        "top": -0.5,
+        "top": 0,
         "width": 11.3,
         "height": 27.4
       },
@@ -63619,7 +63619,7 @@
       {
         "file": "fw25_s091_011.jpg",
         "left": 13.9,
-        "top": 91.4,
+        "top": 86.2,
         "width": 24.9,
         "height": 13.8
       },
@@ -63661,7 +63661,7 @@
       {
         "file": "fw25_s091_017.png",
         "left": 53.6,
-        "top": 58.3,
+        "top": 54.6,
         "width": 16.7,
         "height": 45.4
       },
@@ -63691,7 +63691,7 @@
         "left": 65.2,
         "top": 50.9,
         "width": 6.6,
-        "height": 2.4
+        "height": 10
       },
       {
         "file": "fw25_s091_022.png",
@@ -63703,7 +63703,7 @@
       {
         "file": "fw25_s091_023.png",
         "left": 76.7,
-        "top": 59.1,
+        "top": 53.9,
         "width": 15.6,
         "height": 46.1
       },
@@ -63783,7 +63783,7 @@
       {
         "file": "fw25_s092_006.png",
         "left": 35.4,
-        "top": 80.6,
+        "top": 79.7,
         "width": 14.3,
         "height": 20.3
       },
@@ -63934,7 +63934,7 @@
       {
         "file": "fw25_s093_003.png",
         "left": 5.3,
-        "top": 80.9,
+        "top": 79.0,
         "width": 23.6,
         "height": 21.0
       },
@@ -64011,7 +64011,7 @@
       {
         "file": "fw25_s093_014.jpg",
         "left": 51.9,
-        "top": 88.4,
+        "top": 86.0,
         "width": 18.5,
         "height": 14.0
       },
@@ -64221,7 +64221,7 @@
       },
       {
         "file": "fw25_s095_010.png",
-        "left": 101.7,
+        "left": 85,
         "top": 56.9,
         "width": 6.7,
         "height": 7.4
@@ -64263,7 +64263,7 @@
       },
       {
         "file": "fw25_s095_016.jpg",
-        "left": 94.9,
+        "left": 94.4,
         "top": 87.2,
         "width": 5.6,
         "height": 9.5
@@ -64336,7 +64336,7 @@
       {
         "file": "fw25_s096_005.png",
         "left": 49.6,
-        "top": 69.8,
+        "top": 54.2,
         "width": 14.5,
         "height": 45.8
       },
@@ -64469,7 +64469,7 @@
       {
         "file": "fw25_s097_009.png",
         "left": 12.6,
-        "top": 92.8,
+        "top": 92.3,
         "width": 6.4,
         "height": 7.7
       },
@@ -64657,22 +64657,22 @@
       {
         "file": "fw25_s098_021.jpg",
         "left": 85.3,
-        "top": 105.7,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
       {
         "file": "fw25_s098_022.jpg",
         "left": 44.5,
-        "top": -7.2,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "fw25_s098_023.jpg",
         "left": 61.5,
-        "top": -7.7,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.4
       }
     ],
@@ -64818,7 +64818,7 @@
       {
         "file": "fw25_s099_016.jpg",
         "left": 87.1,
-        "top": 124.1,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
@@ -64853,15 +64853,15 @@
       {
         "file": "fw25_s099_021.jpg",
         "left": 44.5,
-        "top": -7.2,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.0
       },
       {
         "file": "fw25_s099_022.jpg",
         "left": 61.5,
-        "top": -7.7,
-        "width": 2.7,
+        "top": 0,
+        "width": 8,
         "height": 28.4
       },
       {
@@ -64969,7 +64969,7 @@
       },
       {
         "file": "fw25_s100_009.png",
-        "left": 102.0,
+        "left": 85,
         "top": 85.0,
         "width": 4.4,
         "height": 10.5
@@ -65018,7 +65018,7 @@
       },
       {
         "file": "fw25_s100_016.png",
-        "left": 105.3,
+        "left": 85,
         "top": 60.1,
         "width": 4.2,
         "height": 13.3
@@ -65245,7 +65245,7 @@
       {
         "file": "fw25_s102_004.jpg",
         "left": 9.3,
-        "top": 100.5,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -65505,7 +65505,7 @@
       {
         "file": "fw25_s103_016.png",
         "left": 74.2,
-        "top": 93.1,
+        "top": 91.3,
         "width": 5.9,
         "height": 8.7
       },
@@ -65699,7 +65699,7 @@
       {
         "file": "fw25_s104_014.png",
         "left": 33.9,
-        "top": 111.3,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -65727,14 +65727,14 @@
       {
         "file": "fw25_s104_018.jpg",
         "left": 78.9,
-        "top": 119.0,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
       {
         "file": "fw25_s104_019.png",
-        "left": 124.7,
-        "top": 105.7,
+        "left": 85,
+        "top": 85,
         "width": 7.1,
         "height": 6.0
       },
@@ -65743,7 +65743,7 @@
         "left": 60.6,
         "top": 37.4,
         "width": 7.3,
-        "height": 2.6
+        "height": 10
       },
       {
         "file": "fw25_s104_021.jpg",
@@ -65849,7 +65849,7 @@
       {
         "file": "fw25_s105_010.png",
         "left": 12.8,
-        "top": 117.6,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -65939,29 +65939,29 @@
       },
       {
         "file": "fw25_s106_006.png",
-        "left": 88.3,
+        "left": 88.0,
         "top": 71.8,
         "width": 12.0,
         "height": 12.9
       },
       {
         "file": "fw25_s106_007.jpg",
-        "left": 112.2,
+        "left": 85,
         "top": 43.6,
         "width": 5.5,
         "height": 8.6
       },
       {
         "file": "fw25_s106_008.png",
-        "left": 100.1,
-        "top": 103.6,
+        "left": 85,
+        "top": 85,
         "width": 5.3,
         "height": 7.0
       },
       {
         "file": "fw25_s106_009.jpg",
         "left": 90.6,
-        "top": 119.2,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -66077,7 +66077,7 @@
         "left": 54.4,
         "top": 19.3,
         "width": 13.6,
-        "height": 61.3
+        "height": 55
       },
       {
         "file": "fw25_s107_006.png",
@@ -66198,7 +66198,7 @@
       {
         "file": "fw25_s108_007.png",
         "left": 4.2,
-        "top": 115.4,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -66327,7 +66327,7 @@
         "left": 21.7,
         "top": 19.3,
         "width": 15.9,
-        "height": 72.4
+        "height": 55
       },
       {
         "file": "fw25_s109_009.jpg",
@@ -66348,7 +66348,7 @@
         "left": 59.1,
         "top": 22.5,
         "width": 16.9,
-        "height": 65.5
+        "height": 55
       }
     ],
     "image_count": 11
@@ -66411,7 +66411,7 @@
       },
       {
         "file": "fw25_s110_006.png",
-        "left": 114.8,
+        "left": 85,
         "top": 39.6,
         "width": 3.9,
         "height": 10.6
@@ -66440,7 +66440,7 @@
       {
         "file": "fw25_s110_010.jpg",
         "left": 30.9,
-        "top": 109.5,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -66530,7 +66530,7 @@
       },
       {
         "file": "fw25_s111_006.png",
-        "left": 97.9,
+        "left": 85,
         "top": 28.9,
         "width": 3.9,
         "height": 10.6
@@ -66544,7 +66544,7 @@
       },
       {
         "file": "fw25_s111_008.jpg",
-        "left": 102.1,
+        "left": 85,
         "top": 66.5,
         "width": 5.5,
         "height": 8.6
@@ -66552,14 +66552,14 @@
       {
         "file": "fw25_s111_009.jpg",
         "left": 66.1,
-        "top": 116.2,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
       {
         "file": "fw25_s111_010.png",
         "left": 77.5,
-        "top": 104.0,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -66677,7 +66677,7 @@
       {
         "file": "fw25_s112_006.jpg",
         "left": 12.4,
-        "top": 115.0,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
@@ -66697,7 +66697,7 @@
       },
       {
         "file": "fw25_s112_009.jpg",
-        "left": 127.5,
+        "left": 85,
         "top": 84.9,
         "width": 5.5,
         "height": 8.6
@@ -66732,7 +66732,7 @@
       },
       {
         "file": "fw25_s112_014.png",
-        "left": 106.1,
+        "left": 85,
         "top": 33.6,
         "width": 3.9,
         "height": 10.6
@@ -66842,7 +66842,7 @@
       {
         "file": "fw25_s113_010.jpg",
         "left": 54.0,
-        "top": 94.7,
+        "top": 92.6,
         "width": 6.9,
         "height": 7.4
       },
@@ -67286,7 +67286,7 @@
       {
         "file": "fw25_s116_010.png",
         "left": 55.0,
-        "top": 102.4,
+        "top": 85,
         "width": 7.1,
         "height": 6.0
       },
@@ -67314,7 +67314,7 @@
       {
         "file": "fw25_s116_014.png",
         "left": 94.2,
-        "top": 113.8,
+        "top": 85,
         "width": 5.7,
         "height": 5.3
       },
@@ -67370,7 +67370,7 @@
       {
         "file": "fw25_s116_022.png",
         "left": 90.3,
-        "top": 104.1,
+        "top": 85,
         "width": 6.4,
         "height": 6.1
       },
@@ -67418,8 +67418,8 @@
     "layout": [
       {
         "file": "fw25_s117_001.jpg",
-        "left": 115.9,
-        "top": 146.5,
+        "left": 85,
+        "top": 84.2,
         "width": 14.1,
         "height": 15.8
       },
@@ -67468,7 +67468,7 @@
       {
         "file": "fw25_s117_008.jpg",
         "left": 49.9,
-        "top": 124.9,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
@@ -67544,7 +67544,7 @@
       },
       {
         "file": "fw25_s117_019.jpg",
-        "left": 103.6,
+        "left": 85,
         "top": 8.7,
         "width": 13.5,
         "height": 39.4
@@ -67566,7 +67566,7 @@
       {
         "file": "fw25_s117_022.jpg",
         "left": 66.1,
-        "top": 111.9,
+        "top": 85,
         "width": 6.1,
         "height": 3.1
       },
@@ -67675,7 +67675,7 @@
       {
         "file": "fw25_s118_010.jpg",
         "left": 92.1,
-        "top": 112.3,
+        "top": 85,
         "width": 6.5,
         "height": 3.6
       },
@@ -67774,7 +67774,7 @@
       {
         "file": "fw25_s119_007.png",
         "left": 38.4,
-        "top": 107.1,
+        "top": 85,
         "width": 7.3,
         "height": 10.2
       },
@@ -67790,7 +67790,7 @@
         "left": 59.3,
         "top": 20.0,
         "width": 15.0,
-        "height": 70.2
+        "height": 55
       }
     ],
     "image_count": 9
@@ -67886,7 +67886,7 @@
       {
         "file": "fw25_s120_010.png",
         "left": 16.1,
-        "top": 98.8,
+        "top": 85,
         "width": 6.7,
         "height": 7.6
       },
@@ -67927,7 +67927,7 @@
       },
       {
         "file": "fw25_s120_016.png",
-        "left": 104.1,
+        "left": 85,
         "top": 33.8,
         "width": 4.5,
         "height": 11.0
@@ -67994,7 +67994,7 @@
       {
         "file": "fw25_s121_005.png",
         "left": 17.3,
-        "top": 104.9,
+        "top": 85,
         "width": 6.4,
         "height": 6.1
       },
@@ -68008,7 +68008,7 @@
       {
         "file": "fw25_s121_007.png",
         "left": 4.2,
-        "top": 99.6,
+        "top": 85,
         "width": 6.4,
         "height": 7.7
       },
@@ -68189,7 +68189,7 @@
       {
         "file": "fw25_s122_016.png",
         "left": 28.2,
-        "top": 51.7,
+        "top": 51.4,
         "width": 15.6,
         "height": 48.6
       }
@@ -68264,7 +68264,7 @@
         "left": 36.8,
         "top": 22.7,
         "width": 19.8,
-        "height": 72.7
+        "height": 55
       },
       {
         "file": "fw25_s123_008.jpg",
@@ -68292,7 +68292,7 @@
         "left": 55.9,
         "top": 23.5,
         "width": 17.4,
-        "height": 70.0
+        "height": 55
       },
       {
         "file": "fw25_s123_012.png",
@@ -68406,14 +68406,14 @@
       {
         "file": "fw25_s124_011.jpg",
         "left": 16.7,
-        "top": 110.9,
+        "top": 85,
         "width": 5.1,
         "height": 11.1
       },
       {
         "file": "fw25_s124_012.png",
         "left": 18.9,
-        "top": 118.2,
+        "top": 85,
         "width": 5.3,
         "height": 7.8
       },
@@ -68504,7 +68504,7 @@
         "left": 43.1,
         "top": 24.7,
         "width": 14.8,
-        "height": 63.5
+        "height": 55
       }
     ],
     "image_count": 8
@@ -68612,14 +68612,14 @@
         "left": 48.1,
         "top": 22.3,
         "width": 17.8,
-        "height": 68.9
+        "height": 55
       },
       {
         "file": "fw25_s126_013.png",
         "left": 64.8,
         "top": 24.6,
         "width": 16.0,
-        "height": 63.8
+        "height": 55
       }
     ],
     "image_count": 13
@@ -68738,7 +68738,7 @@
         "left": 61.8,
         "top": 11.3,
         "width": 13.4,
-        "height": 64.6
+        "height": 55
       },
       {
         "file": "fw25_s127_014.png",
@@ -68881,7 +68881,7 @@
       {
         "file": "fw25_s128_013.png",
         "left": 51.2,
-        "top": 48.3,
+        "top": 48.2,
         "width": 16.7,
         "height": 51.8
       },
@@ -68988,7 +68988,7 @@
       {
         "file": "fw25_s129_009.png",
         "left": 43.9,
-        "top": 117.6,
+        "top": 85,
         "width": 7.1,
         "height": 6.0
       },
@@ -69023,21 +69023,21 @@
       {
         "file": "fw25_s129_014.png",
         "left": 30.4,
-        "top": 69.6,
+        "top": 60.9,
         "width": 12.6,
         "height": 39.1
       },
       {
         "file": "fw25_s129_015.png",
         "left": 59.9,
-        "top": 70.8,
+        "top": 60.6,
         "width": 10.1,
         "height": 39.4
       },
       {
         "file": "fw25_s129_016.png",
-        "left": 99.9,
-        "top": 63.4,
+        "left": 85,
+        "top": 60.7,
         "width": 9.9,
         "height": 39.3
       },
@@ -69135,7 +69135,7 @@
         "left": 42.3,
         "top": 17.4,
         "width": 16.4,
-        "height": 74.4
+        "height": 55
       }
     ],
     "image_count": 8
@@ -69177,7 +69177,7 @@
         "file": "fw25_s131_002.png",
         "left": 51.7,
         "top": 44.5,
-        "width": 2.6,
+        "width": 8,
         "height": 12.9
       },
       {
@@ -69189,9 +69189,9 @@
       },
       {
         "file": "fw25_s131_004.png",
-        "left": 109.3,
+        "left": 85,
         "top": 67.7,
-        "width": 2.8,
+        "width": 8,
         "height": 13.8
       },
       {
@@ -69709,7 +69709,7 @@
         "left": 68.1,
         "top": 46.6,
         "width": 7.3,
-        "height": 2.6
+        "height": 10
       }
     ],
     "image_count": 18
@@ -69815,7 +69815,7 @@
       },
       {
         "file": "fw25_s135_011.png",
-        "left": 114.8,
+        "left": 85,
         "top": 46.1,
         "width": 6.0,
         "height": 6.1
@@ -69980,7 +69980,7 @@
         "file": "fw25_s136_009.png",
         "left": 53.6,
         "top": 80.8,
-        "width": 2.8,
+        "width": 8,
         "height": 11.2
       },
       {
@@ -70028,7 +70028,7 @@
       {
         "file": "fw25_s136_016.jpg",
         "left": 45.9,
-        "top": 99.9,
+        "top": 85,
         "width": 5.0,
         "height": 7.4
       },
@@ -70178,7 +70178,7 @@
       },
       {
         "file": "fw25_s137_014.png",
-        "left": 114.0,
+        "left": 85,
         "top": 22.0,
         "width": 3.9,
         "height": 10.6
@@ -70375,7 +70375,7 @@
       {
         "file": "fw25_s138_016.png",
         "left": 40.6,
-        "top": 54.6,
+        "top": 54.2,
         "width": 14.7,
         "height": 45.8
       },
@@ -70410,7 +70410,7 @@
       {
         "file": "fw25_s138_021.jpg",
         "left": 75.9,
-        "top": 119.8,
+        "top": 85,
         "width": 6.9,
         "height": 7.4
       },
@@ -70549,7 +70549,7 @@
         "left": 16.9,
         "top": 71.6,
         "width": 7.3,
-        "height": 2.7
+        "height": 10
       },
       {
         "file": "fw25_s139_013.jpg",
@@ -70603,7 +70603,7 @@
       {
         "file": "fw25_s139_020.png",
         "left": 40.0,
-        "top": 111.6,
+        "top": 85,
         "width": 11.9,
         "height": 10.1
       },
@@ -70676,7 +70676,7 @@
       },
       {
         "file": "fw25_s140_006.png",
-        "left": 108.7,
+        "left": 85,
         "top": 79.1,
         "width": 11.1,
         "height": 12.3
@@ -70822,7 +70822,7 @@
       },
       {
         "file": "fw25_s141_009.png",
-        "left": 111.1,
+        "left": 85,
         "top": 71.2,
         "width": 11.1,
         "height": 12.3
@@ -70836,7 +70836,7 @@
       },
       {
         "file": "fw25_s141_011.png",
-        "left": 87.1,
+        "left": 86.7,
         "top": 27.4,
         "width": 13.3,
         "height": 29.6
@@ -71102,14 +71102,14 @@
       },
       {
         "file": "fw25_s143_015.png",
-        "left": 89.5,
-        "top": 106.9,
+        "left": 88.6,
+        "top": 84.1,
         "width": 11.4,
         "height": 15.9
       },
       {
         "file": "fw25_s143_016.png",
-        "left": 128.3,
+        "left": 85,
         "top": 27.8,
         "width": 12.4,
         "height": 16.8
@@ -71518,14 +71518,14 @@
       },
       {
         "file": "fw25_s147_011.png",
-        "left": 112.5,
-        "top": 104.3,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s147_012.png",
-        "left": 108.7,
+        "left": 85,
         "top": 78.2,
         "width": 12.2,
         "height": 20.1
@@ -71598,7 +71598,7 @@
       {
         "file": "fw25_s148_003.png",
         "left": 26.7,
-        "top": 75.6,
+        "top": 52.1,
         "width": 11.9,
         "height": 47.9
       },
@@ -71611,14 +71611,14 @@
       },
       {
         "file": "fw25_s148_005.png",
-        "left": 108.8,
-        "top": 93.0,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s148_006.png",
-        "left": 103.3,
+        "left": 85,
         "top": 78.3,
         "width": 12.2,
         "height": 20.1
@@ -71962,7 +71962,7 @@
       },
       {
         "file": "fw25_s151_004.png",
-        "left": -0.2,
+        "left": 0,
         "top": 22.1,
         "width": 17.9,
         "height": 53.1
@@ -72046,10 +72046,10 @@
       },
       {
         "file": "fw25_s151_016.png",
-        "left": 84.5,
+        "left": 83.6,
         "top": 10.9,
         "width": 16.4,
-        "height": 89.1
+        "height": 55
       },
       {
         "file": "fw25_s151_017.jpg",
@@ -72095,12 +72095,12 @@
         "left": 61.2,
         "top": 22.0,
         "width": 14.7,
-        "height": 64.4
+        "height": 55
       },
       {
         "file": "fw25_s152_003.png",
-        "left": 96.0,
-        "top": 97.2,
+        "left": 85,
+        "top": 85,
         "width": 4.7,
         "height": 12.7
       },
@@ -72134,21 +72134,21 @@
       },
       {
         "file": "fw25_s152_008.png",
-        "left": -0.2,
+        "left": 0,
         "top": 31.2,
         "width": 17.8,
         "height": 59.8
       },
       {
         "file": "fw25_s152_009.png",
-        "left": 99.9,
+        "left": 85,
         "top": 58.7,
         "width": 4.6,
         "height": 6.7
       },
       {
         "file": "fw25_s152_010.jpg",
-        "left": 100.4,
+        "left": 85,
         "top": 65.4,
         "width": 3.8,
         "height": 8.9
@@ -72288,15 +72288,15 @@
       },
       {
         "file": "fw25_s153_012.png",
-        "left": 108.4,
-        "top": 104.7,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s153_013.png",
-        "left": 100.5,
-        "top": 86.8,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -72309,14 +72309,14 @@
       },
       {
         "file": "fw25_s153_015.png",
-        "left": 124.3,
+        "left": 85,
         "top": 49.5,
         "width": 4.6,
         "height": 6.7
       },
       {
         "file": "fw25_s153_016.jpg",
-        "left": 124.8,
+        "left": 85,
         "top": 56.3,
         "width": 3.8,
         "height": 8.9
@@ -72392,14 +72392,14 @@
       {
         "file": "fw25_s154_006.png",
         "left": 47.8,
-        "top": 78.2,
+        "top": 55.6,
         "width": 11.2,
         "height": 44.4
       },
       {
         "file": "fw25_s154_007.png",
         "left": 34.0,
-        "top": 74.9,
+        "top": 52.1,
         "width": 11.9,
         "height": 47.9
       },
@@ -72412,14 +72412,14 @@
       },
       {
         "file": "fw25_s154_009.png",
-        "left": 108.8,
-        "top": 93.0,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s154_010.png",
-        "left": 103.3,
+        "left": 85,
         "top": 78.3,
         "width": 12.2,
         "height": 20.1
@@ -72513,7 +72513,7 @@
       },
       {
         "file": "fw25_s155_005.png",
-        "left": 118.3,
+        "left": 85,
         "top": 61.5,
         "width": 12.2,
         "height": 20.1
@@ -72624,15 +72624,15 @@
       },
       {
         "file": "fw25_s156_004.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s156_005.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -72674,7 +72674,7 @@
       {
         "file": "fw25_s156_011.png",
         "left": 47.8,
-        "top": 78.2,
+        "top": 55.6,
         "width": 11.2,
         "height": 44.4
       },
@@ -72757,15 +72757,15 @@
       },
       {
         "file": "fw25_s157_003.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s157_004.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -72807,7 +72807,7 @@
       {
         "file": "fw25_s157_010.png",
         "left": 47.8,
-        "top": 78.2,
+        "top": 55.6,
         "width": 11.2,
         "height": 44.4
       },
@@ -72917,7 +72917,7 @@
       {
         "file": "fw25_s158_005.png",
         "left": 54.9,
-        "top": 77.4,
+        "top": 55.6,
         "width": 11.2,
         "height": 44.4
       },
@@ -72930,15 +72930,15 @@
       },
       {
         "file": "fw25_s158_007.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s158_008.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -72959,7 +72959,7 @@
       {
         "file": "fw25_s158_011.png",
         "left": 39.5,
-        "top": 74.9,
+        "top": 52.1,
         "width": 11.9,
         "height": 47.9
       },
@@ -73051,15 +73051,15 @@
       },
       {
         "file": "fw25_s159_005.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s159_006.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -73117,7 +73117,7 @@
         "left": 59.4,
         "top": 59.6,
         "width": 7.3,
-        "height": 2.7
+        "height": 10
       },
       {
         "file": "fw25_s159_015.jpg",
@@ -73149,7 +73149,7 @@
       },
       {
         "file": "fw25_s159_019.png",
-        "left": 113.4,
+        "left": 85,
         "top": 58.5,
         "width": 7.1,
         "height": 10.6
@@ -73221,10 +73221,10 @@
       },
       {
         "file": "fw25_s160_007.png",
-        "left": -2.2,
+        "left": 0,
         "top": 34.7,
         "width": 17.8,
-        "height": 63.0
+        "height": 55
       },
       {
         "file": "fw25_s160_008.png",
@@ -73336,14 +73336,14 @@
         "left": 38.5,
         "top": 19.5,
         "width": 17.9,
-        "height": 61.5
+        "height": 55
       },
       {
         "file": "fw25_s161_009.png",
         "left": 20.4,
         "top": 9.2,
         "width": 15.3,
-        "height": 64.8
+        "height": 55
       },
       {
         "file": "fw25_s161_010.png",
@@ -73426,14 +73426,14 @@
         "left": 57.7,
         "top": 10.6,
         "width": 14.9,
-        "height": 69.3
+        "height": 55
       },
       {
         "file": "fw25_s162_009.png",
         "left": 49.9,
         "top": 37.1,
         "width": 16.1,
-        "height": 60.1
+        "height": 55
       }
     ],
     "image_count": 9
@@ -73487,7 +73487,7 @@
       {
         "file": "fw25_s163_004.png",
         "left": 54.9,
-        "top": 77.4,
+        "top": 55.6,
         "width": 11.2,
         "height": 44.4
       },
@@ -73500,15 +73500,15 @@
       },
       {
         "file": "fw25_s163_006.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s163_007.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -73656,21 +73656,21 @@
       },
       {
         "file": "fw25_s164_007.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s164_008.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
       {
         "file": "fw25_s164_009.png",
-        "left": 113.5,
+        "left": 85,
         "top": 75.1,
         "width": 7.1,
         "height": 10.6
@@ -73701,7 +73701,7 @@
         "left": 34.0,
         "top": 50.8,
         "width": 7.3,
-        "height": 2.7
+        "height": 10
       },
       {
         "file": "fw25_s164_014.png",
@@ -73791,7 +73791,7 @@
       },
       {
         "file": "fw25_s165_004.png",
-        "left": -0.7,
+        "left": 0,
         "top": 27.9,
         "width": 16.9,
         "height": 50.8
@@ -73834,7 +73834,7 @@
       {
         "file": "fw25_s165_010.png",
         "left": 78.2,
-        "top": 90.6,
+        "top": 87.3,
         "width": 4.7,
         "height": 12.7
       },
@@ -74040,7 +74040,7 @@
       },
       {
         "file": "fw25_s167_004.png",
-        "left": -0.9,
+        "left": 0,
         "top": 23.3,
         "width": 15.9,
         "height": 47.0
@@ -74048,13 +74048,13 @@
       {
         "file": "fw25_s167_005.png",
         "left": 25.3,
-        "top": 97.5,
+        "top": 85,
         "width": 4.7,
         "height": 12.7
       },
       {
         "file": "fw25_s167_006.png",
-        "left": 95.0,
+        "left": 88.1,
         "top": 62.9,
         "width": 11.9,
         "height": 35.0
@@ -74194,7 +74194,7 @@
       {
         "file": "fw25_s168_007.png",
         "left": 42.9,
-        "top": 53.6,
+        "top": 52.3,
         "width": 15.3,
         "height": 47.7
       },
@@ -74250,7 +74250,7 @@
       {
         "file": "fw25_s168_015.png",
         "left": 55.9,
-        "top": 113.6,
+        "top": 85,
         "width": 8.7,
         "height": 14.8
       },
@@ -74315,7 +74315,7 @@
       {
         "file": "fw25_s169_005.png",
         "left": 25.3,
-        "top": 97.5,
+        "top": 85,
         "width": 4.7,
         "height": 12.7
       },
@@ -74329,7 +74329,7 @@
       {
         "file": "fw25_s169_007.png",
         "left": 42.9,
-        "top": 53.6,
+        "top": 52.3,
         "width": 15.3,
         "height": 47.7
       },
@@ -74342,7 +74342,7 @@
       },
       {
         "file": "fw25_s169_009.png",
-        "left": 88.9,
+        "left": 86.1,
         "top": 49.6,
         "width": 13.9,
         "height": 30.7
@@ -74350,7 +74350,7 @@
       {
         "file": "fw25_s169_010.png",
         "left": 28.1,
-        "top": 92.0,
+        "top": 87.7,
         "width": 11.1,
         "height": 12.3
       },
@@ -74409,21 +74409,21 @@
       },
       {
         "file": "fw25_s170_003.png",
-        "left": 112.6,
-        "top": 107.1,
+        "left": 85,
+        "top": 79.7,
         "width": 10.0,
         "height": 20.3
       },
       {
         "file": "fw25_s170_004.png",
-        "left": 107.0,
-        "top": 91.4,
+        "left": 85,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
       {
         "file": "fw25_s170_005.png",
-        "left": 113.5,
+        "left": 85,
         "top": 75.1,
         "width": 7.1,
         "height": 10.6
@@ -74584,14 +74584,14 @@
       {
         "file": "fw25_s171_010.png",
         "left": 18.4,
-        "top": 108.2,
+        "top": 85,
         "width": 10.7,
         "height": 9.2
       },
       {
         "file": "fw25_s171_011.jpg",
-        "left": 123.5,
-        "top": 110.9,
+        "left": 85,
+        "top": 85,
         "width": 4.6,
         "height": 11.8
       },
@@ -74716,14 +74716,14 @@
       {
         "file": "fw25_s172_009.png",
         "left": 18.4,
-        "top": 108.2,
+        "top": 85,
         "width": 10.7,
         "height": 9.2
       },
       {
         "file": "fw25_s172_010.jpg",
-        "left": 123.5,
-        "top": 110.9,
+        "left": 85,
+        "top": 85,
         "width": 4.6,
         "height": 11.8
       },
@@ -74955,14 +74955,14 @@
       },
       {
         "file": "fw25_s173_018.png",
-        "left": 108.2,
+        "left": 85,
         "top": 40.1,
         "width": 7.2,
         "height": 3.8
       },
       {
         "file": "fw25_s173_019.png",
-        "left": 108.2,
+        "left": 85,
         "top": 43.5,
         "width": 7.4,
         "height": 3.8
@@ -75165,7 +75165,7 @@
       },
       {
         "file": "fw25_s173_048.png",
-        "left": 92.0,
+        "left": 91.5,
         "top": 15.7,
         "width": 8.5,
         "height": 27.4
@@ -75603,7 +75603,7 @@
       {
         "file": "fw25_s174_051.png",
         "left": 75.7,
-        "top": 101.7,
+        "top": 79.9,
         "width": 12.2,
         "height": 20.1
       },
@@ -75631,21 +75631,21 @@
       {
         "file": "fw25_s174_055.png",
         "left": 56.1,
-        "top": -1.1,
+        "top": 0,
         "width": 6.5,
         "height": 15.1
       },
       {
         "file": "fw25_s174_056.jpg",
         "left": 60.1,
-        "top": 87.6,
+        "top": 64.9,
         "width": 15.2,
         "height": 35.1
       },
       {
         "file": "fw25_s174_057.png",
         "left": 70.2,
-        "top": 78.1,
+        "top": 49.3,
         "width": 16.0,
         "height": 50.7
       }
@@ -75821,14 +75821,14 @@
       },
       {
         "file": "fw25_s175_017.png",
-        "left": 108.2,
+        "left": 85,
         "top": 40.1,
         "width": 7.2,
         "height": 3.8
       },
       {
         "file": "fw25_s175_018.png",
-        "left": 108.2,
+        "left": 85,
         "top": 43.5,
         "width": 7.4,
         "height": 3.8

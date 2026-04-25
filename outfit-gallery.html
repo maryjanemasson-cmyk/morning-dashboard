@@ -38,14 +38,6 @@
     }
     .outfit-card:hover { border-color:#c9b99a; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
 
-    .outfit-preview {
-      position:relative; background:#f9f7f4;
-      width:100%; padding-bottom:56.25%;
-      overflow:hidden;
-    }
-    .outfit-preview img {
-      position:absolute; object-fit:contain;
-    }
     .outfit-card-info { padding:0.6rem 0.8rem; }
     .outfit-card-title {
       font-family:'Playfair Display',serif; font-size:0.92rem; font-weight:600; color:#2c2418;
@@ -90,7 +82,6 @@
     }
     .outfit-card:hover .delete-card-btn { opacity:1; }
     .outfit-card .delete-card-btn:hover { background:#fde8e8; }
-    .outfit-preview { position:relative; }
 
     /* Detail modal */
     .modal-overlay {
@@ -117,14 +108,25 @@
 
     .modal-pieces {
       position:relative; background:#f9f7f4; border-radius:8px;
-      width:100%; padding-bottom:56.25%; /* 16:9 aspect ratio like slides */
+      width:100%; padding-bottom:56.25%;
       overflow:hidden;
     }
     .modal-pieces img {
       position:absolute; object-fit:contain;
       cursor:pointer; transition:transform 0.15s;
+      background:#f9f7f4;
     }
-    .modal-pieces img:hover { transform:scale(1.08); z-index:10; }
+    .modal-pieces img:hover { transform:scale(1.15); z-index:10; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15)); }
+
+    .outfit-preview {
+      position:relative; background:#f9f7f4;
+      width:100%; padding-bottom:56.25%;
+      overflow:hidden;
+    }
+    .outfit-preview img {
+      position:absolute; object-fit:contain;
+      background:#f9f7f4;
+    }
     .modal-pieces img:hover { transform:scale(1.05); }
 
     .modal-brands { margin-top:1rem; }
