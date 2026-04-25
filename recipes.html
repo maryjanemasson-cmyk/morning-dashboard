@@ -188,10 +188,42 @@
     .view-value { font-size: 0.88rem; color: #3d3529; line-height: 1.6; white-space: pre-wrap; }
     .view-stars { font-size: 1.2rem; color: #b8860b; letter-spacing: 2px; }
 
+    .btn-print {
+      padding: 0.6rem 1.2rem; border-radius: 8px;
+      border: 1px solid #ebe5dc; background: #fff; color: #6b5d4d;
+      font-size: 0.85rem; font-family: inherit; cursor: pointer;
+    }
+    .btn-print:hover { background: #f5f0e8; }
+
     @media (max-width: 600px) {
       .container { padding: 0 1rem 2rem; }
       .recipe-grid { grid-template-columns: 1fr; }
       .form-row { flex-direction: column; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .banner, .page-header, .toolbar, .recipe-grid, .empty-state,
+      #edit-modal, .form-actions, .btn-print, .btn-save, .btn-cancel, .btn-delete { display: none !important; }
+
+      #view-modal {
+        display: block !important; position: static; background: none;
+        padding: 0; overflow: visible;
+      }
+      #view-modal .modal {
+        box-shadow: none; border: none; padding: 1rem 0; max-width: 100%;
+      }
+      #view-modal .modal-close { display: none; }
+
+      .modal-title { font-size: 24pt !important; margin-bottom: 0.3rem; }
+      .view-label { font-size: 10pt; color: #666; }
+      .view-value { font-size: 12pt; color: #000; }
+      .view-stars { font-size: 14pt; }
+      .rc-tag { border: 1px solid #ccc; background: #f5f5f5; }
+
+      #view-modal img {
+        max-height: 200px; width: auto; border-radius: 4px;
+      }
     }
   </style>
 </head>
@@ -448,6 +480,7 @@
       if (r.notes) html += `<div class="view-field"><div class="view-label">Notes / Improvements</div><div class="view-value">${r.notes}</div></div>`;
 
       html += `<div class="form-actions" style="margin-top:1.5rem">
+        <button class="btn-print" onclick="window.print()">Print Recipe</button>
         <button class="btn-cancel" onclick="closeModal('view-modal')">Close</button>
         <button class="btn-save" onclick="closeModal('view-modal');openEditModal('${id}')">Edit</button>
       </div>`;
