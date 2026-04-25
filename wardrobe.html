@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wardrobe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #faf8f5; color: #3d3529; }
+
+    .banner {
+      height: 80px;
+      background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%);
+      position: relative;
+    }
+    .banner::after { content:''; position:absolute; bottom:0; left:0; right:0; height:30px; background:linear-gradient(to top,#faf8f5,transparent); }
+
+    .container { max-width: 1200px; margin: -10px auto 0; padding: 0 2rem 3rem; position: relative; }
+
+    .page-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;
+    }
+    .page-header h1 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:600; color:#2c2418; }
+    .page-header a { font-size:0.8rem; color:#9c8b76; text-decoration:none; }
+    .page-header a:hover { color:#3d3529; text-decoration:underline; }
+
+    /* Tabs */
+    .tabs { display:flex; gap:0; margin-bottom:1.25rem; border-bottom:2px solid #ebe5dc; }
+    .tab {
+      padding:0.6rem 1.5rem; font-size:0.85rem; font-weight:500; color:#9c8b76;
+      cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; transition:all 0.2s;
+    }
+    .tab:hover { color:#3d3529; }
+    .tab.active { color:#2c2418; border-bottom-color:#2c2418; }
+
+    /* Toolbar */
+    .toolbar { display:flex; gap:0.6rem; margin-bottom:1rem; flex-wrap:wrap; align-items:center; }
+    .search-input {
+      flex:1; min-width:180px; border:1px solid #ebe5dc; border-radius:8px;
+      padding:0.5rem 0.8rem; font-size:0.82rem; font-family:inherit; color:#3d3529; background:#fff; outline:none;
+    }
+    .search-input:focus { border-color:#c9b99a; }
+    .search-input::placeholder { color:#c9bfb0; }
+    .filter-btn {
+      font-size:0.68rem; padding:0.35rem 0.65rem; border-radius:20px;
+      border:1px solid #ebe5dc; background:#fff; color:#6b5d4d; cursor:pointer; font-family:inherit;
+    }
+    .filter-btn:hover { border-color:#c9b99a; }
+    .filter-btn.active { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .item-count { font-size:0.7rem; color:#b8a48e; margin-left:auto; }
+
+    /* Catalogue Grid */
+    .cat-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:0.75rem;
+    }
+    .cat-item {
+      background:#fff; border:1px solid #ebe5dc; border-radius:8px; overflow:hidden;
+      cursor:pointer; transition:border-color 0.2s, box-shadow 0.2s;
+    }
+    .cat-item:hover { border-color:#c9b99a; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+    .cat-item img { width:100%; height:150px; object-fit:cover; display:block; }
+    .cat-item-info { padding:0.4rem 0.6rem; }
+    .cat-item-cat { font-size:0.58rem; color:#9c8b76; text-transform:uppercase; letter-spacing:0.5px; }
+    .cat-item-sub { font-size:0.7rem; color:#6b5d4d; }
+
+    /* View panel */
+    .panel-section { display:none; }
+    .panel-section.active { display:block; }
+
+    /* Outfit Builder */
+    .outfit-area {
+      display:flex; gap:1.5rem; height:calc(100vh - 220px); min-height:500px;
+    }
+    .outfit-sidebar {
+      width:200px; flex-shrink:0; overflow-y:auto; background:#fff;
+      border:1px solid #ebe5dc; border-radius:8px; padding:0.75rem;
+    }
+    .outfit-sidebar-title {
+      font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:1px;
+      color:#9c8b76; margin-bottom:0.5rem;
+    }
+    .outfit-sidebar .filter-btn { display:block; width:100%; text-align:left; margin-bottom:0.3rem; }
+    .outfit-pieces {
+      display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; margin-top:0.5rem;
+    }
+    .outfit-piece {
+      width:100%; aspect-ratio:1; object-fit:cover; border-radius:4px;
+      cursor:grab; border:1px solid #ebe5dc;
+    }
+    .outfit-piece:active { cursor:grabbing; }
+
+    .outfit-canvas-wrap { flex:1; display:flex; flex-direction:column; gap:0.75rem; }
+    .outfit-toolbar {
+      display:flex; gap:0.5rem; align-items:center;
+    }
+    .outfit-toolbar input {
+      flex:1; border:1px solid #ebe5dc; border-radius:6px;
+      padding:0.4rem 0.6rem; font-size:0.8rem; font-family:inherit; outline:none;
+    }
+    .outfit-toolbar input:focus { border-color:#c9b99a; }
+    .outfit-btn {
+      padding:0.4rem 0.8rem; border-radius:6px; border:1px solid #ebe5dc;
+      background:#fff; color:#6b5d4d; font-size:0.75rem; cursor:pointer; font-family:inherit;
+    }
+    .outfit-btn:hover { background:#f5f0e8; }
+    .outfit-btn.primary { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .outfit-btn.primary:hover { background:#2c2418; }
+    .outfit-btn.danger { color:#c2553a; border-color:#fde8e8; }
+    .outfit-btn.danger:hover { background:#fde8e8; }
+
+    .outfit-canvas {
+      flex:1; background:#fff; border:1px solid #ebe5dc; border-radius:10px;
+      position:relative; overflow:hidden; min-height:400px;
+    }
+    .outfit-canvas-empty {
+      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      text-align:center; color:#c9bfb0; font-size:0.85rem;
+    }
+    .canvas-item {
+      position:absolute; cursor:move; user-select:none;
+      border:2px solid transparent; border-radius:6px; transition:border-color 0.15s;
+    }
+    .canvas-item:hover { border-color:#c9b99a; }
+    .canvas-item.selected { border-color:#3d3529; }
+    .canvas-item img { width:100%; height:100%; object-fit:cover; border-radius:4px; pointer-events:none; }
+    .canvas-item .remove-btn {
+      position:absolute; top:-8px; right:-8px; width:20px; height:20px;
+      background:#c2553a; color:#fff; border-radius:50%; font-size:0.65rem;
+      display:none; align-items:center; justify-content:center; cursor:pointer; border:none;
+    }
+    .canvas-item:hover .remove-btn { display:flex; }
+    .canvas-item .resize-handle {
+      position:absolute; bottom:-4px; right:-4px; width:14px; height:14px;
+      background:#3d3529; border-radius:2px; cursor:se-resize;
+      display:none;
+    }
+    .canvas-item:hover .resize-handle { display:block; }
+
+    /* Saved Outfits */
+    .saved-outfits { margin-top:1rem; }
+    .saved-outfit {
+      display:inline-flex; align-items:center; gap:0.4rem;
+      padding:0.35rem 0.7rem; margin:0.25rem; border-radius:20px;
+      border:1px solid #ebe5dc; background:#fff; font-size:0.75rem;
+      color:#6b5d4d; cursor:pointer;
+    }
+    .saved-outfit:hover { border-color:#c9b99a; }
+    .saved-outfit.active { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .saved-outfit .del { color:#c2553a; margin-left:0.3rem; font-size:0.65rem; }
+
+    /* Modal */
+    .modal-overlay {
+      display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+      background:rgba(44,36,24,0.5); z-index:1000; justify-content:center; align-items:center;
+    }
+    .modal-overlay.open { display:flex; }
+    .modal-overlay img {
+      max-width:90vw; max-height:85vh; border-radius:10px; box-shadow:0 8px 40px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <div class="page-header">
+      <h1>My Wardrobe</h1>
+      <a href="index.html">&larr; Dashboard</a>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('catalogue')">Catalogue</div>
+      <div class="tab" onclick="switchTab('outfits')">Outfit Builder</div>
+    </div>
+
+    <!-- CATALOGUE -->
+    <div id="panel-catalogue" class="panel-section active">
+      <div class="toolbar">
+        <input type="text" class="search-input" id="cat-search" placeholder="Search wardrobe..." oninput="renderCatalogue()" />
+        <div id="cat-filters"></div>
+        <span class="item-count" id="cat-count"></span>
+      </div>
+      <div id="cat-grid" class="cat-grid"></div>
+    </div>
+
+    <!-- OUTFIT BUILDER -->
+    <div id="panel-outfits" class="panel-section">
+      <div class="outfit-area">
+        <div class="outfit-sidebar">
+          <div class="outfit-sidebar-title">Pieces</div>
+          <input type="text" class="search-input" id="outfit-search" placeholder="Search..." oninput="renderOutfitSidebar()" style="width:100%;margin-bottom:0.5rem;font-size:0.75rem;padding:0.35rem 0.5rem;" />
+          <div id="outfit-filters"></div>
+          <div id="outfit-pieces" class="outfit-pieces"></div>
+        </div>
+        <div class="outfit-canvas-wrap">
+          <div class="outfit-toolbar">
+            <input type="text" id="outfit-name" placeholder="Outfit name..." />
+            <button class="outfit-btn primary" onclick="saveOutfit()">Save</button>
+            <button class="outfit-btn" onclick="newOutfit()">New</button>
+            <button class="outfit-btn danger" onclick="clearCanvas()">Clear</button>
+          </div>
+          <div class="outfit-canvas" id="outfit-canvas"
+               ondragover="event.preventDefault()"
+               ondrop="dropOnCanvas(event)">
+            <div class="outfit-canvas-empty" id="canvas-empty">
+              Drag pieces here to build an outfit
+            </div>
+          </div>
+          <div class="saved-outfits" id="saved-outfits"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image zoom modal -->
+  <div class="modal-overlay" id="zoom-modal" onclick="this.classList.remove('open')">
+    <img id="zoom-img" src="" alt="" />
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script src="wardrobe-data.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain:"morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL:"https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId:"morning-dashboard-4c62b",
+      storageBucket:"morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId:"289564921391",
+      appId:"1:289564921391:web:4ed9e388d5f63218f780da"
+    });
+    const db = firebase.database();
+
+    const items = window.WARDROBE_ITEMS || [];
+    const IMG_PATH = 'wardrobe-thumbs/';
+    let catFilter = 'All';
+    let outfitFilter = 'All';
+
+    // ── Tabs ──
+    function switchTab(tab) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel-section').forEach(p => p.classList.remove('active'));
+      document.querySelector(`.tab[onclick*="${tab}"]`).classList.add('active');
+      document.getElementById('panel-' + (tab === 'catalogue' ? 'catalogue' : 'outfits')).classList.add('active');
+    }
+
+    // ── Catalogue ──
+    function getCats() { return ['All', ...new Set(items.map(i => i.category))].sort((a,b) => a==='All'?-1:b==='All'?1:a.localeCompare(b)); }
+
+    function renderCatFilters() {
+      const cats = getCats();
+      document.getElementById('cat-filters').innerHTML = cats.map(c =>
+        `<button class="filter-btn ${catFilter===c?'active':''}" onclick="catFilter='${c}';renderCatalogue();renderCatFilters();">${c}</button>`
+      ).join('');
+    }
+
+    function renderCatalogue() {
+      const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
+      let filtered = items.filter(i => {
+        if (catFilter !== 'All' && i.category !== catFilter) return false;
+        if (search) {
+          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
+          if (!h.includes(search)) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('cat-count').textContent = filtered.length + ' items';
+      document.getElementById('cat-grid').innerHTML = filtered.map(i =>
+        `<div class="cat-item" onclick="zoomImage('${i.file}')">
+          <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" />
+          <div class="cat-item-info">
+            <div class="cat-item-cat">${i.category}</div>
+            <div class="cat-item-sub">${i.subcategory}</div>
+          </div>
+        </div>`
+      ).join('');
+    }
+
+    function zoomImage(file) {
+      document.getElementById('zoom-img').src = IMG_PATH + file;
+      document.getElementById('zoom-modal').classList.add('open');
+    }
+
+    renderCatFilters();
+    renderCatalogue();
+
+    // ── Outfit Builder ──
+    let canvasItems = [];
+    let dragItemFile = null;
+    let savedOutfits = {};
+    let currentOutfitId = null;
+    let dragTarget = null;
+    let dragOffset = {x:0, y:0};
+    let resizeTarget = null;
+
+    function renderOutfitFilters() {
+      const cats = getCats();
+      document.getElementById('outfit-filters').innerHTML = cats.map(c =>
+        `<button class="filter-btn ${outfitFilter===c?'active':''}" onclick="outfitFilter='${c}';renderOutfitSidebar();renderOutfitFilters();" style="font-size:0.6rem;padding:0.25rem 0.5rem;">${c}</button>`
+      ).join('');
+    }
+
+    function renderOutfitSidebar() {
+      const search = (document.getElementById('outfit-search')?.value||'').toLowerCase();
+      let filtered = items.filter(i => {
+        if (outfitFilter !== 'All' && i.category !== outfitFilter) return false;
+        if (search) {
+          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
+          if (!h.includes(search)) return false;
+        }
+        return true;
+      });
+      document.getElementById('outfit-pieces').innerHTML = filtered.map(i =>
+        `<img class="outfit-piece" src="${IMG_PATH}${i.file}" alt="${i.subcategory}"
+              draggable="true" ondragstart="dragItemFile='${i.file}'" />`
+      ).join('');
+    }
+
+    function dropOnCanvas(e) {
+      e.preventDefault();
+      if (!dragItemFile) return;
+      const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
+      const x = e.clientX - rect.left - 50;
+      const y = e.clientY - rect.top - 50;
+      canvasItems.push({ file: dragItemFile, x: Math.max(0,x), y: Math.max(0,y), w: 120, h: 150 });
+      dragItemFile = null;
+      renderCanvas();
+    }
+
+    function renderCanvas() {
+      const canvas = document.getElementById('outfit-canvas');
+      const empty = document.getElementById('canvas-empty');
+      empty.style.display = canvasItems.length ? 'none' : '';
+
+      // Remove old items
+      canvas.querySelectorAll('.canvas-item').forEach(el => el.remove());
+
+      canvasItems.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'canvas-item';
+        div.style.cssText = `left:${item.x}px;top:${item.y}px;width:${item.w}px;height:${item.h}px;`;
+        div.innerHTML = `
+          <img src="${IMG_PATH}${item.file}" alt="" />
+          <button class="remove-btn" onclick="removeCanvasItem(${idx})">&times;</button>
+          <div class="resize-handle" onmousedown="startResize(event,${idx})"></div>
+        `;
+        div.onmousedown = function(e) {
+          if (e.target.classList.contains('resize-handle') || e.target.classList.contains('remove-btn')) return;
+          dragTarget = idx;
+          dragOffset = { x: e.clientX - item.x, y: e.clientY - item.y };
+          e.preventDefault();
+        };
+        canvas.appendChild(div);
+      });
+    }
+
+    document.addEventListener('mousemove', e => {
+      if (dragTarget !== null) {
+        const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
+        canvasItems[dragTarget].x = Math.max(0, e.clientX - dragOffset.x);
+        canvasItems[dragTarget].y = Math.max(0, e.clientY - dragOffset.y - rect.top + document.getElementById('outfit-canvas').offsetTop);
+        // Simpler: use relative to canvas
+        canvasItems[dragTarget].x = Math.max(0, e.clientX - rect.left - dragOffset.x + canvasItems[dragTarget].x);
+        canvasItems[dragTarget].x = e.clientX - rect.left - (dragOffset.x - canvasItems[dragTarget].x);
+        // Reset - just use direct position
+        canvasItems[dragTarget].x = Math.max(0, Math.min(e.clientX - rect.left - 60, rect.width - canvasItems[dragTarget].w));
+        canvasItems[dragTarget].y = Math.max(0, Math.min(e.clientY - rect.top - 75, rect.height - canvasItems[dragTarget].h));
+        renderCanvas();
+      }
+      if (resizeTarget !== null) {
+        const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
+        const item = canvasItems[resizeTarget];
+        item.w = Math.max(60, e.clientX - rect.left - item.x);
+        item.h = Math.max(60, e.clientY - rect.top - item.y);
+        renderCanvas();
+      }
+    });
+
+    document.addEventListener('mouseup', () => { dragTarget = null; resizeTarget = null; });
+
+    function startResize(e, idx) { resizeTarget = idx; e.stopPropagation(); e.preventDefault(); }
+    function removeCanvasItem(idx) { canvasItems.splice(idx, 1); renderCanvas(); }
+    function clearCanvas() { canvasItems = []; currentOutfitId = null; document.getElementById('outfit-name').value = ''; renderCanvas(); renderSavedOutfits(); }
+
+    function newOutfit() {
+      canvasItems = [];
+      currentOutfitId = null;
+      document.getElementById('outfit-name').value = '';
+      renderCanvas();
+      renderSavedOutfits();
+    }
+
+    function saveOutfit() {
+      const name = document.getElementById('outfit-name').value.trim() || 'Untitled Outfit';
+      if (canvasItems.length === 0) { alert('Add some pieces first!'); return; }
+      const data = { name, items: JSON.parse(JSON.stringify(canvasItems)), updated: new Date().toISOString() };
+      if (currentOutfitId) {
+        db.ref('outfits/' + currentOutfitId).set(data);
+      } else {
+        const ref = db.ref('outfits').push(data);
+        currentOutfitId = ref.key;
+      }
+    }
+
+    function loadOutfit(id) {
+      const outfit = savedOutfits[id];
+      if (!outfit) return;
+      currentOutfitId = id;
+      canvasItems = JSON.parse(JSON.stringify(outfit.items || []));
+      document.getElementById('outfit-name').value = outfit.name || '';
+      renderCanvas();
+      renderSavedOutfits();
+    }
+
+    function deleteOutfit(id, e) {
+      e.stopPropagation();
+      if (!confirm('Delete this outfit?')) return;
+      db.ref('outfits/' + id).remove();
+      if (currentOutfitId === id) newOutfit();
+    }
+
+    function renderSavedOutfits() {
+      const entries = Object.entries(savedOutfits);
+      if (!entries.length) { document.getElementById('saved-outfits').innerHTML = ''; return; }
+      document.getElementById('saved-outfits').innerHTML = '<div style="font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;margin-bottom:0.4rem;">Saved Outfits</div>' +
+        entries.map(([id, o]) =>
+          `<span class="saved-outfit ${currentOutfitId===id?'active':''}" onclick="loadOutfit('${id}')">
+            ${o.name || 'Untitled'}
+            <span class="del" onclick="deleteOutfit('${id}',event)">&times;</span>
+          </span>`
+        ).join('');
+    }
+
+    // Firebase sync for outfits
+    db.ref('outfits').on('value', snap => {
+      savedOutfits = snap.val() || {};
+      renderSavedOutfits();
+    });
+
+    renderOutfitFilters();
+    renderOutfitSidebar();
+    renderCanvas();
+  </script>
+</body>
+</html>
