@@ -141,6 +141,16 @@
     let outfits = window.OUTFIT_DATA || [];
     let activeFilter = 'All';
 
+    // Check for filtered view from wardrobe
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterSlides = urlParams.get('slides');
+    const fromItem = urlParams.get('from');
+    let slideFilter = null;
+
+    if (filterSlides) {
+      slideFilter = filterSlides.split(',').map(Number);
+    }
+
     // Initialize
     render();
 
@@ -170,7 +180,21 @@
         toolbarHtml += `<button class="filter-btn ${activeFilter===o?'active':''}" onclick="activeFilter='${o}';render();">${o}</button>`;
       });
 
-      const filtered = activeFilter === 'All' ? outfits : outfits.filter(o => o._filterCat === activeFilter);
+      let filtered = activeFilter === 'All' ? outfits : outfits.filter(o => o._filterCat === activeFilter);
+
+      // Apply slide filter from wardrobe link
+      if (slideFilter) {
+        filtered = filtered.filter(o => slideFilter.includes(o.slide));
+      }
+
+      if (slideFilter) {
+        toolbarHtml = `<div style="width:100%;margin-bottom:0.5rem;">
+          <a href="wardrobe.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;">&larr; Back to Wardrobe</a>
+          <span style="font-size:0.78rem;color:#6b5d4d;margin-left:0.5rem;">Showing ${filtered.length} outfit${filtered.length!==1?'s':''} with this item</span>
+          <a href="outfit-gallery.html" style="font-size:0.72rem;color:#c2553a;margin-left:1rem;text-decoration:underline;">Show all outfits</a>
+        </div>` + toolbarHtml;
+      }
+
       toolbarHtml += `<span class="count">${filtered.length} outfits</span>`;
       document.getElementById('toolbar').innerHTML = toolbarHtml;
 

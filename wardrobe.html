@@ -64,6 +64,12 @@
     .cat-item-info { padding:0.4rem 0.6rem; }
     .cat-item-cat { font-size:0.58rem; color:#9c8b76; text-transform:uppercase; letter-spacing:0.5px; }
     .cat-item-sub { font-size:0.7rem; color:#6b5d4d; }
+    .cat-item-outfits {
+      font-size:0.6rem; color:#fff; background:#c9b99a;
+      padding:0.12rem 0.4rem; border-radius:10px; display:inline-block; margin-top:0.2rem;
+      cursor:pointer;
+    }
+    .cat-item-outfits:hover { background:#b8a48e; }
 
     /* View panel */
     .panel-section { display:none; }
@@ -221,6 +227,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="wardrobe-data.js"></script>
+  <script src="wardrobe-outfits.js"></script>
   <script>
     firebase.initializeApp({
       apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
@@ -256,6 +263,8 @@
       ).join('');
     }
 
+    const outfitMap = window.WARDROBE_OUTFIT_MAP || {};
+
     function renderCatalogue() {
       const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
       let filtered = items.filter(i => {
@@ -268,15 +277,28 @@
       });
 
       document.getElementById('cat-count').textContent = filtered.length + ' items';
-      document.getElementById('cat-grid').innerHTML = filtered.map(i =>
-        `<div class="cat-item" onclick="zoomImage('${i.file}')">
+      document.getElementById('cat-grid').innerHTML = filtered.map(i => {
+        const outfitSlides = outfitMap[i.file] || [];
+        const outfitBadge = outfitSlides.length > 0
+          ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>`
+          : '';
+        return `<div class="cat-item" onclick="zoomImage('${i.file}')">
           <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" />
           <div class="cat-item-info">
             <div class="cat-item-cat">${i.category}</div>
             <div class="cat-item-sub">${i.subcategory}</div>
+            ${outfitBadge}
           </div>
-        </div>`
-      ).join('');
+        </div>`;
+      }).join('');
+    }
+
+    function viewOutfitsForItem(file) {
+      const slides = outfitMap[file] || [];
+      if (!slides.length) return;
+      // Navigate to outfit gallery filtered by these slides
+      const param = encodeURIComponent(slides.join(','));
+      window.location.href = `outfit-gallery.html?slides=${param}&from=${encodeURIComponent(file)}`;
     }
 
     function zoomImage(file) {
