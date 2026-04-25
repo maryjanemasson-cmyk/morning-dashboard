@@ -135,14 +135,14 @@
     <img id="zoom-img" src="" alt="" />
   </div>
 
+  <script src="outfit-data.js"></script>
   <script>
     const IMG_PATH = 'outfit-images/';
-    let outfits = [];
+    let outfits = window.OUTFIT_DATA || [];
     let activeFilter = 'All';
 
-    fetch('outfit-images/outfits-manifest.json')
-      .then(r => r.json())
-      .then(data => { outfits = data; render(); });
+    // Initialize
+    render();
 
     function getOccasions() {
       const occ = new Set(outfits.map(o => o.occasion));
