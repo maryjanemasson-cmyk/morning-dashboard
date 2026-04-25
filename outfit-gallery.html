@@ -49,12 +49,36 @@
     .outfit-card-info { padding:0.6rem 0.8rem; }
     .outfit-card-title {
       font-family:'Playfair Display',serif; font-size:0.92rem; font-weight:600; color:#2c2418;
+      cursor:text; padding:0.1rem 0.2rem; border-radius:3px; margin:-0.1rem -0.2rem;
+      transition:background 0.15s;
     }
+    .outfit-card-title:hover { background:#f0ebe4; }
     .outfit-card-meta { font-size:0.68rem; color:#9c8b76; margin-top:0.2rem; }
+    .outfit-card-season {
+      font-size:0.68rem; color:#9c8b76; cursor:text; padding:0.1rem 0.2rem;
+      border-radius:3px; margin:-0.1rem -0.2rem; transition:background 0.15s;
+    }
+    .outfit-card-season:hover { background:#f0ebe4; }
     .outfit-card-tag {
       display:inline-block; font-size:0.58rem; color:#9c8b76; background:#f5f0e8;
       padding:0.12rem 0.4rem; border-radius:10px; margin-top:0.3rem; margin-right:0.2rem;
     }
+    .edit-input {
+      border:1px solid #c9b99a; border-radius:3px; padding:0.15rem 0.3rem;
+      font-size:inherit; font-family:inherit; color:#3d3529;
+      background:#fff; outline:none; width:100%;
+    }
+    /* Drag reorder */
+    .outfit-card.dragging { opacity:0.4; }
+    .outfit-card.drag-over { border-color:#c9b99a; box-shadow:0 0 0 2px #c9b99a; }
+    .outfit-card .drag-handle {
+      position:absolute; top:6px; left:6px; background:rgba(255,255,255,0.85);
+      border-radius:4px; padding:2px 5px; font-size:0.7rem; color:#b8a48e;
+      cursor:grab; z-index:5; opacity:0; transition:opacity 0.15s;
+    }
+    .outfit-card:hover .drag-handle { opacity:1; }
+    .outfit-card .drag-handle:active { cursor:grabbing; }
+    .outfit-preview { position:relative; }
 
     /* Detail modal */
     .modal-overlay {
@@ -135,21 +159,48 @@
     <img id="zoom-img" src="" alt="" />
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="outfit-data.js"></script>
   <script>
+    firebase.initializeApp({
+      apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain:"morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL:"https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId:"morning-dashboard-4c62b",
+      storageBucket:"morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId:"289564921391",
+      appId:"1:289564921391:web:4ed9e388d5f63218f780da"
+    });
+    const db = firebase.database();
+
     const IMG_PATH = 'outfit-images/';
     let outfits = window.OUTFIT_DATA || [];
     let activeFilter = 'All';
+    let _outfitEdits = {};
+    let dragSlide = null;
 
     // Check for filtered view from wardrobe
     const urlParams = new URLSearchParams(window.location.search);
     const filterSlides = urlParams.get('slides');
     const fromItem = urlParams.get('from');
     let slideFilter = null;
+    if (filterSlides) slideFilter = filterSlides.split(',').map(Number);
 
-    if (filterSlides) {
-      slideFilter = filterSlides.split(',').map(Number);
-    }
+    // Load edits from Firebase
+    db.ref('outfitEdits').on('value', snap => {
+      _outfitEdits = snap.val() || {};
+      // Apply edits
+      outfits.forEach(o => {
+        const edit = _outfitEdits[o.slide];
+        if (edit) {
+          if (edit.occasion) o.occasion = edit.occasion;
+          if (edit.season) o.season = edit.season;
+          if (edit.order !== undefined) o._order = edit.order;
+        }
+      });
+      render();
+    });
 
     // Initialize
     render();
@@ -198,6 +249,9 @@
       toolbarHtml += `<span class="count">${filtered.length} outfits</span>`;
       document.getElementById('toolbar').innerHTML = toolbarHtml;
 
+      // Sort by custom order if set
+      filtered.sort((a, b) => (a._order || 0) - (b._order || 0));
+
       let html = '';
       filtered.forEach((o, idx) => {
         let previewImgs = '';
@@ -211,16 +265,23 @@
             `<img src="${IMG_PATH}${f}" alt="" loading="lazy" style="position:static;height:60px;width:auto;" />`
           ).join('');
         }
-        const moreCount = '';
         const brandTags = (o.brands || []).slice(0, 3).map(b =>
           `<span class="outfit-card-tag">${b}</span>`
         ).join('');
 
-        html += `<div class="outfit-card" onclick="showDetail(${o.slide})">
-          <div class="outfit-preview">${previewImgs}</div>
+        html += `<div class="outfit-card" data-slide="${o.slide}" draggable="true"
+                  ondragstart="startDrag(event,${o.slide})"
+                  ondragover="event.preventDefault();this.classList.add('drag-over')"
+                  ondragleave="this.classList.remove('drag-over')"
+                  ondrop="dropCard(event,${o.slide});this.classList.remove('drag-over')">
+          <div class="outfit-preview" onclick="showDetail(${o.slide})">
+            <span class="drag-handle">&#x2630;</span>
+            ${previewImgs}
+          </div>
           <div class="outfit-card-info">
-            <div class="outfit-card-title">${o.occasion}${moreCount ? ' <span style="font-size:0.7rem;color:#b8a48e;font-weight:400;">'+moreCount+' more</span>' : ''}</div>
-            <div class="outfit-card-meta">${o.season} &middot; ${o.images.length} pieces</div>
+            <div class="outfit-card-title" onclick="event.stopPropagation();editOutfitField(${o.slide},'occasion',this)">${o.occasion}</div>
+            <div class="outfit-card-season" onclick="event.stopPropagation();editOutfitField(${o.slide},'season',this)">${o.season}</div>
+            <div class="outfit-card-meta">${o.images.length} pieces</div>
             ${brandTags}
           </div>
         </div>`;
@@ -262,6 +323,70 @@
       document.getElementById('zoom-img').src = IMG_PATH + f;
       document.getElementById('zoom-overlay').classList.add('open');
     }
+
+    // Inline editing
+    function editOutfitField(slide, field, el) {
+      const currentVal = el.textContent;
+      const input = document.createElement('input');
+      input.className = 'edit-input';
+      input.value = currentVal;
+      el.textContent = '';
+      el.appendChild(input);
+      input.focus();
+      input.select();
+
+      function save() {
+        const newVal = input.value.trim();
+        if (newVal && newVal !== currentVal) {
+          const updates = _outfitEdits[slide] || {};
+          updates[field] = newVal;
+          db.ref('outfitEdits/' + slide).set(updates);
+        } else {
+          el.textContent = currentVal;
+        }
+      }
+      input.addEventListener('blur', save);
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
+        if (e.key === 'Escape') { el.textContent = currentVal; }
+      });
+    }
+
+    // Drag to reorder
+    function startDrag(e, slide) {
+      dragSlide = slide;
+      e.dataTransfer.effectAllowed = 'move';
+      setTimeout(() => e.target.classList.add('dragging'), 0);
+    }
+
+    function dropCard(e, targetSlide) {
+      e.preventDefault();
+      if (dragSlide === null || dragSlide === targetSlide) return;
+
+      // Swap order values
+      const srcOutfit = outfits.find(o => o.slide === dragSlide);
+      const tgtOutfit = outfits.find(o => o.slide === targetSlide);
+      if (!srcOutfit || !tgtOutfit) return;
+
+      const srcOrder = srcOutfit._order || outfits.indexOf(srcOutfit);
+      const tgtOrder = tgtOutfit._order || outfits.indexOf(tgtOutfit);
+
+      // Save new orders
+      const srcEdits = _outfitEdits[dragSlide] || {};
+      srcEdits.order = tgtOrder;
+      db.ref('outfitEdits/' + dragSlide).set(srcEdits);
+
+      const tgtEdits = _outfitEdits[targetSlide] || {};
+      tgtEdits.order = srcOrder;
+      db.ref('outfitEdits/' + targetSlide).set(tgtEdits);
+
+      dragSlide = null;
+    }
+
+    document.addEventListener('dragend', () => {
+      document.querySelectorAll('.dragging').forEach(el => el.classList.remove('dragging'));
+      dragSlide = null;
+    });
 
     // Close modals on overlay click
     document.getElementById('detail-modal').addEventListener('click', e => {
