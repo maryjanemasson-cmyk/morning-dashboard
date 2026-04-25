@@ -92,7 +92,7 @@
     }
     .modal-overlay.open { display:flex; }
     .modal {
-      background:#fff; border-radius:12px; width:100%; max-width:700px;
+      background:#fff; border-radius:12px; width:100%; max-width:900px;
       padding:2rem; position:relative; box-shadow:0 8px 40px rgba(0,0,0,0.15);
     }
     .modal-close {
@@ -113,10 +113,67 @@
     }
     .modal-pieces img {
       position:absolute; object-fit:contain;
-      cursor:pointer; transition:transform 0.15s;
-      background:#f9f7f4;
+      cursor:pointer; background:#f9f7f4;
     }
-    .modal-pieces img:hover { transform:scale(1.15); z-index:10; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15)); }
+    .modal-pieces:not(.editing) img:hover { transform:scale(1.15); z-index:10; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.15)); }
+
+    /* Edit mode */
+    .modal-pieces.editing img {
+      cursor:move; border:2px solid transparent; border-radius:4px;
+    }
+    .modal-pieces.editing img:hover { border-color:#006FED; }
+    .modal-pieces.editing img.selected { border-color:#C23B22; }
+    .edit-delete-btn {
+      position:absolute; top:-8px; right:-8px; width:20px; height:20px;
+      background:#C23B22; color:#fff; border-radius:50%; font-size:0.6rem;
+      display:none; align-items:center; justify-content:center;
+      cursor:pointer; border:none; z-index:20;
+    }
+    .modal-pieces.editing .piece-wrap:hover .edit-delete-btn { display:flex; }
+    .piece-wrap { position:absolute; }
+    .edit-resize {
+      position:absolute; bottom:-4px; right:-4px; width:12px; height:12px;
+      background:#013E7D; border-radius:2px; cursor:se-resize;
+      display:none; z-index:20;
+    }
+    .modal-pieces.editing .piece-wrap:hover .edit-resize { display:block; }
+
+    .edit-toolbar {
+      display:flex; gap:0.5rem; margin-bottom:0.75rem; align-items:center;
+    }
+    .edit-btn {
+      padding:0.4rem 0.8rem; border-radius:6px; font-size:0.75rem;
+      font-family:inherit; cursor:pointer;
+      border:1px solid #ebe5dc; background:#fff; color:#6b5d4d;
+    }
+    .edit-btn:hover { background:#f5f0e8; }
+    .edit-btn.primary { background:#013E7D; color:#fff; border-color:#013E7D; }
+    .edit-btn.primary:hover { background:#006FED; }
+    .edit-btn.danger { color:#C23B22; border-color:#fde8e8; }
+    .edit-btn.danger:hover { background:#fde8e8; }
+    .edit-btn.active { background:#006FED; color:#fff; border-color:#006FED; }
+
+    .add-piece-panel {
+      display:none; position:absolute; top:0; right:-220px; width:200px;
+      background:#fff; border:1px solid #ebe5dc; border-radius:8px;
+      padding:0.5rem; max-height:100%; overflow-y:auto; z-index:30;
+    }
+    .add-piece-panel.open { display:block; }
+    .add-piece-panel input {
+      width:100%; border:1px solid #ebe5dc; border-radius:4px;
+      padding:0.3rem 0.5rem; font-size:0.72rem; font-family:inherit;
+      margin-bottom:0.5rem; outline:none;
+    }
+    .add-piece-panel input:focus { border-color:#006FED; }
+    .add-piece-grid {
+      display:grid; grid-template-columns:1fr 1fr; gap:0.3rem;
+    }
+    .add-piece-grid img {
+      width:100%; aspect-ratio:3/4; object-fit:contain;
+      background:#f9f7f4; border:1px solid #ebe5dc; border-radius:3px;
+      cursor:pointer;
+    }
+    .add-piece-grid img:hover { border-color:#006FED; }
 
     .outfit-preview {
       position:relative; background:#f9f7f4;
@@ -176,6 +233,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="outfit-data.js"></script>
+  <script src="wardrobe-data.js?v=5"></script>
   <script>
     firebase.initializeApp({
       apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
@@ -215,6 +273,7 @@
           if (edit.occasion) o.occasion = edit.occasion;
           if (edit.season) o.season = edit.season;
           if (edit.order !== undefined) o._order = edit.order;
+          if (edit.layout) o.layout = edit.layout;
         }
       });
       render();
@@ -334,37 +393,200 @@
       document.getElementById('outfit-grid').innerHTML = html || '<p style="color:#b8a48e;">No outfits match this filter.</p>';
     }
 
+    let _editingOutfit = null;
+    let _editMode = false;
+    let _editLayout = [];
+    let _dragPiece = null;
+    let _dragOffset = {x:0, y:0};
+    let _resizePiece = null;
+    let _addPanelOpen = false;
+
     function showDetail(slideNum) {
       const o = outfits.find(x => x.slide === slideNum);
       if (!o) return;
+      _editingOutfit = slideNum;
+      _editMode = false;
+      _editLayout = JSON.parse(JSON.stringify(o.layout || []));
+      _addPanelOpen = false;
+      renderDetail(o);
+    }
 
-      let html = `<div class="modal-title">${o.occasion}</div>`;
-      html += `<div class="modal-meta">${o.season} &middot; ${o.images.length} pieces</div>`;
-      html += '<div class="modal-pieces">';
-      if (o.layout && o.layout.length) {
-        o.layout.forEach(item => {
+    function renderDetail(o) {
+      if (!o) o = outfits.find(x => x.slide === _editingOutfit);
+      if (!o) return;
+
+      let html = `<div class="modal-title">${o._filterCat || o.occasion}</div>`;
+      html += `<div class="modal-meta">${o.season} &middot; ${_editLayout.length} pieces</div>`;
+
+      // Edit toolbar
+      html += '<div class="edit-toolbar">';
+      if (!_editMode) {
+        html += `<button class="edit-btn" onclick="toggleEdit()">Edit Layout</button>`;
+      } else {
+        html += `<button class="edit-btn active" onclick="toggleEdit()">Editing...</button>`;
+        html += `<button class="edit-btn" onclick="toggleAddPanel()">+ Add Piece</button>`;
+        html += `<button class="edit-btn primary" onclick="saveLayout()">Save</button>`;
+        html += `<button class="edit-btn danger" onclick="cancelEdit()">Cancel</button>`;
+      }
+      html += '</div>';
+
+      // Pieces container
+      html += `<div style="position:relative;"><div class="modal-pieces${_editMode ? ' editing' : ''}" id="pieces-container">`;
+
+      _editLayout.forEach((item, idx) => {
+        if (_editMode) {
+          html += `<div class="piece-wrap" data-idx="${idx}" style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
+            onmousedown="startDragPiece(event,${idx})">
+            <img src="${IMG_PATH}${item.file}" alt="" style="width:100%;height:100%;position:static;" />
+            <button class="edit-delete-btn" onclick="event.stopPropagation();deletePiece(${idx})">×</button>
+            <div class="edit-resize" onmousedown="event.stopPropagation();startResizePiece(event,${idx})"></div>
+          </div>`;
+        } else {
           html += `<img src="${IMG_PATH}${item.file}" alt=""
             style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
             onclick="zoomImg('${item.file}')" />`;
-        });
-      } else {
-        o.images.forEach(f => {
-          html += `<img src="${IMG_PATH}${f}" alt="" style="position:static;height:140px;width:auto;" onclick="zoomImg('${f}')" />`;
-        });
+        }
+      });
+      html += '</div>';
+
+      // Add piece panel
+      if (_editMode) {
+        html += `<div class="add-piece-panel${_addPanelOpen ? ' open' : ''}" id="add-panel">
+          <input type="text" id="add-search" placeholder="Search wardrobe..." oninput="renderAddPanel()" />
+          <div class="add-piece-grid" id="add-grid"></div>
+        </div>`;
       }
       html += '</div>';
-      if (o.brands && o.brands.length) {
-        html += '<div class="modal-brands">';
-        o.brands.forEach(b => html += `<span class="modal-brand-tag">${b}</span>`);
-        html += '</div>';
-      }
 
       document.getElementById('detail-content').innerHTML = html;
       document.getElementById('detail-modal').classList.add('open');
+
+      if (_editMode && _addPanelOpen) renderAddPanel();
     }
 
-    function closeDetail() { document.getElementById('detail-modal').classList.remove('open'); }
+    function toggleEdit() {
+      _editMode = !_editMode;
+      if (_editMode) {
+        const o = outfits.find(x => x.slide === _editingOutfit);
+        _editLayout = JSON.parse(JSON.stringify(o.layout || []));
+      }
+      renderDetail();
+    }
+
+    function cancelEdit() {
+      _editMode = false;
+      _addPanelOpen = false;
+      const o = outfits.find(x => x.slide === _editingOutfit);
+      _editLayout = JSON.parse(JSON.stringify(o.layout || []));
+      renderDetail();
+    }
+
+    function saveLayout() {
+      const updates = _outfitEdits[_editingOutfit] || {};
+      updates.layout = _editLayout;
+      db.ref('outfitEdits/' + _editingOutfit).set(updates);
+      // Also update local outfit
+      const o = outfits.find(x => x.slide === _editingOutfit);
+      if (o) o.layout = JSON.parse(JSON.stringify(_editLayout));
+      _editMode = false;
+      _addPanelOpen = false;
+      renderDetail();
+      render(); // refresh cards
+    }
+
+    function deletePiece(idx) {
+      _editLayout.splice(idx, 1);
+      renderDetail();
+    }
+
+    function toggleAddPanel() {
+      _addPanelOpen = !_addPanelOpen;
+      renderDetail();
+    }
+
+    function renderAddPanel() {
+      const search = (document.getElementById('add-search')?.value || '').toLowerCase();
+      const wardrobeItems = window.WARDROBE_ITEMS || [];
+      let filtered = wardrobeItems;
+      if (search) {
+        filtered = wardrobeItems.filter(i => {
+          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
+          return h.includes(search);
+        });
+      }
+      const grid = document.getElementById('add-grid');
+      if (!grid) return;
+      grid.innerHTML = filtered.slice(0, 30).map(i =>
+        `<img src="wardrobe-thumbs/${i.file}" alt="${i.subcategory}" title="${i.subcategory}"
+          onclick="addPieceFromWardrobe('wardrobe-thumbs/${i.file}')" />`
+      ).join('');
+    }
+
+    function addPieceFromWardrobe(filePath) {
+      _editLayout.push({
+        file: filePath.replace('wardrobe-thumbs/', '../wardrobe-thumbs/'),
+        left: 40, top: 30, width: 15, height: 25
+      });
+      renderDetail();
+    }
+
+    // Drag pieces in edit mode
+    function startDragPiece(e, idx) {
+      if (!_editMode) return;
+      _dragPiece = idx;
+      const container = document.getElementById('pieces-container');
+      const rect = container.getBoundingClientRect();
+      _dragOffset = {
+        x: e.clientX - (rect.width * _editLayout[idx].left / 100),
+        y: e.clientY - (rect.height * _editLayout[idx].top / 100)
+      };
+      e.preventDefault();
+    }
+
+    function startResizePiece(e, idx) {
+      if (!_editMode) return;
+      _resizePiece = idx;
+      e.preventDefault();
+    }
+
+    document.addEventListener('mousemove', e => {
+      const container = document.getElementById('pieces-container');
+      if (!container) return;
+      const rect = container.getBoundingClientRect();
+
+      if (_dragPiece !== null && _editMode) {
+        const left = Math.max(0, Math.min(90, ((e.clientX - _dragOffset.x) / rect.width) * 100));
+        const top = Math.max(0, Math.min(90, ((e.clientY - _dragOffset.y) / rect.height) * 100));
+        _editLayout[_dragPiece].left = Math.round(left * 10) / 10;
+        _editLayout[_dragPiece].top = Math.round(top * 10) / 10;
+        const wrap = container.querySelector(`[data-idx="${_dragPiece}"]`);
+        if (wrap) { wrap.style.left = left + '%'; wrap.style.top = top + '%'; }
+      }
+
+      if (_resizePiece !== null && _editMode) {
+        const item = _editLayout[_resizePiece];
+        const w = Math.max(5, ((e.clientX - rect.left) / rect.width * 100) - item.left);
+        const h = Math.max(5, ((e.clientY - rect.top) / rect.height * 100) - item.top);
+        item.width = Math.round(Math.min(60, w) * 10) / 10;
+        item.height = Math.round(Math.min(70, h) * 10) / 10;
+        const wrap = container.querySelector(`[data-idx="${_resizePiece}"]`);
+        if (wrap) { wrap.style.width = w + '%'; wrap.style.height = h + '%'; }
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      _dragPiece = null;
+      _resizePiece = null;
+    });
+
+    function closeDetail() {
+      document.getElementById('detail-modal').classList.remove('open');
+      _editMode = false;
+      _addPanelOpen = false;
+    }
+
     function zoomImg(f) {
+      if (_editMode) return;
       document.getElementById('zoom-img').src = IMG_PATH + f;
       document.getElementById('zoom-overlay').classList.add('open');
     }
