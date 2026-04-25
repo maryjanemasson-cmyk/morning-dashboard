@@ -55,10 +55,15 @@
     .outfit-card-title:hover { background:#f0ebe4; }
     .outfit-card-meta { font-size:0.68rem; color:#9c8b76; margin-top:0.2rem; }
     .outfit-card-season {
-      font-size:0.68rem; color:#9c8b76; cursor:text; padding:0.1rem 0.2rem;
+      font-size:0.68rem; color:#9c8b76; cursor:pointer; padding:0.1rem 0.2rem;
       border-radius:3px; margin:-0.1rem -0.2rem; transition:background 0.15s;
     }
     .outfit-card-season:hover { background:#f0ebe4; }
+    .season-select {
+      border:1px solid #c9b99a; border-radius:3px; padding:0.15rem 0.3rem;
+      font-size:0.68rem; font-family:inherit; color:#3d3529;
+      background:#fff; outline:none; cursor:pointer;
+    }
     .outfit-card-tag {
       display:inline-block; font-size:0.58rem; color:#9c8b76; background:#f5f0e8;
       padding:0.12rem 0.4rem; border-radius:10px; margin-top:0.3rem; margin-right:0.2rem;
@@ -311,7 +316,7 @@
           </div>
           <div class="outfit-card-info">
             <div class="outfit-card-title" onclick="event.stopPropagation();editOutfitField(${o.slide},'occasion',this)">${o.occasion}</div>
-            <div class="outfit-card-season" onclick="event.stopPropagation();editOutfitField(${o.slide},'season',this)">${o.season}</div>
+            <div class="outfit-card-season" onclick="event.stopPropagation();showSeasonPicker(${o.slide},this)">${o.season}</div>
             <div class="outfit-card-meta">${o.images.length} pieces</div>
             ${brandTags}
           </div>
@@ -364,6 +369,38 @@
     function deleteOutfitCard(slide) {
       if (!confirm('Delete this outfit?')) return;
       db.ref('deletedOutfits/' + slide).set(true);
+    }
+
+    // Season picker
+    const SEASONS = ['Spring', 'Summer', 'Fall', 'Winter'];
+
+    function showSeasonPicker(slide, el) {
+      const currentVal = el.textContent;
+      const select = document.createElement('select');
+      select.className = 'season-select';
+      SEASONS.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s;
+        opt.textContent = s;
+        if (s === currentVal) opt.selected = true;
+        select.appendChild(opt);
+      });
+      el.textContent = '';
+      el.appendChild(select);
+      select.focus();
+
+      function save() {
+        const newVal = select.value;
+        if (newVal !== currentVal) {
+          const updates = _outfitEdits[slide] || {};
+          updates.season = newVal;
+          db.ref('outfitEdits/' + slide).set(updates);
+        } else {
+          el.textContent = currentVal;
+        }
+      }
+      select.addEventListener('change', save);
+      select.addEventListener('blur', () => { el.textContent = select.value || currentVal; });
     }
 
     // Inline editing
