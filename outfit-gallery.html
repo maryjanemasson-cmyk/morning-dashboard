@@ -78,6 +78,13 @@
     }
     .outfit-card:hover .drag-handle { opacity:1; }
     .outfit-card .drag-handle:active { cursor:grabbing; }
+    .outfit-card .delete-card-btn {
+      position:absolute; top:6px; right:6px; background:rgba(255,255,255,0.9);
+      border:none; border-radius:4px; padding:2px 6px; font-size:0.7rem;
+      color:#c2553a; cursor:pointer; z-index:5; opacity:0; transition:opacity 0.15s;
+    }
+    .outfit-card:hover .delete-card-btn { opacity:1; }
+    .outfit-card .delete-card-btn:hover { background:#fde8e8; }
     .outfit-preview { position:relative; }
 
     /* Detail modal */
@@ -136,7 +143,7 @@
     <div class="page-header">
       <div>
         <h1>Outfit Gallery</h1>
-        <div class="subtitle">Cool Spring &middot; 50-70&deg;F</div>
+        <div class="subtitle">312 outfits &middot; 2 collections</div>
       </div>
       <div>
         <a href="wardrobe.html">Wardrobe</a> &nbsp;|&nbsp;
@@ -179,6 +186,7 @@
     let activeFilter = 'All';
     let _outfitEdits = {};
     let dragSlide = null;
+    let activeSeason = 'All';
 
     // Check for filtered view from wardrobe
     const urlParams = new URLSearchParams(window.location.search);
@@ -226,12 +234,31 @@
 
     function render() {
       const occasions = getOccasions();
-      let toolbarHtml = '';
+      // Season filters
+      const seasons = ['All', ...new Set(outfits.filter(o => !_deletedOutfits[o.slide]).map(o => o.season))].sort((a,b) => a==='All'?-1:b==='All'?1:a.localeCompare(b));
+      let toolbarHtml = '<div style="width:100%;margin-bottom:0.5rem;display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center;">';
+      toolbarHtml += '<span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#b8a48e;margin-right:0.3rem;">Season:</span>';
+      seasons.forEach(s => {
+        toolbarHtml += `<button class="filter-btn ${activeSeason===s?'active':''}" onclick="activeSeason='${s}';render();">${s}</button>`;
+      });
+      toolbarHtml += '</div>';
+
+      // Occasion filters
+      toolbarHtml += '<div style="display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center;">';
+      toolbarHtml += '<span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#b8a48e;margin-right:0.3rem;">Occasion:</span>';
       occasions.forEach(o => {
         toolbarHtml += `<button class="filter-btn ${activeFilter===o?'active':''}" onclick="activeFilter='${o}';render();">${o}</button>`;
       });
+      toolbarHtml += '</div>';
 
-      let filtered = activeFilter === 'All' ? outfits : outfits.filter(o => o._filterCat === activeFilter);
+      // Filter out deleted outfits
+      let filtered = outfits.filter(o => !_deletedOutfits[o.slide]);
+
+      // Apply category filter
+      if (activeFilter !== 'All') filtered = filtered.filter(o => o._filterCat === activeFilter);
+
+      // Apply season filter
+      if (activeSeason !== 'All') filtered = filtered.filter(o => o.season === activeSeason);
 
       // Apply slide filter from wardrobe link
       if (slideFilter) {
@@ -276,6 +303,7 @@
                   ondrop="dropCard(event,${o.slide});this.classList.remove('drag-over')">
           <div class="outfit-preview" onclick="showDetail(${o.slide})">
             <span class="drag-handle">&#x2630;</span>
+            <button class="delete-card-btn" onclick="event.stopPropagation();deleteOutfitCard(${o.slide})">&times; Delete</button>
             ${previewImgs}
           </div>
           <div class="outfit-card-info">
@@ -322,6 +350,18 @@
     function zoomImg(f) {
       document.getElementById('zoom-img').src = IMG_PATH + f;
       document.getElementById('zoom-overlay').classList.add('open');
+    }
+
+    // Delete outfit
+    let _deletedOutfits = {};
+    db.ref('deletedOutfits').on('value', snap => {
+      _deletedOutfits = snap.val() || {};
+      render();
+    });
+
+    function deleteOutfitCard(slide) {
+      if (!confirm('Delete this outfit?')) return;
+      db.ref('deletedOutfits/' + slide).set(true);
     }
 
     // Inline editing
