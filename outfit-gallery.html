@@ -129,7 +129,14 @@
       display:none; align-items:center; justify-content:center;
       cursor:pointer; border:none; z-index:20;
     }
+    .edit-crop-btn {
+      position:absolute; top:-8px; left:-8px; width:20px; height:20px;
+      background:#006FED; color:#fff; border-radius:50%; font-size:0.55rem;
+      display:none; align-items:center; justify-content:center;
+      cursor:pointer; border:none; z-index:20;
+    }
     .modal-pieces.editing .piece-wrap:hover .edit-delete-btn { display:flex; }
+    .modal-pieces.editing .piece-wrap:hover .edit-crop-btn { display:flex; }
     .piece-wrap { position:absolute; }
     .edit-resize {
       position:absolute; bottom:-4px; right:-4px; width:12px; height:12px;
@@ -228,6 +235,24 @@
 
   <div class="zoom-overlay" id="zoom-overlay" onclick="this.classList.remove('open')">
     <img id="zoom-img" src="" alt="" />
+  </div>
+
+  <!-- Crop Modal -->
+  <div class="modal-overlay" id="crop-modal">
+    <div class="modal" style="max-width:700px;">
+      <button class="modal-close" onclick="closeCrop()">&times;</button>
+      <div class="modal-title" style="font-size:1.1rem;">Crop Image</div>
+      <p style="font-size:0.75rem;color:#8A8A9A;margin-bottom:0.75rem;">Click and drag to select the area you want to keep.</p>
+      <div id="crop-container" style="position:relative;display:inline-block;cursor:crosshair;user-select:none;">
+        <canvas id="crop-canvas" style="max-width:100%;border-radius:6px;border:1px solid #ebe5dc;"></canvas>
+        <div id="crop-box" style="position:absolute;border:2px dashed #006FED;background:rgba(0,111,237,0.1);display:none;pointer-events:none;"></div>
+      </div>
+      <div class="edit-toolbar" style="margin-top:0.75rem;">
+        <button class="edit-btn" onclick="resetCrop()">Reset</button>
+        <button class="edit-btn primary" onclick="applyCrop()">Apply Crop</button>
+        <button class="edit-btn" onclick="closeCrop()">Cancel</button>
+      </div>
+    </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -435,14 +460,17 @@
 
       _editLayout.forEach((item, idx) => {
         if (_editMode) {
+          const imgSrc = item.file.startsWith('data:') ? item.file : IMG_PATH + item.file;
           html += `<div class="piece-wrap" data-idx="${idx}" style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
             onmousedown="startDragPiece(event,${idx})">
-            <img src="${IMG_PATH}${item.file}" alt="" style="width:100%;height:100%;position:static;" />
+            <img src="${imgSrc}" alt="" style="width:100%;height:100%;position:static;" />
+            <button class="edit-crop-btn" onclick="event.stopPropagation();openCropTool(${idx})">&#x2702;</button>
             <button class="edit-delete-btn" onclick="event.stopPropagation();deletePiece(${idx})">×</button>
             <div class="edit-resize" onmousedown="event.stopPropagation();startResizePiece(event,${idx})"></div>
           </div>`;
         } else {
-          html += `<img src="${IMG_PATH}${item.file}" alt=""
+          const viewSrc = item.file.startsWith('data:') ? item.file : IMG_PATH + item.file;
+          html += `<img src="${viewSrc}" alt=""
             style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
             onclick="zoomImg('${item.file}')" />`;
         }
@@ -796,6 +824,122 @@
     document.getElementById('detail-modal').addEventListener('click', e => {
       if (e.target === document.getElementById('detail-modal')) closeDetail();
     });
+
+    // ── Crop Tool ──
+    let _cropImg = null;
+    let _cropFile = null;
+    let _cropIdx = null;
+    let _cropStart = null;
+    let _cropEnd = null;
+    let _cropping = false;
+    let _cropScale = 1;
+
+    function openCropTool(idx) {
+      const item = _editLayout[idx];
+      if (!item) return;
+      _cropIdx = idx;
+      _cropFile = item.file;
+
+      const imgEl = new window.Image();
+      imgEl.crossOrigin = 'anonymous';
+      imgEl.onload = function() {
+        _cropImg = imgEl;
+        const canvas = document.getElementById('crop-canvas');
+        // Scale to fit modal (max 600px wide)
+        _cropScale = Math.min(600 / imgEl.width, 500 / imgEl.height, 1);
+        canvas.width = imgEl.width * _cropScale;
+        canvas.height = imgEl.height * _cropScale;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgEl, 0, 0, canvas.width, canvas.height);
+        _cropStart = null;
+        _cropEnd = null;
+        document.getElementById('crop-box').style.display = 'none';
+        document.getElementById('crop-modal').classList.add('open');
+      };
+      imgEl.src = IMG_PATH + _cropFile;
+    }
+
+    // Mouse events for crop selection
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('crop-container');
+
+      container.addEventListener('mousedown', e => {
+        if (!document.getElementById('crop-modal').classList.contains('open')) return;
+        const rect = document.getElementById('crop-canvas').getBoundingClientRect();
+        _cropStart = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+        _cropEnd = { ..._cropStart };
+        _cropping = true;
+        e.preventDefault();
+      });
+
+      document.addEventListener('mousemove', e => {
+        if (!_cropping) return;
+        const rect = document.getElementById('crop-canvas').getBoundingClientRect();
+        _cropEnd = {
+          x: Math.max(0, Math.min(e.clientX - rect.left, rect.width)),
+          y: Math.max(0, Math.min(e.clientY - rect.top, rect.height))
+        };
+        const box = document.getElementById('crop-box');
+        const x = Math.min(_cropStart.x, _cropEnd.x);
+        const y = Math.min(_cropStart.y, _cropEnd.y);
+        const w = Math.abs(_cropEnd.x - _cropStart.x);
+        const h = Math.abs(_cropEnd.y - _cropStart.y);
+        box.style.display = 'block';
+        box.style.left = x + 'px';
+        box.style.top = y + 'px';
+        box.style.width = w + 'px';
+        box.style.height = h + 'px';
+      });
+
+      document.addEventListener('mouseup', () => { _cropping = false; });
+    });
+
+    function resetCrop() {
+      if (!_cropImg) return;
+      const canvas = document.getElementById('crop-canvas');
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(_cropImg, 0, 0, canvas.width, canvas.height);
+      document.getElementById('crop-box').style.display = 'none';
+      _cropStart = null;
+      _cropEnd = null;
+    }
+
+    function applyCrop() {
+      if (!_cropStart || !_cropEnd || !_cropImg) return;
+
+      // Calculate crop in original image coordinates
+      const x = Math.min(_cropStart.x, _cropEnd.x) / _cropScale;
+      const y = Math.min(_cropStart.y, _cropEnd.y) / _cropScale;
+      const w = Math.abs(_cropEnd.x - _cropStart.x) / _cropScale;
+      const h = Math.abs(_cropEnd.y - _cropStart.y) / _cropScale;
+
+      if (w < 10 || h < 10) { alert('Selection too small'); return; }
+
+      // Crop on canvas
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = w;
+      tempCanvas.height = h;
+      const ctx = tempCanvas.getContext('2d');
+      ctx.drawImage(_cropImg, x, y, w, h, 0, 0, w, h);
+
+      // Convert to data URL and update the image in the layout
+      const dataUrl = tempCanvas.toDataURL('image/png');
+
+      // Update the layout item to use the cropped image
+      if (_cropIdx !== null && _editLayout[_cropIdx]) {
+        _editLayout[_cropIdx].file = dataUrl;
+        _editLayout[_cropIdx]._cropped = true;
+      }
+
+      closeCrop();
+      renderDetail();
+    }
+
+    function closeCrop() {
+      document.getElementById('crop-modal').classList.remove('open');
+      _cropImg = null;
+      _cropping = false;
+    }
 
     // Initial render (after all functions defined)
     render();
