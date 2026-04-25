@@ -39,11 +39,12 @@
     .outfit-card:hover { border-color:#c9b99a; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
 
     .outfit-preview {
-      display:flex; flex-wrap:wrap; gap:2px; padding:8px; background:#f9f7f4;
-      min-height:120px; align-items:flex-start; justify-content:center;
+      position:relative; background:#f9f7f4;
+      width:100%; padding-bottom:56.25%;
+      overflow:hidden;
     }
     .outfit-preview img {
-      height:100px; width:auto; object-fit:contain; border-radius:3px;
+      position:absolute; object-fit:contain;
     }
     .outfit-card-info { padding:0.6rem 0.8rem; }
     .outfit-card-title {
@@ -79,16 +80,15 @@
     .modal-meta { font-size:0.8rem; color:#9c8b76; margin-bottom:1rem; }
 
     .modal-pieces {
-      display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
-      background:#f9f7f4; border-radius:8px; padding:1rem;
+      position:relative; background:#f9f7f4; border-radius:8px;
+      width:100%; padding-bottom:56.25%; /* 16:9 aspect ratio like slides */
+      overflow:hidden;
     }
     .modal-pieces img {
-      height:180px; width:auto; object-fit:contain; border-radius:4px;
-      cursor:pointer; border:1px solid #ebe5dc; transition:transform 0.2s;
+      position:absolute; object-fit:contain;
+      cursor:pointer; transition:transform 0.15s;
     }
-    .modal-pieces img.accessory {
-      height:80px;
-    }
+    .modal-pieces img:hover { transform:scale(1.08); z-index:10; }
     .modal-pieces img:hover { transform:scale(1.05); }
 
     .modal-brands { margin-top:1rem; }
@@ -176,10 +176,18 @@
 
       let html = '';
       filtered.forEach((o, idx) => {
-        const previewImgs = o.images.slice(0, 6).map(f =>
-          `<img src="${IMG_PATH}${f}" alt="" loading="lazy" />`
-        ).join('');
-        const moreCount = o.images.length > 6 ? `+${o.images.length - 6}` : '';
+        let previewImgs = '';
+        if (o.layout && o.layout.length) {
+          previewImgs = o.layout.map(item =>
+            `<img src="${IMG_PATH}${item.file}" alt="" loading="lazy"
+              style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;" />`
+          ).join('');
+        } else {
+          previewImgs = o.images.slice(0, 6).map(f =>
+            `<img src="${IMG_PATH}${f}" alt="" loading="lazy" style="position:static;height:60px;width:auto;" />`
+          ).join('');
+        }
+        const moreCount = '';
         const brandTags = (o.brands || []).slice(0, 3).map(b =>
           `<span class="outfit-card-tag">${b}</span>`
         ).join('');
@@ -203,11 +211,17 @@
       let html = `<div class="modal-title">${o.occasion}</div>`;
       html += `<div class="modal-meta">${o.season} &middot; ${o.images.length} pieces</div>`;
       html += '<div class="modal-pieces">';
-      (o.sized_images || o.images.map(f=>({file:f,accessory:false}))).forEach(si => {
-        const f = si.file || si;
-        const cls = si.accessory ? ' class="accessory"' : '';
-        html += `<img src="${IMG_PATH}${f}" alt=""${cls} onclick="zoomImg('${f}')" />`;
-      });
+      if (o.layout && o.layout.length) {
+        o.layout.forEach(item => {
+          html += `<img src="${IMG_PATH}${item.file}" alt=""
+            style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
+            onclick="zoomImg('${item.file}')" />`;
+        });
+      } else {
+        o.images.forEach(f => {
+          html += `<img src="${IMG_PATH}${f}" alt="" style="position:static;height:140px;width:auto;" onclick="zoomImg('${f}')" />`;
+        });
+      }
       html += '</div>';
       if (o.brands && o.brands.length) {
         html += '<div class="modal-brands">';
