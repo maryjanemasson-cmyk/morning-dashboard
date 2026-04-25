@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outfit Gallery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',-apple-system,sans-serif; background:#faf8f5; color:#3d3529; }
+
+    .banner { height:80px; background:linear-gradient(135deg,#e8ddd3,#d4c5b5 30%,#c9b99a 60%,#bfae8e); position:relative; }
+    .banner::after { content:''; position:absolute; bottom:0; left:0; right:0; height:30px; background:linear-gradient(to top,#faf8f5,transparent); }
+
+    .container { max-width:1200px; margin:-10px auto 0; padding:0 2rem 3rem; position:relative; }
+    .page-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; }
+    .page-header h1 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:600; color:#2c2418; }
+    .page-header .subtitle { font-size:0.85rem; color:#9c8b76; }
+    .page-header a { font-size:0.8rem; color:#9c8b76; text-decoration:none; }
+    .page-header a:hover { color:#3d3529; text-decoration:underline; }
+
+    .toolbar { display:flex; gap:0.6rem; margin-bottom:1.25rem; flex-wrap:wrap; align-items:center; }
+    .filter-btn {
+      font-size:0.72rem; padding:0.4rem 0.75rem; border-radius:20px;
+      border:1px solid #ebe5dc; background:#fff; color:#6b5d4d; cursor:pointer; font-family:inherit;
+    }
+    .filter-btn:hover { border-color:#c9b99a; }
+    .filter-btn.active { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .count { font-size:0.72rem; color:#b8a48e; margin-left:auto; }
+
+    /* Outfit cards */
+    .outfit-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem;
+    }
+    .outfit-card {
+      background:#fff; border:1px solid #ebe5dc; border-radius:10px;
+      overflow:hidden; cursor:pointer; transition:border-color 0.2s,box-shadow 0.2s;
+    }
+    .outfit-card:hover { border-color:#c9b99a; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
+
+    .outfit-preview {
+      display:flex; flex-wrap:wrap; gap:2px; padding:8px; background:#f9f7f4;
+      min-height:120px; align-items:flex-start; justify-content:center;
+    }
+    .outfit-preview img {
+      height:80px; width:auto; object-fit:contain; border-radius:3px;
+    }
+    .outfit-card-info { padding:0.6rem 0.8rem; }
+    .outfit-card-title {
+      font-family:'Playfair Display',serif; font-size:0.92rem; font-weight:600; color:#2c2418;
+    }
+    .outfit-card-meta { font-size:0.68rem; color:#9c8b76; margin-top:0.2rem; }
+    .outfit-card-tag {
+      display:inline-block; font-size:0.58rem; color:#9c8b76; background:#f5f0e8;
+      padding:0.12rem 0.4rem; border-radius:10px; margin-top:0.3rem; margin-right:0.2rem;
+    }
+
+    /* Detail modal */
+    .modal-overlay {
+      display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+      background:rgba(44,36,24,0.5); z-index:1000;
+      justify-content:center; align-items:flex-start; padding:2rem 1rem;
+      overflow-y:auto;
+    }
+    .modal-overlay.open { display:flex; }
+    .modal {
+      background:#fff; border-radius:12px; width:100%; max-width:700px;
+      padding:2rem; position:relative; box-shadow:0 8px 40px rgba(0,0,0,0.15);
+    }
+    .modal-close {
+      position:absolute; top:1rem; right:1.25rem; font-size:1.3rem;
+      color:#b8a48e; cursor:pointer; background:none; border:none;
+    }
+    .modal-close:hover { color:#3d3529; }
+    .modal-title {
+      font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:600; color:#2c2418;
+      margin-bottom:0.3rem;
+    }
+    .modal-meta { font-size:0.8rem; color:#9c8b76; margin-bottom:1rem; }
+
+    .modal-pieces {
+      display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+      background:#f9f7f4; border-radius:8px; padding:1rem;
+    }
+    .modal-pieces img {
+      height:140px; width:auto; object-fit:contain; border-radius:4px;
+      cursor:pointer; border:1px solid #ebe5dc; transition:transform 0.2s;
+    }
+    .modal-pieces img:hover { transform:scale(1.05); }
+
+    .modal-brands { margin-top:1rem; }
+    .modal-brand-tag {
+      display:inline-block; font-size:0.7rem; color:#6b5d4d; background:#f5f0e8;
+      padding:0.2rem 0.5rem; border-radius:10px; margin:0.15rem;
+    }
+
+    /* Zoom */
+    .zoom-overlay {
+      display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.8); z-index:2000; justify-content:center; align-items:center;
+    }
+    .zoom-overlay.open { display:flex; }
+    .zoom-overlay img { max-width:90vw; max-height:90vh; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>Outfit Gallery</h1>
+        <div class="subtitle">Cool Spring &middot; 50-70&deg;F</div>
+      </div>
+      <div>
+        <a href="wardrobe.html">Wardrobe</a> &nbsp;|&nbsp;
+        <a href="index.html">Dashboard</a>
+      </div>
+    </div>
+
+    <div class="toolbar" id="toolbar"></div>
+    <div class="outfit-grid" id="outfit-grid"></div>
+  </div>
+
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeDetail()">&times;</button>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+
+  <div class="zoom-overlay" id="zoom-overlay" onclick="this.classList.remove('open')">
+    <img id="zoom-img" src="" alt="" />
+  </div>
+
+  <script>
+    const IMG_PATH = 'outfit-images/';
+    let outfits = [];
+    let activeFilter = 'All';
+
+    fetch('outfit-images/outfits-manifest.json')
+      .then(r => r.json())
+      .then(data => { outfits = data; render(); });
+
+    function getOccasions() {
+      const occ = new Set(outfits.map(o => o.occasion));
+      // Normalize
+      const normalized = {};
+      outfits.forEach(o => {
+        let cat = o.occasion;
+        if (cat.includes('Office') || cat.includes('Business')) cat = 'Office / Business';
+        else if (cat.includes('Day/Dinner') || cat.includes('Day/Night') || cat.includes('Day / Night') || cat.includes('Day / Dinner')) cat = 'Day / Night';
+        else if (cat.includes('Casual') || cat.includes('Cool Day')) cat = 'Casual';
+        else if (cat === 'Night') cat = 'Night Out';
+        else if (cat.includes('Paris')) cat = 'Travel - Paris';
+        else if (cat.includes('San Diego')) cat = 'Travel - San Diego';
+        o._filterCat = cat;
+        if (!normalized[cat]) normalized[cat] = 0;
+        normalized[cat]++;
+      });
+      return ['All', ...Object.keys(normalized).sort()];
+    }
+
+    function render() {
+      const occasions = getOccasions();
+      let toolbarHtml = '';
+      occasions.forEach(o => {
+        toolbarHtml += `<button class="filter-btn ${activeFilter===o?'active':''}" onclick="activeFilter='${o}';render();">${o}</button>`;
+      });
+
+      const filtered = activeFilter === 'All' ? outfits : outfits.filter(o => o._filterCat === activeFilter);
+      toolbarHtml += `<span class="count">${filtered.length} outfits</span>`;
+      document.getElementById('toolbar').innerHTML = toolbarHtml;
+
+      let html = '';
+      filtered.forEach((o, idx) => {
+        const previewImgs = o.images.slice(0, 6).map(f =>
+          `<img src="${IMG_PATH}${f}" alt="" loading="lazy" />`
+        ).join('');
+        const moreCount = o.images.length > 6 ? `+${o.images.length - 6}` : '';
+        const brandTags = (o.brands || []).slice(0, 3).map(b =>
+          `<span class="outfit-card-tag">${b}</span>`
+        ).join('');
+
+        html += `<div class="outfit-card" onclick="showDetail(${o.slide})">
+          <div class="outfit-preview">${previewImgs}</div>
+          <div class="outfit-card-info">
+            <div class="outfit-card-title">${o.occasion}${moreCount ? ' <span style="font-size:0.7rem;color:#b8a48e;font-weight:400;">'+moreCount+' more</span>' : ''}</div>
+            <div class="outfit-card-meta">${o.season} &middot; ${o.images.length} pieces</div>
+            ${brandTags}
+          </div>
+        </div>`;
+      });
+      document.getElementById('outfit-grid').innerHTML = html || '<p style="color:#b8a48e;">No outfits match this filter.</p>';
+    }
+
+    function showDetail(slideNum) {
+      const o = outfits.find(x => x.slide === slideNum);
+      if (!o) return;
+
+      let html = `<div class="modal-title">${o.occasion}</div>`;
+      html += `<div class="modal-meta">${o.season} &middot; ${o.images.length} pieces</div>`;
+      html += '<div class="modal-pieces">';
+      o.images.forEach(f => {
+        html += `<img src="${IMG_PATH}${f}" alt="" onclick="zoomImg('${f}')" />`;
+      });
+      html += '</div>';
+      if (o.brands && o.brands.length) {
+        html += '<div class="modal-brands">';
+        o.brands.forEach(b => html += `<span class="modal-brand-tag">${b}</span>`);
+        html += '</div>';
+      }
+
+      document.getElementById('detail-content').innerHTML = html;
+      document.getElementById('detail-modal').classList.add('open');
+    }
+
+    function closeDetail() { document.getElementById('detail-modal').classList.remove('open'); }
+    function zoomImg(f) {
+      document.getElementById('zoom-img').src = IMG_PATH + f;
+      document.getElementById('zoom-overlay').classList.add('open');
+    }
+
+    // Close modals on overlay click
+    document.getElementById('detail-modal').addEventListener('click', e => {
+      if (e.target === document.getElementById('detail-modal')) closeDetail();
+    });
+  </script>
+</body>
+</html>
