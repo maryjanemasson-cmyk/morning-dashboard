@@ -92,7 +92,7 @@
     }
     .modal-overlay.open { display:flex; }
     .modal {
-      background:#fff; border-radius:12px; width:100%; max-width:900px;
+      background:#fff; border-radius:12px; width:100%; max-width:1100px;
       padding:2rem; position:relative; box-shadow:0 8px 40px rgba(0,0,0,0.15);
     }
     .modal-close {
@@ -108,7 +108,7 @@
 
     .modal-pieces {
       position:relative; background:#f9f7f4; border-radius:8px;
-      width:100%; padding-bottom:56.25%;
+      width:100%; padding-bottom:65%;
       overflow:hidden;
     }
     .modal-pieces img {
@@ -643,18 +643,22 @@
       el.appendChild(select);
       select.focus();
 
+      let saved = false;
       function save() {
+        if (saved) return;
+        saved = true;
         const newVal = select.value;
-        if (newVal !== currentVal) {
-          const updates = _outfitEdits[slide] || {};
-          updates.occasion = newVal;
-          db.ref('outfitEdits/' + slide).set(updates);
-        } else {
-          el.textContent = currentVal;
-        }
+        const updates = _outfitEdits[slide] || {};
+        updates.occasion = newVal;
+        _outfitEdits[slide] = updates;
+        db.ref('outfitEdits/' + slide).set(updates);
+        // Update local outfit
+        const outfit = outfits.find(o => o.slide === slide);
+        if (outfit) { outfit.occasion = newVal; outfit._filterCat = newVal; }
+        render();
       }
       select.addEventListener('change', save);
-      select.addEventListener('blur', () => { el.textContent = select.value || currentVal; });
+      select.addEventListener('blur', () => { if (!saved) save(); });
     }
 
     // Season picker
@@ -675,18 +679,23 @@
       el.appendChild(select);
       select.focus();
 
+      let saved = false;
       function save() {
+        if (saved) return;
+        saved = true;
         const newVal = select.value;
-        if (newVal !== currentVal) {
-          const updates = _outfitEdits[slide] || {};
-          updates.season = newVal;
-          db.ref('outfitEdits/' + slide).set(updates);
-        } else {
-          el.textContent = currentVal;
+        const updates = _outfitEdits[slide] || {};
+        updates.season = newVal;
+        _outfitEdits[slide] = updates;
+        db.ref('outfitEdits/' + slide).set(updates);
+        // Update local outfit
+        const outfit = outfits.find(o => o.slide === slide);
+        if (outfit) outfit.season = newVal;
+        render();
         }
       }
       select.addEventListener('change', save);
-      select.addEventListener('blur', () => { el.textContent = select.value || currentVal; });
+      select.addEventListener('blur', () => { if (!saved) save(); });
     }
 
     // Inline editing
