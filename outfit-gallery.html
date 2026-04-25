@@ -538,16 +538,28 @@
       }
 
       if (search) {
-        _addCatFilter = null; // clear category filter when typing
+        _addCatFilter = null;
         const terms = search.split(/\s+/);
+
+        // Category/type keywords that should match category or subcategory only
+        const typeWords = ['pants','tops','shoes','bags','dresses','skirts','shorts',
+          'heels','flats','boots','sneakers','sandals','blazers','jackets','coats',
+          'jewelry','necklaces','bracelets','earrings','knitwear','cardigans',
+          'pullovers','shirts','accessories','casual','jeans'];
+
         filtered = wardrobeItems.filter(i => {
-          const haystack = [
-            i.category,
-            i.subcategory,
-            ...(i.labels || []),
-            ...(i.colors || []),
-          ].join(' ').toLowerCase();
-          return terms.every(t => haystack.includes(t));
+          const catText = [i.category, i.subcategory].join(' ').toLowerCase();
+          const allText = [i.category, i.subcategory, ...(i.labels || []), ...(i.colors || [])].join(' ').toLowerCase();
+
+          return terms.every(t => {
+            if (typeWords.includes(t)) {
+              // Type words must match category or subcategory
+              return catText.includes(t);
+            } else {
+              // Other words (colors, brands) can match anything
+              return allText.includes(t);
+            }
+          });
         });
       }
       const grid = document.getElementById('add-grid');
