@@ -148,7 +148,7 @@
     <div class="page-header">
       <div>
         <h1>Outfit Gallery</h1>
-        <div class="subtitle">312 outfits &middot; 2 collections</div>
+        <div class="subtitle">4 Collections &middot; Spring, Summer, Fall, Winter</div>
       </div>
       <div>
         <a href="wardrobe.html">Wardrobe</a> &nbsp;|&nbsp;
@@ -242,12 +242,15 @@
 
     function render() {
       const occasions = getOccasions();
-      // Season filters
-      const seasons = ['All', ...new Set(outfits.filter(o => !_deletedOutfits[o.slide]).map(o => o.season))].sort((a,b) => a==='All'?-1:b==='All'?1:a.localeCompare(b));
-      let toolbarHtml = '<div style="width:100%;margin-bottom:0.5rem;display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center;">';
-      toolbarHtml += '<span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#b8a48e;margin-right:0.3rem;">Season:</span>';
-      seasons.forEach(s => {
-        toolbarHtml += `<button class="filter-btn ${activeSeason===s?'active':''}" onclick="activeSeason='${s}';render();">${s}</button>`;
+      // Collection (season) filters
+      let toolbarHtml = '<div style="width:100%;margin-bottom:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">';
+      toolbarHtml += '<span style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#2c2418;margin-right:0.3rem;">Collections:</span>';
+      const collectionSeasons = ['All', ...SEASONS];
+      collectionSeasons.forEach(s => {
+        const count = s === 'All'
+          ? outfits.filter(o => !_deletedOutfits[o.slide]).length
+          : outfits.filter(o => !_deletedOutfits[o.slide] && o.season === s).length;
+        toolbarHtml += `<button class="filter-btn ${activeSeason===s?'active':''}" onclick="activeSeason='${s}';render();">${s} <span style="opacity:0.6;font-size:0.6rem;">${count}</span></button>`;
       });
       toolbarHtml += '</div>';
 
