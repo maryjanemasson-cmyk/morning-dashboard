@@ -692,7 +692,6 @@
         const outfit = outfits.find(o => o.slide === slide);
         if (outfit) outfit.season = newVal;
         render();
-        }
       }
       select.addEventListener('change', save);
       select.addEventListener('blur', () => { if (!saved) save(); });
