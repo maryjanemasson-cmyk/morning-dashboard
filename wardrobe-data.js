@@ -4,28 +4,44 @@ window.WARDROBE_ITEMS = [
     "file": "s01_004.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s01_005_png",
     "file": "s01_005.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s01_021_png",
     "file": "s01_021.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel",
+      "orange"
+    ]
   },
   {
     "id": "s01_008_png",
     "file": "s01_008.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s01_020_png",
@@ -34,6 +50,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Accesories",
     "labels": [
       "ACNE Studios        oversize cashmere"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -41,77 +61,114 @@ window.WARDROBE_ITEMS = [
     "file": "s01_002.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_014_png",
     "file": "s01_014.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_012_png",
     "file": "s01_012.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_006_jpg",
     "file": "s01_006.jpg",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "burgundy"
+    ]
   },
   {
     "id": "s01_016_png",
     "file": "s01_016.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
+    ]
   },
   {
     "id": "s01_024_png",
     "file": "s01_024.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki"
+    ]
   },
   {
     "id": "s01_007_png",
     "file": "s01_007.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow"
+    ]
   },
   {
     "id": "s01_001_png",
     "file": "s01_001.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "blue",
+      "teal"
+    ]
   },
   {
     "id": "s01_022_png",
     "file": "s01_022.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s01_011_png",
     "file": "s01_011.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s01_009_png",
     "file": "s01_009.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s01_023_png",
@@ -120,6 +177,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Accesories",
     "labels": [
       "ACNE Studios        oversize cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -127,140 +187,209 @@ window.WARDROBE_ITEMS = [
     "file": "s01_015.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_019_png",
     "file": "s01_019.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s01_013_jpg",
     "file": "s01_013.jpg",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_017_png",
     "file": "s01_017.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_010_jpg",
     "file": "s01_010.jpg",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s01_018_png",
     "file": "s01_018.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s01_003_jpg",
     "file": "s01_003.jpg",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s04_001_png",
     "file": "s04_001.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s04_005_jpg",
     "file": "s04_005.jpg",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s04_007_png",
     "file": "s04_007.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "burgundy"
+    ]
   },
   {
     "id": "s04_013_png",
     "file": "s04_013.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s04_011_png",
     "file": "s04_011.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s04_006_png",
     "file": "s04_006.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s04_004_jpg",
     "file": "s04_004.jpg",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s04_002_jpg",
     "file": "s04_002.jpg",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s04_009_png",
     "file": "s04_009.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "camel",
+      "brown"
+    ]
   },
   {
     "id": "s04_008_png",
     "file": "s04_008.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s04_010_png",
     "file": "s04_010.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s04_003_jpg",
     "file": "s04_003.jpg",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s04_012_png",
     "file": "s04_012.png",
     "category": "Bags",
     "subcategory": "Large Bags",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s02_010_png",
@@ -269,6 +398,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -278,6 +412,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -287,6 +424,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -296,6 +438,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -305,6 +450,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -314,6 +463,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -323,6 +475,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -332,6 +490,13 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
     ]
   },
   {
@@ -341,6 +506,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -350,6 +518,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "red"
     ]
   },
   {
@@ -359,6 +530,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -368,6 +543,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -377,6 +556,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -386,6 +570,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -395,6 +583,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -404,6 +598,14 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
     ]
   },
   {
@@ -413,6 +615,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -422,6 +630,14 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
     ]
   },
   {
@@ -431,6 +647,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "blue",
+      "teal"
     ]
   },
   {
@@ -440,6 +660,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "blue"
     ]
   },
   {
@@ -449,6 +672,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -458,6 +684,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -467,6 +696,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -476,6 +710,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -485,6 +722,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -494,6 +734,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -503,6 +746,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -512,6 +758,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -521,6 +770,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -530,6 +782,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "red"
     ]
   },
   {
@@ -539,6 +794,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Small Bags",
     "labels": [
       "Clutches / Small Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -548,6 +806,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -557,6 +818,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Medium Bags",
     "labels": [
       "Medium Bags"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -564,35 +828,58 @@ window.WARDROBE_ITEMS = [
     "file": "s39_008.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s39_030_png",
     "file": "s39_030.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s39_010_png",
     "file": "s39_010.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s39_013_png",
     "file": "s39_013.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s39_015_png",
     "file": "s39_015.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s39_027_png",
@@ -601,6 +888,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual",
     "labels": [
       "Rhone"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -608,14 +898,24 @@ window.WARDROBE_ITEMS = [
     "file": "s39_012.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s39_020_png",
     "file": "s39_020.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s39_026_png",
@@ -624,6 +924,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual",
     "labels": [
       "Rhone"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -631,126 +934,194 @@ window.WARDROBE_ITEMS = [
     "file": "s39_011.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s39_009_png",
     "file": "s39_009.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s39_019_png",
     "file": "s39_019.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s39_025_png",
     "file": "s39_025.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s39_018_png",
     "file": "s39_018.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s39_023_jpg",
     "file": "s39_023.jpg",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "burgundy"
+    ]
   },
   {
     "id": "s39_004_png",
     "file": "s39_004.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "pink",
+      "red"
+    ]
   },
   {
     "id": "s39_005_png",
     "file": "s39_005.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s39_003_png",
     "file": "s39_003.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s39_006_png",
     "file": "s39_006.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "blue",
+      "navy"
+    ]
   },
   {
     "id": "s39_016_png",
     "file": "s39_016.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "blue",
+      "navy"
+    ]
   },
   {
     "id": "s39_017_png",
     "file": "s39_017.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "blue",
+      "navy"
+    ]
   },
   {
     "id": "s39_007_png",
     "file": "s39_007.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s39_033_png",
     "file": "s39_033.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s39_032_png",
     "file": "s39_032.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "purple"
+    ]
   },
   {
     "id": "s39_031_png",
     "file": "s39_031.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s39_002_png",
     "file": "s39_002.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s39_014_png",
     "file": "s39_014.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s39_029_png",
@@ -759,6 +1130,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual",
     "labels": [
       "Alo yoga cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -766,7 +1140,10 @@ window.WARDROBE_ITEMS = [
     "file": "s39_024.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s39_028_png",
@@ -775,6 +1152,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual",
     "labels": [
       "Alo yoga cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -782,21 +1162,30 @@ window.WARDROBE_ITEMS = [
     "file": "s39_022.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s39_021_png",
     "file": "s39_021.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s39_001_png",
     "file": "s39_001.png",
     "category": "Casual",
     "subcategory": "Casual",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "black"
+    ]
   },
   {
     "id": "s35_005_png",
@@ -805,6 +1194,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Tory Burch linen"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -814,6 +1208,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -823,6 +1220,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Tory Burch linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -832,6 +1232,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Tory Burch Cotton"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -841,6 +1244,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Zimmerman cotton"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -850,6 +1256,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Toteme jersey"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -859,6 +1269,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Jenni Kayne linen"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -868,6 +1281,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "GOOP    silk"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -877,6 +1294,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "ME+EM  silk"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -886,6 +1307,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Faithfull linen"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "orange"
     ]
   },
   {
@@ -895,6 +1321,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "SNDYs cotton"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -904,6 +1335,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -913,6 +1349,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Toteme linen"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -922,6 +1361,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Tory Burch Cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -931,6 +1373,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Summer Dresses",
     "labels": [
       "Kate Spade    silk"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -940,6 +1385,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -949,6 +1397,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -959,6 +1410,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Tory Burch silk",
       "ME+EM  silk"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -969,6 +1425,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Tory Burch silk",
       "Toteme silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -979,6 +1438,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Tory Burch silk",
       "Tory Burch cotton"
+    ],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
     ]
   },
   {
@@ -988,6 +1452,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -997,6 +1464,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1006,6 +1479,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "khaki",
+      "gold"
     ]
   },
   {
@@ -1016,6 +1493,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Tory Burch silk",
       "ME+EM  silk"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -1023,7 +1504,10 @@ window.WARDROBE_ITEMS = [
     "file": "s37_012.png",
     "category": "Dresses",
     "subcategory": "All Season Dresses",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "burgundy"
+    ]
   },
   {
     "id": "s37_008_png",
@@ -1032,6 +1516,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Olivia Rubin silk"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1041,6 +1531,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "H&M silk"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1050,6 +1546,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "orange"
     ]
   },
   {
@@ -1059,6 +1560,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "khaki"
     ]
   },
   {
@@ -1068,6 +1572,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "ME+EM cotton"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -1077,6 +1585,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "pink",
+      "magenta"
     ]
   },
   {
@@ -1086,6 +1598,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1095,6 +1610,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -1105,6 +1624,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Tory Burch silk",
       "ME+EM  silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1115,6 +1637,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Tory Burch silk",
       "Ralph Lauren  knit"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1124,6 +1649,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "ME+EM silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1133,6 +1661,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "ME+EM silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1142,6 +1673,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1151,6 +1685,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Claue Peirot silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1160,6 +1697,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "All Season Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1167,7 +1707,10 @@ window.WARDROBE_ITEMS = [
     "file": "s37_001.jpg",
     "category": "Dresses",
     "subcategory": "All Season Dresses",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s38_004_jpg",
@@ -1176,6 +1719,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "Mango          brown knit"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1185,6 +1731,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "WAT the Brand  brown knit"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1194,6 +1746,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "Tory Burch wool"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1203,6 +1761,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "Mango          brown knit"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -1212,6 +1774,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "Tory Burch black velvet"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -1221,6 +1789,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "WAT the Brand  black knit"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1230,6 +1801,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1239,6 +1813,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "LouLou studio silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1248,6 +1825,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "Toteme silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1257,6 +1837,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dark Dresses",
     "labels": [
       "GANT       navy velvet"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1267,6 +1850,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "LemLem linen",
       "H&M knit"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1277,6 +1863,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "LemLem linen",
       "Tory Burch cotton"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1287,6 +1879,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "LemLem linen",
       "LemLem viscose"
+    ],
+    "colors": [
+      "blue"
     ]
   },
   {
@@ -1296,6 +1891,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Beach Dresses",
     "labels": [
       "LemLem linen"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1306,6 +1904,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "LemLem linen",
       "Tory Burch cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1315,6 +1916,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Beach Dresses",
     "labels": [
       "LemLem linen"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1324,6 +1928,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jumpsuits",
     "labels": [
       "ME+EM cotton"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -1333,6 +1941,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jumpsuits",
     "labels": [
       "ME+EM denim"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1340,70 +1951,109 @@ window.WARDROBE_ITEMS = [
     "file": "s45_004.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s45_009_png",
     "file": "s45_009.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s45_002_png",
     "file": "s45_002.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s45_007_png",
     "file": "s45_007.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s45_006_png",
     "file": "s45_006.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s45_008_png",
     "file": "s45_008.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s45_005_png",
     "file": "s45_005.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "olive"
+    ]
   },
   {
     "id": "s45_010_png",
     "file": "s45_010.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s45_001_png",
     "file": "s45_001.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s45_003_png",
     "file": "s45_003.png",
     "category": "Inspiration",
     "subcategory": "Potential inspiration",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "black"
+    ]
   },
   {
     "id": "s12_012_jpg",
@@ -1412,6 +2062,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "COS Linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1421,6 +2074,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "COS Linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1430,6 +2086,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "GAP Linen"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -1439,6 +2100,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Aritzia Oversize Linen"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -1448,6 +2114,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Pinko Linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1457,6 +2126,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Maje Boucle"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -1466,6 +2140,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Pinko viscose"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1475,6 +2152,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "MaxMara"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -1484,6 +2166,14 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "MaxMara"
+    ],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
     ]
   },
   {
@@ -1493,6 +2183,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Maje linen blend - oversize"
+    ],
+    "colors": [
+      "blue",
+      "teal"
     ]
   },
   {
@@ -1503,6 +2197,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Banana Republic wool"
+    ],
+    "colors": [
+      "blue",
+      "teal"
     ]
   },
   {
@@ -1512,6 +2210,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "ME+EM viscose"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1522,6 +2223,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Massimo Dutti Navy Wool"
+    ],
+    "colors": [
+      "blue",
+      "black",
+      "navy"
     ]
   },
   {
@@ -1532,6 +2238,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Anine Bing cordoroy"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -1542,6 +2252,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Maje Navy viscose"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1552,6 +2265,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Anine Bing wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1561,6 +2277,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Theory Linen Blend"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -1570,6 +2291,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Zara tweed"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -1579,6 +2305,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Mango viscose"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1588,6 +2317,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Sandro viscose oversize"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1598,6 +2330,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Sandro viscose oversize"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1607,6 +2342,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "ME+EM viscose"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1617,6 +2355,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "ME+EM viscose"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1627,6 +2368,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Frankie Shop viscose oversize"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1637,6 +2381,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Tory Burch canvas"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1647,6 +2394,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Anine Bing Black Wool"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1656,6 +2406,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Smythe viscose"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1666,6 +2419,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Simkhai crepe"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1676,6 +2432,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Tory Burch Crepe"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1685,6 +2444,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Blazers",
     "labels": [
       "Massimo Dutti light wool"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1695,6 +2457,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "MaxMara",
       "Mango velvet"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1704,6 +2469,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1713,6 +2481,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1723,6 +2494,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Axeae Suede",
       "Burberry Canvas"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1733,6 +2510,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Axeae Suede",
       "Anine Bing Wool"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1742,6 +2525,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "red"
     ]
   },
   {
@@ -1751,6 +2537,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -1761,6 +2552,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Axeae Suede",
       "Anine Bing Wool"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1770,6 +2567,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1779,6 +2582,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1790,6 +2599,12 @@ window.WARDROBE_ITEMS = [
       "Axeae Suede",
       "Tory Burch",
       "Waterproof"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1799,6 +2614,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "khaki",
+      "yellow"
     ]
   },
   {
@@ -1809,6 +2628,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Axeae Suede",
       "WAT the brand Canvas"
+    ],
+    "colors": [
+      "khaki",
+      "olive",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -1818,6 +2643,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Light Jackets",
     "labels": [
       "Axeae Suede"
+    ],
+    "colors": [
+      "blue",
+      "black",
+      "navy"
     ]
   },
   {
@@ -1829,6 +2659,9 @@ window.WARDROBE_ITEMS = [
       "Axeae Suede",
       "Tory Burch",
       "Waterproof"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1840,6 +2673,11 @@ window.WARDROBE_ITEMS = [
       "Axeae Suede",
       "Tory Burch",
       "Waterproof"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -1850,6 +2688,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Axeae Suede",
       "WAT the Brand Wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -1860,6 +2701,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Axeae Suede",
       "Anine Bing Faux Leather"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1872,6 +2716,12 @@ window.WARDROBE_ITEMS = [
       "Toteme Wool",
       "Reversible; Very Warm",
       "All Saints Leather/Shearling"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -1883,6 +2733,11 @@ window.WARDROBE_ITEMS = [
       "Axeae Suede",
       "Toteme Wool",
       "Reversible; Very Warm"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -1895,6 +2750,14 @@ window.WARDROBE_ITEMS = [
       "Toteme Wool",
       "Reversible; Very Warm",
       "Anine Bing Fluffy"
+    ],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
     ]
   },
   {
@@ -1907,6 +2770,10 @@ window.WARDROBE_ITEMS = [
       "Toteme Wool",
       "Reversible; Very Warm",
       "Anine Bing Waterproof"
+    ],
+    "colors": [
+      "khaki",
+      "olive"
     ]
   },
   {
@@ -1918,6 +2785,9 @@ window.WARDROBE_ITEMS = [
       "Axeae Suede",
       "Toteme Wool",
       "Reversible; Very Warm"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1930,6 +2800,9 @@ window.WARDROBE_ITEMS = [
       "Toteme Wool",
       "Reversible; Very Warm",
       "All Saints Leather/Shearling"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1943,6 +2816,9 @@ window.WARDROBE_ITEMS = [
       "Reversible; Very Warm",
       "Boss",
       "Puffer"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -1955,6 +2831,9 @@ window.WARDROBE_ITEMS = [
       "Toteme Wool",
       "Reversible; Very Warm",
       "WAT the brand thick puffer"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -1964,6 +2843,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Theory light wool"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -1973,6 +2857,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Tory Burch light wool"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -1980,7 +2869,12 @@ window.WARDROBE_ITEMS = [
     "file": "s16_016.png",
     "category": "Jackets & Coats",
     "subcategory": "Long Coats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s16_013_png",
@@ -1989,6 +2883,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "H&M    light wool"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -1998,6 +2895,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "H&M    light wool"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -2007,6 +2907,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Tory Burch thick wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2016,6 +2919,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "&OtherStories canvas"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -2025,6 +2934,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Toteme canvas"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -2034,6 +2949,13 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "MaxMara wool"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
     ]
   },
   {
@@ -2043,6 +2965,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Vince leather"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -2052,6 +2979,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Banana Republic viscose"
+    ],
+    "colors": [
+      "khaki",
+      "olive"
     ]
   },
   {
@@ -2061,6 +2992,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Tory Burch waterproof"
+    ],
+    "colors": [
+      "green",
+      "forest green"
     ]
   },
   {
@@ -2068,7 +3003,10 @@ window.WARDROBE_ITEMS = [
     "file": "s16_015.png",
     "category": "Jackets & Coats",
     "subcategory": "Long Coats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s16_009_png",
@@ -2077,6 +3015,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Anine Bing thick wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2086,6 +3027,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Toteme \u2013 light wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2095,6 +3039,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Coats",
     "labels": [
       "Burberry wool"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -2102,266 +3049,415 @@ window.WARDROBE_ITEMS = [
     "file": "s42_008.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s42_005_png",
     "file": "s42_005.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s42_010_png",
     "file": "s42_010.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s42_007_png",
     "file": "s42_007.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s42_003_png",
     "file": "s42_003.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s42_012_png",
     "file": "s42_012.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s42_011_png",
     "file": "s42_011.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s42_004_png",
     "file": "s42_004.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s42_013_png",
     "file": "s42_013.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s42_002_png",
     "file": "s42_002.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s42_001_png",
     "file": "s42_001.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s42_009_png",
     "file": "s42_009.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s42_006_png",
     "file": "s42_006.png",
     "category": "Jewelry",
     "subcategory": "Necklaces",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s43_002_png",
     "file": "s43_002.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s43_006_png",
     "file": "s43_006.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s43_007_png",
     "file": "s43_007.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s43_010_png",
     "file": "s43_010.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s43_009_png",
     "file": "s43_009.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s43_003_png",
     "file": "s43_003.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s43_011_png",
     "file": "s43_011.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s43_001_png",
     "file": "s43_001.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "pink",
+      "red"
+    ]
   },
   {
     "id": "s43_008_png",
     "file": "s43_008.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "olive",
+      "leather",
+      "brown"
+    ]
   },
   {
     "id": "s43_012_png",
     "file": "s43_012.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s43_005_png",
     "file": "s43_005.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s43_004_png",
     "file": "s43_004.png",
     "category": "Jewelry",
     "subcategory": "Bracelets",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s44_013_png",
     "file": "s44_013.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s44_009_png",
     "file": "s44_009.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
+    ]
   },
   {
     "id": "s44_008_png",
     "file": "s44_008.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s44_005_png",
     "file": "s44_005.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s44_002_png",
     "file": "s44_002.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
+    ]
   },
   {
     "id": "s44_006_png",
     "file": "s44_006.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s44_004_png",
     "file": "s44_004.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
+    ]
   },
   {
     "id": "s44_012_png",
     "file": "s44_012.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
+    ]
   },
   {
     "id": "s44_007_png",
     "file": "s44_007.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s44_003_png",
     "file": "s44_003.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "green",
+      "sage"
+    ]
   },
   {
     "id": "s44_010_png",
     "file": "s44_010.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s44_011_png",
     "file": "s44_011.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s44_001_png",
     "file": "s44_001.png",
     "category": "Jewelry",
     "subcategory": "Earrings",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s23_003_png",
@@ -2370,6 +3466,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Varley oversize wool"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -2377,7 +3476,11 @@ window.WARDROBE_ITEMS = [
     "file": "s23_001.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s23_014_png",
@@ -2386,6 +3489,13 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
     ]
   },
   {
@@ -2395,6 +3505,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "H&M  cotton"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -2402,7 +3518,14 @@ window.WARDROBE_ITEMS = [
     "file": "s23_020.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
+    ]
   },
   {
     "id": "s23_013_png",
@@ -2411,6 +3534,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2418,7 +3544,10 @@ window.WARDROBE_ITEMS = [
     "file": "s23_018.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s23_016_png",
@@ -2427,6 +3556,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Vince Cotton"
+    ],
+    "colors": [
+      "red"
     ]
   },
   {
@@ -2434,14 +3566,24 @@ window.WARDROBE_ITEMS = [
     "file": "s23_017.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "camel",
+      "brown"
+    ]
   },
   {
     "id": "s23_019_png",
     "file": "s23_019.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s23_009_jpg",
@@ -2450,6 +3592,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Comme des Garcons wool"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -2460,6 +3608,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "GOOP",
       "navy cotton wool blend"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2469,6 +3621,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -2479,6 +3634,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Attire",
       "navy thick wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2489,6 +3647,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Vince",
       "wool cashmere"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2499,6 +3660,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Abercrombie",
       "grey wool oversize"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -2508,6 +3674,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Jenni Kayne cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2517,6 +3686,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "GOOP cotton wool blend"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2526,6 +3698,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "H&M wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2535,6 +3710,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Cardigans",
     "labels": [
       "Ralph Laren thin cotton"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -2544,6 +3722,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -2551,7 +3732,12 @@ window.WARDROBE_ITEMS = [
     "file": "s24_011.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s24_005_png",
@@ -2560,6 +3746,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -2567,7 +3756,11 @@ window.WARDROBE_ITEMS = [
     "file": "s24_013.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s24_007_png",
@@ -2576,6 +3769,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -2586,6 +3783,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "WAT the Brand",
       "cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2595,6 +3795,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Jcrew cashmere"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -2604,6 +3807,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Reformation cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2613,6 +3819,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -2620,7 +3829,10 @@ window.WARDROBE_ITEMS = [
     "file": "s25_015.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s25_003_png",
@@ -2629,6 +3841,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -2636,7 +3851,10 @@ window.WARDROBE_ITEMS = [
     "file": "s25_013.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s24_006_png",
@@ -2645,6 +3863,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -2652,7 +3876,13 @@ window.WARDROBE_ITEMS = [
     "file": "s24_012.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s25_010_png",
@@ -2662,6 +3892,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Jcrew",
       "fluffy cashmere"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -2671,6 +3905,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Vince Cashmere (NAVY)"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2680,6 +3918,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Jenni Kayne Cashmere (NAVY)"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2689,6 +3931,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Toteme vfluffy wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2698,6 +3943,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -2707,6 +3956,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Reformation cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2716,6 +3968,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Toteme wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2725,6 +3980,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -2732,7 +3990,10 @@ window.WARDROBE_ITEMS = [
     "file": "s25_014.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s25_002_png",
@@ -2741,6 +4002,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2750,6 +4014,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Khaite cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2760,6 +4027,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "WAT the Brand",
       "black wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2769,6 +4039,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "COS cashmere"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -2778,6 +4051,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Pullovers",
     "labels": [
       "Jcrew cashmere"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -2787,6 +4063,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -2796,6 +4075,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "H&M wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2805,6 +4087,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -2814,6 +4099,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Banana Republic wool (brown)"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -2823,6 +4112,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2832,6 +4125,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2841,6 +4137,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Reformation cashmere"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -2850,6 +4149,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "GAP Cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2859,6 +4161,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Vince Wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2868,6 +4173,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "All Saints cashmere"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2878,6 +4186,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Vince",
       "Stretch Wool"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2888,6 +4199,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Vince",
       "Stretch Wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -2898,6 +4212,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Vince",
       "Stretch Wool"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -2907,6 +4224,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Turtlenecks",
     "labels": [
       "Vince Cashmere"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -2916,6 +4236,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "SIlverlake"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -2925,6 +4250,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Levi"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2934,6 +4262,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Slverlake"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -2943,6 +4275,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Anine Bing"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -2952,6 +4288,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "COS"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2961,6 +4301,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Slverlake"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2970,6 +4314,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "COS"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -2979,6 +4327,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Citizens of Humanity"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2988,6 +4339,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Levi DAD"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -2997,6 +4351,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Agolde"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3006,6 +4363,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Agolde"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3015,6 +4375,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Agolde"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3024,6 +4387,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Anine Bing"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3033,6 +4399,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Agolde"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3042,6 +4411,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Agolde"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3051,6 +4423,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Levi DAD"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3060,6 +4435,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Jeans",
     "labels": [
       "Khaite"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3067,21 +4445,35 @@ window.WARDROBE_ITEMS = [
     "file": "s28_014.png",
     "category": "Pants",
     "subcategory": "Casual Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s28_012_png",
     "file": "s28_012.png",
     "category": "Pants",
     "subcategory": "Casual Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s28_013_png",
     "file": "s28_013.png",
     "category": "Pants",
     "subcategory": "Casual Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s28_001_png",
@@ -3090,6 +4482,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "ONE DNA cotton"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -3099,6 +4495,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "WAT the Brand cotton"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3106,7 +4508,13 @@ window.WARDROBE_ITEMS = [
     "file": "s28_010.png",
     "category": "Pants",
     "subcategory": "Casual Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s28_006_png",
@@ -3116,6 +4524,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching shirt",
       "WAT the Brand linen"
+    ],
+    "colors": [
+      "blue",
+      "teal"
     ]
   },
   {
@@ -3125,6 +4537,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "Amor Rosa linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3134,6 +4549,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "Vince Silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3143,6 +4561,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "Tory Burch Silk"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -3152,6 +4573,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "Mango Linen"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -3161,6 +4586,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Casual Pants",
     "labels": [
       "Vince cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3171,6 +4599,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Blue/white stripe",
       "WAT the Brand cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3181,6 +4612,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching shorts/shirt",
       "ONE DNA cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3190,6 +4624,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3200,6 +4637,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Toteme silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3209,6 +4649,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -3219,6 +4664,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Toteme Flannel",
       "Matching shirt"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3229,6 +4677,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Tory Burch silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3239,6 +4690,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Tory Burch Crepe"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3248,6 +4702,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Vince Flannel"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3258,6 +4715,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Aritzia Linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -3268,6 +4728,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Toteme cotton"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -3278,6 +4743,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "COS linen"
+    ],
+    "colors": [
+      "khaki",
+      "gold"
     ]
   },
   {
@@ -3288,6 +4757,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Toteme cotton"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3298,6 +4771,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Khaite silk"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3307,6 +4784,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3316,6 +4796,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Manuri wool"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3326,6 +4810,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "LoveShackFancy Linen blend"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3335,6 +4825,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Toteme wool"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3345,6 +4841,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Khaite silk"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3354,6 +4856,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Vince Flannel"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3364,6 +4869,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching shirt",
       "Mango wool"
+    ],
+    "colors": [
+      "pink",
+      "magenta"
     ]
   },
   {
@@ -3373,6 +4882,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Jcrew cordoroy"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -3380,21 +4892,32 @@ window.WARDROBE_ITEMS = [
     "file": "s30_014.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s30_009_png",
     "file": "s30_009.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "burgundy"
+    ]
   },
   {
     "id": "s30_013_png",
     "file": "s30_013.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
+    ]
   },
   {
     "id": "s30_005_png",
@@ -3403,6 +4926,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -3412,6 +4940,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Vince capri"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -3419,7 +4950,13 @@ window.WARDROBE_ITEMS = [
     "file": "s30_010.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel",
+      "leather",
+      "brown"
+    ]
   },
   {
     "id": "s29_011_png",
@@ -3429,6 +4966,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Reformation silk",
       "Khaite silk"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -3436,7 +4979,12 @@ window.WARDROBE_ITEMS = [
     "file": "s30_011.jpg",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow",
+      "olive"
+    ]
   },
   {
     "id": "s29_013_png",
@@ -3447,6 +4995,10 @@ window.WARDROBE_ITEMS = [
       "Reformation silk",
       "MAJE linen",
       "Matching jacket"
+    ],
+    "colors": [
+      "blue",
+      "teal"
     ]
   },
   {
@@ -3457,6 +5009,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Banana Republic    wool",
       "Matching jacket"
+    ],
+    "colors": [
+      "blue",
+      "teal"
     ]
   },
   {
@@ -3466,6 +5022,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -3475,6 +5035,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "The Row viscose"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -3486,6 +5050,9 @@ window.WARDROBE_ITEMS = [
       "Reformation silk",
       "Matching jacket",
       "ME+EM viscose"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3496,6 +5063,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching jacket",
       "ME+EM viscose"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3505,6 +5075,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Vince crepe"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3514,6 +5087,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "The Row viscose"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3523,6 +5099,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3530,7 +5109,10 @@ window.WARDROBE_ITEMS = [
     "file": "s31_016.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s31_004_png",
@@ -3539,6 +5121,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Toteme light wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3549,6 +5134,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching shirt",
       "WAT the Brand satin"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3556,21 +5144,30 @@ window.WARDROBE_ITEMS = [
     "file": "s31_013.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s31_014_png",
     "file": "s31_014.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s31_012_jpg",
     "file": "s31_012.jpg",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "black"
+    ]
   },
   {
     "id": "s31_003_png",
@@ -3579,6 +5176,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Frankie Shop viscose"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3588,6 +5188,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Vince velvet"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3595,7 +5198,10 @@ window.WARDROBE_ITEMS = [
     "file": "s31_015.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "black"
+    ]
   },
   {
     "id": "s31_006_png",
@@ -3604,6 +5210,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Dress Pants",
     "labels": [
       "Reformation silk"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -3611,70 +5220,108 @@ window.WARDROBE_ITEMS = [
     "file": "s05_009.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s05_010_png",
     "file": "s05_010.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s05_005_png",
     "file": "s05_005.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s05_006_png",
     "file": "s05_006.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
+    ]
   },
   {
     "id": "s05_002_jpg",
     "file": "s05_002.jpg",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s05_008_png",
     "file": "s05_008.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s05_001_jpg",
     "file": "s05_001.jpg",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s05_004_png",
     "file": "s05_004.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s05_003_png",
     "file": "s05_003.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s05_007_png",
     "file": "s05_007.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s07_003_png",
@@ -3683,6 +5330,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Loro Piana"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -3692,6 +5344,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Loro Piana"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3699,7 +5355,11 @@ window.WARDROBE_ITEMS = [
     "file": "s07_014.png",
     "category": "Shoes",
     "subcategory": "Flats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s07_001_png",
@@ -3708,6 +5368,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Tory Burch"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3717,6 +5381,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Gucci"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3726,6 +5393,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "The Row"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3735,6 +5405,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Miu Miu"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3742,14 +5415,26 @@ window.WARDROBE_ITEMS = [
     "file": "s07_015.png",
     "category": "Shoes",
     "subcategory": "Flats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s07_017_png",
     "file": "s07_017.png",
     "category": "Shoes",
     "subcategory": "Flats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s07_005_png",
@@ -3758,6 +5443,13 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Loro Piana"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
     ]
   },
   {
@@ -3767,6 +5459,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Tory Burch"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3776,6 +5472,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Tod\u2019s"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3785,6 +5487,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Flattered"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3794,6 +5502,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3803,6 +5517,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Miu Miu"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -3812,6 +5532,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "khaki",
+      "olive",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -3821,6 +5547,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "khaki"
     ]
   },
   {
@@ -3828,7 +5557,10 @@ window.WARDROBE_ITEMS = [
     "file": "s08_013.png",
     "category": "Shoes",
     "subcategory": "Flats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s08_008_png",
@@ -3837,6 +5569,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Miu Miu"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3844,7 +5579,11 @@ window.WARDROBE_ITEMS = [
     "file": "s07_016.png",
     "category": "Shoes",
     "subcategory": "Flats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "pink",
+      "red"
+    ]
   },
   {
     "id": "s08_002_jpg",
@@ -3853,6 +5592,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Gucci"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3860,7 +5602,10 @@ window.WARDROBE_ITEMS = [
     "file": "s07_018.png",
     "category": "Shoes",
     "subcategory": "Flats",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s08_011_jpg",
@@ -3869,6 +5614,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Prada"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3878,6 +5626,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Gucci"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3887,6 +5638,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3896,6 +5650,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Flattered"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3905,6 +5662,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Ayede"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3914,6 +5674,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "UGGS"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3923,6 +5686,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -3932,6 +5698,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3941,6 +5710,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Saint Laurent"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -3950,6 +5722,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "Loeffler Randall"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3959,6 +5735,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "HERMES"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -3968,6 +5749,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -3977,6 +5762,13 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "UGGS"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
     ]
   },
   {
@@ -3986,6 +5778,13 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "HERMES"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "beige",
+      "orange",
+      "nude"
     ]
   },
   {
@@ -3995,6 +5794,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "Valentino"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4004,6 +5809,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "HERMES"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4013,6 +5821,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Sandals",
     "labels": [
       "Chloe"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4022,6 +5833,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Ayede"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -4031,6 +5845,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Jimmy Choo"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -4038,7 +5857,12 @@ window.WARDROBE_ITEMS = [
     "file": "s09_015.jpg",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s09_006_png",
@@ -4047,6 +5871,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Jimmy Choo"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4054,7 +5882,11 @@ window.WARDROBE_ITEMS = [
     "file": "s09_019.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s09_012_png",
@@ -4063,6 +5895,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "gianvito rossi"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4072,6 +5908,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Gucci"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -4081,6 +5922,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Jimmy Choo"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4090,6 +5935,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "khaki",
+      "gold"
     ]
   },
   {
@@ -4097,7 +5946,13 @@ window.WARDROBE_ITEMS = [
     "file": "s09_016.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s09_014_png",
@@ -4106,6 +5961,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Tory Burch"
+    ],
+    "colors": [
+      "red"
     ]
   },
   {
@@ -4113,7 +5971,10 @@ window.WARDROBE_ITEMS = [
     "file": "s10_014.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s10_008_png",
@@ -4122,6 +5983,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Louboutin"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "orange"
     ]
   },
   {
@@ -4131,6 +5997,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Aquazurra"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4140,6 +6012,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "gianvito rossi"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4149,6 +6027,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Tod\u2019s"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4158,6 +6042,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Aquazurra"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4167,6 +6057,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4176,6 +6072,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Loeffler Randall"
+    ],
+    "colors": [
+      "khaki",
+      "olive",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -4185,6 +6087,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4192,7 +6097,10 @@ window.WARDROBE_ITEMS = [
     "file": "s10_001.jpg",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s10_009_png",
@@ -4201,6 +6109,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Louboutin"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -4210,6 +6121,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Chanel"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4217,21 +6131,30 @@ window.WARDROBE_ITEMS = [
     "file": "s09_018.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s10_013_png",
     "file": "s10_013.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s09_017_png",
     "file": "s09_017.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s09_005_png",
@@ -4240,6 +6163,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Jimmy Choo"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4249,6 +6175,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Celine"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -4258,6 +6189,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Valentino"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4265,7 +6199,10 @@ window.WARDROBE_ITEMS = [
     "file": "s10_002.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s10_006_png",
@@ -4274,6 +6211,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Jimmy Choo"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4283,6 +6223,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Khaite"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4292,6 +6235,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Louboutin"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4301,6 +6247,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Paris Texas"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -4310,6 +6260,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Loro Piano"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -4317,7 +6272,15 @@ window.WARDROBE_ITEMS = [
     "file": "s11_016.png",
     "category": "Shoes",
     "subcategory": "Boots",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
+    ]
   },
   {
     "id": "s11_001_png",
@@ -4326,6 +6289,14 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "UGGS"
+    ],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
     ]
   },
   {
@@ -4335,6 +6306,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Arket"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4344,6 +6321,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Givenchy"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4353,6 +6333,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Reformation"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4362,6 +6346,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Jimmy Choo"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4371,6 +6358,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Hunter x Rag&Bone"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4380,6 +6370,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "H&M"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4389,6 +6382,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Khaite"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4398,6 +6394,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Toteme"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4405,7 +6404,10 @@ window.WARDROBE_ITEMS = [
     "file": "s11_015.png",
     "category": "Shoes",
     "subcategory": "Boots",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "dark grey"
+    ]
   },
   {
     "id": "s11_006_png",
@@ -4414,6 +6416,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Toteme"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4423,6 +6428,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Kurt Geiger"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4432,6 +6440,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "Stuart Weiztman"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4441,6 +6452,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "Jcrew Linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -4450,6 +6464,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "Toteme silk"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4459,6 +6477,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "Aritzia linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -4468,6 +6489,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "Tory Burch cotton"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4477,6 +6504,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "WAT the Brand cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4486,6 +6516,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "ONE DNA cotton"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -4493,7 +6527,10 @@ window.WARDROBE_ITEMS = [
     "file": "s34_001.png",
     "category": "Shorts",
     "subcategory": "Shorts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s34_008_png",
@@ -4502,6 +6539,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "Agolde denim"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4511,6 +6551,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "ME+EM cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4520,6 +6563,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shorts",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4529,6 +6575,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "COS Linen"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -4538,6 +6589,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Aritzia Linen"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4547,6 +6602,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Toteme crepe"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -4556,6 +6616,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "ME+EM knit"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -4565,6 +6628,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Vince knit"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4572,7 +6638,10 @@ window.WARDROBE_ITEMS = [
     "file": "s32_012.png",
     "category": "Skirts",
     "subcategory": "Skirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "white"
+    ]
   },
   {
     "id": "s32_009_png",
@@ -4581,6 +6650,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -4590,6 +6663,12 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "ALC cotton"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4600,6 +6679,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Self-Portrait patent"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -4609,6 +6691,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Frankie Shop Linen"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -4618,6 +6704,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Tory Burch toile"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -4627,6 +6717,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -4634,7 +6728,10 @@ window.WARDROBE_ITEMS = [
     "file": "s32_018.png",
     "category": "Skirts",
     "subcategory": "Skirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s33_002_png",
@@ -4644,6 +6741,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Vince silk"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -4654,6 +6755,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Banana Republic leather"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -4661,7 +6767,13 @@ window.WARDROBE_ITEMS = [
     "file": "s32_001.png",
     "category": "Skirts",
     "subcategory": "Skirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel",
+      "leather",
+      "brown"
+    ]
   },
   {
     "id": "s33_001_png",
@@ -4671,6 +6783,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Reformation silk"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4681,6 +6799,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Vince cotton"
+    ],
+    "colors": [
+      "blue",
+      "navy"
     ]
   },
   {
@@ -4690,6 +6812,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Line&Dot Viscose"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4701,6 +6826,9 @@ window.WARDROBE_ITEMS = [
       "Line&Dot Viscose",
       "Matching top",
       "H&M knit"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4710,6 +6838,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4720,6 +6851,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Tory Burch wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4729,6 +6863,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Line&Dot Viscose"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4739,6 +6876,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Tory Burch boucle"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -4746,21 +6886,32 @@ window.WARDROBE_ITEMS = [
     "file": "s32_014.png",
     "category": "Skirts",
     "subcategory": "Skirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s32_015_png",
     "file": "s32_015.png",
     "category": "Skirts",
     "subcategory": "Skirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s32_017_png",
     "file": "s32_017.png",
     "category": "Skirts",
     "subcategory": "Skirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s32_005_png",
@@ -4769,6 +6920,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "H&M silk"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -4779,6 +6933,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Tory Burch denim"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4789,6 +6946,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Club Monaco leather"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4799,6 +6959,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Tibi wool"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4809,6 +6972,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Vince viscose"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4819,6 +6985,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "Frame denim"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -4828,6 +6997,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Skirts",
     "labels": [
       "Line&Dot Viscose"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -4838,6 +7010,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Line&Dot Viscose",
       "ME+EM crepe"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -4847,6 +7022,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "COS knit"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -4857,6 +7035,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "LOEWE",
       "ribbed cotton"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -4867,6 +7050,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Aritzia",
       "ribbed cotton"
+    ],
+    "colors": [
+      "red"
     ]
   },
   {
@@ -4876,6 +7062,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "Vince crepe"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -4885,6 +7076,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -4895,6 +7091,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching skirt",
       "Vince silk"
+    ],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
     ]
   },
   {
@@ -4905,6 +7107,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "COS",
       "ribbed cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4915,6 +7120,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Aritzia",
       "ribbed cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4924,6 +7132,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "ME+EM  ribbed cotton"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -4934,6 +7147,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "LOEWE",
       "ribbed cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4943,6 +7159,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "Club Monaco silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -4953,6 +7172,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "COS",
       "ribbed cotton"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -4962,6 +7184,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -4971,6 +7196,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Tanks & Camisoles",
     "labels": [
       "COS         ribbed cotton"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -4980,6 +7208,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "COS yellow"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -4989,6 +7220,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "COS pink"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -4998,6 +7234,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "COS cream"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5007,6 +7248,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "COS Cream"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5016,6 +7262,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "SNDY knit"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5025,6 +7274,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Toteme brown"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5034,6 +7286,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Khaite white"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -5043,6 +7299,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Vince sea mist"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5053,6 +7312,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching skirt",
       "Vince pink"
+    ],
+    "colors": [
+      "pink",
+      "red"
     ]
   },
   {
@@ -5062,6 +7325,14 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Vince rust"
+    ],
+    "colors": [
+      "tan",
+      "leather",
+      "camel",
+      "nude",
+      "beige",
+      "brown"
     ]
   },
   {
@@ -5071,6 +7342,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Khaite black"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -5078,7 +7353,12 @@ window.WARDROBE_ITEMS = [
     "file": "s18_018.png",
     "category": "Tops",
     "subcategory": "Short Sleeve",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
+    ]
   },
   {
     "id": "s18_001_png",
@@ -5087,6 +7367,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "The Row white"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5096,6 +7379,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "COS black/brown"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5105,6 +7391,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Anine Bing grey"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5114,6 +7403,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Anine Bing grey"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5123,6 +7415,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "The Row black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5132,6 +7427,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Short Sleeve",
     "labels": [
       "Karl L black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5141,6 +7439,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Sleeve",
     "labels": [
       "BA&ASH black"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5151,6 +7452,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Madewell cream"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5161,6 +7465,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "St James stripe"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5171,6 +7478,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "WAT the Brand burgundy"
+    ],
+    "colors": [
+      "burgundy"
     ]
   },
   {
@@ -5181,6 +7491,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Vince rust"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -5191,6 +7505,12 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "H&M brown"
+    ],
+    "colors": [
+      "tan",
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -5201,6 +7521,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Joe\u2019s brown"
+    ],
+    "colors": [
+      "camel",
+      "leather",
+      "brown"
     ]
   },
   {
@@ -5211,6 +7536,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "WAT the Brand brown"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -5220,6 +7549,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Sleeve",
     "labels": [
       "BA&ASH black"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5230,6 +7562,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "COS           navy stripe"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5240,6 +7575,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "La Ligne Blue stripe"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5250,6 +7588,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Vince white"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5260,6 +7601,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Vince White"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5270,6 +7614,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "H&M white"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5279,6 +7626,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Sleeve",
     "labels": [
       "BA&ASH black"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5289,6 +7639,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "GOOP Label Blue stripe"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5299,6 +7652,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Vince black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5309,6 +7665,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Vince black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5318,6 +7677,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Long Sleeve",
     "labels": [
       "BA&ASH black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5328,6 +7690,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "COS black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5338,6 +7703,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "BA&ASH black",
       "Another Tomorrow   black"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5347,6 +7715,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Toteme Cotton"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5356,6 +7727,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Khaite silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5366,6 +7740,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "Tory Burch silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5376,6 +7753,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "Toteme silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5385,6 +7765,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Khaite cotton"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5394,6 +7779,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Anine Bing cotton"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5403,6 +7793,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Ralph Lauren linen"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5413,6 +7806,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "Khaite silk"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5422,6 +7818,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Ralph Lauren cotton"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5431,6 +7832,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Aritzia linen"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5438,14 +7844,24 @@ window.WARDROBE_ITEMS = [
     "file": "s21_019.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s21_022_png",
     "file": "s21_022.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
+    ]
   },
   {
     "id": "s20_016_png",
@@ -5455,6 +7871,11 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching skirt",
       "Toteme crepe"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "white"
     ]
   },
   {
@@ -5464,6 +7885,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "REISS linen"
+    ],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
     ]
   },
   {
@@ -5471,7 +7897,11 @@ window.WARDROBE_ITEMS = [
     "file": "s21_021.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "gold"
+    ]
   },
   {
     "id": "s20_003_jpg",
@@ -5480,6 +7910,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Revolve viscose"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -5490,6 +7924,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "Toteme flannel"
+    ],
+    "colors": [
+      "white"
     ]
   },
   {
@@ -5499,6 +7936,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Khaite silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5509,6 +7949,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching skirt",
       "Tory Burch silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5516,7 +7959,13 @@ window.WARDROBE_ITEMS = [
     "file": "s21_018.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "beige",
+      "tan",
+      "camel",
+      "nude"
+    ]
   },
   {
     "id": "s21_006_png",
@@ -5525,6 +7974,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5532,7 +7984,10 @@ window.WARDROBE_ITEMS = [
     "file": "s22_014.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "red"
+    ]
   },
   {
     "id": "s22_004_png",
@@ -5541,6 +7996,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -5548,7 +8007,11 @@ window.WARDROBE_ITEMS = [
     "file": "s20_020.jpg",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "tan",
+      "camel"
+    ]
   },
   {
     "id": "s22_007_png",
@@ -5557,6 +8020,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "H&M silk"
+    ],
+    "colors": [
+      "tan",
+      "camel"
     ]
   },
   {
@@ -5567,6 +8034,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "ONE DNA cotton"
+    ],
+    "colors": [
+      "neutral"
     ]
   },
   {
@@ -5574,7 +8044,12 @@ window.WARDROBE_ITEMS = [
     "file": "s20_015.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "khaki",
+      "yellow",
+      "gold"
+    ]
   },
   {
     "id": "s22_005_png",
@@ -5583,6 +8058,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Tory Burch silk"
+    ],
+    "colors": [
+      "khaki"
     ]
   },
   {
@@ -5592,6 +8070,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Revolve wool"
+    ],
+    "colors": [
+      "green",
+      "sage"
     ]
   },
   {
@@ -5599,7 +8081,10 @@ window.WARDROBE_ITEMS = [
     "file": "s22_013.jpg",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "green"
+    ]
   },
   {
     "id": "s20_018_png",
@@ -5609,6 +8094,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "WAT the Brand linen"
+    ],
+    "colors": [
+      "green",
+      "sage"
     ]
   },
   {
@@ -5618,6 +8107,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Ralph Lauren linen"
+    ],
+    "colors": [
+      "green"
     ]
   },
   {
@@ -5627,6 +8119,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Banana Republic Denim"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -5636,6 +8132,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Banana Republic Denim"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -5646,6 +8146,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Frame",
       "Denim"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -5655,6 +8159,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "REISS linen"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -5664,6 +8172,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Ralph Lauren linen"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -5673,6 +8185,10 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "WAT the Brand cotton"
+    ],
+    "colors": [
+      "blue",
+      "light blue"
     ]
   },
   {
@@ -5683,6 +8199,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "Mango wool"
+    ],
+    "colors": [
+      "pink",
+      "magenta"
     ]
   },
   {
@@ -5693,6 +8213,10 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "WAT the Brand satin"
+    ],
+    "colors": [
+      "camel",
+      "brown"
     ]
   },
   {
@@ -5702,6 +8226,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Khaite silk"
+    ],
+    "colors": [
+      "black"
     ]
   },
   {
@@ -5711,6 +8238,11 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "WAT the Brand linen"
+    ],
+    "colors": [
+      "cream",
+      "ivory",
+      "grey"
     ]
   },
   {
@@ -5720,6 +8252,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "COS cotton"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5727,14 +8262,20 @@ window.WARDROBE_ITEMS = [
     "file": "s22_015.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s21_020_png",
     "file": "s21_020.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s20_014_png",
@@ -5743,6 +8284,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Splendid linen blend"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5750,14 +8294,20 @@ window.WARDROBE_ITEMS = [
     "file": "s20_021.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s21_001_jpg",
     "file": "s21_001.jpg",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "neutral"
+    ]
   },
   {
     "id": "s21_012_png",
@@ -5766,6 +8316,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Citizens of Humanity  Flannel"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5775,6 +8328,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Banana Republic silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5784,6 +8340,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Mango silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5793,6 +8352,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Mango silk"
+    ],
+    "colors": [
+      "grey"
     ]
   },
   {
@@ -5800,14 +8362,20 @@ window.WARDROBE_ITEMS = [
     "file": "s22_011.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s22_012_png",
     "file": "s22_012.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "grey"
+    ]
   },
   {
     "id": "s20_012_png",
@@ -5816,6 +8384,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "VINCE silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -5826,6 +8397,9 @@ window.WARDROBE_ITEMS = [
     "labels": [
       "Matching pants",
       "COS denim"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -5835,6 +8409,9 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Shirts",
     "labels": [
       "Vince silk"
+    ],
+    "colors": [
+      "dark grey"
     ]
   },
   {
@@ -5842,6 +8419,9 @@ window.WARDROBE_ITEMS = [
     "file": "s20_001.png",
     "category": "Tops",
     "subcategory": "Shirts",
-    "labels": []
+    "labels": [],
+    "colors": [
+      "black"
+    ]
   }
 ];

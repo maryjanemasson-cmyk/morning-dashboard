@@ -233,7 +233,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="outfit-data.js"></script>
-  <script src="wardrobe-data.js?v=5"></script>
+  <script src="wardrobe-data.js?v=6"></script>
   <script>
     firebase.initializeApp({
       apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
@@ -452,7 +452,8 @@
       // Add piece panel
       if (_editMode) {
         html += `<div class="add-piece-panel${_addPanelOpen ? ' open' : ''}" id="add-panel">
-          <input type="text" id="add-search" placeholder="Search wardrobe..." oninput="renderAddPanel()" />
+          <input type="text" id="add-search" placeholder="e.g. black heels, blue bag, Chanel..." oninput="renderAddPanel()" />
+          <div style="display:flex;flex-wrap:wrap;gap:2px;margin-bottom:0.4rem;" id="add-quick-filters"></div>
           <div class="add-piece-grid" id="add-grid"></div>
         </div>`;
       }
@@ -461,7 +462,18 @@
       document.getElementById('detail-content').innerHTML = html;
       document.getElementById('detail-modal').classList.add('open');
 
-      if (_editMode && _addPanelOpen) renderAddPanel();
+      if (_editMode && _addPanelOpen) {
+        renderAddPanel();
+        // Quick filter buttons
+        const qf = document.getElementById('add-quick-filters');
+        if (qf) {
+          const cats = ['Tops', 'Pants', 'Dresses', 'Skirts', 'Shoes', 'Bags', 'Jewelry', 'Knitwear', 'Jackets & Coats'];
+          qf.innerHTML = cats.map(c =>
+            `<button style="font-size:0.55rem;padding:0.15rem 0.4rem;border-radius:10px;border:1px solid #ddd;background:#fff;color:#5a5a6e;cursor:pointer;font-family:inherit;"
+              onclick="document.getElementById('add-search').value='${c}';renderAddPanel();">${c}</button>`
+          ).join('');
+        }
+      }
     }
 
     function toggleEdit() {
@@ -509,17 +521,30 @@
       const wardrobeItems = window.WARDROBE_ITEMS || [];
       let filtered = wardrobeItems;
       if (search) {
+        const terms = search.split(/\s+/);
         filtered = wardrobeItems.filter(i => {
-          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
-          return h.includes(search);
+          const haystack = [
+            i.category,
+            i.subcategory,
+            ...(i.labels || []),
+            ...(i.colors || []),
+          ].join(' ').toLowerCase();
+          return terms.every(t => haystack.includes(t));
         });
       }
       const grid = document.getElementById('add-grid');
       if (!grid) return;
-      grid.innerHTML = filtered.slice(0, 30).map(i =>
-        `<img src="wardrobe-thumbs/${i.file}" alt="${i.subcategory}" title="${i.subcategory}"
-          onclick="addPieceFromWardrobe('wardrobe-thumbs/${i.file}')" />`
-      ).join('');
+      grid.innerHTML = filtered.slice(0, 40).map(i => {
+        const tooltip = [i.subcategory, ...(i.labels || []), ...(i.colors || [])].join(', ');
+        return `<img src="wardrobe-thumbs/${i.file}" alt="${i.subcategory}" title="${tooltip}"
+          onclick="addPieceFromWardrobe('wardrobe-thumbs/${i.file}')" />`;
+      }).join('');
+
+      // Show result count
+      const countEl = document.createElement('div');
+      countEl.style.cssText = 'font-size:0.65rem;color:#8A8A9A;margin-top:0.3rem;';
+      countEl.textContent = filtered.length + ' items' + (filtered.length > 40 ? ' (showing 40)' : '');
+      grid.parentNode.appendChild(countEl);
     }
 
     function addPieceFromWardrobe(filePath) {
