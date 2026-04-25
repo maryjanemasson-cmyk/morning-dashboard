@@ -218,9 +218,6 @@
       render();
     });
 
-    // Initialize
-    render();
-
     function getOccasions() {
       const occ = new Set(outfits.map(o => o.occasion));
       // Normalize
@@ -474,6 +471,9 @@
     document.getElementById('detail-modal').addEventListener('click', e => {
       if (e.target === document.getElementById('detail-modal')) closeDetail();
     });
+
+    // Initial render (after all functions defined)
+    render();
   </script>
 </body>
 </html>
