@@ -218,23 +218,30 @@
       render();
     });
 
+    const OCCASIONS = ['Casual', 'Office', 'Evening', 'OOTD', 'Travel'];
+
+    function mapOccasion(raw) {
+      const r = raw.toLowerCase();
+      if (r.includes('casual') || r.includes('cool day')) return 'Casual';
+      if (r.includes('office') || r.includes('business') || r.includes('work')) return 'Office';
+      if (r.includes('evening') || r.includes('night') || r.includes('dinner')) return 'Evening';
+      if (r.includes('trip') || r.includes('paris') || r.includes('san diego') || r.includes('miami') || r.includes('boston') || r.includes('france') || r.includes('japan')) return 'Travel';
+      if (r.includes('ootd') || r.includes('outfit')) return 'OOTD';
+      if (r.includes('vacation') || r.includes('summer')) return 'OOTD';
+      return 'OOTD';
+    }
+
     function getOccasions() {
-      const occ = new Set(outfits.map(o => o.occasion));
-      // Normalize
-      const normalized = {};
       outfits.forEach(o => {
-        let cat = o.occasion;
-        if (cat.includes('Office') || cat.includes('Business')) cat = 'Office / Business';
-        else if (cat.includes('Day/Dinner') || cat.includes('Day/Night') || cat.includes('Day / Night') || cat.includes('Day / Dinner')) cat = 'Day / Night';
-        else if (cat.includes('Casual') || cat.includes('Cool Day')) cat = 'Casual';
-        else if (cat === 'Night') cat = 'Night Out';
-        else if (cat.includes('Paris')) cat = 'Travel - Paris';
-        else if (cat.includes('San Diego')) cat = 'Travel - San Diego';
-        o._filterCat = cat;
-        if (!normalized[cat]) normalized[cat] = 0;
-        normalized[cat]++;
+        // Use Firebase edit if available, otherwise auto-map
+        const edit = _outfitEdits[o.slide];
+        if (edit && edit.occasion && OCCASIONS.includes(edit.occasion)) {
+          o._filterCat = edit.occasion;
+        } else {
+          o._filterCat = mapOccasion(o.occasion);
+        }
       });
-      return ['All', ...Object.keys(normalized).sort()];
+      return ['All', ...OCCASIONS];
     }
 
     function render() {
@@ -315,7 +322,7 @@
             ${previewImgs}
           </div>
           <div class="outfit-card-info">
-            <div class="outfit-card-title" onclick="event.stopPropagation();editOutfitField(${o.slide},'occasion',this)">${o.occasion}</div>
+            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)">${o._filterCat}</div>
             <div class="outfit-card-season" onclick="event.stopPropagation();showSeasonPicker(${o.slide},this)">${o.season}</div>
             <div class="outfit-card-meta">${o.images.length} pieces</div>
             ${brandTags}
@@ -369,6 +376,36 @@
     function deleteOutfitCard(slide) {
       if (!confirm('Delete this outfit?')) return;
       db.ref('deletedOutfits/' + slide).set(true);
+    }
+
+    // Occasion picker
+    function showOccasionPicker(slide, el) {
+      const currentVal = el.textContent;
+      const select = document.createElement('select');
+      select.className = 'season-select';
+      OCCASIONS.forEach(o => {
+        const opt = document.createElement('option');
+        opt.value = o;
+        opt.textContent = o;
+        if (o === currentVal) opt.selected = true;
+        select.appendChild(opt);
+      });
+      el.textContent = '';
+      el.appendChild(select);
+      select.focus();
+
+      function save() {
+        const newVal = select.value;
+        if (newVal !== currentVal) {
+          const updates = _outfitEdits[slide] || {};
+          updates.occasion = newVal;
+          db.ref('outfitEdits/' + slide).set(updates);
+        } else {
+          el.textContent = currentVal;
+        }
+      }
+      select.addEventListener('change', save);
+      select.addEventListener('blur', () => { el.textContent = select.value || currentVal; });
     }
 
     // Season picker
