@@ -55,6 +55,14 @@
     .cat-grid {
       display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:0.75rem;
     }
+    .cat-subheader {
+      grid-column: 1 / -1;
+      font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.5px; color: #9c8b76;
+      padding: 0.75rem 0 0.25rem; border-top: 1px solid #ebe5dc;
+      margin-top: 0.5rem;
+    }
+    .cat-subheader:first-child { border-top: none; margin-top: 0; }
     .cat-item {
       background:#fff; border:1px solid #ebe5dc; border-radius:8px; overflow:hidden;
       cursor:pointer; transition:border-color 0.2s, box-shadow 0.2s;
@@ -303,12 +311,22 @@
       });
 
       document.getElementById('cat-count').textContent = filtered.length + ' items';
-      document.getElementById('cat-grid').innerHTML = filtered.map(i => {
+
+      // Build HTML with subcategory headers when viewing a single category
+      let gridHtml = '';
+      let lastSub = '';
+      filtered.forEach(i => {
+        // Add subcategory header when it changes (only when filtering a single category)
+        if (catFilter !== 'All' && i.subcategory !== lastSub) {
+          lastSub = i.subcategory;
+          gridHtml += `<div class="cat-subheader">${i.subcategory}</div>`;
+        }
+
         const outfitSlides = outfitMap[i.file] || [];
         const outfitBadge = outfitSlides.length > 0
           ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>`
           : '';
-        return `<div class="cat-item">
+        gridHtml += `<div class="cat-item">
           <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i.file}')" />
           <div class="cat-item-info">
             <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
@@ -316,7 +334,8 @@
             ${outfitBadge}
           </div>
         </div>`;
-      }).join('');
+      });
+      document.getElementById('cat-grid').innerHTML = gridHtml;
     }
 
     function editField(itemId, field, el) {
