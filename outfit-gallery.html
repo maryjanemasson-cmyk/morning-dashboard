@@ -43,7 +43,7 @@
       min-height:120px; align-items:flex-start; justify-content:center;
     }
     .outfit-preview img {
-      height:80px; width:auto; object-fit:contain; border-radius:3px;
+      height:100px; width:auto; object-fit:contain; border-radius:3px;
     }
     .outfit-card-info { padding:0.6rem 0.8rem; }
     .outfit-card-title {
@@ -83,8 +83,11 @@
       background:#f9f7f4; border-radius:8px; padding:1rem;
     }
     .modal-pieces img {
-      height:140px; width:auto; object-fit:contain; border-radius:4px;
+      height:180px; width:auto; object-fit:contain; border-radius:4px;
       cursor:pointer; border:1px solid #ebe5dc; transition:transform 0.2s;
+    }
+    .modal-pieces img.accessory {
+      height:80px;
     }
     .modal-pieces img:hover { transform:scale(1.05); }
 
@@ -200,8 +203,10 @@
       let html = `<div class="modal-title">${o.occasion}</div>`;
       html += `<div class="modal-meta">${o.season} &middot; ${o.images.length} pieces</div>`;
       html += '<div class="modal-pieces">';
-      o.images.forEach(f => {
-        html += `<img src="${IMG_PATH}${f}" alt="" onclick="zoomImg('${f}')" />`;
+      (o.sized_images || o.images.map(f=>({file:f,accessory:false}))).forEach(si => {
+        const f = si.file || si;
+        const cls = si.accessory ? ' class="accessory"' : '';
+        html += `<img src="${IMG_PATH}${f}" alt=""${cls} onclick="zoomImg('${f}')" />`;
       });
       html += '</div>';
       if (o.brands && o.brands.length) {

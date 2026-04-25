@@ -28,7 +28,69 @@
       "outfit_s02_014.png",
       "outfit_s02_015.jpg"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s02_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_006.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s02_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_008.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s02_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s02_015.jpg",
+        "accessory": true
+      }
+    ]
   },
   {
     "slide": 3,
@@ -68,7 +130,101 @@
       "outfit_s03_022.jpg",
       "outfit_s03_023.png"
     ],
-    "image_count": 23
+    "image_count": 23,
+    "sized_images": [
+      {
+        "file": "outfit_s03_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_008.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s03_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_015.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s03_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_021.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_022.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s03_023.png",
+        "accessory": true
+      }
+    ]
   },
   {
     "slide": 4,
@@ -95,7 +251,77 @@
       "outfit_s04_016.png",
       "outfit_s04_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s04_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s04_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 5,
@@ -131,7 +357,113 @@
       "outfit_s05_025.png",
       "outfit_s05_026.jpg"
     ],
-    "image_count": 26
+    "image_count": 26,
+    "sized_images": [
+      {
+        "file": "outfit_s05_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_007.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s05_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_013.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s05_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_017.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s05_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_020.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s05_021.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_022.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_023.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_024.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_025.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s05_026.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 6,
@@ -161,7 +493,89 @@
       "outfit_s06_019.png",
       "outfit_s06_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s06_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s06_018.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s06_019.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s06_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 7,
@@ -189,7 +603,81 @@
       "outfit_s07_017.png",
       "outfit_s07_018.png"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s07_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_010.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s07_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s07_018.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 8,
@@ -224,7 +712,101 @@
       "outfit_s08_022.png",
       "outfit_s08_023.png"
     ],
-    "image_count": 23
+    "image_count": 23,
+    "sized_images": [
+      {
+        "file": "outfit_s08_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_006.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s08_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_011.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s08_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_016.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s08_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_020.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s08_023.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 9,
@@ -249,7 +831,69 @@
       "outfit_s09_014.png",
       "outfit_s09_015.png"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s09_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_004.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s09_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_007.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s09_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s09_015.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 10,
@@ -282,7 +926,93 @@
       "outfit_s10_020.jpg",
       "outfit_s10_021.png"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s10_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_018.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s10_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s10_020.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s10_021.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 11,
@@ -309,7 +1039,77 @@
       "outfit_s11_016.png",
       "outfit_s11_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s11_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_014.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s11_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s11_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 12,
@@ -341,7 +1141,89 @@
       "outfit_s12_019.png",
       "outfit_s12_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s12_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_013.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s12_014.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s12_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s12_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 13,
@@ -375,7 +1257,97 @@
       "outfit_s13_021.jpg",
       "outfit_s13_022.jpg"
     ],
-    "image_count": 22
+    "image_count": 22,
+    "sized_images": [
+      {
+        "file": "outfit_s13_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_011.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s13_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_019.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s13_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s13_022.jpg",
+        "accessory": true
+      }
+    ]
   },
   {
     "slide": 14,
@@ -406,7 +1378,93 @@
       "outfit_s14_020.png",
       "outfit_s14_021.jpg"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s14_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_008.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s14_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_012.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s14_013.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s14_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s14_021.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 15,
@@ -439,7 +1497,93 @@
       "outfit_s15_020.jpg",
       "outfit_s15_021.png"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s15_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_016.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s15_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_020.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s15_021.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 16,
@@ -470,7 +1614,93 @@
       "outfit_s16_020.png",
       "outfit_s16_021.png"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s16_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_018.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s16_019.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s16_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s16_021.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 17,
@@ -501,7 +1731,93 @@
       "outfit_s17_020.jpg",
       "outfit_s17_021.jpg"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s17_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_020.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s17_021.jpg",
+        "accessory": true
+      }
+    ]
   },
   {
     "slide": 18,
@@ -527,7 +1843,73 @@
       "outfit_s18_015.png",
       "outfit_s18_016.png"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s18_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s18_016.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 19,
@@ -565,7 +1947,121 @@
       "outfit_s19_027.png",
       "outfit_s19_028.png"
     ],
-    "image_count": 28
+    "image_count": 28,
+    "sized_images": [
+      {
+        "file": "outfit_s19_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_012.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s19_013.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s19_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_023.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_024.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_025.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_026.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_027.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s19_028.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 20,
@@ -599,7 +2095,105 @@
       "outfit_s20_023.jpg",
       "outfit_s20_024.png"
     ],
-    "image_count": 24
+    "image_count": 24,
+    "sized_images": [
+      {
+        "file": "outfit_s20_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_014.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s20_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_020.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_022.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_023.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s20_024.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 21,
@@ -634,7 +2228,109 @@
       "outfit_s21_024.png",
       "outfit_s21_025.png"
     ],
-    "image_count": 25
+    "image_count": 25,
+    "sized_images": [
+      {
+        "file": "outfit_s21_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_002.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s21_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_009.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s21_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_019.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_020.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_023.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_024.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s21_025.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 22,
@@ -662,7 +2358,73 @@
       "outfit_s22_015.png",
       "outfit_s22_016.png"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s22_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s22_016.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 23,
@@ -692,7 +2454,89 @@
       "outfit_s23_019.jpg",
       "outfit_s23_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s23_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_015.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s23_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s23_019.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s23_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 24,
@@ -719,7 +2563,77 @@
       "outfit_s24_016.png",
       "outfit_s24_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s24_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s24_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 25,
@@ -744,7 +2658,69 @@
       "outfit_s25_014.png",
       "outfit_s25_015.png"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s25_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s25_015.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 26,
@@ -773,7 +2749,85 @@
       "outfit_s26_018.png",
       "outfit_s26_019.png"
     ],
-    "image_count": 19
+    "image_count": 19,
+    "sized_images": [
+      {
+        "file": "outfit_s26_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_012.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s26_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s26_019.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 27,
@@ -803,7 +2857,81 @@
       "outfit_s27_017.png",
       "outfit_s27_018.png"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s27_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_008.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s27_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s27_018.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 28,
@@ -837,7 +2965,105 @@
       "outfit_s28_023.png",
       "outfit_s28_024.jpg"
     ],
-    "image_count": 24
+    "image_count": 24,
+    "sized_images": [
+      {
+        "file": "outfit_s28_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_003.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s28_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_008.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s28_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_014.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s28_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_017.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s28_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_019.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_023.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s28_024.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 29,
@@ -865,7 +3091,81 @@
       "outfit_s29_017.png",
       "outfit_s29_018.png"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s29_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s29_018.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 30,
@@ -889,7 +3189,65 @@
       "outfit_s30_013.jpg",
       "outfit_s30_014.png"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s30_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_011.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s30_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s30_014.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 31,
@@ -915,7 +3273,73 @@
       "outfit_s31_015.png",
       "outfit_s31_016.jpg"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s31_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_013.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s31_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s31_016.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 32,
@@ -944,7 +3368,69 @@
       "outfit_s32_014.png",
       "outfit_s32_015.png"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s32_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s32_015.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 33,
@@ -972,7 +3458,65 @@
       "outfit_s33_013.png",
       "outfit_s33_014.png"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s33_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s33_014.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 34,
@@ -998,7 +3542,73 @@
       "outfit_s34_015.png",
       "outfit_s34_016.jpg"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s34_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s34_016.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 35,
@@ -1031,7 +3641,89 @@
       "outfit_s35_019.png",
       "outfit_s35_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s35_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s35_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 36,
@@ -1062,7 +3754,77 @@
       "outfit_s36_016.jpg",
       "outfit_s36_017.jpg"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s36_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s36_017.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 37,
@@ -1086,7 +3848,65 @@
       "outfit_s37_013.png",
       "outfit_s37_014.jpg"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s37_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s37_014.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 38,
@@ -1119,7 +3939,89 @@
       "outfit_s38_019.jpg",
       "outfit_s38_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s38_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_019.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s38_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 39,
@@ -1139,7 +4041,49 @@
       "outfit_s39_009.png",
       "outfit_s39_010.png"
     ],
-    "image_count": 10
+    "image_count": 10,
+    "sized_images": [
+      {
+        "file": "outfit_s39_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s39_010.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 40,
@@ -1165,7 +4109,73 @@
       "outfit_s40_015.png",
       "outfit_s40_016.png"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s40_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s40_016.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 41,
@@ -1189,7 +4199,57 @@
       "outfit_s41_011.png",
       "outfit_s41_012.png"
     ],
-    "image_count": 12
+    "image_count": 12,
+    "sized_images": [
+      {
+        "file": "outfit_s41_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s41_012.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 42,
@@ -1218,7 +4278,85 @@
       "outfit_s42_018.png",
       "outfit_s42_019.png"
     ],
-    "image_count": 19
+    "image_count": 19,
+    "sized_images": [
+      {
+        "file": "outfit_s42_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s42_019.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 43,
@@ -1243,7 +4381,69 @@
       "outfit_s43_014.png",
       "outfit_s43_015.jpg"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s43_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s43_015.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 44,
@@ -1272,7 +4472,85 @@
       "outfit_s44_018.png",
       "outfit_s44_019.png"
     ],
-    "image_count": 19
+    "image_count": 19,
+    "sized_images": [
+      {
+        "file": "outfit_s44_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s44_019.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 45,
@@ -1297,7 +4575,69 @@
       "outfit_s45_014.png",
       "outfit_s45_015.png"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s45_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s45_015.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 46,
@@ -1324,7 +4664,77 @@
       "outfit_s46_016.jpg",
       "outfit_s46_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s46_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s46_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 47,
@@ -1356,7 +4766,97 @@
       "outfit_s47_021.jpg",
       "outfit_s47_022.png"
     ],
-    "image_count": 22
+    "image_count": 22,
+    "sized_images": [
+      {
+        "file": "outfit_s47_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_019.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_020.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_021.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s47_022.png",
+        "accessory": true
+      }
+    ]
   },
   {
     "slide": 48,
@@ -1382,7 +4882,73 @@
       "outfit_s48_015.png",
       "outfit_s48_016.png"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s48_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s48_016.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 49,
@@ -1413,7 +4979,93 @@
       "outfit_s49_020.png",
       "outfit_s49_021.jpg"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s49_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_006.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s49_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s49_020.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s49_021.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 50,
@@ -1442,7 +5094,85 @@
       "outfit_s50_018.png",
       "outfit_s50_019.jpg"
     ],
-    "image_count": 19
+    "image_count": 19,
+    "sized_images": [
+      {
+        "file": "outfit_s50_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_013.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s50_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s50_019.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 51,
@@ -1466,7 +5196,65 @@
       "outfit_s51_013.png",
       "outfit_s51_014.png"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s51_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s51_014.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 52,
@@ -1494,7 +5282,81 @@
       "outfit_s52_017.png",
       "outfit_s52_018.png"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s52_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s52_018.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 53,
@@ -1520,7 +5382,73 @@
       "outfit_s53_015.png",
       "outfit_s53_016.jpg"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s53_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s53_016.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 54,
@@ -1545,7 +5473,69 @@
       "outfit_s54_014.png",
       "outfit_s54_015.jpg"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s54_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s54_015.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 55,
@@ -1570,7 +5560,69 @@
       "outfit_s55_014.png",
       "outfit_s55_015.jpg"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s55_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s55_015.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 56,
@@ -1598,7 +5650,81 @@
       "outfit_s56_017.png",
       "outfit_s56_018.png"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s56_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s56_018.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 57,
@@ -1624,7 +5750,73 @@
       "outfit_s57_015.png",
       "outfit_s57_016.png"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s57_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s57_016.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 58,
@@ -1652,7 +5844,81 @@
       "outfit_s58_017.jpg",
       "outfit_s58_018.jpg"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s58_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s58_018.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 59,
@@ -1676,7 +5942,65 @@
       "outfit_s59_013.jpg",
       "outfit_s59_014.png"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s59_001.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s59_014.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 60,
@@ -1705,7 +6029,85 @@
       "outfit_s60_018.jpg",
       "outfit_s60_019.png"
     ],
-    "image_count": 19
+    "image_count": 19,
+    "sized_images": [
+      {
+        "file": "outfit_s60_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s60_019.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 61,
@@ -1728,7 +6130,61 @@
       "outfit_s61_012.png",
       "outfit_s61_013.png"
     ],
-    "image_count": 13
+    "image_count": 13,
+    "sized_images": [
+      {
+        "file": "outfit_s61_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s61_013.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 62,
@@ -1761,7 +6217,101 @@
       "outfit_s62_022.png",
       "outfit_s62_023.png"
     ],
-    "image_count": 23
+    "image_count": 23,
+    "sized_images": [
+      {
+        "file": "outfit_s62_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_021.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s62_023.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 63,
@@ -1785,7 +6335,65 @@
       "outfit_s63_013.png",
       "outfit_s63_014.jpg"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s63_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s63_014.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 64,
@@ -1807,7 +6415,57 @@
       "outfit_s64_011.jpg",
       "outfit_s64_012.png"
     ],
-    "image_count": 12
+    "image_count": 12,
+    "sized_images": [
+      {
+        "file": "outfit_s64_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_008.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s64_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s64_012.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 65,
@@ -1840,7 +6498,101 @@
       "outfit_s65_022.png",
       "outfit_s65_023.png"
     ],
-    "image_count": 23
+    "image_count": 23,
+    "sized_images": [
+      {
+        "file": "outfit_s65_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_021.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s65_023.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 66,
@@ -1867,7 +6619,77 @@
       "outfit_s66_016.jpg",
       "outfit_s66_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s66_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s66_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 67,
@@ -1894,7 +6716,77 @@
       "outfit_s67_016.jpg",
       "outfit_s67_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s67_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_011.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s67_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 68,
@@ -1921,7 +6813,77 @@
       "outfit_s68_016.jpg",
       "outfit_s68_017.jpg"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s68_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s68_017.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 69,
@@ -1955,7 +6917,105 @@
       "outfit_s69_023.jpg",
       "outfit_s69_024.png"
     ],
-    "image_count": 24
+    "image_count": 24,
+    "sized_images": [
+      {
+        "file": "outfit_s69_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_011.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s69_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_021.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_022.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_023.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s69_024.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 70,
@@ -1985,7 +7045,89 @@
       "outfit_s70_019.png",
       "outfit_s70_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s70_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_012.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s70_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 71,
@@ -2007,7 +7149,57 @@
       "outfit_s71_011.png",
       "outfit_s71_012.png"
     ],
-    "image_count": 12
+    "image_count": 12,
+    "sized_images": [
+      {
+        "file": "outfit_s71_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s71_012.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 72,
@@ -2027,7 +7219,49 @@
       "outfit_s72_009.png",
       "outfit_s72_010.png"
     ],
-    "image_count": 10
+    "image_count": 10,
+    "sized_images": [
+      {
+        "file": "outfit_s72_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_002.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s72_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s72_010.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 73,
@@ -2055,7 +7289,81 @@
       "outfit_s73_017.png",
       "outfit_s73_018.png"
     ],
-    "image_count": 18
+    "image_count": 18,
+    "sized_images": [
+      {
+        "file": "outfit_s73_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s73_018.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 74,
@@ -2075,7 +7383,49 @@
       "outfit_s74_009.png",
       "outfit_s74_010.jpg"
     ],
-    "image_count": 10
+    "image_count": 10,
+    "sized_images": [
+      {
+        "file": "outfit_s74_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s74_010.jpg",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 75,
@@ -2105,7 +7455,89 @@
       "outfit_s75_019.jpg",
       "outfit_s75_020.png"
     ],
-    "image_count": 20
+    "image_count": 20,
+    "sized_images": [
+      {
+        "file": "outfit_s75_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_018.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_019.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s75_020.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 76,
@@ -2124,7 +7556,45 @@
       "outfit_s76_008.jpg",
       "outfit_s76_009.png"
     ],
-    "image_count": 9
+    "image_count": 9,
+    "sized_images": [
+      {
+        "file": "outfit_s76_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_005.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s76_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s76_009.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 77,
@@ -2151,7 +7621,77 @@
       "outfit_s77_016.png",
       "outfit_s77_017.png"
     ],
-    "image_count": 17
+    "image_count": 17,
+    "sized_images": [
+      {
+        "file": "outfit_s77_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_002.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s77_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_005.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s77_017.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 78,
@@ -2172,7 +7712,53 @@
       "outfit_s78_010.jpg",
       "outfit_s78_011.png"
     ],
-    "image_count": 11
+    "image_count": 11,
+    "sized_images": [
+      {
+        "file": "outfit_s78_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s78_011.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 79,
@@ -2201,7 +7787,85 @@
       "outfit_s79_018.png",
       "outfit_s79_019.png"
     ],
-    "image_count": 19
+    "image_count": 19,
+    "sized_images": [
+      {
+        "file": "outfit_s79_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_016.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_017.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s79_019.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 80,
@@ -2225,7 +7889,65 @@
       "outfit_s80_013.png",
       "outfit_s80_014.png"
     ],
-    "image_count": 14
+    "image_count": 14,
+    "sized_images": [
+      {
+        "file": "outfit_s80_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s80_014.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 81,
@@ -2256,7 +7978,93 @@
       "outfit_s81_020.png",
       "outfit_s81_021.png"
     ],
-    "image_count": 21
+    "image_count": 21,
+    "sized_images": [
+      {
+        "file": "outfit_s81_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_003.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_004.jpg",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s81_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_006.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_007.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_008.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_014.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_015.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_016.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_017.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_018.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_019.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_020.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s81_021.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 82,
@@ -2282,7 +8090,73 @@
       "outfit_s82_015.png",
       "outfit_s82_016.png"
     ],
-    "image_count": 16
+    "image_count": 16,
+    "sized_images": [
+      {
+        "file": "outfit_s82_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_002.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_003.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_004.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_009.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_010.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_013.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_015.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s82_016.png",
+        "accessory": false
+      }
+    ]
   },
   {
     "slide": 83,
@@ -2307,6 +8181,68 @@
       "outfit_s83_014.png",
       "outfit_s83_015.png"
     ],
-    "image_count": 15
+    "image_count": 15,
+    "sized_images": [
+      {
+        "file": "outfit_s83_001.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_002.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_003.png",
+        "accessory": true
+      },
+      {
+        "file": "outfit_s83_004.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_005.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_006.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_007.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_008.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_009.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_010.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_011.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_012.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_013.jpg",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_014.png",
+        "accessory": false
+      },
+      {
+        "file": "outfit_s83_015.png",
+        "accessory": false
+      }
+    ]
   }
 ]
