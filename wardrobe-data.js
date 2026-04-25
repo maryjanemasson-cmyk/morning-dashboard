@@ -574,13 +574,6 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s05_008_png",
-    "file": "s05_008.png",
-    "category": "Shoes",
-    "subcategory": "Sneakers",
-    "labels": []
-  },
-  {
     "id": "s05_005_png",
     "file": "s05_005.png",
     "category": "Shoes",
@@ -588,8 +581,8 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s05_001_jpg",
-    "file": "s05_001.jpg",
+    "id": "s05_006_png",
+    "file": "s05_006.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
     "labels": []
@@ -597,6 +590,20 @@ window.WARDROBE_ITEMS = [
   {
     "id": "s05_002_jpg",
     "file": "s05_002.jpg",
+    "category": "Shoes",
+    "subcategory": "Sneakers",
+    "labels": []
+  },
+  {
+    "id": "s05_008_png",
+    "file": "s05_008.png",
+    "category": "Shoes",
+    "subcategory": "Sneakers",
+    "labels": []
+  },
+  {
+    "id": "s05_001_jpg",
+    "file": "s05_001.jpg",
     "category": "Shoes",
     "subcategory": "Sneakers",
     "labels": []
@@ -611,13 +618,6 @@ window.WARDROBE_ITEMS = [
   {
     "id": "s05_003_png",
     "file": "s05_003.png",
-    "category": "Shoes",
-    "subcategory": "Sneakers",
-    "labels": []
-  },
-  {
-    "id": "s05_006_png",
-    "file": "s05_006.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
     "labels": []
@@ -655,13 +655,6 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s07_016_png",
-    "file": "s07_016.png",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": []
-  },
-  {
     "id": "s07_001_png",
     "file": "s07_001.png",
     "category": "Shoes",
@@ -689,15 +682,6 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_002_jpg",
-    "file": "s08_002.jpg",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Gucci"
-    ]
-  },
-  {
     "id": "s07_007_png",
     "file": "s07_007.png",
     "category": "Shoes",
@@ -721,6 +705,110 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
+    "id": "s07_005_png",
+    "file": "s07_005.png",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Loro Piana"
+    ]
+  },
+  {
+    "id": "s07_002_jpg",
+    "file": "s07_002.jpg",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Tory Burch"
+    ]
+  },
+  {
+    "id": "s07_013_png",
+    "file": "s07_013.png",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Tod\u2019s"
+    ]
+  },
+  {
+    "id": "s07_012_jpg",
+    "file": "s07_012.jpg",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Flattered"
+    ]
+  },
+  {
+    "id": "s07_011_jpg",
+    "file": "s07_011.jpg",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Chanel"
+    ]
+  },
+  {
+    "id": "s08_003_jpg",
+    "file": "s08_003.jpg",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Miu Miu"
+    ]
+  },
+  {
+    "id": "s08_006_png",
+    "file": "s08_006.png",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Chanel"
+    ]
+  },
+  {
+    "id": "s07_008_jpg",
+    "file": "s07_008.jpg",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Chanel"
+    ]
+  },
+  {
+    "id": "s08_013_png",
+    "file": "s08_013.png",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": []
+  },
+  {
+    "id": "s08_008_png",
+    "file": "s08_008.png",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Miu Miu"
+    ]
+  },
+  {
+    "id": "s07_016_png",
+    "file": "s07_016.png",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": []
+  },
+  {
+    "id": "s08_002_jpg",
+    "file": "s08_002.jpg",
+    "category": "Shoes",
+    "subcategory": "Flats",
+    "labels": [
+      "Gucci"
+    ]
+  },
+  {
     "id": "s07_018_png",
     "file": "s07_018.png",
     "category": "Shoes",
@@ -737,30 +825,12 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_002_jpg",
-    "file": "s07_002.jpg",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Tory Burch"
-    ]
-  },
-  {
     "id": "s08_001_jpg",
     "file": "s08_001.jpg",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
       "Gucci"
-    ]
-  },
-  {
-    "id": "s07_005_png",
-    "file": "s07_005.png",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Loro Piana"
     ]
   },
   {
@@ -782,24 +852,6 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_012_jpg",
-    "file": "s07_012.jpg",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Flattered"
-    ]
-  },
-  {
-    "id": "s07_008_jpg",
-    "file": "s07_008.jpg",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Chanel"
-    ]
-  },
-  {
     "id": "s08_012_jpg",
     "file": "s08_012.jpg",
     "category": "Shoes",
@@ -818,44 +870,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_013_png",
-    "file": "s07_013.png",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Tod\u2019s"
-    ]
-  },
-  {
-    "id": "s08_003_jpg",
-    "file": "s08_003.jpg",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Miu Miu"
-    ]
-  },
-  {
-    "id": "s07_011_jpg",
-    "file": "s07_011.jpg",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Chanel"
-    ]
-  },
-  {
     "id": "s08_005_png",
     "file": "s08_005.png",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Chanel"
-    ]
-  },
-  {
-    "id": "s08_006_png",
-    "file": "s08_006.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -869,22 +885,6 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Flats",
     "labels": [
       "Chanel"
-    ]
-  },
-  {
-    "id": "s08_013_png",
-    "file": "s08_013.png",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": []
-  },
-  {
-    "id": "s08_008_png",
-    "file": "s08_008.png",
-    "category": "Shoes",
-    "subcategory": "Flats",
-    "labels": [
-      "Miu Miu"
     ]
   },
   {
@@ -924,15 +924,6 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s06_006_jpg",
-    "file": "s06_006.jpg",
-    "category": "Shoes",
-    "subcategory": "Sandals",
-    "labels": [
-      "Chloe"
-    ]
-  },
-  {
     "id": "s06_002_png",
     "file": "s06_002.png",
     "category": "Shoes",
@@ -969,21 +960,21 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
+    "id": "s06_006_jpg",
+    "file": "s06_006.jpg",
+    "category": "Shoes",
+    "subcategory": "Sandals",
+    "labels": [
+      "Chloe"
+    ]
+  },
+  {
     "id": "s09_001_png",
     "file": "s09_001.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
       "Ayede"
-    ]
-  },
-  {
-    "id": "s09_006_png",
-    "file": "s09_006.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Jimmy Choo"
     ]
   },
   {
@@ -1003,20 +994,20 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
+    "id": "s09_006_png",
+    "file": "s09_006.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Jimmy Choo"
+    ]
+  },
+  {
     "id": "s09_019_png",
     "file": "s09_019.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": []
-  },
-  {
-    "id": "s09_014_png",
-    "file": "s09_014.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Tory Burch"
-    ]
   },
   {
     "id": "s09_012_png",
@@ -1025,15 +1016,6 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "gianvito rossi"
-    ]
-  },
-  {
-    "id": "s09_009_png",
-    "file": "s09_009.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Celine"
     ]
   },
   {
@@ -1071,30 +1053,12 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s10_008_png",
-    "file": "s10_008.png",
+    "id": "s09_014_png",
+    "file": "s09_014.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
-      "Louboutin"
-    ]
-  },
-  {
-    "id": "s09_010_jpg",
-    "file": "s09_010.jpg",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Aquazurra"
-    ]
-  },
-  {
-    "id": "s10_011_png",
-    "file": "s10_011.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Valentino"
+      "Tory Burch"
     ]
   },
   {
@@ -1105,11 +1069,22 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s10_002_png",
-    "file": "s10_002.png",
+    "id": "s10_008_png",
+    "file": "s10_008.png",
     "category": "Shoes",
     "subcategory": "Heels",
-    "labels": []
+    "labels": [
+      "Louboutin"
+    ]
+  },
+  {
+    "id": "s10_010_png",
+    "file": "s10_010.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Aquazurra"
+    ]
   },
   {
     "id": "s09_011_jpg",
@@ -1130,8 +1105,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s10_010_png",
-    "file": "s10_010.png",
+    "id": "s09_010_jpg",
+    "file": "s09_010.jpg",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
@@ -1145,6 +1120,15 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Heels",
     "labels": [
       "Chanel"
+    ]
+  },
+  {
+    "id": "s09_013_png",
+    "file": "s09_013.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Loeffler Randall"
     ]
   },
   {
@@ -1189,24 +1173,6 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s09_013_png",
-    "file": "s09_013.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Loeffler Randall"
-    ]
-  },
-  {
-    "id": "s10_006_png",
-    "file": "s10_006.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Jimmy Choo"
-    ]
-  },
-  {
     "id": "s10_013_png",
     "file": "s10_013.png",
     "category": "Shoes",
@@ -1214,29 +1180,11 @@ window.WARDROBE_ITEMS = [
     "labels": []
   },
   {
-    "id": "s10_012_png",
-    "file": "s10_012.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Khaite"
-    ]
-  },
-  {
     "id": "s09_017_png",
     "file": "s09_017.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": []
-  },
-  {
-    "id": "s10_007_png",
-    "file": "s10_007.png",
-    "category": "Shoes",
-    "subcategory": "Heels",
-    "labels": [
-      "Louboutin"
-    ]
   },
   {
     "id": "s09_005_png",
@@ -1248,21 +1196,73 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s11_003_png",
-    "file": "s11_003.png",
+    "id": "s09_009_png",
+    "file": "s09_009.png",
     "category": "Shoes",
-    "subcategory": "Boots",
+    "subcategory": "Heels",
     "labels": [
-      "Reformation"
+      "Celine"
     ]
   },
   {
-    "id": "s11_008_jpg",
-    "file": "s11_008.jpg",
+    "id": "s10_011_png",
+    "file": "s10_011.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Valentino"
+    ]
+  },
+  {
+    "id": "s10_002_png",
+    "file": "s10_002.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": []
+  },
+  {
+    "id": "s10_006_png",
+    "file": "s10_006.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Jimmy Choo"
+    ]
+  },
+  {
+    "id": "s10_012_png",
+    "file": "s10_012.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Khaite"
+    ]
+  },
+  {
+    "id": "s10_007_png",
+    "file": "s10_007.png",
+    "category": "Shoes",
+    "subcategory": "Heels",
+    "labels": [
+      "Louboutin"
+    ]
+  },
+  {
+    "id": "s11_004_png",
+    "file": "s11_004.png",
     "category": "Shoes",
     "subcategory": "Boots",
     "labels": [
-      "Jimmy Choo"
+      "Paris Texas"
+    ]
+  },
+  {
+    "id": "s11_005_png",
+    "file": "s11_005.png",
+    "category": "Shoes",
+    "subcategory": "Boots",
+    "labels": [
+      "Loro Piano"
     ]
   },
   {
@@ -1279,15 +1279,6 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "UGGS"
-    ]
-  },
-  {
-    "id": "s11_002_png",
-    "file": "s11_002.png",
-    "category": "Shoes",
-    "subcategory": "Boots",
-    "labels": [
-      "Hunter x Rag&Bone"
     ]
   },
   {
@@ -1309,12 +1300,30 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s11_005_png",
-    "file": "s11_005.png",
+    "id": "s11_003_png",
+    "file": "s11_003.png",
     "category": "Shoes",
     "subcategory": "Boots",
     "labels": [
-      "Loro Piano"
+      "Reformation"
+    ]
+  },
+  {
+    "id": "s11_008_jpg",
+    "file": "s11_008.jpg",
+    "category": "Shoes",
+    "subcategory": "Boots",
+    "labels": [
+      "Jimmy Choo"
+    ]
+  },
+  {
+    "id": "s11_002_png",
+    "file": "s11_002.png",
+    "category": "Shoes",
+    "subcategory": "Boots",
+    "labels": [
+      "Hunter x Rag&Bone"
     ]
   },
   {
@@ -1324,15 +1333,6 @@ window.WARDROBE_ITEMS = [
     "subcategory": "Boots",
     "labels": [
       "H&M"
-    ]
-  },
-  {
-    "id": "s11_004_png",
-    "file": "s11_004.png",
-    "category": "Shoes",
-    "subcategory": "Boots",
-    "labels": [
-      "Paris Texas"
     ]
   },
   {
