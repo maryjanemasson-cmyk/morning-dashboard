@@ -440,8 +440,9 @@
 
         const outfitSlides = outfitMap[i.file] || [];
         const outfitBadge = outfitSlides.length > 0
-          ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>`
-          : '';
+          ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>
+             <div style="font-size:0.55rem;color:#b8a48e;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">edit links</div>`
+          : `<div style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">+ link to outfits</div>`;
         gridHtml += `<div class="cat-item" draggable="true"
           data-id="${i.id}"
           ondragstart="startItemDrag(event,'${i.id}')"
@@ -544,6 +545,54 @@
     document.addEventListener('dragend', () => {
       document.querySelectorAll('.cat-item.dragging').forEach(el => el.classList.remove('dragging'));
       _dragItemId = null;
+    });
+
+    // Quick-add outfit links from wardrobe
+    function editOutfitLinks(file, el) {
+      event.stopPropagation();
+      const currentSlides = outfitMap[file] || [];
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'edit-input';
+      input.style.cssText = 'font-size:0.65rem;width:100%;margin-top:0.2rem;';
+      input.value = currentSlides.join(', ');
+      input.placeholder = 'Outfit numbers: 1, 6, 10, 17';
+
+      el.insertAdjacentElement('afterend', input);
+      setTimeout(() => input.focus(), 50);
+
+      function save() {
+        const val = input.value.trim();
+        const slides = val ? val.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n)) : [];
+        // Save to Firebase
+        const fileKey = file.replace(/\./g, '_');
+        db.ref('wardrobeOutfitLinks/' + fileKey).set(slides);
+        // Update local map
+        outfitMap[file] = slides;
+        input.remove();
+        renderCatalogue();
+      }
+
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); save(); }
+        if (e.key === 'Escape') { input.remove(); }
+      });
+      input.addEventListener('blur', save);
+    }
+
+    // Load manual outfit links from Firebase
+    db.ref('wardrobeOutfitLinks').on('value', snap => {
+      const links = snap.val() || {};
+      for (const [fileKey, slides] of Object.entries(links)) {
+        const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
+        if (slides && slides.length) {
+          if (!outfitMap[filename]) outfitMap[filename] = [];
+          slides.forEach(s => {
+            if (!outfitMap[filename].includes(s)) outfitMap[filename].push(s);
+          });
+        }
+      }
+      renderCatalogue();
     });
 
     function viewOutfitsForItem(file) {
