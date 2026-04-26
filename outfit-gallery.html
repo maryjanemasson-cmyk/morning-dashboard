@@ -411,7 +411,7 @@
             ${previewImgs}
           </div>
           <div class="outfit-card-info">
-            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)">${o._filterCat}</div>
+            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)"><span style="font-size:0.65rem;color:#b8a48e;font-weight:400;margin-right:0.3rem;">#${o.slide}</span>${o._filterCat}</div>
             <div class="outfit-card-season" onclick="event.stopPropagation();showSeasonPicker(${o.slide},this)">${o.season}</div>
             <div class="outfit-card-meta">${(o.layout||o.images).length} pieces</div>
             <div class="outfit-card-tags" onclick="event.stopPropagation();editTags(${o.slide},this)">${(o._tags||[]).map(t=>'<span class="outfit-card-tag">'+t+'</span>').join('')}<span style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;${(o._tags||[]).length?'margin-left:0.3rem':''}">+ tag</span></div>
@@ -443,7 +443,7 @@
       if (!o) o = outfits.find(x => x.slide === _editingOutfit);
       if (!o) return;
 
-      let html = `<div class="modal-title">${o._filterCat || o.occasion}</div>`;
+      let html = `<div class="modal-title"><span style="font-size:0.8rem;color:#b8a48e;font-weight:400;margin-right:0.4rem;">#${o.slide}</span>${o._filterCat || o.occasion}</div>`;
       html += `<div class="modal-meta">${o.season} &middot; ${_editLayout.length} pieces</div>`;
 
       // Edit toolbar
