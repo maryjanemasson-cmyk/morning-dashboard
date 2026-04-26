@@ -853,13 +853,33 @@
       const h = Math.abs(_wcropEnd.y - _wcropStart.y) / _wcropScale;
       if (w < 10 || h < 10) { alert('Selection too small'); return; }
 
-      const tempCanvas = document.createElement('canvas');
-      tempCanvas.width = w;
-      tempCanvas.height = h;
-      tempCanvas.getContext('2d').drawImage(_wcropImg, x, y, w, h, 0, 0, w, h);
+      // Crop the selected area
+      const cropCanvas = document.createElement('canvas');
+      cropCanvas.width = w;
+      cropCanvas.height = h;
+      cropCanvas.getContext('2d').drawImage(_wcropImg, x, y, w, h, 0, 0, w, h);
 
-      // Save cropped image back to server via Firebase
-      const dataUrl = tempCanvas.toDataURL('image/png');
+      // Now center it on a 300x400 cream background (matching wardrobe card style)
+      const TW = 300, TH = 400;
+      const BG = [249, 247, 244];
+      const finalCanvas = document.createElement('canvas');
+      finalCanvas.width = TW;
+      finalCanvas.height = TH;
+      const ctx = finalCanvas.getContext('2d');
+      ctx.fillStyle = `rgb(${BG[0]},${BG[1]},${BG[2]})`;
+      ctx.fillRect(0, 0, TW, TH);
+
+      // Fit cropped image into 85% of card, maintaining aspect ratio
+      let drawW = w, drawH = h;
+      const maxW = TW * 0.85, maxH = TH * 0.90;
+      const scale = Math.min(maxW / drawW, maxH / drawH, 1);
+      drawW = Math.round(drawW * scale);
+      drawH = Math.round(drawH * scale);
+      const px = Math.round((TW - drawW) / 2);
+      const py = Math.round((TH - drawH) / 2);
+      ctx.drawImage(cropCanvas, 0, 0, w, h, px, py, drawW, drawH);
+
+      const dataUrl = finalCanvas.toDataURL('image/png');
       db.ref('wardrobeCrops/' + _wcropFile.replace(/\./g, '_')).set(dataUrl);
 
       // Update the thumbnail in the current page
