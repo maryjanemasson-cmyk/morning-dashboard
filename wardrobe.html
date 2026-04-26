@@ -371,9 +371,15 @@
         for (const item of edit.layout) {
           const f = item.file || '';
           if (f.includes('wardrobe-thumbs/')) {
-            const wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
-            if (!outfitMap[wFile]) outfitMap[wFile] = [];
-            if (!outfitMap[wFile].includes(slide)) outfitMap[wFile].push(slide);
+            let wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+            // Handle jpg/png mismatch from conversion
+            const wFilePng = wFile.replace('.jpg', '.png');
+            const wFileJpg = wFile.replace('.png', '.jpg');
+            // Try all variants
+            [wFile, wFilePng, wFileJpg].forEach(variant => {
+              if (!outfitMap[variant]) outfitMap[variant] = [];
+              if (!outfitMap[variant].includes(slide)) outfitMap[variant].push(slide);
+            });
           }
         }
       }
