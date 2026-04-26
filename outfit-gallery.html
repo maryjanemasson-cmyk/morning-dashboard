@@ -595,8 +595,10 @@
       const MAX_SHOW = 200;
       grid.innerHTML = filtered.slice(0, MAX_SHOW).map(i => {
         const tooltip = [i.subcategory, ...(i.labels || []), ...(i.colors || [])].join(', ');
-        return `<img src="wardrobe-thumbs/${i.file}" alt="${i.subcategory}" title="${tooltip}"
-          onclick="addPieceFromWardrobe('wardrobe-thumbs/${i.file}')" />`;
+        const fileKey = i.file.replace(/\./g, '_');
+        const imgSrc = (_wardrobeCrops[fileKey]) || (i._customImage) || ('wardrobe-thumbs/' + i.file);
+        return `<img src="${imgSrc}" alt="${i.subcategory}" title="${tooltip}"
+          onclick="addPieceFromWardrobe('${i.file}')" />`;
       }).join('');
 
       // Show result count
@@ -956,14 +958,18 @@
 
     // Override addPieceFromWardrobe to use cropped version if available
     const _origAddPiece = addPieceFromWardrobe;
-    addPieceFromWardrobe = function(filePath) {
-      const filename = filePath.split('/').pop();
+    addPieceFromWardrobe = function(filename) {
       const fileKey = filename.replace(/\./g, '_');
       const croppedUrl = _wardrobeCrops[fileKey];
+      // Find custom items too
+      const wardrobeItems = window.WARDROBE_ITEMS || [];
+      const customItem = wardrobeItems.find(i => i.id === filename && i._customImage);
+
+      const imgSrc = croppedUrl || (customItem && customItem._customImage) || ('../wardrobe-thumbs/' + filename);
 
       _editLayout.push({
-        file: croppedUrl || filePath.replace('wardrobe-thumbs/', '../wardrobe-thumbs/'),
-        _origFile: filePath,
+        file: imgSrc,
+        _origFile: filename,
         left: 40, top: 30, width: 15, height: 25
       });
       renderDetail();
