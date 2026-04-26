@@ -353,8 +353,32 @@
       ).join('');
     }
 
-    const outfitMap = window.WARDROBE_OUTFIT_MAP || {};
+    let outfitMap = window.WARDROBE_OUTFIT_MAP ? JSON.parse(JSON.stringify(window.WARDROBE_OUTFIT_MAP)) : {};
     let _itemOverrides = {}; // Firebase overrides for category/subcategory
+
+    // Build dynamic outfit map from Firebase edits (catches manually added wardrobe items)
+    db.ref('outfitEdits').on('value', snap => {
+      const edits = snap.val() || {};
+      // Start fresh from static map
+      outfitMap = window.WARDROBE_OUTFIT_MAP ? JSON.parse(JSON.stringify(window.WARDROBE_OUTFIT_MAP)) : {};
+
+      // Scan all Firebase-edited layouts for wardrobe items
+      const entries = Array.isArray(edits) ? edits.map((v,i) => [i,v]) : Object.entries(edits);
+      for (const [slideKey, edit] of entries) {
+        if (!edit || !edit.layout) continue;
+        const slide = parseInt(slideKey);
+        for (const item of edit.layout) {
+          const f = item.file || '';
+          if (f.includes('wardrobe-thumbs/')) {
+            const wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+            if (!outfitMap[wFile]) outfitMap[wFile] = [];
+            if (!outfitMap[wFile].includes(slide)) outfitMap[wFile].push(slide);
+          }
+        }
+      }
+      renderCatFilters();
+      renderCatalogue();
+    });
 
     // Load overrides from Firebase
     db.ref('wardrobeEdits').on('value', snap => {
