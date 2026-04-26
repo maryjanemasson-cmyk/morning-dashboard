@@ -291,6 +291,7 @@
       <img id="zoom-img" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:10px;" />
       <div style="text-align:center;margin-top:0.75rem;">
         <button onclick="openWardrobeCrop()" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid #fff;background:rgba(0,111,237,0.9);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;">Crop This Image</button>
+        <button onclick="resetToOriginal()" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid #fff;background:rgba(200,100,0,0.9);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;margin-left:0.5rem;">Reset to Original</button>
         <button onclick="document.getElementById('zoom-modal').classList.remove('open')" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.5);background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;margin-left:0.5rem;">Close</button>
       </div>
     </div>
@@ -804,6 +805,56 @@
     let _wcropEnd = null;
     let _wcropping = false;
     let _wcropScale = 1;
+
+    function resetToOriginal() {
+      const src = document.getElementById('zoom-img').src;
+      const parts = src.split('/');
+      const filename = parts[parts.length - 1];
+
+      if (!confirm('Reset this image to the original from the inventory? This will undo any cropping.')) return;
+
+      // Load original from wardrobe-images/ instead of wardrobe-thumbs/
+      const origSrc = src.replace('wardrobe-thumbs/', 'wardrobe-images/');
+
+      const imgEl = new window.Image();
+      imgEl.crossOrigin = 'anonymous';
+      imgEl.onload = function() {
+        // Fit original into 300x400 card with cream background - no content detection
+        const TW = 300, TH = 400;
+        const BG_R = 249, BG_G = 247, BG_B = 244;
+        const canvas = document.createElement('canvas');
+        canvas.width = TW;
+        canvas.height = TH;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = `rgb(${BG_R},${BG_G},${BG_B})`;
+        ctx.fillRect(0, 0, TW, TH);
+
+        // Scale to fit
+        let dw = imgEl.width, dh = imgEl.height;
+        const scale = Math.min((TW - 10) / dw, (TH - 10) / dh);
+        dw = Math.round(dw * scale);
+        dh = Math.round(dh * scale);
+        ctx.drawImage(imgEl, (TW - dw) / 2, (TH - dh) / 2, dw, dh);
+
+        const dataUrl = canvas.toDataURL('image/png');
+
+        // Save to Firebase (overwrite any existing crop)
+        const fileKey = filename.replace(/\./g, '_');
+        db.ref('wardrobeCrops/' + fileKey).set(dataUrl);
+
+        // Update on page
+        document.querySelectorAll(`img[src*="${filename}"]`).forEach(img => {
+          img.src = dataUrl;
+        });
+        document.getElementById('zoom-img').src = dataUrl;
+
+        alert('Image reset to original!');
+      };
+      imgEl.onerror = function() {
+        alert('Could not load original image.');
+      };
+      imgEl.src = origSrc;
+    }
 
     function openWardrobeCrop() {
       document.getElementById('zoom-modal').classList.remove('open');
