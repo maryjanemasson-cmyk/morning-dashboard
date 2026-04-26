@@ -846,7 +846,7 @@
         div.className = 'canvas-item';
         div.style.cssText = `left:${item.x}px;top:${item.y}px;width:${item.w}px;height:${item.h}px;`;
         div.innerHTML = `
-          <img src="${IMG_PATH}${item.file}" alt="" />
+          <img src="${item.file.startsWith('data:') || item.file.startsWith('outfit-') || item.file.startsWith('wardrobe-') || item.file.startsWith('http') || item.file.startsWith('../') ? item.file : IMG_PATH + item.file}" alt="" />
           <button class="remove-btn" onclick="removeCanvasItem(${idx})">&times;</button>
           <div class="resize-handle" onmousedown="startResize(event,${idx})"></div>
         `;
