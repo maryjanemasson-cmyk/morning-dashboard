@@ -109,8 +109,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s01_006_jpg",
-    "file": "s01_006.jpg",
+    "id": "s01_006_png",
+    "file": "s01_006.png",
     "category": "Accessories",
     "subcategory": "Accesories",
     "labels": [],
@@ -240,8 +240,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s01_013_jpg",
-    "file": "s01_013.jpg",
+    "id": "s01_013_png",
+    "file": "s01_013.png",
     "category": "Accessories",
     "subcategory": "Accesories",
     "labels": [],
@@ -262,8 +262,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s01_010_jpg",
-    "file": "s01_010.jpg",
+    "id": "s01_010_png",
+    "file": "s01_010.png",
     "category": "Accessories",
     "subcategory": "Accesories",
     "labels": [],
@@ -284,8 +284,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s01_003_jpg",
-    "file": "s01_003.jpg",
+    "id": "s01_003_png",
+    "file": "s01_003.png",
     "category": "Accessories",
     "subcategory": "Accesories",
     "labels": [],
@@ -306,8 +306,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s04_005_jpg",
-    "file": "s04_005.jpg",
+    "id": "s04_005_png",
+    "file": "s04_005.png",
     "category": "Bags",
     "subcategory": "Large Bags",
     "labels": [],
@@ -362,8 +362,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s04_004_jpg",
-    "file": "s04_004.jpg",
+    "id": "s04_004_png",
+    "file": "s04_004.png",
     "category": "Bags",
     "subcategory": "Large Bags",
     "labels": [],
@@ -376,8 +376,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s04_002_jpg",
-    "file": "s04_002.jpg",
+    "id": "s04_002_png",
+    "file": "s04_002.png",
     "category": "Bags",
     "subcategory": "Large Bags",
     "labels": [],
@@ -428,8 +428,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s04_003_jpg",
-    "file": "s04_003.jpg",
+    "id": "s04_003_png",
+    "file": "s04_003.png",
     "category": "Bags",
     "subcategory": "Large Bags",
     "labels": [],
@@ -480,8 +480,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_003_jpg",
-    "file": "s03_003.jpg",
+    "id": "s03_003_png",
+    "file": "s03_003.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -528,8 +528,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_008_jpg",
-    "file": "s03_008.jpg",
+    "id": "s03_008_png",
+    "file": "s03_008.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -575,8 +575,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_014_jpg",
-    "file": "s03_014.jpg",
+    "id": "s03_014_png",
+    "file": "s03_014.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -589,8 +589,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s02_001_jpg",
-    "file": "s02_001.jpg",
+    "id": "s02_001_png",
+    "file": "s02_001.png",
     "category": "Bags",
     "subcategory": "Small Bags",
     "labels": [
@@ -616,8 +616,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_001_jpg",
-    "file": "s03_001.jpg",
+    "id": "s03_001_png",
+    "file": "s03_001.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -661,8 +661,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_006_jpg",
-    "file": "s03_006.jpg",
+    "id": "s03_006_png",
+    "file": "s03_006.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -677,8 +677,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_004_jpg",
-    "file": "s03_004.jpg",
+    "id": "s03_004_png",
+    "file": "s03_004.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -711,8 +711,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s02_003_jpg",
-    "file": "s02_003.jpg",
+    "id": "s02_003_png",
+    "file": "s02_003.png",
     "category": "Bags",
     "subcategory": "Small Bags",
     "labels": [
@@ -781,8 +781,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_009_jpg",
-    "file": "s03_009.jpg",
+    "id": "s03_009_png",
+    "file": "s03_009.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -812,8 +812,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_002_jpg",
-    "file": "s03_002.jpg",
+    "id": "s03_002_png",
+    "file": "s03_002.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -854,8 +854,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s02_004_jpg",
-    "file": "s02_004.jpg",
+    "id": "s02_004_png",
+    "file": "s02_004.png",
     "category": "Bags",
     "subcategory": "Small Bags",
     "labels": [
@@ -867,8 +867,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s02_012_jpg",
-    "file": "s02_012.jpg",
+    "id": "s02_012_png",
+    "file": "s02_012.png",
     "category": "Bags",
     "subcategory": "Small Bags",
     "labels": [
@@ -880,8 +880,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s03_005_jpg",
-    "file": "s03_005.jpg",
+    "id": "s03_005_png",
+    "file": "s03_005.png",
     "category": "Bags",
     "subcategory": "Medium Bags",
     "labels": [
@@ -893,8 +893,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s02_002_jpg",
-    "file": "s02_002.jpg",
+    "id": "s02_002_png",
+    "file": "s02_002.png",
     "category": "Bags",
     "subcategory": "Small Bags",
     "labels": [
@@ -1121,8 +1121,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s39_023_jpg",
-    "file": "s39_023.jpg",
+    "id": "s39_023_png",
+    "file": "s39_023.png",
     "category": "Casual",
     "subcategory": "Casual",
     "labels": [],
@@ -1648,8 +1648,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s36_011_jpg",
-    "file": "s36_011.jpg",
+    "id": "s36_011_png",
+    "file": "s36_011.png",
     "category": "Dresses",
     "subcategory": "All Season Dresses",
     "labels": [
@@ -1860,8 +1860,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s37_010_jpg",
-    "file": "s37_010.jpg",
+    "id": "s37_010_png",
+    "file": "s37_010.png",
     "category": "Dresses",
     "subcategory": "All Season Dresses",
     "labels": [
@@ -1872,8 +1872,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s37_009_jpg",
-    "file": "s37_009.jpg",
+    "id": "s37_009_png",
+    "file": "s37_009.png",
     "category": "Dresses",
     "subcategory": "All Season Dresses",
     "labels": [
@@ -1920,8 +1920,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s37_001_jpg",
-    "file": "s37_001.jpg",
+    "id": "s37_001_png",
+    "file": "s37_001.png",
     "category": "Dresses",
     "subcategory": "All Season Dresses",
     "labels": [],
@@ -1933,8 +1933,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s38_004_jpg",
-    "file": "s38_004.jpg",
+    "id": "s38_004_png",
+    "file": "s38_004.png",
     "category": "Dresses",
     "subcategory": "Dark Dresses",
     "labels": [
@@ -2322,8 +2322,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s12_012_jpg",
-    "file": "s12_012.jpg",
+    "id": "s12_012_png",
+    "file": "s12_012.png",
     "category": "Jackets & Coats",
     "subcategory": "Blazers",
     "labels": [
@@ -2381,8 +2381,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s12_009_jpg",
-    "file": "s12_009.jpg",
+    "id": "s12_009_png",
+    "file": "s12_009.png",
     "category": "Jackets & Coats",
     "subcategory": "Blazers",
     "labels": [
@@ -2408,8 +2408,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s12_004_jpg",
-    "file": "s12_004.jpg",
+    "id": "s12_004_png",
+    "file": "s12_004.png",
     "category": "Jackets & Coats",
     "subcategory": "Blazers",
     "labels": [
@@ -2575,8 +2575,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s12_003_jpg",
-    "file": "s12_003.jpg",
+    "id": "s12_003_png",
+    "file": "s12_003.png",
     "category": "Jackets & Coats",
     "subcategory": "Blazers",
     "labels": [
@@ -2826,8 +2826,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s14_013_jpg",
-    "file": "s14_013.jpg",
+    "id": "s14_013_png",
+    "file": "s14_013.png",
     "category": "Jackets & Coats",
     "subcategory": "Light Jackets",
     "labels": [
@@ -2838,8 +2838,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s14_002_jpg",
-    "file": "s14_002.jpg",
+    "id": "s14_002_png",
+    "file": "s14_002.png",
     "category": "Jackets & Coats",
     "subcategory": "Light Jackets",
     "labels": [
@@ -2953,8 +2953,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s14_001_jpg",
-    "file": "s14_001.jpg",
+    "id": "s14_001_png",
+    "file": "s14_001.png",
     "category": "Jackets & Coats",
     "subcategory": "Light Jackets",
     "labels": [
@@ -3047,8 +3047,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s15_001_jpg",
-    "file": "s15_001.jpg",
+    "id": "s15_001_png",
+    "file": "s15_001.png",
     "category": "Jackets & Coats",
     "subcategory": "Heavy Jackets",
     "labels": [
@@ -3993,8 +3993,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s23_009_jpg",
-    "file": "s23_009.jpg",
+    "id": "s23_009_png",
+    "file": "s23_009.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
     "labels": [
@@ -4024,8 +4024,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s23_004_jpg",
-    "file": "s23_004.jpg",
+    "id": "s23_004_png",
+    "file": "s23_004.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
     "labels": [
@@ -4052,8 +4052,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s23_006_jpg",
-    "file": "s23_006.jpg",
+    "id": "s23_006_png",
+    "file": "s23_006.png",
     "category": "Knitwear",
     "subcategory": "Cardigans",
     "labels": [
@@ -4405,8 +4405,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s24_010_jpg",
-    "file": "s24_010.jpg",
+    "id": "s24_010_png",
+    "file": "s24_010.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
     "labels": [
@@ -4417,8 +4417,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s24_002_jpg",
-    "file": "s24_002.jpg",
+    "id": "s24_002_png",
+    "file": "s24_002.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
     "labels": [
@@ -4455,8 +4455,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s25_005_jpg",
-    "file": "s25_005.jpg",
+    "id": "s25_005_png",
+    "file": "s25_005.png",
     "category": "Knitwear",
     "subcategory": "Pullovers",
     "labels": [
@@ -4619,8 +4619,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s26_014_jpg",
-    "file": "s26_014.jpg",
+    "id": "s26_014_png",
+    "file": "s26_014.png",
     "category": "Knitwear",
     "subcategory": "Turtlenecks",
     "labels": [
@@ -4711,8 +4711,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s27_014_jpg",
-    "file": "s27_014.jpg",
+    "id": "s27_014_png",
+    "file": "s27_014.png",
     "category": "Pants",
     "subcategory": "Jeans",
     "labels": [
@@ -5086,8 +5086,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s28_011_jpg",
-    "file": "s28_011.jpg",
+    "id": "s28_011_png",
+    "file": "s28_011.png",
     "category": "Pants",
     "subcategory": "Casual Pants",
     "labels": [
@@ -5250,8 +5250,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s29_008_jpg",
-    "file": "s29_008.jpg",
+    "id": "s29_008_png",
+    "file": "s29_008.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
     "labels": [
@@ -5528,8 +5528,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s30_011_jpg",
-    "file": "s30_011.jpg",
+    "id": "s30_011_png",
+    "file": "s30_011.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
     "labels": [],
@@ -5639,8 +5639,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s31_002_jpg",
-    "file": "s31_002.jpg",
+    "id": "s31_002_png",
+    "file": "s31_002.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
     "labels": [
@@ -5651,8 +5651,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s31_009_jpg",
-    "file": "s31_009.jpg",
+    "id": "s31_009_png",
+    "file": "s31_009.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
     "labels": [
@@ -5728,8 +5728,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s31_012_jpg",
-    "file": "s31_012.jpg",
+    "id": "s31_012_png",
+    "file": "s31_012.png",
     "category": "Pants",
     "subcategory": "Dress Pants",
     "labels": [],
@@ -5842,8 +5842,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s05_002_jpg",
-    "file": "s05_002.jpg",
+    "id": "s05_002_png",
+    "file": "s05_002.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
     "labels": [],
@@ -5868,8 +5868,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s05_001_jpg",
-    "file": "s05_001.jpg",
+    "id": "s05_001_png",
+    "file": "s05_001.png",
     "category": "Shoes",
     "subcategory": "Sneakers",
     "labels": [],
@@ -5980,8 +5980,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_010_jpg",
-    "file": "s07_010.jpg",
+    "id": "s07_010_png",
+    "file": "s07_010.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6053,8 +6053,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_002_jpg",
-    "file": "s07_002.jpg",
+    "id": "s07_002_png",
+    "file": "s07_002.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6083,8 +6083,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_012_jpg",
-    "file": "s07_012.jpg",
+    "id": "s07_012_png",
+    "file": "s07_012.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6099,8 +6099,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_011_jpg",
-    "file": "s07_011.jpg",
+    "id": "s07_011_png",
+    "file": "s07_011.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6115,8 +6115,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_003_jpg",
-    "file": "s08_003.jpg",
+    "id": "s08_003_png",
+    "file": "s08_003.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6146,8 +6146,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s07_008_jpg",
-    "file": "s07_008.jpg",
+    "id": "s07_008_png",
+    "file": "s07_008.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6198,8 +6198,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_002_jpg",
-    "file": "s08_002.jpg",
+    "id": "s08_002_png",
+    "file": "s08_002.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6224,8 +6224,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_011_jpg",
-    "file": "s08_011.jpg",
+    "id": "s08_011_png",
+    "file": "s08_011.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6238,8 +6238,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_001_jpg",
-    "file": "s08_001.jpg",
+    "id": "s08_001_png",
+    "file": "s08_001.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6264,8 +6264,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_007_jpg",
-    "file": "s08_007.jpg",
+    "id": "s08_007_png",
+    "file": "s08_007.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6276,8 +6276,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_012_jpg",
-    "file": "s08_012.jpg",
+    "id": "s08_012_png",
+    "file": "s08_012.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6325,8 +6325,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s08_010_jpg",
-    "file": "s08_010.jpg",
+    "id": "s08_010_png",
+    "file": "s08_010.png",
     "category": "Shoes",
     "subcategory": "Flats",
     "labels": [
@@ -6355,8 +6355,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s06_003_jpg",
-    "file": "s06_003.jpg",
+    "id": "s06_003_png",
+    "file": "s06_003.png",
     "category": "Shoes",
     "subcategory": "Sandals",
     "labels": [
@@ -6372,8 +6372,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s06_005_jpg",
-    "file": "s06_005.jpg",
+    "id": "s06_005_png",
+    "file": "s06_005.png",
     "category": "Shoes",
     "subcategory": "Sandals",
     "labels": [
@@ -6422,8 +6422,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s06_004_jpg",
-    "file": "s06_004.jpg",
+    "id": "s06_004_png",
+    "file": "s06_004.png",
     "category": "Shoes",
     "subcategory": "Sandals",
     "labels": [
@@ -6453,8 +6453,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s06_006_jpg",
-    "file": "s06_006.jpg",
+    "id": "s06_006_png",
+    "file": "s06_006.png",
     "category": "Shoes",
     "subcategory": "Sandals",
     "labels": [
@@ -6496,8 +6496,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s09_015_jpg",
-    "file": "s09_015.jpg",
+    "id": "s09_015_png",
+    "file": "s09_015.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [],
@@ -6549,8 +6549,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s09_004_jpg",
-    "file": "s09_004.jpg",
+    "id": "s09_004_png",
+    "file": "s09_004.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
@@ -6661,8 +6661,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s09_011_jpg",
-    "file": "s09_011.jpg",
+    "id": "s09_011_png",
+    "file": "s09_011.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
@@ -6677,8 +6677,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s10_003_jpg",
-    "file": "s10_003.jpg",
+    "id": "s10_003_png",
+    "file": "s10_003.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
@@ -6693,8 +6693,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s09_010_jpg",
-    "file": "s09_010.jpg",
+    "id": "s09_010_png",
+    "file": "s09_010.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
@@ -6709,8 +6709,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s10_005_jpg",
-    "file": "s10_005.jpg",
+    "id": "s10_005_png",
+    "file": "s10_005.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [
@@ -6753,8 +6753,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s10_001_jpg",
-    "file": "s10_001.jpg",
+    "id": "s10_001_png",
+    "file": "s10_001.png",
     "category": "Shoes",
     "subcategory": "Heels",
     "labels": [],
@@ -6994,8 +6994,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s11_010_jpg",
-    "file": "s11_010.jpg",
+    "id": "s11_010_png",
+    "file": "s11_010.png",
     "category": "Shoes",
     "subcategory": "Boots",
     "labels": [
@@ -7036,8 +7036,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s11_008_jpg",
-    "file": "s11_008.jpg",
+    "id": "s11_008_png",
+    "file": "s11_008.png",
     "category": "Shoes",
     "subcategory": "Boots",
     "labels": [
@@ -7306,8 +7306,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s32_002_jpg",
-    "file": "s32_002.jpg",
+    "id": "s32_002_png",
+    "file": "s32_002.png",
     "category": "Skirts",
     "subcategory": "Skirts",
     "labels": [
@@ -7760,8 +7760,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s33_003_jpg",
-    "file": "s33_003.jpg",
+    "id": "s33_003_png",
+    "file": "s33_003.png",
     "category": "Skirts",
     "subcategory": "Skirts",
     "labels": [
@@ -7800,8 +7800,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s17_001_jpg",
-    "file": "s17_001.jpg",
+    "id": "s17_001_png",
+    "file": "s17_001.png",
     "category": "Tops",
     "subcategory": "Tanks & Camisoles",
     "labels": [
@@ -8021,8 +8021,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s18_008_jpg",
-    "file": "s18_008.jpg",
+    "id": "s18_008_png",
+    "file": "s18_008.png",
     "category": "Tops",
     "subcategory": "Short Sleeve",
     "labels": [
@@ -8036,8 +8036,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s18_016_jpg",
-    "file": "s18_016.jpg",
+    "id": "s18_016_png",
+    "file": "s18_016.png",
     "category": "Tops",
     "subcategory": "Short Sleeve",
     "labels": [
@@ -8051,8 +8051,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s18_002_jpg",
-    "file": "s18_002.jpg",
+    "id": "s18_002_png",
+    "file": "s18_002.png",
     "category": "Tops",
     "subcategory": "Short Sleeve",
     "labels": [
@@ -8197,8 +8197,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s18_003_jpg",
-    "file": "s18_003.jpg",
+    "id": "s18_003_png",
+    "file": "s18_003.png",
     "category": "Tops",
     "subcategory": "Short Sleeve",
     "labels": [
@@ -8245,8 +8245,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s18_015_jpg",
-    "file": "s18_015.jpg",
+    "id": "s18_015_png",
+    "file": "s18_015.png",
     "category": "Tops",
     "subcategory": "Short Sleeve",
     "labels": [
@@ -8677,8 +8677,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s20_011_jpg",
-    "file": "s20_011.jpg",
+    "id": "s20_011_png",
+    "file": "s20_011.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [
@@ -8781,8 +8781,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s20_003_jpg",
-    "file": "s20_003.jpg",
+    "id": "s20_003_png",
+    "file": "s20_003.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [
@@ -8891,8 +8891,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s20_020_jpg",
-    "file": "s20_020.jpg",
+    "id": "s20_020_png",
+    "file": "s20_020.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [],
@@ -8918,8 +8918,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s20_019_jpg",
-    "file": "s20_019.jpg",
+    "id": "s20_019_png",
+    "file": "s20_019.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [
@@ -8969,8 +8969,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s22_013_jpg",
-    "file": "s22_013.jpg",
+    "id": "s22_013_png",
+    "file": "s22_013.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [],
@@ -9146,8 +9146,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s21_008_jpg",
-    "file": "s21_008.jpg",
+    "id": "s21_008_png",
+    "file": "s21_008.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [
@@ -9213,8 +9213,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s21_001_jpg",
-    "file": "s21_001.jpg",
+    "id": "s21_001_png",
+    "file": "s21_001.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [],
@@ -9238,8 +9238,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s22_006_jpg",
-    "file": "s22_006.jpg",
+    "id": "s22_006_png",
+    "file": "s22_006.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [
@@ -9262,8 +9262,8 @@ window.WARDROBE_ITEMS = [
     ]
   },
   {
-    "id": "s22_003_jpg",
-    "file": "s22_003.jpg",
+    "id": "s22_003_png",
+    "file": "s22_003.png",
     "category": "Tops",
     "subcategory": "Shirts",
     "labels": [
