@@ -354,37 +354,67 @@
       ).join('');
     }
 
-    let outfitMap = window.WARDROBE_OUTFIT_MAP ? JSON.parse(JSON.stringify(window.WARDROBE_OUTFIT_MAP)) : {};
+    let outfitMap = {};
     let _itemOverrides = {}; // Firebase overrides for category/subcategory
 
-    // Build dynamic outfit map from Firebase edits (catches manually added wardrobe items)
-    db.ref('outfitEdits').on('value', snap => {
-      const edits = snap.val() || {};
-      // Start fresh from static map
-      outfitMap = window.WARDROBE_OUTFIT_MAP ? JSON.parse(JSON.stringify(window.WARDROBE_OUTFIT_MAP)) : {};
+    // Build outfit map from THREE reliable Firebase sources only:
+    // 1. outfitEdits (wardrobe items added via editor)
+    // 2. wardrobeOutfitLinks (manual links typed by user)
+    // No more unreliable fingerprinting
 
-      // Scan all Firebase-edited layouts for wardrobe items
-      const entries = Array.isArray(edits) ? edits.map((v,i) => [i,v]) : Object.entries(edits);
-      for (const [slideKey, edit] of entries) {
-        if (!edit || !edit.layout) continue;
-        const slide = parseInt(slideKey);
-        for (const item of edit.layout) {
-          const f = item.file || '';
-          if (f.includes('wardrobe-thumbs/')) {
-            let wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
-            // Handle jpg/png mismatch from conversion
-            const wFilePng = wFile.replace('.jpg', '.png');
-            const wFileJpg = wFile.replace('.png', '.jpg');
-            // Try all variants
-            [wFile, wFilePng, wFileJpg].forEach(variant => {
-              if (!outfitMap[variant]) outfitMap[variant] = [];
-              if (!outfitMap[variant].includes(slide)) outfitMap[variant].push(slide);
-            });
+    function rebuildOutfitMap() {
+      outfitMap = {};
+
+      function addLink(file, slide) {
+        // Add both jpg and png variants
+        const variants = [file, file.replace('.jpg','.png'), file.replace('.png','.jpg')];
+        variants.forEach(v => {
+          if (!outfitMap[v]) outfitMap[v] = [];
+          if (!outfitMap[v].includes(slide)) outfitMap[v].push(slide);
+        });
+      }
+
+      // Source 1: wardrobe items added to outfits via editor
+      if (_outfitEditsData) {
+        const entries = Array.isArray(_outfitEditsData) ? _outfitEditsData.map((v,i) => [i,v]) : Object.entries(_outfitEditsData);
+        for (const [slideKey, edit] of entries) {
+          if (!edit || !edit.layout) continue;
+          const slide = parseInt(slideKey);
+          for (const item of edit.layout) {
+            const f = item.file || '';
+            if (f.includes('wardrobe-thumbs/')) {
+              const wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+              addLink(wFile, slide);
+            }
           }
         }
       }
+
+      // Source 2: manual links typed by user
+      if (_manualOutfitLinks) {
+        for (const [fileKey, slides] of Object.entries(_manualOutfitLinks)) {
+          const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
+          if (slides && slides.length) {
+            slides.forEach(s => addLink(filename, s));
+          }
+        }
+      }
+
       renderCatFilters();
       renderCatalogue();
+    }
+
+    let _outfitEditsData = null;
+    let _manualOutfitLinks = null;
+
+    db.ref('outfitEdits').on('value', snap => {
+      _outfitEditsData = snap.val() || {};
+      rebuildOutfitMap();
+    });
+
+    db.ref('wardrobeOutfitLinks').on('value', snap => {
+      _manualOutfitLinks = snap.val() || {};
+      rebuildOutfitMap();
     });
 
     // Load overrides from Firebase
@@ -579,21 +609,6 @@
       });
       input.addEventListener('blur', save);
     }
-
-    // Load manual outfit links from Firebase
-    db.ref('wardrobeOutfitLinks').on('value', snap => {
-      const links = snap.val() || {};
-      for (const [fileKey, slides] of Object.entries(links)) {
-        const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
-        if (slides && slides.length) {
-          if (!outfitMap[filename]) outfitMap[filename] = [];
-          slides.forEach(s => {
-            if (!outfitMap[filename].includes(s)) outfitMap[filename].push(s);
-          });
-        }
-      }
-      renderCatalogue();
-    });
 
     function viewOutfitsForItem(file) {
       const slides = outfitMap[file] || [];
