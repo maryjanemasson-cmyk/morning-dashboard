@@ -1108,7 +1108,7 @@
 
         if (!lastDate) {
           statusHtml = '<span class="chore-ago overdue">Due now</span>';
-          detailHtml = `<span style="font-size:0.6rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Never done</span>`;
+          detailHtml = `<span style="font-size:0.7rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Never done</span>`;
         } else {
           const last = new Date(lastDate);
           const daysAgo = Math.floor((now - last) / 86400000);
@@ -1128,7 +1128,7 @@
           }
 
           statusHtml = `<span class="chore-ago ${cls}">${statusLabel}</span>`;
-          detailHtml = `<span style="font-size:0.6rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Last: ${lastStr}</span>`;
+          detailHtml = `<span style="font-size:0.7rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Last: ${lastStr}</span>`;
         }
 
         html += `<div class="chore-item" style="flex-wrap:wrap;">
