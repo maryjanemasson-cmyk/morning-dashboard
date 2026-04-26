@@ -941,6 +941,34 @@
       _cropping = false;
     }
 
+    // Apply wardrobe crops to outfit images
+    let _wardrobeCrops = {};
+    db.ref('wardrobeCrops').on('value', snap => {
+      _wardrobeCrops = snap.val() || {};
+      // Update any visible images that match
+      for (const [fileKey, dataUrl] of Object.entries(_wardrobeCrops)) {
+        const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
+        document.querySelectorAll(`img[src*="${filename}"]`).forEach(img => {
+          img.src = dataUrl;
+        });
+      }
+    });
+
+    // Override addPieceFromWardrobe to use cropped version if available
+    const _origAddPiece = addPieceFromWardrobe;
+    addPieceFromWardrobe = function(filePath) {
+      const filename = filePath.split('/').pop();
+      const fileKey = filename.replace(/\./g, '_');
+      const croppedUrl = _wardrobeCrops[fileKey];
+
+      _editLayout.push({
+        file: croppedUrl || filePath.replace('wardrobe-thumbs/', '../wardrobe-thumbs/'),
+        _origFile: filePath,
+        left: 40, top: 30, width: 15, height: 25
+      });
+      renderDetail();
+    };
+
     // Initial render (after all functions defined)
     render();
   </script>
