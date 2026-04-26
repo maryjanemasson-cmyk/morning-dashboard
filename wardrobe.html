@@ -206,6 +206,7 @@
         <input type="text" class="search-input" id="cat-search" placeholder="Search wardrobe..." oninput="renderCatalogue()" />
         <div id="cat-filters"></div>
         <span class="item-count" id="cat-count"></span>
+        <button onclick="document.getElementById('add-item-modal').classList.add('open')" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
       </div>
       <div id="cat-grid" class="cat-grid"></div>
     </div>
@@ -235,6 +236,51 @@
           </div>
           <div class="saved-outfits" id="saved-outfits"></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Item Modal -->
+  <div class="modal-overlay" id="add-item-modal">
+    <div style="background:#fff;border-radius:12px;max-width:500px;width:100%;padding:2rem;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+      <button onclick="document.getElementById('add-item-modal').classList.remove('open')" style="position:absolute;top:1rem;right:1.25rem;font-size:1.3rem;color:#b8a48e;cursor:pointer;background:none;border:none;">&times;</button>
+      <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2c2418;margin-bottom:1rem;">Add Wardrobe Item</div>
+
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Photo</label>
+        <input type="file" id="add-photo" accept="image/*" style="font-size:0.82rem;font-family:inherit;" />
+        <div id="add-photo-preview" style="margin-top:0.5rem;"></div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;margin-bottom:1rem;">
+        <div style="flex:1;">
+          <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Category</label>
+          <select id="add-category" style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;">
+            <option>Tops</option><option>Pants</option><option>Dresses</option>
+            <option>Skirts</option><option>Shoes</option><option>Bags</option>
+            <option>Jewelry</option><option>Knitwear</option><option>Jackets & Coats</option>
+            <option>Casual</option><option>Shorts</option><option>Accessories</option>
+          </select>
+        </div>
+        <div style="flex:1;">
+          <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Subcategory</label>
+          <input type="text" id="add-subcategory" placeholder="e.g. Heels, Blazers..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+        </div>
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Brand / Label</label>
+        <input type="text" id="add-brand" placeholder="e.g. Zara, Chanel..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Color</label>
+        <input type="text" id="add-color" placeholder="e.g. black, navy, cream..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+      </div>
+
+      <div style="display:flex;gap:0.75rem;justify-content:flex-end;">
+        <button onclick="document.getElementById('add-item-modal').classList.remove('open')" style="padding:0.5rem 1rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.82rem;cursor:pointer;font-family:inherit;">Cancel</button>
+        <button onclick="saveNewItem()" style="padding:0.5rem 1.2rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.82rem;cursor:pointer;font-family:inherit;">Add to Wardrobe</button>
       </div>
     </div>
   </div>
@@ -371,7 +417,7 @@
           ondragover="event.preventDefault();this.classList.add('drag-over')"
           ondragleave="this.classList.remove('drag-over')"
           ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')">
-          <img src="${IMG_PATH}${i.file}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i.file}')" />
+          <img src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i._customImage || i.file}')" />
           <div class="cat-item-info">
             <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
             <div class="cat-item-sub" onclick="event.stopPropagation();editField('${i.id}','subcategory',this)" title="Click to edit subcategory">${i.subcategory}</div>
@@ -478,7 +524,7 @@
     }
 
     function zoomImage(file) {
-      document.getElementById('zoom-img').src = IMG_PATH + file;
+      document.getElementById('zoom-img').src = file.startsWith('data:') ? file : IMG_PATH + file;
       document.getElementById('zoom-modal').classList.add('open');
     }
 
@@ -512,7 +558,7 @@
         return true;
       });
       document.getElementById('outfit-pieces').innerHTML = filtered.map(i =>
-        `<img class="outfit-piece" src="${IMG_PATH}${i.file}" alt="${i.subcategory}"
+        `<img class="outfit-piece" src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}"
               draggable="true" ondragstart="dragItemFile='${i.file}'" />`
       ).join('');
     }
@@ -641,6 +687,91 @@
     renderOutfitFilters();
     renderOutfitSidebar();
     renderCanvas();
+
+    // ── Add New Item ──
+    document.getElementById('add-photo').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        document.getElementById('add-photo-preview').innerHTML =
+          `<img src="${ev.target.result}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function saveNewItem() {
+      const fileInput = document.getElementById('add-photo');
+      const category = document.getElementById('add-category').value;
+      const subcategory = document.getElementById('add-subcategory').value.trim() || category;
+      const brand = document.getElementById('add-brand').value.trim();
+      const color = document.getElementById('add-color').value.trim();
+
+      if (!fileInput.files[0]) { alert('Please select a photo.'); return; }
+
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        const dataUrl = ev.target.result;
+        const id = 'custom_' + Date.now();
+
+        // Save to Firebase
+        const itemData = {
+          id: id,
+          category: category,
+          subcategory: subcategory,
+          labels: brand ? [brand] : [],
+          colors: color ? color.split(',').map(c => c.trim()) : [],
+          image: dataUrl,
+          added: new Date().toISOString()
+        };
+        db.ref('wardrobeCustomItems/' + id).set(itemData);
+
+        // Add to local items array
+        items.push({
+          id: id,
+          file: id,
+          category: category,
+          subcategory: subcategory,
+          labels: brand ? [brand] : [],
+          colors: color ? color.split(',').map(c => c.trim()) : [],
+          _customImage: dataUrl
+        });
+
+        // Close modal and refresh
+        document.getElementById('add-item-modal').classList.remove('open');
+        fileInput.value = '';
+        document.getElementById('add-photo-preview').innerHTML = '';
+        document.getElementById('add-subcategory').value = '';
+        document.getElementById('add-brand').value = '';
+        document.getElementById('add-color').value = '';
+        renderCatFilters();
+        renderCatalogue();
+      };
+      reader.readAsDataURL(fileInput.files[0]);
+    }
+
+    // Load custom items from Firebase on startup
+    db.ref('wardrobeCustomItems').on('value', snap => {
+      const custom = snap.val() || {};
+      // Remove old custom items from array
+      for (let i = items.length - 1; i >= 0; i--) {
+        if (items[i].id && items[i].id.startsWith('custom_')) items.splice(i, 1);
+      }
+      // Add current custom items
+      for (const [id, data] of Object.entries(custom)) {
+        items.push({
+          id: id,
+          file: id,
+          category: data.category,
+          subcategory: data.subcategory,
+          labels: data.labels || [],
+          colors: data.colors || [],
+          _customImage: data.image
+        });
+      }
+      renderCatFilters();
+      renderCatalogue();
+    });
 
     // ── Wardrobe Crop Tool ──
     let _wcropImg = null;
