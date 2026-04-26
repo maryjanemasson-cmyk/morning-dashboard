@@ -595,122 +595,122 @@
     "layout": [
       {
         "file": "outfit_s04_004.png",
-        "left": 10.0,
-        "top": 5,
-        "width": 11,
-        "height": 25
+        "left": 0,
+        "top": 8,
+        "width": 14,
+        "height": 35
       },
       {
         "file": "outfit_s04_007.png",
-        "left": 17.3,
-        "top": 8,
-        "width": 11,
-        "height": 25
+        "left": 16,
+        "top": 5,
+        "width": 13,
+        "height": 22
       },
       {
         "file": "outfit_s04_008.jpg",
-        "left": 24.5,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_009.png",
-        "left": 31.8,
+        "left": 30,
         "top": 8,
-        "width": 11,
-        "height": 25
+        "width": 12,
+        "height": 22
       },
       {
         "file": "outfit_s04_010.png",
-        "left": 39.1,
+        "left": 43,
         "top": 5,
         "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_011.jpg",
-        "left": 46.4,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_012.jpg",
-        "left": 53.6,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_013.png",
-        "left": 60.9,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_014.png",
-        "left": 68.2,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_015.png",
-        "left": 75.5,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_016.png",
-        "left": 82.7,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s04_001.png",
-        "left": 32.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s04_005.jpg",
-        "left": 50.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s04_002.png",
-        "left": 78,
-        "top": 5,
-        "width": 10,
-        "height": 12
-      },
-      {
-        "file": "outfit_s04_003.jpg",
-        "left": 88,
-        "top": 20,
-        "width": 10,
-        "height": 12
+        "height": 22
       },
       {
         "file": "outfit_s04_006.png",
-        "left": 78,
+        "left": 55,
+        "top": 3,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "file": "outfit_s04_009.png",
+        "left": 70,
+        "top": 7,
+        "width": 9,
+        "height": 16
+      },
+      {
+        "file": "outfit_s04_013.png",
+        "left": 81,
+        "top": 2,
+        "width": 12,
+        "height": 28
+      },
+      {
+        "file": "outfit_s04_005.jpg",
+        "left": 16,
+        "top": 32,
+        "width": 13,
+        "height": 22
+      },
+      {
+        "file": "outfit_s04_014.png",
+        "left": 30,
+        "top": 35,
+        "width": 11,
+        "height": 22
+      },
+      {
+        "file": "outfit_s04_015.png",
+        "left": 42,
+        "top": 32,
+        "width": 11,
+        "height": 22
+      },
+      {
+        "file": "outfit_s04_016.png",
+        "left": 54,
         "top": 35,
         "width": 10,
-        "height": 12
+        "height": 25
+      },
+      {
+        "file": "outfit_s04_002.png",
+        "left": 66,
+        "top": 30,
+        "width": 14,
+        "height": 18
+      },
+      {
+        "file": "outfit_s04_011.jpg",
+        "left": 82,
+        "top": 32,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "file": "outfit_s04_001.png",
+        "left": 3,
+        "top": 68,
+        "width": 13,
+        "height": 18
+      },
+      {
+        "file": "outfit_s04_012.jpg",
+        "left": 18,
+        "top": 70,
+        "width": 12,
+        "height": 18
+      },
+      {
+        "file": "outfit_s04_003.jpg",
+        "left": 33,
+        "top": 75,
+        "width": 14,
+        "height": 8
       },
       {
         "file": "outfit_s04_017.png",
-        "left": 88,
-        "top": 50,
-        "width": 10,
-        "height": 12
+        "left": 50,
+        "top": 72,
+        "width": 13,
+        "height": 10
       }
     ]
   },
@@ -857,186 +857,186 @@
     ],
     "layout": [
       {
-        "file": "outfit_s05_002.png",
-        "left": 10.0,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_005.png",
-        "left": 18.9,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_006.png",
-        "left": 27.8,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_015.png",
-        "left": 36.7,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_019.png",
-        "left": 45.6,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_021.png",
-        "left": 54.4,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_022.jpg",
-        "left": 63.3,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_023.png",
-        "left": 72.2,
-        "top": 8,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_025.png",
-        "left": 81.1,
-        "top": 5,
-        "width": 11,
-        "height": 25
-      },
-      {
-        "file": "outfit_s05_017.jpg",
-        "left": 30.0,
-        "top": 35,
-        "width": 14,
-        "height": 32
-      },
-      {
-        "file": "outfit_s05_018.png",
-        "left": 50.0,
-        "top": 37,
-        "width": 14,
-        "height": 32
-      },
-      {
-        "file": "outfit_s05_001.png",
-        "left": 10.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s05_003.png",
-        "left": 26.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s05_013.jpg",
-        "left": 42.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s05_016.png",
-        "left": 58.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s05_026.jpg",
-        "left": 74.0,
-        "top": 72,
-        "width": 13,
-        "height": 23
-      },
-      {
-        "file": "outfit_s05_004.png",
-        "left": 78,
-        "top": 5,
-        "width": 10,
-        "height": 12
-      },
-      {
-        "file": "outfit_s05_007.png",
-        "left": 88,
-        "top": 20,
-        "width": 10,
-        "height": 12
-      },
-      {
         "file": "outfit_s05_008.png",
-        "left": 78,
-        "top": 35,
-        "width": 10,
-        "height": 12
-      },
-      {
-        "file": "outfit_s05_009.png",
-        "left": 88,
-        "top": 50,
-        "width": 10,
-        "height": 12
+        "left": 2,
+        "top": 2,
+        "width": 9,
+        "height": 10
       },
       {
         "file": "outfit_s05_010.jpg",
-        "left": 78,
-        "top": 65,
-        "width": 10,
-        "height": 12
+        "left": 14,
+        "top": 7,
+        "width": 9,
+        "height": 10
       },
       {
-        "file": "outfit_s05_011.jpg",
-        "left": 88,
-        "top": 80,
+        "file": "outfit_s05_017.jpg",
+        "left": 3,
+        "top": 15,
+        "width": 13,
+        "height": 33
+      },
+      {
+        "file": "outfit_s05_018.png",
+        "left": 82,
+        "top": 3,
+        "width": 14,
+        "height": 30
+      },
+      {
+        "file": "outfit_s05_005.png",
+        "left": 18,
+        "top": 5,
         "width": 10,
-        "height": 12
+        "height": 22
+      },
+      {
+        "file": "outfit_s05_019.png",
+        "left": 29,
+        "top": 11,
+        "width": 10,
+        "height": 22
+      },
+      {
+        "file": "outfit_s05_021.png",
+        "left": 40,
+        "top": 5,
+        "width": 10,
+        "height": 22
+      },
+      {
+        "file": "outfit_s05_023.png",
+        "left": 51,
+        "top": 11,
+        "width": 10,
+        "height": 22
+      },
+      {
+        "file": "outfit_s05_006.png",
+        "left": 62,
+        "top": 5,
+        "width": 10,
+        "height": 18
+      },
+      {
+        "file": "outfit_s05_015.png",
+        "left": 73,
+        "top": 11,
+        "width": 10,
+        "height": 18
+      },
+      {
+        "file": "outfit_s05_022.jpg",
+        "left": 25,
+        "top": 35,
+        "width": 11,
+        "height": 27
+      },
+      {
+        "file": "outfit_s05_025.png",
+        "left": 38,
+        "top": 38,
+        "width": 11,
+        "height": 27
+      },
+      {
+        "file": "outfit_s05_004.png",
+        "left": 2,
+        "top": 60,
+        "width": 13,
+        "height": 18
+      },
+      {
+        "file": "outfit_s05_007.png",
+        "left": 16,
+        "top": 65,
+        "width": 13,
+        "height": 18
+      },
+      {
+        "file": "outfit_s05_002.png",
+        "left": 30,
+        "top": 68,
+        "width": 12,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_001.png",
+        "left": 44,
+        "top": 72,
+        "width": 12,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_003.png",
+        "left": 58,
+        "top": 68,
+        "width": 12,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_009.png",
+        "left": 65,
+        "top": 55,
+        "width": 13,
+        "height": 16
       },
       {
         "file": "outfit_s05_012.png",
-        "left": 78,
-        "top": 95,
-        "width": 10,
-        "height": 12
-      },
-      {
-        "file": "outfit_s05_014.png",
-        "left": 88,
-        "top": 110,
-        "width": 10,
-        "height": 12
+        "left": 81,
+        "top": 63,
+        "width": 13,
+        "height": 16
       },
       {
         "file": "outfit_s05_020.png",
-        "left": 78,
-        "top": 125,
-        "width": 10,
-        "height": 12
+        "left": 65,
+        "top": 71,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_013.jpg",
+        "left": 81,
+        "top": 79,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_016.png",
+        "left": 65,
+        "top": 87,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_026.jpg",
+        "left": 81,
+        "top": 95,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_011.jpg",
+        "left": 65,
+        "top": 103,
+        "width": 13,
+        "height": 16
+      },
+      {
+        "file": "outfit_s05_014.png",
+        "left": 81,
+        "top": 111,
+        "width": 13,
+        "height": 16
       },
       {
         "file": "outfit_s05_024.jpg",
-        "left": 88,
-        "top": 140,
-        "width": 10,
-        "height": 12
+        "left": 65,
+        "top": 119,
+        "width": 13,
+        "height": 16
       }
     ]
   },
@@ -1154,143 +1154,143 @@
     "layout": [
       {
         "file": "outfit_s06_002.png",
-        "left": 10.0,
-        "top": 5,
-        "width": 11,
-        "height": 25
+        "left": 2,
+        "top": 3,
+        "width": 12,
+        "height": 27
       },
       {
         "file": "outfit_s06_003.png",
-        "left": 16.7,
-        "top": 8,
-        "width": 11,
-        "height": 25
+        "left": 15,
+        "top": 5,
+        "width": 12,
+        "height": 27
       },
       {
         "file": "outfit_s06_004.png",
-        "left": 23.3,
-        "top": 5,
-        "width": 11,
-        "height": 25
+        "left": 28,
+        "top": 3,
+        "width": 12,
+        "height": 23
       },
       {
         "file": "outfit_s06_005.png",
-        "left": 30.0,
-        "top": 8,
-        "width": 11,
-        "height": 25
+        "left": 41,
+        "top": 5,
+        "width": 12,
+        "height": 23
       },
       {
         "file": "outfit_s06_007.png",
-        "left": 36.7,
-        "top": 5,
-        "width": 11,
-        "height": 25
+        "left": 54,
+        "top": 3,
+        "width": 12,
+        "height": 23
       },
       {
         "file": "outfit_s06_010.png",
-        "left": 43.3,
-        "top": 8,
-        "width": 11,
-        "height": 25
+        "left": 67,
+        "top": 5,
+        "width": 13,
+        "height": 18
       },
       {
         "file": "outfit_s06_012.jpg",
-        "left": 50.0,
-        "top": 5,
-        "width": 11,
-        "height": 25
+        "left": 81,
+        "top": 3,
+        "width": 12,
+        "height": 23
       },
       {
         "file": "outfit_s06_013.png",
-        "left": 56.7,
-        "top": 8,
-        "width": 11,
-        "height": 25
+        "left": 2,
+        "top": 33,
+        "width": 12,
+        "height": 27
       },
       {
         "file": "outfit_s06_014.png",
-        "left": 63.3,
-        "top": 5,
-        "width": 11,
-        "height": 25
+        "left": 15,
+        "top": 35,
+        "width": 12,
+        "height": 27
       },
       {
         "file": "outfit_s06_015.png",
-        "left": 70.0,
-        "top": 8,
-        "width": 11,
-        "height": 25
+        "left": 28,
+        "top": 33,
+        "width": 12,
+        "height": 27
       },
       {
         "file": "outfit_s06_018.png",
-        "left": 76.7,
-        "top": 5,
-        "width": 11,
+        "left": 41,
+        "top": 35,
+        "width": 13,
         "height": 25
       },
       {
         "file": "outfit_s06_020.png",
-        "left": 83.3,
-        "top": 8,
-        "width": 11,
+        "left": 55,
+        "top": 33,
+        "width": 13,
         "height": 25
       },
       {
         "file": "outfit_s06_017.png",
-        "left": 40.0,
-        "top": 35,
-        "width": 14,
+        "left": 70,
+        "top": 33,
+        "width": 11,
         "height": 32
       },
       {
         "file": "outfit_s06_001.png",
-        "left": 78,
-        "top": 5,
-        "width": 10,
-        "height": 12
-      },
-      {
-        "file": "outfit_s06_006.png",
-        "left": 88,
-        "top": 20,
-        "width": 10,
-        "height": 12
+        "left": 5,
+        "top": 72,
+        "width": 12,
+        "height": 15
       },
       {
         "file": "outfit_s06_008.png",
-        "left": 78,
-        "top": 35,
-        "width": 10,
-        "height": 12
+        "left": 19,
+        "top": 72,
+        "width": 12,
+        "height": 15
+      },
+      {
+        "file": "outfit_s06_006.png",
+        "left": 33,
+        "top": 75,
+        "width": 14,
+        "height": 8
       },
       {
         "file": "outfit_s06_009.png",
-        "left": 88,
-        "top": 50,
+        "left": 49,
+        "top": 75,
         "width": 10,
-        "height": 12
+        "height": 10
       },
       {
         "file": "outfit_s06_011.png",
-        "left": 78,
-        "top": 65,
+        "left": 61,
+        "top": 75,
         "width": 10,
-        "height": 12
+        "height": 8
       },
       {
         "file": "outfit_s06_016.png",
-        "left": 88,
-        "top": 80,
-        "width": 10,
+        "left": 73,
+        "top": 72,
+        "width": 12,
         "height": 12
       },
       {
         "file": "outfit_s06_019.png",
-        "left": 78,
-        "top": 95,
-        "width": 10,
-        "height": 12
+        "left": 85,
+        "top": 35,
+        "width": 13,
+        "height": 16
       }
     ]
   },
@@ -1397,11 +1397,12 @@
     ],
     "layout": [
       {
-        "file": "outfit_s07_001.png",
+        "file": "../wardrobe-thumbs/s09_003.png",
         "left": 10.0,
         "top": 5,
         "width": 11,
-        "height": 25
+        "height": 25,
+        "_origOutfitFile": "outfit_s07_001.png"
       },
       {
         "file": "outfit_s07_002.png",
@@ -1453,11 +1454,12 @@
         "height": 25
       },
       {
-        "file": "outfit_s07_012.jpg",
+        "file": "../wardrobe-thumbs/s07_011.jpg",
         "left": 63.3,
         "top": 5,
         "width": 11,
-        "height": 25
+        "height": 25,
+        "_origOutfitFile": "outfit_s07_012.jpg"
       },
       {
         "file": "outfit_s07_013.jpg",
@@ -1481,11 +1483,12 @@
         "height": 25
       },
       {
-        "file": "outfit_s07_006.png",
+        "file": "../wardrobe-thumbs/s17_001.jpg",
         "left": 20.0,
         "top": 35,
         "width": 14,
-        "height": 32
+        "height": 32,
+        "_origOutfitFile": "outfit_s07_006.png"
       },
       {
         "file": "outfit_s07_010.jpg",
@@ -1495,11 +1498,12 @@
         "height": 32
       },
       {
-        "file": "outfit_s07_017.png",
+        "file": "../wardrobe-thumbs/s09_019.png",
         "left": 60.0,
         "top": 35,
         "width": 14,
-        "height": 32
+        "height": 32,
+        "_origOutfitFile": "outfit_s07_017.png"
       },
       {
         "file": "outfit_s07_003.jpg",
@@ -1516,11 +1520,12 @@
         "height": 12
       },
       {
-        "file": "outfit_s07_018.png",
+        "file": "../wardrobe-thumbs/s09_013.png",
         "left": 88,
         "top": 20,
         "width": 10,
-        "height": 12
+        "height": 12,
+        "_origOutfitFile": "outfit_s07_018.png"
       }
     ]
   },

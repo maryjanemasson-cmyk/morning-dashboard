@@ -384,10 +384,13 @@
       filtered.forEach((o, idx) => {
         let previewImgs = '';
         if (o.layout && o.layout.length) {
-          previewImgs = o.layout.map(item =>
-            `<img src="${IMG_PATH}${item.file}" alt="" loading="lazy"
-              style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;" />`
-          ).join('');
+          previewImgs = o.layout.map(item => {
+            const src = item.file.startsWith('data:') ? item.file
+              : item.file.startsWith('..') ? item.file
+              : IMG_PATH + item.file;
+            return `<img src="${src}" alt="" loading="lazy"
+              style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;" />`;
+          }).join('');
         } else {
           previewImgs = o.images.slice(0, 6).map(f =>
             `<img src="${IMG_PATH}${f}" alt="" loading="lazy" style="position:static;height:60px;width:auto;" />`
@@ -469,7 +472,7 @@
             <div class="edit-resize" onmousedown="event.stopPropagation();startResizePiece(event,${idx})"></div>
           </div>`;
         } else {
-          const viewSrc = item.file.startsWith('data:') ? item.file : IMG_PATH + item.file;
+          const viewSrc = item.file.startsWith('data:') ? item.file : item.file.startsWith('..') ? item.file : IMG_PATH + item.file;
           html += `<img src="${viewSrc}" alt=""
             style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
             onclick="zoomImg('${item.file}')" />`;
