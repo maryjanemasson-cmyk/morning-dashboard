@@ -729,9 +729,14 @@
     const SEASONS = ['Spring', 'Summer', 'Fall', 'Winter'];
 
     function showSeasonPicker(slide, el) {
-      const currentVal = el.textContent;
+      const currentVal = el.textContent.trim();
+      // Prevent double-opening
+      if (el.querySelector('select')) return;
+
       const select = document.createElement('select');
       select.className = 'season-select';
+      select.style.cssText = 'font-size:0.72rem;padding:0.2rem 0.4rem;border:1px solid #c9b99a;border-radius:4px;outline:none;cursor:pointer;';
+
       SEASONS.forEach(s => {
         const opt = document.createElement('option');
         opt.value = s;
@@ -739,26 +744,31 @@
         if (s === currentVal) opt.selected = true;
         select.appendChild(opt);
       });
+
       el.textContent = '';
       el.appendChild(select);
-      select.focus();
 
-      let saved = false;
-      function save() {
-        if (saved) return;
-        saved = true;
+      // Small delay before focus to prevent immediate blur
+      setTimeout(() => select.focus(), 50);
+
+      select.addEventListener('change', function() {
         const newVal = select.value;
         const updates = _outfitEdits[slide] || {};
         updates.season = newVal;
         _outfitEdits[slide] = updates;
         db.ref('outfitEdits/' + slide).set(updates);
-        // Update local outfit
         const outfit = outfits.find(o => o.slide === slide);
         if (outfit) outfit.season = newVal;
+        el.textContent = newVal;
         render();
-      }
-      select.addEventListener('change', save);
-      select.addEventListener('blur', () => { if (!saved) save(); });
+      });
+
+      select.addEventListener('blur', function() {
+        // Just restore text if no change was made
+        if (el.contains(select)) {
+          el.textContent = select.value || currentVal;
+        }
+      });
     }
 
     // Inline editing
