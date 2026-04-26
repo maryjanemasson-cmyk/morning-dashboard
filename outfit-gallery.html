@@ -572,6 +572,24 @@
         _addCatFilter = null;
         const terms = search.split(/\s+/);
 
+        // Color aliases - expand search terms
+        const colorAliases = {
+          'yellow': ['yellow','gold','cream','ivory'],
+          'white': ['white','cream','ivory','off-white'],
+          'brown': ['brown','tan','camel','cognac','leather'],
+          'black': ['black','dark','charcoal'],
+          'grey': ['grey','gray','silver','charcoal','dark grey','light grey'],
+          'gray': ['grey','gray','silver','charcoal'],
+          'red': ['red','burgundy','wine'],
+          'blue': ['blue','navy','royal blue','light blue','teal'],
+          'green': ['green','olive','sage','forest green','mint'],
+          'pink': ['pink','blush','magenta','rose'],
+          'purple': ['purple','plum','lavender'],
+          'orange': ['orange','tan','cognac'],
+          'beige': ['beige','nude','cream','tan','camel'],
+          'nude': ['nude','beige','cream','tan'],
+        };
+
         // Category/type keywords that should match category or subcategory only
         const typeWords = ['pants','tops','shoes','bags','dresses','skirts','shorts',
           'heels','flats','boots','sneakers','sandals','blazers','jackets','coats',
@@ -584,11 +602,14 @@
 
           return terms.every(t => {
             if (typeWords.includes(t)) {
-              // Type words must match category or subcategory
               return catText.includes(t);
             } else {
-              // Other words (colors, brands) can match anything
-              return allText.includes(t);
+              // Check direct match first
+              if (allText.includes(t)) return true;
+              // Check color aliases
+              const aliases = colorAliases[t];
+              if (aliases) return aliases.some(a => allText.includes(a));
+              return false;
             }
           });
         });
