@@ -763,10 +763,13 @@
         render();
       });
 
-      select.addEventListener('blur', function() {
-        // Just restore text if no change was made
-        if (el.contains(select)) {
-          el.textContent = select.value || currentVal;
+      // Don't close on blur -- only close when user clicks elsewhere on the page
+      document.addEventListener('click', function closeDropdown(e) {
+        if (!el.contains(e.target)) {
+          if (el.contains(select)) {
+            el.textContent = select.value || currentVal;
+          }
+          document.removeEventListener('click', closeDropdown);
         }
       });
     }
