@@ -483,6 +483,10 @@
       // Add piece panel
       if (_editMode) {
         html += `<div class="add-piece-panel${_addPanelOpen ? ' open' : ''}" id="add-panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+            <span style="font-size:0.75rem;font-weight:600;color:#2c2418;">Add Piece</span>
+            <button onclick="toggleAddPanel()" style="background:none;border:none;font-size:1.1rem;color:#b8a48e;cursor:pointer;">&times;</button>
+          </div>
           <input type="text" id="add-search" placeholder="e.g. black heels, blue bag, Chanel..." oninput="renderAddPanel()" />
           <div style="display:flex;flex-wrap:wrap;gap:2px;margin-bottom:0.4rem;" id="add-quick-filters"></div>
           <div class="add-piece-grid" id="add-grid"></div>
