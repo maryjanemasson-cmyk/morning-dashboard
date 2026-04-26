@@ -869,10 +869,10 @@
       ctx.fillStyle = `rgb(${BG[0]},${BG[1]},${BG[2]})`;
       ctx.fillRect(0, 0, TW, TH);
 
-      // Fit cropped image into 85% of card, maintaining aspect ratio
+      // Fit cropped image to fill card as much as possible
       let drawW = w, drawH = h;
-      const maxW = TW * 0.85, maxH = TH * 0.90;
-      const scale = Math.min(maxW / drawW, maxH / drawH, 1);
+      const maxW = TW * 0.95, maxH = TH * 0.95;
+      const scale = Math.min(maxW / drawW, maxH / drawH);
       drawW = Math.round(drawW * scale);
       drawH = Math.round(drawH * scale);
       const px = Math.round((TW - drawW) / 2);
