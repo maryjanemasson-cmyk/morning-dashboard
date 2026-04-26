@@ -1104,23 +1104,39 @@
       let html = '';
       CHORE_TYPES.forEach(c => {
         const lastDate = data[c.id];
-        let agoHtml;
+        let statusHtml, detailHtml;
+
         if (!lastDate) {
-          agoHtml = '<span class="chore-ago never">No date</span>';
+          statusHtml = '<span class="chore-ago overdue">Due now</span>';
+          detailHtml = `<span style="font-size:0.6rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Never done</span>`;
         } else {
           const last = new Date(lastDate);
           const daysAgo = Math.floor((now - last) / 86400000);
-          let cls = 'ok';
-          if (daysAgo >= c.dueDays) cls = 'overdue';
-          else if (daysAgo >= c.dueDays - 2) cls = 'soon';
-          const label = daysAgo === 0 ? 'Today' : daysAgo === 1 ? '1d ago' : daysAgo + 'd ago';
-          agoHtml = `<span class="chore-ago ${cls}">${label}</span>`;
+          const daysLeft = c.dueDays - daysAgo;
+          const lastStr = last.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+
+          let cls, statusLabel;
+          if (daysLeft <= 0) {
+            cls = 'overdue';
+            statusLabel = Math.abs(daysLeft) === 0 ? 'Due today!' : Math.abs(daysLeft) + 'd overdue!';
+          } else if (daysLeft <= 2) {
+            cls = 'soon';
+            statusLabel = daysLeft === 1 ? 'Due tomorrow' : 'Due in ' + daysLeft + 'd';
+          } else {
+            cls = 'ok';
+            statusLabel = daysLeft + 'd left';
+          }
+
+          statusHtml = `<span class="chore-ago ${cls}">${statusLabel}</span>`;
+          detailHtml = `<span style="font-size:0.6rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Last: ${lastStr}</span>`;
         }
-        html += `<div class="chore-item">
+
+        html += `<div class="chore-item" style="flex-wrap:wrap;">
           <span class="chore-icon">${c.icon}</span>
-          <span class="chore-name">${c.name}</span>
-          ${agoHtml}
+          <span class="chore-name" style="flex:1;">${c.name}</span>
+          ${statusHtml}
           <button class="chore-done-btn" onclick="markChoreDone('${c.id}')">Done</button>
+          <div style="width:100%;padding-left:1.8rem;">${detailHtml}</div>
         </div>`;
       });
       document.getElementById('chores-section').innerHTML = html;
