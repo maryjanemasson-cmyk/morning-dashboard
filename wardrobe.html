@@ -694,9 +694,9 @@
       let html = '';
       filtered.forEach(s => {
         const checked = selectedSlides.has(s.slide);
-        const previewImgs = (s.images || []).slice(0, 4).map(f => {
+        const previewImgs = (s.images || []).slice(0, 6).map(f => {
           const src = f.startsWith('..') ? f : f.startsWith('data:') ? f : 'outfit-images/' + f;
-          return `<img src="${src}" onclick="event.stopPropagation();showOutfitPreview(${s.slide})" style="width:45px;height:45px;object-fit:contain;border-radius:4px;background:#f5f0e8;cursor:pointer;" />`;
+          return `<img src="${src}" onclick="event.stopPropagation();showOutfitPreview(${s.slide})" style="width:70px;height:70px;object-fit:contain;border-radius:4px;background:#f5f0e8;cursor:pointer;" />`;
         }).join('');
 
         html += `<div style="padding:0.5rem;border-bottom:1px solid #f0ebe4;cursor:pointer;${checked?'background:#e7f0ff;border-radius:6px;':''}"
@@ -711,7 +711,7 @@
               <div style="font-size:0.65rem;color:#9c8b76;">${s.season} · ${s.pieceCount} pieces</div>
             </div>
           </div>
-          <div style="display:flex;gap:4px;justify-content:space-evenly;padding-left:1.5rem;">${previewImgs}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;padding-left:1.5rem;">${previewImgs}</div>
         </div>`;
       });
 
