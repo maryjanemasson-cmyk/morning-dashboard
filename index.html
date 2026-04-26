@@ -1210,7 +1210,6 @@
         const feedGroups = {
           top: [
             'https://feeds.apnews.com/rss/apf-topnews',
-            'https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml',
           ],
           politics: [
             'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
@@ -1236,7 +1235,7 @@
 
         // Source classification
         const subscribedDomains = ['wsj.com', 'nytimes.com'];
-        const freeDomains = ['apnews.com', 'reuters.com', 'npr.org', 'bbc.co.uk', 'bbc.com',
+        const freeDomains = ['apnews.com', 'reuters.com', 'npr.org',
           'thehill.com', 'propublica.org', 'pbs.org'];
         const meteredDomains = {
           'politico.com': { name: 'Politico', limit: 5 },
@@ -1244,7 +1243,8 @@
           'theatlantic.com': { name: 'The Atlantic', limit: 5 },
         };
         const blockedDomains = ['bloomberg.com', 'ft.com', 'economist.com',
-          'theathletic.com', 'barrons.com', 'seekingalpha.com'];
+          'theathletic.com', 'barrons.com', 'seekingalpha.com',
+          'bbc.co.uk', 'bbc.com'];
 
         // Load metered usage from Firebase
         const monthKey = new Date().toISOString().slice(0, 7); // "2026-04"
