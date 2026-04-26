@@ -299,6 +299,7 @@
           if (edit.season) o.season = edit.season;
           if (edit.order !== undefined) o._order = edit.order;
           if (edit.layout) o.layout = edit.layout;
+          if (edit.tags) o._tags = edit.tags;
         }
       });
       render();
@@ -396,9 +397,7 @@
             `<img src="${IMG_PATH}${f}" alt="" loading="lazy" style="position:static;height:60px;width:auto;" />`
           ).join('');
         }
-        const brandTags = (o.brands || []).slice(0, 3).map(b =>
-          `<span class="outfit-card-tag">${b}</span>`
-        ).join('');
+        // Tags from Firebase edits
 
         html += `<div class="outfit-card" data-slide="${o.slide}" draggable="true"
                   ondragstart="startDrag(event,${o.slide})"
@@ -413,8 +412,8 @@
           <div class="outfit-card-info">
             <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)">${o._filterCat}</div>
             <div class="outfit-card-season" onclick="event.stopPropagation();showSeasonPicker(${o.slide},this)">${o.season}</div>
-            <div class="outfit-card-meta">${o.images.length} pieces</div>
-            ${brandTags}
+            <div class="outfit-card-meta">${(o.layout||o.images).length} pieces</div>
+            <div class="outfit-card-tags" onclick="event.stopPropagation();editTags(${o.slide},this)">${(o._tags||[]).map(t=>'<span class="outfit-card-tag">'+t+'</span>').join('')}<span style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;${(o._tags||[]).length?'margin-left:0.3rem':''}">+ tag</span></div>
           </div>
         </div>`;
       });
@@ -689,6 +688,46 @@
     function deleteOutfitCard(slide) {
       if (!confirm('Delete this outfit?')) return;
       db.ref('deletedOutfits/' + slide).set(true);
+    }
+
+    // Tag editor
+    function editTags(slide, el) {
+      const outfit = outfits.find(o => o.slide === slide);
+      const currentTags = (outfit && outfit._tags) || [];
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'edit-input';
+      input.style.cssText = 'font-size:0.68rem;width:100%;';
+      input.value = currentTags.join(', ');
+      input.placeholder = 'e.g. date night, conference, casual friday';
+
+      el.textContent = '';
+      el.appendChild(input);
+      setTimeout(() => input.focus(), 50);
+
+      function save() {
+        const val = input.value.trim();
+        const tags = val ? val.split(',').map(t => t.trim()).filter(Boolean) : [];
+        const updates = _outfitEdits[slide] || {};
+        updates.tags = tags;
+        _outfitEdits[slide] = updates;
+        db.ref('outfitEdits/' + slide).set(updates);
+        if (outfit) outfit._tags = tags;
+        render();
+      }
+
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); save(); }
+        if (e.key === 'Escape') { render(); }
+      });
+
+      document.addEventListener('click', function closeTags(e) {
+        if (!el.contains(e.target)) {
+          save();
+          document.removeEventListener('click', closeTags);
+        }
+      });
     }
 
     // Occasion picker
