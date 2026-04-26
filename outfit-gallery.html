@@ -732,9 +732,12 @@
 
     // Occasion picker
     function showOccasionPicker(slide, el) {
-      const currentVal = el.textContent;
+      const currentVal = el.textContent.trim();
+      if (el.querySelector('select')) return;
+
       const select = document.createElement('select');
       select.className = 'season-select';
+      select.style.cssText = 'font-size:0.72rem;padding:0.2rem 0.4rem;border:1px solid #c9b99a;border-radius:4px;outline:none;cursor:pointer;';
       OCCASIONS.forEach(o => {
         const opt = document.createElement('option');
         opt.value = o;
@@ -744,24 +747,28 @@
       });
       el.textContent = '';
       el.appendChild(select);
-      select.focus();
+      setTimeout(() => select.focus(), 50);
 
-      let saved = false;
-      function save() {
-        if (saved) return;
-        saved = true;
+      select.addEventListener('change', function() {
         const newVal = select.value;
         const updates = _outfitEdits[slide] || {};
         updates.occasion = newVal;
         _outfitEdits[slide] = updates;
         db.ref('outfitEdits/' + slide).set(updates);
-        // Update local outfit
         const outfit = outfits.find(o => o.slide === slide);
         if (outfit) { outfit.occasion = newVal; outfit._filterCat = newVal; }
+        el.textContent = newVal;
         render();
-      }
-      select.addEventListener('change', save);
-      select.addEventListener('blur', () => { if (!saved) save(); });
+      });
+
+      document.addEventListener('click', function closeDropdown(e) {
+        if (!el.contains(e.target)) {
+          if (el.contains(select)) {
+            el.textContent = select.value || currentVal;
+          }
+          document.removeEventListener('click', closeDropdown);
+        }
+      });
     }
 
     // Season picker
