@@ -161,9 +161,10 @@
     .edit-btn.active { background:#006FED; color:#fff; border-color:#006FED; }
 
     .add-piece-panel {
-      display:none; position:absolute; top:0; right:-240px; width:220px;
+      display:none; position:fixed; top:10vh; right:20px; width:250px;
       background:#fff; border:1px solid #ebe5dc; border-radius:8px;
-      padding:0.5rem; max-height:500px; overflow-y:auto; z-index:30;
+      padding:0.75rem; max-height:80vh; overflow-y:auto; z-index:1100;
+      box-shadow:0 4px 20px rgba(0,0,0,0.15);
     }
     .add-piece-panel.open { display:block; }
     .add-piece-panel input {
