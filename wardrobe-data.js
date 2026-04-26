@@ -4,7 +4,9 @@ window.WARDROBE_ITEMS = [
     "file": "s01_004.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": [],
+    "labels": [
+      "Herm\u00e8s"
+    ],
     "colors": [
       "tan",
       "cognac",
@@ -16,7 +18,9 @@ window.WARDROBE_ITEMS = [
     "file": "s01_005.png",
     "category": "Accessories",
     "subcategory": "Accesories",
-    "labels": [],
+    "labels": [
+      "Herm\u00e8s"
+    ],
     "colors": [
       "tan",
       "cognac",
