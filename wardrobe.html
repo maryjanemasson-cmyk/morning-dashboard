@@ -240,8 +240,32 @@
   </div>
 
   <!-- Image zoom modal -->
-  <div class="modal-overlay" id="zoom-modal" onclick="this.classList.remove('open')">
-    <img id="zoom-img" src="" alt="" />
+  <div class="modal-overlay" id="zoom-modal">
+    <div style="position:relative;display:inline-block;">
+      <img id="zoom-img" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:10px;" />
+      <div style="text-align:center;margin-top:0.75rem;">
+        <button onclick="openWardrobeCrop()" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid #fff;background:rgba(0,111,237,0.9);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;">Crop This Image</button>
+        <button onclick="document.getElementById('zoom-modal').classList.remove('open')" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.5);background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;margin-left:0.5rem;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crop modal -->
+  <div class="modal-overlay" id="wcrop-modal">
+    <div style="background:#fff;border-radius:12px;max-width:700px;width:100%;padding:2rem;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+      <button onclick="closeWardrobeCrop()" style="position:absolute;top:1rem;right:1.25rem;font-size:1.3rem;color:#b8a48e;cursor:pointer;background:none;border:none;">&times;</button>
+      <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2c2418;margin-bottom:0.25rem;">Crop Image</div>
+      <p style="font-size:0.75rem;color:#8A8A9A;margin-bottom:0.75rem;">Click and drag to select the area you want to keep.</p>
+      <div id="wcrop-container" style="position:relative;display:inline-block;cursor:crosshair;user-select:none;">
+        <canvas id="wcrop-canvas" style="max-width:100%;border-radius:6px;border:1px solid #ebe5dc;"></canvas>
+        <div id="wcrop-box" style="position:absolute;border:2px dashed #006FED;background:rgba(0,111,237,0.1);display:none;pointer-events:none;"></div>
+      </div>
+      <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+        <button onclick="resetWardrobeCrop()" style="padding:0.4rem 0.8rem;border-radius:6px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.75rem;cursor:pointer;font-family:inherit;">Reset</button>
+        <button onclick="applyWardrobeCrop()" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;">Apply Crop</button>
+        <button onclick="closeWardrobeCrop()" style="padding:0.4rem 0.8rem;border-radius:6px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.75rem;cursor:pointer;font-family:inherit;">Cancel</button>
+      </div>
+    </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -617,6 +641,122 @@
     renderOutfitFilters();
     renderOutfitSidebar();
     renderCanvas();
+
+    // ── Wardrobe Crop Tool ──
+    let _wcropImg = null;
+    let _wcropFile = null;
+    let _wcropStart = null;
+    let _wcropEnd = null;
+    let _wcropping = false;
+    let _wcropScale = 1;
+
+    function openWardrobeCrop() {
+      document.getElementById('zoom-modal').classList.remove('open');
+      const src = document.getElementById('zoom-img').src;
+      // Extract filename from src
+      const parts = src.split('/');
+      _wcropFile = parts[parts.length - 1];
+
+      const imgEl = new window.Image();
+      imgEl.crossOrigin = 'anonymous';
+      imgEl.onload = function() {
+        _wcropImg = imgEl;
+        const canvas = document.getElementById('wcrop-canvas');
+        _wcropScale = Math.min(600 / imgEl.width, 500 / imgEl.height, 1);
+        canvas.width = imgEl.width * _wcropScale;
+        canvas.height = imgEl.height * _wcropScale;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgEl, 0, 0, canvas.width, canvas.height);
+        _wcropStart = null;
+        _wcropEnd = null;
+        document.getElementById('wcrop-box').style.display = 'none';
+        document.getElementById('wcrop-modal').classList.add('open');
+      };
+      imgEl.src = src;
+    }
+
+    (function() {
+      const container = document.getElementById('wcrop-container');
+      if (!container) return;
+
+      container.addEventListener('mousedown', e => {
+        if (!document.getElementById('wcrop-modal').classList.contains('open')) return;
+        const rect = document.getElementById('wcrop-canvas').getBoundingClientRect();
+        _wcropStart = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+        _wcropEnd = { ..._wcropStart };
+        _wcropping = true;
+        e.preventDefault();
+      });
+
+      document.addEventListener('mousemove', e => {
+        if (!_wcropping) return;
+        const rect = document.getElementById('wcrop-canvas').getBoundingClientRect();
+        _wcropEnd = {
+          x: Math.max(0, Math.min(e.clientX - rect.left, rect.width)),
+          y: Math.max(0, Math.min(e.clientY - rect.top, rect.height))
+        };
+        const box = document.getElementById('wcrop-box');
+        box.style.display = 'block';
+        box.style.left = Math.min(_wcropStart.x, _wcropEnd.x) + 'px';
+        box.style.top = Math.min(_wcropStart.y, _wcropEnd.y) + 'px';
+        box.style.width = Math.abs(_wcropEnd.x - _wcropStart.x) + 'px';
+        box.style.height = Math.abs(_wcropEnd.y - _wcropStart.y) + 'px';
+      });
+
+      document.addEventListener('mouseup', () => { _wcropping = false; });
+    })();
+
+    function resetWardrobeCrop() {
+      if (!_wcropImg) return;
+      const canvas = document.getElementById('wcrop-canvas');
+      canvas.getContext('2d').drawImage(_wcropImg, 0, 0, canvas.width, canvas.height);
+      document.getElementById('wcrop-box').style.display = 'none';
+      _wcropStart = null;
+    }
+
+    function applyWardrobeCrop() {
+      if (!_wcropStart || !_wcropEnd || !_wcropImg) return;
+      const x = Math.min(_wcropStart.x, _wcropEnd.x) / _wcropScale;
+      const y = Math.min(_wcropStart.y, _wcropEnd.y) / _wcropScale;
+      const w = Math.abs(_wcropEnd.x - _wcropStart.x) / _wcropScale;
+      const h = Math.abs(_wcropEnd.y - _wcropStart.y) / _wcropScale;
+      if (w < 10 || h < 10) { alert('Selection too small'); return; }
+
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = w;
+      tempCanvas.height = h;
+      tempCanvas.getContext('2d').drawImage(_wcropImg, x, y, w, h, 0, 0, w, h);
+
+      // Save cropped image back to server via Firebase
+      const dataUrl = tempCanvas.toDataURL('image/png');
+      db.ref('wardrobeCrops/' + _wcropFile.replace(/\./g, '_')).set(dataUrl);
+
+      // Update the thumbnail in the current page
+      document.querySelectorAll(`img[src*="${_wcropFile}"]`).forEach(img => {
+        img.src = dataUrl;
+      });
+
+      closeWardrobeCrop();
+      alert('Crop saved! This image will show the cropped version everywhere.');
+    }
+
+    function closeWardrobeCrop() {
+      document.getElementById('wcrop-modal').classList.remove('open');
+      _wcropImg = null;
+      _wcropping = false;
+    }
+
+    // Apply saved crops on load
+    db.ref('wardrobeCrops').on('value', snap => {
+      const crops = snap.val() || {};
+      for (const [fileKey, dataUrl] of Object.entries(crops)) {
+        // fileKey is filename with dots replaced by underscores
+        const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
+        document.querySelectorAll(`img[src*="${filename}"]`).forEach(img => {
+          img.src = dataUrl;
+        });
+      }
+    });
   </script>
 </body>
 </html>
