@@ -264,9 +264,15 @@
 
       <div id="url-status" style="font-size:0.8rem;color:#9c8b76;margin-bottom:1rem;display:none;"></div>
 
+      <div id="url-fallback" style="display:none;margin-bottom:1rem;">
+        <p style="font-size:0.8rem;color:#6b5d4d;margin-bottom:0.5rem;">Couldn't auto-fetch. Paste the recipe text below and we'll parse it:</p>
+        <textarea class="form-textarea" id="url-paste-text" placeholder="Paste the recipe name, ingredients, and instructions here..." style="min-height:150px;"></textarea>
+      </div>
+
       <div class="form-actions">
         <button class="btn-cancel" onclick="closeModal('url-modal')">Cancel</button>
         <button class="btn-save" onclick="fetchRecipeFromUrl()" id="url-fetch-btn">Fetch Recipe</button>
+        <button class="btn-save" onclick="parseFromPaste()" id="url-paste-btn" style="display:none;">Add from Paste</button>
       </div>
     </div>
   </div>
@@ -535,10 +541,37 @@
       btn.textContent = 'Fetching...';
 
       try {
-        // Use allorigins as CORS proxy
-        const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
-        const res = await fetch(proxyUrl);
-        const html = await res.text();
+        // Try multiple CORS proxies
+        let html = null;
+        const proxies = [
+          'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+          'https://corsproxy.io/?' + encodeURIComponent(url),
+          'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+        ];
+
+        for (const proxyUrl of proxies) {
+          try {
+            const res = await fetch(proxyUrl, {signal: AbortSignal.timeout(10000)});
+            if (res.ok) {
+              const text = await res.text();
+              if (text.length > 1000 && !text.includes('Just a moment')) {
+                html = text;
+                break;
+              }
+            }
+          } catch(e) {}
+        }
+
+        if (!html) {
+          // Show paste fallback
+          status.textContent = 'This site blocked auto-fetch. Copy the recipe from the website and paste below:';
+          status.style.color = '#b8860b';
+          document.getElementById('url-fallback').style.display = '';
+          document.getElementById('url-paste-btn').style.display = '';
+          btn.disabled = false;
+          btn.textContent = 'Try Again';
+          return;
+        }
 
         // Parse JSON-LD recipe data
         let recipe = null;
@@ -649,6 +682,49 @@
 
       btn.disabled = false;
       btn.textContent = 'Fetch Recipe';
+    }
+
+    function parseFromPaste() {
+      const text = document.getElementById('url-paste-text').value.trim();
+      const url = document.getElementById('url-input').value.trim();
+      if (!text) { alert('Please paste the recipe text'); return; }
+
+      closeModal('url-modal');
+      openAddModal();
+
+      // Try to parse the pasted text
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+
+      // First non-empty line is likely the title
+      document.getElementById('f-name').value = lines[0] || '';
+      document.getElementById('f-source').value = url;
+
+      // Find ingredients section (lines with quantities/measurements)
+      const ingPattern = /^\d|^½|^¼|^¾|^⅓|^⅔|^a |^one |^two |^three /i;
+      const instrPattern = /^\d+\.|^step |^first |^then |^next |^preheat|^combine|^mix |^add |^stir |^bake |^cook |^heat /i;
+
+      let ingredients = [];
+      let instructions = [];
+      let mode = 'scan';
+
+      for (let i = 1; i < lines.length; i++) {
+        const line = lines[i];
+        const lower = line.toLowerCase();
+
+        if (lower.includes('ingredient')) { mode = 'ingredients'; continue; }
+        if (lower.includes('instruction') || lower.includes('direction') || lower.includes('method') || lower.includes('steps')) { mode = 'instructions'; continue; }
+
+        if (mode === 'ingredients' || (mode === 'scan' && ingPattern.test(line))) {
+          ingredients.push(line);
+          if (mode === 'scan') mode = 'ingredients';
+        } else if (mode === 'instructions' || instrPattern.test(line)) {
+          instructions.push(line);
+          mode = 'instructions';
+        }
+      }
+
+      document.getElementById('f-ingredients').value = ingredients.join('\n');
+      document.getElementById('f-instructions').value = instructions.join('\n\n');
     }
 
     function openAddModal() {
