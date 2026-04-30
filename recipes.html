@@ -239,6 +239,7 @@
       <input type="text" class="search-input" id="search" placeholder="Search recipes..." oninput="renderRecipes()" />
       <div id="filter-buttons"></div>
       <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+      <button class="add-btn" onclick="openUrlModal()" style="background:#4a8c6f;">+ Add by URL</button>
     </div>
 
     <div id="recipe-grid" class="recipe-grid"></div>
@@ -246,6 +247,27 @@
       <div class="emoji">&#x1F373;</div>
       <p>No recipes yet. Add your first one!</p>
       <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+    </div>
+  </div>
+
+  <!-- URL Import Modal -->
+  <div class="modal-overlay" id="url-modal">
+    <div class="modal" style="max-width:500px;">
+      <button class="modal-close" onclick="closeModal('url-modal')">&times;</button>
+      <div class="modal-title">Add Recipe by URL</div>
+      <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Paste a recipe URL and we'll fetch the details automatically.</p>
+
+      <div class="form-group">
+        <label class="form-label">Recipe URL</label>
+        <input class="form-input" id="url-input" placeholder="https://www.example.com/recipe/..." />
+      </div>
+
+      <div id="url-status" style="font-size:0.8rem;color:#9c8b76;margin-bottom:1rem;display:none;"></div>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeModal('url-modal')">Cancel</button>
+        <button class="btn-save" onclick="fetchRecipeFromUrl()" id="url-fetch-btn">Fetch Recipe</button>
+      </div>
     </div>
   </div>
 
@@ -490,6 +512,145 @@
     }
 
     // Add/Edit
+    // URL Import
+    function openUrlModal() {
+      document.getElementById('url-input').value = '';
+      document.getElementById('url-status').style.display = 'none';
+      document.getElementById('url-fetch-btn').disabled = false;
+      document.getElementById('url-fetch-btn').textContent = 'Fetch Recipe';
+      document.getElementById('url-modal').classList.add('open');
+      setTimeout(() => document.getElementById('url-input').focus(), 100);
+    }
+
+    async function fetchRecipeFromUrl() {
+      const url = document.getElementById('url-input').value.trim();
+      if (!url) { alert('Please enter a URL'); return; }
+
+      const status = document.getElementById('url-status');
+      const btn = document.getElementById('url-fetch-btn');
+      status.style.display = '';
+      status.textContent = 'Fetching recipe...';
+      status.style.color = '#9c8b76';
+      btn.disabled = true;
+      btn.textContent = 'Fetching...';
+
+      try {
+        // Use allorigins as CORS proxy
+        const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+        const res = await fetch(proxyUrl);
+        const html = await res.text();
+
+        // Parse JSON-LD recipe data
+        let recipe = null;
+        const ldMatches = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi);
+        if (ldMatches) {
+          for (const match of ldMatches) {
+            try {
+              const jsonStr = match.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '').trim();
+              let data = JSON.parse(jsonStr);
+              // Handle arrays
+              if (Array.isArray(data)) data = data.find(d => d['@type'] === 'Recipe') || data[0];
+              // Handle @graph
+              if (data['@graph']) data = data['@graph'].find(d => d['@type'] === 'Recipe');
+              if (data && data['@type'] === 'Recipe') {
+                recipe = data;
+                break;
+              }
+            } catch(e) {}
+          }
+        }
+
+        // Also try microdata/meta tags as fallback
+        if (!recipe) {
+          recipe = {};
+          const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+          recipe.name = titleMatch ? titleMatch[1].replace(/ [-|–].*/,'').trim() : '';
+
+          // Try og:image
+          const ogImg = html.match(/<meta[^>]*property="og:image"[^>]*content="([^"]+)"/i);
+          if (ogImg) recipe.image = ogImg[1];
+        }
+
+        if (!recipe || !recipe.name) {
+          status.textContent = 'Could not find recipe data on this page. Try adding manually.';
+          status.style.color = '#c2553a';
+          btn.disabled = false;
+          btn.textContent = 'Fetch Recipe';
+          return;
+        }
+
+        // Close URL modal and open edit modal with pre-filled data
+        closeModal('url-modal');
+        openAddModal();
+
+        // Pre-fill the form
+        document.getElementById('f-name').value = recipe.name || '';
+        document.getElementById('f-source').value = url;
+
+        // Image
+        if (recipe.image) {
+          const imgUrl = Array.isArray(recipe.image) ? recipe.image[0] : (typeof recipe.image === 'object' ? recipe.image.url : recipe.image);
+          if (imgUrl) document.getElementById('f-image').value = imgUrl;
+        }
+
+        // Ingredients
+        if (recipe.recipeIngredient) {
+          document.getElementById('f-ingredients').value = (Array.isArray(recipe.recipeIngredient) ? recipe.recipeIngredient : [recipe.recipeIngredient]).join('\n');
+        }
+
+        // Instructions
+        if (recipe.recipeInstructions) {
+          let instructions = recipe.recipeInstructions;
+          if (Array.isArray(instructions)) {
+            instructions = instructions.map((step, i) => {
+              if (typeof step === 'string') return (i+1) + '. ' + step;
+              if (step.text) return (i+1) + '. ' + step.text;
+              if (step.itemListElement) return step.itemListElement.map((s,j) => (j+1) + '. ' + (s.text||s)).join('\n');
+              return '';
+            }).join('\n\n');
+          }
+          document.getElementById('f-instructions').value = instructions;
+        }
+
+        // Times
+        function parseDuration(d) {
+          if (!d) return '';
+          const m = d.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
+          if (!m) return d;
+          const h = m[1] ? m[1] + ' hr ' : '';
+          const min = m[2] ? m[2] + ' min' : '';
+          return (h + min).trim();
+        }
+        document.getElementById('f-prep').value = parseDuration(recipe.prepTime) || '';
+        document.getElementById('f-cook').value = parseDuration(recipe.cookTime) || '';
+
+        // Servings
+        if (recipe.recipeYield) {
+          const servings = Array.isArray(recipe.recipeYield) ? recipe.recipeYield[0] : recipe.recipeYield;
+          document.getElementById('f-servings').value = servings;
+        }
+
+        // Category / cuisine
+        if (recipe.recipeCategory) {
+          const cat = Array.isArray(recipe.recipeCategory) ? recipe.recipeCategory[0] : recipe.recipeCategory;
+          const catMap = {'main course':'Dinner','dinner':'Dinner','lunch':'Lunch','breakfast':'Breakfast','dessert':'Dessert','appetizer':'Appetizer','snack':'Snack','drink':'Drink','side dish':'Side','soup':'Soup','salad':'Salad'};
+          document.getElementById('f-category').value = catMap[cat.toLowerCase()] || 'Dinner';
+        }
+        if (recipe.recipeCuisine) {
+          const cuisine = Array.isArray(recipe.recipeCuisine) ? recipe.recipeCuisine[0] : recipe.recipeCuisine;
+          document.getElementById('f-cuisine').value = cuisine;
+        }
+
+      } catch(e) {
+        status.textContent = 'Error fetching URL. Check the link and try again.';
+        status.style.color = '#c2553a';
+        console.error(e);
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Fetch Recipe';
+    }
+
     function openAddModal() {
       editingId = null;
       currentRating = 0;
