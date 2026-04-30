@@ -411,7 +411,7 @@
             ${previewImgs}
           </div>
           <div class="outfit-card-info">
-            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)"><span style="font-size:0.65rem;color:#b8a48e;font-weight:400;margin-right:0.3rem;">#${o.slide}</span>${o._filterCat}</div>
+            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)"><span style="font-size:0.75rem;color:#6b5d4d;font-weight:500;margin-right:0.3rem;">#${o.slide}</span>${o._filterCat}</div>
             <div class="outfit-card-season" onclick="event.stopPropagation();showSeasonPicker(${o.slide},this)">${o.season}</div>
             <div class="outfit-card-meta">${(o.layout||o.images).length} pieces</div>
             <div class="outfit-card-tags" onclick="event.stopPropagation();editTags(${o.slide},this)">${(o._tags||[]).map(t=>'<span class="outfit-card-tag">'+t+'</span>').join('')}<span style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;${(o._tags||[]).length?'margin-left:0.3rem':''}">+ tag</span></div>
