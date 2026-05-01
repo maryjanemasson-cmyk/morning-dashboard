@@ -4325,12 +4325,13 @@ window.WARDROBE_ITEMS = [
     "category": "Knitwear",
     "subcategory": "Pullovers",
     "labels": [
-      "Jcrew",
+      "J.Crew",
       "fluffy cashmere"
     ],
     "colors": [
-      "light blue",
-      "blue"
+      "light grey",
+      "grey",
+      "silver"
     ]
   },
   {
