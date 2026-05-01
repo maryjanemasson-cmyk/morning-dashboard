@@ -605,6 +605,11 @@
         </div>
 
         <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Paris Forecast</div>
+          <div id="paris-weather" style="font-size:0.8rem;color:#9c8b76;"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+        <div class="card">
           <div class="card-title"><span class="icon">&bull;</span> Sunrise &amp; Sunset</div>
           <div id="sun-times" style="font-size:0.8rem;color:#9c8b76;"><div class="loading"><div class="spinner"></div></div></div>
         </div>
@@ -1433,6 +1438,34 @@
         return (current || 0) + 1;
       });
     }
+
+    // Paris forecast
+    async function loadParisWeather() {
+      try {
+        const res = await fetch('https://wttr.in/Paris,France?format=j1');
+        const data = await res.json();
+        const days = data.weather;
+        const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        let html = '<div style="display:flex;justify-content:space-between;">';
+        days.forEach((day, i) => {
+          const date = new Date(day.date + 'T12:00:00');
+          const name = i === 0 ? 'Today' : dayNames[date.getDay()];
+          const desc = day.hourly[4].weatherDesc[0].value;
+          const rain = Math.max(...day.hourly.map(h => parseInt(h.chanceofrain)));
+          html += `<div style="text-align:center;flex:1;">
+            <div style="font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#9c8b76;">${name}</div>
+            <div style="font-size:1.1rem;margin:0.15rem 0;">${weatherIcon(desc)}</div>
+            <div style="font-size:0.75rem;"><span style="font-weight:500;color:#3d3529;">${day.maxtempF}\u00B0</span> <span style="color:#9c8b76;">${day.mintempF}\u00B0</span></div>
+            <div style="font-size:0.58rem;color:${rain > 0 ? '#7ca3c7' : '#4a8c6f'}">${rain > 0 ? rain + '%' : 'dry'}</div>
+          </div>`;
+        });
+        html += '</div>';
+        document.getElementById('paris-weather').innerHTML = html;
+      } catch(e) {
+        document.getElementById('paris-weather').innerHTML = '<span style="color:#b8a48e">Unavailable</span>';
+      }
+    }
+    loadParisWeather();
 
     loadWeather(); loadNews();
     function stamp(){document.getElementById('last-updated').textContent='Last updated \u2022 '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});}
