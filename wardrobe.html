@@ -510,7 +510,7 @@
           <div class="cat-item-info">
             <div style="display:flex;justify-content:space-between;align-items:center;">
               <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
-              <span style="font-size:0.55rem;color:#c9bfb0;font-family:monospace;">${i.file.replace('.png','').replace('.jpg','').replace(/_/g,'-').toUpperCase()}</span>
+              <span style="font-size:0.65rem;color:#6b5d4d;font-weight:600;font-family:monospace;">${i.file.replace('.png','').replace('.jpg','').replace(/_/g,'-').toUpperCase()}</span>
             </div>
             <div class="cat-item-sub" onclick="event.stopPropagation();editField('${i.id}','subcategory',this)" title="Click to edit subcategory">${i.subcategory}</div>
             ${outfitBadge}
