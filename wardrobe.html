@@ -412,6 +412,14 @@
               const wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
               addLink(wFile, slide);
             }
+            // Also check _origFile for cropped items (data URLs)
+            if (item._origFile) {
+              let orig = item._origFile;
+              if (orig.includes('wardrobe-thumbs/')) {
+                orig = orig.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+              }
+              addLink(orig, slide);
+            }
           }
         }
       }

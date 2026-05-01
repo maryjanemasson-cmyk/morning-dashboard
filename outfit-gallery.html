@@ -1017,6 +1017,10 @@
 
       // Update the layout item to use the cropped image
       if (_cropIdx !== null && _editLayout[_cropIdx]) {
+        // Save original file reference before overwriting with data URL
+        if (!_editLayout[_cropIdx]._origFile) {
+          _editLayout[_cropIdx]._origFile = _editLayout[_cropIdx].file;
+        }
         _editLayout[_cropIdx].file = dataUrl;
         _editLayout[_cropIdx]._cropped = true;
       }
