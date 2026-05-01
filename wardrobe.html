@@ -508,7 +508,10 @@
           ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')">
           <img src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i._customImage || i.file}')" />
           <div class="cat-item-info">
-            <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
+              <span style="font-size:0.55rem;color:#c9bfb0;font-family:monospace;">${i.file.replace('.png','').replace('.jpg','').replace(/_/g,'-').toUpperCase()}</span>
+            </div>
             <div class="cat-item-sub" onclick="event.stopPropagation();editField('${i.id}','subcategory',this)" title="Click to edit subcategory">${i.subcategory}</div>
             ${outfitBadge}
           </div>
