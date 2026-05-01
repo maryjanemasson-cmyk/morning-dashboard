@@ -386,8 +386,10 @@
     // 2. wardrobeOutfitLinks (manual links typed by user)
     // No more unreliable fingerprinting
 
+    let _outfitMapReady = false;
     function rebuildOutfitMap() {
       outfitMap = {};
+      _outfitMapReady = true;
 
       function addLink(file, slide) {
         // Add both jpg and png variants
@@ -480,7 +482,8 @@
         return true;
       });
 
-      document.getElementById('cat-count').textContent = filtered.length + ' items';
+      const outfitStatus = _outfitMapReady ? '' : ' (loading outfit links...)';
+      document.getElementById('cat-count').textContent = filtered.length + ' items' + outfitStatus;
 
       // Build HTML with subcategory headers when viewing a single category
       let gridHtml = '';
