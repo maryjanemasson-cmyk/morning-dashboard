@@ -372,6 +372,7 @@
     const IMG_PATH = 'wardrobe-thumbs/';
     let catFilter = 'All';
     let outfitFilter = 'All';
+    let _savedCrops = {};
 
     // ── Tabs ──
     function switchTab(tab) {
@@ -1577,7 +1578,6 @@
     }
 
     // Apply saved crops on load
-    let _savedCrops = {};
     db.ref('wardrobeCrops').on('value', snap => {
       _savedCrops = snap.val() || {};
       renderCatalogue();
