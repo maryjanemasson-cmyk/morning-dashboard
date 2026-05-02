@@ -521,12 +521,20 @@
           ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>
              <div style="font-size:0.55rem;color:#b8a48e;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">edit links</div>`
           : `<div style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">+ link to outfits</div>`;
+        const isCustom = i.id && i.id.startsWith('custom_');
+        const deleteBtn = isCustom
+          ? `<button onclick="event.stopPropagation();deleteCustomItem('${i.id}')" style="position:absolute;top:0.35rem;right:0.35rem;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;" class="delete-custom-btn">&times;</button>`
+          : '';
         gridHtml += `<div class="cat-item" draggable="true"
           data-id="${i.id}"
           ondragstart="startItemDrag(event,'${i.id}')"
           ondragover="event.preventDefault();this.classList.add('drag-over')"
           ondragleave="this.classList.remove('drag-over')"
-          ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')">
+          ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')"
+          style="position:relative;"
+          onmouseenter="this.querySelector('.delete-custom-btn')&&(this.querySelector('.delete-custom-btn').style.opacity='1')"
+          onmouseleave="this.querySelector('.delete-custom-btn')&&(this.querySelector('.delete-custom-btn').style.opacity='0')">
+          ${deleteBtn}
           <img src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i._customImage || i.file}')" />
           <div class="cat-item-info">
             <div style="display:flex;justify-content:space-between;align-items:center;">
@@ -1243,6 +1251,16 @@
         reader.onload = function(ev) { finishSave(ev.target.result); };
         reader.readAsDataURL(fileInput.files[0]);
       }
+    }
+
+    function deleteCustomItem(id) {
+      if (!confirm('Delete this item from your wardrobe?')) return;
+      db.ref('wardrobeCustomItems/' + id).remove();
+      // Remove from local array
+      const idx = items.findIndex(i => i.id === id);
+      if (idx !== -1) items.splice(idx, 1);
+      renderCatFilters();
+      renderCatalogue();
     }
 
     // Load custom items from Firebase on startup
