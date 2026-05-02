@@ -65,7 +65,7 @@
     .cat-subheader:first-child { border-top: none; margin-top: 0; }
     .cat-item {
       background:#fff; border:1px solid #ebe5dc; border-radius:8px; overflow:hidden;
-      cursor:pointer; transition:border-color 0.2s, box-shadow 0.2s;
+      cursor:grab; position:relative; transition:border-color 0.2s, box-shadow 0.2s;
     }
     .cat-item:hover { border-color:#c9b99a; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
     .cat-item.dragging { opacity:0.3; }
@@ -531,11 +531,10 @@
           ondragover="event.preventDefault();this.classList.add('drag-over')"
           ondragleave="this.classList.remove('drag-over')"
           ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')"
-          style="position:relative;"
-          onmouseenter="this.querySelector('.delete-custom-btn')&&(this.querySelector('.delete-custom-btn').style.opacity='1')"
-          onmouseleave="this.querySelector('.delete-custom-btn')&&(this.querySelector('.delete-custom-btn').style.opacity='0')">
+          onmouseenter="var d=this.querySelector('.delete-custom-btn');if(d)d.style.opacity='1'"
+          onmouseleave="var d=this.querySelector('.delete-custom-btn');if(d)d.style.opacity='0'">
           ${deleteBtn}
-          <img src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i._customImage || i.file}')" />
+          <img src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i._customImage || i.file}')" draggable="false" />
           <div class="cat-item-info">
             <div style="display:flex;justify-content:space-between;align-items:center;">
               <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
