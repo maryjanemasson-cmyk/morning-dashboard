@@ -535,6 +535,7 @@
             onmousedown="startDragPiece(event,${idx})">
             <img src="${imgSrc}" alt="" style="width:100%;height:100%;position:static;" />
             <button class="edit-crop-btn" onclick="event.stopPropagation();openCropTool(${idx})">&#x2702;</button>
+            <button class="edit-swap-btn" onclick="event.stopPropagation();swapWithWardrobe(${idx})" title="Replace with wardrobe item" style="position:absolute;top:2px;left:2px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:3px;font-size:0.55rem;padding:1px 4px;cursor:pointer;opacity:0.7;">&#x21C4;</button>
             <button class="edit-delete-btn" onclick="event.stopPropagation();deletePiece(${idx})">×</button>
             <div class="edit-resize" onmousedown="event.stopPropagation();startResizePiece(event,${idx})"></div>
           </div>`;
@@ -578,6 +579,23 @@
         }
       }
     }
+
+    let _swapIdx = null;
+    function swapWithWardrobe(idx) {
+      _swapIdx = idx;
+      // Open the add panel in "swap" mode
+      _addPanelOpen = true;
+      renderDetail();
+      // Change the panel title to indicate swap mode
+      const panel = document.getElementById('add-panel');
+      if (panel) {
+        const title = panel.querySelector('span');
+        if (title) title.textContent = 'Replace Piece #' + (idx + 1);
+      }
+    }
+
+    // Wrap addPieceFromWardrobe to handle swap mode
+    const _baseAddPiece = addPieceFromWardrobe;
 
     function toggleEdit() {
       _editMode = !_editMode;
@@ -1197,22 +1215,33 @@
       }
     });
 
-    // Override addPieceFromWardrobe to use cropped version if available
+    // Override addPieceFromWardrobe to use cropped version if available + handle swap
     const _origAddPiece = addPieceFromWardrobe;
     addPieceFromWardrobe = function(filename) {
       const fileKey = filename.replace(/\./g, '_');
       const croppedUrl = _wardrobeCrops[fileKey];
-      // Find custom items too
       const wardrobeItems = window.WARDROBE_ITEMS || [];
       const customItem = wardrobeItems.find(i => i.id === filename && i._customImage);
-
       const imgSrc = croppedUrl || (customItem && customItem._customImage) || ('../wardrobe-thumbs/' + filename);
 
-      _editLayout.push({
-        file: imgSrc,
-        _origFile: filename,
-        left: 40, top: 30, width: 15, height: 25
-      });
+      if (_swapIdx !== null && _swapIdx < _editLayout.length) {
+        // Swap mode: replace the piece but keep position/size
+        const old = _editLayout[_swapIdx];
+        _editLayout[_swapIdx] = {
+          file: imgSrc,
+          _origFile: filename,
+          left: old.left, top: old.top, width: old.width, height: old.height
+        };
+        _swapIdx = null;
+        _addPanelOpen = false;
+      } else {
+        // Normal add
+        _editLayout.push({
+          file: imgSrc,
+          _origFile: filename,
+          left: 40, top: 30, width: 15, height: 25
+        });
+      }
       renderDetail();
     };
 
