@@ -321,7 +321,7 @@
     // Load edits from Firebase
     db.ref('outfitEdits').on('value', snap => {
       _outfitEdits = snap.val() || {};
-      // Apply edits
+      // Apply edits to existing outfits
       outfits.forEach(o => {
         const edit = _outfitEdits[o.slide];
         if (edit) {
@@ -330,8 +330,28 @@
           if (edit.order !== undefined) o._order = edit.order;
           if (edit.layout) o.layout = edit.layout;
           if (edit.tags) o._tags = edit.tags;
+          if (edit.name) o.name = edit.name;
         }
       });
+      // Add new outfits created via Firebase (not in outfit-data.js)
+      for (const [slideStr, edit] of Object.entries(_outfitEdits)) {
+        const slide = parseInt(slideStr);
+        if (isNaN(slide)) continue;
+        if (!outfits.find(o => o.slide === slide)) {
+          outfits.push({
+            slide: slide,
+            name: edit.name || 'Outfit #' + slide,
+            occasion: edit.occasion || 'Casual',
+            season: edit.season || 'Spring',
+            images: [],
+            image_count: 0,
+            sized_images: [],
+            layout: edit.layout || [],
+            _tags: edit.tags || [],
+            _filterCat: edit.occasion || 'Casual'
+          });
+        }
+      }
       render();
     });
 
@@ -406,6 +426,7 @@
       }
 
       toolbarHtml += `<span class="count">${filtered.length} outfits</span>`;
+      toolbarHtml += `<button onclick="createNewOutfit()" style="margin-left:auto;padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ New Outfit</button>`;
       document.getElementById('toolbar').innerHTML = toolbarHtml;
 
       // Sort by custom order if set
@@ -440,7 +461,7 @@
             ${previewImgs}
           </div>
           <div class="outfit-card-info">
-            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)"><span style="font-size:0.75rem;color:#6b5d4d;font-weight:500;margin-right:0.3rem;">#${o.slide}</span>${o._filterCat}</div>
+            <div class="outfit-card-title" onclick="event.stopPropagation();showOccasionPicker(${o.slide},this)"><span style="font-size:0.75rem;color:#6b5d4d;font-weight:500;margin-right:0.3rem;">#${o.slide}</span>${(_outfitEdits[o.slide]&&_outfitEdits[o.slide].name) || o._filterCat}</div>
             <div class="outfit-card-season" onclick="event.stopPropagation();showSeasonPicker(${o.slide},this)">${o.season}</div>
             <div class="outfit-card-meta">${(o.layout||o.images).length} pieces</div>
             <div class="outfit-card-tags" onclick="event.stopPropagation();editTags(${o.slide},this)">${(o._tags||[]).map(t=>'<span class="outfit-card-tag">'+t+'</span>').join('')}<span style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;${(o._tags||[]).length?'margin-left:0.3rem':''}">+ tag</span></div>
@@ -472,8 +493,10 @@
       if (!o) o = outfits.find(x => x.slide === _editingOutfit);
       if (!o) return;
 
-      let html = `<div class="modal-title"><span style="font-size:0.8rem;color:#b8a48e;font-weight:400;margin-right:0.4rem;">#${o.slide}</span>${o._filterCat || o.occasion}</div>`;
-      html += `<div class="modal-meta">${o.season} &middot; ${_editLayout.length} pieces</div>`;
+      const displayName = (_outfitEdits[o.slide] && _outfitEdits[o.slide].name) || o.name || '';
+      const displayTitle = displayName || o._filterCat || o.occasion;
+      let html = `<div class="modal-title"><span style="font-size:0.8rem;color:#b8a48e;font-weight:400;margin-right:0.4rem;">#${o.slide}</span>${displayTitle}</div>`;
+      html += `<div class="modal-meta">${o.season} &middot; ${o._filterCat || o.occasion} &middot; ${_editLayout.length} pieces</div>`;
 
       // Edit toolbar
       html += '<div class="edit-toolbar">';
@@ -743,6 +766,89 @@
     function deleteOutfitCard(slide) {
       if (!confirm('Delete this outfit?')) return;
       db.ref('deletedOutfits/' + slide).set(true);
+    }
+
+    // Create new outfit
+    function createNewOutfit() {
+      // Generate next slide number (after all existing)
+      const maxSlide = Math.max(...outfits.map(o => o.slide), 0);
+      const newSlide = maxSlide + 1;
+
+      // Show naming dialog
+      const modal = document.createElement('div');
+      modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:9999;display:flex;align-items:center;justify-content:center;';
+      modal.innerHTML = `
+        <div style="background:#fff;border-radius:12px;padding:2rem;max-width:400px;width:90%;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2c2418;margin-bottom:1rem;">New Outfit</div>
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Name</label>
+            <input type="text" id="new-outfit-name" placeholder="e.g. Weekend Brunch, Paris Day 1..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+          </div>
+          <div style="display:flex;gap:0.75rem;margin-bottom:1rem;">
+            <div style="flex:1;">
+              <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Season</label>
+              <select id="new-outfit-season" style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;">
+                ${SEASONS.map(s => '<option>' + s + '</option>').join('')}
+              </select>
+            </div>
+            <div style="flex:1;">
+              <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Occasion</label>
+              <select id="new-outfit-occasion" style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;">
+                ${OCCASIONS.map(o => '<option>' + o + '</option>').join('')}
+              </select>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;justify-content:flex-end;">
+            <button id="new-outfit-cancel" style="padding:0.5rem 1rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.82rem;cursor:pointer;font-family:inherit;">Cancel</button>
+            <button id="new-outfit-create" style="padding:0.5rem 1.2rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.82rem;cursor:pointer;font-family:inherit;">Create</button>
+          </div>
+        </div>`;
+      document.body.appendChild(modal);
+
+      document.getElementById('new-outfit-cancel').onclick = () => modal.remove();
+      document.getElementById('new-outfit-create').onclick = () => {
+        const name = document.getElementById('new-outfit-name').value.trim() || 'Outfit #' + newSlide;
+        const season = document.getElementById('new-outfit-season').value;
+        const occasion = document.getElementById('new-outfit-occasion').value;
+
+        // Create the outfit object
+        const newOutfit = {
+          slide: newSlide,
+          name: name,
+          occasion: occasion,
+          season: season,
+          images: [],
+          image_count: 0,
+          sized_images: [],
+          layout: [],
+          _filterCat: occasion
+        };
+        outfits.push(newOutfit);
+
+        // Save to Firebase
+        const updates = {
+          occasion: occasion,
+          season: season,
+          name: name,
+          layout: [],
+          tags: []
+        };
+        _outfitEdits[newSlide] = updates;
+        db.ref('outfitEdits/' + newSlide).set(updates);
+
+        modal.remove();
+        render();
+
+        // Open in edit mode with add panel open
+        _editingOutfit = newSlide;
+        _editMode = true;
+        _editLayout = [];
+        _addPanelOpen = true;
+        renderDetail();
+      };
+
+      // Focus name input
+      setTimeout(() => document.getElementById('new-outfit-name').focus(), 100);
     }
 
     // Tag editor
