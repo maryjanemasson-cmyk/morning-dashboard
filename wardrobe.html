@@ -557,7 +557,8 @@
       if (field === 'category') {
         // Use dropdown for category
         const select = document.createElement('select');
-        select.style.cssText = 'width:100%;border:1px solid #c9b99a;border-radius:4px;padding:0.2rem;font-size:0.7rem;font-family:inherit;color:#3d3529;outline:none;';
+        select.style.cssText = 'width:100%;border:1px solid #c9b99a;border-radius:4px;padding:0.3rem;font-size:0.75rem;font-family:inherit;color:#3d3529;outline:none;z-index:100;position:relative;';
+        select.size = Math.min(CATEGORIES.length, 8);
         CATEGORIES.forEach(c => {
           const opt = document.createElement('option');
           opt.value = c; opt.textContent = c;
@@ -565,25 +566,43 @@
           select.appendChild(opt);
         });
         el.textContent = '';
+        el.style.position = 'relative';
+        el.style.zIndex = '100';
         el.appendChild(select);
-        select.focus();
 
-        function save() {
-          const newVal = select.value;
-          if (newVal !== currentVal) {
+        // Prevent all parent click/mouse events from interfering
+        select.addEventListener('mousedown', e => e.stopPropagation());
+        select.addEventListener('click', e => e.stopPropagation());
+
+        let saved = false;
+        function save(newVal) {
+          if (saved) return;
+          saved = true;
+          if (newVal && newVal !== currentVal) {
             const updates = _itemOverrides[itemId] || {};
             updates[field] = newVal;
             db.ref('wardrobeEdits/' + itemId).set(updates);
           } else {
             el.textContent = currentVal;
           }
+          el.style.position = '';
+          el.style.zIndex = '';
+          document.removeEventListener('mousedown', clickAway);
         }
-        select.addEventListener('change', save);
-        setTimeout(() => {
-          document.addEventListener('click', function clickAway(e) {
-            if (!el.contains(e.target)) { save(); document.removeEventListener('click', clickAway); }
-          });
-        }, 0);
+
+        // Select on click/dblclick
+        select.addEventListener('dblclick', e => { e.stopPropagation(); save(select.value); });
+        select.addEventListener('change', e => { e.stopPropagation(); save(select.value); });
+        select.addEventListener('keydown', e => {
+          e.stopPropagation();
+          if (e.key === 'Enter') save(select.value);
+          if (e.key === 'Escape') save(null);
+        });
+
+        function clickAway(e) {
+          if (!el.contains(e.target)) save(null);
+        }
+        setTimeout(() => document.addEventListener('mousedown', clickAway), 100);
       } else {
         // Use text input for subcategory
         const input = document.createElement('input');
