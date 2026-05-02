@@ -272,6 +272,28 @@
     });
     const db = firebase.database();
 
+    // Load custom wardrobe items from Firebase into the pick list
+    db.ref('wardrobeCustomItems').on('value', snap => {
+      const custom = snap.val() || {};
+      const baseItems = window.WARDROBE_ITEMS || [];
+      // Remove old custom items
+      for (let i = baseItems.length - 1; i >= 0; i--) {
+        if (baseItems[i].id && (baseItems[i].id.startsWith('custom_') || /^C\d+$/.test(baseItems[i].id))) baseItems.splice(i, 1);
+      }
+      // Add current custom items
+      for (const [id, data] of Object.entries(custom)) {
+        baseItems.push({
+          id: id,
+          file: id,
+          category: data.category,
+          subcategory: data.subcategory || data.category,
+          labels: data.labels || [],
+          colors: data.colors || [],
+          _customImage: data.image
+        });
+      }
+    });
+
     const IMG_PATH = 'outfit-images/';
     let outfits = window.OUTFIT_DATA || [];
     let activeFilter = 'All';
