@@ -555,52 +555,47 @@
       const currentVal = el.textContent;
 
       if (field === 'category') {
-        // Use dropdown for category
-        const select = document.createElement('select');
-        select.style.cssText = 'width:100%;border:1px solid #c9b99a;border-radius:4px;padding:0.3rem;font-size:0.75rem;font-family:inherit;color:#3d3529;outline:none;z-index:100;position:relative;';
-        select.size = Math.min(CATEGORIES.length, 8);
+        // Build a button list for category selection
+        const container = document.createElement('div');
+        container.style.cssText = 'position:absolute;z-index:200;background:#fff;border:1px solid #c9b99a;border-radius:6px;padding:0.3rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);max-height:280px;overflow-y:auto;width:140px;';
         CATEGORIES.forEach(c => {
-          const opt = document.createElement('option');
-          opt.value = c; opt.textContent = c;
-          if (c === currentVal) opt.selected = true;
-          select.appendChild(opt);
+          const btn = document.createElement('div');
+          btn.textContent = c;
+          btn.style.cssText = 'padding:0.35rem 0.5rem;font-size:0.75rem;font-family:inherit;cursor:pointer;border-radius:4px;color:#3d3529;' + (c === currentVal ? 'background:#013E7D;color:#fff;font-weight:600;' : '');
+          btn.addEventListener('mouseenter', () => { if (c !== currentVal) btn.style.background = '#f0ebe4'; });
+          btn.addEventListener('mouseleave', () => { if (c !== currentVal) btn.style.background = ''; });
+          btn.addEventListener('click', e => {
+            e.stopPropagation();
+            container.remove();
+            document.removeEventListener('mousedown', clickAway);
+            if (c !== currentVal) {
+              const updates = _itemOverrides[itemId] || {};
+              updates[field] = c;
+              db.ref('wardrobeEdits/' + itemId).set(updates);
+              // Update local item
+              const item = items.find(it => it.id === itemId);
+              if (item) item.category = c;
+              renderCatFilters();
+              renderCatalogue();
+            }
+          });
+          container.appendChild(btn);
         });
-        el.textContent = '';
-        el.style.position = 'relative';
-        el.style.zIndex = '100';
-        el.appendChild(select);
 
-        // Prevent all parent click/mouse events from interfering
-        select.addEventListener('mousedown', e => e.stopPropagation());
-        select.addEventListener('click', e => e.stopPropagation());
+        // Position near the element
+        const rect = el.getBoundingClientRect();
+        container.style.left = rect.left + 'px';
+        container.style.top = (rect.bottom + 2) + 'px';
+        container.style.position = 'fixed';
+        document.body.appendChild(container);
 
-        let saved = false;
-        function save(newVal) {
-          if (saved) return;
-          saved = true;
-          if (newVal && newVal !== currentVal) {
-            const updates = _itemOverrides[itemId] || {};
-            updates[field] = newVal;
-            db.ref('wardrobeEdits/' + itemId).set(updates);
-          } else {
-            el.textContent = currentVal;
-          }
-          el.style.position = '';
-          el.style.zIndex = '';
-          document.removeEventListener('mousedown', clickAway);
-        }
-
-        // Select on click/dblclick
-        select.addEventListener('dblclick', e => { e.stopPropagation(); save(select.value); });
-        select.addEventListener('change', e => { e.stopPropagation(); save(select.value); });
-        select.addEventListener('keydown', e => {
-          e.stopPropagation();
-          if (e.key === 'Enter') save(select.value);
-          if (e.key === 'Escape') save(null);
-        });
+        container.addEventListener('mousedown', e => e.stopPropagation());
 
         function clickAway(e) {
-          if (!el.contains(e.target)) save(null);
+          if (!container.contains(e.target)) {
+            container.remove();
+            document.removeEventListener('mousedown', clickAway);
+          }
         }
         setTimeout(() => document.addEventListener('mousedown', clickAway), 100);
       } else {
