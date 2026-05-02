@@ -521,7 +521,7 @@
           ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>
              <div style="font-size:0.55rem;color:#b8a48e;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">edit links</div>`
           : `<div style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">+ link to outfits</div>`;
-        const isCustom = i.id && i.id.startsWith('custom_');
+        const isCustom = i.id && (i.id.startsWith('custom_') || i.id.match(/^C\d+$/));
         const deleteBtn = isCustom
           ? `<button onclick="event.stopPropagation();deleteCustomItem('${i.id}')" style="position:absolute;top:0.35rem;right:0.35rem;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;" class="delete-custom-btn">&times;</button>`
           : '';
@@ -539,7 +539,7 @@
           <div class="cat-item-info">
             <div style="display:flex;justify-content:space-between;align-items:center;">
               <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
-              <span style="font-size:0.65rem;color:#6b5d4d;font-weight:600;font-family:monospace;">${i.file.replace('.png','').replace('.jpg','').replace(/_/g,'-').toUpperCase()}</span>
+              <span style="font-size:0.65rem;color:#6b5d4d;font-weight:600;font-family:monospace;">${i.id.match(/^C\d+$/) ? i.id : i.id.startsWith('custom_') ? 'C-' + i.id.slice(-4) : i.file.replace('.png','').replace('.jpg','').replace(/_/g,'-').toUpperCase()}</span>
             </div>
             <div class="cat-item-sub" onclick="event.stopPropagation();editField('${i.id}','subcategory',this)" title="Click to edit subcategory">${i.subcategory}</div>
             ${outfitBadge}
@@ -549,33 +549,63 @@
       document.getElementById('cat-grid').innerHTML = gridHtml;
     }
 
+    const CATEGORIES = ['Tops','Pants','Dresses','Skirts','Shoes','Bags','Jewelry','Knitwear','Jackets & Coats','Casual','Shorts','Accessories'];
+
     function editField(itemId, field, el) {
       const currentVal = el.textContent;
-      const input = document.createElement('input');
-      input.className = 'edit-input';
-      input.value = currentVal;
-      el.textContent = '';
-      el.appendChild(input);
-      input.focus();
-      input.select();
 
-      function save() {
-        const newVal = input.value.trim();
-        if (newVal && newVal !== currentVal) {
-          // Save override to Firebase
-          const updates = _itemOverrides[itemId] || {};
-          updates[field] = newVal;
-          db.ref('wardrobeEdits/' + itemId).set(updates);
-        } else {
-          el.textContent = currentVal;
+      if (field === 'category') {
+        // Use dropdown for category
+        const select = document.createElement('select');
+        select.style.cssText = 'width:100%;border:1px solid #c9b99a;border-radius:4px;padding:0.2rem;font-size:0.7rem;font-family:inherit;color:#3d3529;outline:none;';
+        CATEGORIES.forEach(c => {
+          const opt = document.createElement('option');
+          opt.value = c; opt.textContent = c;
+          if (c === currentVal) opt.selected = true;
+          select.appendChild(opt);
+        });
+        el.textContent = '';
+        el.appendChild(select);
+        select.focus();
+
+        function save() {
+          const newVal = select.value;
+          if (newVal !== currentVal) {
+            const updates = _itemOverrides[itemId] || {};
+            updates[field] = newVal;
+            db.ref('wardrobeEdits/' + itemId).set(updates);
+          } else {
+            el.textContent = currentVal;
+          }
         }
-      }
+        select.addEventListener('change', save);
+        select.addEventListener('blur', save);
+      } else {
+        // Use text input for subcategory
+        const input = document.createElement('input');
+        input.className = 'edit-input';
+        input.value = currentVal;
+        el.textContent = '';
+        el.appendChild(input);
+        input.focus();
+        input.select();
 
-      input.addEventListener('blur', save);
-      input.addEventListener('keydown', e => {
-        if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
-        if (e.key === 'Escape') { el.textContent = currentVal; }
-      });
+        function save() {
+          const newVal = input.value.trim();
+          if (newVal && newVal !== currentVal) {
+            const updates = _itemOverrides[itemId] || {};
+            updates[field] = newVal;
+            db.ref('wardrobeEdits/' + itemId).set(updates);
+          } else {
+            el.textContent = currentVal;
+          }
+        }
+        input.addEventListener('blur', save);
+        input.addEventListener('keydown', e => {
+          if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
+          if (e.key === 'Escape') { el.textContent = currentVal; }
+        });
+      }
     }
 
     // Drag to reorder
@@ -1207,7 +1237,10 @@
       if (!_urlImageData && !fileInput.files[0]) { alert('Please select a photo or fetch from URL.'); return; }
 
       function finishSave(dataUrl) {
-        const id = 'custom_' + Date.now();
+        // Generate short ID like C001, C002, etc.
+        const existingNums = items.filter(i => i.id && i.id.startsWith('C')).map(i => parseInt(i.id.slice(1)) || 0);
+        const nextNum = (existingNums.length ? Math.max(...existingNums) : 0) + 1;
+        const id = 'C' + String(nextNum).padStart(3, '0');
         const itemData = {
           id: id,
           category: category,
