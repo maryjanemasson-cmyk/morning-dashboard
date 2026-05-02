@@ -608,20 +608,27 @@
         input.focus();
         input.select();
 
+        let saved = false;
         function save() {
+          if (saved) return;
+          saved = true;
           const newVal = input.value.trim();
           if (newVal && newVal !== currentVal) {
             const updates = _itemOverrides[itemId] || {};
             updates[field] = newVal;
             db.ref('wardrobeEdits/' + itemId).set(updates);
+            // Update local item immediately
+            const item = items.find(it => it.id === itemId);
+            if (item) item[field] = newVal;
+            renderCatalogue();
           } else {
             el.textContent = currentVal;
           }
         }
         input.addEventListener('blur', save);
         input.addEventListener('keydown', e => {
-          if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
-          if (e.key === 'Escape') { el.textContent = currentVal; }
+          if (e.key === 'Enter') { e.preventDefault(); save(); }
+          if (e.key === 'Escape') { saved = true; el.textContent = currentVal; }
         });
       }
     }
