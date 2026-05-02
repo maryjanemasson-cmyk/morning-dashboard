@@ -579,7 +579,11 @@
           }
         }
         select.addEventListener('change', save);
-        select.addEventListener('blur', save);
+        setTimeout(() => {
+          document.addEventListener('click', function clickAway(e) {
+            if (!el.contains(e.target)) { save(); document.removeEventListener('click', clickAway); }
+          });
+        }, 0);
       } else {
         // Use text input for subcategory
         const input = document.createElement('input');
