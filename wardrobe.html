@@ -1275,7 +1275,7 @@
         };
         db.ref('wardrobeCustomItems/' + id).set(itemData);
 
-        items.push({
+        const newItem = {
           id: id,
           file: id,
           category: category,
@@ -1283,7 +1283,41 @@
           labels: brand ? [brand] : [],
           colors: color ? color.split(',').map(c => c.trim()) : [],
           _customImage: dataUrl
-        });
+        };
+
+        // Insert near matching items (same category + color) instead of at the end
+        const newColors = newItem.colors.map(c => c.toLowerCase());
+        let bestIdx = -1;
+        // First: find items with same category AND same color
+        for (let idx = items.length - 1; idx >= 0; idx--) {
+          const it = items[idx];
+          if (it.category === category && newColors.length > 0 && it.colors && it.colors.some(c => newColors.includes(c.toLowerCase()))) {
+            bestIdx = idx + 1; break;
+          }
+        }
+        // Fallback: find last item with same category + subcategory
+        if (bestIdx === -1) {
+          for (let idx = items.length - 1; idx >= 0; idx--) {
+            if (items[idx].category === category && items[idx].subcategory === subcategory) {
+              bestIdx = idx + 1; break;
+            }
+          }
+        }
+        // Fallback: find last item with same category
+        if (bestIdx === -1) {
+          for (let idx = items.length - 1; idx >= 0; idx--) {
+            if (items[idx].category === category) { bestIdx = idx + 1; break; }
+          }
+        }
+        if (bestIdx === -1) bestIdx = items.length;
+        items.splice(bestIdx, 0, newItem);
+
+        // Save the new order to Firebase for the category view
+        const catKey = category.replace(/[.#$/\[\]]/g, '_');
+        const catItems = items.filter(it => it.category === category).map(it => it.id);
+        db.ref('wardrobeOrder/' + catKey).set(catItems);
+        // Also update 'all' order
+        db.ref('wardrobeOrder/all').set(items.map(it => it.id));
 
         // Close modal and reset
         document.getElementById('add-item-modal').classList.remove('open');
