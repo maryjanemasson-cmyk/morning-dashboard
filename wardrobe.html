@@ -534,7 +534,7 @@
           onmouseenter="var d=this.querySelector('.delete-custom-btn');if(d)d.style.opacity='1'"
           onmouseleave="var d=this.querySelector('.delete-custom-btn');if(d)d.style.opacity='0'">
           ${deleteBtn}
-          <img src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i._customImage || i.file}')" draggable="false" />
+          <img src="${_savedCrops[i.file.replace(/\./g,'_')] || i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i.file}')" draggable="false" />
           <div class="cat-item-info">
             <div style="display:flex;justify-content:space-between;align-items:center;">
               <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
@@ -741,8 +741,12 @@
       window.location.href = `outfit-gallery.html?slides=${param}&from=${encodeURIComponent(file)}`;
     }
 
+    let _zoomFile = null; // track original filename for crop tool
     function zoomImage(file) {
-      document.getElementById('zoom-img').src = file.startsWith('data:') ? file : IMG_PATH + file;
+      _zoomFile = file;
+      const fileKey = file.replace(/\./g, '_');
+      const cropSrc = _savedCrops[fileKey];
+      document.getElementById('zoom-img').src = cropSrc || (file.startsWith('data:') ? file : IMG_PATH + file);
       document.getElementById('zoom-modal').classList.add('open');
     }
 
@@ -1396,14 +1400,13 @@
     let _wcropScale = 1;
 
     function resetToOriginal() {
-      const src = document.getElementById('zoom-img').src;
-      const parts = src.split('/');
-      const filename = parts[parts.length - 1];
+      const filename = _zoomFile;
+      if (!filename) { alert('Cannot reset this image.'); return; }
 
       if (!confirm('Reset this image to the original from the inventory? This will undo any cropping.')) return;
 
-      // Load original from wardrobe-images/ instead of wardrobe-thumbs/
-      const origSrc = src.replace('wardrobe-thumbs/', 'wardrobe-images/');
+      // Load original from wardrobe-images/
+      const origSrc = 'wardrobe-images/' + filename;
 
       const imgEl = new window.Image();
       imgEl.crossOrigin = 'anonymous';
@@ -1431,13 +1434,8 @@
         const fileKey = filename.replace(/\./g, '_');
         db.ref('wardrobeCrops/' + fileKey).set(dataUrl);
 
-        // Update on page
-        document.querySelectorAll(`img[src*="${filename}"]`).forEach(img => {
-          img.src = dataUrl;
-        });
         document.getElementById('zoom-img').src = dataUrl;
-
-        alert('Image reset to original!');
+        renderCatalogue();
       };
       imgEl.onerror = function() {
         alert('Could not load original image.');
@@ -1448,9 +1446,8 @@
     function openWardrobeCrop() {
       document.getElementById('zoom-modal').classList.remove('open');
       const src = document.getElementById('zoom-img').src;
-      // Extract filename from src
-      const parts = src.split('/');
-      _wcropFile = parts[parts.length - 1];
+      // Use tracked filename, fallback to extracting from src
+      _wcropFile = _zoomFile || src.split('/').pop();
 
       const imgEl = new window.Image();
       imgEl.crossOrigin = 'anonymous';
@@ -1544,15 +1541,12 @@
       ctx.drawImage(cropCanvas, 0, 0, w, h, px, py, drawW, drawH);
 
       const dataUrl = finalCanvas.toDataURL('image/png');
-      db.ref('wardrobeCrops/' + _wcropFile.replace(/\./g, '_')).set(dataUrl);
-
-      // Update the thumbnail in the current page
-      document.querySelectorAll(`img[src*="${_wcropFile}"]`).forEach(img => {
-        img.src = dataUrl;
-      });
+      const fileKey = _wcropFile.replace(/\./g, '_');
+      db.ref('wardrobeCrops/' + fileKey).set(dataUrl);
 
       closeWardrobeCrop();
-      alert('Crop saved! This image will show the cropped version everywhere.');
+      // Re-render to show the crop (Firebase listener will also update)
+      renderCatalogue();
     }
 
     function closeWardrobeCrop() {
@@ -1562,15 +1556,10 @@
     }
 
     // Apply saved crops on load
+    let _savedCrops = {};
     db.ref('wardrobeCrops').on('value', snap => {
-      const crops = snap.val() || {};
-      for (const [fileKey, dataUrl] of Object.entries(crops)) {
-        // fileKey is filename with dots replaced by underscores
-        const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
-        document.querySelectorAll(`img[src*="${filename}"]`).forEach(img => {
-          img.src = dataUrl;
-        });
-      }
+      _savedCrops = snap.val() || {};
+      renderCatalogue();
     });
   </script>
 </body>
