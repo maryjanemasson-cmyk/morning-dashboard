@@ -270,7 +270,20 @@
 
       <div style="margin-bottom:1rem;">
         <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Photo</label>
-        <input type="file" id="add-photo" accept="image/*" style="font-size:0.82rem;font-family:inherit;" />
+        <div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;">
+          <button id="photo-tab-file" onclick="switchPhotoTab('file')" style="flex:1;padding:0.4rem;border-radius:6px;border:1px solid #013E7D;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;">Upload File</button>
+          <button id="photo-tab-url" onclick="switchPhotoTab('url')" style="flex:1;padding:0.4rem;border-radius:6px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.75rem;cursor:pointer;font-family:inherit;">Paste URL</button>
+        </div>
+        <div id="photo-file-section">
+          <input type="file" id="add-photo" accept="image/*" style="font-size:0.82rem;font-family:inherit;" />
+        </div>
+        <div id="photo-url-section" style="display:none;">
+          <div style="display:flex;gap:0.4rem;">
+            <input type="text" id="add-photo-url" placeholder="Paste product page or image URL..." style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+            <button onclick="fetchImageFromUrl()" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">Fetch</button>
+          </div>
+          <div id="url-status" style="font-size:0.7rem;color:#9c8b76;margin-top:0.3rem;"></div>
+        </div>
         <div id="add-photo-preview" style="margin-top:0.5rem;"></div>
       </div>
 
@@ -1000,6 +1013,170 @@
     renderCanvas();
 
     // ── Add New Item ──
+    let _urlImageData = null; // stores fetched URL image as data URL
+
+    function switchPhotoTab(tab) {
+      const fileBtn = document.getElementById('photo-tab-file');
+      const urlBtn = document.getElementById('photo-tab-url');
+      const fileSection = document.getElementById('photo-file-section');
+      const urlSection = document.getElementById('photo-url-section');
+      if (tab === 'file') {
+        fileBtn.style.background = '#013E7D'; fileBtn.style.color = '#fff'; fileBtn.style.borderColor = '#013E7D';
+        urlBtn.style.background = '#fff'; urlBtn.style.color = '#6b5d4d'; urlBtn.style.borderColor = '#ebe5dc';
+        fileSection.style.display = ''; urlSection.style.display = 'none';
+        _urlImageData = null;
+      } else {
+        urlBtn.style.background = '#013E7D'; urlBtn.style.color = '#fff'; urlBtn.style.borderColor = '#013E7D';
+        fileBtn.style.background = '#fff'; fileBtn.style.color = '#6b5d4d'; fileBtn.style.borderColor = '#ebe5dc';
+        urlSection.style.display = ''; fileSection.style.display = 'none';
+      }
+    }
+
+    const CORS_PROXIES = [
+      url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+      url => 'https://corsproxy.io/?' + encodeURIComponent(url),
+      url => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+    ];
+
+    async function fetchImageFromUrl() {
+      const url = document.getElementById('add-photo-url').value.trim();
+      if (!url) return;
+      const status = document.getElementById('url-status');
+      const preview = document.getElementById('add-photo-preview');
+      _urlImageData = null;
+
+      // Check if it's a direct image URL
+      if (/\.(jpg|jpeg|png|webp|gif)(\?.*)?$/i.test(url)) {
+        status.textContent = 'Loading image...';
+        try {
+          const imgUrl = await fetchViaProxy(url);
+          if (imgUrl) {
+            _urlImageData = imgUrl;
+            preview.innerHTML = `<img src="${imgUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
+            status.textContent = 'Image loaded!';
+            status.style.color = '#4a8c6f';
+          }
+        } catch(e) {
+          status.textContent = 'Could not load image. Try a different URL.';
+          status.style.color = '#c2553a';
+        }
+        return;
+      }
+
+      // It's a product page URL — fetch and extract product image
+      status.textContent = 'Fetching product page...';
+      status.style.color = '#9c8b76';
+
+      for (const proxyFn of CORS_PROXIES) {
+        try {
+          const res = await fetch(proxyFn(url));
+          if (!res.ok) continue;
+          const html = await res.text();
+          const imgUrl = extractProductImage(html, url);
+          if (imgUrl) {
+            status.textContent = 'Loading product image...';
+            const dataUrl = await fetchViaProxy(imgUrl);
+            if (dataUrl) {
+              _urlImageData = dataUrl;
+              preview.innerHTML = `<img src="${dataUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
+              status.textContent = 'Product image loaded!';
+              status.style.color = '#4a8c6f';
+              return;
+            }
+          }
+        } catch(e) { continue; }
+      }
+      status.textContent = 'Could not extract image. Try pasting the image URL directly (right-click image → Copy image address).';
+      status.style.color = '#c2553a';
+    }
+
+    function extractProductImage(html, pageUrl) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      // Try og:image first
+      const og = doc.querySelector('meta[property="og:image"]');
+      if (og && og.content) return resolveUrl(og.content, pageUrl);
+      // Try twitter:image
+      const tw = doc.querySelector('meta[name="twitter:image"]');
+      if (tw && tw.content) return resolveUrl(tw.content, pageUrl);
+      // Try JSON-LD product data
+      const scripts = doc.querySelectorAll('script[type="application/ld+json"]');
+      for (const s of scripts) {
+        try {
+          const json = JSON.parse(s.textContent);
+          const img = findProductImage(json);
+          if (img) return resolveUrl(img, pageUrl);
+        } catch(e) {}
+      }
+      // Try first large image in body
+      const imgs = doc.querySelectorAll('img[src]');
+      for (const img of imgs) {
+        const w = parseInt(img.getAttribute('width') || '0');
+        const h = parseInt(img.getAttribute('height') || '0');
+        if (w > 200 || h > 200) return resolveUrl(img.src, pageUrl);
+      }
+      return null;
+    }
+
+    function findProductImage(obj) {
+      if (!obj) return null;
+      if (Array.isArray(obj)) {
+        for (const item of obj) { const r = findProductImage(item); if (r) return r; }
+        return null;
+      }
+      if (obj['@type'] && /Product/i.test(obj['@type']) && obj.image) {
+        return Array.isArray(obj.image) ? obj.image[0] : (typeof obj.image === 'string' ? obj.image : obj.image.url || null);
+      }
+      for (const k of Object.keys(obj)) {
+        if (typeof obj[k] === 'object') { const r = findProductImage(obj[k]); if (r) return r; }
+      }
+      return null;
+    }
+
+    function resolveUrl(imgUrl, pageUrl) {
+      if (!imgUrl) return null;
+      if (imgUrl.startsWith('//')) return 'https:' + imgUrl;
+      if (imgUrl.startsWith('/')) {
+        const u = new URL(pageUrl);
+        return u.origin + imgUrl;
+      }
+      if (imgUrl.startsWith('http')) return imgUrl;
+      return new URL(imgUrl, pageUrl).href;
+    }
+
+    async function fetchViaProxy(imgUrl) {
+      // Try direct fetch first (works for many CDN images)
+      try {
+        const res = await fetch(imgUrl, { mode: 'cors' });
+        if (res.ok) {
+          const blob = await res.blob();
+          if (blob.type.startsWith('image/')) {
+            return await blobToDataUrl(blob);
+          }
+        }
+      } catch(e) {}
+      // Fall back to CORS proxies
+      for (const proxyFn of CORS_PROXIES) {
+        try {
+          const res = await fetch(proxyFn(imgUrl));
+          if (!res.ok) continue;
+          const blob = await res.blob();
+          if (blob.type.startsWith('image/') || blob.size > 5000) {
+            return await blobToDataUrl(blob);
+          }
+        } catch(e) { continue; }
+      }
+      return null;
+    }
+
+    function blobToDataUrl(blob) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+    }
+
     document.getElementById('add-photo').addEventListener('change', function(e) {
       const file = e.target.files[0];
       if (!file) return;
@@ -1018,14 +1195,11 @@
       const brand = document.getElementById('add-brand').value.trim();
       const color = document.getElementById('add-color').value.trim();
 
-      if (!fileInput.files[0]) { alert('Please select a photo.'); return; }
+      // Check if we have an image from URL or file
+      if (!_urlImageData && !fileInput.files[0]) { alert('Please select a photo or fetch from URL.'); return; }
 
-      const reader = new FileReader();
-      reader.onload = function(ev) {
-        const dataUrl = ev.target.result;
+      function finishSave(dataUrl) {
         const id = 'custom_' + Date.now();
-
-        // Save to Firebase
         const itemData = {
           id: id,
           category: category,
@@ -1037,7 +1211,6 @@
         };
         db.ref('wardrobeCustomItems/' + id).set(itemData);
 
-        // Add to local items array
         items.push({
           id: id,
           file: id,
@@ -1048,17 +1221,28 @@
           _customImage: dataUrl
         });
 
-        // Close modal and refresh
+        // Close modal and reset
         document.getElementById('add-item-modal').classList.remove('open');
         fileInput.value = '';
         document.getElementById('add-photo-preview').innerHTML = '';
+        document.getElementById('add-photo-url').value = '';
+        document.getElementById('url-status').textContent = '';
         document.getElementById('add-subcategory').value = '';
         document.getElementById('add-brand').value = '';
         document.getElementById('add-color').value = '';
+        _urlImageData = null;
+        switchPhotoTab('file');
         renderCatFilters();
         renderCatalogue();
-      };
-      reader.readAsDataURL(fileInput.files[0]);
+      }
+
+      if (_urlImageData) {
+        finishSave(_urlImageData);
+      } else {
+        const reader = new FileReader();
+        reader.onload = function(ev) { finishSave(ev.target.result); };
+        reader.readAsDataURL(fileInput.files[0]);
+      }
     }
 
     // Load custom items from Firebase on startup
