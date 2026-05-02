@@ -1445,9 +1445,12 @@
 
     function openWardrobeCrop() {
       document.getElementById('zoom-modal').classList.remove('open');
-      const src = document.getElementById('zoom-img').src;
       // Use tracked filename, fallback to extracting from src
+      const src = document.getElementById('zoom-img').src;
       _wcropFile = _zoomFile || src.split('/').pop();
+
+      // Always load from original thumbnail file (not a crop data URL)
+      const origSrc = IMG_PATH + _wcropFile;
 
       const imgEl = new window.Image();
       imgEl.crossOrigin = 'anonymous';
@@ -1464,7 +1467,25 @@
         document.getElementById('wcrop-box').style.display = 'none';
         document.getElementById('wcrop-modal').classList.add('open');
       };
-      imgEl.src = src;
+      imgEl.onerror = function() {
+        // Fallback to whatever is displayed in zoom
+        imgEl.crossOrigin = null;
+        imgEl.onload = imgEl.onerror = null;
+        const retry = new window.Image();
+        retry.onload = function() {
+          _wcropImg = retry;
+          const canvas = document.getElementById('wcrop-canvas');
+          _wcropScale = Math.min(600 / retry.width, 500 / retry.height, 1);
+          canvas.width = retry.width * _wcropScale;
+          canvas.height = retry.height * _wcropScale;
+          canvas.getContext('2d').drawImage(retry, 0, 0, canvas.width, canvas.height);
+          _wcropStart = null; _wcropEnd = null;
+          document.getElementById('wcrop-box').style.display = 'none';
+          document.getElementById('wcrop-modal').classList.add('open');
+        };
+        retry.src = src;
+      };
+      imgEl.src = origSrc;
     }
 
     (function() {

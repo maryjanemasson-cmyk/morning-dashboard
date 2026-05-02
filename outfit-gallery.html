@@ -437,7 +437,10 @@
         let previewImgs = '';
         if (o.layout && o.layout.length) {
           previewImgs = o.layout.map(item => {
-            const src = item.file.startsWith('data:') ? item.file
+            const wFile = (item._origFile || item.file).replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+            const cropKey = wFile.replace(/\./g, '_');
+            const src = _wardrobeCrops[cropKey] ? _wardrobeCrops[cropKey]
+              : item.file.startsWith('data:') ? item.file
               : item.file.startsWith('..') ? item.file
               : IMG_PATH + item.file;
             return `<img src="${src}" alt="" loading="lazy"
@@ -514,8 +517,20 @@
       html += `<div style="position:relative;"><div class="modal-pieces${_editMode ? ' editing' : ''}" id="pieces-container">`;
 
       _editLayout.forEach((item, idx) => {
+        // Resolve image source: check wardrobe crops first, then handle paths
+        function resolveSrc(file, origFile) {
+          // Check if we have a crop for the original wardrobe file
+          const checkFile = origFile || file;
+          const wFile = checkFile.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+          const cropKey = wFile.replace(/\./g, '_');
+          if (_wardrobeCrops[cropKey]) return _wardrobeCrops[cropKey];
+          if (file.startsWith('data:')) return file;
+          if (file.startsWith('..')) return file;
+          return IMG_PATH + file;
+        }
+        const imgSrc = resolveSrc(item.file, item._origFile);
+
         if (_editMode) {
-          const imgSrc = item.file.startsWith('data:') ? item.file : IMG_PATH + item.file;
           html += `<div class="piece-wrap" data-idx="${idx}" style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
             onmousedown="startDragPiece(event,${idx})">
             <img src="${imgSrc}" alt="" style="width:100%;height:100%;position:static;" />
@@ -524,8 +539,7 @@
             <div class="edit-resize" onmousedown="event.stopPropagation();startResizePiece(event,${idx})"></div>
           </div>`;
         } else {
-          const viewSrc = item.file.startsWith('data:') ? item.file : item.file.startsWith('..') ? item.file : IMG_PATH + item.file;
-          html += `<img src="${viewSrc}" alt=""
+          html += `<img src="${imgSrc}" alt=""
             style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;"
             onclick="zoomImg('${item.file}')" />`;
         }
