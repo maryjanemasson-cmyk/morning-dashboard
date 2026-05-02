@@ -280,9 +280,10 @@
       for (let i = baseItems.length - 1; i >= 0; i--) {
         if (baseItems[i].id && (baseItems[i].id.startsWith('custom_') || /^C\d+$/.test(baseItems[i].id))) baseItems.splice(i, 1);
       }
-      // Add current custom items
+      // Add custom items at the BEGINNING so they appear first
+      const customArr = [];
       for (const [id, data] of Object.entries(custom)) {
-        baseItems.push({
+        customArr.push({
           id: id,
           file: id,
           category: data.category,
@@ -292,6 +293,7 @@
           _customImage: data.image
         });
       }
+      baseItems.unshift(...customArr);
     });
 
     const IMG_PATH = 'outfit-images/';
