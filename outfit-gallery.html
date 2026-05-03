@@ -437,10 +437,7 @@
         let previewImgs = '';
         if (o.layout && o.layout.length) {
           previewImgs = o.layout.map(item => {
-            const wFile = (item._origFile || item.file).replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
-            const cropKey = wFile.replace(/\./g, '_');
-            const src = _wardrobeCrops[cropKey] ? _wardrobeCrops[cropKey]
-              : item.file.startsWith('data:') ? item.file
+            const src = item.file.startsWith('data:') ? item.file
               : item.file.startsWith('..') ? item.file
               : IMG_PATH + item.file;
             return `<img src="${src}" alt="" loading="lazy"
@@ -1202,18 +1199,23 @@
       _cropping = false;
     }
 
-    // Apply wardrobe crops to outfit images
+    // Wardrobe crops - load on demand instead of all at once (saves ~19MB)
     let _wardrobeCrops = {};
-    db.ref('wardrobeCrops').on('value', snap => {
-      _wardrobeCrops = snap.val() || {};
-      // Update any visible images that match
-      for (const [fileKey, dataUrl] of Object.entries(_wardrobeCrops)) {
-        const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
-        document.querySelectorAll(`img[src*="${filename}"]`).forEach(img => {
-          img.src = dataUrl;
-        });
-      }
-    });
+    let _cropsLoaded = false;
+
+    function loadCropsIfNeeded() {
+      if (_cropsLoaded) return Promise.resolve();
+      return db.ref('wardrobeCrops').once('value').then(snap => {
+        _wardrobeCrops = snap.val() || {};
+        _cropsLoaded = true;
+      });
+    }
+
+    // Only load crops when opening detail view or add panel (not on initial grid render)
+    const _origShowDetail = showDetail;
+    showDetail = function(slideNum) {
+      loadCropsIfNeeded().then(() => _origShowDetail(slideNum));
+    };
 
     // Override addPieceFromWardrobe to use cropped version if available + handle swap
     const _origAddPiece = addPieceFromWardrobe;
