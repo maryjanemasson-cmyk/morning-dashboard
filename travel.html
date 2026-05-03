@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel - Morning Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dashboard">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5;
+      color: #3d3529;
+      min-height: 100vh;
+    }
+
+    .banner {
+      height: 120px;
+      background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%);
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40px;
+      background: linear-gradient(to top, #faf8f5, transparent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -30px auto 0;
+      padding: 0 2rem 2rem;
+      position: relative;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      color: #9c8b76;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #3d3529; }
+
+    .page-header { margin-bottom: 1.75rem; }
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #2c2418;
+    }
+    .page-header .subtitle {
+      font-size: 0.85rem;
+      color: #9c8b76;
+      margin-top: 0.2rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ebe5dc;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .card:hover { border-color: #d4c5b5; }
+
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2c2418;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-title .icon { font-size: 1.1rem; }
+
+    /* Countdown trips */
+    .trip-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .trip-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      border: 1px solid transparent;
+    }
+    .trip-row:hover { background: #faf8f5; }
+    .trip-row.active {
+      background: #f5f0e8;
+      border-color: #c9b99a;
+    }
+    .trip-row .trip-dest {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .trip-row .trip-dates {
+      font-size: 0.78rem;
+      color: #9c8b76;
+    }
+    .trip-row .trip-countdown {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #c9b99a;
+      white-space: nowrap;
+    }
+    .trip-row .trip-countdown.now {
+      color: #7a9a6d;
+    }
+
+    /* Next trip detail */
+    .detail-dest {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c2418;
+    }
+    .detail-dates {
+      font-size: 0.85rem;
+      color: #9c8b76;
+      margin-top: 0.15rem;
+      margin-bottom: 1rem;
+    }
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.5rem;
+    }
+    .weather-day {
+      text-align: center;
+      padding: 0.6rem 0.4rem;
+      background: #faf8f5;
+      border-radius: 6px;
+    }
+    .weather-day .wd-label {
+      font-size: 0.72rem;
+      color: #9c8b76;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    .weather-day .wd-icon { font-size: 1.4rem; }
+    .weather-day .wd-temps {
+      font-size: 0.78rem;
+      font-weight: 500;
+      margin-top: 0.15rem;
+    }
+    .weather-day .wd-rain {
+      font-size: 0.7rem;
+      color: #9c8b76;
+      margin-top: 0.1rem;
+    }
+    .weather-loading {
+      text-align: center;
+      color: #9c8b76;
+      font-size: 0.85rem;
+      padding: 1rem;
+    }
+
+    /* Flight details */
+    .flight-section { margin-bottom: 1rem; }
+    .flight-section:last-of-type { margin-bottom: 0.75rem; }
+    .flight-section h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2c2418;
+      margin-bottom: 0.5rem;
+    }
+    .flight-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+    .flight-fields label {
+      font-size: 0.75rem;
+      color: #9c8b76;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .flight-fields input {
+      width: 100%;
+      padding: 0.4rem 0.5rem;
+      border: 1px solid #ebe5dc;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #3d3529;
+      background: #faf8f5;
+      transition: border-color 0.2s;
+    }
+    .flight-fields input:focus {
+      outline: none;
+      border-color: #c9b99a;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.45rem 1rem;
+      border: 1px solid #c9b99a;
+      border-radius: 5px;
+      background: #fff;
+      color: #3d3529;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #f5f0e8; }
+    .btn-save { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .btn-save:hover { background: #bfae8e; }
+
+    /* Notes */
+    .notes-area {
+      width: 100%;
+      min-height: 120px;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #ebe5dc;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #3d3529;
+      background: #faf8f5;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .notes-area:focus { outline: none; border-color: #c9b99a; }
+    .notes-status {
+      font-size: 0.72rem;
+      color: #9c8b76;
+      margin-top: 0.35rem;
+      text-align: right;
+    }
+
+    /* Packing list */
+    .packing-input-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .packing-input-row input {
+      flex: 1;
+      padding: 0.4rem 0.5rem;
+      border: 1px solid #ebe5dc;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #3d3529;
+      background: #faf8f5;
+    }
+    .packing-input-row input:focus { outline: none; border-color: #c9b99a; }
+    .packing-items { list-style: none; }
+    .packing-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #f0ebe3;
+      font-size: 0.85rem;
+    }
+    .packing-item:last-child { border-bottom: none; }
+    .packing-item input[type="checkbox"] {
+      accent-color: #c9b99a;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .packing-item .item-text { flex: 1; }
+    .packing-item .item-text.checked {
+      text-decoration: line-through;
+      color: #9c8b76;
+    }
+    .packing-item .item-delete {
+      background: none;
+      border: none;
+      color: #c9a9a9;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      transition: color 0.15s;
+    }
+    .packing-item .item-delete:hover { color: #b55; }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="page-header">
+      <h1>Travel</h1>
+      <div class="subtitle" id="todayDate"></div>
+    </div>
+
+    <!-- Travel Countdown -->
+    <div class="card">
+      <div class="card-title"><span class="icon">&#9992;&#65039;</span> Upcoming Trips</div>
+      <div class="trip-list" id="tripList"></div>
+    </div>
+
+    <!-- Next Trip Detail -->
+    <div class="card" id="detailCard">
+      <div class="card-title"><span class="icon">&#127758;</span> Trip Details</div>
+      <div class="detail-dest" id="detailDest">--</div>
+      <div class="detail-dates" id="detailDates"></div>
+      <div id="weatherContainer"><div class="weather-loading">Loading weather...</div></div>
+    </div>
+
+    <!-- Flight Details -->
+    <div class="card" id="flightCard">
+      <div class="card-title"><span class="icon">&#128747;</span> Flight Details</div>
+      <div class="flight-section">
+        <h3>Outbound</h3>
+        <div class="flight-fields">
+          <div><label>Airline</label><input id="outAirline" placeholder="e.g. Delta"></div>
+          <div><label>Flight #</label><input id="outFlightNum" placeholder="e.g. DL 1234"></div>
+          <div><label>Departure</label><input id="outDepart" placeholder="e.g. 7:00 AM EWR"></div>
+          <div><label>Arrival</label><input id="outArrive" placeholder="e.g. 8:30 AM BOS"></div>
+        </div>
+      </div>
+      <div class="flight-section">
+        <h3>Return</h3>
+        <div class="flight-fields">
+          <div><label>Airline</label><input id="retAirline" placeholder="e.g. Delta"></div>
+          <div><label>Flight #</label><input id="retFlightNum" placeholder="e.g. DL 5678"></div>
+          <div><label>Departure</label><input id="retDepart" placeholder="e.g. 5:00 PM BOS"></div>
+          <div><label>Arrival</label><input id="retArrive" placeholder="e.g. 6:30 PM EWR"></div>
+        </div>
+      </div>
+      <button class="btn btn-save" id="saveFlightBtn">Save Flights</button>
+    </div>
+
+    <!-- Trip Notes -->
+    <div class="card">
+      <div class="card-title"><span class="icon">&#128221;</span> Trip Notes</div>
+      <textarea class="notes-area" id="notesArea" placeholder="Hotel, restaurants, things to do..."></textarea>
+      <div class="notes-status" id="notesStatus"></div>
+    </div>
+
+    <!-- Packing List -->
+    <div class="card">
+      <div class="card-title"><span class="icon">&#127890;</span> Packing List</div>
+      <div class="packing-input-row">
+        <input type="text" id="packingInput" placeholder="Add item...">
+        <button class="btn" id="addPackingBtn">Add</button>
+      </div>
+      <ul class="packing-items" id="packingList"></ul>
+    </div>
+  </div>
+
+  <script src="calendar-data.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+      storageBucket: "morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId: "463122631261",
+      appId: "1:463122631261:web:b3a3e12c42a5389bbf82af"
+    });
+    const db = firebase.database();
+
+    // --- Helpers ---
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    document.getElementById('todayDate').textContent =
+      today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+    function tripKey(trip) {
+      return trip.destination.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/_+$/, '') + '_' + trip.start;
+    }
+
+    function parseDate(s) {
+      const [y, m, d] = s.split('-').map(Number);
+      return new Date(y, m - 1, d);
+    }
+
+    function formatDateRange(start, end) {
+      const s = parseDate(start), e = parseDate(end);
+      const opts = { month: 'short', day: 'numeric' };
+      if (s.getFullYear() !== today.getFullYear()) opts.year = 'numeric';
+      return s.toLocaleDateString('en-US', opts) + ' \u2013 ' + e.toLocaleDateString('en-US', opts);
+    }
+
+    function daysUntil(dateStr) {
+      const d = parseDate(dateStr);
+      return Math.ceil((d - today) / 86400000);
+    }
+
+    function weatherIcon(desc) {
+      if (!desc) return '\u2601\ufe0f';
+      const d = desc.toLowerCase();
+      if (d.includes('thunder')) return '\u26c8\ufe0f';
+      if (d.includes('snow') || d.includes('sleet')) return '\u2744\ufe0f';
+      if (d.includes('rain')) return '\ud83c\udf27\ufe0f';
+      if (d.includes('fog') || d.includes('mist')) return '\ud83c\udf2b\ufe0f';
+      if (d.includes('overcast') || d === 'cloudy') return '\u2601\ufe0f';
+      if (d.includes('partly cloudy') || d.includes('partly')) return '\u26c5';
+      if (d.includes('sunny') || d.includes('clear')) return '\u2600\ufe0f';
+      return '\u2601\ufe0f';
+    }
+
+    function dayLabel(dateStr) {
+      const d = parseDate(dateStr);
+      return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+
+    // --- State ---
+    let selectedTrip = null;
+    const trips = (window.TRAVEL_DATA || []).filter(t => {
+      const end = parseDate(t.end);
+      return end >= today;
+    });
+
+    // --- Countdown ---
+    function renderCountdown() {
+      const list = document.getElementById('tripList');
+      if (!trips.length) {
+        list.innerHTML = '<div style="color:#9c8b76;font-size:0.85rem;">No upcoming trips.</div>';
+        return;
+      }
+      list.innerHTML = trips.map((t, i) => {
+        const start = parseDate(t.start), end = parseDate(t.end);
+        const isNow = today >= start && today <= end;
+        const days = daysUntil(t.start);
+        let countdownText;
+        if (isNow) countdownText = 'Now';
+        else if (days === 0) countdownText = 'Today';
+        else if (days === 1) countdownText = 'Tomorrow';
+        else countdownText = days + ' days';
+        const active = selectedTrip && tripKey(selectedTrip) === tripKey(t) ? ' active' : '';
+        return `<div class="trip-row${active}" data-idx="${i}">
+          <div>
+            <div class="trip-dest">${t.icon || ''} ${t.destination}</div>
+            <div class="trip-dates">${formatDateRange(t.start, t.end)}</div>
+          </div>
+          <div class="trip-countdown${isNow ? ' now' : ''}">${countdownText}</div>
+        </div>`;
+      }).join('');
+
+      list.querySelectorAll('.trip-row').forEach(row => {
+        row.addEventListener('click', () => {
+          selectTrip(trips[parseInt(row.dataset.idx)]);
+        });
+      });
+    }
+
+    // --- Select Trip ---
+    function selectTrip(trip) {
+      selectedTrip = trip;
+      renderCountdown();
+      renderDetail();
+      loadFlights();
+      loadNotes();
+      loadPacking();
+    }
+
+    // --- Trip Detail + Weather ---
+    function renderDetail() {
+      if (!selectedTrip) return;
+      document.getElementById('detailDest').textContent = selectedTrip.destination;
+      document.getElementById('detailDates').textContent = formatDateRange(selectedTrip.start, selectedTrip.end);
+      fetchWeather(selectedTrip);
+    }
+
+    async function fetchWeather(trip) {
+      const container = document.getElementById('weatherContainer');
+      container.innerHTML = '<div class="weather-loading">Loading weather...</div>';
+      const city = trip.destination.split(',')[0].trim();
+      try {
+        const res = await fetch(`https://wttr.in/${encodeURIComponent(city)}?format=j1`);
+        if (!res.ok) throw new Error('Weather API error');
+        const data = await res.json();
+        renderWeather(data, trip);
+      } catch (e) {
+        container.innerHTML = '<div class="weather-loading">Weather unavailable</div>';
+      }
+    }
+
+    function renderWeather(data, trip) {
+      const container = document.getElementById('weatherContainer');
+      const forecasts = data.weather || [];
+      const startD = parseDate(trip.start), endD = parseDate(trip.end);
+      const tripDays = [];
+      for (let d = new Date(startD); d <= endD; d.setDate(d.getDate() + 1)) {
+        tripDays.push(d.toISOString().slice(0, 10));
+      }
+
+      const forecastMap = {};
+      forecasts.forEach(f => { forecastMap[f.date] = f; });
+
+      const html = tripDays.map(dateStr => {
+        const f = forecastMap[dateStr];
+        if (!f) return `<div class="weather-day">
+          <div class="wd-label">${dayLabel(dateStr)}</div>
+          <div class="wd-icon">--</div>
+          <div class="wd-temps">--</div>
+        </div>`;
+        const desc = f.hourly && f.hourly[4] ? f.hourly[4].weatherDesc[0].value : '';
+        const icon = weatherIcon(desc);
+        const hi = f.maxtempF || '--';
+        const lo = f.mintempF || '--';
+        const rain = f.hourly ? Math.max(...f.hourly.map(h => parseInt(h.chanceofrain) || 0)) : '--';
+        return `<div class="weather-day">
+          <div class="wd-label">${dayLabel(dateStr)}</div>
+          <div class="wd-icon">${icon}</div>
+          <div class="wd-temps">${hi}\u00b0 / ${lo}\u00b0</div>
+          <div class="wd-rain">${rain}% rain</div>
+        </div>`;
+      }).join('');
+
+      container.innerHTML = html ? `<div class="weather-grid">${html}</div>` : '<div class="weather-loading">No forecast available for these dates</div>';
+    }
+
+    // --- Flight Details ---
+    const flightFields = ['outAirline', 'outFlightNum', 'outDepart', 'outArrive', 'retAirline', 'retFlightNum', 'retDepart', 'retArrive'];
+
+    function loadFlights() {
+      if (!selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      db.ref('travelFlights/' + key).once('value').then(snap => {
+        const val = snap.val() || {};
+        flightFields.forEach(f => {
+          document.getElementById(f).value = val[f] || '';
+        });
+      });
+    }
+
+    document.getElementById('saveFlightBtn').addEventListener('click', () => {
+      if (!selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      const data = {};
+      flightFields.forEach(f => { data[f] = document.getElementById(f).value; });
+      db.ref('travelFlights/' + key).set(data);
+    });
+
+    // --- Trip Notes ---
+    let notesTimer = null;
+    const notesArea = document.getElementById('notesArea');
+    const notesStatus = document.getElementById('notesStatus');
+
+    function loadNotes() {
+      if (!selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      db.ref('travelNotes/' + key).once('value').then(snap => {
+        notesArea.value = snap.val() || '';
+        notesStatus.textContent = '';
+      });
+    }
+
+    notesArea.addEventListener('input', () => {
+      if (!selectedTrip) return;
+      clearTimeout(notesTimer);
+      notesStatus.textContent = 'Saving...';
+      notesTimer = setTimeout(() => {
+        const key = tripKey(selectedTrip);
+        db.ref('travelNotes/' + key).set(notesArea.value).then(() => {
+          notesStatus.textContent = 'Saved';
+          setTimeout(() => { notesStatus.textContent = ''; }, 2000);
+        });
+      }, 800);
+    });
+
+    // --- Packing List ---
+    const packingInput = document.getElementById('packingInput');
+    const packingListEl = document.getElementById('packingList');
+
+    function loadPacking() {
+      if (!selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      db.ref('travelPacking/' + key).on('value', snap => {
+        const items = snap.val() || {};
+        renderPacking(items);
+      });
+    }
+
+    function renderPacking(items) {
+      packingListEl.innerHTML = Object.entries(items).map(([id, item]) => {
+        return `<li class="packing-item">
+          <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
+          <span class="item-text${item.checked ? ' checked' : ''}">${escHtml(item.text)}</span>
+          <button class="item-delete" data-id="${id}">&times;</button>
+        </li>`;
+      }).join('');
+
+      packingListEl.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          const id = cb.dataset.id;
+          const key = tripKey(selectedTrip);
+          db.ref('travelPacking/' + key + '/' + id + '/checked').set(cb.checked);
+        });
+      });
+
+      packingListEl.querySelectorAll('.item-delete').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.id;
+          const key = tripKey(selectedTrip);
+          db.ref('travelPacking/' + key + '/' + id).remove();
+        });
+      });
+    }
+
+    function escHtml(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    document.getElementById('addPackingBtn').addEventListener('click', addPackingItem);
+    packingInput.addEventListener('keydown', e => { if (e.key === 'Enter') addPackingItem(); });
+
+    function addPackingItem() {
+      const text = packingInput.value.trim();
+      if (!text || !selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      db.ref('travelPacking/' + key).push({ text, checked: false });
+      packingInput.value = '';
+    }
+
+    // --- Init ---
+    if (trips.length) {
+      // Select first current trip, or first upcoming
+      const currentTrip = trips.find(t => {
+        const s = parseDate(t.start), e = parseDate(t.end);
+        return today >= s && today <= e;
+      });
+      selectTrip(currentTrip || trips[0]);
+    }
+    renderCountdown();
+  </script>
+</body>
+</html>
