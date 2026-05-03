@@ -244,7 +244,13 @@
         <div class="outfit-canvas-wrap">
           <div class="outfit-toolbar">
             <span id="ob-canvas-title" style="font-size:0.85rem;font-weight:600;color:#2c2418;flex:1;"></span>
-            <input type="text" id="outfit-name" placeholder="Outfit name..." style="display:none;" />
+            <select id="outfit-season" style="border:1px solid #ebe5dc;border-radius:4px;padding:0.2rem 0.4rem;font-size:0.72rem;font-family:inherit;color:#3d3529;">
+              <option>Spring</option><option>Summer</option><option>Fall</option><option>Winter</option>
+            </select>
+            <select id="outfit-occasion" style="border:1px solid #ebe5dc;border-radius:4px;padding:0.2rem 0.4rem;font-size:0.72rem;font-family:inherit;color:#3d3529;">
+              <option>Casual</option><option>Office</option><option>Evening</option><option>OOTD</option><option>Travel</option>
+            </select>
+            <input type="text" id="outfit-name" placeholder="Name (optional)..." style="border:1px solid #ebe5dc;border-radius:4px;padding:0.2rem 0.4rem;font-size:0.72rem;font-family:inherit;color:#3d3529;width:120px;" />
             <button class="outfit-btn primary" onclick="saveOutfit()">Save</button>
             <button class="outfit-btn" onclick="newOutfit()">New</button>
             <button class="outfit-btn danger" onclick="clearCanvas()">Clear</button>
@@ -1039,15 +1045,70 @@
     }
 
     function saveOutfit() {
-      const name = document.getElementById('outfit-name').value.trim() || 'Untitled Outfit';
       if (canvasItems.length === 0) { alert('Add some pieces first!'); return; }
-      const data = { name, items: JSON.parse(JSON.stringify(canvasItems)), updated: new Date().toISOString() };
+
+      const season = document.getElementById('outfit-season').value;
+      const occasion = document.getElementById('outfit-occasion').value;
+      const customName = document.getElementById('outfit-name').value.trim();
+
+      // Convert canvas items to outfit gallery layout format
+      const canvasEl = document.getElementById('outfit-canvas');
+      const cw = canvasEl.offsetWidth, ch = canvasEl.offsetHeight;
+      const layout = canvasItems.map(item => {
+        const pctLeft = (item.x / cw) * 100;
+        const pctTop = (item.y / ch) * 100;
+        const pctW = (item.w / cw) * 100;
+        const pctH = (item.h / ch) * 100;
+        return {
+          file: item.file.includes('wardrobe-thumbs/') ? item.file.replace('wardrobe-thumbs/', '../wardrobe-thumbs/') : item.file,
+          _origFile: item.file.replace('wardrobe-thumbs/', '').replace('../wardrobe-thumbs/', ''),
+          left: Math.round(pctLeft * 10) / 10,
+          top: Math.round(pctTop * 10) / 10,
+          width: Math.round(pctW * 10) / 10,
+          height: Math.round(pctH * 10) / 10
+        };
+      });
+
       if (currentOutfitId) {
+        // Update existing
+        const data = {
+          name: customName || occasion,
+          season, occasion, layout,
+          items: JSON.parse(JSON.stringify(canvasItems)),
+          updated: new Date().toISOString()
+        };
         db.ref('outfits/' + currentOutfitId).set(data);
+        // Also update outfit gallery
+        db.ref('outfitEdits/' + currentOutfitId).update({ layout, season, occasion, name: customName || occasion });
+        alert('Outfit #' + currentOutfitId + ' updated!');
       } else {
-        const ref = db.ref('outfits').push(data);
-        currentOutfitId = ref.key;
+        // Get next outfit number
+        db.ref('outfitEdits').once('value').then(snap => {
+          const edits = snap.val() || {};
+          const existingNums = Object.keys(edits).map(Number).filter(n => !isNaN(n));
+          const maxNum = existingNums.length ? Math.max(...existingNums) : 486;
+          const newNum = maxNum + 1;
+          currentOutfitId = newNum;
+
+          const name = customName || occasion + ' #' + newNum;
+
+          // Save to outfits (builder data)
+          db.ref('outfits/' + newNum).set({
+            name, season, occasion, layout,
+            items: JSON.parse(JSON.stringify(canvasItems)),
+            updated: new Date().toISOString()
+          });
+
+          // Save to outfitEdits (outfit gallery)
+          db.ref('outfitEdits/' + newNum).set({ layout, season, occasion, name });
+
+          document.getElementById('ob-canvas-title').textContent = '#' + newNum + ' ' + name;
+          alert('Saved as Outfit #' + newNum + ' (' + season + ' / ' + occasion + ')');
+          renderSavedOutfits();
+        });
+        return;
       }
+      renderSavedOutfits();
     }
 
     function loadOutfit(id) {
@@ -1056,6 +1117,9 @@
       currentOutfitId = id;
       canvasItems = JSON.parse(JSON.stringify(outfit.items || []));
       document.getElementById('outfit-name').value = outfit.name || '';
+      if (outfit.season) document.getElementById('outfit-season').value = outfit.season;
+      if (outfit.occasion) document.getElementById('outfit-occasion').value = outfit.occasion;
+      document.getElementById('ob-canvas-title').textContent = '#' + id + ' ' + (outfit.name || '');
       renderCanvas();
       renderSavedOutfits();
     }
@@ -1071,12 +1135,14 @@
       const entries = Object.entries(savedOutfits);
       if (!entries.length) { document.getElementById('saved-outfits').innerHTML = ''; return; }
       document.getElementById('saved-outfits').innerHTML = '<div style="font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;margin-bottom:0.4rem;">Saved Outfits</div>' +
-        entries.map(([id, o]) =>
-          `<span class="saved-outfit ${currentOutfitId===id?'active':''}" onclick="loadOutfit('${id}')">
-            ${o.name || 'Untitled'}
+        entries.map(([id, o]) => {
+          const label = (isNaN(id) ? '' : '#' + id + ' ') + (o.name || o.occasion || 'Untitled');
+          const meta = [o.season, o.occasion].filter(Boolean).join(' / ');
+          return `<span class="saved-outfit ${currentOutfitId==id?'active':''}" onclick="loadOutfit('${id}')" title="${meta}">
+            ${label}
             <span class="del" onclick="deleteOutfit('${id}',event)">&times;</span>
-          </span>`
-        ).join('');
+          </span>`;
+        }).join('');
     }
 
     // Firebase sync for outfits
