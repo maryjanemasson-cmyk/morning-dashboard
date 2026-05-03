@@ -585,11 +585,37 @@
     const packingInput = document.getElementById('packingInput');
     const packingListEl = document.getElementById('packingList');
 
+    function tripNights(trip) {
+      const s = parseDate(trip.start), e = parseDate(trip.end);
+      return Math.round((e - s) / 86400000);
+    }
+
+    function autoPopulatePacking(trip) {
+      const nights = tripNights(trip);
+      const key = tripKey(trip);
+      const essentials = [
+        { text: `Underwear (${nights} pairs)` },
+        { text: `Bras (${Math.min(nights, 3)})` },
+        { text: `Pajamas (${nights <= 3 ? 1 : 2} set${nights <= 3 ? '' : 's'})` },
+      ];
+      const updates = {};
+      essentials.forEach(item => {
+        const id = db.ref('travelPacking/' + key).push().key;
+        updates[id] = { text: item.text, checked: false };
+      });
+      db.ref('travelPacking/' + key).update(updates);
+    }
+
     function loadPacking() {
       if (!selectedTrip) return;
       const key = tripKey(selectedTrip);
       db.ref('travelPacking/' + key).on('value', snap => {
         const items = snap.val() || {};
+        // Auto-populate essentials if list is empty
+        if (Object.keys(items).length === 0) {
+          autoPopulatePacking(selectedTrip);
+          return; // The .on listener will fire again with the new data
+        }
         renderPacking(items);
       });
     }
