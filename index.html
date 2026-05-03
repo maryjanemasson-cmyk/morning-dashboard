@@ -583,11 +583,6 @@
 
         <div class="card">
           <div class="card-title"><span class="icon">&bull;</span> Weekly Reminders</div>
-          <div id="weekly-reminders"></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><span class="icon">&bull;</span> Chores</div>
           <div id="chores-section"></div>
         </div>
 
@@ -897,25 +892,6 @@
     renderWeekView();
 
     // ── Weekly Reminders ──
-    function renderWeeklyReminders() {
-      const reminders = [
-        { day: 1, icon: '\uD83E\uDDD8', text: 'Book Pilates & OTF classes' },
-        { day: 6, icon: '\uD83E\uDDE5', text: 'Drop off dry cleaning' },
-      ];
-      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      const today = new Date().getDay();
-      let html = '';
-      reminders.forEach(r => {
-        const isToday = r.day === today;
-        html += `<div class="reminder-item">
-          <span class="reminder-icon">${r.icon}</span>
-          <span class="reminder-text">${r.text}</span>
-          <span class="reminder-day ${isToday ? 'is-today' : ''}">${isToday ? 'Today!' : dayNames[r.day]}</span>
-        </div>`;
-      });
-      document.getElementById('weekly-reminders').innerHTML = html;
-    }
-    renderWeeklyReminders();
 
     // ── To-Do List (Firebase) ──
     let _todos = [];
@@ -1066,6 +1042,8 @@
 
     // ── Chores ──
     const CHORE_TYPES = [
+      { id: 'book-pilates', name: 'Book Pilates & OTF classes', icon: '\uD83E\uDDD8', dueDays: 7 },
+      { id: 'dry-cleaning', name: 'Drop off dry cleaning', icon: '\uD83E\uDDE5', dueDays: 7 },
       { id: 'call-mom', name: 'Call Mom', icon: '\uD83D\uDCDE', dueDays: 7 },
       { id: 'dog-poop', name: 'Pick up dog poop', icon: '\uD83D\uDC36', dueDays: 7 },
       { id: 'water-plants', name: 'Water plants', icon: '\uD83C\uDF31', dueDays: 7 },
