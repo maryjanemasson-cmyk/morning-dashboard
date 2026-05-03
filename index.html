@@ -580,10 +580,6 @@
 
       <!-- RIGHT -->
       <div class="col-right">
-        <div class="card">
-          <div class="card-title"><span class="icon">&bull;</span> Upcoming Travel</div>
-          <div id="travel-list"><div class="loading"><div class="spinner"></div></div></div>
-        </div>
 
         <div class="card">
           <div class="card-title"><span class="icon">&bull;</span> Weekly Reminders</div>
@@ -903,35 +899,6 @@
       document.getElementById('week-view').innerHTML = html;
     }
     renderWeekView();
-
-    // ── Travel + Countdown ──
-    function renderTravel() {
-      const trips = window.TRAVEL_DATA || [];
-      if (!trips.length) { document.getElementById('travel-list').innerHTML='<div class="cal-empty">No upcoming trips</div>'; return; }
-      const now = new Date(); now.setHours(0,0,0,0);
-      let html = '';
-      trips.forEach(trip => {
-        const s = new Date(trip.start+'T00:00:00');
-        const e = new Date(trip.end+'T00:00:00');
-        const diff = Math.ceil((s - now) / 86400000);
-        const ss = s.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-        const es = e.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-        let dayLabel, unitLabel;
-        if (diff < 0 && now <= e) { dayLabel = 'Now'; unitLabel = ''; }
-        else if (diff === 0) { dayLabel = 'Today'; unitLabel = ''; }
-        else { dayLabel = diff; unitLabel = 'days'; }
-        html += `<div class="countdown-item">
-          <div class="countdown-days">${dayLabel}<span class="countdown-unit">${unitLabel}</span></div>
-          <div class="countdown-label">
-            <div class="countdown-dest">${trip.destination}</div>
-            <div class="countdown-dates">${ss} \u2013 ${es}</div>
-          </div>
-          <span class="countdown-icon">${trip.icon||'\u2708\uFE0F'}</span>
-        </div>`;
-      });
-      document.getElementById('travel-list').innerHTML = html;
-    }
-    renderTravel();
 
     // ── Weekly Reminders ──
     function renderWeeklyReminders() {
