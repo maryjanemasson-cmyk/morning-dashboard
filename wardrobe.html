@@ -964,19 +964,33 @@
         }
         return true;
       });
-      document.getElementById('outfit-pieces').innerHTML = filtered.map(i =>
-        `<img class="outfit-piece" src="${i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}"
-              draggable="true" ondragstart="dragItemFile='${i.file}'" />`
-      ).join('');
+      _outfitPieceSrcs = {};
+      document.getElementById('outfit-pieces').innerHTML = filtered.map((i, idx) => {
+        const src = _savedCrops[i.file.replace(/\./g,'_')] || i._customImage || (IMG_PATH + i.file);
+        _outfitPieceSrcs[idx] = { file: i.file, src: src, isCustom: !!i._customImage };
+        return `<img class="outfit-piece" src="${src}" alt="${i.subcategory}"
+              draggable="true" ondragstart="startPieceDrag(${idx})" />`;
+      }).join('');
+    }
+
+    let _outfitPieceSrcs = {};
+    let _dragPieceData = null;
+
+    function startPieceDrag(idx) {
+      _dragPieceData = _outfitPieceSrcs[idx];
+      dragItemFile = _dragPieceData ? _dragPieceData.file : null;
     }
 
     function dropOnCanvas(e) {
       e.preventDefault();
-      if (!dragItemFile) return;
+      if (!_dragPieceData && !dragItemFile) return;
       const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
       const x = e.clientX - rect.left - 50;
       const y = e.clientY - rect.top - 50;
-      canvasItems.push({ file: dragItemFile, x: Math.max(0,x), y: Math.max(0,y), w: 120, h: 150 });
+      // Use the full image source for custom items (data URLs)
+      const file = _dragPieceData && _dragPieceData.isCustom ? _dragPieceData.src : (_dragPieceData ? _dragPieceData.file : dragItemFile);
+      canvasItems.push({ file: file, x: Math.max(0,x), y: Math.max(0,y), w: 120, h: 150 });
+      _dragPieceData = null;
       dragItemFile = null;
       renderCanvas();
     }
