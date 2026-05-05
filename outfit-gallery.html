@@ -437,9 +437,10 @@
         let previewImgs = '';
         if (o.layout && o.layout.length) {
           previewImgs = o.layout.map(item => {
-            const src = item.file.startsWith('data:') ? item.file
-              : item.file.startsWith('..') ? item.file
-              : IMG_PATH + item.file;
+            const f = item.file.startsWith('../') ? item.file.substring(3) : item.file;
+            const src = f.startsWith('data:') ? f
+              : f.startsWith('wardrobe-thumbs/') ? f
+              : IMG_PATH + f;
             return `<img src="${src}" alt="" loading="lazy"
               style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;" />`;
           }).join('');
@@ -522,7 +523,8 @@
           const cropKey = wFile.replace(/\./g, '_');
           if (_wardrobeCrops[cropKey]) return _wardrobeCrops[cropKey];
           if (file.startsWith('data:')) return file;
-          if (file.startsWith('..')) return file;
+          if (file.startsWith('../')) return file.substring(3);
+          if (file.startsWith('wardrobe-thumbs/')) return file;
           return IMG_PATH + file;
         }
         const imgSrc = resolveSrc(item.file, item._origFile);
@@ -719,7 +721,7 @@
 
     function addPieceFromWardrobe(filePath) {
       _editLayout.push({
-        file: filePath.replace('wardrobe-thumbs/', '../wardrobe-thumbs/'),
+        file: filePath.startsWith('wardrobe-thumbs/') ? filePath : 'wardrobe-thumbs/' + filePath,
         left: 40, top: 30, width: 15, height: 25
       });
       renderDetail();
@@ -1224,7 +1226,7 @@
       const croppedUrl = _wardrobeCrops[fileKey];
       const wardrobeItems = window.WARDROBE_ITEMS || [];
       const customItem = wardrobeItems.find(i => i.id === filename && i._customImage);
-      const imgSrc = croppedUrl || (customItem && customItem._customImage) || ('../wardrobe-thumbs/' + filename);
+      const imgSrc = croppedUrl || (customItem && customItem._customImage) || ('wardrobe-thumbs/' + filename);
 
       if (_swapIdx !== null && _swapIdx < _editLayout.length) {
         // Swap mode: replace the piece but keep position/size

@@ -1008,7 +1008,7 @@
         div.className = 'canvas-item';
         div.style.cssText = `left:${item.x}px;top:${item.y}px;width:${item.w}px;height:${item.h}px;`;
         div.innerHTML = `
-          <img src="${item.file.startsWith('data:') || item.file.startsWith('outfit-') || item.file.startsWith('wardrobe-') || item.file.startsWith('http') || item.file.startsWith('../') ? item.file : IMG_PATH + item.file}" alt="" />
+          <img src="${(() => { const f = item.file.startsWith('../') ? item.file.substring(3) : item.file; return f.startsWith('data:') || f.startsWith('outfit-') || f.startsWith('wardrobe-') || f.startsWith('http') ? f : IMG_PATH + f; })()}" alt="" />
           <button class="remove-btn" onclick="removeCanvasItem(${idx})">&times;</button>
           <div class="resize-handle" onmousedown="startResize(event,${idx})"></div>
         `;
@@ -1074,8 +1074,8 @@
         const pctW = (item.w / cw) * 100;
         const pctH = (item.h / ch) * 100;
         return {
-          file: item.file.includes('wardrobe-thumbs/') ? item.file.replace('wardrobe-thumbs/', '../wardrobe-thumbs/') : item.file,
-          _origFile: item.file.replace('wardrobe-thumbs/', '').replace('../wardrobe-thumbs/', ''),
+          file: item.file.includes('wardrobe-thumbs/') ? item.file.replace('../wardrobe-thumbs/', 'wardrobe-thumbs/') : item.file,
+          _origFile: item.file.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', ''),
           left: Math.round(pctLeft * 10) / 10,
           top: Math.round(pctTop * 10) / 10,
           width: Math.round(pctW * 10) / 10,
