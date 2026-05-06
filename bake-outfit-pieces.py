@@ -109,4 +109,50 @@ req = urllib.request.Request(
 )
 with urllib.request.urlopen(req) as resp:
     print(f"Firebase responded: HTTP {resp.status}")
-print("Done.")
+
+# --- Also drain outfitCropCache (new content-addressed crop store) ---
+print("\nDraining outfitCropCache…")
+try:
+    with urllib.request.urlopen(f"{FIREBASE_BASE}/outfitCropCache.json") as resp:
+        cache = json.load(resp) or {}
+except Exception as e:
+    print(f"  failed to fetch cache: {e}")
+    cache = {}
+
+cache_baked = 0
+cache_deduped = 0
+for sha, entry in cache.items():
+    if not isinstance(entry, dict):
+        continue
+    data_url = entry.get("data") or ""
+    ext = entry.get("ext") or "png"
+    if not data_url.startswith("data:"):
+        continue
+    try:
+        _, b64 = data_url.split(",", 1)
+        bytes_ = base64.b64decode(b64)
+    except Exception as e:
+        print(f"  {sha}: decode failed - {e}")
+        continue
+    out_path = os.path.join(OUT_DIR, f"piece_{sha}.{ext}")
+    if os.path.exists(out_path):
+        cache_deduped += 1
+    else:
+        with open(out_path, "wb") as wf:
+            wf.write(bytes_)
+        cache_baked += 1
+
+print(f"  cache entries: baked {cache_baked}, deduped {cache_deduped}")
+
+# Once written to disk, delete the entire cache node — the renderer's
+# error fallback only needs entries that aren't on disk yet, and
+# everything we just processed now is.
+if cache:
+    req = urllib.request.Request(
+        f"{FIREBASE_BASE}/outfitCropCache.json",
+        method="DELETE",
+    )
+    with urllib.request.urlopen(req) as resp:
+        print(f"  cleared outfitCropCache: HTTP {resp.status}")
+
+print("\nDone.")
