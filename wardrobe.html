@@ -1501,7 +1501,7 @@
       for (const [id, data] of Object.entries(custom)) {
         items.push({
           id: id,
-          file: id,
+          file: data.file || id,
           category: data.category,
           subcategory: data.subcategory,
           labels: data.labels || [],
