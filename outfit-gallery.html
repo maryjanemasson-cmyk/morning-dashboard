@@ -640,17 +640,22 @@
     }
 
     async function saveLayout() {
-      await externalizeCrops(_editLayout);
-      const updates = _outfitEdits[_editingOutfit] || {};
-      updates.layout = _editLayout;
-      await db.ref('outfitEdits/' + _editingOutfit).set(updates);
-      // Also update local outfit
-      const o = outfits.find(x => x.slide === _editingOutfit);
-      if (o) o.layout = JSON.parse(JSON.stringify(_editLayout));
-      _editMode = false;
-      _addPanelOpen = false;
-      renderDetail();
-      render(); // refresh cards
+      try {
+        await externalizeCrops(_editLayout);
+        const updates = _outfitEdits[_editingOutfit] || {};
+        updates.layout = _editLayout;
+        await db.ref('outfitEdits/' + _editingOutfit).set(updates);
+        // Also update local outfit
+        const o = outfits.find(x => x.slide === _editingOutfit);
+        if (o) o.layout = JSON.parse(JSON.stringify(_editLayout));
+        _editMode = false;
+        _addPanelOpen = false;
+        renderDetail();
+        render(); // refresh cards
+      } catch (err) {
+        console.error('saveLayout failed:', err);
+        alert('Save failed: ' + (err && err.message ? err.message : err) + '\n\nSee browser console for details.');
+      }
     }
 
     // Image error fallback: when a piece_{sha}.{ext} file isn't on disk yet
