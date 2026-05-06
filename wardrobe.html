@@ -70,6 +70,8 @@
     .cat-item:hover { border-color:#c9b99a; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
     .cat-item.dragging { opacity:0.3; }
     .cat-item.drag-over { border-color:#c9b99a; box-shadow:0 0 0 2px #c9b99a; }
+    .cat-item.is-hidden { opacity:0.45; background:#f5f0e8; }
+    .cat-item.is-hidden::after { content:'HIDDEN'; position:absolute; top:0.4rem; left:0.4rem; font-size:0.55rem; font-weight:600; letter-spacing:1px; color:#9c8b76; background:rgba(255,255,255,0.85); padding:0.1rem 0.35rem; border-radius:3px; pointer-events:none; }
     .cat-item img { width:100%; height:150px; object-fit:contain; display:block; background:#f9f7f4; }
     .cat-item-info { padding:0.25rem 0.4rem; }
     .cat-item-cat { font-size:0.58rem; color:#9c8b76; text-transform:uppercase; letter-spacing:0.5px; }
@@ -206,6 +208,7 @@
         <input type="text" class="search-input" id="cat-search" placeholder="Search wardrobe..." oninput="renderCatalogue()" />
         <div id="cat-filters"></div>
         <span class="item-count" id="cat-count"></span>
+        <button id="show-hidden-toggle" onclick="toggleShowHidden()" style="padding:0.35rem 0.7rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#9c8b76;font-size:0.72rem;cursor:pointer;font-family:inherit;white-space:nowrap;display:none;">Show hidden</button>
         <button onclick="document.getElementById('add-item-modal').classList.add('open')" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
       </div>
       <div id="cat-grid" class="cat-grid"></div>
@@ -501,8 +504,11 @@
       }
 
       const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
+      const hiddenKey = (id) => id.replace(/[.#$/\[\]]/g, '_');
       let filtered = items.filter(i => {
         if (catFilter !== 'All' && i.category !== catFilter) return false;
+        const isHidden = !!_hiddenItems[hiddenKey(i.id)];
+        if (isHidden && !_showHidden) return false;
         if (search) {
           const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
           if (!h.includes(search)) return false;
@@ -529,10 +535,14 @@
              <div style="font-size:0.55rem;color:#b8a48e;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">edit links</div>`
           : `<div style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">+ link to outfits</div>`;
         const isCustom = i.id && (i.id.startsWith('custom_') || i.id.match(/^C\d+$/));
-        const deleteBtn = isCustom
-          ? `<button onclick="event.stopPropagation();deleteCustomItem('${i.id}')" style="position:absolute;top:0.35rem;right:0.35rem;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;" class="delete-custom-btn">&times;</button>`
-          : '';
-        gridHtml += `<div class="cat-item" draggable="true"
+        const isHidden = !!_hiddenItems[hiddenKey(i.id)];
+        const btnStyle = 'position:absolute;top:0.35rem;right:0.35rem;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;';
+        const deleteBtn = isHidden
+          ? `<button onclick="event.stopPropagation();unhideItem('${i.id}')" style="${btnStyle}background:rgba(74,140,111,0.85);" class="delete-custom-btn" title="Restore">&#x21A9;</button>`
+          : isCustom
+            ? `<button onclick="event.stopPropagation();deleteCustomItem('${i.id}')" style="${btnStyle}" class="delete-custom-btn" title="Delete">&times;</button>`
+            : `<button onclick="event.stopPropagation();hideItem('${i.id}')" style="${btnStyle}" class="delete-custom-btn" title="Hide">&times;</button>`;
+        gridHtml += `<div class="cat-item${isHidden ? ' is-hidden' : ''}" draggable="true"
           data-id="${i.id}"
           ondragstart="startItemDrag(event,'${i.id}')"
           ondragover="event.preventDefault();this.classList.add('drag-over')"
@@ -656,6 +666,37 @@
     db.ref('wardrobeOrder').on('value', snap => {
       _itemOrder = snap.val() || {};
     });
+
+    // Hidden items (soft-delete for non-custom items)
+    let _hiddenItems = {};
+    let _showHidden = false;
+    db.ref('wardrobeHidden').on('value', snap => {
+      _hiddenItems = snap.val() || {};
+      const count = Object.keys(_hiddenItems).length;
+      const btn = document.getElementById('show-hidden-toggle');
+      if (btn) {
+        btn.style.display = count > 0 ? 'inline-block' : 'none';
+        btn.textContent = _showHidden ? `Hide hidden (${count})` : `Show hidden (${count})`;
+      }
+      renderCatalogue();
+    });
+
+    function toggleShowHidden() {
+      _showHidden = !_showHidden;
+      const count = Object.keys(_hiddenItems).length;
+      const btn = document.getElementById('show-hidden-toggle');
+      if (btn) btn.textContent = _showHidden ? `Hide hidden (${count})` : `Show hidden (${count})`;
+      renderCatalogue();
+    }
+
+    function hideItem(id) {
+      if (!confirm('Hide this item from the catalogue? You can restore it later via "Show hidden".')) return;
+      db.ref('wardrobeHidden/' + id.replace(/[.#$/\[\]]/g, '_')).set(true);
+    }
+
+    function unhideItem(id) {
+      db.ref('wardrobeHidden/' + id.replace(/[.#$/\[\]]/g, '_')).remove();
+    }
 
     function startItemDrag(e, id) {
       _dragItemId = id;
