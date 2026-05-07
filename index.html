@@ -479,6 +479,13 @@
       padding: 0.1rem 0.35rem; border-radius: 3px;
       display: inline-block; margin-right: 0.3rem;
     }
+    .wl-genre-header {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.85rem; font-weight: 600; color: #2c2418;
+      margin-top: 0.7rem; margin-bottom: 0.3rem;
+      padding-bottom: 0.2rem; border-bottom: 1px solid #ebe5dc;
+    }
+    .wl-genre-header:first-child { margin-top: 0; }
     .wl-rating {
       font-size: 0.6rem; font-weight: 600; color: #4a8c6f;
       white-space: nowrap;
@@ -1408,8 +1415,21 @@
       let items = [...WATCHLIST, ..._customWatchlist];
       if (_wlFilter === 'unwatched') items = items.filter(w => !_watchedShows[w.id]);
 
+      // Sort by genre, then by title within each genre
+      items.sort((a, b) => {
+        const ga = (a.genre || '').toLowerCase();
+        const gb = (b.genre || '').toLowerCase();
+        if (ga !== gb) return ga.localeCompare(gb);
+        return (a.title || '').localeCompare(b.title || '');
+      });
+
       let html = '';
+      let lastGenre = '';
       items.forEach(w => {
+        if (w.genre !== lastGenre) {
+          lastGenre = w.genre;
+          html += `<div class="wl-genre-header">${w.genre || 'Other'}</div>`;
+        }
         const watched = _watchedShows[w.id] || false;
         const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
         html += `<div class="wl-item ${watched?'watched':''}">
@@ -1417,7 +1437,6 @@
           <div class="wl-info">
             <div class="wl-title ${watched?'done':''}">${w.title}</div>
             <div class="wl-meta">
-              <span class="wl-genre">${w.genre}</span>
               ${w.where}
             </div>
           </div>
