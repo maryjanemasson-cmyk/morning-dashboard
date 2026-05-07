@@ -560,11 +560,6 @@
         </div>
 
         <div class="card">
-          <div class="card-title"><span class="icon">&bull;</span> Lunch Planner</div>
-          <div id="meal-planner"></div>
-        </div>
-
-        <div class="card">
           <div class="card-title"><span class="icon">&bull;</span> Grocery List</div>
           <div id="grocery-section"></div>
         </div>
@@ -985,35 +980,6 @@
     }
     renderUpcoming();
 
-    // ── Meal Planner (Firebase) ──
-    let _meals = {};
-    function saveMeal(dayKey, value) {
-      _meals[dayKey] = value;
-      fbSet('meals', _meals);
-    }
-    function renderMealPlanner() {
-      const now = new Date();
-      const todayDay = now.getDay();
-      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      const startOfWeek = new Date(now);
-      startOfWeek.setDate(now.getDate() - todayDay);
-      let html = '';
-      for (let i = 0; i < 7; i++) {
-        const d = new Date(startOfWeek);
-        d.setDate(startOfWeek.getDate() + i);
-        const key = d.toISOString().slice(0, 10);
-        const isToday = i === todayDay;
-        const val = _meals[key] || '';
-        html += `<div class="meal-row">
-          <span class="meal-day ${isToday ? 'is-today' : ''}">${dayNames[i]}</span>
-          <input class="meal-input" type="text" placeholder="What's for lunch?"
-            value="${val.replace(/"/g, '&quot;')}"
-            onchange="saveMeal('${key}', this.value)" />
-        </div>`;
-      }
-      document.getElementById('meal-planner').innerHTML = html;
-    }
-    fbGet('meals', data => { _meals = data || {}; renderMealPlanner(); });
 
     // ── Grocery List (Firebase) ──
     let _groceries = [];
