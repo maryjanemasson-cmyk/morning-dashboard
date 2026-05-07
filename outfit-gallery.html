@@ -1144,29 +1144,60 @@
     let _cropping = false;
     let _cropScale = 1;
 
+    function resolveCropSrc(file) {
+      if (typeof file !== 'string') return '';
+      if (file.startsWith('data:')) return file;
+      if (file.startsWith('http')) return file;
+      if (file.startsWith('../')) file = file.substring(3);
+      if (file.startsWith('wardrobe-thumbs/')) return file;
+      return IMG_PATH + file;
+    }
+
     function openCropTool(idx) {
       const item = _editLayout[idx];
       if (!item) return;
       _cropIdx = idx;
       _cropFile = item.file;
 
-      const imgEl = new window.Image();
-      imgEl.crossOrigin = 'anonymous';
-      imgEl.onload = function() {
-        _cropImg = imgEl;
-        const canvas = document.getElementById('crop-canvas');
-        // Scale to fit modal (max 600px wide)
-        _cropScale = Math.min(600 / imgEl.width, 500 / imgEl.height, 1);
-        canvas.width = imgEl.width * _cropScale;
-        canvas.height = imgEl.height * _cropScale;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(imgEl, 0, 0, canvas.width, canvas.height);
-        _cropStart = null;
-        _cropEnd = null;
-        document.getElementById('crop-box').style.display = 'none';
-        document.getElementById('crop-modal').classList.add('open');
-      };
-      imgEl.src = IMG_PATH + _cropFile;
+      function loadImg(src, onFail) {
+        const imgEl = new window.Image();
+        imgEl.crossOrigin = 'anonymous';
+        imgEl.onload = function() {
+          _cropImg = imgEl;
+          const canvas = document.getElementById('crop-canvas');
+          _cropScale = Math.min(600 / imgEl.width, 500 / imgEl.height, 1);
+          canvas.width = imgEl.width * _cropScale;
+          canvas.height = imgEl.height * _cropScale;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(imgEl, 0, 0, canvas.width, canvas.height);
+          _cropStart = null;
+          _cropEnd = null;
+          document.getElementById('crop-box').style.display = 'none';
+          document.getElementById('crop-modal').classList.add('open');
+        };
+        imgEl.onerror = onFail;
+        imgEl.src = src;
+      }
+
+      const primarySrc = resolveCropSrc(_cropFile);
+      loadImg(primarySrc, function() {
+        // Fallback: piece_{sha}.{ext} that isn't on disk yet — pull from cache
+        const m = (_cropFile || '').match(/^piece_([a-f0-9]+)\./);
+        if (!m) {
+          alert('Could not load image for cropping: ' + _cropFile);
+          return;
+        }
+        db.ref('outfitCropCache/' + m[1]).once('value').then(snap => {
+          const v = snap.val();
+          if (v && v.data) {
+            loadImg(v.data, function() {
+              alert('Could not load image for cropping (cache also missing): ' + _cropFile);
+            });
+          } else {
+            alert('Could not load image for cropping (no cache entry): ' + _cropFile);
+          }
+        });
+      });
     }
 
     // Mouse events for crop selection
