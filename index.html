@@ -571,19 +571,6 @@
         </div>
       </div>
 
-        <div class="card" style="padding:1.5rem">
-          <div class="card-title" style="font-size:1.05rem"><span class="icon">&bull;</span> TV Watchlist</div>
-          <div style="display:flex;gap:0.3rem;margin-bottom:0.4rem;">
-            <input type="text" id="wl-add-title" placeholder="Search show to add..." onkeydown="if(event.key==='Enter')searchAndAddShow()" style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.25rem 0.5rem;font-size:0.72rem;font-family:inherit;color:#3d3529;outline:none;" />
-            <button onclick="searchAndAddShow()" style="padding:0.25rem 0.5rem;border-radius:6px;border:none;background:#c9b99a;color:#fff;font-size:0.7rem;cursor:pointer;font-family:inherit;">+</button>
-          </div>
-          <div id="wl-search-results" style="margin-bottom:0.3rem;"></div>
-          <div id="watchlist-filters" class="wl-filter-row"></div>
-          <div id="watchlist" class="watchlist-scroll"></div>
-          <div id="watchlist-count" class="wl-count"></div>
-        </div>
-      </div>
-
       <!-- RIGHT -->
       <div class="col-right">
 
@@ -614,6 +601,19 @@
         </div>
       </div>
     </div>
+
+    <div class="card" style="padding:1.5rem;margin-top:1.25rem;">
+      <div class="card-title" style="font-size:1.05rem"><span class="icon">&bull;</span> TV Watchlist</div>
+      <div style="display:flex;gap:0.3rem;margin-bottom:0.4rem;">
+        <input type="text" id="wl-add-title" placeholder="Search show to add..." onkeydown="if(event.key==='Enter')searchAndAddShow()" style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.25rem 0.5rem;font-size:0.72rem;font-family:inherit;color:#3d3529;outline:none;" />
+        <button onclick="searchAndAddShow()" style="padding:0.25rem 0.5rem;border-radius:6px;border:none;background:#c9b99a;color:#fff;font-size:0.7rem;cursor:pointer;font-family:inherit;">+</button>
+      </div>
+      <div id="wl-search-results" style="margin-bottom:0.3rem;"></div>
+      <div id="watchlist-filters" class="wl-filter-row"></div>
+      <div id="watchlist" class="watchlist-scroll"></div>
+      <div id="watchlist-count" class="wl-count"></div>
+    </div>
+
     <div class="last-updated" id="last-updated"></div>
   </div>
 
