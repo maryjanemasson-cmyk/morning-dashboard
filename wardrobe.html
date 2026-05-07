@@ -740,7 +740,8 @@
       if (masterSrcIdx === -1 || masterTgtIdx === -1) return;
 
       const [moved] = items.splice(masterSrcIdx, 1);
-      items.splice(masterTgtIdx, 0, moved);
+      const insertAt = masterSrcIdx < masterTgtIdx ? masterTgtIdx - 1 : masterTgtIdx;
+      items.splice(insertAt, 0, moved);
 
       // Save new order to Firebase (just store array of IDs)
       const orderKey = catFilter !== 'All' ? catFilter : 'all';
