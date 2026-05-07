@@ -745,8 +745,12 @@
 
       // Save new order to Firebase (just store array of IDs)
       const orderKey = catFilter !== 'All' ? catFilter : 'all';
+      const safeKey = orderKey.replace(/[.#$/\[\]]/g, '_');
       const newOrder = items.filter(i => catFilter === 'All' || i.category === catFilter).map(i => i.id);
-      db.ref('wardrobeOrder/' + orderKey.replace(/[.#$/\[\]]/g, '_')).set(newOrder);
+      // Optimistically update local state so renderCatalogue below uses the new order,
+      // not the stale one still in _itemOrder until Firebase round-trips back.
+      _itemOrder[safeKey] = newOrder;
+      db.ref('wardrobeOrder/' + safeKey).set(newOrder);
 
       _dragItemId = null;
       renderCatalogue();
