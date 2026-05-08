@@ -958,6 +958,9 @@
       fbSet('todos', _todos);
     }
     function deleteTodo(i) {
+      const t = _todos[i];
+      if (!t) return;
+      if (!confirm(`Delete "${t.text}"?`)) return;
       _todos.splice(i, 1);
       fbSet('todos', _todos);
     }
