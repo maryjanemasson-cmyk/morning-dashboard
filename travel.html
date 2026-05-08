@@ -168,6 +168,15 @@
       font-size: 0.85rem;
       padding: 1rem;
     }
+    .itin-row {
+      display: flex; gap: 0.7rem; align-items: flex-start;
+      padding: 0.55rem 0; border-bottom: 1px solid #f5f0e8;
+    }
+    .itin-row:last-child { border-bottom: none; }
+    .itin-icon { font-size: 1rem; flex-shrink: 0; width: 1.5rem; text-align: center; }
+    .itin-main { flex: 1; min-width: 0; }
+    .itin-title { font-size: 0.85rem; color: #2c2418; font-weight: 500; }
+    .itin-sub { font-size: 0.72rem; color: #9c8b76; margin-top: 0.15rem; }
 
     /* Flight details */
     .flight-section { margin-bottom: 1rem; }
@@ -329,6 +338,12 @@
       <div id="weatherContainer"><div class="weather-loading">Loading weather...</div></div>
     </div>
 
+    <!-- TripIt Itinerary -->
+    <div class="card" id="itineraryCard" style="display:none;">
+      <div class="card-title"><span class="icon">&#128205;</span> Itinerary <span style="font-size:0.65rem;color:#9c8b76;font-weight:400;font-family:'Inter',sans-serif;margin-left:0.5rem;">from TripIt</span></div>
+      <div id="itineraryItems"></div>
+    </div>
+
     <!-- Flight Details -->
     <div class="card" id="flightCard">
       <div class="card-title"><span class="icon">&#128747;</span> Flight Details</div>
@@ -477,9 +492,38 @@
       selectedTrip = trip;
       renderCountdown();
       renderDetail();
+      renderItinerary();
       loadFlights();
       loadNotes();
       loadPacking();
+    }
+
+    const ITIN_ICONS = { flight: '✈︎', hotel: '🏨', train: '🚆', car: '🚗', other: '•' };
+
+    function renderItinerary() {
+      const card = document.getElementById('itineraryCard');
+      const container = document.getElementById('itineraryItems');
+      const items = (selectedTrip && selectedTrip.items) || [];
+      if (!items.length) {
+        card.style.display = 'none';
+        return;
+      }
+      card.style.display = '';
+      container.innerHTML = items.map(it => {
+        const dt = new Date(it.start);
+        const dateStr = dt.toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric' });
+        const timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
+        const icon = ITIN_ICONS[it.type] || '•';
+        const title = it.summary;
+        const sub = [it.location, it.type === 'hotel' ? '' : timeStr].filter(Boolean).join(' · ');
+        return `<div class="itin-row">
+          <span class="itin-icon">${icon}</span>
+          <div class="itin-main">
+            <div class="itin-title">${title}</div>
+            <div class="itin-sub">${dateStr}${sub ? ' · ' + sub : ''}</div>
+          </div>
+        </div>`;
+      }).join('');
     }
 
     // --- Trip Detail + Weather ---
