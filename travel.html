@@ -344,30 +344,6 @@
       <div id="itineraryItems"></div>
     </div>
 
-    <!-- Flight Details -->
-    <div class="card" id="flightCard">
-      <div class="card-title"><span class="icon">&#128747;</span> Flight Details</div>
-      <div class="flight-section">
-        <h3>Outbound</h3>
-        <div class="flight-fields">
-          <div><label>Airline</label><input id="outAirline" placeholder="e.g. Delta"></div>
-          <div><label>Flight #</label><input id="outFlightNum" placeholder="e.g. DL 1234"></div>
-          <div><label>Departure</label><input id="outDepart" placeholder="e.g. 7:00 AM EWR"></div>
-          <div><label>Arrival</label><input id="outArrive" placeholder="e.g. 8:30 AM BOS"></div>
-        </div>
-      </div>
-      <div class="flight-section">
-        <h3>Return</h3>
-        <div class="flight-fields">
-          <div><label>Airline</label><input id="retAirline" placeholder="e.g. Delta"></div>
-          <div><label>Flight #</label><input id="retFlightNum" placeholder="e.g. DL 5678"></div>
-          <div><label>Departure</label><input id="retDepart" placeholder="e.g. 5:00 PM BOS"></div>
-          <div><label>Arrival</label><input id="retArrive" placeholder="e.g. 6:30 PM EWR"></div>
-        </div>
-      </div>
-      <button class="btn btn-save" id="saveFlightBtn">Save Flights</button>
-    </div>
-
     <!-- Trip Notes -->
     <div class="card">
       <div class="card-title"><span class="icon">&#128221;</span> Trip Notes</div>
@@ -493,7 +469,6 @@
       renderCountdown();
       renderDetail();
       renderItinerary();
-      loadFlights();
       loadNotes();
       loadPacking();
     }
@@ -582,28 +557,6 @@
 
       container.innerHTML = html ? `<div class="weather-grid">${html}</div>` : '<div class="weather-loading">No forecast available for these dates</div>';
     }
-
-    // --- Flight Details ---
-    const flightFields = ['outAirline', 'outFlightNum', 'outDepart', 'outArrive', 'retAirline', 'retFlightNum', 'retDepart', 'retArrive'];
-
-    function loadFlights() {
-      if (!selectedTrip) return;
-      const key = tripKey(selectedTrip);
-      db.ref('travelFlights/' + key).once('value').then(snap => {
-        const val = snap.val() || {};
-        flightFields.forEach(f => {
-          document.getElementById(f).value = val[f] || '';
-        });
-      });
-    }
-
-    document.getElementById('saveFlightBtn').addEventListener('click', () => {
-      if (!selectedTrip) return;
-      const key = tripKey(selectedTrip);
-      const data = {};
-      flightFields.forEach(f => { data[f] = document.getElementById(f).value; });
-      db.ref('travelFlights/' + key).set(data);
-    });
 
     // --- Trip Notes ---
     let notesTimer = null;
