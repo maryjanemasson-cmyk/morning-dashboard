@@ -510,15 +510,15 @@
     }
 
     function _captureAddPanelState() {
-      const grid = document.getElementById('add-grid');
+      const panel = document.getElementById('add-panel');
       const searchEl = document.getElementById('add-search');
-      if (grid) _addPanelState.scroll = grid.scrollTop;
+      // The panel itself is the overflow-y:auto scroller, not the grid inside.
+      if (panel) _addPanelState.scroll = panel.scrollTop;
       if (searchEl) _addPanelState.search = searchEl.value;
     }
 
     function _restoreAddPanelState() {
       const panel = document.getElementById('add-panel');
-      const grid = document.getElementById('add-grid');
       const searchEl = document.getElementById('add-search');
       if (panel) {
         if (_addPanelState.left != null) panel.style.left = _addPanelState.left + 'px';
@@ -530,7 +530,6 @@
         // Re-run the filter with the restored search value
         renderAddPanel();
       }
-      if (grid && _addPanelState.scroll) grid.scrollTop = _addPanelState.scroll;
     }
 
     // Drag the Add Piece panel by its header
@@ -637,12 +636,12 @@
       if (_editMode && _addPanelOpen) {
         _restoreAddPanelState();
         renderAddPanel();
-        // Restore scroll on the next frame, after layout settles
+        // Restore scroll on the panel (not the grid — panel is the overflow scroller)
         const wantedScroll = _addPanelState.scroll;
         if (wantedScroll) {
           requestAnimationFrame(() => {
-            const _g = document.getElementById('add-grid');
-            if (_g) _g.scrollTop = wantedScroll;
+            const p = document.getElementById('add-panel');
+            if (p) p.scrollTop = wantedScroll;
           });
         }
         // Quick filter buttons
