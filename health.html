@@ -951,22 +951,26 @@
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
 
-    // ── Protein Boosters: high protein per calorie ──
+    // ── Protein Boosters: high protein per calorie, gentle + filling ──
     const PROTEIN_BOOSTERS = [
       { name: 'Nonfat Greek yogurt (1 cup)', cal: 100, protein: 17 },
       { name: 'Cottage cheese, low-fat (1 cup)', cal: 180, protein: 24 },
+      { name: 'Cottage cheese + peaches (1 cup)', cal: 200, protein: 24 },
+      { name: 'Greek yogurt parfait w/ berries', cal: 200, protein: 18 },
       { name: 'Egg whites (3)', cal: 50, protein: 11 },
+      { name: 'Soft scrambled eggs (2)', cal: 140, protein: 12 },
       { name: 'Hard-boiled egg', cal: 70, protein: 6 },
-      { name: 'Tuna in water (1 can, drained)', cal: 100, protein: 22 },
-      { name: 'Grilled chicken breast (3 oz)', cal: 140, protein: 26 },
-      { name: 'Turkey breast slices (3 oz)', cal: 90, protein: 18 },
+      { name: 'Oatmeal w/ whey protein (1 scoop + ½ cup oats)', cal: 220, protein: 27 },
+      { name: 'Grilled chicken breast (3 oz, plain)', cal: 140, protein: 26 },
       { name: 'Protein shake (whey, 1 scoop)', cal: 110, protein: 24 },
+      { name: 'Banana smoothie w/ whey + skim milk', cal: 220, protein: 26 },
+      { name: 'Lentil soup (1 cup)', cal: 200, protein: 18 },
       { name: 'Edamame, shelled (1 cup)', cal: 190, protein: 17 },
+      { name: 'Hummus + cucumber (¼ cup + 1 cucumber)', cal: 130, protein: 5 },
       { name: 'String cheese (1 stick)', cal: 80, protein: 7 },
       { name: 'Skim milk (1 cup)', cal: 90, protein: 8 },
-      { name: 'Beef jerky (1 oz)', cal: 80, protein: 13 },
-      { name: 'Smoked salmon (2 oz)', cal: 70, protein: 11 },
-      { name: 'Tofu, firm (3 oz)', cal: 70, protein: 8 },
+      { name: 'Silken tofu (½ cup)', cal: 70, protein: 8 },
+      { name: 'Chickpea pasta (2 oz dry)', cal: 200, protein: 14 },
     ];
 
     function renderProteinBoosters() {
