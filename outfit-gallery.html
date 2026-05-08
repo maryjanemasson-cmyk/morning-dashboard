@@ -637,9 +637,14 @@
       if (_editMode && _addPanelOpen) {
         _restoreAddPanelState();
         renderAddPanel();
-        // Restore scroll AFTER renderAddPanel populates the grid
-        const _g = document.getElementById('add-grid');
-        if (_g && _addPanelState.scroll) _g.scrollTop = _addPanelState.scroll;
+        // Restore scroll on the next frame, after layout settles
+        const wantedScroll = _addPanelState.scroll;
+        if (wantedScroll) {
+          requestAnimationFrame(() => {
+            const _g = document.getElementById('add-grid');
+            if (_g) _g.scrollTop = wantedScroll;
+          });
+        }
         // Quick filter buttons
         const qf = document.getElementById('add-quick-filters');
         if (qf) {
@@ -830,11 +835,15 @@
           onclick="addPieceFromWardrobe('${i.file}')" />`;
       }).join('');
 
-      // Show result count
-      const countEl = document.createElement('div');
-      countEl.style.cssText = 'font-size:0.65rem;color:#8A8A9A;margin-top:0.3rem;';
+      // Show result count (replace existing if present)
+      let countEl = document.getElementById('add-count');
+      if (!countEl) {
+        countEl = document.createElement('div');
+        countEl.id = 'add-count';
+        countEl.style.cssText = 'font-size:0.65rem;color:#8A8A9A;margin-top:0.3rem;';
+        grid.parentNode.appendChild(countEl);
+      }
       countEl.textContent = filtered.length + ' items' + (filtered.length > MAX_SHOW ? ` (showing ${MAX_SHOW})` : '');
-      grid.parentNode.appendChild(countEl);
     }
 
     function addPieceFromWardrobe(filePath) {
