@@ -577,7 +577,7 @@
       <div class="col-right">
 
         <div class="card">
-          <div class="card-title"><span class="icon">&bull;</span> Weekly Reminders</div>
+          <div class="card-title"><span class="icon">&bull;</span> Reminders</div>
           <div id="chores-section"></div>
         </div>
 
@@ -1019,7 +1019,7 @@
     function clearCheckedGroceries() { _groceries = _groceries.filter(i => !i.done); fbSet('groceries', _groceries); }
     fbGet('groceries', data => { _groceries = data ? (Array.isArray(data) ? data : Object.values(data)) : []; renderGroceries(); });
 
-    // ── Chores ──
+    // ── Reminders ──
     const CHORE_TYPES = [
       { id: 'book-pilates', name: 'Book Pilates & OTF classes', icon: '\uD83E\uDDD8', dueDays: 7 },
       { id: 'dry-cleaning', name: 'Drop off dry cleaning', icon: '\uD83E\uDDE5', dueDays: 7 },
@@ -1027,6 +1027,8 @@
       { id: 'dog-poop', name: 'Pick up dog poop', icon: '\uD83D\uDC36', dueDays: 7 },
       { id: 'water-plants', name: 'Water plants', icon: '\uD83C\uDF31', dueDays: 7 },
       { id: 'weeding', name: 'Weed the garden', icon: '\uD83C\uDF3B', dueDays: 14 },
+      { id: 'pedicure', name: 'Pedicure', icon: '\uD83D\uDC85', dueDays: 30 },
+      { id: 'eyebrows', name: 'Eyebrow care', icon: '\u2728', dueDays: 30 },
     ];
 
     let _chores = {};
