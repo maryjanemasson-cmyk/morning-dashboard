@@ -285,6 +285,24 @@
     }
     .toast.show { opacity: 1; }
 
+    /* Protein Boosters */
+    .booster-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.5rem 0; border-bottom: 1px solid #f5f0e8;
+      gap: 0.5rem;
+    }
+    .booster-row:last-child { border-bottom: none; }
+    .booster-info { flex: 1; min-width: 0; }
+    .booster-name { font-size: 0.82rem; color: #3d3529; }
+    .booster-stats { font-size: 0.7rem; color: #6b5d4d; margin-top: 0.15rem; }
+    .booster-add {
+      font-size: 0.7rem; padding: 0.3rem 0.7rem;
+      flex-shrink: 0;
+    }
+    #protein-boosters-card .card-title {
+      display: flex; align-items: baseline; justify-content: space-between;
+    }
+
     @media (max-width: 800px) {
       .dashboard { padding: 0 1rem 1rem; }
       .stats-row { grid-template-columns: repeat(2, 1fr); }
@@ -319,14 +337,14 @@
         <div class="value"><span id="stat-target">—</span><span class="unit">cal</span></div>
         <div class="sub" id="stat-target-sub">—</div>
       </div>
-      <div class="stat-tile">
-        <div class="label">Eaten Today</div>
-        <div class="value"><span id="stat-eaten">0</span><span class="unit">cal</span></div>
+      <div class="stat-tile" id="stat-tile-cal-left">
+        <div class="label">Calories Left</div>
+        <div class="value"><span id="stat-cal-left">—</span><span class="unit">cal</span></div>
         <div class="sub" id="stat-eaten-sub">—</div>
       </div>
       <div class="stat-tile" id="stat-tile-protein">
-        <div class="label">Protein Today</div>
-        <div class="value"><span id="stat-protein">0</span><span class="unit">g</span></div>
+        <div class="label">Protein Left</div>
+        <div class="value"><span id="stat-protein-left">—</span><span class="unit">g</span></div>
         <div class="sub" id="stat-protein-sub">—</div>
       </div>
       <div class="stat-tile" id="stat-tile-deficit">
@@ -356,6 +374,11 @@
               <span><span id="total-pro">0</span>g protein</span>
             </div>
           </div>
+        </div>
+
+        <div class="card" id="protein-boosters-card">
+          <div class="card-title"><span><span class="icon">~</span>Protein Boosters</span><span style="font-size:0.65rem;color:#9c8b76;font-weight:400;font-family:'Inter',sans-serif;" id="boosters-hint">High protein, low calories</span></div>
+          <div id="protein-boosters-list"></div>
         </div>
 
         <div class="card">
@@ -702,14 +725,21 @@
       document.getElementById('stat-target').textContent = t.target;
       document.getElementById('stat-target-sub').textContent = `TDEE ${t.tdee} − ${t.deficit} deficit`;
 
-      document.getElementById('stat-eaten').textContent = eaten;
       const remaining = t.target - eaten + burned;
-      document.getElementById('stat-eaten-sub').textContent = remaining >= 0 ? `${remaining} cal left` : `${Math.abs(remaining)} over`;
+      document.getElementById('stat-cal-left').textContent = remaining;
+      document.getElementById('stat-eaten-sub').textContent = `${eaten} of ${t.target} eaten` + (burned ? ` (+${burned} burned)` : '');
+      const calTile = document.getElementById('stat-tile-cal-left');
+      calTile.classList.toggle('deficit-good', remaining >= 0);
+      calTile.classList.toggle('deficit-bad', remaining < 0);
 
-      document.getElementById('stat-protein').textContent = protein;
-      const proPct = Math.round((protein / profile.protein_g) * 100);
-      document.getElementById('stat-protein-sub').textContent = `${proPct}% of ${profile.protein_g}g`;
+      const proteinLeft = Math.max(0, profile.protein_g - protein);
+      document.getElementById('stat-protein-left').textContent = proteinLeft;
+      document.getElementById('stat-protein-sub').textContent = `${protein} of ${profile.protein_g}g eaten`;
       document.getElementById('stat-tile-protein').classList.toggle('deficit-good', protein >= profile.protein_g);
+      // expose for protein-boosters logic
+      window._proteinLeft = proteinLeft;
+      window._calLeft = remaining;
+      renderProteinBoosters();
     }
 
     // ── Week ──
@@ -920,6 +950,60 @@
     function escapeHtml(s) {
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
+
+    // ── Protein Boosters: high protein per calorie ──
+    const PROTEIN_BOOSTERS = [
+      { name: 'Nonfat Greek yogurt (1 cup)', cal: 100, protein: 17 },
+      { name: 'Cottage cheese, low-fat (1 cup)', cal: 180, protein: 24 },
+      { name: 'Egg whites (3)', cal: 50, protein: 11 },
+      { name: 'Hard-boiled egg', cal: 70, protein: 6 },
+      { name: 'Tuna in water (1 can, drained)', cal: 100, protein: 22 },
+      { name: 'Grilled chicken breast (3 oz)', cal: 140, protein: 26 },
+      { name: 'Turkey breast slices (3 oz)', cal: 90, protein: 18 },
+      { name: 'Protein shake (whey, 1 scoop)', cal: 110, protein: 24 },
+      { name: 'Edamame, shelled (1 cup)', cal: 190, protein: 17 },
+      { name: 'String cheese (1 stick)', cal: 80, protein: 7 },
+      { name: 'Skim milk (1 cup)', cal: 90, protein: 8 },
+      { name: 'Beef jerky (1 oz)', cal: 80, protein: 13 },
+      { name: 'Smoked salmon (2 oz)', cal: 70, protein: 11 },
+      { name: 'Tofu, firm (3 oz)', cal: 70, protein: 8 },
+    ];
+
+    function renderProteinBoosters() {
+      const list = document.getElementById('protein-boosters-list');
+      const hint = document.getElementById('boosters-hint');
+      if (!list) return;
+      const calLeft = window._calLeft != null ? window._calLeft : 99999;
+      const proteinLeft = window._proteinLeft != null ? window._proteinLeft : 999;
+
+      // Rank by protein-per-calorie, then filter to ones that fit remaining cals
+      const ranked = PROTEIN_BOOSTERS
+        .map(b => ({ ...b, ratio: b.protein / b.cal }))
+        .sort((a, b) => b.ratio - a.ratio);
+      const fits = ranked.filter(b => b.cal <= Math.max(50, calLeft));
+      const top = (fits.length ? fits : ranked).slice(0, 8);
+
+      hint.textContent = proteinLeft > 0
+        ? `${proteinLeft}g protein still needed today`
+        : 'Protein goal hit — these stay handy';
+
+      list.innerHTML = top.map(b => `
+        <div class="booster-row">
+          <div class="booster-info">
+            <div class="booster-name">${b.name}</div>
+            <div class="booster-stats">${b.cal} cal · <span style="color:#7ca3c7;font-weight:600;">${b.protein}g protein</span></div>
+          </div>
+          <button class="btn secondary booster-add" onclick="logBooster(${b.cal}, ${b.protein}, '${b.name.replace(/'/g, "\\'")}')">+ Log</button>
+        </div>
+      `).join('');
+    }
+
+    window.logBooster = function(cal, protein, name) {
+      todayDay.foods = todayDay.foods || [];
+      todayDay.foods.push({ name, cal, protein });
+      db.ref('health/days/' + todayStr()).set(todayDay);
+      toast(`+${cal} cal, ${protein}g protein logged`);
+    };
   </script>
 </body>
 </html>
