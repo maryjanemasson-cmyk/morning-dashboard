@@ -500,9 +500,69 @@
       renderDetail(o);
     }
 
+    // Persisted state for the Add Piece panel (search, grid scroll, drag position)
+    const _addPanelState = (() => {
+      try { return JSON.parse(localStorage.getItem('addPanelState') || '{}'); }
+      catch (e) { return {}; }
+    })();
+    function _saveAddPanelState() {
+      try { localStorage.setItem('addPanelState', JSON.stringify(_addPanelState)); } catch(e) {}
+    }
+
+    function _captureAddPanelState() {
+      const grid = document.getElementById('add-grid');
+      const searchEl = document.getElementById('add-search');
+      if (grid) _addPanelState.scroll = grid.scrollTop;
+      if (searchEl) _addPanelState.search = searchEl.value;
+    }
+
+    function _restoreAddPanelState() {
+      const panel = document.getElementById('add-panel');
+      const grid = document.getElementById('add-grid');
+      const searchEl = document.getElementById('add-search');
+      if (panel) {
+        if (_addPanelState.left != null) panel.style.left = _addPanelState.left + 'px';
+        if (_addPanelState.top  != null) panel.style.top  = _addPanelState.top  + 'px';
+        if (_addPanelState.left != null) panel.style.right = 'auto';
+      }
+      if (searchEl && _addPanelState.search) {
+        searchEl.value = _addPanelState.search;
+        // Re-run the filter with the restored search value
+        renderAddPanel();
+      }
+      if (grid && _addPanelState.scroll) grid.scrollTop = _addPanelState.scroll;
+    }
+
+    // Drag the Add Piece panel by its header
+    function _startAddPanelDrag(e) {
+      const panel = document.getElementById('add-panel');
+      if (!panel) return;
+      e.preventDefault();
+      const rect = panel.getBoundingClientRect();
+      const offX = e.clientX - rect.left;
+      const offY = e.clientY - rect.top;
+      function move(ev) {
+        const x = Math.max(0, Math.min(window.innerWidth  - rect.width,  ev.clientX - offX));
+        const y = Math.max(0, Math.min(window.innerHeight - rect.height, ev.clientY - offY));
+        panel.style.left  = x + 'px';
+        panel.style.top   = y + 'px';
+        panel.style.right = 'auto';
+        _addPanelState.left = x;
+        _addPanelState.top  = y;
+      }
+      function end() {
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', end);
+        _saveAddPanelState();
+      }
+      document.addEventListener('mousemove', move);
+      document.addEventListener('mouseup', end);
+    }
+
     function renderDetail(o) {
       if (!o) o = outfits.find(x => x.slide === _editingOutfit);
       if (!o) return;
+      _captureAddPanelState();
 
       const displayName = (_outfitEdits[o.slide] && _outfitEdits[o.slide].name) || o.name || '';
       const displayTitle = displayName || o._filterCat || o.occasion;
@@ -560,9 +620,9 @@
       // Add piece panel
       if (_editMode) {
         html += `<div class="add-piece-panel${_addPanelOpen ? ' open' : ''}" id="add-panel">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
-            <span style="font-size:0.75rem;font-weight:600;color:#2c2418;">Add Piece</span>
-            <button onclick="toggleAddPanel()" style="background:none;border:none;font-size:1.1rem;color:#b8a48e;cursor:pointer;">&times;</button>
+          <div class="add-panel-header" onmousedown="_startAddPanelDrag(event)" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;cursor:grab;user-select:none;">
+            <span style="font-size:0.75rem;font-weight:600;color:#2c2418;">⋮⋮ Add Piece</span>
+            <button onmousedown="event.stopPropagation()" onclick="toggleAddPanel()" style="background:none;border:none;font-size:1.1rem;color:#b8a48e;cursor:pointer;">&times;</button>
           </div>
           <input type="text" id="add-search" placeholder="e.g. black heels, blue bag, Chanel..." oninput="renderAddPanel()" />
           <div style="display:flex;flex-wrap:wrap;gap:2px;margin-bottom:0.4rem;" id="add-quick-filters"></div>
@@ -575,7 +635,11 @@
       document.getElementById('detail-modal').classList.add('open');
 
       if (_editMode && _addPanelOpen) {
+        _restoreAddPanelState();
         renderAddPanel();
+        // Restore scroll AFTER renderAddPanel populates the grid
+        const _g = document.getElementById('add-grid');
+        if (_g && _addPanelState.scroll) _g.scrollTop = _addPanelState.scroll;
         // Quick filter buttons
         const qf = document.getElementById('add-quick-filters');
         if (qf) {
