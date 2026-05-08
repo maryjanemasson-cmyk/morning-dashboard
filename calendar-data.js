@@ -26,15 +26,8 @@ window.CALENDAR_EVENTS = [
 window.TRAVEL_DATA = [
   {
     "destination": "Cambridge, MA",
-    "start": "2026-05-03",
-    "end": "2026-05-08",
-    "icon": "\u2708\ufe0f",
-    "items": []
-  },
-  {
-    "destination": "Cambridge, MA",
     "start": "2026-05-11",
-    "end": "2026-05-16",
+    "end": "2026-05-15",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -74,7 +67,7 @@ window.TRAVEL_DATA = [
   {
     "destination": "Cambridge, MA",
     "start": "2026-05-19",
-    "end": "2026-05-23",
+    "end": "2026-05-22",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -114,7 +107,7 @@ window.TRAVEL_DATA = [
   {
     "destination": "Chicago, IL",
     "start": "2026-05-29",
-    "end": "2026-05-30",
+    "end": "2026-05-29",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -130,7 +123,7 @@ window.TRAVEL_DATA = [
   {
     "destination": "Boston, MA",
     "start": "2026-06-01",
-    "end": "2026-06-02",
+    "end": "2026-06-01",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -140,7 +133,15 @@ window.TRAVEL_DATA = [
         "start": "2026-06-01T15:25:00+00:00",
         "end": "2026-06-01T18:02:00+00:00",
         "type": "flight"
-      },
+      }
+    ]
+  },
+  {
+    "destination": "Weston, NJ",
+    "start": "2026-06-03",
+    "end": "2026-06-03",
+    "icon": "\u2708\ufe0f",
+    "items": [
       {
         "summary": "Amtrak - New London, CT - Union Station (NLC) to Princeton Junction, NJ (PJC)",
         "location": "New London, CT - Union Station (NLC); NLC, New London, CT - Union Station (NLC)",
@@ -152,16 +153,9 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Weston, NJ",
-    "start": "2026-06-03",
-    "end": "2026-06-04",
-    "icon": "\u2708\ufe0f",
-    "items": []
-  },
-  {
     "destination": "Lisbon, Portugal",
     "start": "2026-06-07",
-    "end": "2026-06-13",
+    "end": "2026-06-12",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -185,7 +179,7 @@ window.TRAVEL_DATA = [
   {
     "destination": "Cambridge, MA",
     "start": "2026-06-30",
-    "end": "2026-07-04",
+    "end": "2026-07-03",
     "icon": "\u2708\ufe0f",
     "items": [
       {
