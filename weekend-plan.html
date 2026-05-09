@@ -105,6 +105,8 @@
       .day-card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; margin-bottom: 0.4in; }
       h1 { font-size: 1.6rem; }
       .check-cb { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      body.print-today #day-tomorrow { display: none; }
+      body.print-tomorrow #day-today { display: none; }
     }
   </style>
 </head>
@@ -118,7 +120,9 @@
 
     <div class="nav-strip">
       <a class="back" href="index.html">← Dashboard</a>
-      <button class="print-btn" onclick="window.print()">🖨️ Print</button>
+      <button class="print-btn" onclick="printDay('all')">🖨️ Print both</button>
+      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('today')">🖨️ Today only</button>
+      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('tomorrow')">🖨️ Tomorrow only</button>
     </div>
 
     <div class="day-card" id="day-today">
@@ -273,6 +277,14 @@
 
     loadList('today');
     loadList('tomorrow');
+
+    window.printDay = function(which) {
+      if (which === 'all') { window.print(); return; }
+      document.body.classList.add('print-' + which);
+      window.print();
+      // Remove class after print dialog closes
+      setTimeout(() => document.body.classList.remove('print-' + which), 100);
+    };
   </script>
 </body>
 </html>
