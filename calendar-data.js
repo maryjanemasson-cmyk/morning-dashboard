@@ -225,8 +225,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "CareCredit",
+      "subject": " You\u2019re almost there!\u200b \u200b"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "The cat bed that went viral \ud83d\ude3b"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"MSUPSAV Gardening Gloves...\""
+    },
     {
       "sender": "Google",
       "subject": "Review Nathaniel\u2019s activity on their Google Account"
@@ -254,18 +266,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 09 May 2026"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "Welcome To The Smartest Way To Buy Nice Things"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"MSUPSAV Gardening Gloves...\""
-    },
-    {
-      "sender": "Empower Online Delivery",
-      "subject": "Your Retirement Plan Regulatory Documents"
     }
   ]
 };
