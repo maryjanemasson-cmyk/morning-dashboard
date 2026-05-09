@@ -225,7 +225,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
     {
       "sender": "Google",
@@ -234,14 +234,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "Security alert"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Aquasana 3 Stage Max Flow...\""
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Disney Plus: $25.59\u00a0USD"
     },
     {
       "sender": "Bake Time",
@@ -266,6 +258,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Croissant",
       "subject": "Welcome To The Smartest Way To Buy Nice Things"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"MSUPSAV Gardening Gloves...\""
+    },
+    {
+      "sender": "Empower Online Delivery",
+      "subject": "Your Retirement Plan Regulatory Documents"
     }
   ]
 };
