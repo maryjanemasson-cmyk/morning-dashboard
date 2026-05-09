@@ -20,6 +20,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Chris",
     "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-09T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-09T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 

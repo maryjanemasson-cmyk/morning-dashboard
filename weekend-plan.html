@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekend Plan — Morning Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5; color: #3d3529; min-height: 100vh;
+    }
+    .banner { height: 90px; background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%); position: relative; }
+    .banner::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: linear-gradient(to top, #faf8f5, transparent); }
+    .container { max-width: 800px; margin: -22px auto 0; padding: 0 1.75rem 2rem; position: relative; }
+    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 600; color: #2c2418; margin-bottom: 0.2rem; }
+    h1 .sub { display: block; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 400; color: #9c8b76; margin-top: 0.2rem; }
+
+    .nav-strip { display:flex; gap:0.5rem; margin: 1rem 0 1.25rem; flex-wrap: wrap; }
+    .nav-strip a { font-size:0.78rem; color:#9c8b76; text-decoration:none; border:1px solid #ebe5dc; padding:0.35rem 0.9rem; border-radius:20px; background:#fff; }
+    .nav-strip a.back { background:#2c2418; color:#fff; border-color:#2c2418; }
+    .print-btn { font-size: 0.78rem; padding: 0.4rem 0.95rem; border-radius: 20px; border: 1px solid #c9b99a; background: #c9b99a; color: #fff; cursor: pointer; font-family: inherit; }
+    .print-btn:hover { background: #bfae8e; }
+
+    .day-card {
+      background: #fff; border: 1px solid #ebe5dc;
+      border-radius: 10px; padding: 1.4rem 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .day-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 0.5rem; padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f0ebe4;
+    }
+    .day-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem; font-weight: 600; color: #2c2418;
+    }
+    .day-date { font-size: 0.85rem; color: #9c8b76; }
+
+    .events-block { margin-top: 0.8rem; margin-bottom: 1rem; }
+    .events-title {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #9c8b76; margin-bottom: 0.4rem;
+    }
+    .event-item {
+      display: flex; gap: 0.75rem; padding: 0.35rem 0;
+      font-size: 0.88rem; color: #3d3529;
+      border-bottom: 1px dashed #f0ebe4;
+    }
+    .event-item:last-child { border-bottom: none; }
+    .event-time { width: 5rem; font-weight: 600; color: #6b5d4d; flex-shrink: 0; }
+    .event-summary { flex: 1; }
+    .event-summary .loc { font-size: 0.78rem; color: #9c8b76; }
+    .events-empty { font-size: 0.85rem; color: #b8a48e; font-style: italic; padding: 0.4rem 0; }
+
+    .checklist-block { margin-top: 0.8rem; }
+    .checklist {
+      list-style: none;
+    }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.4rem 0; border-bottom: 1px dashed #f0ebe4;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .check-cb {
+      width: 18px; height: 18px; border: 1.5px solid #c9b99a;
+      border-radius: 4px; cursor: pointer; flex-shrink: 0; margin-top: 1px;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.78rem; color: transparent;
+      transition: all 0.15s;
+    }
+    .check-cb.checked { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .check-text { flex: 1; font-size: 0.92rem; color: #3d3529; line-height: 1.4; }
+    .check-text.done { text-decoration: line-through; color: #c9bfb0; }
+    .check-del {
+      font-size: 0.85rem; color: #d4c5b5; cursor: pointer; padding: 0 0.3rem;
+      opacity: 0; transition: opacity 0.15s;
+    }
+    .checklist li:hover .check-del { opacity: 1; }
+    .check-del:hover { color: #c2553a; }
+
+    .add-row {
+      display: flex; gap: 0.4rem; margin-top: 0.7rem;
+    }
+    .add-input {
+      flex: 1; border: 1px solid #ebe5dc; border-radius: 6px;
+      padding: 0.4rem 0.65rem; font-family: inherit; font-size: 0.85rem;
+      color: #3d3529; outline: none; background: #faf8f5;
+    }
+    .add-input:focus { border-color: #c9b99a; background: #fff; }
+    .add-btn {
+      background: #c9b99a; color: #fff; border: none;
+      padding: 0.4rem 0.85rem; border-radius: 6px;
+      font-size: 0.78rem; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .add-btn:hover { background: #bfae8e; }
+
+    @media print {
+      body { background: #fff; }
+      .banner, .nav-strip, .print-btn, .add-row, .check-del { display: none !important; }
+      .container { max-width: 100%; padding: 0.5in; margin: 0; }
+      .day-card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; margin-bottom: 0.4in; }
+      h1 { font-size: 1.6rem; }
+      .check-cb { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <h1>
+      Weekend Plan
+      <span class="sub" id="weekend-range"></span>
+    </h1>
+
+    <div class="nav-strip">
+      <a class="back" href="index.html">← Dashboard</a>
+      <button class="print-btn" onclick="window.print()">🖨️ Print</button>
+    </div>
+
+    <div class="day-card" id="day-today">
+      <div class="day-header">
+        <div class="day-name" id="today-name">Today</div>
+        <div class="day-date" id="today-date"></div>
+      </div>
+      <div class="events-block">
+        <div class="events-title">Calendar</div>
+        <div id="today-events"></div>
+      </div>
+      <div class="checklist-block">
+        <div class="events-title">To do</div>
+        <ul class="checklist" id="today-list"></ul>
+        <div class="add-row">
+          <input class="add-input" id="today-add-input" placeholder="Add a task for today…" onkeydown="if(event.key==='Enter')addItem('today')">
+          <button class="add-btn" onclick="addItem('today')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card" id="day-tomorrow">
+      <div class="day-header">
+        <div class="day-name" id="tomorrow-name">Tomorrow</div>
+        <div class="day-date" id="tomorrow-date"></div>
+      </div>
+      <div class="events-block">
+        <div class="events-title">Calendar</div>
+        <div id="tomorrow-events"></div>
+      </div>
+      <div class="checklist-block">
+        <div class="events-title">To do</div>
+        <ul class="checklist" id="tomorrow-list"></ul>
+        <div class="add-row">
+          <input class="add-input" id="tomorrow-add-input" placeholder="Add a task for tomorrow…" onkeydown="if(event.key==='Enter')addItem('tomorrow')">
+          <button class="add-btn" onclick="addItem('tomorrow')">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script src="calendar-data.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Date helpers — keys are calendar dates so plan rolls forward as days change
+    function isoDate(d) {
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
+    const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+    const TOMORROW = new Date(TODAY); TOMORROW.setDate(TODAY.getDate()+1);
+    const TODAY_KEY = isoDate(TODAY);
+    const TOMORROW_KEY = isoDate(TOMORROW);
+
+    // Render headers
+    const fmtDay = d => d.toLocaleDateString('en-US', { weekday: 'long' });
+    const fmtDate = d => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    document.getElementById('today-name').textContent = fmtDay(TODAY);
+    document.getElementById('today-date').textContent = fmtDate(TODAY);
+    document.getElementById('tomorrow-name').textContent = fmtDay(TOMORROW);
+    document.getElementById('tomorrow-date').textContent = fmtDate(TOMORROW);
+    document.getElementById('weekend-range').textContent = fmtDate(TODAY) + ' — ' + fmtDate(TOMORROW);
+
+    // Calendar events
+    function renderEvents(targetEl, dateKey) {
+      const events = (window.CALENDAR_EVENTS || []).filter(e => {
+        const st = e.startTime || e.startDate || '';
+        return st.startsWith(dateKey);
+      });
+      // Dedupe by summary+start (calendar pulls Personal+Family etc. so we sometimes see duplicates)
+      const seen = new Set();
+      const unique = [];
+      for (const e of events) {
+        const k = (e.summary||'') + '|' + (e.startTime||e.startDate||'');
+        if (seen.has(k)) continue;
+        seen.add(k); unique.push(e);
+      }
+      if (unique.length === 0) {
+        targetEl.innerHTML = '<div class="events-empty">Nothing scheduled</div>';
+        return;
+      }
+      targetEl.innerHTML = unique.map(e => {
+        const t = e.startTime ? new Date(e.startTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : 'All day';
+        return `<div class="event-item">
+          <div class="event-time">${t}</div>
+          <div class="event-summary">${e.summary||''}${e.location ? '<div class="loc">' + e.location + '</div>' : ''}</div>
+        </div>`;
+      }).join('');
+    }
+    renderEvents(document.getElementById('today-events'), TODAY_KEY);
+    renderEvents(document.getElementById('tomorrow-events'), TOMORROW_KEY);
+
+    // Editable checklists, keyed by date so they rotate forward
+    let _items = { today: [], tomorrow: [] };
+    function listKey(which) { return which === 'today' ? TODAY_KEY : TOMORROW_KEY; }
+
+    function renderList(which) {
+      const ul = document.getElementById(which + '-list');
+      const items = _items[which] || [];
+      if (items.length === 0) {
+        ul.innerHTML = '<li style="color:#b8a48e;font-style:italic;border:none;">Nothing yet — add tasks below.</li>';
+        return;
+      }
+      ul.innerHTML = items.map((it, i) => `
+        <li>
+          <div class="check-cb ${it.done ? 'checked' : ''}" onclick="toggleItem('${which}', ${i})">${it.done ? '✓' : ''}</div>
+          <div class="check-text ${it.done ? 'done' : ''}">${escapeHtml(it.text)}</div>
+          <span class="check-del" onclick="deleteItem('${which}', ${i})">×</span>
+        </li>
+      `).join('');
+    }
+
+    function loadList(which) {
+      db.ref('weekendPlan/' + listKey(which)).on('value', snap => {
+        _items[which] = snap.val() || [];
+        renderList(which);
+      });
+    }
+    function saveList(which) {
+      db.ref('weekendPlan/' + listKey(which)).set(_items[which]);
+    }
+
+    window.addItem = function(which) {
+      const inp = document.getElementById(which + '-add-input');
+      const text = inp.value.trim();
+      if (!text) return;
+      _items[which].push({ text, done: false });
+      saveList(which);
+      inp.value = '';
+    };
+    window.toggleItem = function(which, i) {
+      _items[which][i].done = !_items[which][i].done;
+      saveList(which);
+    };
+    window.deleteItem = function(which, i) {
+      _items[which].splice(i, 1);
+      saveList(which);
+    };
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    loadList('today');
+    loadList('tomorrow');
+  </script>
+</body>
+</html>
