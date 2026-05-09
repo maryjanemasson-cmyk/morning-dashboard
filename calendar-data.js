@@ -31,6 +31,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Paladar Latin Kitchen and Rum Bar - King of Prussia",
+    "location": "250 Main St  King of Prussia, PA United States 19406",
+    "description": "(610) 910-8889\nPaladar Latin Kitchen & Rum Bar is a fresh, colorful and fun Latin American restaurant featuring the bold flavors and vibrant cultures of Central & South America, Cuba and other Latin Caribbean islands. Paladar is known for its freshly prepared guacamole, slow roasted and grilled meats, fresh seafood and homemade salsas, signature mojitos, 100+ rums, tequilas and mezcals. The rhythm of Latin music sets the tone in the dining room and 610 SOCIAL Bar + Lounge, where local DJs spin an energetic Top 40 mix on Fridays and Saturdays from 8:30pm - 1am.",
+    "startTime": "2026-05-09T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-09T19:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -214,7 +225,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 13,
   "threads": [
     {
       "sender": "Google",
@@ -233,28 +244,28 @@ window.EMAIL_DATA = {
       "subject": "Disney Plus: $25.59\u00a0USD"
     },
     {
-      "sender": "Bountiful Gardens in HILLSBOROUGH (via Clover)",
-      "subject": "Your receipt from Bountiful Gardens in HILLSBOROUGH"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Get Early Access to the BOSS Member Sale"
-    },
-    {
-      "sender": "NET-A-PORTER.COM",
-      "subject": "Your Order - 2804ZA7CS2638M"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Don't hit pause on the kitchen plans..."
-    },
-    {
-      "sender": "Yao Ling",
-      "subject": "Re: Issue logging into PRISMS email"
-    },
-    {
       "sender": "Bake Time",
       "subject": "Shortbread is the answer"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Check your pre-approval status for an Amex\u00ae Business Line of Credit"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "A Summer Take on Shirting"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, earn 30,000 Membership Rewards\u00ae points with a Business Checking account after completing qualifying activities."
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 09 May 2026"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "Welcome To The Smartest Way To Buy Nice Things"
     }
   ]
 };
