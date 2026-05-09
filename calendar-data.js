@@ -214,6 +214,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 0,
-  "threads": []
+  "unreadCount": 18,
+  "threads": [
+    {
+      "sender": "Google",
+      "subject": "Review Nathaniel\u2019s activity on their Google Account"
+    },
+    {
+      "sender": "Google",
+      "subject": "Security alert"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Aquasana 3 Stage Max Flow...\""
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Disney Plus: $25.59\u00a0USD"
+    },
+    {
+      "sender": "Bountiful Gardens in HILLSBOROUGH (via Clover)",
+      "subject": "Your receipt from Bountiful Gardens in HILLSBOROUGH"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Get Early Access to the BOSS Member Sale"
+    },
+    {
+      "sender": "NET-A-PORTER.COM",
+      "subject": "Your Order - 2804ZA7CS2638M"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Don't hit pause on the kitchen plans..."
+    },
+    {
+      "sender": "Yao Ling",
+      "subject": "Re: Issue logging into PRISMS email"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "Shortbread is the answer"
+    }
+  ]
 };
