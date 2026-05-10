@@ -225,19 +225,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 10,
   "threads": [
-    {
-      "sender": "MAJE",
-      "subject": "\u00c0 adopter sans h\u00e9siter"
-    },
     {
       "sender": "PNC Alerts",
       "subject": "Account Linking Expiration"
-    },
-    {
-      "sender": "E-ZPass Customer Service",
-      "subject": "E-ZPass Statement"
     },
     {
       "sender": "classmanager@nassautennis.net",
@@ -266,6 +258,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "A Summer Take on Shirting"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, earn 30,000 Membership Rewards\u00ae points with a Business Checking account after completing qualifying activities."
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 09 May 2026"
     }
   ]
 };
