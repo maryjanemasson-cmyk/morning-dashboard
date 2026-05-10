@@ -527,6 +527,19 @@
       const outfitStatus = _outfitMapReady ? '' : ' (loading outfit links...)';
       document.getElementById('cat-count').textContent = filtered.length + ' items' + outfitStatus;
 
+      // When viewing a single category, cluster items by subcategory. Subcategory
+      // display order follows first appearance in the saved order, so dragging a
+      // small bag to the top pulls the whole Small Bags group with it.
+      if (catFilter !== 'All') {
+        const subOrder = {};
+        let nextIdx = 0;
+        filtered.forEach(i => {
+          const s = i.subcategory || '';
+          if (subOrder[s] === undefined) subOrder[s] = nextIdx++;
+        });
+        filtered.sort((a, b) => subOrder[a.subcategory || ''] - subOrder[b.subcategory || '']);
+      }
+
       // Build HTML with subcategory headers when viewing a single category
       let gridHtml = '';
       let lastSub = '';
