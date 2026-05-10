@@ -236,47 +236,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Anderic",
-      "subject": "Get ready to explore and shop our fresh arrivals! 5% OFF - Anderic"
+      "sender": "noreply@proof.com",
+      "subject": "Your document has been successfully notarized"
     },
     {
-      "sender": "Life360",
-      "subject": "To every mom, from us."
+      "sender": "Notarize",
+      "subject": "Christian Sutter Hinrichs has shared a document with you"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 17, 2026 at 9:00 AM"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Happy Mother's Day! Up to 40% OFF to celebrate"
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 16, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Tide 4-in-1 Ultra Oxi PODS...\""
     },
     {
       "sender": "Pediatric Brain Tumor Foundation",
       "subject": "Happy Mother\u2019s Day! \ud83e\ude77"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"BAMBOO COOL Mens Pajama Set...\""
-    },
-    {
       "sender": "Almina Concept",
       "subject": "Happy Mother's Day"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Loop Terry Polo"
     },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 523412703660"
     },
     {
-      "sender": "BOSS",
-      "subject": "Enter the BOSS Summer Club"
+      "sender": "Rhone",
+      "subject": "DreamGlow\u00ae in bloom"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week in Ideas: What really killed Mozart? You don\u2019t want to know."
     }
   ]
 };
