@@ -317,6 +317,15 @@
       if (_addPanelOpen) renderAddPanel();
     });
 
+    // Mirror the wardrobe page's hidden-items list so deleted items don't show
+    // up in the Add Piece grid.
+    let _hiddenWardrobeItems = {};
+    db.ref('wardrobeHidden').on('value', snap => {
+      _hiddenWardrobeItems = snap.val() || {};
+      if (_addPanelOpen) renderAddPanel();
+    });
+    const _hiddenKey = id => (id || '').replace(/[.#$/\[\]]/g, '_');
+
     const IMG_PATH = 'outfit-images/';
     let outfits = window.OUTFIT_DATA || [];
     let activeFilter = 'All';
@@ -785,7 +794,7 @@
     function renderAddPanel() {
       const search = (document.getElementById('add-search')?.value || '').toLowerCase();
       const wardrobeItems = window.WARDROBE_ITEMS || [];
-      let filtered = wardrobeItems;
+      let filtered = wardrobeItems.filter(i => !_hiddenWardrobeItems[_hiddenKey(i.id)]);
 
       if (_addCatFilter) {
         // Category button was clicked - exact category match
@@ -821,6 +830,7 @@
           'pullovers','shirts','accessories','casual','jeans'];
 
         filtered = wardrobeItems.filter(i => {
+          if (_hiddenWardrobeItems[_hiddenKey(i.id)]) return false;
           const catText = [i.category, i.subcategory].join(' ').toLowerCase();
           const allText = [i.category, i.subcategory, ...(i.labels || []), ...(i.colors || [])].join(' ').toLowerCase();
 
@@ -852,6 +862,18 @@
           const ob = pos[b.id] !== undefined ? pos[b.id] : 99999;
           return oa - ob;
         });
+      }
+
+      // When a category is selected, cluster by subcategory the same way the
+      // wardrobe page does, so e.g. Heels/Flats/Boots stay grouped.
+      if (_addCatFilter && !search) {
+        const subOrder = {};
+        let nextIdx = 0;
+        filtered.forEach(i => {
+          const s = i.subcategory || '';
+          if (subOrder[s] === undefined) subOrder[s] = nextIdx++;
+        });
+        filtered.sort((a, b) => subOrder[a.subcategory || ''] - subOrder[b.subcategory || '']);
       }
 
       const grid = document.getElementById('add-grid');
