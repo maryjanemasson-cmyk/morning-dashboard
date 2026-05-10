@@ -236,15 +236,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "House of Beauty by Fran\u00e7ois",
+      "subject": "Happy Mother's Day \ud83d\udc90\ud83c\udf38\ud83c\udf3a"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Sparkling creativity, just for you \u2728"
+    },
     {
       "sender": "noreply@proof.com",
       "subject": "Your document has been successfully notarized"
-    },
-    {
-      "sender": "Notarize",
-      "subject": "Christian Sutter Hinrichs has shared a document with you"
     },
     {
       "sender": "FORM BY TWO",
@@ -273,10 +277,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Rhone",
       "subject": "DreamGlow\u00ae in bloom"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week in Ideas: What really killed Mozart? You don\u2019t want to know."
     }
   ]
 };
