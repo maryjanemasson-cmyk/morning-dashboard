@@ -236,8 +236,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Anderic",
+      "subject": "Get ready to explore and shop our fresh arrivals! 5% OFF - Anderic"
+    },
+    {
+      "sender": "Life360",
+      "subject": "To every mom, from us."
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Happy Mother's Day! Up to 40% OFF to celebrate"
@@ -265,18 +277,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Enter the BOSS Summer Club"
-    },
-    {
-      "sender": "Rhone",
-      "subject": "DreamGlow\u00ae in bloom"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 10 May 2026"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week in Ideas: What really killed Mozart? You don\u2019t want to know."
     }
   ]
 };
