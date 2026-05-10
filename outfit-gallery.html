@@ -310,6 +310,13 @@
       }
     });
 
+    // Mirror the wardrobe page's saved item order so the Add Piece grid matches
+    let _wardrobeOrder = {};
+    db.ref('wardrobeOrder').on('value', snap => {
+      _wardrobeOrder = snap.val() || {};
+      if (_addPanelOpen) renderAddPanel();
+    });
+
     const IMG_PATH = 'outfit-images/';
     let outfits = window.OUTFIT_DATA || [];
     let activeFilter = 'All';
@@ -831,6 +838,22 @@
           });
         });
       }
+      // Match the wardrobe page ordering: per-category order if a category is
+      // selected (and no free-text search overriding it), else the 'all' order.
+      const orderKey = (_addCatFilter && !search)
+        ? _addCatFilter.replace(/[.#$/\[\]]/g, '_')
+        : 'all';
+      const savedOrder = _wardrobeOrder[orderKey];
+      if (Array.isArray(savedOrder) && savedOrder.length) {
+        const pos = {};
+        savedOrder.forEach((id, idx) => { pos[id] = idx; });
+        filtered = filtered.slice().sort((a, b) => {
+          const oa = pos[a.id] !== undefined ? pos[a.id] : 99999;
+          const ob = pos[b.id] !== undefined ? pos[b.id] : 99999;
+          return oa - ob;
+        });
+      }
+
       const grid = document.getElementById('add-grid');
       if (!grid) return;
       const MAX_SHOW = 200;
