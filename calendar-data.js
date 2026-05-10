@@ -225,15 +225,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Everything But The House",
-      "subject": "Oh no! You've been outbid on Herm\u00e8s \"Au Coeur de la Vie\" Scarf 90 in Silk Twill with Box!"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Boston trip"
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
     },
     {
       "sender": "CareCredit",
@@ -244,10 +240,6 @@ window.EMAIL_DATA = {
       "subject": "The cat bed that went viral \ud83d\ude3b"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"MSUPSAV Gardening Gloves...\""
-    },
-    {
       "sender": "Google",
       "subject": "Review Nathaniel\u2019s activity on their Google Account"
     },
@@ -256,16 +248,20 @@ window.EMAIL_DATA = {
       "subject": "Security alert"
     },
     {
-      "sender": "Bake Time",
-      "subject": "Shortbread is the answer"
-    },
-    {
       "sender": "American Express",
       "subject": "Check your pre-approval status for an Amex\u00ae Business Line of Credit"
     },
     {
       "sender": "Buck Mason",
       "subject": "A Summer Take on Shirting"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, earn 30,000 Membership Rewards\u00ae points with a Business Checking account after completing qualifying activities."
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 09 May 2026"
     }
   ]
 };
