@@ -11,6 +11,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal A Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMfDvecRWK5qxGCRaCUVFld5OiDTrAEb8Y\n",
+    "startTime": "2026-05-11T05:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-11T06:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708 UA408 EWR \u2192 BOS",
     "location": "Newark (EWR) \u2192 Boston (BOS)",
     "description": "United Airlines 408, Terminal C\\nDepart: 6:40 AM EDT from EWR\\nArrive: 7:53 AM EDT at BOS, Terminal B",
@@ -225,8 +236,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Summer Fridays",
+      "subject": "A Perfect Pair \ud83e\udde1"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 523412703660"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Enter the BOSS Summer Club"
+    },
+    {
+      "sender": "Rhone",
+      "subject": "DreamGlow\u00ae in bloom"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 10 May 2026"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week in Ideas: What really killed Mozart? You don\u2019t want to know."
+    },
     {
       "sender": "PNC Alerts",
       "subject": "Account Linking Expiration"
@@ -242,30 +277,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "The cat bed that went viral \ud83d\ude3b"
-    },
-    {
-      "sender": "Google",
-      "subject": "Review Nathaniel\u2019s activity on their Google Account"
-    },
-    {
-      "sender": "Google",
-      "subject": "Security alert"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Check your pre-approval status for an Amex\u00ae Business Line of Credit"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "A Summer Take on Shirting"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, earn 30,000 Membership Rewards\u00ae points with a Business Checking account after completing qualifying activities."
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 09 May 2026"
     }
   ]
 };
