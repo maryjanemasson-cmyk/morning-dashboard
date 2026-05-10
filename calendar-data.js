@@ -1,47 +1,47 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "PRISMs Orientation",
-    "location": "",
-    "description": "Orientation Meeting\n\nRSVP Form: [Google Form link]\n\nZoom Meeting Link: [Orientation Zoom Room link]\nMeeting ID: 609 454 5597\nPasscode: dreams",
-    "startTime": "2026-05-09T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-09T10:00:00-04:00",
-    "endDate": "",
+    "summary": "Trip \u2014 Cambridge, MA",
+    "location": "Cambridge, MA",
+    "description": "Cambridge, MA \u2014 May 11 to 15, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
+    "startTime": "",
+    "startDate": "2026-05-11",
+    "endTime": "",
+    "endDate": "2026-05-16",
     "calendar": "Personal",
-    "colorId": ""
+    "colorId": "5"
   },
   {
-    "summary": "PRISMs Orientation",
-    "location": "",
-    "description": "Orientation Meeting\n\nRSVP Form: [Google Form link]\n\nZoom Meeting Link: [Orientation Zoom Room link]\nMeeting ID: 609 454 5597\nPasscode: dreams",
-    "startTime": "2026-05-09T09:00:00-04:00",
+    "summary": "\u2708 UA408 EWR \u2192 BOS",
+    "location": "Newark (EWR) \u2192 Boston (BOS)",
+    "description": "United Airlines 408, Terminal C\\nDepart: 6:40 AM EDT from EWR\\nArrive: 7:53 AM EDT at BOS, Terminal B",
+    "startTime": "2026-05-11T06:40:00-04:00",
     "startDate": "",
-    "endTime": "2026-05-09T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-09T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-09T11:00:00-04:00",
+    "endTime": "2026-05-11T07:53:00-04:00",
     "endDate": "",
     "calendar": "Personal",
-    "colorId": ""
+    "colorId": "7"
   },
   {
-    "summary": "Paladar Latin Kitchen and Rum Bar - King of Prussia",
-    "location": "250 Main St  King of Prussia, PA United States 19406",
-    "description": "(610) 910-8889\nPaladar Latin Kitchen & Rum Bar is a fresh, colorful and fun Latin American restaurant featuring the bold flavors and vibrant cultures of Central & South America, Cuba and other Latin Caribbean islands. Paladar is known for its freshly prepared guacamole, slow roasted and grilled meats, fresh seafood and homemade salsas, signature mojitos, 100+ rums, tequilas and mezcals. The rhythm of Latin music sets the tone in the dining room and 610 SOCIAL Bar + Lounge, where local DJs spin an energetic Top 40 mix on Fridays and Saturdays from 8:30pm - 1am.",
-    "startTime": "2026-05-09T17:00:00-04:00",
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-05-11T08:00:00-04:00",
     "startDate": "",
-    "endTime": "2026-05-09T19:00:00-04:00",
+    "endTime": "2026-05-11T08:15:00-04:00",
     "endDate": "",
     "calendar": "Personal",
-    "colorId": ""
+    "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: The Royal Sonesta Boston",
+    "location": "40 Edwin H. Land Boulevard, Cambridge, MA 02142",
+    "description": "Check-In: 3:00 PM\\nPhone: 1-617-806-4200",
+    "startTime": "2026-05-11T15:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-11T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -225,8 +225,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "MAJE",
+      "subject": "\u00c0 adopter sans h\u00e9siter"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "Account Linking Expiration"
+    },
+    {
+      "sender": "E-ZPass Customer Service",
+      "subject": "E-ZPass Statement"
+    },
     {
       "sender": "classmanager@nassautennis.net",
       "subject": "Transaction Receipt"
@@ -254,14 +266,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "A Summer Take on Shirting"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, earn 30,000 Membership Rewards\u00ae points with a Business Checking account after completing qualifying activities."
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 09 May 2026"
     }
   ]
 };
