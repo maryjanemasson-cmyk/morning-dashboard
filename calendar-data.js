@@ -236,11 +236,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Summer Fridays",
-      "subject": "A Perfect Pair \ud83e\udde1"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Happy Mother's Day! Up to 40% OFF to celebrate"
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "Happy Mother\u2019s Day! \ud83e\ude77"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"BAMBOO COOL Mens Pajama Set...\""
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Happy Mother's Day"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Loop Terry Polo"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -261,22 +277,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Washington Post",
       "subject": "The Week in Ideas: What really killed Mozart? You don\u2019t want to know."
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "Account Linking Expiration"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "CareCredit",
-      "subject": " You\u2019re almost there!\u200b \u200b"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "The cat bed that went viral \ud83d\ude3b"
     }
   ]
 };
