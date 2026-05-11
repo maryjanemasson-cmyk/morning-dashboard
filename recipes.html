@@ -417,10 +417,11 @@
     });
 
     function renderFilters() {
-      const cats = ['All', ...new Set(Object.values(recipes).map(r => r.category).filter(Boolean))].sort();
-      // keep 'All' first
+      const cats = [...new Set(Object.values(recipes).map(r => r.category).filter(Boolean))].sort();
+      // 'All' first, then 'Weeknight Dinners' as a tag-based pill, then categories.
+      const pills = ['All', 'Weeknight Dinners', ...cats];
       let html = '';
-      ['All', ...cats.filter(c => c !== 'All')].forEach(c => {
+      pills.forEach(c => {
         html += `<button class="filter-btn ${activeFilter===c?'active':''}" onclick="activeFilter='${c}';renderRecipes();renderFilters();">${c}</button>`;
       });
       document.getElementById('filter-buttons').innerHTML = html;
@@ -431,7 +432,12 @@
       const entries = Object.entries(recipes);
 
       const filtered = entries.filter(([id, r]) => {
-        if (activeFilter !== 'All' && r.category !== activeFilter) return false;
+        if (activeFilter === 'Weeknight Dinners') {
+          const tagList = (r.tags || '').toLowerCase().split(',').map(t => t.trim());
+          if (!tagList.includes('weeknight')) return false;
+        } else if (activeFilter !== 'All' && r.category !== activeFilter) {
+          return false;
+        }
         if (search) {
           const haystack = [r.name, r.category, r.cuisine, r.tags, r.ingredients, r.notes].join(' ').toLowerCase();
           if (!haystack.includes(search)) return false;
