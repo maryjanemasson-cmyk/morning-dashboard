@@ -663,20 +663,49 @@
       return Math.round((e - s) / 86400000);
     }
 
+    // Auto-calculated essentials. Each rule has a regex that detects an
+    // existing item (so we can recompute its count) and a `text` builder.
+    // Edit/delete behaviour: deleted auto items are NOT re-added on reload —
+    // only items that still match the pattern get their numbers refreshed.
+    const PACKING_RULES = [
+      { key: 'underwear', match: /^Underwear \(/i,
+        text: n => `Underwear (${Math.ceil(n * 1.5)} pairs)` },
+      { key: 'bras',      match: /^Bras \(/i,
+        text: n => `Bras (${Math.min(n, 3)})` },
+      { key: 'pajamas',   match: /^Pajamas \(/i,
+        text: n => `Pajamas (${n <= 3 ? 1 : 2} set${n <= 3 ? '' : 's'})` },
+    ];
+
     function autoPopulatePacking(trip) {
       const nights = tripNights(trip);
       const key = tripKey(trip);
-      const essentials = [
-        { text: `Underwear (${nights} pairs)` },
-        { text: `Bras (${Math.min(nights, 3)})` },
-        { text: `Pajamas (${nights <= 3 ? 1 : 2} set${nights <= 3 ? '' : 's'})` },
-      ];
       const updates = {};
-      essentials.forEach(item => {
+      PACKING_RULES.forEach(rule => {
         const id = db.ref('travelPacking/' + key).push().key;
-        updates[id] = { text: item.text, checked: false };
+        updates[id] = { text: rule.text(nights), checked: false, auto: rule.key };
       });
       db.ref('travelPacking/' + key).update(updates);
+    }
+
+    // Refresh counts on existing auto items if the trip length changes or
+    // older items used a stale formula.
+    function syncAutoCounts(trip, items) {
+      const nights = tripNights(trip);
+      const key = tripKey(trip);
+      const updates = {};
+      Object.entries(items).forEach(([id, item]) => {
+        const rule = PACKING_RULES.find(r =>
+          item.auto === r.key || r.match.test(item.text || ''));
+        if (!rule) return;
+        const expected = rule.text(nights);
+        if (item.text !== expected || item.auto !== rule.key) {
+          updates[id + '/text'] = expected;
+          updates[id + '/auto'] = rule.key;
+        }
+      });
+      if (Object.keys(updates).length) {
+        db.ref('travelPacking/' + key).update(updates);
+      }
     }
 
     function loadPacking() {
@@ -689,15 +718,17 @@
           autoPopulatePacking(selectedTrip);
           return; // The .on listener will fire again with the new data
         }
+        syncAutoCounts(selectedTrip, items);
         renderPacking(items);
       });
     }
 
     function renderPacking(items) {
       packingListEl.innerHTML = Object.entries(items).map(([id, item]) => {
+        const autoTag = item.auto ? ` <span style="font-size:0.6rem;color:#b8a48e;text-transform:uppercase;letter-spacing:0.5px;margin-left:0.3rem;" title="Auto-calculated from trip length">auto</span>` : '';
         return `<li class="packing-item">
           <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
-          <span class="item-text${item.checked ? ' checked' : ''}">${escHtml(item.text)}</span>
+          <span class="item-text${item.checked ? ' checked' : ''}">${escHtml(item.text)}${autoTag}</span>
           <button class="item-delete" data-id="${id}">&times;</button>
         </li>`;
       }).join('');
