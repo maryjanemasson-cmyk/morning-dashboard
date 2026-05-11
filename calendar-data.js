@@ -236,47 +236,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "Deanna Ferrante",
+      "subject": "Graduation Information: Grade 8, Grade 5, Kindergarten"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Pre-Arrival: Your Driver is Arriving Soon!"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "POV: You found a 60% OFF deal\ud83d\udc40"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Zeyune 3 Pcs Spring Purple...\" and \u20669\u2069 more items"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"BAMBOO COOL Mens Pajama Set...\""
+    },
+    {
+      "sender": "",
+      "subject": "Huntington Bank Loans payment sent as a check"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
     },
     {
-      "sender": "chrislovesjulia",
-      "subject": "Our Jack and Jill bathroom plan (+ a spring capsule)"
-    },
-    {
       "sender": "noreply@proof.com",
       "subject": "Your document has been successfully notarized"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 17, 2026 at 9:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 16, 2026 at 10:00 AM"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Tide 4-in-1 Ultra Oxi PODS...\""
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "Happy Mother\u2019s Day! \ud83e\ude77"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Happy Mother's Day"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 523412703660"
-    },
-    {
-      "sender": "Rhone",
-      "subject": "DreamGlow\u00ae in bloom"
     }
   ]
 };
