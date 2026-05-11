@@ -668,17 +668,17 @@
     // Edit/delete behaviour: deleted auto items are NOT re-added on reload —
     // only items that still match the pattern get their numbers refreshed.
     const PACKING_RULES = [
-      { key: 'underwear',   match: /^Underwear \(/i,
-        text: n => `Underwear (${Math.ceil(n * 1.5)} pairs)` },
-      { key: 'bras',        match: /^Bras \(/i,
-        text: n => `Bras (${Math.ceil(n * 0.5)})` },
-      { key: 'pajamas',     match: /^Pajamas \(/i,
-        text: n => `Pajamas (${n} set${n === 1 ? '' : 's'})` },
-      { key: 'socks',       match: /^Socks \(/i,
-        text: () => `Socks (2 pairs baseline — adjust for shoes)` },
-      { key: 'medications', match: /^Medications/i,
+      { key: 'underwear',   match: /Underwear/i,
+        text: n => `${Math.ceil(n * 1.5)} pairs Underwear` },
+      { key: 'bras',        match: /Bras/i,
+        text: n => `${Math.ceil(n * 0.5)} Bras` },
+      { key: 'pajamas',     match: /Pajamas/i,
+        text: n => `${n} set${n === 1 ? '' : 's'} Pajamas` },
+      { key: 'socks',       match: /Socks/i,
+        text: () => `2 pairs Socks (baseline — adjust for shoes)` },
+      { key: 'medications', match: /Medications/i,
         text: () => `Medications` },
-      { key: 'headphones',  match: /^Headphones/i,
+      { key: 'headphones',  match: /Headphones/i,
         text: () => `Headphones` },
     ];
 
