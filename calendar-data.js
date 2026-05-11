@@ -239,6 +239,22 @@ window.EMAIL_DATA = {
   "unreadCount": 16,
   "threads": [
     {
+      "sender": "PayPal",
+      "subject": "Reminder: there's money in your account"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"BAMBOO COOL Mens Pajama Set...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Allegra K Women's Denim...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Pink Mamma",
+      "subject": "LA GRANDE TABL\u00c9E 2"
+    },
+    {
       "sender": "Reformation",
       "subject": "PARTIAL SHIPMENT"
     },
@@ -261,22 +277,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Deanna Ferrante",
       "subject": "Graduation Information: Grade 8, Grade 5, Kindergarten"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Pre-Arrival: Your Driver is Arriving Soon!"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Zeyune 3 Pcs Spring Purple...\" and \u20669\u2069 more items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"BAMBOO COOL Mens Pajama Set...\""
     }
   ]
 };
