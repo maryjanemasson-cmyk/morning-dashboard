@@ -668,12 +668,16 @@
     // Edit/delete behaviour: deleted auto items are NOT re-added on reload —
     // only items that still match the pattern get their numbers refreshed.
     const PACKING_RULES = [
-      { key: 'underwear', match: /^Underwear \(/i,
+      { key: 'underwear',   match: /^Underwear \(/i,
         text: n => `Underwear (${Math.ceil(n * 1.5)} pairs)` },
-      { key: 'bras',      match: /^Bras \(/i,
-        text: n => `Bras (${Math.min(n, 3)})` },
-      { key: 'pajamas',   match: /^Pajamas \(/i,
-        text: n => `Pajamas (${n <= 3 ? 1 : 2} set${n <= 3 ? '' : 's'})` },
+      { key: 'bras',        match: /^Bras \(/i,
+        text: n => `Bras (${Math.ceil(n * 0.5)})` },
+      { key: 'pajamas',     match: /^Pajamas \(/i,
+        text: n => `Pajamas (${n} set${n === 1 ? '' : 's'})` },
+      { key: 'socks',       match: /^Socks \(/i,
+        text: () => `Socks (2 pairs baseline — adjust for shoes)` },
+      { key: 'medications', match: /^Medications/i,
+        text: () => `Medications` },
     ];
 
     function autoPopulatePacking(trip) {
