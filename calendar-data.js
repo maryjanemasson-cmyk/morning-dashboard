@@ -236,8 +236,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "PARTIAL SHIPMENT"
+    },
+    {
+      "sender": "NET-A-PORTER Customer Care",
+      "subject": "We have received your return shipment"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Mr. Clean Professional Bulk...\" and \u20662\u2069 more items"
+    },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
@@ -255,28 +271,12 @@ window.EMAIL_DATA = {
       "subject": "UPS Update: Package Scheduled for Delivery Today"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "POV: You found a 60% OFF deal\ud83d\udc40"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Zeyune 3 Pcs Spring Purple...\" and \u20669\u2069 more items"
     },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"BAMBOO COOL Mens Pajama Set...\""
-    },
-    {
-      "sender": "",
-      "subject": "Huntington Bank Loans payment sent as a check"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
-    },
-    {
-      "sender": "noreply@proof.com",
-      "subject": "Your document has been successfully notarized"
     }
   ]
 };
