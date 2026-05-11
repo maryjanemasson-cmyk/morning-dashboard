@@ -236,31 +236,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 12,
   "threads": [
     {
       "sender": "Amazon.com",
-      "subject": "Shipped: \"Tide 4-in-1 Ultra Oxi PODS...\""
+      "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
     },
     {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your May 11 flight"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"BAMBOO COOL Mens Pajama Set...\""
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 523412703660"
-    },
-    {
-      "sender": "House of Beauty by Fran\u00e7ois",
-      "subject": "Happy Mother's Day \ud83d\udc90\ud83c\udf38\ud83c\udf3a"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Sparkling creativity, just for you \u2728"
+      "sender": "chrislovesjulia",
+      "subject": "Our Jack and Jill bathroom plan (+ a spring capsule)"
     },
     {
       "sender": "noreply@proof.com",
@@ -277,6 +261,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Tide 4-in-1 Ultra Oxi PODS...\""
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "Happy Mother\u2019s Day! \ud83e\ude77"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Happy Mother's Day"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 523412703660"
+    },
+    {
+      "sender": "Rhone",
+      "subject": "DreamGlow\u00ae in bloom"
     }
   ]
 };
