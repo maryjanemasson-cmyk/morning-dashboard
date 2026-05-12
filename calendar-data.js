@@ -236,47 +236,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 5,
   "threads": [
-    {
-      "sender": "PayPal",
-      "subject": "Reminder: there's money in your account"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"BAMBOO COOL Mens Pajama Set...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Allegra K Women's Denim...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Pink Mamma",
-      "subject": "LA GRANDE TABL\u00c9E 2"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "PARTIAL SHIPMENT"
-    },
     {
       "sender": "NET-A-PORTER Customer Care",
       "subject": "We have received your return shipment"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "Deanna Ferrante",
+      "subject": "Graduation Information: Grade 8, Grade 5, Kindergarten"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"Mr. Clean Professional Bulk...\" and \u20662\u2069 more items"
+      "subject": "Ordered: \"Zeyune 3 Pcs Spring Purple...\" and \u20669\u2069 more items"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"BAMBOO COOL Mens Pajama Set...\""
     },
     {
-      "sender": "Deanna Ferrante",
-      "subject": "Graduation Information: Grade 8, Grade 5, Kindergarten"
+      "sender": "",
+      "subject": "Huntington Bank Loans payment sent as a check"
     }
   ]
 };
