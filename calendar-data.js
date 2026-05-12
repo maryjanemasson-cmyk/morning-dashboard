@@ -192,15 +192,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivery estimate update for your Amazon.com order \u2066#114-8397217-8449052\u2069"
+      "sender": "Almina Concept",
+      "subject": "Sophia Wears Our Newest Arrival"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Gillette Fusion5 Power...\""
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "Mary, make your child's cleaning appointment today!"
     },
     {
       "sender": "Amazon.com",
@@ -213,14 +213,6 @@ window.EMAIL_DATA = {
     {
       "sender": "NET-A-PORTER Customer Care",
       "subject": "We have received your return shipment"
-    },
-    {
-      "sender": "Deanna Ferrante",
-      "subject": "Graduation Information: Grade 8, Grade 5, Kindergarten"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Zeyune 3 Pcs Spring Purple...\" and \u20669\u2069 more items"
     }
   ]
 };
