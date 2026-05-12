@@ -192,12 +192,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 3,
   "threads": [
-    {
-      "sender": "Almina Concept",
-      "subject": "Sophia Wears Our Newest Arrival"
-    },
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "Mary, make your child's cleaning appointment today!"
@@ -209,10 +205,6 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "New Sale Lines Added | As Seen On"
-    },
-    {
-      "sender": "NET-A-PORTER Customer Care",
-      "subject": "We have received your return shipment"
     }
   ]
 };
