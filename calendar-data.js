@@ -192,8 +192,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Mamma Primi",
+      "subject": "Mamma Primi x Botteghe Antiche : d\u00eener \u00e0 4 mains"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Brillo Steel Wool Soap...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Mr. Clean Professional Bulk...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Twelfth Night (Folger...\""
+    },
+    {
+      "sender": "Shop",
+      "subject": "Fresh edits, picked just for you \ud83d\udc40"
+    },
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "Mary, make your child's cleaning appointment today!"
