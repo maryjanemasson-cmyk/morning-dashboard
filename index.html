@@ -706,9 +706,9 @@
 
     async function loadWeather() {
       try {
-        const loc = currentLocation();
-        const url = loc
-          ? `https://wttr.in/${encodeURIComponent(loc)}?format=j1`
+        const tripLoc = currentLocation();
+        const url = tripLoc
+          ? `https://wttr.in/${encodeURIComponent(tripLoc)}?format=j1`
           : 'https://wttr.in/?format=j1';
         const res = await fetchWithTimeout(url, 6000);
         const data = await res.json();
