@@ -677,6 +677,14 @@
       return '\uD83C\uDF24\uFE0F';
     }
 
+    // Abort a fetch if it stalls — keeps the page from "loading forever"
+    // when an external service (wttr.in, RSS aggregator) is sluggish.
+    function fetchWithTimeout(url, ms = 8000) {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), ms);
+      return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(t));
+    }
+
     // ── Weather ──
     // Detect where the user actually is today: prefer an all-day "Trip — X"
     // calendar event that contains today, else fall back to wttr.in's
@@ -702,7 +710,7 @@
         const url = loc
           ? `https://wttr.in/${encodeURIComponent(loc)}?format=j1`
           : 'https://wttr.in/?format=j1';
-        const res = await fetch(url);
+        const res = await fetchWithTimeout(url, 6000);
         const data = await res.json();
         const cur = data.current_condition[0];
         const loc = data.nearest_area[0];
@@ -1216,11 +1224,9 @@
           ],
           politics: [
             'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
-            'https://feeds.a]ornewsmedia.com/rss/articles',
             'https://feeds.npr.org/1014/rss.xml',
             'https://thehill.com/feed/',
             'https://rss.politico.com/politics-news.xml',
-            'https://feeds.feedburner.com/propublica/main',
           ],
           biotech: [
             'https://www.statnews.com/feed/',
@@ -1229,7 +1235,6 @@
             'https://news.google.com/rss/search?q=biotech+pharma+FDA',
           ],
           economy: [
-            'https://feeds.reuters.com/reuters/businessNews',
             'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
             'https://feeds.npr.org/1006/rss.xml',
             'https://news.google.com/rss/search?q=economy+markets+wall+street',
@@ -1261,7 +1266,7 @@
         const allUrls = Object.values(feedGroups).flat();
         const results = await Promise.allSettled(
           allUrls.map(u =>
-            fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(u))
+            fetchWithTimeout('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(u), 5000)
               .then(r => r.json())
           )
         );
