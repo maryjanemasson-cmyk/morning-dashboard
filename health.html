@@ -1009,5 +1009,7 @@
       toast(`+${cal} cal, ${protein}g protein logged`);
     };
   </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 </body>
 </html>
