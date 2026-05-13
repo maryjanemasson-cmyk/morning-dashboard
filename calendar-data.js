@@ -176,8 +176,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "AT&T Account Management",
+      "subject": "You made a change to your wireless account, Mary Jane Hinrichs"
+    },
+    {
+      "sender": "AT&T Online Services",
+      "subject": "Your Wireless Feature(s) Have Changed"
+    },
     {
       "sender": "Etsy",
       "subject": "This is your sign... literally \ud83e\udd29"
@@ -201,10 +209,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "Nathaniel signed in on a new device"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Save 25%+ on your next escape with Pack & Go Deals"
     }
   ]
 };
