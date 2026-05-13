@@ -176,23 +176,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Steve Madden Women's Tracie...\""
+      "sender": "Etsy",
+      "subject": "This is your sign... literally \ud83e\udd29"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Zeyune 3 Pcs Spring Purple...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Zeyune 3 Pcs Spring Green...\" and \u20663\u2069 more items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Gillette Fusion5 Power...\""
+      "sender": "Nest Home Report",
+      "subject": "Nest April Home Report for Home"
     },
     {
       "sender": "Mary Jane Masson",
@@ -213,10 +205,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Hotels.com",
       "subject": "Save 25%+ on your next escape with Pack & Go Deals"
-    },
-    {
-      "sender": "Synchrony",
-      "subject": "Update your sign in now."
     }
   ]
 };
