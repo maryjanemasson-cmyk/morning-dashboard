@@ -176,6 +176,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 0,
-  "threads": []
+  "unreadCount": 11,
+  "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Zeyune 3 Pcs Spring Purple...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Google",
+      "subject": "Nathaniel signed in on a new device"
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Save 25%+ on your next escape with Pack & Go Deals"
+    },
+    {
+      "sender": "Synchrony",
+      "subject": "Update your sign in now."
+    },
+    {
+      "sender": "BODYROK Princeton Newtown",
+      "subject": "ROK Your Summer.  Prepay For 3 Months & Save."
+    },
+    {
+      "sender": "Mamma Primi",
+      "subject": "Mamma Primi x Botteghe Antiche : d\u00eener \u00e0 4 mains"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Brillo Steel Wool Soap...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Mr. Clean Professional Bulk...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Twelfth Night (Folger...\""
+    },
+    {
+      "sender": "Shop",
+      "subject": "Fresh edits, picked just for you \ud83d\udc40"
+    }
+  ]
 };
