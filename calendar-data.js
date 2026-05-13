@@ -20,22 +20,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA408 EWR to BOS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-05-11T10:40:00+00:00",
-        "end": "2026-05-11T11:53:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: The Royal Sonesta Boston",
-        "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
-        "description": "",
-        "start": "2026-05-11T19:00:00+00:00",
-        "end": "2026-05-11T20:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "UA570 BOS to EWR",
         "location": "Boston (BOS)",
         "description": "",
@@ -192,39 +176,6 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
-  "threads": [
-    {
-      "sender": "Mamma Primi",
-      "subject": "Mamma Primi x Botteghe Antiche : d\u00eener \u00e0 4 mains"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Brillo Steel Wool Soap...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Mr. Clean Professional Bulk...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Twelfth Night (Folger...\""
-    },
-    {
-      "sender": "Shop",
-      "subject": "Fresh edits, picked just for you \ud83d\udc40"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "Mary, make your child's cleaning appointment today!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"Brillo Steel Wool Soap...\""
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "New Sale Lines Added | As Seen On"
-    }
-  ]
+  "unreadCount": 0,
+  "threads": []
 };
