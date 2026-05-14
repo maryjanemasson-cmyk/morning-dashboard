@@ -9,6 +9,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "2026-05-16",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "\u2708 UA570 BOS \u2192 EWR",
+    "location": "Boston (BOS) \u2192 Newark (EWR)",
+    "description": "United Airlines 570, Terminal B\\nDepart: 7:00 AM EDT from BOS\\nArrive: 8:29 AM EDT at EWR, Terminal C",
+    "startTime": "2026-05-15T07:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-15T08:29:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
+    "location": "40 Edwin H. Land Boulevard, Cambridge, MA 02142",
+    "description": "Check-Out: 11:00 AM\\nPhone: 1-617-806-4200",
+    "startTime": "2026-05-15T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-15T12:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "Reservation at Roots Ocean Prime",
+    "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar",
+    "startTime": "2026-05-15T17:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-15T18:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -176,7 +209,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 4,
   "threads": [
     {
       "sender": "Etsy",
@@ -193,10 +226,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Rhone",
       "subject": "May new arrivals"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Zeyune 3 Pcs Spring Purple...\" and \u20661\u2069 more item"
     }
   ]
 };
