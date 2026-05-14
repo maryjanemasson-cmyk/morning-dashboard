@@ -209,32 +209,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 2,
   "threads": [
-    {
-      "sender": "Brother USA",
-      "subject": "Save 20% on Brother Inkjet & Laser Printers\ud83d\udda8\ufe0f"
-    },
-    {
-      "sender": "Tatte Bakery & Cafe Feedback",
-      "subject": "Tatte Bakery - We want to hear from you!"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Enjoy Premier benefits on JetBlue flights!"
-    },
-    {
-      "sender": "PURE Insurance",
-      "subject": "Member ID: 717119791719 l Schedule Your Free PURE Watertight Home Check"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Merchant credit/refund was issued to your account"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "You\u2019re in, and I\u2019m glad you\u2019re here."
-    },
     {
       "sender": "Uber Receipts",
       "subject": "[Personal] Your Thursday afternoon trip with Uber"
@@ -242,14 +218,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Uber Receipts",
       "subject": "[Personal] Your Thursday morning trip with Uber"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "This is your sign... literally \ud83e\udd29"
-    },
-    {
-      "sender": "Nest Home Report",
-      "subject": "Nest April Home Report for Home"
     }
   ]
 };
