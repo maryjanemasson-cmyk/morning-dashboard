@@ -209,8 +209,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 2,
+  "unreadCount": 3,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your May 15 flight"
+    },
     {
       "sender": "Uber Receipts",
       "subject": "[Personal] Your Thursday afternoon trip with Uber"
