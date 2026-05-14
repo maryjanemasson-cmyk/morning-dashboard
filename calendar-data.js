@@ -176,16 +176,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 5,
   "threads": [
-    {
-      "sender": "AT&T Account Management",
-      "subject": "You made a change to your wireless account, Mary Jane Hinrichs"
-    },
-    {
-      "sender": "AT&T Online Services",
-      "subject": "Your Wireless Feature(s) Have Changed"
-    },
     {
       "sender": "Etsy",
       "subject": "This is your sign... literally \ud83e\udd29"
@@ -205,10 +197,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Zeyune 3 Pcs Spring Purple...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Google",
-      "subject": "Nathaniel signed in on a new device"
     }
   ]
 };
