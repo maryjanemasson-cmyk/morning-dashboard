@@ -209,7 +209,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 3,
   "threads": [
     {
       "sender": "Etsy",
@@ -222,10 +222,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Mary Jane Masson",
       "subject": "Math advice for incoming student Nathaniel Hinrichs"
-    },
-    {
-      "sender": "Rhone",
-      "subject": "May new arrivals"
     }
   ]
 };
