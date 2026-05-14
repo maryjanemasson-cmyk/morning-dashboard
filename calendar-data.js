@@ -209,8 +209,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "Neuropathy Truth | Deltas Profit",
+      "subject": "How Long Have You Been Hiding the Pain?"
+    },
+    {
+      "sender": "Tatte Bakery Online Ordering",
+      "subject": "Tatte Bakery Order Received"
+    },
+    {
+      "sender": "Uber Receipts",
+      "subject": "[Personal] Your Thursday afternoon trip with Uber"
+    },
+    {
+      "sender": "Uber Receipts",
+      "subject": "[Personal] Your Thursday morning trip with Uber"
+    },
     {
       "sender": "Etsy",
       "subject": "This is your sign... literally \ud83e\udd29"
@@ -218,10 +234,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Nest Home Report",
       "subject": "Nest April Home Report for Home"
-    },
-    {
-      "sender": "Mary Jane Masson",
-      "subject": "Math advice for incoming student Nathaniel Hinrichs"
     }
   ]
 };
