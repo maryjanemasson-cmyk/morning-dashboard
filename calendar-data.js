@@ -231,31 +231,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "PNC Alerts",
-      "subject": "A $8,255.88 deposit was credited to your account."
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
     },
     {
-      "sender": "House of Beauty by Fran\u00e7ois",
-      "subject": "May Maintenance: The Art of Lasting Beauty"
+      "sender": "Ticketmaster",
+      "subject": "The 2026 New York Jets Schedule Is Here! Get 100% Verified Tickets"
+    },
+    {
+      "sender": "Walpole Outdoors",
+      "subject": "Turn Your Backyard Into a Summer Destination"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 381197329050"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 381221892101"
+    },
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "Your April 2026 transaction history"
+    },
+    {
+      "sender": "The Google Workspace Team",
+      "subject": "You now have access to AI in Google Slides"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
     },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
-    },
-    {
-      "sender": "American Express",
-      "subject": "Earn a 175,000 Membership Rewards\u00ae points offer: Apply Today"
-    },
-    {
-      "sender": "Uber Receipts",
-      "subject": "[Personal] Your Thursday afternoon trip with Uber"
-    },
-    {
-      "sender": "Uber Receipts",
-      "subject": "[Personal] Your Thursday morning trip with Uber"
     }
   ]
 };
