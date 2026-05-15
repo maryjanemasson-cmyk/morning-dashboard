@@ -231,8 +231,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Aritzia",
+      "subject": "The rest of Order #D2217381 has shipped"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
+    },
     {
       "sender": "Uber Receipts",
       "subject": "[Personal] Your Friday morning trip with Uber"
@@ -264,14 +272,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 381221892101"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "Your April 2026 transaction history"
     }
   ]
 };
