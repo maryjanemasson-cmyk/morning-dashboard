@@ -209,11 +209,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your May 15 flight"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to MOHAMMAD SHAIKH"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "You paid Beatrice Trad $150.00"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
+    },
+    {
+      "sender": "American Express",
+      "subject": "Earn a 175,000 Membership Rewards\u00ae points offer: Apply Today"
     },
     {
       "sender": "Uber Receipts",
