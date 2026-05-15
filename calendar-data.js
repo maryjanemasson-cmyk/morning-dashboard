@@ -231,15 +231,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "accounting-noreply-20601@sonesta.com",
-      "subject": "Regarding your recent stay with Royal Sonesta Hotel Boston"
+      "sender": "Uber Receipts",
+      "subject": "[Personal] Your Friday morning trip with Uber"
     },
     {
-      "sender": "Life360 Trackers",
-      "subject": "40% off Tile. Imagine never losing your stuff again."
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for Allegra K Women's Denim..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for Levi's Womens Flynn Western..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for Cadence Extender - Adds..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for Zeyune 3 Pcs Spring Purple Faux..."
     },
     {
       "sender": "Walpole Outdoors",
@@ -260,18 +272,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Venmo",
       "subject": "Your April 2026 transaction history"
-    },
-    {
-      "sender": "The Google Workspace Team",
-      "subject": "You now have access to AI in Google Slides"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
     }
   ]
 };
