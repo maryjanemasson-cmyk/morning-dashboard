@@ -42,6 +42,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-16T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-16T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "NJ irrigation",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-16T12:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-16T15:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -209,23 +231,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"Gillette 5 Men's 5-Blade...\""
-    },
-    {
       "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+      "subject": "A $8,255.88 deposit was credited to your account."
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to MOHAMMAD SHAIKH"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Beatrice Trad $150.00"
+      "sender": "House of Beauty by Fran\u00e7ois",
+      "subject": "May Maintenance: The Art of Lasting Beauty"
     },
     {
       "sender": "Amazon.com",
