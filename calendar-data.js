@@ -234,12 +234,12 @@ window.EMAIL_DATA = {
   "unreadCount": 11,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
+      "sender": "accounting-noreply-20601@sonesta.com",
+      "subject": "Regarding your recent stay with Royal Sonesta Hotel Boston"
     },
     {
-      "sender": "Ticketmaster",
-      "subject": "The 2026 New York Jets Schedule Is Here! Get 100% Verified Tickets"
+      "sender": "Life360 Trackers",
+      "subject": "40% off Tile. Imagine never losing your stuff again."
     },
     {
       "sender": "Walpole Outdoors",
