@@ -110,6 +110,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
+    "summary": "Judy's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-20T00:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-20T01:45:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708 UA570 BOS \u2192 EWR",
     "location": "Boston (BOS) \u2192 Newark (EWR)",
     "description": "United Airlines 570, Terminal B\\nDepart: 7:30 AM EDT from BOS\\nArrive: 8:53 AM EDT at EWR, Terminal C",
@@ -130,6 +141,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "Rich's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-22T21:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-22T22:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Rich's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-22T21:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-22T22:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
   },
   {
     "summary": "Nathaniel \u2014 Math",
@@ -339,8 +372,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Boston"
+    },
     {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Sat, 5/16 is ready to view"
@@ -376,10 +413,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Uber Receipts",
       "subject": "[Personal] Your Friday morning trip with Uber"
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Return request confirmed for Allegra K Women's Denim..."
     }
   ],
   "items": [
