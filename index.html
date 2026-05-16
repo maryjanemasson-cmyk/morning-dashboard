@@ -565,15 +565,6 @@
           <div id="calendar-events"><div class="loading"><div class="spinner"></div></div></div>
         </div>
 
-        <div class="card">
-          <div class="card-title"><span class="icon">&rarr;</span> This Week</div>
-          <div id="week-view"><div class="loading"><div class="spinner"></div></div></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><span class="icon">&bull;</span> Grocery List</div>
-          <div id="grocery-section"></div>
-        </div>
       </div>
 
       <!-- CENTER -->
@@ -606,12 +597,6 @@
           <div class="card-title"><span class="icon">&bull;</span> Coming Up</div>
           <div id="upcoming-events"><div class="loading"><div class="spinner"></div></div></div>
         </div>
-
-        <div class="card">
-          <div class="card-title"><span class="icon">@</span> Inbox</div>
-          <div id="inbox-section"><div class="loading"><div class="spinner"></div></div></div>
-        </div>
-
 
         <div class="card">
           <div class="card-title"><span class="icon">&bull;</span> Sunrise &amp; Sunset</div>
@@ -939,41 +924,6 @@
     }
     renderCalendar();
 
-    // ── This Week ──
-    function renderWeekView() {
-      const weekData = window.WEEK_DATA || [];
-      if (!weekData.length) {
-        document.getElementById('week-view').innerHTML = '<div class="cal-empty">No week data</div>';
-        return;
-      }
-      const now = new Date();
-      const todayStr = now.toISOString().slice(0,10);
-      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      const grouped = {};
-      weekData.forEach(ev => {
-        const ds = ev.date || (ev.startTime ? ev.startTime.slice(0,10) : ev.startDate);
-        if (!grouped[ds]) grouped[ds] = [];
-        grouped[ds].push(ev);
-      });
-      const sortedDates = Object.keys(grouped).sort();
-      let html = '';
-      sortedDates.forEach(ds => {
-        const d = new Date(ds + 'T12:00:00');
-        const isToday = ds === todayStr;
-        const label = dayNames[d.getDay()];
-        html += `<div class="week-row"><div class="week-day-label ${isToday?'is-today':''}">${label}</div><div class="week-events">`;
-        grouped[ds].forEach(ev => {
-          const time = ev.time || '';
-          html += `<div class="week-event-item">${ev.summary} <span class="week-event-time">${time}</span></div>`;
-        });
-        html += '</div></div>';
-      });
-      document.getElementById('week-view').innerHTML = html;
-    }
-    renderWeekView();
-
-    // ── Weekly Reminders ──
-
     // ── To-Do List (Firebase) ──
     let _todos = [];
     function renderTodos() {
@@ -1075,99 +1025,6 @@
       document.getElementById('upcoming-events').innerHTML = html;
     }
     renderUpcoming();
-
-    // ── Inbox (parsed Gmail items) ──
-    function renderInbox() {
-      const data = (window.EMAIL_DATA && window.EMAIL_DATA.items) || [];
-      const target = document.getElementById('inbox-section');
-      if (!target) return;
-      if (!data.length) { target.innerHTML = '<div class="cal-empty">Nothing from your inbox</div>'; return; }
-      const today = new Date(); today.setHours(0,0,0,0);
-      const TYPE_LABELS = {
-        delivery: 'delivery',
-        class: 'class',
-        school: 'school',
-        return: 'return',
-        action: 'action',
-      };
-      const TYPE_COLORS = {
-        delivery: '#7a8a6b',  // sage
-        class: '#a07c5e',     // tan
-        school: '#8d6e8a',    // mauve
-        return: '#c2553a',    // terracotta
-        action: '#6b5d4d',    // brown
-      };
-      // Decode HTML entities and clean up titles
-      const decode = s => {
-        const t = document.createElement('textarea'); t.innerHTML = s || ''; return t.value;
-      };
-      const items = data.slice(0, 12);
-      let html = '';
-      items.forEach(it => {
-        const d = new Date(it.date + 'T12:00:00');
-        const diff = Math.round((d - today) / 86400000);
-        let dayLabel, unitLabel;
-        if (diff === 0) { dayLabel = '!'; unitLabel = 'today'; }
-        else if (diff === 1) { dayLabel = '1'; unitLabel = 'day'; }
-        else if (diff === -1) { dayLabel = '1'; unitLabel = 'd ago'; }
-        else if (diff < 0) { dayLabel = Math.abs(diff); unitLabel = 'd ago'; }
-        else { dayLabel = diff; unitLabel = 'days'; }
-        const imminent = (diff >= 0 && diff <= 1) ? ' imminent' : '';
-        const tlabel = TYPE_LABELS[it.type] || it.type;
-        const tcolor = TYPE_COLORS[it.type] || '#9c8b76';
-        const ds = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        const nameStyle = (diff >= 0 && diff <= 1) ? 'font-weight:500;color:#c2553a;' : '';
-        const title = decode(it.title);
-        html += `<div class="upcoming-event">
-          <div class="upcoming-days${imminent}">${dayLabel}<span class="upcoming-days-unit">${unitLabel}</span></div>
-          <div class="upcoming-info">
-            <div class="upcoming-name" style="${nameStyle}">${title}</div>
-            <div class="upcoming-date-label"><span style="color:${tcolor};font-weight:500;">${tlabel}</span> &middot; ${ds}</div>
-          </div>
-        </div>`;
-      });
-      target.innerHTML = html;
-    }
-    renderInbox();
-
-
-    // ── Grocery List (Firebase) ──
-    let _groceries = [];
-    function renderGroceries() {
-      let html = `<div class="grocery-input-row">
-        <input type="text" class="grocery-input" id="grocery-input" placeholder="Add item..." />
-        <button class="todo-add-btn" onclick="addGrocery()">Add</button>
-      </div>`;
-      html += '<ul class="grocery-list">';
-      _groceries.forEach((item, i) => {
-        html += `<li>
-          <div class="grocery-cb ${item.done ? 'checked' : ''}" onclick="toggleGrocery(${i})">${item.done ? '\u2713' : ''}</div>
-          <span class="grocery-text ${item.done ? 'done' : ''}">${item.text}</span>
-          <span class="grocery-del" onclick="deleteGrocery(${i})">\u2715</span>
-        </li>`;
-      });
-      html += '</ul>';
-      const checkedCount = _groceries.filter(i => i.done).length;
-      if (checkedCount > 0) {
-        html += `<div class="grocery-clear" onclick="clearCheckedGroceries()">Clear ${checkedCount} checked item${checkedCount > 1 ? 's' : ''}</div>`;
-      }
-      document.getElementById('grocery-section').innerHTML = html;
-      setTimeout(() => {
-        const inp = document.getElementById('grocery-input');
-        if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') addGrocery(); });
-      }, 0);
-    }
-    function addGrocery() {
-      const inp = document.getElementById('grocery-input');
-      const text = inp.value.trim();
-      if (!text) return;
-      _groceries.push({ text, done: false });
-      fbSet('groceries', _groceries);
-    }
-    function toggleGrocery(i) { _groceries[i].done = !_groceries[i].done; fbSet('groceries', _groceries); }
-    function deleteGrocery(i) { _groceries.splice(i, 1); fbSet('groceries', _groceries); }
-    function clearCheckedGroceries() { _groceries = _groceries.filter(i => !i.done); fbSet('groceries', _groceries); }
-    fbGet('groceries', data => { _groceries = data ? (Array.isArray(data) ? data : Object.values(data)) : []; renderGroceries(); });
 
     // ── Reminders ──
     const CHORE_TYPES = [
