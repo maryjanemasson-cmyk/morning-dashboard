@@ -264,6 +264,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "CP Reformer Flow 2 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30dfede9f1fbb",
+    "startTime": "2026-05-26T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-26T06:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Lagree - All Levels - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30cdbaec81010",
@@ -438,8 +449,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Croakies Original Standard...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Enenfly Adjustable Glasses...\""
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Endless Linen Summer"
+    },
     {
       "sender": "E-ZPass New Jersey Customer Service",
       "subject": "E-ZPass Successful Auto-Replenishment"
@@ -467,18 +490,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 16 May 2026"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
     }
   ],
   "items": [
@@ -610,6 +621,17 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e30cb4b53233bc",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
+      "name": "CP Reformer Flow 2 (50 Mins) class",
+      "date": "2026-05-26",
+      "time": "06:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19e30dfede9f1fbb",
+      "sender": "Club Pilates Princeton"
     },
     {
       "type": "class",
