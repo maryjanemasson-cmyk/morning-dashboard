@@ -163,7 +163,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 16,
   "threads": [
     {
       "sender": "FORM BY TWO",
@@ -204,6 +204,78 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Return request confirmed for Zeyune 3 Pcs Spring Purple Faux..."
+    }
+  ],
+  "items": [
+    {
+      "type": "school",
+      "title": "Science Fair Tomorrow",
+      "date": "2026-05-14",
+      "id": "19e281d0cc82cb9b",
+      "sender": "Administration Office FASP"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Allegra K Women's Denim",
+      "date": "2026-05-15",
+      "id": "19e2d432cd48fdfc",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Levi's Womens Flynn Western",
+      "date": "2026-05-15",
+      "id": "19e2d42068172985",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Levi's Womens Flynn Western",
+      "date": "2026-05-15",
+      "id": "19e2d414c1083a3c",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Cadence Extender - Adds",
+      "date": "2026-05-15",
+      "id": "19e2d405ed1faa14",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Zeyune 3 Pcs Spring Purple Faux",
+      "date": "2026-05-15",
+      "id": "19e2d3f2bd0ef4b6",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: CUSHIONAIRE Miami Kitten Heels",
+      "date": "2026-05-15",
+      "id": "19e2d3dbafc3b1a1",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes",
+      "date": "2026-05-16",
+      "id": "19e2f330e2b063af",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Your package will be delivered soon D2217381",
+      "date": "2026-05-16",
+      "id": "19e2ef62f6ce9c44",
+      "sender": "Aritzia"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #381334116033",
+      "date": "2026-05-16",
+      "id": "19e2dfa0ca500386",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };

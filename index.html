@@ -603,6 +603,11 @@
           <div id="upcoming-events"><div class="loading"><div class="spinner"></div></div></div>
         </div>
 
+        <div class="card">
+          <div class="card-title"><span class="icon">@</span> Inbox</div>
+          <div id="inbox-section"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
 
         <div class="card">
           <div class="card-title"><span class="icon">&bull;</span> Sunrise &amp; Sunset</div>
@@ -1039,6 +1044,60 @@
       document.getElementById('upcoming-events').innerHTML = html;
     }
     renderUpcoming();
+
+    // ── Inbox (parsed Gmail items) ──
+    function renderInbox() {
+      const data = (window.EMAIL_DATA && window.EMAIL_DATA.items) || [];
+      const target = document.getElementById('inbox-section');
+      if (!target) return;
+      if (!data.length) { target.innerHTML = '<div class="cal-empty">Nothing from your inbox</div>'; return; }
+      const today = new Date(); today.setHours(0,0,0,0);
+      const TYPE_LABELS = {
+        delivery: 'delivery',
+        class: 'class',
+        school: 'school',
+        return: 'return',
+        action: 'action',
+      };
+      const TYPE_COLORS = {
+        delivery: '#7a8a6b',  // sage
+        class: '#a07c5e',     // tan
+        school: '#8d6e8a',    // mauve
+        return: '#c2553a',    // terracotta
+        action: '#6b5d4d',    // brown
+      };
+      // Decode HTML entities and clean up titles
+      const decode = s => {
+        const t = document.createElement('textarea'); t.innerHTML = s || ''; return t.value;
+      };
+      const items = data.slice(0, 12);
+      let html = '';
+      items.forEach(it => {
+        const d = new Date(it.date + 'T12:00:00');
+        const diff = Math.round((d - today) / 86400000);
+        let dayLabel, unitLabel;
+        if (diff === 0) { dayLabel = '!'; unitLabel = 'today'; }
+        else if (diff === 1) { dayLabel = '1'; unitLabel = 'day'; }
+        else if (diff === -1) { dayLabel = '1'; unitLabel = 'd ago'; }
+        else if (diff < 0) { dayLabel = Math.abs(diff); unitLabel = 'd ago'; }
+        else { dayLabel = diff; unitLabel = 'days'; }
+        const imminent = (diff >= 0 && diff <= 1) ? ' imminent' : '';
+        const tlabel = TYPE_LABELS[it.type] || it.type;
+        const tcolor = TYPE_COLORS[it.type] || '#9c8b76';
+        const ds = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const nameStyle = (diff >= 0 && diff <= 1) ? 'font-weight:500;color:#c2553a;' : '';
+        const title = decode(it.title);
+        html += `<div class="upcoming-event">
+          <div class="upcoming-days${imminent}">${dayLabel}<span class="upcoming-days-unit">${unitLabel}</span></div>
+          <div class="upcoming-info">
+            <div class="upcoming-name" style="${nameStyle}">${title}</div>
+            <div class="upcoming-date-label"><span style="color:${tcolor};font-weight:500;">${tlabel}</span> &middot; ${ds}</div>
+          </div>
+        </div>`;
+      });
+      target.innerHTML = html;
+    }
+    renderInbox();
 
 
     // ── Grocery List (Firebase) ──
