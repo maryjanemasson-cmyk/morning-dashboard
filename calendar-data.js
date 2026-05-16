@@ -460,32 +460,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 15,
   "threads": [
-    {
-      "sender": "Starbucks Coffee Company",
-      "subject": "Success! Your Starbucks Card has been reloaded"
-    },
-    {
-      "sender": "E-ZPass Maryland",
-      "subject": "Ready, set, go! Make summer driving E-Z'er with DriveEzMD."
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Mary, what did you think about Lagree - Foundations - 45 minutes?"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "Air Jordan 3 Retro 'World\u2019s Best Dad' Out Now"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "The Jordan Marsh blueberry muffins never go out of style"
-    },
-    {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at Roots Ocean Prime is confirmed"
-    },
     {
       "sender": "E-ZPass New Jersey Customer Service",
       "subject": "E-ZPass Successful Auto-Replenishment"
@@ -501,6 +477,30 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 23, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Boston"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 16 May 2026"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
+    },
+    {
+      "sender": "Rhone",
+      "subject": "The Memorial Day edit"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
     }
   ],
   "items": [
