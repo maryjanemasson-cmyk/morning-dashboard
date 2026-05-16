@@ -342,6 +342,10 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 5/16 is ready to view"
+    },
+    {
       "sender": "Unroll.Me",
       "subject": "\ud83d\udcec Today's Rollup"
     },
@@ -376,10 +380,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Return request confirmed for Allegra K Women's Denim..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Return request confirmed for Levi's Womens Flynn Western..."
     }
   ],
   "items": [
