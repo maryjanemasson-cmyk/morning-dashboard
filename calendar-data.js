@@ -339,8 +339,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 16 May 2026"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
+    },
     {
       "sender": "Chan Luu",
       "subject": "The Vacation Edit"
@@ -368,18 +380,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Return request confirmed for Levi's Womens Flynn Western..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Return request confirmed for Cadence Extender - Adds..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Return request confirmed for Zeyune 3 Pcs Spring Purple Faux..."
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Turn Your Backyard Into a Summer Destination"
     }
   ],
   "items": [
