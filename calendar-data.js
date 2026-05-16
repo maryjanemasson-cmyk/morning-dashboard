@@ -460,8 +460,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Enenfly Adjustable Glasses...\""
+    },
+    {
+      "sender": "Ring Team",
+      "subject": "You\u2019ve Created a New Ring Passkey"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for Levi's Womens Flynn Western...."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for Zeyune 3 Pcs Spring Purple Faux..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for CUSHIONAIRE Miami Kitten Heels..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for Levi's Womens Flynn Western..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for Cadence Extender - Adds..."
+    },
     {
       "sender": "E-ZPass New Jersey Customer Service",
       "subject": "E-ZPass Successful Auto-Replenishment"
@@ -473,34 +501,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 25, 2026 at 9:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 23, 2026 at 10:00 AM"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 16 May 2026"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
-    },
-    {
-      "sender": "Rhone",
-      "subject": "The Memorial Day edit"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
     }
   ],
   "items": [
@@ -566,6 +566,13 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
+      "title": "Shipped: \"Enenfly Adjustable Glasses...\"",
+      "date": "2026-05-16",
+      "id": "19e3209cbe90b832",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
       "title": "Your package will be delivered soon D2217381",
       "date": "2026-05-16",
       "id": "19e2ef62f6ce9c44",
@@ -577,6 +584,48 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e2dfa0ca500386",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for Levi's Womens Flynn Western",
+      "date": "2026-05-16",
+      "id": "19e3201107cac5b7",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Zeyune 3 Pcs Spring Purple Faux",
+      "date": "2026-05-16",
+      "id": "19e31fc3fb993089",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Levi's Womens Flynn Western",
+      "date": "2026-05-16",
+      "id": "19e31fc1b32a7a4b",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: CUSHIONAIRE Miami Kitten Heels",
+      "date": "2026-05-16",
+      "id": "19e31fb7b7212378",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Levi's Womens Flynn Western",
+      "date": "2026-05-16",
+      "id": "19e31fb4b9382ee4",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Cadence Extender - Adds",
+      "date": "2026-05-16",
+      "id": "19e31fae5f1e3d1a",
+      "sender": "return@amazon.com"
     },
     {
       "type": "class",
