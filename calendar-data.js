@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Roots Ocean Prime",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-16T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-16T18:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Lagree - Foundations - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e1301ba8f451f5",
@@ -328,8 +339,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Almina Concept",
+      "subject": "A shipment from order 41300 is out for delivery"
+    },
     {
       "sender": "PayPal",
       "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
@@ -365,10 +380,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 381221892101"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
     }
   ],
   "items": [
