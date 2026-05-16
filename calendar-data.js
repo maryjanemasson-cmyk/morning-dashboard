@@ -427,35 +427,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Elon\u2019s n\u0435w company - Turbo Trade Pro",
-      "subject": "Musk to launch n\u0435w company on X tomorrow?"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for Zeyune 3 Pcs Spring Purple Faux...."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for CUSHIONAIRE Miami Kitten Heels...."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for Cadence Extender - Adds...."
-    },
-    {
-      "sender": "United News & Deals",
-      "subject": "Upgrade to premium cabin on your upcoming flight"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "A shipment from order 41300 has been delivered"
+      "sender": "Microsoft account team",
+      "subject": "Your single-use code"
     },
     {
       "sender": "Amazon.com",
@@ -468,6 +444,30 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Dropoff confirmed for Zeyune 3 Pcs Spring Purple Faux..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for CUSHIONAIRE Miami Kitten Heels..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for Levi's Womens Flynn Western..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for Cadence Extender - Adds..."
+    },
+    {
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 28, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 25, 2026 at 9:00 AM"
     }
   ],
   "items": [
@@ -551,13 +551,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e2dfa0ca500386",
       "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for Levi's Womens Flynn Western",
-      "date": "2026-05-16",
-      "id": "19e326fbbad96097",
-      "sender": "return@amazon.com"
     },
     {
       "type": "return",
