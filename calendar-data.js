@@ -427,8 +427,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Elon\u2019s n\u0435w company - Turbo Trade Pro",
+      "subject": "Musk to launch n\u0435w company on X tomorrow?"
+    },
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
+    },
     {
       "sender": "return@amazon.com",
       "subject": "Advance refund issued for Zeyune 3 Pcs Spring Purple Faux...."
@@ -460,14 +468,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Dropoff confirmed for Zeyune 3 Pcs Spring Purple Faux..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for CUSHIONAIRE Miami Kitten Heels..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for Levi's Womens Flynn Western..."
     }
   ],
   "items": [
