@@ -132,6 +132,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "7"
   },
   {
+    "summary": "CP Reformer Flow 2 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30dd0134485a5",
+    "startTime": "2026-05-22T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-22T06:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
     "location": "40 Edwin H. Land Boulevard, Cambridge, MA 02142",
     "description": "Check-Out: 11:00 AM\\nPhone: 1-617-806-4200",
@@ -427,8 +438,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "The just-for-you edit \ud83d\udc96"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 28, 2026 at 6:00 AM"
@@ -456,18 +479,6 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson-cmyk",
       "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
-    },
-    {
-      "sender": "Rhone",
-      "subject": "The Memorial Day edit"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
-    },
-    {
-      "sender": "Uber Receipts",
-      "subject": "[Personal] Your Friday morning trip with Uber"
     }
   ],
   "items": [
@@ -565,6 +576,17 @@ window.EMAIL_DATA = {
       "duration_min": 50,
       "location": "Club Pilates Princeton",
       "id": "19e271ab899627be",
+      "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
+      "name": "CP Reformer Flow 2 (50 Mins) class",
+      "date": "2026-05-22",
+      "time": "06:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19e30dd0134485a5",
       "sender": "Club Pilates Princeton"
     },
     {
