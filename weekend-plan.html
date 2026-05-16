@@ -122,6 +122,15 @@
       margin-right: 0.3rem; flex-shrink: 0;
       letter-spacing: -2px; user-select: none;
     }
+    .move-btn {
+      font-size: 0.68rem; color: #9c8b76;
+      padding: 2px 7px; border-radius: 10px;
+      border: 1px solid #ebe5dc; background: #fff;
+      cursor: pointer; font-family: inherit;
+      margin-right: 0.3rem; flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .move-btn:hover { background: #faf5ec; border-color: #c9b99a; color: #6b5d4d; }
 
     @media print {
       body { background: #fff; }
@@ -293,6 +302,8 @@
         ul.innerHTML = '<li style="color:#b8a48e;font-style:italic;border:none;cursor:default;" data-empty="1">Nothing yet — add tasks below, or drag from the other day.</li>';
         return;
       }
+      const moveLabel = which === 'sat' ? '→ Sun' : '← Sat';
+      const otherWhich = which === 'sat' ? 'sun' : 'sat';
       ul.innerHTML = items.map((it, i) => {
         const src = it.source || 'manual';
         const badge = src !== 'manual' ? `<span class="src-badge src-${src}">${src}</span>` : '';
@@ -305,6 +316,7 @@
           <span class="drag-handle" title="Drag to reorder">⋮⋮</span>
           <div class="check-cb ${it.done ? 'checked' : ''}" onclick="toggleItem('${which}', ${i})">${it.done ? '✓' : ''}</div>
           <div class="check-text ${it.done ? 'done' : ''}">${escapeHtml(it.text)}${badge}</div>
+          <button class="move-btn" onclick="moveToOtherDay('${which}', ${i})" title="Move to ${otherWhich === 'sat' ? 'Saturday' : 'Sunday'}">${moveLabel}</button>
           <span class="check-del" onclick="deleteItem('${which}', ${i})">×</span>
         </li>`;
       }).join('');
@@ -491,6 +503,10 @@
     window.deleteItem = function(which, i) {
       _items[which].splice(i, 1);
       saveList(which);
+    };
+    window.moveToOtherDay = function(which, i) {
+      const other = which === 'sat' ? 'sun' : 'sat';
+      moveItem(which, i, other, _items[other].length);
     };
 
     function escapeHtml(s) {
