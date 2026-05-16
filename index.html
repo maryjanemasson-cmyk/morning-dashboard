@@ -529,9 +529,13 @@
 <body>
   <div class="banner"></div>
   <div class="dashboard">
-    <div class="header">
+    <div class="header" style="position:relative;">
       <h1 id="greeting">Good Morning</h1>
       <div class="date" id="date-display"></div>
+      <button id="refresh-now-btn" onclick="refreshNow()" title="Refresh email + calendar now"
+        style="position:absolute;top:0;right:0;font-size:0.72rem;color:#9c8b76;background:#fff;border:1px solid #ebe5dc;border-radius:20px;padding:0.35rem 0.85rem;cursor:pointer;font-family:inherit;transition:all 0.15s;">
+        ↻ Refresh now
+      </button>
     </div>
 
     <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
@@ -764,16 +768,34 @@
     let selectedCalDate = null;
 
     function getEventsForDate(dateStr) {
-      const monthEvents = window.MONTH_EVENTS || [];
+      const cal = window.CALENDAR_EVENTS || [];
+      const travel = window.TRAVEL_DATA || [];
       const results = [];
-      for (const ev of monthEvents) {
+      // Dedupe by summary+start (Personal + Family calendars sometimes both contain the same event)
+      const seen = new Set();
+      for (const ev of cal) {
         const evDate = ev.startTime ? ev.startTime.slice(0, 10) : (ev.startDate || '');
-        const evEnd = ev.endDate || evDate;
-        // Check if dateStr falls within a multi-day event range
+        let hit = false;
         if (ev.startDate && ev.endDate) {
-          if (dateStr >= ev.startDate && dateStr < ev.endDate) results.push(ev);
+          if (dateStr >= ev.startDate && dateStr < ev.endDate) hit = true;
         } else if (evDate === dateStr) {
-          results.push(ev);
+          hit = true;
+        }
+        if (!hit) continue;
+        const k = (ev.summary || '') + '|' + (ev.startTime || ev.startDate || '');
+        if (seen.has(k)) continue;
+        seen.add(k);
+        results.push(ev);
+      }
+      // Add trip-wrapper synthetic events for any date inside a trip range
+      for (const trip of travel) {
+        if (dateStr >= trip.start && dateStr <= trip.end) {
+          results.push({
+            summary: `${trip.icon || '✈'} Trip — ${trip.destination}`,
+            startDate: trip.start,
+            endDate: trip.end,
+            location: trip.destination,
+          });
         }
       }
       return results;
@@ -828,19 +850,28 @@
       const today = now.getDate();
       const monthName = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
-      // Collect event dates from MONTH_EVENTS
+      // Collect event dates from CALENDAR_EVENTS + TRAVEL_DATA
       const eventDates = new Set();
-      const monthEvents = window.MONTH_EVENTS || [];
-      monthEvents.forEach(ev => {
-        const ds = ev.startTime ? ev.startTime.slice(8,10) : (ev.startDate ? ev.startDate.slice(8,10) : '');
-        if (ds) eventDates.add(parseInt(ds));
-        // Multi-day events
+      const cal = window.CALENDAR_EVENTS || [];
+      cal.forEach(ev => {
+        const startStr = ev.startTime ? ev.startTime.slice(0,10) : (ev.startDate || '');
+        if (startStr && startStr.slice(0,7) === `${year}-${String(month+1).padStart(2,'0')}`) {
+          eventDates.add(parseInt(startStr.slice(8,10)));
+        }
         if (ev.startDate && ev.endDate) {
           const s = new Date(ev.startDate + 'T12:00:00');
           const e = new Date(ev.endDate + 'T12:00:00');
           for (let d = new Date(s); d < e; d.setDate(d.getDate()+1)) {
-            if (d.getMonth() === month) eventDates.add(d.getDate());
+            if (d.getMonth() === month && d.getFullYear() === year) eventDates.add(d.getDate());
           }
+        }
+      });
+      const travel = window.TRAVEL_DATA || [];
+      travel.forEach(trip => {
+        const s = new Date(trip.start + 'T12:00:00');
+        const e = new Date(trip.end + 'T12:00:00');
+        for (let d = new Date(s); d <= e; d.setDate(d.getDate()+1)) {
+          if (d.getMonth() === month && d.getFullYear() === year) eventDates.add(d.getDate());
         }
       });
 
@@ -1562,6 +1593,32 @@
     setInterval(()=>{loadWeather();loadNews();stamp();},15*60*1000);
     function scheduleRefreshAt5am(){const now=new Date(),n5=new Date(now);n5.setHours(5,0,0,0);if(now>=n5)n5.setDate(n5.getDate()+1);setTimeout(()=>location.reload(),n5-now);}
     scheduleRefreshAt5am();
+
+    // ── Refresh-now button ──
+    // Calls a local HTTP server (refresh-server.py on 127.0.0.1:8765)
+    // that runs refresh-calendar.sh on demand. Only reachable from this
+    // Mac since the server binds to loopback. If the server is unreachable
+    // (e.g., dashboard opened on another device), this just reloads the
+    // page with a cache-buster so the freshest already-pushed data shows.
+    window.refreshNow = async function() {
+      const btn = document.getElementById('refresh-now-btn');
+      if (btn) { btn.disabled = true; btn.textContent = '↻ Refreshing…'; }
+      let triggered = false;
+      try {
+        const resp = await fetch('http://127.0.0.1:8765/refresh', {
+          method: 'POST', mode: 'cors',
+          headers: { 'Content-Type': 'application/json' }, body: '{}',
+        });
+        if (resp.ok) triggered = true;
+      } catch (_) { /* fall through to reload */ }
+      const wait = triggered ? 12000 : 600;
+      if (btn) btn.textContent = triggered ? '↻ Refreshing… (~12s)' : '↻ Reloading…';
+      setTimeout(() => {
+        const u = new URL(window.location.href);
+        u.searchParams.set('_cb', Date.now());
+        window.location.href = u.toString();
+      }, wait);
+    };
   </script>
 <button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
 <script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
