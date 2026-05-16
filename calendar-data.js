@@ -1,49 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Trip \u2014 Cambridge, MA",
-    "location": "Cambridge, MA",
-    "description": "Cambridge, MA \u2014 May 11 to 15, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
-    "startTime": "",
-    "startDate": "2026-05-11",
-    "endTime": "",
-    "endDate": "2026-05-16",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "\u2708 UA570 BOS \u2192 EWR",
-    "location": "Boston (BOS) \u2192 Newark (EWR)",
-    "description": "United Airlines 570, Terminal B\\nDepart: 7:00 AM EDT from BOS\\nArrive: 8:29 AM EDT at EWR, Terminal C",
-    "startTime": "2026-05-15T07:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-15T08:29:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
-    "location": "40 Edwin H. Land Boulevard, Cambridge, MA 02142",
-    "description": "Check-Out: 11:00 AM\\nPhone: 1-617-806-4200",
-    "startTime": "2026-05-15T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-15T12:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "Reservation at Roots Ocean Prime",
-    "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar",
-    "startTime": "2026-05-15T17:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-15T18:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -207,8 +163,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on May 16, 2026"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 523413205161"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Mary Jane, your April account statement is available."
+    },
     {
       "sender": "Reformation",
       "subject": "SHIPMENT DELIVERED"
@@ -236,18 +204,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Return request confirmed for Zeyune 3 Pcs Spring Purple Faux..."
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Turn Your Backyard Into a Summer Destination"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381197329050"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381221892101"
     }
   ]
 };
