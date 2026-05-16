@@ -258,9 +258,9 @@ window.EMAIL_DATA = {
     },
     {
       "type": "class",
-      "title": "Lagree - Foundations - 45 minutes",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
       "date": "2026-05-16",
-      "id": "19e2f330e2b063af",
+      "id": "19e1301256f2f0aa",
       "sender": "FORM BY TWO"
     },
     {
@@ -276,6 +276,20 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e2dfa0ca500386",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 9:00 AM",
+      "date": "2026-05-17",
+      "id": "19e1301ba8f451f5",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "CP Suspend 1.5 (50 Mins) class \u00b7 5:00 PM",
+      "date": "2026-05-18",
+      "id": "19e271ab899627be",
+      "sender": "Club Pilates Princeton"
     }
   ]
 };
