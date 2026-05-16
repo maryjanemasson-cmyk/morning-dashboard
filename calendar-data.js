@@ -70,30 +70,6 @@ window.CALENDAR_EVENTS = [
 window.TRAVEL_DATA = [
   {
     "destination": "Cambridge, MA",
-    "start": "2026-05-11",
-    "end": "2026-05-15",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA570 BOS to EWR",
-        "location": "Boston (BOS)",
-        "description": "",
-        "start": "2026-05-15T11:00:00+00:00",
-        "end": "2026-05-15T12:29:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: The Royal Sonesta Boston",
-        "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
-        "description": "",
-        "start": "2026-05-15T15:00:00+00:00",
-        "end": "2026-05-15T16:00:00+00:00",
-        "type": "hotel"
-      }
-    ]
-  },
-  {
-    "destination": "Cambridge, MA",
     "start": "2026-05-19",
     "end": "2026-05-22",
     "icon": "\u2708\ufe0f",
@@ -231,11 +207,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Aritzia",
-      "subject": "The rest of Order #D2217381 has shipped"
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
     },
     {
       "sender": "PayPal",
