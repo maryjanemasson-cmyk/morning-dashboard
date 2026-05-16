@@ -98,6 +98,19 @@
     }
     .add-btn:hover { background: #bfae8e; }
 
+    .src-badge {
+      display: inline-block;
+      font-size: 0.62rem; font-weight: 500;
+      padding: 1px 7px; border-radius: 8px;
+      margin-left: 0.4rem; vertical-align: middle;
+      text-transform: lowercase; letter-spacing: 0.02em;
+    }
+    .src-gmail  { background: #ebe5dc; color: #6b5d4d; }
+    .src-school { background: #e9dee8; color: #6e4d6a; }
+    .src-chore  { background: #e1e9dd; color: #4a5d40; }
+    .src-todo   { background: #e3dcce; color: #74614e; }
+    .src-manual { display: none; }
+
     @media print {
       body { background: #fff; }
       .banner, .nav-strip, .print-btn, .add-row, .check-del { display: none !important; }
@@ -121,8 +134,8 @@
     <div class="nav-strip">
       <a class="back" href="index.html">← Dashboard</a>
       <button class="print-btn" onclick="printDay('all')">🖨️ Print both</button>
-      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('today')">🖨️ Today only</button>
-      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('tomorrow')">🖨️ Tomorrow only</button>
+      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('today')" id="print-sat-btn">🖨️ Saturday only</button>
+      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('tomorrow')" id="print-sun-btn">🖨️ Sunday only</button>
     </div>
 
     <div class="day-card" id="day-today">
@@ -138,8 +151,8 @@
         <div class="events-title">To do</div>
         <ul class="checklist" id="today-list"></ul>
         <div class="add-row">
-          <input class="add-input" id="today-add-input" placeholder="Add a task for today…" onkeydown="if(event.key==='Enter')addItem('today')">
-          <button class="add-btn" onclick="addItem('today')">Add</button>
+          <input class="add-input" id="today-add-input" placeholder="Add a task for Saturday…" onkeydown="if(event.key==='Enter')addItem('sat')">
+          <button class="add-btn" onclick="addItem('sat')">Add</button>
         </div>
       </div>
     </div>
@@ -157,8 +170,8 @@
         <div class="events-title">To do</div>
         <ul class="checklist" id="tomorrow-list"></ul>
         <div class="add-row">
-          <input class="add-input" id="tomorrow-add-input" placeholder="Add a task for tomorrow…" onkeydown="if(event.key==='Enter')addItem('tomorrow')">
-          <button class="add-btn" onclick="addItem('tomorrow')">Add</button>
+          <input class="add-input" id="tomorrow-add-input" placeholder="Add a task for Sunday…" onkeydown="if(event.key==='Enter')addItem('sun')">
+          <button class="add-btn" onclick="addItem('sun')">Add</button>
         </div>
       </div>
     </div>
@@ -181,19 +194,34 @@
     function isoDate(d) {
       return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
     }
-    const TODAY = new Date(); TODAY.setHours(0,0,0,0);
-    const TOMORROW = new Date(TODAY); TOMORROW.setDate(TODAY.getDate()+1);
-    const TODAY_KEY = isoDate(TODAY);
-    const TOMORROW_KEY = isoDate(TOMORROW);
+    // Pick the upcoming weekend's Saturday + Sunday.
+    // Mon–Fri → next Sat+Sun. Sat → today + tomorrow. Sun → yesterday + today.
+    function computeWeekendDays() {
+      const today = new Date(); today.setHours(0,0,0,0);
+      const dow = today.getDay(); // 0=Sun .. 6=Sat
+      let sat = new Date(today);
+      if (dow === 6) {
+        // already Saturday
+      } else if (dow === 0) {
+        sat.setDate(today.getDate() - 1);
+      } else {
+        sat.setDate(today.getDate() + (6 - dow));
+      }
+      const sun = new Date(sat); sun.setDate(sat.getDate() + 1);
+      return { sat, sun };
+    }
+    const { sat: SAT, sun: SUN } = computeWeekendDays();
+    const SAT_KEY = isoDate(SAT);
+    const SUN_KEY = isoDate(SUN);
 
     // Render headers
     const fmtDay = d => d.toLocaleDateString('en-US', { weekday: 'long' });
     const fmtDate = d => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-    document.getElementById('today-name').textContent = fmtDay(TODAY);
-    document.getElementById('today-date').textContent = fmtDate(TODAY);
-    document.getElementById('tomorrow-name').textContent = fmtDay(TOMORROW);
-    document.getElementById('tomorrow-date').textContent = fmtDate(TOMORROW);
-    document.getElementById('weekend-range').textContent = fmtDate(TODAY) + ' — ' + fmtDate(TOMORROW);
+    document.getElementById('today-name').textContent = fmtDay(SAT);
+    document.getElementById('today-date').textContent = fmtDate(SAT);
+    document.getElementById('tomorrow-name').textContent = fmtDay(SUN);
+    document.getElementById('tomorrow-date').textContent = fmtDate(SUN);
+    document.getElementById('weekend-range').textContent = fmtDate(SAT) + ' — ' + fmtDate(SUN);
 
     // Calendar events
     function renderEvents(targetEl, dateKey) {
@@ -201,7 +229,6 @@
         const st = e.startTime || e.startDate || '';
         return st.startsWith(dateKey);
       });
-      // Dedupe by summary+start (calendar pulls Personal+Family etc. so we sometimes see duplicates)
       const seen = new Set();
       const unique = [];
       for (const e of events) {
@@ -221,32 +248,120 @@
         </div>`;
       }).join('');
     }
-    renderEvents(document.getElementById('today-events'), TODAY_KEY);
-    renderEvents(document.getElementById('tomorrow-events'), TOMORROW_KEY);
+    renderEvents(document.getElementById('today-events'), SAT_KEY);
+    renderEvents(document.getElementById('tomorrow-events'), SUN_KEY);
 
-    // Editable checklists, keyed by date so they rotate forward
-    let _items = { today: [], tomorrow: [] };
-    function listKey(which) { return which === 'today' ? TODAY_KEY : TOMORROW_KEY; }
+    // Mirror of CHORE_TYPES from index.html — kept inline so weekend-plan can seed from chores without coupling.
+    const CHORE_TYPES = [
+      { id: 'book-pilates', name: 'Book Pilates & OTF classes', icon: '🧘', dueDays: 7 },
+      { id: 'dry-cleaning', name: 'Drop off dry cleaning', icon: '🧥', dueDays: 7 },
+      { id: 'call-mom', name: 'Call Mom', icon: '📞', dueDays: 7 },
+      { id: 'dog-poop', name: 'Pick up dog poop', icon: '🐶', dueDays: 7 },
+      { id: 'water-plants', name: 'Water plants', icon: '🌱', dueDays: 7 },
+      { id: 'weeding', name: 'Weed the garden', icon: '🌻', dueDays: 14 },
+      { id: 'pedicure', name: 'Pedicure', icon: '💅', dueDays: 30 },
+      { id: 'eyebrows', name: 'Eyebrow care', icon: '✨', dueDays: 30 },
+    ];
+
+    // Editable checklists, keyed by which weekend day
+    let _items = { sat: [], sun: [] };
+    function listKey(which) { return which === 'sat' ? SAT_KEY : SUN_KEY; }
+    function listDomId(which) { return (which === 'sat' ? 'today' : 'tomorrow') + '-list'; }
+    function addInputId(which) { return (which === 'sat' ? 'today' : 'tomorrow') + '-add-input'; }
 
     function renderList(which) {
-      const ul = document.getElementById(which + '-list');
+      const ul = document.getElementById(listDomId(which));
       const items = _items[which] || [];
       if (items.length === 0) {
         ul.innerHTML = '<li style="color:#b8a48e;font-style:italic;border:none;">Nothing yet — add tasks below.</li>';
         return;
       }
-      ul.innerHTML = items.map((it, i) => `
-        <li>
+      ul.innerHTML = items.map((it, i) => {
+        const src = it.source || 'manual';
+        const badge = src !== 'manual' ? `<span class="src-badge src-${src}">${src}</span>` : '';
+        return `<li>
           <div class="check-cb ${it.done ? 'checked' : ''}" onclick="toggleItem('${which}', ${i})">${it.done ? '✓' : ''}</div>
-          <div class="check-text ${it.done ? 'done' : ''}">${escapeHtml(it.text)}</div>
+          <div class="check-text ${it.done ? 'done' : ''}">${escapeHtml(it.text)}${badge}</div>
           <span class="check-del" onclick="deleteItem('${which}', ${i})">×</span>
-        </li>
-      `).join('');
+        </li>`;
+      }).join('');
     }
 
-    function loadList(which) {
+    // Seed the checklist with inbox items, overdue chores, manual TODOs — but only once per date.
+    // Marker at weekendPlan/_seeded/{dateKey} prevents re-seeding if the user clears the list.
+    async function maybeSeed(which) {
+      const dayKey = listKey(which);
+      const flagRef = db.ref('weekendPlan/_seeded/' + dayKey);
+      const flagSnap = await flagRef.once('value');
+      if (flagSnap.val()) return;
+      // Mark up front to prevent double-seed if the page reloads mid-seed
+      await flagRef.set(true);
+
+      const seed = [];
+      const today = new Date(); today.setHours(0,0,0,0);
+      const inboxItems = (window.EMAIL_DATA && window.EMAIL_DATA.items) || [];
+
+      if (which === 'sat') {
+        // Inbox actions: returns and other action-type items
+        inboxItems.forEach(it => {
+          if (it.type === 'return' || it.type === 'action') {
+            seed.push({ text: it.title, done: false, source: 'gmail' });
+          }
+        });
+        // School items dated within the weekend window
+        inboxItems.forEach(it => {
+          if (it.type !== 'school') return;
+          if (it.date === SAT_KEY) {
+            seed.push({ text: it.title, done: false, source: 'school' });
+          }
+        });
+        // Overdue / due-soon recurring chores
+        const choreSnap = await db.ref('chores').once('value');
+        const chores = choreSnap.val() || {};
+        CHORE_TYPES.forEach(c => {
+          const lastDate = chores[c.id];
+          let daysLeft = 0;
+          if (!lastDate) {
+            daysLeft = -1; // never done → overdue
+          } else {
+            const last = new Date(lastDate);
+            const daysAgo = Math.floor((today - last) / 86400000);
+            daysLeft = c.dueDays - daysAgo;
+          }
+          if (daysLeft <= 2) {
+            seed.push({ text: c.icon + ' ' + c.name, done: false, source: 'chore' });
+          }
+        });
+        // Manual TODOs from the dashboard's To Do card
+        const todoSnap = await db.ref('todos').once('value');
+        const todos = todoSnap.val();
+        if (todos) {
+          const arr = Array.isArray(todos) ? todos : Object.values(todos);
+          arr.forEach(t => {
+            if (t && !t.done && t.text) {
+              seed.push({ text: t.text, done: false, source: 'todo' });
+            }
+          });
+        }
+      } else if (which === 'sun') {
+        // Sunday gets school items specifically dated for Sunday
+        inboxItems.forEach(it => {
+          if (it.type !== 'school') return;
+          if (it.date === SUN_KEY) {
+            seed.push({ text: it.title, done: false, source: 'school' });
+          }
+        });
+      }
+
+      if (seed.length === 0) return;
+      await db.ref('weekendPlan/' + dayKey).set(seed);
+    }
+
+    async function loadList(which) {
+      await maybeSeed(which);
       db.ref('weekendPlan/' + listKey(which)).on('value', snap => {
-        _items[which] = snap.val() || [];
+        const v = snap.val();
+        _items[which] = Array.isArray(v) ? v : (v ? Object.values(v) : []);
         renderList(which);
       });
     }
@@ -255,10 +370,10 @@
     }
 
     window.addItem = function(which) {
-      const inp = document.getElementById(which + '-add-input');
+      const inp = document.getElementById(addInputId(which));
       const text = inp.value.trim();
       if (!text) return;
-      _items[which].push({ text, done: false });
+      _items[which].push({ text, done: false, source: 'manual' });
       saveList(which);
       inp.value = '';
     };
@@ -275,8 +390,8 @@
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
 
-    loadList('today');
-    loadList('tomorrow');
+    loadList('sat');
+    loadList('sun');
 
     window.printDay = function(which) {
       if (which === 'all') { window.print(); return; }
