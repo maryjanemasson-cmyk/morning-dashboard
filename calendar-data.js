@@ -242,6 +242,28 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30cb4b53233bc",
+    "startTime": "2026-05-25T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-25T09:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30cdbaec81010",
+    "startTime": "2026-05-28T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-28T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "NSH must be at Philly airport \u2708\ufe0f AA2807 Philadelphia \u2192 Tampa",
     "location": "Microsoft Teams Meeting",
     "description": "Meeting Point:\nTerminal will be provided closer to date\n\nAirline: American Airlines\nFlight: AA2807\n\nFrom: Philadelphia Airport (PHL)\nDeparture: 7:00 AM\n\nTo: Tampa International Airport (TPA)\nArrival: ~9:43 AM (local time)\nThis invite was sent by Copilot on behalf of Mary Jane HINRICHS\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/370018824107206?p=3eEb9Z5lZHtqWE6C52\nMeeting ID: 370 018 824 107 206\nPasscode: Vc2Tj2MF\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Yjk1OTE3ZDYtNzE5My00YjUyLThjNjYtNDExOTVlZjVjY2Vm%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,534878927#<tel:+12134588494,,534878927> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=534878927>\nPhone conference ID: 534 878 927#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 126 983 499 6\nMore info<https://www.webex.com/msteams?confid=1269834996&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Yjk1OTE3ZDYtNzE5My00YjUyLThjNjYtNDExOTVlZjVjY2Vm@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
@@ -405,8 +427,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 28, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 25, 2026 at 9:00 AM"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 23, 2026 at 10:00 AM"
@@ -438,14 +468,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Uber Receipts",
       "subject": "[Personal] Your Friday morning trip with Uber"
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Return request confirmed for Allegra K Women's Denim..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Return request confirmed for Levi's Womens Flynn Western..."
     }
   ],
   "items": [
@@ -554,6 +576,28 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "id": "19e30c2e79c9db82",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 9:00 AM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-05-25",
+      "time": "09:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e30cb4b53233bc",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-05-28",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e30cdbaec81010",
       "sender": "FORM BY TWO"
     }
   ]
