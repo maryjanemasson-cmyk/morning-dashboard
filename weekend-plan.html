@@ -111,6 +111,18 @@
     .src-todo   { background: #e3dcce; color: #74614e; }
     .src-manual { display: none; }
 
+    /* Drag-and-drop */
+    .checklist li { cursor: grab; user-select: none; }
+    .checklist li:active { cursor: grabbing; }
+    .checklist li.dragging { opacity: 0.4; }
+    .checklist li.drop-before { box-shadow: 0 -2px 0 #c9b99a inset; background: #faf5ec; }
+    .checklist li.drop-after  { box-shadow: 0 2px 0 #c9b99a inset; background: #faf5ec; }
+    .drag-handle {
+      color: #d4c5b5; font-size: 0.85rem; line-height: 1;
+      margin-right: 0.3rem; flex-shrink: 0;
+      letter-spacing: -2px; user-select: none;
+    }
+
     @media print {
       body { background: #fff; }
       .banner, .nav-strip, .print-btn, .add-row, .check-del { display: none !important; }
@@ -272,19 +284,96 @@
     function renderList(which) {
       const ul = document.getElementById(listDomId(which));
       const items = _items[which] || [];
+      ul.ondragover = (e) => { e.preventDefault(); };
+      ul.ondrop = (e) => {
+        // Drop on empty space → append to end
+        if (e.target === ul) { e.preventDefault(); dropOnList(which, items.length); }
+      };
       if (items.length === 0) {
-        ul.innerHTML = '<li style="color:#b8a48e;font-style:italic;border:none;">Nothing yet — add tasks below.</li>';
+        ul.innerHTML = '<li style="color:#b8a48e;font-style:italic;border:none;cursor:default;" data-empty="1">Nothing yet — add tasks below, or drag from the other day.</li>';
         return;
       }
       ul.innerHTML = items.map((it, i) => {
         const src = it.source || 'manual';
         const badge = src !== 'manual' ? `<span class="src-badge src-${src}">${src}</span>` : '';
-        return `<li>
+        return `<li draggable="true"
+          ondragstart="dragStart(event, '${which}', ${i})"
+          ondragend="dragEnd(event)"
+          ondragover="dragOverItem(event, '${which}', ${i})"
+          ondragleave="dragLeaveItem(event)"
+          ondrop="dropItem(event, '${which}', ${i})">
+          <span class="drag-handle" title="Drag to reorder">⋮⋮</span>
           <div class="check-cb ${it.done ? 'checked' : ''}" onclick="toggleItem('${which}', ${i})">${it.done ? '✓' : ''}</div>
           <div class="check-text ${it.done ? 'done' : ''}">${escapeHtml(it.text)}${badge}</div>
           <span class="check-del" onclick="deleteItem('${which}', ${i})">×</span>
         </li>`;
       }).join('');
+    }
+
+    // ── Drag and drop ──
+    let _drag = null;  // { fromWhich, fromIndex }
+
+    window.dragStart = function(event, which, index) {
+      _drag = { fromWhich: which, fromIndex: index };
+      event.currentTarget.classList.add('dragging');
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/plain', `${which}:${index}`);
+    };
+    window.dragEnd = function(event) {
+      event.currentTarget.classList.remove('dragging');
+      document.querySelectorAll('.checklist li').forEach(li => {
+        li.classList.remove('drop-before','drop-after');
+      });
+    };
+    window.dragOverItem = function(event, which, index) {
+      if (!_drag) return;
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      // Decide above-or-below based on cursor position
+      const li = event.currentTarget;
+      const rect = li.getBoundingClientRect();
+      const before = (event.clientY - rect.top) < rect.height / 2;
+      li.classList.toggle('drop-before', before);
+      li.classList.toggle('drop-after', !before);
+    };
+    window.dragLeaveItem = function(event) {
+      event.currentTarget.classList.remove('drop-before','drop-after');
+    };
+    window.dropItem = function(event, which, index) {
+      if (!_drag) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const li = event.currentTarget;
+      const rect = li.getBoundingClientRect();
+      const before = (event.clientY - rect.top) < rect.height / 2;
+      li.classList.remove('drop-before','drop-after');
+      const targetIndex = before ? index : index + 1;
+      moveItem(_drag.fromWhich, _drag.fromIndex, which, targetIndex);
+      _drag = null;
+    };
+    function dropOnList(which, atIndex) {
+      if (!_drag) return;
+      moveItem(_drag.fromWhich, _drag.fromIndex, which, atIndex);
+      _drag = null;
+    }
+
+    function moveItem(fromWhich, fromIndex, toWhich, toIndex) {
+      if (fromWhich === toWhich && (toIndex === fromIndex || toIndex === fromIndex + 1)) {
+        return; // no-op
+      }
+      const item = _items[fromWhich][fromIndex];
+      if (!item) return;
+      _items[fromWhich].splice(fromIndex, 1);
+      // Adjust insert index if we removed from earlier in same list
+      let insertAt = toIndex;
+      if (fromWhich === toWhich && fromIndex < toIndex) insertAt = toIndex - 1;
+      _items[toWhich].splice(insertAt, 0, item);
+
+      // Batched atomic write so the page doesn't flicker
+      const updates = {};
+      updates['weekendPlan/' + SAT_KEY] = _items.sat;
+      updates['weekendPlan/' + SUN_KEY] = _items.sun;
+      db.ref().update(updates);
     }
 
     // Seed the checklist with inbox items, overdue chores, manual TODOs — but only once per date.
@@ -302,9 +391,27 @@
       const inboxItems = (window.EMAIL_DATA && window.EMAIL_DATA.items) || [];
 
       if (which === 'sat') {
-        // Inbox actions: returns and other action-type items
+        // Amazon returns collapse into one line (otherwise the list bloats).
+        const amazonReturns = inboxItems.filter(it =>
+          it.type === 'return' && /amazon/i.test(it.title || '')
+        );
+        const otherReturns = inboxItems.filter(it =>
+          it.type === 'return' && !/amazon/i.test(it.title || '')
+        );
+        if (amazonReturns.length === 1) {
+          seed.push({ text: amazonReturns[0].title, done: false, source: 'gmail' });
+        } else if (amazonReturns.length > 1) {
+          seed.push({
+            text: `Amazon returns (${amazonReturns.length} items to mail)`,
+            done: false, source: 'gmail'
+          });
+        }
+        otherReturns.forEach(it => {
+          seed.push({ text: it.title, done: false, source: 'gmail' });
+        });
+        // Other inbox actions
         inboxItems.forEach(it => {
-          if (it.type === 'return' || it.type === 'action') {
+          if (it.type === 'action') {
             seed.push({ text: it.title, done: false, source: 'gmail' });
           }
         });
