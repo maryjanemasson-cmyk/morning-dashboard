@@ -121,17 +121,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
-    "summary": "Judy's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-20T00:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-20T01:45:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "\u2708 UA570 BOS \u2192 EWR",
     "location": "Boston (BOS) \u2192 Newark (EWR)",
     "description": "United Airlines 570, Terminal B\\nDepart: 7:30 AM EDT from BOS\\nArrive: 8:53 AM EDT at EWR, Terminal C",
@@ -163,28 +152,6 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
-  },
-  {
-    "summary": "Rich's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-22T21:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-22T22:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Rich's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-22T21:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-22T22:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
   },
   {
     "summary": "Nathaniel \u2014 Math",
@@ -460,15 +427,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for Zeyune 3 Pcs Spring Purple Faux...."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for CUSHIONAIRE Miami Kitten Heels...."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for Cadence Extender - Adds...."
+    },
+    {
+      "sender": "United News & Deals",
+      "subject": "Upgrade to premium cabin on your upcoming flight"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "A shipment from order 41300 has been delivered"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Enenfly Adjustable Glasses...\""
-    },
-    {
-      "sender": "Ring Team",
-      "subject": "You\u2019ve Created a New Ring Passkey"
     },
     {
       "sender": "return@amazon.com",
@@ -485,22 +468,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Dropoff confirmed for Levi's Womens Flynn Western..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for Cadence Extender - Adds..."
-    },
-    {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 28, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 25, 2026 at 9:00 AM"
     }
   ],
   "items": [
@@ -584,6 +551,34 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e2dfa0ca500386",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for Levi's Womens Flynn Western",
+      "date": "2026-05-16",
+      "id": "19e326fbbad96097",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for Zeyune 3 Pcs Spring Purple Faux",
+      "date": "2026-05-16",
+      "id": "19e326b485697d54",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for CUSHIONAIRE Miami Kitten Heels",
+      "date": "2026-05-16",
+      "id": "19e326a8a1696875",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for Cadence Extender - Adds",
+      "date": "2026-05-16",
+      "id": "19e3269e9272e7f1",
+      "sender": "return@amazon.com"
     },
     {
       "type": "return",
