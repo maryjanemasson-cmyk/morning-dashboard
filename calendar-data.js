@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reservation at Roots Ocean Prime",
+    "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOjBC7L15SBCAoFPU03UhIoyQidMdGZysw\n",
+    "startTime": "2026-05-16T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-16T18:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Roots Ocean Prime",
     "location": "",
     "description": "",
@@ -449,31 +460,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Croakies Original Standard...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Enenfly Adjustable Glasses...\""
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Endless Linen Summer"
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at Roots Ocean Prime is confirmed"
     },
     {
       "sender": "E-ZPass New Jersey Customer Service",
       "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "The just-for-you edit \ud83d\udc96"
     },
     {
       "sender": "FORM BY TWO",
@@ -490,6 +485,22 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 16 May 2026"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
+    },
+    {
+      "sender": "Rhone",
+      "subject": "The Memorial Day edit"
     }
   ],
   "items": [
