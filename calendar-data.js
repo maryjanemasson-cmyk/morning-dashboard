@@ -183,7 +183,7 @@ window.CALENDAR_EVENTS = [
     "startDate": "",
     "endTime": "2026-05-24T10:00:00-04:00",
     "endDate": "",
-    "calendar": "OTF",
+    "calendar": "iCloud",
     "colorId": ""
   },
   {
