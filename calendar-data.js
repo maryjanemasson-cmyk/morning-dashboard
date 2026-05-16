@@ -176,6 +176,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30c2e79c9db82",
+    "startTime": "2026-05-23T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-23T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Orange 60 Min 2G",
     "location": "Orangetheory Fitness - Princeton, NJ\n640 Nassau Park Blvd\nPrinceton NJ 08540",
     "description": "",
@@ -383,19 +394,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "BOSS",
-      "subject": "Destination: BOSS Summer Club"
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes May 23, 2026 at 10:00 AM"
     },
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 5/16 is ready to view"
     },
     {
       "sender": "Unroll.Me",
@@ -410,20 +417,24 @@ window.EMAIL_DATA = {
       "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (d65f52a)"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Vacation Edit"
-    },
-    {
       "sender": "Rhone",
       "subject": "The Memorial Day edit"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "A shipment from order 41300 is out for delivery"
-    },
-    {
       "sender": "PayPal",
       "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
+    },
+    {
+      "sender": "Uber Receipts",
+      "subject": "[Personal] Your Friday morning trip with Uber"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for Allegra K Women's Denim..."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for Levi's Womens Flynn Western..."
     }
   ],
   "items": [
@@ -522,6 +533,17 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e271ab899627be",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-05-23",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e30c2e79c9db82",
+      "sender": "FORM BY TWO"
     }
   ]
 };
