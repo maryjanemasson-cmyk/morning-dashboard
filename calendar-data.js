@@ -339,8 +339,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Chan Luu",
+      "subject": "The Vacation Edit"
+    },
+    {
+      "sender": "Rhone",
+      "subject": "The Memorial Day edit"
+    },
     {
       "sender": "Almina Concept",
       "subject": "A shipment from order 41300 is out for delivery"
@@ -372,14 +380,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Walpole Outdoors",
       "subject": "Turn Your Backyard Into a Summer Destination"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381197329050"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381221892101"
     }
   ],
   "items": [
