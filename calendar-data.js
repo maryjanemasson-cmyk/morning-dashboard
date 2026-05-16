@@ -176,6 +176,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Orange 60 Min 2G",
+    "location": "Orangetheory Fitness - Princeton, NJ\n640 Nassau Park Blvd\nPrinceton NJ 08540",
+    "description": "",
+    "startTime": "2026-05-24T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-24T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "OTF",
+    "colorId": ""
+  },
+  {
     "summary": "\ud83c\udfeb PRISMS \u2014 Memorial Day (No Classes)",
     "location": "",
     "description": "Memorial Day \u2014 No Classes",
@@ -372,8 +383,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "BOSS",
+      "subject": "Destination: BOSS Summer Club"
+    },
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
@@ -409,10 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Put your balance to use. Even before the brunch money\u2019s back \ud83d\udcb5"
-    },
-    {
-      "sender": "Uber Receipts",
-      "subject": "[Personal] Your Friday morning trip with Uber"
     }
   ],
   "items": [
