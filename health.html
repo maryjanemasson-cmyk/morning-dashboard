@@ -159,6 +159,51 @@
       background: none; border: none; color: #c2553a; cursor: pointer;
       font-size: 0.85rem; padding: 0.2rem 0.4rem;
     }
+    /* Manual entry inline form */
+    .manual-form {
+      display: none;
+      margin-top: 0.5rem; padding: 0.7rem;
+      border: 1px solid #ebe5dc; border-radius: 8px;
+      background: #faf8f5;
+    }
+    .manual-form.show { display: block; }
+    .manual-form-grid {
+      display: grid; gap: 0.4rem;
+      grid-template-columns: 1fr 90px 90px;
+    }
+    .manual-form-grid input {
+      border: 1px solid #ebe5dc; border-radius: 6px;
+      padding: 0.4rem 0.5rem; font-size: 0.82rem;
+      font-family: inherit; color: #3d3529; outline: none;
+      background: #fff;
+    }
+    .manual-form-grid input:focus { border-color: #c9b99a; }
+    .manual-form-actions {
+      display: flex; gap: 0.4rem; align-items: center;
+      margin-top: 0.5rem;
+    }
+    /* Planned meals card */
+    .planned-list { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+    .planned-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.5rem 0; border-bottom: 1px solid #f0ebe4;
+    }
+    .planned-item:last-child { border-bottom: none; }
+    .planned-meal-label {
+      font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1px;
+      color: #9c8b76; font-weight: 600; width: 70px; flex-shrink: 0;
+    }
+    .planned-meal-name { flex: 1; font-size: 0.85rem; color: #3d3529; }
+    .planned-meal-empty { color: #c9bfb0; font-style: italic; }
+    .planned-import {
+      font-size: 0.7rem; padding: 0.3rem 0.7rem;
+      border: 1px solid #c9b99a; background: #c9b99a; color: #fff;
+      border-radius: 14px; cursor: pointer; font-family: inherit;
+      transition: background 0.15s;
+    }
+    .planned-import:hover { background: #bfae8e; }
+    .planned-import:disabled { background: #ebe5dc; color: #9c8b76; cursor: default; border-color: #ebe5dc; }
+
     /* Photo lightbox */
     .photo-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.7);
@@ -406,6 +451,19 @@
             </div>
             <button class="clear" id="photo-clear" title="Remove photo">×</button>
           </div>
+
+          <div class="manual-form" id="manual-form">
+            <div class="manual-form-grid">
+              <input id="mf-name" type="text" placeholder="Food name (e.g. greek yogurt)" />
+              <input id="mf-cal" type="number" inputmode="numeric" placeholder="Calories" />
+              <input id="mf-protein" type="number" inputmode="numeric" placeholder="Protein (g)" />
+            </div>
+            <div class="manual-form-actions">
+              <button class="btn" id="btn-manual-save">Save</button>
+              <button class="btn secondary" id="btn-manual-cancel">Cancel</button>
+              <span id="mf-photo-note" style="font-size:0.7rem;color:#9c8b76;display:none;">Photo will be attached.</span>
+            </div>
+          </div>
           <div class="quick-add" id="quick-add"></div>
 
           <ul class="entry-list" id="food-list"></ul>
@@ -456,6 +514,14 @@
       </div>
 
       <div class="col-right">
+        <div class="card" id="planned-meals-card">
+          <div class="card-title">
+            <span><span class="icon">~</span>Today's Planned Meals</span>
+            <span style="font-size:0.65rem;color:#9c8b76;font-weight:400;font-family:'Inter',sans-serif;">from meal planner</span>
+          </div>
+          <ul class="planned-list" id="planned-list"></ul>
+        </div>
+
         <div class="card">
           <div class="card-title">
             <span><span class="icon">~</span>This Week</span>
@@ -1038,12 +1104,26 @@
       }
     };
 
-    document.getElementById('btn-manual').onclick = () => {
-      const name = prompt('Food name:');
-      if (!name) return;
-      const cal = parseInt(prompt('Calories:'));
-      if (isNaN(cal)) return;
-      const protein = parseInt(prompt('Protein (g):') || '0');
+    // Inline manual entry form (replaces 3 prompt() dialogs)
+    function openManualForm(prefill = {}) {
+      document.getElementById('mf-name').value = prefill.name || '';
+      document.getElementById('mf-cal').value = prefill.cal || '';
+      document.getElementById('mf-protein').value = prefill.protein || '';
+      document.getElementById('mf-photo-note').style.display = _pendingPhoto ? 'inline' : 'none';
+      document.getElementById('manual-form').classList.add('show');
+      document.getElementById('mf-name').focus();
+    }
+    function closeManualForm() {
+      document.getElementById('manual-form').classList.remove('show');
+    }
+    document.getElementById('btn-manual').onclick = () => openManualForm();
+    document.getElementById('btn-manual-cancel').onclick = () => closeManualForm();
+    document.getElementById('btn-manual-save').onclick = () => {
+      const name = document.getElementById('mf-name').value.trim();
+      const cal = parseInt(document.getElementById('mf-cal').value);
+      const protein = parseInt(document.getElementById('mf-protein').value || '0');
+      if (!name) { document.getElementById('mf-name').focus(); return; }
+      if (isNaN(cal)) { document.getElementById('mf-cal').focus(); return; }
       todayDay.foods = todayDay.foods || [];
       const entry = { name, cal, protein: isNaN(protein) ? 0 : protein };
       if (_pendingPhoto) {
@@ -1053,7 +1133,99 @@
       }
       todayDay.foods.push(entry);
       db.ref('health/days/' + todayStr()).set(todayDay);
+      closeManualForm();
       toast(`+${cal} cal logged`);
+    };
+    // Enter-to-save in the form
+    ['mf-name','mf-cal','mf-protein'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') document.getElementById('btn-manual-save').click();
+        else if (e.key === 'Escape') closeManualForm();
+      });
+    });
+
+    // ── Planned meals from the meal planner ──
+    // Read mealPlan/{today} + recipes{} from Firebase so we can offer an
+    // "Add to log" button per planned slot. Slots may be a recipe push key
+    // (then we look up recipe.name) or free text (e.g., "Pizza night").
+    let _mealPlanToday = {};
+    let _recipesIndex = {};
+
+    db.ref('mealPlan/' + todayStr()).on('value', snap => {
+      _mealPlanToday = snap.val() || {};
+      renderPlannedMeals();
+    });
+    db.ref('recipes').on('value', snap => {
+      _recipesIndex = snap.val() || {};
+      renderPlannedMeals();
+    });
+
+    function renderPlannedMeals() {
+      const list = document.getElementById('planned-list');
+      if (!list) return;
+      const meals = ['breakfast', 'lunch', 'dinner'];
+      const rows = meals.map(meal => {
+        const val = _mealPlanToday[meal];
+        const recipe = val ? _recipesIndex[val] : null;
+        const isRecipe = !!recipe;
+        const display = isRecipe ? recipe.name : (val || '');
+        if (!display) {
+          return `<li class="planned-item">
+            <span class="planned-meal-label">${meal[0].toUpperCase()}${meal.slice(1)}</span>
+            <span class="planned-meal-name planned-meal-empty">— nothing planned</span>
+          </li>`;
+        }
+        const safeDisplay = escapeHtml(display);
+        return `<li class="planned-item" data-meal="${meal}">
+          <span class="planned-meal-label">${meal[0].toUpperCase()}${meal.slice(1)}</span>
+          <span class="planned-meal-name">${safeDisplay}</span>
+          <button class="planned-import" onclick="importPlannedMeal('${meal}')">Add to log</button>
+        </li>`;
+      });
+      list.innerHTML = rows.join('');
+    }
+
+    window.importPlannedMeal = async (meal) => {
+      const val = _mealPlanToday[meal];
+      if (!val) return;
+      if (!profile.worker_url) { showSetupHelp(); return; }
+      const recipe = _recipesIndex[val];
+      // For recipe slots: ask the worker for "1 serving of {name}" so it gives
+      // a per-serving estimate, not the raw ingredient sum (which is the whole
+      // batch). For free-text slots: send the text as-is.
+      const description = recipe
+        ? `1 serving of ${recipe.name}`
+        : String(val);
+      // Find the import button so we can disable + show progress
+      const btn = document.querySelector(`.planned-item[data-meal="${meal}"] .planned-import`);
+      if (btn) { btn.disabled = true; btn.textContent = 'Estimating…'; }
+      try {
+        const res = await fetch(profile.worker_url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ description })
+        });
+        if (!res.ok) throw new Error('Worker returned ' + res.status);
+        const data = await res.json();
+        const items = data.items || [];
+        if (!items.length) throw new Error('No items parsed');
+        todayDay.foods = todayDay.foods || [];
+        items.forEach(item => {
+          todayDay.foods.push({
+            name: item.name,
+            cal: Math.round(item.calories || 0),
+            protein: Math.round(item.protein_g || 0),
+            source: 'planned',
+          });
+        });
+        db.ref('health/days/' + todayStr()).set(todayDay);
+        const totCal = items.reduce((s,i) => s + (i.calories||0), 0);
+        toast(`+${Math.round(totCal)} cal logged (planned ${meal})`);
+        if (btn) { btn.textContent = 'Added ✓'; }
+      } catch (err) {
+        alert('Could not estimate planned meal: ' + err.message);
+        if (btn) { btn.disabled = false; btn.textContent = 'Add to log'; }
+      }
     };
 
     function showSetupHelp() {
