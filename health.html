@@ -135,6 +135,38 @@
     .btn-row { display: flex; gap: 0.5rem; margin-top: 0.6rem; align-items: center; }
 
     .entry-list { list-style: none; margin-top: 1rem; }
+    .entry .thumb {
+      width: 38px; height: 38px; border-radius: 6px;
+      object-fit: cover; flex-shrink: 0; cursor: zoom-in;
+      border: 1px solid #ebe5dc; background: #faf5ec;
+    }
+    /* Photo button — sits inline with Log it / Manual entry buttons */
+    .btn.photo-btn {
+      padding: 0.5rem 0.75rem;
+      background: #fff; color: #6b5d4d;
+      border: 1px solid #ebe5dc;
+    }
+    .btn.photo-btn:hover { border-color: #c9b99a; background: #faf5ec; }
+    .photo-preview {
+      margin-top: 0.5rem; display: none; align-items: center; gap: 0.6rem;
+      padding: 0.5rem; border: 1px dashed #c9b99a; border-radius: 8px;
+      background: #faf5ec;
+    }
+    .photo-preview.show { display: flex; }
+    .photo-preview img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+    .photo-preview .meta { font-size: 0.75rem; color: #6b5d4d; flex: 1; }
+    .photo-preview .clear {
+      background: none; border: none; color: #c2553a; cursor: pointer;
+      font-size: 0.85rem; padding: 0.2rem 0.4rem;
+    }
+    /* Photo lightbox */
+    .photo-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+      display: none; align-items: center; justify-content: center; z-index: 9999;
+      cursor: zoom-out;
+    }
+    .photo-overlay.open { display: flex; }
+    .photo-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 8px; }
     .entry {
       display: flex; align-items: center; justify-content: space-between;
       padding: 0.55rem 0; border-bottom: 1px solid #f5f0e8;
@@ -363,6 +395,16 @@
           <div class="btn-row">
             <button class="btn" id="btn-log-food">Log it</button>
             <button class="btn secondary" id="btn-manual">Manual entry</button>
+            <button class="btn photo-btn" id="btn-photo" title="Add a photo to identify food (or attach to a manual entry)">📷 Photo</button>
+            <input type="file" id="photo-file" accept="image/*" capture="environment" style="display:none;" />
+          </div>
+          <div class="photo-preview" id="photo-preview">
+            <img id="photo-preview-img" alt="" />
+            <div class="meta">
+              <div style="font-weight:500;">Photo ready</div>
+              <div id="photo-preview-hint" style="font-size:0.7rem;color:#9c8b76;">Click "Log it" to send to the AI, or "Manual entry" to keep the photo with a typed entry.</div>
+            </div>
+            <button class="clear" id="photo-clear" title="Remove photo">×</button>
           </div>
           <div class="quick-add" id="quick-add"></div>
 
@@ -662,16 +704,20 @@
         foodList.innerHTML = '<div class="empty">No food logged yet today</div>';
         document.getElementById('food-total').style.display = 'none';
       } else {
-        foodList.innerHTML = foods.map((f, i) => `
-          <li class="entry">
+        foodList.innerHTML = foods.map((f, i) => {
+          const thumb = f.photo
+            ? `<img class="thumb" src="${f.photo}" alt="" onclick="openPhotoOverlay(this.src)" />`
+            : '';
+          return `<li class="entry" style="${f.photo ? 'gap:0.6rem;' : ''}">
+            ${thumb}
             <span class="name">${escapeHtml(f.name)}</span>
             <span class="nums">
               <span class="cal">${f.cal} cal</span>
               <span class="pro">${f.protein || 0}g</span>
             </span>
             <button class="del" onclick="deleteFood(${i})" aria-label="Delete">×</button>
-          </li>
-        `).join('');
+          </li>`;
+        }).join('');
         const totCal = foods.reduce((s,f) => s + (f.cal||0), 0);
         const totPro = foods.reduce((s,f) => s + (f.protein||0), 0);
         document.getElementById('total-cal').textContent = totCal;
@@ -881,41 +927,111 @@
       toast(`+${cal} cal burned`);
     };
 
+    // ── Photo capture for food log ──
+    // Holds the compressed thumbnail as a data: URL (~30-60 KB) until the user
+    // logs an entry, at which point it's attached to each parsed food item.
+    let _pendingPhoto = null;
+
+    function compressImage(file, maxDim = 512, quality = 0.75) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const img = new Image();
+          img.onload = () => {
+            let { width, height } = img;
+            const scale = Math.min(1, maxDim / Math.max(width, height));
+            width = Math.round(width * scale);
+            height = Math.round(height * scale);
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+            resolve(canvas.toDataURL('image/jpeg', quality));
+          };
+          img.onerror = reject;
+          img.src = e.target.result;
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    document.getElementById('btn-photo').onclick = () => {
+      document.getElementById('photo-file').click();
+    };
+    document.getElementById('photo-file').onchange = async (e) => {
+      const file = e.target.files && e.target.files[0];
+      e.target.value = ''; // allow re-selecting the same file later
+      if (!file) return;
+      try {
+        _pendingPhoto = await compressImage(file);
+        document.getElementById('photo-preview-img').src = _pendingPhoto;
+        document.getElementById('photo-preview').classList.add('show');
+      } catch (err) {
+        alert('Could not read that image.');
+      }
+    };
+    document.getElementById('photo-clear').onclick = () => {
+      _pendingPhoto = null;
+      document.getElementById('photo-preview').classList.remove('show');
+    };
+
+    window.openPhotoOverlay = (src) => {
+      const o = document.getElementById('photo-overlay');
+      document.getElementById('photo-overlay-img').src = src;
+      o.classList.add('open');
+    };
+
     // ── Log food (AI or manual) ──
     document.getElementById('btn-log-food').onclick = async () => {
       const text = document.getElementById('food-input').value.trim();
-      if (!text) return;
+      if (!text && !_pendingPhoto) return;
       if (!profile.worker_url) {
         showSetupHelp();
         return;
       }
       const btn = document.getElementById('btn-log-food');
       btn.disabled = true;
-      btn.textContent = 'Estimating…';
+      btn.textContent = _pendingPhoto ? 'Analyzing photo…' : 'Estimating…';
       try {
+        const payload = { description: text };
+        if (_pendingPhoto) {
+          // Strip the "data:image/jpeg;base64," prefix; the worker takes raw base64.
+          const m = _pendingPhoto.match(/^data:(image\/[a-zA-Z+]+);base64,(.+)$/);
+          if (m) {
+            payload.image_mime = m[1];
+            payload.image_base64 = m[2];
+          }
+        }
         const res = await fetch(profile.worker_url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ description: text })
+          body: JSON.stringify(payload)
         });
         if (!res.ok) throw new Error('Worker returned ' + res.status);
         const data = await res.json();
         const items = data.items || [];
         if (items.length === 0) throw new Error('No items parsed');
         todayDay.foods = todayDay.foods || [];
-        items.forEach(item => {
+        items.forEach((item, idx) => {
           todayDay.foods.push({
             name: item.name,
             cal: Math.round(item.calories || 0),
-            protein: Math.round(item.protein_g || 0)
+            protein: Math.round(item.protein_g || 0),
+            // Attach the photo to the first item only (avoids 4× storage when
+            // a single photo contains multiple foods).
+            ...(idx === 0 && _pendingPhoto ? { photo: _pendingPhoto } : {}),
           });
         });
         db.ref('health/days/' + todayStr()).set(todayDay);
         document.getElementById('food-input').value = '';
+        _pendingPhoto = null;
+        document.getElementById('photo-preview').classList.remove('show');
         const totCal = items.reduce((s,i) => s + (i.calories||0), 0);
         toast(`+${Math.round(totCal)} cal logged`);
       } catch (err) {
-        alert('Estimator failed: ' + err.message + '\n\nTry "Manual entry" or check the Profile → Worker URL.');
+        alert('Estimator failed: ' + err.message + '\n\nTry "Manual entry" or check the Profile → Worker URL.\n\nIf you just added the photo upgrade, redeploy the Cloudflare Worker with the updated food-worker.js.');
       } finally {
         btn.disabled = false;
         btn.textContent = 'Log it';
@@ -929,7 +1045,13 @@
       if (isNaN(cal)) return;
       const protein = parseInt(prompt('Protein (g):') || '0');
       todayDay.foods = todayDay.foods || [];
-      todayDay.foods.push({ name, cal, protein: isNaN(protein) ? 0 : protein });
+      const entry = { name, cal, protein: isNaN(protein) ? 0 : protein };
+      if (_pendingPhoto) {
+        entry.photo = _pendingPhoto;
+        _pendingPhoto = null;
+        document.getElementById('photo-preview').classList.remove('show');
+      }
+      todayDay.foods.push(entry);
       db.ref('health/days/' + todayStr()).set(todayDay);
       toast(`+${cal} cal logged`);
     };
@@ -1009,6 +1131,12 @@
       toast(`+${cal} cal, ${protein}g protein logged`);
     };
   </script>
+
+  <!-- Photo lightbox (click a thumbnail in the food log) -->
+  <div class="photo-overlay" id="photo-overlay" onclick="this.classList.remove('open')">
+    <img id="photo-overlay-img" alt="" />
+  </div>
+
 <button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
 <script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 </body>

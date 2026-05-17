@@ -41,26 +41,42 @@ export default {
       });
     }
     const description = (body.description || '').trim();
-    if (!description) {
-      return new Response(JSON.stringify({ error: 'missing description' }), {
+    const imageB64 = (body.image_base64 || '').trim();
+    const imageMime = (body.image_mime || 'image/jpeg').trim();
+
+    if (!description && !imageB64) {
+      return new Response(JSON.stringify({ error: 'missing description or image_base64' }), {
         status: 400,
         headers: { ...cors, 'Content-Type': 'application/json' },
       });
     }
 
-    const prompt = `You are a nutrition estimator. The user describes food they ate. Parse it into individual items and estimate calories and grams of protein for each.
-
-Rules:
+    const rulesBlock = `Rules:
 - Use realistic typical-portion estimates (e.g. "a slice of pizza" ≈ 285 cal).
-- If they specify a portion (half, two, large), respect it.
+- If a portion is specified or visible (half, two, large), respect it.
 - Round calories to the nearest 5; protein to the nearest gram.
 - "name" should be a concise human label, capitalized (e.g. "Turkey sandwich", "Latte with whole milk").
 - Output strictly valid JSON, no commentary.
 
-Food description: "${description}"
-
 Return JSON of this exact shape:
 {"items": [{"name": "...", "calories": 0, "protein_g": 0}]}`;
+
+    // Build the user message — either text-only or text+image.
+    const userContent = imageB64
+      ? [
+          {
+            type: 'image',
+            source: { type: 'base64', media_type: imageMime, data: imageB64 },
+          },
+          {
+            type: 'text',
+            text:
+              `You are a nutrition estimator. Look at this photo of food and parse it into individual items, estimating calories and grams of protein for each.` +
+              (description ? `\n\nThe user added this note: "${description}"` : '') +
+              `\n\n${rulesBlock}`,
+          },
+        ]
+      : `You are a nutrition estimator. The user describes food they ate. Parse it into individual items and estimate calories and grams of protein for each.\n\n${rulesBlock}\n\nFood description: "${description}"`;
 
     let apiResp;
     try {
@@ -74,7 +90,7 @@ Return JSON of this exact shape:
         body: JSON.stringify({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 600,
-          messages: [{ role: 'user', content: prompt }],
+          messages: [{ role: 'user', content: userContent }],
         }),
       });
     } catch (err) {
