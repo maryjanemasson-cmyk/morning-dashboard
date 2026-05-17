@@ -383,8 +383,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Massive WIN for Retirees \u2014 Robert Jacobs, Finance Insider",
+      "subject": "Trump\u2019s Executive Order #14155 A Massive WIN for Retirees"
+    },
+    {
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Memorial Day savings\u2b50 Up to 60% OFF"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Two Takes on Welterweight"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "All Day Short"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 523413205161"
@@ -402,28 +422,8 @@ window.EMAIL_DATA = {
       "subject": "Your shipment is out for delivery today 871657443460"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 17 May 2026"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Father's Day Gifting Is Here"
-    },
-    {
       "sender": "Abby Arad from Your Stylist Says...",
       "subject": "New hat, who dis?"
-    },
-    {
-      "sender": "FreshDirect",
-      "subject": "New Sign-in Alert, Please Verify Your Account"
-    },
-    {
-      "sender": "Mathnasium of Princeton",
-      "subject": "Payment Receipt from Mathnasium of Princeton"
-    },
-    {
-      "sender": "Jersey Shore Business Summit",
-      "subject": "You\u2019re Invited: The Jersey Shore Business Growth Summit 2026"
     }
   ],
   "items": [
