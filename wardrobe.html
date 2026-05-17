@@ -1516,15 +1516,22 @@
       renderCatalogue();
     }
 
-    // Load custom items from Firebase on startup
+    // Load custom items from Firebase. Idempotent so finishSave's local splice
+    // (which positions a new item near matching siblings) isn't duplicated when
+    // Firebase fires this listener synchronously after the same set().
     db.ref('wardrobeCustomItems').on('value', snap => {
       const custom = snap.val() || {};
-      // Remove old custom items from array
+      // Drop local custom items that no longer exist in Firebase
       for (let i = items.length - 1; i >= 0; i--) {
-        if (items[i].id && (items[i].id.startsWith('custom_') || items[i].id.match(/^C\d+$/))) items.splice(i, 1);
+        const id = items[i].id;
+        if (id && (id.startsWith('custom_') || /^C\d+$/.test(id)) && !(id in custom)) {
+          items.splice(i, 1);
+        }
       }
-      // Add current custom items
+      // Add Firebase items not already present locally
+      const existingIds = new Set(items.map(it => it && it.id).filter(Boolean));
       for (const [id, data] of Object.entries(custom)) {
+        if (existingIds.has(id)) continue;
         items.push({
           id: id,
           file: data.file || id,
