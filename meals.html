@@ -55,6 +55,14 @@
     .meal-content.empty { color:#c9bfb0; font-style:italic; cursor:pointer; }
     .meal-content.filled { cursor:pointer; }
     .meal-content.filled:hover { color:#c2553a; }
+    .meal-input {
+      flex: 1; font-size: 0.82rem; color: #3d3529;
+      background: transparent; border: 1px solid transparent;
+      border-radius: 4px; padding: 0.15rem 0.35rem; margin: -0.15rem -0.35rem;
+      font-family: inherit; outline: none; min-width: 0;
+    }
+    .meal-input::placeholder { color: #c9bfb0; font-style: italic; }
+    .meal-input:focus { border-color: #c9b99a; background: #faf5ec; }
     .meal-remove {
       font-size:0.65rem; color:#c9bfb0; cursor:pointer;
     }
@@ -107,6 +115,46 @@
     .grocery-text.done { text-decoration:line-through; color:#c9bfb0; }
     .grocery-del { font-size:0.65rem; color:#d4c5b5; cursor:pointer; }
     .grocery-del:hover { color:#c2553a; }
+    .print-btn {
+      font-size: 0.7rem; padding: 0.3rem 0.7rem;
+      border-radius: 14px; border: 1px solid #ebe5dc; background: #fff;
+      color: #6b5d4d; cursor: pointer; font-family: inherit;
+      transition: border-color 0.15s;
+    }
+    .print-btn:hover { border-color: #c9b99a; background: #faf5ec; }
+
+    @media print {
+      body { background: #fff; }
+      /* Hide everything except the grocery card */
+      body > *:not(.print-host) { display: none !important; }
+      .print-host { display: block !important; }
+      .print-host * { visibility: visible; }
+      .print-host h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.8rem; margin: 0 0 1rem 0; color: #2c2418;
+      }
+      .print-host .print-meta {
+        font-size: 0.85rem; color: #555; margin-bottom: 1rem;
+      }
+      .print-host ul { list-style: none; padding: 0; margin: 0; }
+      .print-host li {
+        padding: 0.3rem 0; border-bottom: 1px solid #e5e0d7;
+        font-size: 0.95rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .print-host li::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 14px;
+        border: 1px solid #888; border-radius: 2px;
+        flex-shrink: 0;
+      }
+      .print-host li.done {
+        color: #999; text-decoration: line-through;
+      }
+      .print-host li.done::before {
+        background: #999;
+      }
+    }
     .grocery-input-row { display:flex; gap:0.3rem; margin-bottom:0.5rem; }
     .grocery-input {
       flex:1; border:1px solid #ebe5dc; border-radius:5px;
@@ -176,8 +224,11 @@
           <div class="recipe-list" id="recipe-list"></div>
         </div>
 
-        <div class="sidebar-card">
-          <div class="sidebar-title">Grocery List</div>
+        <div class="sidebar-card" id="grocery-card">
+          <div class="sidebar-title" style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;">
+            <span>Grocery List</span>
+            <button class="print-btn" onclick="printGroceryList()" title="Print grocery list">🖨️ Print</button>
+          </div>
           <div class="grocery-input-row">
             <input type="text" class="grocery-input" id="grocery-input" placeholder="Add item..." />
             <button class="add-btn" onclick="addGroceryItem()">Add</button>
@@ -256,19 +307,33 @@
           </div>`;
 
         meals.forEach(meal => {
-          const recipeId = dayMeals[meal.toLowerCase()];
-          const recipe = recipeId ? recipes[recipeId] : null;
+          const mKey = meal.toLowerCase();
+          const slotVal = dayMeals[mKey];
+          // slotVal can be a Firebase recipe push-id (key in recipes{}) or
+          // a free-text meal the user typed.
+          const isRecipe = !!(slotVal && recipes[slotVal]);
+          const filledText = isRecipe ? recipes[slotVal].name : (slotVal || '');
 
-          if (recipe) {
+          if (filledText) {
+            const safe = String(filledText).replace(/"/g, '&quot;');
             html += `<div class="meal-slot">
               <span class="meal-label">${meal}</span>
-              <span class="meal-content filled" onclick="openSlot('${dk}','${meal.toLowerCase()}')">${recipe.name}</span>
-              <span class="meal-remove" onclick="removeMeal('${dk}','${meal.toLowerCase()}')">&times;</span>
+              ${isRecipe
+                ? `<span class="meal-content filled" onclick="openSlot('${dk}','${mKey}')">${safe}</span>`
+                : `<input class="meal-input" type="text" value="${safe}"
+                    onfocus="onSlotFocus(this)" data-dk="${dk}" data-meal="${mKey}"
+                    onkeydown="onSlotKeydown(event, this)"
+                    onblur="onSlotBlur(this)" />`}
+              <span class="meal-remove" onclick="removeMeal('${dk}','${mKey}')">&times;</span>
             </div>`;
           } else {
             html += `<div class="meal-slot">
               <span class="meal-label">${meal}</span>
-              <span class="meal-content empty" onclick="openSlot('${dk}','${meal.toLowerCase()}')">+ add meal</span>
+              <input class="meal-input" type="text" placeholder="+ type or pick a recipe"
+                data-dk="${dk}" data-meal="${mKey}"
+                onfocus="onSlotFocus(this)"
+                onkeydown="onSlotKeydown(event, this)"
+                onblur="onSlotBlur(this)" />
             </div>`;
           }
         });
@@ -308,6 +373,50 @@
     function removeMeal(dk, meal) {
       if (mealPlan[dk]) delete mealPlan[dk][meal];
       db.ref('mealPlan/' + dk + '/' + meal).remove();
+      renderWeek();
+    }
+
+    // Free-text + recipe-pick hybrid slot handlers
+    function onSlotFocus(input) {
+      _pickingSlot = { dateKey: input.dataset.dk, meal: input.dataset.meal };
+      document.getElementById('recipe-search').placeholder = `Pick recipe for ${input.dataset.meal}...`;
+      renderRecipePicker();
+    }
+    function onSlotKeydown(e, input) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (text) {
+          saveCustomMeal(text, input.dataset.dk, input.dataset.meal);
+        } else {
+          // Empty Enter: clear the slot if it was set
+          removeMeal(input.dataset.dk, input.dataset.meal);
+        }
+      } else if (e.key === 'Escape') {
+        input.blur();
+      }
+    }
+    function onSlotBlur(input) {
+      const text = input.value.trim();
+      const dk = input.dataset.dk;
+      const meal = input.dataset.meal;
+      const current = (mealPlan[dk] || {})[meal] || '';
+      const currentText = recipes[current] ? recipes[current].name : current;
+      // Only save on blur if the text actually changed (avoids fighting the
+      // recipe picker's pickRecipe() which navigates to a recipe id)
+      if (text && text !== currentText) {
+        saveCustomMeal(text, dk, meal);
+      } else if (!text && current && !recipes[current]) {
+        // User cleared a previously free-text slot
+        removeMeal(dk, meal);
+      }
+    }
+    function saveCustomMeal(text, dk, meal) {
+      if (!mealPlan[dk]) mealPlan[dk] = {};
+      mealPlan[dk][meal] = text;
+      db.ref('mealPlan/' + dk + '/' + meal).set(text);
+      _pickingSlot = null;
+      document.getElementById('recipe-search').placeholder = 'Search recipes...';
       renderWeek();
     }
 
@@ -377,6 +486,34 @@
       groceries.splice(i, 1);
       db.ref('mealGroceries').set(groceries);
       renderGroceries();
+    }
+
+    function printGroceryList() {
+      if (!groceries.length) {
+        alert('Grocery list is empty.');
+        return;
+      }
+      // Render the list into a temporary print-only container so we can
+      // hide the rest of the page via CSS without touching the live DOM.
+      let host = document.getElementById('print-host');
+      if (!host) {
+        host = document.createElement('div');
+        host.id = 'print-host';
+        host.className = 'print-host';
+        document.body.appendChild(host);
+      }
+      const today = new Date().toLocaleDateString('en-US', {
+        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
+      });
+      const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      host.innerHTML = `
+        <h1>Grocery List</h1>
+        <div class="print-meta">${today} &middot; ${groceries.length} item${groceries.length === 1 ? '' : 's'}</div>
+        <ul>
+          ${groceries.map(g => `<li class="${g.done ? 'done' : ''}">${escape(g.text)}</li>`).join('')}
+        </ul>
+      `;
+      window.print();
     }
 
     // Auto-generate groceries from this week's meals
