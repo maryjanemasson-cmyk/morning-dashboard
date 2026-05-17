@@ -233,6 +233,22 @@
     .planned-import:hover { background: #bfae8e; }
     .planned-import:disabled { background: #ebe5dc; color: #9c8b76; cursor: default; border-color: #ebe5dc; }
 
+    /* Steps row */
+    .steps-row {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0;
+    }
+    .steps-row input {
+      width: 110px;
+      border: 1px solid #ebe5dc; border-radius: 6px;
+      padding: 0.4rem 0.5rem; font-size: 1rem; color: #3d3529;
+      font-family: inherit; outline: none; background: #fff;
+      font-weight: 500;
+    }
+    .steps-row input:focus { border-color: #c9b99a; }
+    .steps-row .steps-unit { font-size: 0.75rem; color: #9c8b76; }
+    .steps-row .steps-burn { font-size: 0.75rem; color: #4a8c6f; font-weight: 500; }
+
     /* Photo lightbox */
     .photo-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.7);
@@ -509,6 +525,22 @@
         <div class="card" id="protein-boosters-card">
           <div class="card-title"><span><span class="icon">~</span>Protein Boosters</span><span style="font-size:0.65rem;color:#9c8b76;font-weight:400;font-family:'Inter',sans-serif;" id="boosters-hint">High protein, low calories</span></div>
           <div id="protein-boosters-list"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span><span class="icon">~</span>Steps</span>
+            <span style="font-size:0.65rem;color:#9c8b76;font-weight:400;font-family:'Inter',sans-serif;">from iOS Shortcut or manual</span>
+          </div>
+          <div class="steps-row">
+            <input type="number" id="steps-input" placeholder="—" inputmode="numeric" />
+            <span class="steps-unit">steps today</span>
+            <span class="steps-burn" id="steps-burn"></span>
+            <button class="btn secondary" id="btn-save-steps" style="margin-left:auto;">Save</button>
+          </div>
+          <div style="font-size:0.65rem;color:#9c8b76;margin-top:0.4rem;">
+            Tip: build an iOS Shortcut to PUT today's step count to Firebase. Recipe in your notes.
+          </div>
         </div>
 
         <div class="card">
@@ -789,6 +821,7 @@
     db.ref('health/days/' + todayStr()).on('value', snap => {
       todayDay = snap.val() || { foods: [], exercise: [], weight: null };
       renderToday();
+      renderSteps();
       renderStats();
     });
 
@@ -1172,6 +1205,39 @@
         if (e.key === 'Enter') document.getElementById('btn-manual-save').click();
         else if (e.key === 'Escape') closeManualForm();
       });
+    });
+
+    // ── Steps ──
+    // health/days/{today}/steps is a plain integer. iOS Shortcut PUTs to:
+    //   https://morning-dashboard-4c62b-default-rtdb.firebaseio.com/health/days/YYYY-MM-DD/steps.json
+    // with a raw number as the body (e.g., 8432). Manual edit on this page
+    // writes the same path.
+    function renderSteps() {
+      const input = document.getElementById('steps-input');
+      const burnEl = document.getElementById('steps-burn');
+      if (!input) return;
+      const steps = todayDay.steps || 0;
+      // Only overwrite the input if it's not currently being edited.
+      if (document.activeElement !== input) {
+        input.value = steps || '';
+      }
+      // Rough kcal estimate: steps × weight_kg × 0.0004 (≈ 0.045 kcal/step at 150 lb)
+      const weightLb = (profile && profile.weight_lb) || 150;
+      const weightKg = weightLb * 0.4536;
+      const kcal = Math.round(steps * weightKg * 0.0004);
+      burnEl.textContent = steps ? `≈ ${kcal} kcal` : '';
+    }
+
+    document.getElementById('btn-save-steps').onclick = () => {
+      const v = parseInt(document.getElementById('steps-input').value, 10);
+      if (isNaN(v) || v < 0) return;
+      todayDay.steps = v;
+      db.ref('health/days/' + todayStr() + '/steps').set(v);
+      renderSteps();
+      toast(`${v.toLocaleString()} steps saved`);
+    };
+    document.getElementById('steps-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('btn-save-steps').click();
     });
 
     // ── Recipe matching for the food input ──
