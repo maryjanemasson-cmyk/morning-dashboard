@@ -478,6 +478,12 @@
     // Keyword-based. First rule that matches wins, so order rules from most
     // specific to most generic (e.g. "ice cream" before "cream").
     const AISLE_RULES = [
+      // Priority overrides — these have to win against more generic rules below.
+      // E.g. "coconut milk" must beat the Dairy rule for plain "milk".
+      ['Pantry', ['coconut milk','almond milk','oat milk','soy milk','cashew milk','rice milk','condensed milk','evaporated milk',
+        'curry powder','curry paste','curry leaves','curry sauce','curry',
+        'spice','seasoning','rub','garam masala','five-spice','allspice',
+        'pistachio','walnut','pecan','cashew','almond','peanut','hazelnut','macadamia','brazil nut','pine nut']],
       ['Bakery', ['bread','baguette','bagel','roll','bun','tortilla','naan','pita','croissant','focaccia','sourdough','pita bread','english muffin']],
       ['Produce', [
         'apple','banana','orange','lemon','lime','grape','berry','berries','strawberr','blueberr','raspberr','blackberr','mango','peach','pear','pineapple','melon','watermelon','avocado','plum','cherry','kiwi','fig',
@@ -503,7 +509,8 @@
       ['Beverages', ['water','sparkling','seltzer','juice','soda','coke','pepsi','sprite','coffee','espresso','tea','wine','beer','cocktail','tequila','vodka','gin','rum','whiskey','bourbon','kombucha','lemonade','smoothie']],
       ['Household', ['paper towel','tissue','toilet paper','napkin','foil','plastic wrap','zip','soap','detergent','dish soap','dishwasher','laundry','sponge','cleaner','trash bag','garbage bag','battery','light bulb']],
     ];
-    const AISLE_ORDER = ['Produce','Bakery','Meat & Seafood','Dairy & Eggs','Frozen','Pantry','Snacks','Beverages','Household','Other'];
+    // Unmatched items fall into Pantry (user prefers Pantry and Other merged).
+    const AISLE_ORDER = ['Produce','Bakery','Meat & Seafood','Dairy & Eggs','Frozen','Pantry','Snacks','Beverages','Household'];
 
     function classifyGroceryItem(text) {
       const t = String(text || '').toLowerCase();
@@ -515,7 +522,7 @@
           if (re.test(t)) return aisle;
         }
       }
-      return 'Other';
+      return 'Pantry';
     }
 
     function groupGroceriesByAisle(items) {
