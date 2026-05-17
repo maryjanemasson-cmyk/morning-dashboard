@@ -383,8 +383,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "PowerPro Electric",
+      "subject": "\ud83d\udcac PowerPro Electric sent you a message"
+    },
+    {
+      "sender": "Thumbtack",
+      "subject": "\ud83d\udc4c Next steps on your search for an Electrician"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 381334116033"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 871657443460"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Take a good look"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Enenfly Adjustable Glasses...\""
+    },
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "service@paypal.com",
+      "subject": "You sent a $526.54\u00a0CAD payment"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 523413205161"
@@ -392,38 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Aritzia",
       "subject": "Your package has arrived #D2217381"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "Akshar HVAC",
-      "subject": "Scheduled visit reminder by Akshar HVAC - May 18, 2026"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Small shops are always in bloom \ud83c\udf38"
-    },
-    {
-      "sender": "Massive WIN for Retirees \u2014 Robert Jacobs, Finance Insider",
-      "subject": "Trump\u2019s Executive Order #14155 A Massive WIN for Retirees"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Two Takes on Welterweight"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 381334116033"
-    },
-    {
-      "sender": "Abby Arad from Your Stylist Says...",
-      "subject": "New hat, who dis?"
-    },
-    {
-      "sender": "FreshDirect",
-      "subject": "New Sign-in Alert, Please Verify Your Account"
     }
   ],
   "items": [
