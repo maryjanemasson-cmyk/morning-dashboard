@@ -405,6 +405,21 @@
     const db = firebase.database();
 
     let recipes = {};
+
+    // Normalize a recipe.image value to a URL string.
+    // Imported recipes (JSON-LD) sometimes arrive with image as {url,width,height}
+    // or [url1, url2]. The bare object form, if left to be set on an input via
+    // .value =, coerces to the literal string "[object Object]" — which then
+    // gets saved back to Firebase on the next edit. Normalize everywhere.
+    function imageUrlOf(v) {
+      if (!v) return '';
+      if (typeof v === 'string') {
+        return v === '[object Object]' ? '' : v;
+      }
+      if (Array.isArray(v)) return imageUrlOf(v[0]);
+      if (typeof v === 'object') return imageUrlOf(v.url || v.src || v.contentUrl || '');
+      return '';
+    }
     let editingId = null;
     let currentRating = 0;
     let activeFilter = 'All';
@@ -474,7 +489,7 @@
         if (r.servings) meta.push('Serves: ' + r.servings);
 
         html += `<div class="recipe-card" onclick="viewRecipe('${id}')">
-          ${r.image ? '<img class="rc-image" src="'+r.image+'" alt="" onerror="this.style.display=\'none\'" />' : ''}
+          ${imageUrlOf(r.image) ? '<img class="rc-image" src="'+imageUrlOf(r.image)+'" alt="" onerror="this.style.display=\'none\'" />' : ''}
           <div class="rc-title">${r.name || 'Untitled'}</div>
           <div class="rc-tags">${tagHtml}</div>
           ${meta.length ? '<div class="rc-meta">' + meta.join(' &middot; ') + '</div>' : ''}
@@ -502,7 +517,7 @@
       tags.forEach(t => tagHtml += `<span class="rc-tag">${t}</span>`);
 
       let html = '';
-      if (r.image) html += `<img src="${r.image}" alt="" style="width:100%;max-height:250px;object-fit:cover;border-radius:8px;margin-bottom:1rem;" onerror="this.style.display='none'" />`;
+      { const _u = imageUrlOf(r.image); if (_u) html += `<img src="${_u}" alt="" style="width:100%;max-height:250px;object-fit:cover;border-radius:8px;margin-bottom:1rem;" onerror="this.style.display='none'" />`; }
       html += `<div class="modal-title" style="margin-bottom:0.5rem">${r.name}</div>`;
       html += `<div style="margin-bottom:1rem">${tagHtml}</div>`;
       html += `<div class="view-stars" style="margin-bottom:1rem">${stars}</div>`;
@@ -767,7 +782,7 @@
       document.getElementById('f-tags').value = r.tags || '';
       document.getElementById('f-ingredients').value = r.ingredients || '';
       document.getElementById('f-instructions').value = r.instructions || '';
-      document.getElementById('f-image').value = r.image || '';
+      document.getElementById('f-image').value = imageUrlOf(r.image);
       document.getElementById('f-source').value = r.source || '';
       document.getElementById('f-notes').value = r.notes || '';
       updateStarPicker();
