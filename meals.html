@@ -118,6 +118,13 @@
     }
     .grocery-text:focus { background:#faf5ec; }
     .grocery-text.done { text-decoration:line-through; color:#c9bfb0; }
+    .aisle-header {
+      font-size: 0.62rem; font-weight: 600;
+      color: #9c8b76; text-transform: uppercase; letter-spacing: 1px;
+      padding: 0.5rem 0 0.2rem; margin-top: 0.3rem;
+      border-bottom: 1px solid #ebe5dc;
+    }
+    .aisle-header:first-child { margin-top: 0; padding-top: 0.1rem; }
     .grocery-del { font-size:0.65rem; color:#d4c5b5; cursor:pointer; }
     .grocery-del:hover { color:#c2553a; }
     .print-btn {
@@ -137,6 +144,12 @@
       .print-host h1 {
         font-family: 'Playfair Display', Georgia, serif;
         font-size: 1.8rem; margin: 0 0 1rem 0; color: #2c2418;
+      }
+      .print-host h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.1rem; margin: 1rem 0 0.3rem 0; color: #555;
+        text-transform: uppercase; letter-spacing: 1.5px;
+        border-bottom: 1px solid #ccc; padding-bottom: 0.2rem;
       }
       .print-host .print-meta {
         font-size: 0.85rem; color: #555; margin-bottom: 1rem;
@@ -461,22 +474,85 @@
       document.getElementById('recipe-list').innerHTML = html;
     }
 
-    // Grocery list
+    // Grocery list — aisle classification
+    // Keyword-based. First rule that matches wins, so order rules from most
+    // specific to most generic (e.g. "ice cream" before "cream").
+    const AISLE_RULES = [
+      ['Bakery', ['bread','baguette','bagel','roll','bun','tortilla','naan','pita','croissant','focaccia','sourdough','pita bread','english muffin']],
+      ['Produce', [
+        'apple','banana','orange','lemon','lime','grape','berry','berries','strawberr','blueberr','raspberr','blackberr','mango','peach','pear','pineapple','melon','watermelon','avocado','plum','cherry','kiwi','fig',
+        'lettuce','spinach','kale','arugula','romaine','cabbage','broccoli','cauliflower','asparagus','zucchini','squash','pumpkin','cucumber','celery','carrot','radish','beet','sweet potato','potato','onion','shallot','scallion','spring onion','green onion','leek','garlic','ginger','chili','chile','pepper','jalapen','tomato','mushroom','corn','peas','green bean','snap pea','okra','eggplant','fennel','parsnip','turnip','sprout','endive','watercress','collard','chard',
+        'basil','parsley','cilantro','coriander','mint','rosemary','thyme','sage','dill','tarragon','chive','herb'
+      ]],
+      ['Meat & Seafood', [
+        'chicken','beef','pork','sausage','bacon','turkey','duck','lamb','veal','steak','ground beef','mince','meatball','ribs','prosciutto','salami','pepperoni','ham','hot dog',
+        'fish','salmon','tuna','cod','shrimp','prawn','crab','lobster','scallop','mussel','clam','oyster','sardine','anchovy','tilapia','halibut','trout'
+      ]],
+      ['Dairy & Eggs', [
+        'milk','cream','half-and-half','butter','margarine','cheese','cheddar','mozzarella','parmesan','feta','brie','goat cheese','cottage cheese','ricotta','yogurt','yoghurt','greek yogurt','sour cream','crème fraîche','creme fraiche','egg','eggs','tofu','tempeh'
+      ]],
+      ['Frozen', ['frozen','ice cream','ice-cream','popsicle','sorbet','gelato','frozen pizza','frozen vegetable']],
+      ['Pantry', [
+        'flour','sugar','salt','pepper','spice','seasoning','oil','olive oil','vegetable oil','canola','sesame oil','vinegar','soy sauce','tamari','fish sauce','oyster sauce','sriracha','hot sauce','ketchup','mustard','mayo','mayonnaise','salsa','pasta sauce','marinara','tomato sauce','broth','stock','bouillon','tomato paste','coconut milk','peanut butter','almond butter','jam','jelly','honey','maple syrup','baking powder','baking soda','yeast','vanilla',
+        'pasta','spaghetti','noodle','penne','linguine','rice','quinoa','couscous','barley','farro','oat','cereal','granola',
+        'bean','lentil','chickpea','tin','can','canned','tinned',
+        'nut','almond','walnut','pecan','cashew','pistachio','peanut','seed','sesame','sunflower','pumpkin seed','flax',
+        'chocolate','cocoa','chia'
+      ]],
+      ['Snacks', ['chip','cracker','cookie','pretzel','popcorn','candy','bar','protein bar','granola bar']],
+      ['Beverages', ['water','sparkling','seltzer','juice','soda','coke','pepsi','sprite','coffee','espresso','tea','wine','beer','cocktail','tequila','vodka','gin','rum','whiskey','bourbon','kombucha','lemonade','smoothie']],
+      ['Household', ['paper towel','tissue','toilet paper','napkin','foil','plastic wrap','zip','soap','detergent','dish soap','dishwasher','laundry','sponge','cleaner','trash bag','garbage bag','battery','light bulb']],
+    ];
+    const AISLE_ORDER = ['Produce','Bakery','Meat & Seafood','Dairy & Eggs','Frozen','Pantry','Snacks','Beverages','Household','Other'];
+
+    function classifyGroceryItem(text) {
+      const t = String(text || '').toLowerCase();
+      for (const [aisle, keywords] of AISLE_RULES) {
+        for (const k of keywords) {
+          // Word-boundary-ish: match if keyword appears as a whole word
+          // (avoids "pepper" matching "peppermint", though plural -s still hits)
+          const re = new RegExp('(^|[^a-z])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(s|es)?($|[^a-z])');
+          if (re.test(t)) return aisle;
+        }
+      }
+      return 'Other';
+    }
+
+    function groupGroceriesByAisle(items) {
+      const buckets = {};
+      items.forEach((item, originalIdx) => {
+        const aisle = classifyGroceryItem(item.text);
+        if (!buckets[aisle]) buckets[aisle] = [];
+        buckets[aisle].push({ item, originalIdx });
+      });
+      return AISLE_ORDER
+        .filter(a => buckets[a] && buckets[a].length)
+        .map(a => ({ aisle: a, entries: buckets[a] }));
+    }
+
     function escapeGroceryHtml(s) {
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
     function renderGroceries() {
+      if (!groceries.length) {
+        document.getElementById('grocery-list').innerHTML = '';
+        return;
+      }
+      const groups = groupGroceriesByAisle(groceries);
       let html = '';
-      groceries.forEach((item, i) => {
-        html += `<div class="grocery-item">
-          <div class="grocery-cb ${item.done?'checked':''}" onclick="toggleGrocery(${i})">${item.done?'\u2713':''}</div>
-          <span class="grocery-text ${item.done?'done':''}"
-            contenteditable="true" spellcheck="false"
-            data-original="${escapeGroceryHtml(item.text)}"
-            onblur="saveGroceryEdit(${i}, this)"
-            onkeydown="onGroceryKeydown(event, ${i}, this)">${escapeGroceryHtml(item.text)}</span>
-          <span class="grocery-del" onclick="deleteGrocery(${i})">\u2715</span>
-        </div>`;
+      groups.forEach(g => {
+        html += `<div class="aisle-header">${g.aisle}</div>`;
+        g.entries.forEach(({ item, originalIdx: i }) => {
+          html += `<div class="grocery-item">
+            <div class="grocery-cb ${item.done?'checked':''}" onclick="toggleGrocery(${i})">${item.done?'\u2713':''}</div>
+            <span class="grocery-text ${item.done?'done':''}"
+              contenteditable="true" spellcheck="false"
+              data-original="${escapeGroceryHtml(item.text)}"
+              onblur="saveGroceryEdit(${i}, this)"
+              onkeydown="onGroceryKeydown(event, ${i}, this)">${escapeGroceryHtml(item.text)}</span>
+            <span class="grocery-del" onclick="deleteGrocery(${i})">\u2715</span>
+          </div>`;
+        });
       });
       document.getElementById('grocery-list').innerHTML = html;
     }
@@ -503,12 +579,17 @@
       }
     }
 
-    // Copy the grocery list to the clipboard as plain text (markdown-ish).
+    // Copy the grocery list to the clipboard as plain text (markdown-ish),
+    // grouped by aisle so it pastes neatly into Notes or a message.
     function copyGroceryList() {
       if (!groceries.length) { alert('Grocery list is empty.'); return; }
-      const text = groceries
-        .map(g => (g.done ? '[x] ' : '[ ] ') + g.text)
-        .join('\n');
+      const groups = groupGroceriesByAisle(groceries);
+      const text = groups.map(g => {
+        const lines = g.entries.map(({ item }) =>
+          (item.done ? '[x] ' : '[ ] ') + item.text
+        );
+        return `## ${g.aisle}\n${lines.join('\n')}`;
+      }).join('\n\n');
       const finish = () => {
         const btn = document.getElementById('btn-copy-grocery');
         if (!btn) return;
@@ -574,12 +655,15 @@
         weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
       });
       const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      const groups = groupGroceriesByAisle(groceries);
+      const groupHtml = groups.map(g => `
+        <h2>${escape(g.aisle)}</h2>
+        <ul>${g.entries.map(({ item }) => `<li class="${item.done ? 'done' : ''}">${escape(item.text)}</li>`).join('')}</ul>
+      `).join('');
       host.innerHTML = `
         <h1>Grocery List</h1>
         <div class="print-meta">${today} &middot; ${groceries.length} item${groceries.length === 1 ? '' : 's'}</div>
-        <ul>
-          ${groceries.map(g => `<li class="${g.done ? 'done' : ''}">${escape(g.text)}</li>`).join('')}
-        </ul>
+        ${groupHtml}
       `;
       window.print();
     }
