@@ -383,8 +383,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Akshar HVAC",
+      "subject": "Scheduled visit reminder by Akshar HVAC - May 18, 2026"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Small shops are always in bloom \ud83c\udf38"
+    },
     {
       "sender": "Massive WIN for Retirees \u2014 Robert Jacobs, Finance Insider",
       "subject": "Trump\u2019s Executive Order #14155 A Massive WIN for Retirees"
@@ -416,14 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 381334116033"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 871657443460"
-    },
-    {
-      "sender": "Abby Arad from Your Stylist Says...",
-      "subject": "New hat, who dis?"
     }
   ],
   "items": [
