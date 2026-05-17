@@ -159,6 +159,35 @@
       background: none; border: none; color: #c2553a; cursor: pointer;
       font-size: 0.85rem; padding: 0.2rem 0.4rem;
     }
+    /* Recipe suggestion chips that appear as user types */
+    .recipe-suggestions {
+      display: none; flex-wrap: wrap; gap: 0.3rem;
+      margin: 0.4rem 0 0; padding: 0.4rem 0.5rem;
+      border: 1px dashed #c9b99a; border-radius: 8px;
+      background: #faf5ec;
+    }
+    .recipe-suggestions.show { display: flex; }
+    .recipe-suggestions .label {
+      font-size: 0.65rem; color: #9c8b76; width: 100%;
+      text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
+    }
+    .recipe-chip {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: #fff; border: 1px solid #c9b99a; color: #6b5d4d;
+      font-size: 0.78rem; padding: 0.3rem 0.6rem;
+      border-radius: 16px; cursor: pointer; font-family: inherit;
+      transition: all 0.15s;
+    }
+    .recipe-chip:hover { background: #c9b99a; color: #fff; }
+    .recipe-chip .nutri {
+      font-size: 0.7rem; color: #9c8b76;
+    }
+    .recipe-chip:hover .nutri { color: #faf5ec; }
+    .recipe-chip.has-cache { border-color: #4a8c6f; }
+    .recipe-chip.has-cache .nutri { color: #4a8c6f; }
+    .recipe-chip.has-cache:hover { background: #4a8c6f; }
+    .recipe-chip.has-cache:hover .nutri { color: #e8f5e8; }
+
     /* Manual entry inline form */
     .manual-form {
       display: none;
@@ -436,6 +465,7 @@
         <div class="card">
           <div class="card-title"><span><span class="icon">~</span>Log Food</span></div>
           <textarea id="food-input" class="food-input" placeholder="What did you eat? e.g. greek yogurt with berries, latte, half a turkey sandwich"></textarea>
+          <div id="recipe-suggestions" class="recipe-suggestions"></div>
           <div class="food-hint" id="food-hint">AI estimator: not yet configured. <a href="#" id="setup-link" style="color:#6b5d4d;">Set up →</a></div>
           <div class="btn-row">
             <button class="btn" id="btn-log-food">Log it</button>
@@ -1144,6 +1174,113 @@
       });
     });
 
+    // ── Recipe matching for the food input ──
+    // When the user types in food-input, show matching recipes as chips.
+    // Clicking a chip logs that recipe. If the recipe has cached nutrition
+    // (recipes/{id}/nutrition.{cal,protein}), it logs instantly. Otherwise
+    // it goes through the Worker like a normal estimate and caches the
+    // result for next time.
+    const foodInputEl = document.getElementById('food-input');
+    let _recipeSuggestTimer = null;
+    foodInputEl.addEventListener('input', () => {
+      clearTimeout(_recipeSuggestTimer);
+      _recipeSuggestTimer = setTimeout(renderRecipeSuggestions, 100);
+    });
+
+    function renderRecipeSuggestions() {
+      const q = (foodInputEl.value || '').trim().toLowerCase();
+      const box = document.getElementById('recipe-suggestions');
+      if (q.length < 2) { box.classList.remove('show'); box.innerHTML = ''; return; }
+      // Score recipes by name match (substring of q or q substring of name)
+      const candidates = Object.entries(_recipesIndex)
+        .map(([id, r]) => {
+          if (!r || !r.name) return null;
+          const name = String(r.name).toLowerCase();
+          let score = 0;
+          if (name === q) score = 100;
+          else if (name.startsWith(q)) score = 80;
+          else if (name.includes(q)) score = 60;
+          else if (q.split(/\s+/).some(t => t.length >= 3 && name.includes(t))) score = 30;
+          if (!score) return null;
+          return { id, recipe: r, score };
+        })
+        .filter(Boolean)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5);
+      if (!candidates.length) { box.classList.remove('show'); box.innerHTML = ''; return; }
+      let html = '<span class="label">Matches in your recipes — click to log</span>';
+      html += candidates.map(c => {
+        const n = c.recipe.nutrition;
+        const hasCache = n && (n.cal || n.protein);
+        const nutri = hasCache
+          ? `<span class="nutri">${n.cal}c · ${n.protein || 0}p</span>`
+          : `<span class="nutri">estimate</span>`;
+        return `<button class="recipe-chip ${hasCache ? 'has-cache' : ''}" onclick="logFromRecipe('${c.id}')">
+          ${escapeHtml(c.recipe.name)} ${nutri}
+        </button>`;
+      }).join('');
+      box.innerHTML = html;
+      box.classList.add('show');
+    }
+
+    window.logFromRecipe = async (recipeId) => {
+      const recipe = _recipesIndex[recipeId];
+      if (!recipe) return;
+      const n = recipe.nutrition;
+      if (n && (n.cal || n.protein)) {
+        // Use cached nutrition — instant log, no Worker call
+        todayDay.foods = todayDay.foods || [];
+        const entry = { name: recipe.name, cal: Math.round(n.cal || 0), protein: Math.round(n.protein || 0), source: 'recipe' };
+        if (_pendingPhoto) {
+          entry.photo = _pendingPhoto;
+          _pendingPhoto = null;
+          document.getElementById('photo-preview').classList.remove('show');
+        }
+        todayDay.foods.push(entry);
+        db.ref('health/days/' + todayStr()).set(todayDay);
+        foodInputEl.value = '';
+        document.getElementById('recipe-suggestions').classList.remove('show');
+        toast(`+${entry.cal} cal logged`);
+        return;
+      }
+      // No cache — estimate via Worker and save back for next time
+      if (!profile.worker_url) { showSetupHelp(); return; }
+      try {
+        const res = await fetch(profile.worker_url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ description: `1 serving of ${recipe.name}` })
+        });
+        if (!res.ok) throw new Error('Worker returned ' + res.status);
+        const data = await res.json();
+        const items = data.items || [];
+        if (!items.length) throw new Error('No items parsed');
+        const totalCal = items.reduce((s, i) => s + (i.calories || 0), 0);
+        const totalPro = items.reduce((s, i) => s + (i.protein_g || 0), 0);
+        // Cache it
+        db.ref('recipes/' + recipeId + '/nutrition').set({
+          cal: Math.round(totalCal),
+          protein: Math.round(totalPro),
+          ts: Date.now()
+        });
+        // Log as a single entry under the recipe name
+        todayDay.foods = todayDay.foods || [];
+        const entry = { name: recipe.name, cal: Math.round(totalCal), protein: Math.round(totalPro), source: 'recipe' };
+        if (_pendingPhoto) {
+          entry.photo = _pendingPhoto;
+          _pendingPhoto = null;
+          document.getElementById('photo-preview').classList.remove('show');
+        }
+        todayDay.foods.push(entry);
+        db.ref('health/days/' + todayStr()).set(todayDay);
+        foodInputEl.value = '';
+        document.getElementById('recipe-suggestions').classList.remove('show');
+        toast(`+${Math.round(totalCal)} cal logged (cached for next time)`);
+      } catch (err) {
+        alert('Estimator failed: ' + err.message);
+      }
+    };
+
     // ── Planned meals from the meal planner ──
     // Read mealPlan/{today} + recipes{} from Firebase so we can offer an
     // "Add to log" button per planned slot. Slots may be a recipe push key
@@ -1190,14 +1327,28 @@
       if (!val) return;
       if (!profile.worker_url) { showSetupHelp(); return; }
       const recipe = _recipesIndex[val];
-      // For recipe slots: ask the worker for "1 serving of {name}" so it gives
-      // a per-serving estimate, not the raw ingredient sum (which is the whole
-      // batch). For free-text slots: send the text as-is.
+      // If this is a recipe slot AND we have cached nutrition, use it.
+      const cached = recipe && recipe.nutrition;
+      const btn = document.querySelector(`.planned-item[data-meal="${meal}"] .planned-import`);
+      if (cached && (cached.cal || cached.protein)) {
+        todayDay.foods = todayDay.foods || [];
+        todayDay.foods.push({
+          name: recipe.name,
+          cal: Math.round(cached.cal || 0),
+          protein: Math.round(cached.protein || 0),
+          source: 'planned-recipe',
+        });
+        db.ref('health/days/' + todayStr()).set(todayDay);
+        toast(`+${Math.round(cached.cal)} cal logged (planned ${meal})`);
+        if (btn) { btn.textContent = 'Added ✓'; btn.disabled = true; }
+        return;
+      }
+      // For recipe slots without cache: ask the worker for "1 serving of {name}"
+      // so it gives a per-serving estimate, not the raw ingredient sum.
+      // For free-text slots: send the text as-is.
       const description = recipe
         ? `1 serving of ${recipe.name}`
         : String(val);
-      // Find the import button so we can disable + show progress
-      const btn = document.querySelector(`.planned-item[data-meal="${meal}"] .planned-import`);
       if (btn) { btn.disabled = true; btn.textContent = 'Estimating…'; }
       try {
         const res = await fetch(profile.worker_url, {
@@ -1209,6 +1360,16 @@
         const data = await res.json();
         const items = data.items || [];
         if (!items.length) throw new Error('No items parsed');
+        const totCal = items.reduce((s,i) => s + (i.calories||0), 0);
+        const totPro = items.reduce((s,i) => s + (i.protein_g||0), 0);
+        // Cache nutrition on the recipe so next time it's instant.
+        if (recipe) {
+          db.ref('recipes/' + val + '/nutrition').set({
+            cal: Math.round(totCal),
+            protein: Math.round(totPro),
+            ts: Date.now()
+          });
+        }
         todayDay.foods = todayDay.foods || [];
         items.forEach(item => {
           todayDay.foods.push({
@@ -1219,7 +1380,6 @@
           });
         });
         db.ref('health/days/' + todayStr()).set(todayDay);
-        const totCal = items.reduce((s,i) => s + (i.calories||0), 0);
         toast(`+${Math.round(totCal)} cal logged (planned ${meal})`);
         if (btn) { btn.textContent = 'Added ✓'; }
       } catch (err) {
