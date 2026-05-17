@@ -1,60 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-16T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-16T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e1301256f2f0aa",
-    "startTime": "2026-05-16T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-16T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "NJ irrigation",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-16T12:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-16T15:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at Roots Ocean Prime",
-    "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOjBC7L15SBCAoFPU03UhIoyQidMdGZysw\n",
-    "startTime": "2026-05-16T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-16T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Roots Ocean Prime",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-16T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-16T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Lagree - Foundations - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e1301ba8f451f5",
@@ -284,6 +229,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-30T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-30T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -427,11 +383,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "LinkedIn",
-      "subject": "You have 2 new invitations"
+      "sender": "FreshDirect",
+      "subject": "New Sign-in Alert, Please Verify Your Account"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "What I learned from my favourite books"
+    },
+    {
+      "sender": "Mathnasium of Princeton",
+      "subject": "Payment Receipt from Mathnasium of Princeton"
+    },
+    {
+      "sender": "Jersey Shore Business Summit",
+      "subject": "You\u2019re Invited: The Jersey Shore Business Growth Summit 2026"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on May 17, 2026"
     },
     {
       "sender": "Venmo",
@@ -452,22 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Dropoff confirmed for CUSHIONAIRE Miami Kitten Heels..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for Levi's Womens Flynn Western..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for Cadence Extender - Adds..."
-    },
-    {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 28, 2026 at 6:00 AM"
     }
   ],
   "items": [
@@ -521,49 +477,10 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-05-16",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e1301256f2f0aa",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Enenfly Adjustable Glasses...\"",
-      "date": "2026-05-16",
-      "id": "19e3209cbe90b832",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Your package will be delivered soon D2217381",
-      "date": "2026-05-16",
-      "id": "19e2ef62f6ce9c44",
-      "sender": "Aritzia"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #381334116033",
-      "date": "2026-05-16",
-      "id": "19e2dfa0ca500386",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
       "type": "return",
       "title": "Mail Amazon return: Advance refund issued for Zeyune 3 Pcs Spring Purple Faux",
       "date": "2026-05-16",
       "id": "19e326b485697d54",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for CUSHIONAIRE Miami Kitten Heels",
-      "date": "2026-05-16",
-      "id": "19e326a8a1696875",
       "sender": "return@amazon.com"
     },
     {
