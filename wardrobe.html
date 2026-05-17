@@ -1475,12 +1475,18 @@
         if (bestIdx === -1) bestIdx = items.length;
         items.splice(bestIdx, 0, newItem);
 
-        // Save the new order to Firebase for the category view
+        // Save the new order to Firebase for the category view only.
+        // We intentionally don't write wardrobeOrder/all here: when a filter
+        // is active, items[] is sorted by that filter's order with non-matching
+        // items getting a 99999 fallback index — so items.map(id) would write
+        // a corrupted global order that scrambles other categories on the
+        // outfit-gallery Add Piece dropdown. The category-specific order is
+        // what matters for "right place" placement; the 'all' view falls back
+        // to the static catalogue order with custom items spliced in by
+        // category in outfit-gallery's loader.
         const catKey = category.replace(/[.#$/\[\]]/g, '_');
         const catItems = items.filter(it => it.category === category).map(it => it.id);
         db.ref('wardrobeOrder/' + catKey).set(catItems);
-        // Also update 'all' order
-        db.ref('wardrobeOrder/all').set(items.map(it => it.id));
 
         // Close modal and reset
         document.getElementById('add-item-modal').classList.remove('open');

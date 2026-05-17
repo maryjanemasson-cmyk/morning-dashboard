@@ -289,7 +289,10 @@
       for (let i = baseItems.length - 1; i >= 0; i--) {
         if (baseItems[i].id && (baseItems[i].id.startsWith('custom_') || /^C\d+$/.test(baseItems[i].id))) baseItems.splice(i, 1);
       }
-      // Insert custom items next to matching category items
+      // Insert custom items next to similar items — mirror the smart-insert
+      // logic from wardrobe.html so the Add Piece dropdown lands new items
+      // near their siblings (same category + color, then category + subcategory,
+      // then category, then end).
       for (const [id, data] of Object.entries(custom)) {
         const newItem = {
           id: id,
@@ -300,10 +303,29 @@
           colors: data.colors || [],
           _customImage: data.image
         };
-        // Find last item with same category and insert after it
+        const newColors = (newItem.colors || []).map(c => (c || '').toLowerCase());
         let insertIdx = -1;
-        for (let j = baseItems.length - 1; j >= 0; j--) {
-          if (baseItems[j].category === newItem.category) { insertIdx = j + 1; break; }
+        // 1. Same category AND same color
+        if (newColors.length) {
+          for (let j = baseItems.length - 1; j >= 0; j--) {
+            const it = baseItems[j];
+            if (it.category !== newItem.category) continue;
+            const itColors = (it.colors || []).map(c => (c || '').toLowerCase());
+            if (itColors.some(c => newColors.includes(c))) { insertIdx = j + 1; break; }
+          }
+        }
+        // 2. Same category + subcategory
+        if (insertIdx === -1) {
+          for (let j = baseItems.length - 1; j >= 0; j--) {
+            if (baseItems[j].category === newItem.category &&
+                baseItems[j].subcategory === newItem.subcategory) { insertIdx = j + 1; break; }
+          }
+        }
+        // 3. Same category
+        if (insertIdx === -1) {
+          for (let j = baseItems.length - 1; j >= 0; j--) {
+            if (baseItems[j].category === newItem.category) { insertIdx = j + 1; break; }
+          }
         }
         if (insertIdx === -1) insertIdx = baseItems.length;
         baseItems.splice(insertIdx, 0, newItem);
