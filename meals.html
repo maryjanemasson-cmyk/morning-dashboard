@@ -111,7 +111,12 @@
       background:#fff; font-size:0.55rem; color:transparent;
     }
     .grocery-cb.checked { background:#c9b99a; color:#fff; border-color:#c9b99a; }
-    .grocery-text { flex:1; }
+    .grocery-text {
+      flex:1; cursor:text;
+      padding:0.1rem 0.3rem; margin:-0.1rem -0.3rem;
+      border-radius:3px; outline:none;
+    }
+    .grocery-text:focus { background:#faf5ec; }
     .grocery-text.done { text-decoration:line-through; color:#c9bfb0; }
     .grocery-del { font-size:0.65rem; color:#d4c5b5; cursor:pointer; }
     .grocery-del:hover { color:#c2553a; }
@@ -225,9 +230,12 @@
         </div>
 
         <div class="sidebar-card" id="grocery-card">
-          <div class="sidebar-title" style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;">
+          <div class="sidebar-title" style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;flex-wrap:wrap;">
             <span>Grocery List</span>
-            <button class="print-btn" onclick="printGroceryList()" title="Print grocery list">🖨️ Print</button>
+            <div style="display:flex;gap:0.3rem;">
+              <button class="print-btn" id="btn-copy-grocery" onclick="copyGroceryList()" title="Copy as text">📋 Copy</button>
+              <button class="print-btn" onclick="printGroceryList()" title="Print grocery list">🖨️ Print</button>
+            </div>
           </div>
           <div class="grocery-input-row">
             <input type="text" class="grocery-input" id="grocery-input" placeholder="Add item..." />
@@ -454,16 +462,76 @@
     }
 
     // Grocery list
+    function escapeGroceryHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
     function renderGroceries() {
       let html = '';
       groceries.forEach((item, i) => {
         html += `<div class="grocery-item">
           <div class="grocery-cb ${item.done?'checked':''}" onclick="toggleGrocery(${i})">${item.done?'\u2713':''}</div>
-          <span class="grocery-text ${item.done?'done':''}">${item.text}</span>
+          <span class="grocery-text ${item.done?'done':''}"
+            contenteditable="true" spellcheck="false"
+            data-original="${escapeGroceryHtml(item.text)}"
+            onblur="saveGroceryEdit(${i}, this)"
+            onkeydown="onGroceryKeydown(event, ${i}, this)">${escapeGroceryHtml(item.text)}</span>
           <span class="grocery-del" onclick="deleteGrocery(${i})">\u2715</span>
         </div>`;
       });
       document.getElementById('grocery-list').innerHTML = html;
+    }
+
+    function saveGroceryEdit(i, el) {
+      const newText = el.textContent.trim();
+      const orig = el.dataset.original || '';
+      if (!newText) {
+        // User cleared the text \u2192 delete the item
+        groceries.splice(i, 1);
+        db.ref('mealGroceries').set(groceries);
+        renderGroceries();
+        return;
+      }
+      if (newText === orig) return;
+      groceries[i].text = newText;
+      db.ref('mealGroceries').set(groceries);
+    }
+    function onGroceryKeydown(e, i, el) {
+      if (e.key === 'Enter') { e.preventDefault(); el.blur(); }
+      else if (e.key === 'Escape') {
+        el.textContent = el.dataset.original || '';
+        el.blur();
+      }
+    }
+
+    // Copy the grocery list to the clipboard as plain text (markdown-ish).
+    function copyGroceryList() {
+      if (!groceries.length) { alert('Grocery list is empty.'); return; }
+      const text = groceries
+        .map(g => (g.done ? '[x] ' : '[ ] ') + g.text)
+        .join('\n');
+      const finish = () => {
+        const btn = document.getElementById('btn-copy-grocery');
+        if (!btn) return;
+        const orig = btn.textContent;
+        btn.textContent = '\u2713 Copied';
+        setTimeout(() => { btn.textContent = orig; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(finish).catch(() => fallback());
+      } else {
+        fallback();
+      }
+      function fallback() {
+        // Older browsers: drop into a textarea and use execCommand
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); finish(); }
+        catch { prompt('Copy the list:', text); }
+        finally { document.body.removeChild(ta); }
+      }
     }
 
     function addGroceryItem() {
