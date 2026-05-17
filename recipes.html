@@ -599,6 +599,7 @@
 
       html += `<div class="form-actions" style="margin-top:1.5rem">
         <button class="btn-print" onclick="window.print()">Print Recipe</button>
+        <button class="btn-delete" onclick="deleteRecipeFromView('${id}')">Delete</button>
         <button class="btn-cancel" onclick="closeModal('view-modal')">Close</button>
         <button class="btn-save" onclick="closeModal('view-modal');openEditModal('${id}')">Edit</button>
       </div>`;
@@ -892,6 +893,14 @@
         db.ref('recipes').push(data);
       }
       closeModal('edit-modal');
+    }
+
+    function deleteRecipeFromView(id) {
+      const r = recipes[id];
+      if (!r) return;
+      if (!confirm(`Delete "${r.name}"? This can't be undone.`)) return;
+      db.ref('recipes/' + id).remove();
+      closeModal('view-modal');
     }
 
     function deleteRecipe() {
