@@ -383,8 +383,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "McGee & Co.",
+      "subject": "Get it fast. Love it forever."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 523413205161"
+    },
+    {
+      "sender": "Aritzia",
+      "subject": "Your package has arrived #D2217381"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
     {
       "sender": "Akshar HVAC",
       "subject": "Scheduled visit reminder by Akshar HVAC - May 18, 2026"
@@ -398,32 +414,16 @@ window.EMAIL_DATA = {
       "subject": "Trump\u2019s Executive Order #14155 A Massive WIN for Retirees"
     },
     {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Memorial Day savings\u2b50 Up to 60% OFF"
-    },
-    {
       "sender": "Buck Mason",
       "subject": "Two Takes on Welterweight"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "All Day Short"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 523413205161"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence"
-    },
-    {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 381334116033"
+    },
+    {
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "New hat, who dis?"
     }
   ],
   "items": [
