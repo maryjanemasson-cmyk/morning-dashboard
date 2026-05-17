@@ -383,11 +383,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "M.Gemi",
-      "subject": "A shipment from order #1051733 is out for delivery"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 523413205161"
+    },
+    {
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 381334116033"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 871657443460"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 17 May 2026"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Father's Day Gifting Is Here"
     },
     {
       "sender": "Abby Arad from Your Stylist Says...",
@@ -398,32 +418,12 @@ window.EMAIL_DATA = {
       "subject": "New Sign-in Alert, Please Verify Your Account"
     },
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "What I learned from my favourite books"
-    },
-    {
       "sender": "Mathnasium of Princeton",
       "subject": "Payment Receipt from Mathnasium of Princeton"
     },
     {
       "sender": "Jersey Shore Business Summit",
       "subject": "You\u2019re Invited: The Jersey Shore Business Growth Summit 2026"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on May 17, 2026"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "Sharon Litvinsky paid you $50.00"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Enenfly Adjustable Glasses...\""
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for Levi's Womens Flynn Western...."
     }
   ],
   "items": [
@@ -560,6 +560,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e271ab899627be",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #381334116033",
+      "date": "2026-05-18",
+      "id": "19e35ac4f6f20897",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
