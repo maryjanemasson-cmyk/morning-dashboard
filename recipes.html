@@ -186,6 +186,27 @@
       letter-spacing: 1px; color: #b8a48e; margin-bottom: 0.25rem;
     }
     .view-value { font-size: 0.88rem; color: #3d3529; line-height: 1.6; white-space: pre-wrap; }
+    .ingredient-list { list-style: none; padding: 0; margin: 0; }
+    .ingredient-item {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 0.5rem; padding: 0.4rem 0.5rem;
+      cursor: pointer; border-bottom: 1px solid #f0ebe4;
+      transition: background 0.15s;
+    }
+    .ingredient-item:last-child { border-bottom: none; }
+    .ingredient-item:hover { background: #faf5ec; }
+    .ingredient-item .ing-text { flex: 1; }
+    .ingredient-item .ing-add {
+      width: 22px; text-align: center; font-size: 0.95rem;
+      color: #c9b99a; flex-shrink: 0;
+    }
+    .ingredient-item.added { color: #9c8b76; }
+    .ingredient-item.added .ing-text { text-decoration: line-through; }
+    .ingredient-item.added .ing-add { color: #4a8c6f; }
+    @media print {
+      .ingredient-item { cursor: default; border-bottom: none; padding: 0.15rem 0; }
+      .ingredient-item .ing-add { display: none; }
+    }
     .view-stars { font-size: 1.2rem; color: #b8860b; letter-spacing: 2px; }
 
     .btn-print {
@@ -420,6 +441,46 @@
       if (typeof v === 'object') return imageUrlOf(v.url || v.src || v.contentUrl || '');
       return '';
     }
+
+    function escapeAttr(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function renderClickableIngredients(text) {
+      const lines = String(text || '').split('\n').map(l => l.trim()).filter(l => l && !/^optional:?\s*$/i.test(l));
+      if (!lines.length) return '';
+      return '<ul class="ingredient-list">' + lines.map(line => {
+        const safe = escapeAttr(line);
+        return `<li class="ingredient-item" data-text="${safe}" onclick="addIngredientToGrocery(this)">
+          <span class="ing-text">${safe}</span>
+          <span class="ing-add" title="Add to grocery list">+</span>
+        </li>`;
+      }).join('') + '</ul>';
+    }
+
+    window.addIngredientToGrocery = function(el) {
+      if (!el || el.classList.contains('added')) return;
+      const text = el.dataset.text;
+      if (!text) return;
+      el.classList.add('added');
+      const add = el.querySelector('.ing-add');
+      if (add) add.textContent = '✓';
+      // Append to mealGroceries (the Meal Planner page's grocery list).
+      db.ref('mealGroceries').once('value').then(snap => {
+        const v = snap.val();
+        const list = Array.isArray(v) ? v : (v ? Object.values(v) : []);
+        // Soft dedup — if a matching un-checked item already exists, just leave it.
+        const already = list.some(it => it && !it.done && (it.text || '').toLowerCase() === text.toLowerCase());
+        if (!already) {
+          list.push({ text, done: false });
+          db.ref('mealGroceries').set(list);
+        }
+      }).catch(() => {
+        // On failure, revert the visual feedback so the user knows it didn't stick.
+        el.classList.remove('added');
+        if (add) add.textContent = '+';
+      });
+    };
     let editingId = null;
     let currentRating = 0;
     let activeFilter = 'All';
@@ -528,7 +589,7 @@
       if (r.servings) meta.push('Serves: ' + r.servings);
       if (meta.length) html += `<div class="view-field"><div class="view-label">Timing</div><div class="view-value">${meta.join(' &middot; ')}</div></div>`;
 
-      if (r.ingredients) html += `<div class="view-field"><div class="view-label">Ingredients</div><div class="view-value">${r.ingredients}</div></div>`;
+      if (r.ingredients) html += `<div class="view-field"><div class="view-label">Ingredients <span style="font-weight:400;color:#b8a48e;text-transform:none;letter-spacing:0;font-size:0.7rem;">&middot; click to add to grocery list</span></div>${renderClickableIngredients(r.ingredients)}</div>`;
       if (r.instructions) html += `<div class="view-field"><div class="view-label">Instructions</div><div class="view-value">${r.instructions}</div></div>`;
       if (r.source) {
         const isUrl = r.source.startsWith('http');
