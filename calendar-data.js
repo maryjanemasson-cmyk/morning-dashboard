@@ -383,8 +383,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "M.Gemi",
+      "subject": "A shipment from order #1051733 is out for delivery"
+    },
+    {
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "New hat, who dis?"
+    },
     {
       "sender": "FreshDirect",
       "subject": "New Sign-in Alert, Please Verify Your Account"
@@ -416,14 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "return@amazon.com",
       "subject": "Advance refund issued for Levi's Womens Flynn Western...."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for Zeyune 3 Pcs Spring Purple Faux..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for CUSHIONAIRE Miami Kitten Heels..."
     }
   ],
   "items": [
@@ -481,6 +481,13 @@ window.EMAIL_DATA = {
       "title": "Mail Amazon return: Advance refund issued for Zeyune 3 Pcs Spring Purple Faux",
       "date": "2026-05-16",
       "id": "19e326b485697d54",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for CUSHIONAIRE Miami Kitten Heels",
+      "date": "2026-05-16",
+      "id": "19e326a8a1696875",
       "sender": "return@amazon.com"
     },
     {
