@@ -427,11 +427,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Microsoft account team",
-      "subject": "Your single-use code"
+      "sender": "LinkedIn",
+      "subject": "You have 2 new invitations"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "Sharon Litvinsky paid you $50.00"
     },
     {
       "sender": "Amazon.com",
@@ -464,10 +468,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 28, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes May 25, 2026 at 9:00 AM"
     }
   ],
   "items": [
