@@ -383,12 +383,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "McGee & Co.",
-      "subject": "Get it fast. Love it forever."
-    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 523413205161"
@@ -424,6 +420,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Abby Arad from Your Stylist Says...",
       "subject": "New hat, who dis?"
+    },
+    {
+      "sender": "FreshDirect",
+      "subject": "New Sign-in Alert, Please Verify Your Account"
     }
   ],
   "items": [
