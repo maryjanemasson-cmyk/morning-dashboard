@@ -383,39 +383,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Christina Marsigliese",
-      "subject": "Things are getting gooey."
+      "sender": "Maria Grunwald",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "MrBeast Kids Club Workshops are HERE \ud83d\ude80"
     },
     {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Mon, 5/18 is ready to view"
     },
     {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Newark"
-    },
-    {
       "sender": "Unroll.Me",
       "subject": "\ud83d\udcec Today's Rollup"
     },
     {
-      "sender": "Dropbox",
-      "subject": "Mary Jane, your storage is almost full."
-    },
-    {
       "sender": "Craig Dawson",
       "subject": "5K Trail Run and Kids Fun Run at Camp Jewell"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"F\u00eatons nos progr\u00e8s ! \u2728\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
     },
     {
       "sender": "Croissant",
@@ -424,6 +416,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Thumbtack",
       "subject": "\ud83d\udc4c Next steps on your search for an Electrician"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 381334116033"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 871657443460"
     }
   ],
   "items": [
