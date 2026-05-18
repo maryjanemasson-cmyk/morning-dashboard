@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e1301ba8f451f5",
-    "startTime": "2026-05-17T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-17T09:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -240,6 +229,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Trip Overview Summary",
+    "location": "Microsoft Teams Meeting",
+    "description": "Air Journey ORD - BOS   \n   \nTraveler: Mary Jane Hinrichs   \n   \nRecord Locator: WAVWZS   \n   \nFlight Segment  ORD - BOS   \nDeparture: Monday, 06/01/2026 10:25 am   \nLocation: Chicago, IL (ORD)   \nTerminal: TERMINAL 1   \n   \nUnited Airlines   \nFlight number: UA1606   \nSeat: 8C   \n   \nArrival: Monday, 06/01/2026 02:02 pm   \nLocation: Boston, MA (BOS)   \nTerminal: TERMINAL B   \n   \nConfirmation: K0MZ02   \n\nMicrosoft Teams meeting \nJoin: https://teams.microsoft.com/meet/316567632729595?p=mJXqNzBPweosHcwF5I\nMeeting ID: 316 567 632 729 595\nPasscode: VZ6uC2fo\nHelp: https://aka.ms/JoinTeamsMeeting?omkt=en-US\nSystem reference: https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d\n________________________________\nDial in by phone\n+1 213-458-8494,,999061232# United States, Los Angeles\n\nFind a local number: https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=999061232\nPhone conference ID: 999 061 232#\n________________________________\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 123 243 361 0\nMore info: https://www.webex.com/msteams?confid=1232433610&tenantkey=ipsen&domain=m.webex.com\n________________________________\nFor organisers\nMeeting options: https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4@thread.v2&messageId=0&language=en-US\nReset dial-in PIN: https://dialin.teams.microsoft.com/usp/pstnconferencing",
+    "startTime": "",
+    "startDate": "2026-06-01",
+    "endTime": "",
+    "endDate": "2026-06-02",
+    "calendar": "iCloud",
+    "colorId": ""
   }
 ];
 
@@ -383,8 +383,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
     {
       "sender": "Croissant",
       "subject": "The Smartest Way To Buy...."
@@ -420,20 +424,9 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 523413205161"
-    },
-    {
-      "sender": "Aritzia",
-      "subject": "Your package has arrived #D2217381"
     }
   ],
   "items": [
-    {
-      "type": "school",
-      "title": "Science Fair Tomorrow",
-      "date": "2026-05-14",
-      "id": "19e281d0cc82cb9b",
-      "sender": "Administration Office FASP"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: Allegra K Women's Denim",
@@ -538,17 +531,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e31fae5f1e3d1a",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 9:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-05-17",
-      "time": "09:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e1301ba8f451f5",
-      "sender": "FORM BY TWO"
     },
     {
       "type": "class",
