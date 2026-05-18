@@ -383,27 +383,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Maria Grunwald",
-      "subject": "You have an invitation"
+      "sender": "Mary Jane Masson",
+      "subject": "link"
+    },
+    {
+      "sender": "Bergdorf Goodman Concierge",
+      "subject": "Elevated Essentials | Ralph Lauren Spring 2026 Collection"
     },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
     },
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "MrBeast Kids Club Workshops are HERE \ud83d\ude80"
-    },
-    {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Mon, 5/18 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
     },
     {
       "sender": "Craig Dawson",
@@ -424,6 +420,10 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 871657443460"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Take a good look"
     }
   ],
   "items": [
