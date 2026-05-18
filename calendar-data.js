@@ -383,8 +383,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Chan Luu",
+      "subject": "The Dupioni Collection"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Receipt for payment to Deer Guys"
+    },
+    {
+      "sender": "Sephora Gift Cards",
+      "subject": "Your eGift Card Order Has Been Sent"
+    },
+    {
+      "sender": "Sephora Gift Cards",
+      "subject": "Your eGift Card Order Has Been Created"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Croakies Original Standard...\""
+    },
     {
       "sender": "Reformation",
       "subject": "Take us home"
@@ -404,26 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Craig Dawson",
       "subject": "5K Trail Run and Kids Fun Run at Camp Jewell"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "The Smartest Way To Buy...."
-    },
-    {
-      "sender": "Thumbtack",
-      "subject": "\ud83d\udc4c Next steps on your search for an Electrician"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381334116033"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 871657443460"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Take a good look"
     }
   ],
   "items": [
@@ -542,6 +542,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e271ab899627be",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Croakies Original Standard...\"",
+      "date": "2026-05-18",
+      "id": "19e3c17219a2cd6f",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
