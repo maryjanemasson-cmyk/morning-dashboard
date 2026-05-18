@@ -383,8 +383,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Dropbox",
+      "subject": "Mary Jane, your storage is almost full."
+    },
+    {
+      "sender": "Craig Dawson",
+      "subject": "5K Trail Run and Kids Fun Run at Camp Jewell"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"F\u00eatons nos progr\u00e8s ! \u2728\""
+    },
     {
       "sender": "Reformation",
       "subject": "SHIPMENT DELIVERED"
@@ -412,18 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Enenfly Adjustable Glasses...\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
-    },
-    {
-      "sender": "service@paypal.com",
-      "subject": "You sent a $526.54\u00a0CAD payment"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 523413205161"
     }
   ],
   "items": [
