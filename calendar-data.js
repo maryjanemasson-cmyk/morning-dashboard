@@ -386,8 +386,8 @@ window.EMAIL_DATA = {
   "unreadCount": 16,
   "threads": [
     {
-      "sender": "Mary Jane Masson",
-      "subject": "link"
+      "sender": "Reformation",
+      "subject": "Take us home"
     },
     {
       "sender": "Bergdorf Goodman Concierge",
