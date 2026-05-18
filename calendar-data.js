@@ -383,8 +383,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "Things are getting gooey."
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Mon, 5/18 is ready to view"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Newark"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
     {
       "sender": "Dropbox",
       "subject": "Mary Jane, your storage is almost full."
@@ -408,22 +424,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Thumbtack",
       "subject": "\ud83d\udc4c Next steps on your search for an Electrician"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381334116033"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 871657443460"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Take a good look"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Enenfly Adjustable Glasses...\""
     }
   ],
   "items": [
