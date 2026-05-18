@@ -386,6 +386,13 @@
     .weight-trend .dot { fill: #2c2418; }
     .weight-trend .goal-line { stroke: #4a8c6f; stroke-width: 1; stroke-dasharray: 3,3; }
 
+    .steps-trend { height: 80px; margin-top: 0.4rem; position: relative; }
+    .steps-trend svg { width: 100%; height: 100%; }
+    .steps-trend .line { stroke: #7a8a6b; stroke-width: 2; fill: none; }
+    .steps-trend .area { fill: rgba(122, 138, 107, 0.15); }
+    .steps-trend .dot { fill: #2c2418; }
+    .steps-trend .empty { text-align:center; color:#b8a48e; font-size:0.78rem; padding-top:1.8rem; font-style:italic; }
+
     .progress-bar {
       height: 8px; background: #f5f0e8; border-radius: 4px;
       overflow: hidden; margin-top: 0.4rem;
@@ -539,7 +546,12 @@
             <button class="btn secondary" id="btn-save-steps" style="margin-left:auto;">Save</button>
           </div>
           <div style="font-size:0.65rem;color:#9c8b76;margin-top:0.4rem;">
-            Tip: build an iOS Shortcut to PUT today's step count to Firebase. Recipe in your notes.
+            Tip: use the "Today's Steps" iOS Shortcut to copy step count from Apple Health.
+          </div>
+          <div class="steps-trend" id="steps-trend"></div>
+          <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#9c8b76;margin-top:0.2rem;">
+            <span id="steps-trend-label">Last 30 days</span>
+            <span id="steps-trend-avg"></span>
           </div>
         </div>
 
@@ -765,6 +777,7 @@
       renderStats();
       renderWeek();
       renderWeight();
+      renderStepsTrend();
     });
 
     function renderProfile() {
@@ -922,6 +935,7 @@
       weekData = snap.val() || {};
       renderWeek();
       renderWeight();
+      renderStepsTrend();
     });
 
     function renderWeek() {
@@ -989,6 +1003,41 @@
     }
 
     // ── Weight trend ──
+    function renderStepsTrend() {
+      const trend = document.getElementById('steps-trend');
+      if (!trend) return;
+      const entries = Object.entries(weekData)
+        .filter(([d, v]) => v && v.steps)
+        .map(([d, v]) => ({ date: d, steps: v.steps }))
+        .sort((a, b) => a.date.localeCompare(b.date))
+        .slice(-30);
+      if (entries.length < 2) {
+        trend.innerHTML = `<div class="empty">Log steps a few days in a row to see a trend</div>`;
+        document.getElementById('steps-trend-avg').textContent = '';
+        return;
+      }
+      const counts = entries.map(e => e.steps);
+      const min = 0;
+      const max = Math.max(...counts) * 1.05;
+      const w = 100, h = 80;
+      const pts = entries.map((e, i) => {
+        const x = entries.length === 1 ? w / 2 : (i / (entries.length - 1)) * w;
+        const y = h - ((e.steps - min) / (max - min)) * (h - 10) - 5;
+        return [x, y];
+      });
+      const path = pts.map((p, i) => (i === 0 ? `M ${p[0]} ${p[1]}` : `L ${p[0]} ${p[1]}`)).join(' ');
+      const area = `${path} L ${w} ${h} L 0 ${h} Z`;
+      trend.innerHTML = `
+        <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+          <path class="area" d="${area}" />
+          <path class="line" d="${path}" />
+          ${pts.map(p => `<circle class="dot" cx="${p[0]}" cy="${p[1]}" r="1.5"/>`).join('')}
+        </svg>
+      `;
+      const avg = Math.round(counts.reduce((s, n) => s + n, 0) / counts.length);
+      document.getElementById('steps-trend-avg').textContent = `Avg ${avg.toLocaleString()} / day`;
+    }
+
     function renderWeight() {
       const entries = Object.entries(weekData)
         .filter(([d, v]) => v && v.weight)
