@@ -383,11 +383,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "PowerPro Electric",
-      "subject": "\ud83d\udcac PowerPro Electric sent you a message"
+      "sender": "Croissant",
+      "subject": "The Smartest Way To Buy...."
     },
     {
       "sender": "Thumbtack",
