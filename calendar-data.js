@@ -405,19 +405,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Lyft Receipts",
+      "subject": "Your ride with Daniel on May 19"
+    },
     {
       "sender": "Ameriprise Financial",
       "subject": "A new financial confirmation is available online"
-    },
-    {
-      "sender": "United News & Deals",
-      "subject": "Upgrade to premium cabin on your upcoming flight"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Create Your Wedding Look With BOSS"
     },
     {
       "sender": "Fullscript",
@@ -442,10 +438,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Shameless Snacks OMG Peach...\""
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your May 19 flight"
     }
   ],
   "items": [
