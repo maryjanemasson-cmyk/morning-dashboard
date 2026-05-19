@@ -528,15 +528,61 @@
       return '\ud83c\udf24\ufe0f';
     }
 
+    // 2-letter US state codes → full name. Used when destination is "City, ST".
+    const US_STATES = {
+      AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',
+      CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',
+      IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',
+      ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',
+      MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',
+      NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',
+      OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',
+      SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',
+      WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'District of Columbia'
+    };
+
+    function pickBestGeoMatch(results, destination) {
+      if (!results || !results.length) return null;
+      // Parse "City, XX" or "City, Country" into city + qualifier
+      const parts = destination.split(',').map(s => s.trim());
+      const qualifier = parts.length >= 2 ? parts[1] : '';
+      if (!qualifier) return results[0];
+
+      const qLower = qualifier.toLowerCase();
+      // If qualifier looks like a US state code, expand it
+      const isUsState = qualifier.length === 2 && US_STATES[qualifier.toUpperCase()];
+      const expanded = isUsState ? US_STATES[qualifier.toUpperCase()].toLowerCase() : qLower;
+
+      // Prefer exact match on admin1 (state/region) or country
+      let best = results.find(r =>
+        (r.admin1 || '').toLowerCase() === expanded ||
+        (r.country || '').toLowerCase() === qLower
+      );
+      if (best) return best;
+      // For US state qualifiers, force country = United States
+      if (isUsState) {
+        best = results.find(r => (r.country_code || '').toLowerCase() === 'us');
+        if (best) return best;
+      }
+      // Otherwise, pick the highest-population result that mentions the qualifier
+      best = results.find(r =>
+        ((r.admin1 || '') + ' ' + (r.country || '')).toLowerCase().includes(expanded)
+      );
+      return best || results[0];
+    }
+
     async function fetchWeather(trip) {
       const container = document.getElementById('weatherContainer');
       container.innerHTML = '<div class="weather-loading">Loading weather...</div>';
       try {
         const city = trip.destination.split(',')[0].trim();
-        // 1. Geocode the city
-        const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`).then(r => r.json());
+        // 1. Geocode — fetch up to 10 matches, then pick the one that best
+        //    matches the destination's state/country qualifier.
+        const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10`).then(r => r.json());
         if (!geo.results || !geo.results.length) throw new Error('city not found');
-        const { latitude, longitude } = geo.results[0];
+        const match = pickBestGeoMatch(geo.results, trip.destination);
+        if (!match) throw new Error('city not matched');
+        const { latitude, longitude } = match;
 
         // 2. Build trip-day list (ISO YYYY-MM-DD)
         const startD = parseDate(trip.start), endD = parseDate(trip.end);
