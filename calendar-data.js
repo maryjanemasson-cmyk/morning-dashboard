@@ -405,23 +405,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
     {
       "sender": "Amazon.com",
+      "subject": "Shipped: \"Gillette Fusion5 Power...\" and \u20663\u2069 more items"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Made to Inspire: Inside Our Lookbook"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"CUSHIONAIRE Splash Jelly...\""
+    },
+    {
+      "sender": "Rhone",
+      "subject": "Skort season is back"
+    },
+    {
+      "sender": "Amazon.com",
       "subject": "Shipped: \"Shameless Snacks OMG Peach...\""
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "THE LAUNCH YOU HAVE BEEN WAITING FOR"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid ethan herr $150.00"
     },
     {
       "sender": "United Airlines",
@@ -442,10 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Take us home"
-    },
-    {
-      "sender": "Bergdorf Goodman Concierge",
-      "subject": "Elevated Essentials | Ralph Lauren Spring 2026 Collection"
     }
   ],
   "items": [
@@ -553,6 +553,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e31fae5f1e3d1a",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Gillette Fusion5 Power...\" and \u20663\u2069 more items",
+      "date": "2026-05-19",
+      "id": "19e40bd7395388ba",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
