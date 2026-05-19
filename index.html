@@ -701,12 +701,15 @@
       return trip ? trip.location : null;
     }
 
+    // Home base for the weather card when no active trip — overrides wttr.in's
+    // auto-detection (which guesses based on the CDN node and often picks NYC).
+    const WEATHER_HOME = 'Princeton, NJ';
+
     async function loadWeather() {
       try {
         const tripLoc = currentLocation();
-        const url = tripLoc
-          ? `https://wttr.in/${encodeURIComponent(tripLoc)}?format=j1`
-          : 'https://wttr.in/?format=j1';
+        const loc = tripLoc || WEATHER_HOME;
+        const url = `https://wttr.in/${encodeURIComponent(loc)}?format=j1`;
         const res = await fetchWithTimeout(url, 6000);
         const data = await res.json();
         const cur = data.current_condition[0];
