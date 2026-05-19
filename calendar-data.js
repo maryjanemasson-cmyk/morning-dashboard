@@ -405,11 +405,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Tatte Bakery & Cafe Feedback",
-      "subject": "Tatte Bakery - We want to hear from you!"
+      "sender": "Ameriprise Financial",
+      "subject": "A new financial confirmation is available online"
+    },
+    {
+      "sender": "United News & Deals",
+      "subject": "Upgrade to premium cabin on your upcoming flight"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Create Your Wedding Look With BOSS"
     },
     {
       "sender": "Fullscript",
@@ -438,10 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your May 19 flight"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
     }
   ],
   "items": [
