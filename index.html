@@ -708,8 +708,8 @@
     async function loadWeather() {
       try {
         const tripLoc = currentLocation();
-        const loc = tripLoc || WEATHER_HOME;
-        const url = `https://wttr.in/${encodeURIComponent(loc)}?format=j1`;
+        const queryLoc = tripLoc || WEATHER_HOME;
+        const url = `https://wttr.in/${encodeURIComponent(queryLoc)}?format=j1`;
         const res = await fetchWithTimeout(url, 6000);
         const data = await res.json();
         const cur = data.current_condition[0];
