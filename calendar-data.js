@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-05-18T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-18T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "CP Suspend 1.5 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e271ab899627be",
-    "startTime": "2026-05-18T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-18T17:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Trip \u2014 Cambridge, MA",
     "location": "Cambridge, MA",
     "description": "Cambridge, MA \u2014 May 19 to 22, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
@@ -231,6 +209,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "\ud83c\udfeb PRISMS \u2014 Semester 2 Exams",
+    "location": "",
+    "description": "End of Semester 2 \u2014 Exam Week\nJun 5: Graduation Rehearsal / Placement Tests / Campus Cleanup",
+    "startTime": "",
+    "startDate": "2026-06-01",
+    "endTime": "",
+    "endDate": "2026-06-06",
+    "calendar": "Family",
+    "colorId": "2"
+  },
+  {
     "summary": "Trip Overview Summary",
     "location": "Microsoft Teams Meeting",
     "description": "Air Journey ORD - BOS   \n   \nTraveler: Mary Jane Hinrichs   \n   \nRecord Locator: WAVWZS   \n   \nFlight Segment  ORD - BOS   \nDeparture: Monday, 06/01/2026 10:25 am   \nLocation: Chicago, IL (ORD)   \nTerminal: TERMINAL 1   \n   \nUnited Airlines   \nFlight number: UA1606   \nSeat: 8C   \n   \nArrival: Monday, 06/01/2026 02:02 pm   \nLocation: Boston, MA (BOS)   \nTerminal: TERMINAL B   \n   \nConfirmation: K0MZ02   \n\nMicrosoft Teams meeting \nJoin: https://teams.microsoft.com/meet/316567632729595?p=mJXqNzBPweosHcwF5I\nMeeting ID: 316 567 632 729 595\nPasscode: VZ6uC2fo\nHelp: https://aka.ms/JoinTeamsMeeting?omkt=en-US\nSystem reference: https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d\n________________________________\nDial in by phone\n+1 213-458-8494,,999061232# United States, Los Angeles\n\nFind a local number: https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=999061232\nPhone conference ID: 999 061 232#\n________________________________\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 123 243 361 0\nMore info: https://www.webex.com/msteams?confid=1232433610&tenantkey=ipsen&domain=m.webex.com\n________________________________\nFor organisers\nMeeting options: https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4@thread.v2&messageId=0&language=en-US\nReset dial-in PIN: https://dialin.teams.microsoft.com/usp/pstnconferencing",
@@ -239,6 +228,39 @@ window.CALENDAR_EVENTS = [
     "endTime": "",
     "endDate": "2026-06-02",
     "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-06-01T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-01T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "\u2708\ufe0f UA1606 ORD \u2192 BOS",
+    "location": "Chicago (ORD)",
+    "description": "Mon, Jun 1\n10:25 AM CDT\n[Flight] ORD to BOS\nUnited Airlines 1606, Terminal TERMINAL 1, Gate\n2:02 PM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-06-01T11:25:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-01T14:02:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "NSH Pick up at PHL (Return Flight) - lands at 8:37pm",
+    "location": "Philadelphia International Airport (PHL)",
+    "description": "Pickup window for return flight\n\n\u2708\ufe0f AA2900 Tampa \u2192 Philadelphia (evening)\nArrival: Philadelphia Airport around 8:37 PMMicrosoft Teams meeting \n\n",
+    "startTime": "2026-06-01T20:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-01T22:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
     "colorId": ""
   }
 ];
@@ -383,8 +405,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Shameless Snacks OMG Peach...\""
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "THE LAUNCH YOU HAVE BEEN WAITING FOR"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Venmo",
       "subject": "You paid ethan herr $150.00"
@@ -412,18 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bergdorf Goodman Concierge",
       "subject": "Elevated Essentials | Ralph Lauren Spring 2026 Collection"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Mon, 5/18 is ready to view"
-    },
-    {
-      "sender": "Craig Dawson",
-      "subject": "5K Trail Run and Kids Fun Run at Camp Jewell"
     }
   ],
   "items": [
@@ -533,29 +555,11 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "class",
-      "title": "CP Suspend 1.5 (50 Mins) class \u00b7 5:00 PM",
-      "name": "CP Suspend 1.5 (50 Mins) class",
-      "date": "2026-05-18",
-      "time": "17:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19e271ab899627be",
-      "sender": "Club Pilates Princeton"
-    },
-    {
       "type": "delivery",
-      "title": "Shipped: \"Croakies Original Standard...\"",
-      "date": "2026-05-18",
-      "id": "19e3c17219a2cd6f",
+      "title": "Shipped: \"Shameless Snacks OMG Peach...\"",
+      "date": "2026-05-19",
+      "id": "19e3ef165b40c710",
       "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #381334116033",
-      "date": "2026-05-18",
-      "id": "19e35ac4f6f20897",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
