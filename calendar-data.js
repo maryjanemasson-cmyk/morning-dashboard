@@ -386,8 +386,8 @@ window.EMAIL_DATA = {
   "unreadCount": 10,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Gillette Fusion5 Power...\" and \u20664\u2069 more items"
+      "sender": "Venmo",
+      "subject": "You paid ethan herr $150.00"
     },
     {
       "sender": "United Airlines",
