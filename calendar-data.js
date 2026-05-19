@@ -405,23 +405,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "Cute stuff awaits."
+      "sender": "Tatte Bakery & Cafe Feedback",
+      "subject": "Tatte Bakery - We want to hear from you!"
     },
     {
-      "sender": "Etsy",
-      "subject": "Tap for brass dimmer switches \ud83e\ude84"
+      "sender": "Fullscript",
+      "subject": "The Signature Sale is happening now"
     },
     {
       "sender": "maryjanemasson@icloud.com",
       "subject": "(No subject)"
-    },
-    {
-      "sender": "PURE Insurance",
-      "subject": "One quick step to protect your home during Electrical Safety Month"
     },
     {
       "sender": "The Shade Store",
