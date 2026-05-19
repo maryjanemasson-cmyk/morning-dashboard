@@ -405,11 +405,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Gillette Fusion5 Power...\" and \u20663\u2069 more items"
+      "sender": "Reformation",
+      "subject": "Cute stuff awaits."
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Tap for brass dimmer switches \ud83e\ude84"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "(No subject)"
+    },
+    {
+      "sender": "PURE Insurance",
+      "subject": "One quick step to protect your home during Electrical Safety Month"
     },
     {
       "sender": "The Shade Store",
@@ -434,18 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chase",
       "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "Sephora Gift Cards",
-      "subject": "Your eGift Card Order Has Been Created"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Croakies Original Standard...\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Take us home"
     }
   ],
   "items": [
