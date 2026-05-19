@@ -383,19 +383,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "The Dupioni Collection"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Gillette Fusion5 Power...\" and \u20664\u2069 more items"
     },
     {
-      "sender": "Deer Guys",
-      "subject": "Receipt for payment to Deer Guys"
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your May 19 flight"
     },
     {
-      "sender": "Sephora Gift Cards",
-      "subject": "Your eGift Card Order Has Been Sent"
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
     },
     {
       "sender": "Sephora Gift Cards",
