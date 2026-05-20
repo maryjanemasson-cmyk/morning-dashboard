@@ -394,12 +394,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 9,
   "threads": [
-    {
-      "sender": "",
-      "subject": "Kearny Bank Loan payment sent as a check"
-    },
     {
       "sender": "Lyft Receipts",
       "subject": "Your ride with Rosanna Maria on May 19"
