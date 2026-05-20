@@ -394,11 +394,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Tatte Bakery Online Ordering",
-      "subject": "Tatte Bakery Order Received"
+      "sender": "Fullscript",
+      "subject": "It\u2019s your chance to save  15%. Don\u2019t wait."
+    },
+    {
+      "sender": "Barlume Beach Montauk",
+      "subject": "June 6th: St. Lucia DJ Set at Barlume Beach"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "Top companies are hiring"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Want in on 15% back? Now\u2019s your chance \u23f0"
+    },
+    {
+      "sender": "Clinton Body Bag Scandal \u2014 Robert Jacobs, Finance Insider",
+      "subject": "Hillary Clinton\u2019s 1994 \u201cbody bags\u201d scandal"
     },
     {
       "sender": "Lyft Receipts",
@@ -415,10 +431,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Ameriprise Financial",
       "subject": "A new financial confirmation is available online"
-    },
-    {
-      "sender": "Fullscript",
-      "subject": "The Signature Sale is happening now"
     }
   ],
   "items": [
