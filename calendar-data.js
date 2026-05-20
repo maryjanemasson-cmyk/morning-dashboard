@@ -394,11 +394,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "Fullscript",
-      "subject": "It\u2019s your chance to save  15%. Don\u2019t wait."
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Le fant\u00f4me de Canterville /...\""
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, earn a $500 cash bonus \u2013 here\u2019s how."
     },
     {
       "sender": "Barlume Beach Montauk",
@@ -413,10 +417,6 @@ window.EMAIL_DATA = {
       "subject": "Want in on 15% back? Now\u2019s your chance \u23f0"
     },
     {
-      "sender": "Clinton Body Bag Scandal \u2014 Robert Jacobs, Finance Insider",
-      "subject": "Hillary Clinton\u2019s 1994 \u201cbody bags\u201d scandal"
-    },
-    {
       "sender": "Lyft Receipts",
       "subject": "Your ride with Rosanna Maria on May 19"
     },
@@ -427,10 +427,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lyft Receipts",
       "subject": "Your ride with Daniel on May 19"
-    },
-    {
-      "sender": "Ameriprise Financial",
-      "subject": "A new financial confirmation is available online"
     }
   ],
   "items": [
