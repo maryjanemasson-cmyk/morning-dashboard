@@ -11,28 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
-    "summary": "\u2708 UA593 EWR \u2192 BOS",
-    "location": "Newark (EWR) \u2192 Boston (BOS)",
-    "description": "United Airlines 593, Terminal C\\nDepart: 7:55 AM EDT from EWR\\nArrive: 9:11 AM EDT at BOS, Terminal B",
-    "startTime": "2026-05-19T07:55:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-19T09:11:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: The Royal Sonesta Boston",
-    "location": "40 Edwin H. Land Boulevard, Cambridge, MA 02142",
-    "description": "Check-In: 3:00 PM\\nPhone: 1-617-806-4200",
-    "startTime": "2026-05-19T15:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-19T16:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "\u2708 UA570 BOS \u2192 EWR",
     "location": "Boston (BOS) \u2192 Newark (EWR)",
     "description": "United Airlines 570, Terminal B\\nDepart: 7:30 AM EDT from BOS\\nArrive: 8:53 AM EDT at EWR, Terminal C",
@@ -262,6 +240,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Amtrak: 177 Northeast Regional",
+    "location": "27 Water Street , New London CT 06320",
+    "description": "Your reservation number is 0E52E3. Use the Amtrak app to access your eTicket or change this reservation.",
+    "startTime": "2026-06-03T19:11:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-03T23:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
   }
 ];
 
@@ -405,19 +394,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "",
+      "subject": "Kearny Bank Loan payment sent as a check"
+    },
+    {
+      "sender": "Lyft Receipts",
+      "subject": "Your ride with Rosanna Maria on May 19"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"CUSHIONAIRE Splash Jelly...\""
-    },
-    {
-      "sender": "",
-      "subject": "HIPAA Privacy Notice Reminder"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL",
-      "subject": "New Financial Shareholder Document Available Online"
     },
     {
       "sender": "Lyft Receipts",
@@ -553,20 +542,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e31fae5f1e3d1a",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Gillette Fusion5 Power...\" and \u20663\u2069 more items",
-      "date": "2026-05-19",
-      "id": "19e40bd7395388ba",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Shameless Snacks OMG Peach...\"",
-      "date": "2026-05-19",
-      "id": "19e3ef165b40c710",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
