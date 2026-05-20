@@ -394,15 +394,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Afloral",
+      "subject": "Order #S911002 has shipped!"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Tell us how we did"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Le fant\u00f4me de Canterville /...\""
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, earn a $500 cash bonus \u2013 here\u2019s how."
     },
     {
       "sender": "Barlume Beach Montauk",
