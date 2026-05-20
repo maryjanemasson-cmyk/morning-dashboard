@@ -394,8 +394,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "Tatte Bakery Online Ordering",
+      "subject": "Tatte Bakery Order Received"
+    },
     {
       "sender": "Lyft Receipts",
       "subject": "Your ride with Rosanna Maria on May 19"
@@ -415,22 +419,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Fullscript",
       "subject": "The Signature Sale is happening now"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "(No subject)"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Made to Inspire: Inside Our Lookbook"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"CUSHIONAIRE Splash Jelly...\""
-    },
-    {
-      "sender": "Rhone",
-      "subject": "Skort season is back"
     }
   ],
   "items": [
