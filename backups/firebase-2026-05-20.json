@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-20T17:00:23",
+    "captured_at": "2026-05-20T19:00:24",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -36033,7 +36033,7 @@
   "mealPlan": {
     "2026-05-17": {
       "breakfast": "protein oats",
-      "dinner": "-OsqdKapNXCopse1sgoH",
+      "dinner": "-Or06AmKuA31e7ojFkqv",
       "lunch": "kennys steak meal"
     },
     "2026-05-18": {
@@ -36072,6 +36072,14 @@
     {
       "done": false,
       "text": "1 inch peeled ginger"
+    },
+    {
+      "done": false,
+      "text": "2 tablespoons lemon juice"
+    },
+    {
+      "done": false,
+      "text": "2 tablespoons rice vinegar"
     }
   ],
   "groceries": null,

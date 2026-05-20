@@ -394,15 +394,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Afloral",
-      "subject": "Order #S911002 has shipped!"
+      "sender": "Fullscript",
+      "subject": "The Signature Sale ends tomorrow"
     },
     {
-      "sender": "United Airlines",
-      "subject": "Tell us how we did"
+      "sender": "Eggs & Brain Health \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Doctors Are Recommending This Nutrient for Stronger Memory"
+    },
+    {
+      "sender": "Tatte Bakery Online Ordering",
+      "subject": "Tatte Bakery Order Received"
+    },
+    {
+      "sender": "Blurry Vision Killing You? \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Blurry Vision Killing You? THIS 7-Second Trick Restores 20/20 Vision"
     },
     {
       "sender": "Amazon.com",
@@ -427,10 +435,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"CUSHIONAIRE Splash Jelly...\""
-    },
-    {
-      "sender": "Lyft Receipts",
-      "subject": "Your ride with Daniel on May 19"
     }
   ],
   "items": [
