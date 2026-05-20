@@ -405,8 +405,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"CUSHIONAIRE Splash Jelly...\""
+    },
+    {
+      "sender": "",
+      "subject": "HIPAA Privacy Notice Reminder"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL",
+      "subject": "New Financial Shareholder Document Available Online"
+    },
     {
       "sender": "Lyft Receipts",
       "subject": "Your ride with Daniel on May 19"
@@ -434,10 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Rhone",
       "subject": "Skort season is back"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Shameless Snacks OMG Peach...\""
     }
   ],
   "items": [
@@ -558,6 +566,13 @@ window.EMAIL_DATA = {
       "title": "Shipped: \"Shameless Snacks OMG Peach...\"",
       "date": "2026-05-19",
       "id": "19e3ef165b40c710",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"CUSHIONAIRE Splash Jelly...\"",
+      "date": "2026-05-20",
+      "id": "19e42ddd391da131",
       "sender": "Amazon.com"
     },
     {
