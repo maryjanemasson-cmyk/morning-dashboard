@@ -215,6 +215,7 @@
 
     <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
       <a href="index.html" style="font-size:0.78rem;color:#fff;text-decoration:none;border:1px solid #2c2418;padding:0.35rem 0.9rem;border-radius:20px;background:#2c2418;">← Dashboard</a>
+      <a href="grocery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Grocery</a>
       <a href="recipes.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Recipes</a>
       <a href="wardrobe.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Wardrobe</a>
       <a href="outfit-gallery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Outfit Gallery</a>
@@ -242,20 +243,14 @@
           <div class="recipe-list" id="recipe-list"></div>
         </div>
 
-        <div class="sidebar-card" id="grocery-card">
-          <div class="sidebar-title" style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;flex-wrap:wrap;">
+        <div class="sidebar-card">
+          <div class="sidebar-title" style="display:flex;align-items:center;justify-content:space-between;">
             <span>Grocery List</span>
-            <div style="display:flex;gap:0.3rem;">
-              <button class="print-btn" id="btn-copy-grocery" onclick="copyGroceryList()" title="Copy as text">📋 Copy</button>
-              <button class="print-btn" onclick="printGroceryList()" title="Print grocery list">🖨️ Print</button>
-            </div>
+            <a href="grocery.html" style="font-size:0.7rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.25rem 0.65rem;border-radius:14px;background:#fff;">Open →</a>
           </div>
-          <div class="grocery-input-row">
-            <input type="text" class="grocery-input" id="grocery-input" placeholder="Add item..." />
-            <button class="add-btn" onclick="addGroceryItem()">Add</button>
+          <div style="font-size:0.78rem;color:#9c8b76;line-height:1.4;">
+            The grocery list has its own page now. Add and check off items there — and use the "+ From Meals" button to pull this week's ingredients in.
           </div>
-          <div id="grocery-list"></div>
-          <button class="generate-btn" onclick="generateGroceries()">Auto-Generate from Meals</button>
         </div>
       </div>
     </div>
@@ -279,7 +274,6 @@
     let weekOffset = 0;
     let mealPlan = {};
     let recipes = {};
-    let groceries = [];
     let _pickingSlot = null; // {dateKey, meal}
 
     // Date helpers
@@ -474,248 +468,6 @@
       document.getElementById('recipe-list').innerHTML = html;
     }
 
-    // Grocery list — aisle classification
-    // Keyword-based. First rule that matches wins, so order rules from most
-    // specific to most generic (e.g. "ice cream" before "cream").
-    const AISLE_RULES = [
-      // Priority overrides — these have to win against more generic rules below.
-      // E.g. "coconut milk" must beat the Dairy rule for plain "milk".
-      ['Pantry', ['coconut milk','almond milk','oat milk','soy milk','cashew milk','rice milk','condensed milk','evaporated milk',
-        'curry powder','curry paste','curry leaves','curry sauce','curry',
-        'spice','seasoning','rub','garam masala','five-spice','allspice',
-        'pistachio','walnut','pecan','cashew','almond','peanut','hazelnut','macadamia','brazil nut','pine nut']],
-      ['Bakery', ['bread','baguette','bagel','roll','bun','tortilla','naan','pita','croissant','focaccia','sourdough','pita bread','english muffin']],
-      ['Produce', [
-        'apple','banana','orange','lemon','lime','grape','berry','berries','strawberr','blueberr','raspberr','blackberr','mango','peach','pear','pineapple','melon','watermelon','avocado','plum','cherry','kiwi','fig',
-        'lettuce','spinach','kale','arugula','romaine','cabbage','broccoli','cauliflower','asparagus','zucchini','squash','pumpkin','cucumber','celery','carrot','radish','beet','sweet potato','potato','onion','shallot','scallion','spring onion','green onion','leek','garlic','ginger','chili','chile','pepper','jalapen','tomato','mushroom','corn','peas','green bean','snap pea','okra','eggplant','fennel','parsnip','turnip','sprout','endive','watercress','collard','chard',
-        'basil','parsley','cilantro','coriander','mint','rosemary','thyme','sage','dill','tarragon','chive','herb'
-      ]],
-      ['Meat & Seafood', [
-        'chicken','beef','pork','sausage','bacon','turkey','duck','lamb','veal','steak','ground beef','mince','meatball','ribs','prosciutto','salami','pepperoni','ham','hot dog',
-        'fish','salmon','tuna','cod','shrimp','prawn','crab','lobster','scallop','mussel','clam','oyster','sardine','anchovy','tilapia','halibut','trout'
-      ]],
-      ['Dairy & Eggs', [
-        'milk','cream','half-and-half','butter','margarine','cheese','cheddar','mozzarella','parmesan','feta','brie','goat cheese','cottage cheese','ricotta','yogurt','yoghurt','greek yogurt','sour cream','crème fraîche','creme fraiche','egg','eggs','tofu','tempeh'
-      ]],
-      ['Frozen', ['frozen','ice cream','ice-cream','popsicle','sorbet','gelato','frozen pizza','frozen vegetable']],
-      ['Pantry', [
-        'flour','sugar','salt','pepper','spice','seasoning','oil','olive oil','vegetable oil','canola','sesame oil','vinegar','soy sauce','tamari','fish sauce','oyster sauce','sriracha','hot sauce','ketchup','mustard','mayo','mayonnaise','salsa','pasta sauce','marinara','tomato sauce','broth','stock','bouillon','tomato paste','coconut milk','peanut butter','almond butter','jam','jelly','honey','maple syrup','baking powder','baking soda','yeast','vanilla',
-        'pasta','spaghetti','noodle','penne','linguine','rice','quinoa','couscous','barley','farro','oat','cereal','granola',
-        'bean','lentil','chickpea','tin','can','canned','tinned',
-        'nut','almond','walnut','pecan','cashew','pistachio','peanut','seed','sesame','sunflower','pumpkin seed','flax',
-        'chocolate','cocoa','chia'
-      ]],
-      ['Snacks', ['chip','cracker','cookie','pretzel','popcorn','candy','bar','protein bar','granola bar']],
-      ['Beverages', ['water','sparkling','seltzer','juice','soda','coke','pepsi','sprite','coffee','espresso','tea','wine','beer','cocktail','tequila','vodka','gin','rum','whiskey','bourbon','kombucha','lemonade','smoothie']],
-      ['Household', ['paper towel','tissue','toilet paper','napkin','foil','plastic wrap','zip','soap','detergent','dish soap','dishwasher','laundry','sponge','cleaner','trash bag','garbage bag','battery','light bulb']],
-    ];
-    // Unmatched items fall into Pantry (user prefers Pantry and Other merged).
-    const AISLE_ORDER = ['Produce','Bakery','Meat & Seafood','Dairy & Eggs','Frozen','Pantry','Snacks','Beverages','Household'];
-
-    function classifyGroceryItem(text) {
-      const t = String(text || '').toLowerCase();
-      for (const [aisle, keywords] of AISLE_RULES) {
-        for (const k of keywords) {
-          // Word-boundary-ish: match if keyword appears as a whole word
-          // (avoids "pepper" matching "peppermint", though plural -s still hits)
-          const re = new RegExp('(^|[^a-z])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(s|es)?($|[^a-z])');
-          if (re.test(t)) return aisle;
-        }
-      }
-      return 'Pantry';
-    }
-
-    function groupGroceriesByAisle(items) {
-      const buckets = {};
-      items.forEach((item, originalIdx) => {
-        const aisle = classifyGroceryItem(item.text);
-        if (!buckets[aisle]) buckets[aisle] = [];
-        buckets[aisle].push({ item, originalIdx });
-      });
-      return AISLE_ORDER
-        .filter(a => buckets[a] && buckets[a].length)
-        .map(a => ({ aisle: a, entries: buckets[a] }));
-    }
-
-    function escapeGroceryHtml(s) {
-      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    }
-    function renderGroceries() {
-      if (!groceries.length) {
-        document.getElementById('grocery-list').innerHTML = '';
-        return;
-      }
-      const groups = groupGroceriesByAisle(groceries);
-      let html = '';
-      groups.forEach(g => {
-        html += `<div class="aisle-header">${g.aisle}</div>`;
-        g.entries.forEach(({ item, originalIdx: i }) => {
-          html += `<div class="grocery-item">
-            <div class="grocery-cb ${item.done?'checked':''}" onclick="toggleGrocery(${i})">${item.done?'\u2713':''}</div>
-            <span class="grocery-text ${item.done?'done':''}"
-              contenteditable="true" spellcheck="false"
-              data-original="${escapeGroceryHtml(item.text)}"
-              onblur="saveGroceryEdit(${i}, this)"
-              onkeydown="onGroceryKeydown(event, ${i}, this)">${escapeGroceryHtml(item.text)}</span>
-            <span class="grocery-del" onclick="deleteGrocery(${i})">\u2715</span>
-          </div>`;
-        });
-      });
-      document.getElementById('grocery-list').innerHTML = html;
-    }
-
-    function saveGroceryEdit(i, el) {
-      const newText = el.textContent.trim();
-      const orig = el.dataset.original || '';
-      if (!newText) {
-        // User cleared the text \u2192 delete the item
-        groceries.splice(i, 1);
-        db.ref('mealGroceries').set(groceries);
-        renderGroceries();
-        return;
-      }
-      if (newText === orig) return;
-      groceries[i].text = newText;
-      db.ref('mealGroceries').set(groceries);
-    }
-    function onGroceryKeydown(e, i, el) {
-      if (e.key === 'Enter') { e.preventDefault(); el.blur(); }
-      else if (e.key === 'Escape') {
-        el.textContent = el.dataset.original || '';
-        el.blur();
-      }
-    }
-
-    // Copy the grocery list to the clipboard as plain text (markdown-ish),
-    // grouped by aisle so it pastes neatly into Notes or a message.
-    function copyGroceryList() {
-      if (!groceries.length) { alert('Grocery list is empty.'); return; }
-      const groups = groupGroceriesByAisle(groceries);
-      const text = groups.map(g => {
-        const lines = g.entries.map(({ item }) =>
-          (item.done ? '[x] ' : '[ ] ') + item.text
-        );
-        return `## ${g.aisle}\n${lines.join('\n')}`;
-      }).join('\n\n');
-      const finish = () => {
-        const btn = document.getElementById('btn-copy-grocery');
-        if (!btn) return;
-        const orig = btn.textContent;
-        btn.textContent = '\u2713 Copied';
-        setTimeout(() => { btn.textContent = orig; }, 1500);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(finish).catch(() => fallback());
-      } else {
-        fallback();
-      }
-      function fallback() {
-        // Older browsers: drop into a textarea and use execCommand
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed'; ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); finish(); }
-        catch { prompt('Copy the list:', text); }
-        finally { document.body.removeChild(ta); }
-      }
-    }
-
-    function addGroceryItem() {
-      const input = document.getElementById('grocery-input');
-      const text = input.value.trim();
-      if (!text) return;
-      groceries.push({ text, done: false });
-      db.ref('mealGroceries').set(groceries);
-      input.value = '';
-      renderGroceries();
-    }
-
-    function toggleGrocery(i) {
-      groceries[i].done = !groceries[i].done;
-      db.ref('mealGroceries').set(groceries);
-      renderGroceries();
-    }
-
-    function deleteGrocery(i) {
-      groceries.splice(i, 1);
-      db.ref('mealGroceries').set(groceries);
-      renderGroceries();
-    }
-
-    function printGroceryList() {
-      if (!groceries.length) {
-        alert('Grocery list is empty.');
-        return;
-      }
-      // Render the list into a temporary print-only container so we can
-      // hide the rest of the page via CSS without touching the live DOM.
-      let host = document.getElementById('print-host');
-      if (!host) {
-        host = document.createElement('div');
-        host.id = 'print-host';
-        host.className = 'print-host';
-        document.body.appendChild(host);
-      }
-      const today = new Date().toLocaleDateString('en-US', {
-        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
-      });
-      const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-      const groups = groupGroceriesByAisle(groceries);
-      const groupHtml = groups.map(g => `
-        <h2>${escape(g.aisle)}</h2>
-        <ul>${g.entries.map(({ item }) => `<li class="${item.done ? 'done' : ''}">${escape(item.text)}</li>`).join('')}</ul>
-      `).join('');
-      host.innerHTML = `
-        <h1>Grocery List</h1>
-        <div class="print-meta">${today} &middot; ${groceries.length} item${groceries.length === 1 ? '' : 's'}</div>
-        ${groupHtml}
-      `;
-      window.print();
-    }
-
-    // Auto-generate groceries from this week's meals
-    function generateGroceries() {
-      const start = getWeekStart(weekOffset);
-      const newItems = [];
-      const seen = new Set(groceries.map(g => g.text.toLowerCase()));
-
-      for (let i = 0; i < 7; i++) {
-        const d = new Date(start);
-        d.setDate(start.getDate() + i);
-        const dk = dateKey(d);
-        const dayMeals = mealPlan[dk] || {};
-
-        Object.values(dayMeals).forEach(recipeId => {
-          const recipe = recipes[recipeId];
-          if (recipe && recipe.ingredients) {
-            const ingredients = recipe.ingredients.split('\n').map(l => l.trim()).filter(Boolean);
-            ingredients.forEach(ing => {
-              if (!seen.has(ing.toLowerCase())) {
-                seen.add(ing.toLowerCase());
-                newItems.push({ text: ing, done: false });
-              }
-            });
-          }
-        });
-      }
-
-      if (newItems.length === 0) {
-        alert('No new ingredients to add. Plan some meals first!');
-        return;
-      }
-
-      groceries = groceries.concat(newItems);
-      db.ref('mealGroceries').set(groceries);
-      renderGroceries();
-      alert(`Added ${newItems.length} ingredients from this week's meals!`);
-    }
-
-    // Grocery input enter key
-    document.getElementById('grocery-input').addEventListener('keydown', e => {
-      if (e.key === 'Enter') addGroceryItem();
-    });
 
     // Firebase listeners
     db.ref('recipes').on('value', snap => {
@@ -726,12 +478,6 @@
     db.ref('mealPlan').on('value', snap => {
       mealPlan = snap.val() || {};
       renderWeek();
-    });
-
-    db.ref('mealGroceries').on('value', snap => {
-      const data = snap.val();
-      groceries = data ? (Array.isArray(data) ? data : Object.values(data)) : [];
-      renderGroceries();
     });
 
     // Init
