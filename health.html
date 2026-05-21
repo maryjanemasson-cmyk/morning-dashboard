@@ -485,8 +485,16 @@
 
     <div class="main-grid">
       <div class="col-left">
-        <div class="card">
-          <div class="card-title"><span><span class="icon">~</span>Log Food</span></div>
+        <div class="card" id="log-food-card">
+          <div class="card-title" style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;flex-wrap:wrap;">
+            <span><span class="icon">~</span>Log Food</span>
+            <span style="font-size:0.7rem;color:#9c8b76;display:flex;align-items:center;gap:0.3rem;font-family:'Inter',sans-serif;font-weight:400;">
+              <label for="view-day-input">Day:</label>
+              <input type="date" id="view-day-input" style="font-size:0.7rem;border:1px solid #ebe5dc;border-radius:6px;padding:0.2rem 0.35rem;font-family:inherit;color:#3d3529;outline:none;background:#fff;" />
+              <button id="view-day-today-btn" style="display:none;font-size:0.65rem;padding:0.2rem 0.5rem;border:1px solid #c9b99a;border-radius:10px;background:#fff;color:#6b5d4d;cursor:pointer;font-family:inherit;">Today</button>
+            </span>
+          </div>
+          <div id="past-day-banner" style="display:none;font-size:0.75rem;background:#faf5ec;border:1px solid #c9b99a;border-radius:6px;padding:0.4rem 0.6rem;margin-bottom:0.5rem;color:#6b5d4d;"></div>
           <textarea id="food-input" class="food-input" placeholder="What did you eat? e.g. greek yogurt with berries, latte, half a turkey sandwich"></textarea>
           <div id="recipe-suggestions" class="recipe-suggestions"></div>
           <div class="food-hint" id="food-hint">AI estimator: not yet configured. <a href="#" id="setup-link" style="color:#6b5d4d;">Set up →</a></div>
@@ -830,13 +838,58 @@
       toast('Profile saved');
     };
 
-    // ── Today's day ──
-    db.ref('health/days/' + todayStr()).on('value', snap => {
-      todayDay = snap.val() || { foods: [], exercise: [], weight: null };
-      renderToday();
-      renderSteps();
-      renderStats();
-    });
+    // ── Day being viewed/edited ──
+    // _viewDay is which day the Log Food / Exercise / Weight / Steps cards
+    // operate on. Defaults to today. The day picker can switch it to any past
+    // date so missed days can be backfilled.
+    let _viewDay = todayStr();
+    let _viewDayUnsub = null;
+
+    function setViewDay(d) {
+      _viewDay = d;
+      if (_viewDayUnsub) _viewDayUnsub();
+      const ref = db.ref('health/days/' + d);
+      const handler = snap => {
+        todayDay = snap.val() || { foods: [], exercise: [], weight: null };
+        renderToday();
+        renderSteps();
+        renderStats();
+      };
+      ref.on('value', handler);
+      _viewDayUnsub = () => ref.off('value', handler);
+
+      // UI cues for past mode
+      const inp = document.getElementById('view-day-input');
+      const todayBtn = document.getElementById('view-day-today-btn');
+      const banner = document.getElementById('past-day-banner');
+      if (inp) inp.value = d;
+      const isToday = d === todayStr();
+      if (todayBtn) todayBtn.style.display = isToday ? 'none' : '';
+      if (banner) {
+        banner.style.display = isToday ? 'none' : 'block';
+        if (!isToday) {
+          const pretty = new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+          banner.textContent = `Editing past day: ${pretty}`;
+        }
+      }
+    }
+
+    // Wire the date picker
+    setTimeout(() => {
+      const inp = document.getElementById('view-day-input');
+      if (inp) {
+        inp.value = todayStr();
+        inp.max = todayStr();
+        inp.addEventListener('change', e => {
+          if (e.target.value) setViewDay(e.target.value);
+        });
+      }
+      const btn = document.getElementById('view-day-today-btn');
+      if (btn) btn.addEventListener('click', () => setViewDay(todayStr()));
+    }, 0);
+
+    // Initial subscribe
+    setViewDay(todayStr());
 
     function renderToday() {
       // Foods
@@ -894,11 +947,11 @@
 
     window.deleteFood = (i) => {
       todayDay.foods.splice(i, 1);
-      db.ref('health/days/' + todayStr()).set(todayDay);
+      db.ref('health/days/' + _viewDay).set(todayDay);
     };
     window.deleteExercise = (i) => {
       todayDay.exercise.splice(i, 1);
-      db.ref('health/days/' + todayStr()).set(todayDay);
+      db.ref('health/days/' + _viewDay).set(todayDay);
     };
 
     // ── Stats ──
@@ -1087,7 +1140,7 @@
       const w = parseFloat(document.getElementById('weight-today').value);
       if (!w) return;
       todayDay.weight = w;
-      db.ref('health/days/' + todayStr()).set(todayDay);
+      db.ref('health/days/' + _viewDay).set(todayDay);
       toast('Weight logged');
     };
 
@@ -1100,7 +1153,7 @@
       const typeLabel = document.getElementById('ex-type').selectedOptions[0].text;
       todayDay.exercise = todayDay.exercise || [];
       todayDay.exercise.push({ type: typeLabel, mins, cal });
-      db.ref('health/days/' + todayStr()).set(todayDay);
+      db.ref('health/days/' + _viewDay).set(todayDay);
       document.getElementById('ex-mins').value = '';
       toast(`+${cal} cal burned`);
     };
@@ -1202,7 +1255,7 @@
             ...(idx === 0 && _pendingPhoto ? { photo: _pendingPhoto } : {}),
           });
         });
-        db.ref('health/days/' + todayStr()).set(todayDay);
+        db.ref('health/days/' + _viewDay).set(todayDay);
         document.getElementById('food-input').value = '';
         _pendingPhoto = null;
         document.getElementById('photo-preview').classList.remove('show');
@@ -1244,7 +1297,7 @@
         document.getElementById('photo-preview').classList.remove('show');
       }
       todayDay.foods.push(entry);
-      db.ref('health/days/' + todayStr()).set(todayDay);
+      db.ref('health/days/' + _viewDay).set(todayDay);
       closeManualForm();
       toast(`+${cal} cal logged`);
     };
@@ -1281,7 +1334,7 @@
       const v = parseInt(document.getElementById('steps-input').value, 10);
       if (isNaN(v) || v < 0) return;
       todayDay.steps = v;
-      db.ref('health/days/' + todayStr() + '/steps').set(v);
+      db.ref('health/days/' + _viewDay + '/steps').set(v);
       renderSteps();
       toast(`${v.toLocaleString()} steps saved`);
     };
@@ -1352,7 +1405,7 @@
           document.getElementById('photo-preview').classList.remove('show');
         }
         todayDay.foods.push(entry);
-        db.ref('health/days/' + todayStr()).set(todayDay);
+        db.ref('health/days/' + _viewDay).set(todayDay);
         foodInputEl.value = '';
         document.getElementById('recipe-suggestions').classList.remove('show');
         toast(`+${entry.cal} cal logged`);
@@ -1387,7 +1440,7 @@
           document.getElementById('photo-preview').classList.remove('show');
         }
         todayDay.foods.push(entry);
-        db.ref('health/days/' + todayStr()).set(todayDay);
+        db.ref('health/days/' + _viewDay).set(todayDay);
         foodInputEl.value = '';
         document.getElementById('recipe-suggestions').classList.remove('show');
         toast(`+${Math.round(totalCal)} cal logged (cached for next time)`);
@@ -1453,7 +1506,7 @@
           protein: Math.round(cached.protein || 0),
           source: 'planned-recipe',
         });
-        db.ref('health/days/' + todayStr()).set(todayDay);
+        db.ref('health/days/' + _viewDay).set(todayDay);
         toast(`+${Math.round(cached.cal)} cal logged (planned ${meal})`);
         if (btn) { btn.textContent = 'Added ✓'; btn.disabled = true; }
         return;
@@ -1494,7 +1547,7 @@
             source: 'planned',
           });
         });
-        db.ref('health/days/' + todayStr()).set(todayDay);
+        db.ref('health/days/' + _viewDay).set(todayDay);
         toast(`+${Math.round(totCal)} cal logged (planned ${meal})`);
         if (btn) { btn.textContent = 'Added ✓'; }
       } catch (err) {
@@ -1574,7 +1627,7 @@
     window.logBooster = function(cal, protein, name) {
       todayDay.foods = todayDay.foods || [];
       todayDay.foods.push({ name, cal, protein });
-      db.ref('health/days/' + todayStr()).set(todayDay);
+      db.ref('health/days/' + _viewDay).set(todayDay);
       toast(`+${cal} cal, ${protein}g protein logged`);
     };
   </script>
