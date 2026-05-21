@@ -262,22 +262,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA593 EWR to BOS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-05-19T11:55:00+00:00",
-        "end": "2026-05-19T13:11:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: The Royal Sonesta Boston",
-        "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
-        "description": "",
-        "start": "2026-05-19T19:00:00+00:00",
-        "end": "2026-05-19T20:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "UA570 BOS to EWR",
         "location": "Boston (BOS)",
         "description": "",
@@ -397,6 +381,14 @@ window.EMAIL_DATA = {
   "unreadCount": 10,
   "threads": [
     {
+      "sender": "Tatte Bakery & Cafe Feedback",
+      "subject": "Tatte Bakery - We want to hear from you!"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "Get Buybacks On Desktop"
+    },
+    {
       "sender": "Fullscript",
       "subject": "The Signature Sale ends tomorrow"
     },
@@ -407,10 +399,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Tatte Bakery Online Ordering",
       "subject": "Tatte Bakery Order Received"
-    },
-    {
-      "sender": "Blurry Vision Killing You? \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Blurry Vision Killing You? THIS 7-Second Trick Restores 20/20 Vision"
     },
     {
       "sender": "Amazon.com",
@@ -431,10 +419,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lyft Receipts",
       "subject": "Your ride with Rosanna Maria on May 19"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"CUSHIONAIRE Splash Jelly...\""
     }
   ],
   "items": [
