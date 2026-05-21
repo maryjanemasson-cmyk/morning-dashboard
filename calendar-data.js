@@ -363,6 +363,46 @@ window.TRAVEL_DATA = [
     ]
   },
   {
+    "destination": "Paris, France",
+    "start": "2026-06-15",
+    "end": "2026-06-18",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "Check-in: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-06-15T13:00:00+00:00",
+        "end": "2026-06-15T14:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-06-16T01:35:00+00:00",
+        "end": "2026-06-16T08:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-06-18T07:45:00+00:00",
+        "end": "2026-06-18T15:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-out: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-06-18T09:00:00+00:00",
+        "end": "2026-06-18T10:00:00+00:00",
+        "type": "hotel"
+      }
+    ]
+  },
+  {
     "destination": "Cambridge, MA",
     "start": "2026-06-30",
     "end": "2026-07-03",
@@ -389,12 +429,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 20,
   "threads": [
-    {
-      "sender": "United Airlines",
-      "subject": "A message from our Chief Customer Officer"
-    },
     {
       "sender": "",
       "subject": "Payment date for Kearny Bank Loan changed"
@@ -430,6 +466,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "Featherweight Terry"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "You Have Great Taste"
     }
   ],
   "items": [

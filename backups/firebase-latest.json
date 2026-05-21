@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-21T17:46:49",
+    "captured_at": "2026-05-21T18:13:08",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -3406,6 +3406,14 @@
           "height": 25,
           "left": 46.2,
           "top": 33.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s31_004.png",
+          "file": "wardrobe-thumbs/s31_004.png",
+          "height": 25,
+          "left": 86.6,
+          "top": 29.1,
           "width": 15
         }
       ]
@@ -13134,8 +13142,8 @@
           "_origFile": "s20_003.png",
           "file": "wardrobe-thumbs/s20_003.png",
           "height": 23.7,
-          "left": 80.9,
-          "top": 14,
+          "left": 83.8,
+          "top": 29.7,
           "width": 13.7
         },
         {
@@ -13233,6 +13241,14 @@
           "left": 14.7,
           "top": 81.8,
           "width": 11.1
+        },
+        {
+          "_origFile": "s12_004.png",
+          "file": "wardrobe-thumbs/s12_004.png",
+          "height": 25,
+          "left": 84.3,
+          "top": 0.3,
+          "width": 15
         }
       ]
     },
