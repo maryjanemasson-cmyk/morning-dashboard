@@ -242,6 +242,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "\ud83d\ude82 Amtrak - New London, CT - Union Station (NLC) \u2192 Princeton Junction, NJ (PJC)",
+    "location": "New London, CT - Union Station (NLC); NLC, New London, CT - Union Station (NLC)",
+    "description": "Wed, Jun 3\n7:11 PM EDT\n[Rail] Amtrak - New London, CT - Union Station (NLC) to Princeton Junction, NJ (PJC)\nDepart New London, CT - Union Station (NLC) NLC, New London, CT - Union Station (NLC)\n11:00 PM EDT\nArrive Princeton Junction, NJ (PJC) PJC, Princeton Junction, NJ (PJC)",
+    "startTime": "2026-06-03T19:11:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-03T23:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "9"
+  },
+  {
     "summary": "Amtrak: 177 Northeast Regional",
     "location": "27 Water Street , New London CT 06320",
     "description": "Your reservation number is 0E52E3. Use the Amtrak app to access your eTicket or change this reservation.",
@@ -312,18 +323,18 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Weston, NJ",
-    "start": "2026-06-03",
-    "end": "2026-06-03",
+    "destination": "Newark, NJ",
+    "start": "2026-06-04",
+    "end": "2026-06-04",
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "Amtrak - New London, CT - Union Station (NLC) to Princeton Junction, NJ (PJC)",
-        "location": "New London, CT - Union Station (NLC); NLC, New London, CT - Union Station (NLC)",
+        "summary": "UA1307 BOS to EWR",
+        "location": "Boston (BOS)",
         "description": "",
-        "start": "2026-06-03T23:11:00+00:00",
-        "end": "2026-06-04T03:00:00+00:00",
-        "type": "train"
+        "start": "2026-06-04T13:30:00+00:00",
+        "end": "2026-06-04T14:58:00+00:00",
+        "type": "flight"
       }
     ]
   },
@@ -378,47 +389,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "Tatte Bakery & Cafe Feedback",
-      "subject": "Tatte Bakery - We want to hear from you!"
+      "sender": "",
+      "subject": "Payment date for Kearny Bank Loan changed"
     },
     {
-      "sender": "Croissant",
-      "subject": "Get Buybacks On Desktop"
+      "sender": "LinkedIn Premium",
+      "subject": "Mary Jane, thanks for being a valued member"
     },
     {
-      "sender": "Fullscript",
-      "subject": "The Signature Sale ends tomorrow"
+      "sender": "ALZHEIMER\u2019S-LIKE SYMPTOMS REVERSED \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "For the first time in medical history, Alzheimer's was reversed."
     },
     {
-      "sender": "Eggs & Brain Health \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Doctors Are Recommending This Nutrient for Stronger Memory"
+      "sender": "Secrets in Lace",
+      "subject": "Celebrate Memorial Day with 25% Off Our Entire Website"
     },
     {
-      "sender": "Tatte Bakery Online Ordering",
-      "subject": "Tatte Bakery Order Received"
+      "sender": "Deer Guys",
+      "subject": "Hi Mary Jane And Christian, how was your experience with us?"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Le fant\u00f4me de Canterville /...\""
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Say hello to Extra. Big. Deals. \ud83e\udd29"
     },
     {
-      "sender": "Barlume Beach Montauk",
-      "subject": "June 6th: St. Lucia DJ Set at Barlume Beach"
+      "sender": "Simplified by Emily Ley",
+      "subject": "Summer looks good on you. So does 15% off! \u26f1\ufe0f"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "Top companies are hiring"
+      "sender": "The Shade Store",
+      "subject": "25% OFF SITEWIDE STARTS NOW"
     },
     {
-      "sender": "PayPal",
-      "subject": "Want in on 15% back? Now\u2019s your chance \u23f0"
+      "sender": "Buck Mason",
+      "subject": "Featherweight Terry"
     },
     {
-      "sender": "Lyft Receipts",
-      "subject": "Your ride with Rosanna Maria on May 19"
+      "sender": "Almina Concept",
+      "subject": "You Have Great Taste"
     }
   ],
   "items": [
@@ -526,13 +537,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e31fae5f1e3d1a",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"CUSHIONAIRE Splash Jelly...\"",
-      "date": "2026-05-20",
-      "id": "19e42ddd391da131",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
