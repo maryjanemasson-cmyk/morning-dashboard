@@ -619,6 +619,7 @@
       } else {
         html += `<button class="edit-btn active" onclick="toggleEdit()">Editing...</button>`;
         html += `<button class="edit-btn" onclick="toggleAddPanel()">+ Add Piece</button>`;
+        html += `<button class="edit-btn" onclick="clearAllPieces()" title="Remove every piece so you can start fresh">Clear All</button>`;
         html += `<button class="edit-btn primary" onclick="saveLayout()">Save</button>`;
         html += `<button class="edit-btn danger" onclick="cancelEdit()">Cancel</button>`;
       }
@@ -799,6 +800,14 @@
       _editLayout.splice(idx, 1);
       renderDetail();
     }
+
+    window.clearAllPieces = function() {
+      const n = _editLayout.length;
+      if (!n) return;
+      if (!confirm(`Remove all ${n} piece${n === 1 ? '' : 's'} from this outfit? You can rebuild from your wardrobe. Click Cancel below to discard, or Save to commit.`)) return;
+      _editLayout = [];
+      renderDetail();
+    };
 
     function toggleAddPanel() {
       _addPanelOpen = !_addPanelOpen;
