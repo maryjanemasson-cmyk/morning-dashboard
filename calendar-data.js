@@ -429,8 +429,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Fullscript",
+      "subject": "You still have time to save"
+    },
     {
       "sender": "",
       "subject": "Payment date for Kearny Bank Loan changed"
@@ -466,10 +470,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "Featherweight Terry"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "You Have Great Taste"
     }
   ],
   "items": [
