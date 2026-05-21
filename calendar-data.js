@@ -392,6 +392,10 @@ window.EMAIL_DATA = {
   "unreadCount": 21,
   "threads": [
     {
+      "sender": "United Airlines",
+      "subject": "A message from our Chief Customer Officer"
+    },
+    {
       "sender": "",
       "subject": "Payment date for Kearny Bank Loan changed"
     },
@@ -426,10 +430,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "Featherweight Terry"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "You Have Great Taste"
     }
   ],
   "items": [
@@ -537,6 +537,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-16",
       "id": "19e31fae5f1e3d1a",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "school",
+      "title": "1 week Away until 8th Grade Graduation Trip",
+      "date": "2026-05-21",
+      "id": "19e4c3c2bbc55d56",
+      "sender": "Administration Office FASP"
     },
     {
       "type": "class",
