@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
+    "summary": "Star Wars: The Mandalorian and Grogu",
+    "location": "AMC MarketFair 10, 3521 Us-1, Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DO3jZ35MoOASZxP8igcjGGNQc3lrNuogSk\n",
+    "startTime": "2026-05-22T16:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-22T17:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -496,8 +507,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"GRACE KARIN Womens Button...\""
+    },
+    {
+      "sender": "Toenail Fungus? \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Do This Every Evening & See What Happens to Your Toenails"
+    },
     {
       "sender": "Chan Luu",
       "subject": "How\u2019d we do?"
@@ -529,14 +548,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Swollen Feet & Ankles? Try THIS And See How It Feels (Watch Now)"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "Reminder: Join WashU, Notre Dame, Indiana, and UChicago for an information session!"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Mary, did you recently sign into Etsy?"
     }
   ],
   "items": [
@@ -662,6 +673,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e30dd0134485a5",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"1950s Dresses for Women...\"",
+      "date": "2026-05-22",
+      "id": "19e50a76f266f909",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
