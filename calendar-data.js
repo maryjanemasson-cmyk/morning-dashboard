@@ -507,8 +507,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "30% back on Starlink internet"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 \"GRACE KARIN Womens Button...\""
@@ -534,20 +538,16 @@ window.EMAIL_DATA = {
       "subject": "Bid miles on an exclusive evening with Nancy Silverton"
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
-    },
-    {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
-      "sender": "John Gregory-Smith from John Gregory-Smith",
-      "subject": "JohnGS recipe drop - Pasta Salad with Chicken"
-    },
-    {
       "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Swollen Feet & Ankles? Try THIS And See How It Feels (Watch Now)"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "Reminder: Join WashU, Notre Dame, Indiana, and UChicago for an information session!"
     }
   ],
   "items": [
@@ -673,6 +673,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e30dd0134485a5",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Cascade Complete Dishwasher...\" and \u20661\u2069 more item",
+      "date": "2026-05-22",
+      "id": "19e51337bad43917",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
