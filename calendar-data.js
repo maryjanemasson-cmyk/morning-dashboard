@@ -262,6 +262,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "2026-06-05",
     "calendar": "Family",
     "colorId": "5"
+  },
+  {
+    "summary": "\u2708\ufe0f UA1307 BOS \u2192 EWR",
+    "location": "Boston (BOS)",
+    "description": "Thu, Jun 4\n9:30 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 1307, Terminal TERMINAL B, Gate\n10:58 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
+    "startTime": "2026-06-04T09:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-04T10:58:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -432,8 +443,12 @@ window.EMAIL_DATA = {
   "unreadCount": 27,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"dpHUE Root Touch-Up Kit,...\""
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 22 May 2026"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
       "sender": "John Gregory-Smith from John Gregory-Smith",
@@ -462,10 +477,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Swollen Feet & Ankles? Try THIS And See How It Feels (Watch Now)"
-    },
-    {
-      "sender": "Apollo\u2019s Buried SECRET \u2014 Robert Jacobs, Finance Insider",
-      "subject": "What Neil Armstrong REALLY saw on the moon [TERRIFYING]"
     },
     {
       "sender": "Washington University in St. Louis",
