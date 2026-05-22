@@ -1443,15 +1443,25 @@
       _cropping = false;
     }
 
-    // Wardrobe crops - load on demand instead of all at once (saves ~19MB)
+    // Wardrobe crops — lazy-load (saves ~19MB on initial paint) but then
+    // subscribe with .on() so a crop saved on the wardrobe page propagates
+    // here without a manual refresh. If a detail modal is open, re-render
+    // it; otherwise re-render the grid.
     let _wardrobeCrops = {};
     let _cropsLoaded = false;
 
     function loadCropsIfNeeded() {
       if (_cropsLoaded) return Promise.resolve();
-      return db.ref('wardrobeCrops').once('value').then(snap => {
-        _wardrobeCrops = snap.val() || {};
-        _cropsLoaded = true;
+      _cropsLoaded = true;
+      return new Promise(resolve => {
+        let firstFire = true;
+        db.ref('wardrobeCrops').on('value', snap => {
+          _wardrobeCrops = snap.val() || {};
+          if (firstFire) { firstFire = false; resolve(); return; }
+          // Subsequent updates: refresh whatever the user is looking at
+          if (_editingOutfit) renderDetail();
+          else if (typeof render === 'function') render();
+        });
       });
     }
 
