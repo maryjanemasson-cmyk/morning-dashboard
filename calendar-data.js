@@ -420,12 +420,28 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
+        "summary": "UA1110 EWR to BOS",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-06-30T12:32:00+00:00",
+        "end": "2026-06-30T13:48:00+00:00",
+        "type": "flight"
+      },
+      {
         "summary": "Check-in: Kimpton Marlowe by IHG",
         "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
         "description": "",
         "start": "2026-06-30T19:00:00+00:00",
         "end": "2026-06-30T20:00:00+00:00",
         "type": "hotel"
+      },
+      {
+        "summary": "UA570 BOS to EWR",
+        "location": "Boston (BOS)",
+        "description": "",
+        "start": "2026-07-03T12:00:00+00:00",
+        "end": "2026-07-03T13:23:00+00:00",
+        "type": "flight"
       },
       {
         "summary": "Check-out: Kimpton Marlowe by IHG",
@@ -440,31 +456,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "NOLS Matching Gift Challenge",
-      "subject": "Before the weekend"
+      "sender": "AT&T Online Services",
+      "subject": "Your AT&T wireless bill is ready to view"
     },
     {
-      "sender": "Walpole Outdoors",
-      "subject": "Refresh Your Outdoor Space for Summer"
+      "sender": "PayPal",
+      "subject": "Spotify USA Inc: $23.45\u00a0USD"
     },
     {
-      "sender": "Alloy",
-      "subject": "Your Alloy prescription has been paused."
+      "sender": "Labcorp",
+      "subject": "Leptin and weight loss: What you need to know"
     },
     {
-      "sender": "Quince",
-      "subject": "Your order is winging its way to you!"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "GO time for Memorial Day \u2728 Save up to $1,700"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 5/22 is ready to view"
+      "sender": "MileagePlus Program",
+      "subject": "Bid miles on an exclusive evening with Nancy Silverton"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
     },
     {
       "sender": "PNC Alerts",
