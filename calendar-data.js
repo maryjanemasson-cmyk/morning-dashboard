@@ -507,8 +507,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Check Your Mirror \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Your neck is giving away your age"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Your McGee & Co. cart? Saved \u2705 over on Shop"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "Price drop\u2014just for you \ud83d\udc40"
+    },
+    {
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Memorial Day Travel Prep"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udfac Heroic missions and dangerous secrets await"
+    },
     {
       "sender": "PayPal",
       "subject": "30% back on Starlink internet"
@@ -528,26 +548,6 @@ window.EMAIL_DATA = {
     {
       "sender": "AT&T Online Services",
       "subject": "Your AT&T wireless bill is ready to view"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Spotify USA Inc: $23.45\u00a0USD"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Bid miles on an exclusive evening with Nancy Silverton"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Swollen Feet & Ankles? Try THIS And See How It Feels (Watch Now)"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "Reminder: Join WashU, Notre Dame, Indiana, and UChicago for an information session!"
     }
   ],
   "items": [
