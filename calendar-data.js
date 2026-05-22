@@ -452,12 +452,56 @@ window.TRAVEL_DATA = [
         "type": "hotel"
       }
     ]
+  },
+  {
+    "destination": "London, United Kingdom",
+    "start": "2026-07-06",
+    "end": "2026-07-10",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA122 EWR to LHR",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-07-06T13:45:00+00:00",
+        "end": "2026-07-06T20:35:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-in: Wilde Aparthotels London Paddington",
+        "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
+        "description": "",
+        "start": "2026-07-06T14:00:00+00:00",
+        "end": "2026-07-06T15:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA905 LHR to EWR",
+        "location": "London (LHR)",
+        "description": "",
+        "start": "2026-07-10T08:30:00+00:00",
+        "end": "2026-07-10T16:30:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-out: Wilde Aparthotels London Paddington",
+        "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
+        "description": "",
+        "start": "2026-07-10T10:00:00+00:00",
+        "end": "2026-07-10T11:00:00+00:00",
+        "type": "hotel"
+      }
+    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Chan Luu",
+      "subject": "How\u2019d we do?"
+    },
     {
       "sender": "AT&T Online Services",
       "subject": "Your AT&T wireless bill is ready to view"
@@ -465,14 +509,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Spotify USA Inc: $23.45\u00a0USD"
-    },
-    {
-      "sender": "Labcorp",
-      "subject": "Leptin and weight loss: What you need to know"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "GO time for Memorial Day \u2728 Save up to $1,700"
     },
     {
       "sender": "MileagePlus Program",
@@ -497,6 +533,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Washington University in St. Louis",
       "subject": "Reminder: Join WashU, Notre Dame, Indiana, and UChicago for an information session!"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Mary, did you recently sign into Etsy?"
     }
   ],
   "items": [
