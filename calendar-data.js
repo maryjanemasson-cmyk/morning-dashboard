@@ -11,17 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
-    "summary": "\u2708 UA570 BOS \u2192 EWR",
-    "location": "Boston (BOS) \u2192 Newark (EWR)",
-    "description": "United Airlines 570, Terminal B\\nDepart: 7:30 AM EDT from BOS\\nArrive: 8:53 AM EDT at EWR, Terminal C",
-    "startTime": "2026-05-21T07:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-21T08:53:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30dd0134485a5",
@@ -262,6 +251,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "iCloud",
     "colorId": ""
+  },
+  {
+    "summary": "\ud83c\udf93 Christian (son) \u2014 School Ends",
+    "location": "",
+    "description": "CEH/\u00c9cole de Princeton school year ends.",
+    "startTime": "",
+    "startDate": "2026-06-04",
+    "endTime": "",
+    "endDate": "2026-06-05",
+    "calendar": "Family",
+    "colorId": "5"
   }
 ];
 
@@ -429,8 +429,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"dpHUE Root Touch-Up Kit,...\""
+    },
+    {
+      "sender": "John Gregory-Smith from John Gregory-Smith",
+      "subject": "JohnGS recipe drop - Pasta Salad with Chicken"
+    },
+    {
+      "sender": "IDnotify",
+      "subject": "Your Monthly Update From IDnotify"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Proper Cloth Account",
+      "subject": "Verify Your Proper Cloth Account"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $11,457.88 deposit was credited to your account."
+    },
+    {
+      "sender": "Venmo",
+      "subject": "You paid Joshua Niu $25.00"
+    },
     {
       "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Swollen Feet & Ankles? Try THIS And See How It Feels (Watch Now)"
@@ -442,34 +470,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Washington University in St. Louis",
       "subject": "Reminder: Join WashU, Notre Dame, Indiana, and UChicago for an information session!"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Mary, did you recently sign into Etsy?"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Congratulations Christian, you\u2019ve been selected to earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
-    },
-    {
-      "sender": "Fullscript",
-      "subject": "You still have time to save"
-    },
-    {
-      "sender": "",
-      "subject": "Payment date for Kearny Bank Loan changed"
-    },
-    {
-      "sender": "LinkedIn Premium",
-      "subject": "Mary Jane, thanks for being a valued member"
-    },
-    {
-      "sender": "ALZHEIMER\u2019S-LIKE SYMPTOMS REVERSED \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "For the first time in medical history, Alzheimer's was reversed."
-    },
-    {
-      "sender": "Secrets in Lace",
-      "subject": "Celebrate Memorial Day with 25% Off Our Entire Website"
     }
   ],
   "items": [
@@ -595,6 +595,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e30dd0134485a5",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"dpHUE Root Touch-Up Kit,...\"",
+      "date": "2026-05-22",
+      "id": "19e4ebfb937bbb2e",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
