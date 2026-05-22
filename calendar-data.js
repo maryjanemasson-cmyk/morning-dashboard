@@ -429,8 +429,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Swollen Feet & Ankles? Try THIS And See How It Feels (Watch Now)"
+    },
+    {
+      "sender": "Apollo\u2019s Buried SECRET \u2014 Robert Jacobs, Finance Insider",
+      "subject": "What Neil Armstrong REALLY saw on the moon [TERRIFYING]"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "Reminder: Join WashU, Notre Dame, Indiana, and UChicago for an information session!"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Mary, did you recently sign into Etsy?"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Congratulations Christian, you\u2019ve been selected to earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
+    },
     {
       "sender": "Fullscript",
       "subject": "You still have time to save"
@@ -450,26 +470,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Secrets in Lace",
       "subject": "Celebrate Memorial Day with 25% Off Our Entire Website"
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Hi Mary Jane And Christian, how was your experience with us?"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Say hello to Extra. Big. Deals. \ud83e\udd29"
-    },
-    {
-      "sender": "Simplified by Emily Ley",
-      "subject": "Summer looks good on you. So does 15% off! \u26f1\ufe0f"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "25% OFF SITEWIDE STARTS NOW"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Featherweight Terry"
     }
   ],
   "items": [
