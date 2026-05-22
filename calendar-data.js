@@ -440,11 +440,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 22 May 2026"
+      "sender": "NOLS Matching Gift Challenge",
+      "subject": "Before the weekend"
+    },
+    {
+      "sender": "Walpole Outdoors",
+      "subject": "Refresh Your Outdoor Space for Summer"
+    },
+    {
+      "sender": "Alloy",
+      "subject": "Your Alloy prescription has been paused."
+    },
+    {
+      "sender": "Quince",
+      "subject": "Your order is winging its way to you!"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 5/22 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     },
     {
       "sender": "PNC Alerts",
@@ -453,26 +473,6 @@ window.EMAIL_DATA = {
     {
       "sender": "John Gregory-Smith from John Gregory-Smith",
       "subject": "JohnGS recipe drop - Pasta Salad with Chicken"
-    },
-    {
-      "sender": "IDnotify",
-      "subject": "Your Monthly Update From IDnotify"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Proper Cloth Account",
-      "subject": "Verify Your Proper Cloth Account"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $11,457.88 deposit was credited to your account."
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Joshua Niu $25.00"
     },
     {
       "sender": "Swollen Feet & Ankles? \u2014 Emily Harrison, MD | FIP Health",
