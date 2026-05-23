@@ -33,17 +33,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Vintage shopping NTC",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-24T11:15:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-24T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "Furniture cleaning",
     "location": "",
     "description": "",
@@ -461,7 +450,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 25,
   "threads": [
     {
       "sender": "Amazon.com",
