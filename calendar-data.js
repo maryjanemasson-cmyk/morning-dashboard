@@ -461,47 +461,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 32,
   "threads": [
     {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for Allegra K Women's Denim...."
+      "sender": "MyLowe's Rewards",
+      "subject": "This grill tool kit is for members only \ud83d\udd25"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 5/23 is ready to view"
+      "sender": "All Furniture Services\u00ae LLC Repair & Restoration",
+      "subject": "\ud83d\udcac All Furniture Services\u00ae LLC Repair & Restoration got back to you about your Upholstery and Furniture Cleaning project"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 23 May 2026"
+      "sender": "Bake Time",
+      "subject": "Fabulous picnic bakes that travel well"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "Reformation",
+      "subject": "Back in stock: The Olina Cropped Pant."
     },
     {
-      "sender": "Royal Carpet & Upholstery Cleaning",
-      "subject": "\ud83d\udcac Royal Carpet & Upholstery Cleaning got back to you about your Upholstery and Furniture Cleaning project"
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
     },
     {
-      "sender": "Abby Arad from Your Stylist Says...",
-      "subject": "5 ways to look better by tonight"
+      "sender": "Almina Concept",
+      "subject": "20% Off This Weekend"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "Beach Bags, But Better"
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
     },
     {
-      "sender": "Thumbtack",
-      "subject": "\ud83d\udc4c Next steps on your search for an Upholstery and Furniture Cleaner"
+      "sender": "Sex & Cancer Link \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Doctors Link a Common Sex Habit to Cancer"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "The Real \\\"Next Plandemic\\\" - Turbo Trade Pro",
+      "subject": "Forg\u0435t Hantavirus. 1,700 Americans died t\u03bfday from something worse."
     },
     {
-      "sender": "Washington University in St. Louis",
-      "subject": "Visit WashU this summer!"
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence"
     }
   ],
   "items": [
