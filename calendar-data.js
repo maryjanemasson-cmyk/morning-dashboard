@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Furniture cleaning",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-24T16:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-24T18:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
     "summary": "\ud83c\udfeb PRISMS \u2014 Memorial Day (No Classes)",
     "location": "",
     "description": "Memorial Day \u2014 No Classes",
@@ -86,6 +97,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "Vintage shopping NTC",
+    "location": "",
+    "description": "",
+    "startTime": "2026-05-25T11:15:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-25T18:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
   },
   {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
@@ -439,15 +461,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for Allegra K Women's Denim...."
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 5/23 is ready to view"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 23 May 2026"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Royal Carpet & Upholstery Cleaning",
+      "subject": "\ud83d\udcac Royal Carpet & Upholstery Cleaning got back to you about your Upholstery and Furniture Cleaning project"
+    },
+    {
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "5 ways to look better by tonight"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Beach Bags, But Better"
+    },
     {
       "sender": "Thumbtack",
       "subject": "\ud83d\udc4c Next steps on your search for an Upholstery and Furniture Cleaner"
-    },
-    {
-      "sender": "A&T master cleaning",
-      "subject": "\ud83d\udcac A&T master cleaning got back to you about your Upholstery and Furniture Cleaning project"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -456,30 +502,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Washington University in St. Louis",
       "subject": "Visit WashU this summer!"
-    },
-    {
-      "sender": "Check Your Mirror \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Your neck is giving away your age"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Your McGee & Co. cart? Saved \u2705 over on Shop"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Price drop\u2014just for you \ud83d\udc40"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Memorial Day Travel Prep"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udfac Heroic missions and dangerous secrets await"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "30% back on Starlink internet"
     }
   ],
   "items": [
@@ -605,6 +627,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e30c2e79c9db82",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
+      "date": "2026-05-23",
+      "id": "19e54e42527ad455",
+      "sender": "return@amazon.com"
     },
     {
       "type": "class",
