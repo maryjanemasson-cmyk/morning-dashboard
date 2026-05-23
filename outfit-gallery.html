@@ -489,7 +489,12 @@
         if (o.layout && o.layout.length) {
           previewImgs = o.layout.map(item => {
             const f = item.file.startsWith('../') ? item.file.substring(3) : item.file;
-            const src = f.startsWith('data:') ? f
+            // Honor any wardrobe-crop override (white-bg etc.) just like the detail view does.
+            const checkFile = (item._origFile || f).replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+            const cropKey = checkFile.replace(/\./g, '_');
+            const cropped = _wardrobeCrops && _wardrobeCrops[cropKey];
+            const src = cropped ? cropped
+              : f.startsWith('data:') ? f
               : f.startsWith('wardrobe-thumbs/') ? f
               : IMG_PATH + f;
             const fallback = f.startsWith('piece_') ? `onerror="loadFromCropCache(this,'${f}')"` : '';
@@ -1460,13 +1465,25 @@
         let firstFire = true;
         db.ref('wardrobeCrops').on('value', snap => {
           _wardrobeCrops = snap.val() || {};
-          if (firstFire) { firstFire = false; resolve(); return; }
+          if (firstFire) {
+            firstFire = false;
+            // First payload — re-render the grid so any wardrobeCrops override
+            // (white-bg etc.) shows in the card thumbnails too, not just the
+            // detail modal.
+            if (typeof render === 'function') render();
+            resolve();
+            return;
+          }
           // Subsequent updates: refresh whatever the user is looking at
           if (_editingOutfit) renderDetail();
           else if (typeof render === 'function') render();
         });
       });
     }
+    // Kick off the crop load right away so the grid renders with the
+    // overrides applied. Delayed loading was about saving initial paint cost,
+    // but visual correctness > slightly-later paint.
+    loadCropsIfNeeded();
 
     // Only load crops when opening detail view or add panel (not on initial grid render)
     const _origShowDetail = showDetail;
