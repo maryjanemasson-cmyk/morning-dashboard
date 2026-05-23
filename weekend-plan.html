@@ -511,6 +511,7 @@
         const v = snap.val();
         _items[which] = Array.isArray(v) ? v : (v ? Object.values(v) : []);
         mergeRecurring(which);
+        mergeDueChores(which);
         renderList(which);
       });
     }
@@ -529,6 +530,54 @@
       mergeRecurring('sat');
       mergeRecurring('sun');
     });
+
+    // ── Due chores ──
+    // Any chore (from the Reminders card on the dashboard) whose next-due date
+    // falls by Saturday gets auto-added to Saturday. Chores due specifically on
+    // Sunday land on Sunday. The list re-evaluates on every load so toggling
+    // "mark done" from the dashboard removes the chore from the weekend plan
+    // on the next refresh.
+    let _choresState = {};
+    db.ref('chores').on('value', snap => {
+      _choresState = snap.val() || {};
+      mergeDueChores('sat');
+      mergeDueChores('sun');
+    });
+
+    function mergeDueChores(which) {
+      if (!Array.isArray(CHORE_TYPES) || !CHORE_TYPES.length) return;
+      const dayKey = listKey(which);
+      const dayDate = new Date(dayKey + 'T12:00:00');
+      const otherKey = which === 'sat' ? SUN_KEY : SAT_KEY;
+      const otherDate = new Date(otherKey + 'T12:00:00');
+      const have = new Set((_items[which] || []).map(it => (it.text || '').toLowerCase()));
+      let added = false;
+      CHORE_TYPES.forEach(c => {
+        let dueDate;
+        const lastDate = _choresState[c.id];
+        if (!lastDate) {
+          // Never done — treat as already due
+          dueDate = new Date(0);
+        } else {
+          dueDate = new Date(lastDate);
+          dueDate.setDate(dueDate.getDate() + (c.dueDays || 0));
+        }
+        // Saturday gets everything due by Saturday inclusive.
+        // Sunday gets only chores that come due AFTER Saturday but by Sunday.
+        let shouldAdd;
+        if (which === 'sat') {
+          shouldAdd = dueDate <= dayDate;
+        } else {
+          shouldAdd = dueDate > otherDate && dueDate <= dayDate;
+        }
+        if (!shouldAdd) return;
+        const text = `${c.icon} ${c.name}`;
+        if (have.has(text.toLowerCase())) return;
+        _items[which].push({ text, done: false, source: 'chore' });
+        added = true;
+      });
+      if (added) saveList(which);
+    }
 
     function mergeRecurring(which) {
       const dayKey = listKey(which);
