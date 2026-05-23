@@ -1,49 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Trip \u2014 Cambridge, MA",
-    "location": "Cambridge, MA",
-    "description": "Cambridge, MA \u2014 May 19 to 22, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
-    "startTime": "",
-    "startDate": "2026-05-19",
-    "endTime": "",
-    "endDate": "2026-05-23",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "CP Reformer Flow 2 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30dd0134485a5",
-    "startTime": "2026-05-22T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-22T06:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
-    "location": "40 Edwin H. Land Boulevard, Cambridge, MA 02142",
-    "description": "Check-Out: 11:00 AM\\nPhone: 1-617-806-4200",
-    "startTime": "2026-05-22T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-22T12:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "Star Wars: The Mandalorian and Grogu",
-    "location": "AMC MarketFair 10, 3521 Us-1, Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DO3jZ35MoOASZxP8igcjGGNQc3lrNuogSk\n",
-    "startTime": "2026-05-22T16:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-22T17:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -483,15 +439,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Thumbtack",
+      "subject": "\ud83d\udc4c Next steps on your search for an Upholstery and Furniture Cleaner"
+    },
+    {
+      "sender": "A&T master cleaning",
+      "subject": "\ud83d\udcac A&T master cleaning got back to you about your Upholstery and Furniture Cleaning project"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Washington University in St. Louis",
       "subject": "Visit WashU this summer!"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS: Get Ready for Your Package!"
     },
     {
       "sender": "Check Your Mirror \u2014 Emily Harrison, MD | FIP Health",
@@ -516,14 +480,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "30% back on Starlink internet"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"GRACE KARIN Womens Button...\""
-    },
-    {
-      "sender": "Toenail Fungus? \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Do This Every Evening & See What Happens to Your Toenails"
     }
   ],
   "items": [
@@ -638,38 +594,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-21",
       "id": "19e4c3c2bbc55d56",
       "sender": "Administration Office FASP"
-    },
-    {
-      "type": "class",
-      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
-      "name": "CP Reformer Flow 2 (50 Mins) class",
-      "date": "2026-05-22",
-      "time": "06:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19e30dd0134485a5",
-      "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Cascade Complete Dishwasher...\" and \u20661\u2069 more item",
-      "date": "2026-05-22",
-      "id": "19e51337bad43917",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"1950s Dresses for Women...\"",
-      "date": "2026-05-22",
-      "id": "19e50a76f266f909",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"dpHUE Root Touch-Up Kit,...\"",
-      "date": "2026-05-22",
-      "id": "19e4ebfb937bbb2e",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
