@@ -450,8 +450,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Nongshim Shin Ramyun...\""
@@ -487,10 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "#1 WORST vegetable \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Urologists avoid THIS vegetable like the plague"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "A New Summer Lineup"
     }
   ],
   "items": [
