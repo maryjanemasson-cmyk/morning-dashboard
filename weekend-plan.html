@@ -109,7 +109,19 @@
     .src-school { background: #e9dee8; color: #6e4d6a; }
     .src-chore  { background: #e1e9dd; color: #4a5d40; }
     .src-todo   { background: #e3dcce; color: #74614e; }
+    .src-recurring { background: #d4dee5; color: #4a6675; }
     .src-manual { display: none; }
+
+    .day-tools {
+      display: flex; gap: 0.75rem; flex-wrap: wrap;
+      margin-top: 0.6rem; padding-top: 0.5rem;
+      border-top: 1px dashed #f0ebe4;
+    }
+    .day-tools a {
+      font-size: 0.7rem; color: #9c8b76; text-decoration: none;
+      cursor: pointer;
+    }
+    .day-tools a:hover { color: #6b5d4d; text-decoration: underline; }
 
     /* Drag-and-drop */
     .checklist li { cursor: grab; user-select: none; }
@@ -182,6 +194,11 @@
           <input class="add-input" id="today-add-input" placeholder="Add a task for Saturday…" onkeydown="if(event.key==='Enter')addItem('sat')">
           <button class="add-btn" onclick="addItem('sat')">Add</button>
         </div>
+        <div class="day-tools">
+          <a href="#" onclick="event.preventDefault();addRecurring('sat')">+ Repeat every Saturday</a>
+          <a href="#" onclick="event.preventDefault();manageRecurring('sat')">Manage recurring</a>
+          <a href="#" onclick="event.preventDefault();clearDone('sat')">Clear checked</a>
+        </div>
       </div>
     </div>
 
@@ -200,6 +217,11 @@
         <div class="add-row">
           <input class="add-input" id="tomorrow-add-input" placeholder="Add a task for Sunday…" onkeydown="if(event.key==='Enter')addItem('sun')">
           <button class="add-btn" onclick="addItem('sun')">Add</button>
+        </div>
+        <div class="day-tools">
+          <a href="#" onclick="event.preventDefault();addRecurring('sun')">+ Repeat every Sunday</a>
+          <a href="#" onclick="event.preventDefault();manageRecurring('sun')">Manage recurring</a>
+          <a href="#" onclick="event.preventDefault();clearDone('sun')">Clear checked</a>
         </div>
       </div>
     </div>
@@ -488,12 +510,81 @@
       db.ref('weekendPlan/' + listKey(which)).on('value', snap => {
         const v = snap.val();
         _items[which] = Array.isArray(v) ? v : (v ? Object.values(v) : []);
+        mergeRecurring(which);
         renderList(which);
       });
     }
     function saveList(which) {
       db.ref('weekendPlan/' + listKey(which)).set(_items[which]);
     }
+
+    // ── Recurring weekday tasks ──
+    // recurringWeekly is keyed by JS day-of-week (0=Sun..6=Sat). Each value is
+    // an array of strings. Items get auto-added to that day's checklist on every
+    // load — deduped by lowercase text match, so a previously-deleted item from
+    // this week comes back next week.
+    let _recurringWeekly = {};
+    db.ref('recurringWeekly').on('value', snap => {
+      _recurringWeekly = snap.val() || {};
+      mergeRecurring('sat');
+      mergeRecurring('sun');
+    });
+
+    function mergeRecurring(which) {
+      const dayKey = listKey(which);
+      const dow = new Date(dayKey + 'T12:00:00').getDay();
+      const recurring = _recurringWeekly[dow];
+      if (!Array.isArray(recurring) || !recurring.length) return;
+      const have = new Set((_items[which] || []).map(it => (it.text || '').toLowerCase()));
+      let added = false;
+      recurring.forEach(text => {
+        if (!text || have.has(String(text).toLowerCase())) return;
+        _items[which].push({ text: String(text), done: false, source: 'recurring' });
+        added = true;
+      });
+      if (added) saveList(which);
+    }
+
+    window.addRecurring = function(which) {
+      const dayName = which === 'sat' ? 'Saturday' : 'Sunday';
+      const text = prompt(`Recurring task that should appear every ${dayName}:`);
+      if (!text || !text.trim()) return;
+      const dayKey = listKey(which);
+      const dow = new Date(dayKey + 'T12:00:00').getDay();
+      const list = (_recurringWeekly[dow] || []).slice();
+      list.push(text.trim());
+      db.ref('recurringWeekly/' + dow).set(list);
+      // Also add to this week immediately
+      _items[which].push({ text: text.trim(), done: false, source: 'recurring' });
+      saveList(which);
+    };
+
+    window.manageRecurring = function(which) {
+      const dayName = which === 'sat' ? 'Saturday' : 'Sunday';
+      const dayKey = listKey(which);
+      const dow = new Date(dayKey + 'T12:00:00').getDay();
+      const list = (_recurringWeekly[dow] || []);
+      if (!list.length) { alert(`No recurring tasks for ${dayName} yet.`); return; }
+      const numbered = list.map((t, i) => `${i + 1}. ${t}`).join('\n');
+      const choice = prompt(`Recurring ${dayName} tasks:\n\n${numbered}\n\nType a number to remove that one, or Cancel:`);
+      if (!choice) return;
+      const idx = parseInt(choice, 10) - 1;
+      if (isNaN(idx) || idx < 0 || idx >= list.length) { alert('Not a valid number.'); return; }
+      const removed = list[idx];
+      const updated = list.filter((_, i) => i !== idx);
+      db.ref('recurringWeekly/' + dow).set(updated);
+      // Also drop it from this week's checklist if present
+      _items[which] = _items[which].filter(it => (it.text || '').toLowerCase() !== removed.toLowerCase());
+      saveList(which);
+    };
+
+    window.clearDone = function(which) {
+      const before = _items[which].length;
+      _items[which] = _items[which].filter(it => !it.done);
+      const removed = before - _items[which].length;
+      if (!removed) { return; }
+      saveList(which);
+    };
 
     window.addItem = function(which) {
       const inp = document.getElementById(addInputId(which));
