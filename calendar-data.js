@@ -461,11 +461,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "This grill tool kit is for members only \ud83d\udd25"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Nongshim Shin Ramyun...\""
+    },
+    {
+      "sender": "Reformation",
+      "subject": "WE DO WEDDINGS"
     },
     {
       "sender": "All Furniture Services\u00ae LLC Repair & Restoration",
@@ -474,18 +478,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bake Time",
       "subject": "Fabulous picnic bakes that travel well"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Back in stock: The Olina Cropped Pant."
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "20% Off This Weekend"
     },
     {
       "sender": "Kenny's Meals Lawrence",
@@ -502,6 +494,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Kenny's Meals Lawrence",
       "subject": "Your order from Kenny's Meals Lawrence"
+    },
+    {
+      "sender": "#1 WORST vegetable \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "Urologists avoid THIS vegetable like the plague"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "A New Summer Lineup"
     }
   ],
   "items": [
