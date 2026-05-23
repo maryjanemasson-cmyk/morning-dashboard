@@ -1614,8 +1614,10 @@
       const src = document.getElementById('zoom-img').src;
       _wcropFile = _zoomFile || src.split('/').pop();
 
-      // Always load from original thumbnail file (not a crop data URL)
-      const origSrc = IMG_PATH + _wcropFile;
+      // Prefer the existing wardrobeCrops override (e.g. a white-background
+      // version) as the crop source, so cropping doesn't undo the override.
+      const fileKey = _wcropFile.replace(/\./g, '_');
+      const origSrc = (_savedCrops && _savedCrops[fileKey]) || (IMG_PATH + _wcropFile);
 
       const imgEl = new window.Image();
       imgEl.crossOrigin = 'anonymous';
