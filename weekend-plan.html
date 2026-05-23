@@ -416,6 +416,20 @@
       if (fromWhich === toWhich && fromIndex < toIndex) insertAt = toIndex - 1;
       _items[toWhich].splice(insertAt, 0, item);
 
+      // If the item came from a merge source (recurring/chore), suppress it
+      // on the source day so the merge functions don't re-add it. Also lift
+      // any suppression on the destination day so the move actually sticks.
+      if (fromWhich !== toWhich && item.text) {
+        if (item.source === 'recurring' || item.source === 'chore') {
+          addToSuppress(fromWhich, item.text);
+        }
+        const lc = String(item.text).toLowerCase();
+        if (_suppress[toWhich].has(lc)) {
+          _suppress[toWhich].delete(lc);
+          db.ref('weekendPlan/_suppress/' + listKey(toWhich)).set([..._suppress[toWhich]]);
+        }
+      }
+
       // Batched atomic write so the page doesn't flicker
       const updates = {};
       updates['weekendPlan/' + SAT_KEY] = _items.sat;
@@ -559,6 +573,7 @@
       const otherKey = which === 'sat' ? SUN_KEY : SAT_KEY;
       const otherDate = new Date(otherKey + 'T12:00:00');
       const have = new Set((_items[which] || []).map(it => (it.text || '').toLowerCase()));
+      const suppressed = _suppress[which] || new Set();
       let added = false;
       CHORE_TYPES.forEach(c => {
         let dueDate;
@@ -580,11 +595,33 @@
         }
         if (!shouldAdd) return;
         const text = `${c.icon} ${c.name}`;
-        if (have.has(text.toLowerCase())) return;
+        const lc = text.toLowerCase();
+        if (have.has(lc) || suppressed.has(lc)) return;
         _items[which].push({ text, done: false, source: 'chore' });
         added = true;
       });
       if (added) saveList(which);
+    }
+
+    // Per-date suppression: items the user removed (delete or move away) on
+    // this specific date won't be re-added by mergeRecurring / mergeDueChores.
+    // Stored at weekendPlan/_suppress/{date} = array of lowercase texts. New
+    // date → fresh slate, so a recurring chore still comes back next week.
+    let _suppress = { sat: new Set(), sun: new Set() };
+    function loadSuppress(which) {
+      db.ref('weekendPlan/_suppress/' + listKey(which)).on('value', snap => {
+        const v = snap.val() || [];
+        _suppress[which] = new Set(Array.isArray(v) ? v.map(s => String(s).toLowerCase()) : []);
+      });
+    }
+    loadSuppress('sat');
+    loadSuppress('sun');
+
+    function addToSuppress(which, text) {
+      if (!text) return;
+      const lc = String(text).toLowerCase();
+      _suppress[which].add(lc);
+      db.ref('weekendPlan/_suppress/' + listKey(which)).set([..._suppress[which]]);
     }
 
     function mergeRecurring(which) {
@@ -594,9 +631,12 @@
       const recurring = _recurringWeekly[dow];
       if (!Array.isArray(recurring) || !recurring.length) return;
       const have = new Set((_items[which] || []).map(it => (it.text || '').toLowerCase()));
+      const suppressed = _suppress[which] || new Set();
       let added = false;
       recurring.forEach(text => {
-        if (!text || have.has(String(text).toLowerCase())) return;
+        if (!text) return;
+        const lc = String(text).toLowerCase();
+        if (have.has(lc) || suppressed.has(lc)) return;
         _items[which].push({ text: String(text), done: false, source: 'recurring' });
         added = true;
       });
@@ -657,7 +697,12 @@
       saveList(which);
     };
     window.deleteItem = function(which, i) {
+      const removed = _items[which][i];
       _items[which].splice(i, 1);
+      // Suppress for this date so merge functions don't re-add it.
+      if (removed && removed.text && (removed.source === 'recurring' || removed.source === 'chore')) {
+        addToSuppress(which, removed.text);
+      }
       saveList(which);
     };
     window.moveToOtherDay = function(which, i) {
