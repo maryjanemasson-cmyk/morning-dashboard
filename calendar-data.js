@@ -450,8 +450,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Quince",
+      "subject": "Delivered: Mongolian Cashmere Throw"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Pacific Shaving Company...\""
+    },
     {
       "sender": "UPS",
       "subject": "Your UPS Package was delivered"
@@ -483,14 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Real \\\"Next Plandemic\\\" - Turbo Trade Pro",
       "subject": "Forg\u0435t Hantavirus. 1,700 Americans died t\u03bfday from something worse."
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence"
-    },
-    {
-      "sender": "#1 WORST vegetable \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Urologists avoid THIS vegetable like the plague"
     }
   ],
   "items": [
