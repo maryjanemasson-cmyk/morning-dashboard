@@ -289,30 +289,6 @@ window.CALENDAR_EVENTS = [
 
 window.TRAVEL_DATA = [
   {
-    "destination": "Cambridge, MA",
-    "start": "2026-05-19",
-    "end": "2026-05-22",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA570 BOS to EWR",
-        "location": "Boston (BOS)",
-        "description": "",
-        "start": "2026-05-21T11:30:00+00:00",
-        "end": "2026-05-21T12:53:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: The Royal Sonesta Boston",
-        "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
-        "description": "",
-        "start": "2026-05-22T15:00:00+00:00",
-        "end": "2026-05-22T16:00:00+00:00",
-        "type": "hotel"
-      }
-    ]
-  },
-  {
     "destination": "Chicago, IL",
     "start": "2026-05-29",
     "end": "2026-05-29",
@@ -507,8 +483,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "Visit WashU this summer!"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS: Get Ready for Your Package!"
+    },
     {
       "sender": "Check Your Mirror \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Your neck is giving away your age"
@@ -540,14 +524,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Toenail Fungus? \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Do This Every Evening & See What Happens to Your Toenails"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "How\u2019d we do?"
-    },
-    {
-      "sender": "AT&T Online Services",
-      "subject": "Your AT&T wireless bill is ready to view"
     }
   ],
   "items": [
