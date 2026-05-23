@@ -315,6 +315,12 @@
 
     // Editable checklists, keyed by which weekend day
     let _items = { sat: [], sun: [] };
+    // Track which day's list has loaded at least once from Firebase. The
+    // merge* functions MUST NOT write anything before the day's list has
+    // loaded — otherwise they'd push their additions onto an empty in-memory
+    // array and persist that empty-plus-merges list back, wiping the user's
+    // existing items.
+    let _listLoaded = { sat: false, sun: false };
     function listKey(which) { return which === 'sat' ? SAT_KEY : SUN_KEY; }
     function listDomId(which) { return (which === 'sat' ? 'today' : 'tomorrow') + '-list'; }
     function addInputId(which) { return (which === 'sat' ? 'today' : 'tomorrow') + '-add-input'; }
@@ -510,6 +516,7 @@
       db.ref('weekendPlan/' + listKey(which)).on('value', snap => {
         const v = snap.val();
         _items[which] = Array.isArray(v) ? v : (v ? Object.values(v) : []);
+        _listLoaded[which] = true;
         mergeRecurring(which);
         mergeDueChores(which);
         renderList(which);
@@ -545,6 +552,7 @@
     });
 
     function mergeDueChores(which) {
+      if (!_listLoaded[which]) return; // don't write before the day's list has loaded
       if (!Array.isArray(CHORE_TYPES) || !CHORE_TYPES.length) return;
       const dayKey = listKey(which);
       const dayDate = new Date(dayKey + 'T12:00:00');
@@ -580,6 +588,7 @@
     }
 
     function mergeRecurring(which) {
+      if (!_listLoaded[which]) return; // don't write before the day's list has loaded
       const dayKey = listKey(which);
       const dow = new Date(dayKey + 'T12:00:00').getDay();
       const recurring = _recurringWeekly[dow];
