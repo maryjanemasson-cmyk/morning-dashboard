@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-24T15:00:21",
+    "captured_at": "2026-05-24T15:55:44",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -48693,11 +48693,21 @@
         "text": "🌱 Water plants"
       }
     ],
-    "2026-05-23": [
+    "2026-05-24": [
       {
         "done": false,
-        "source": "todo",
-        "text": "NOLS application"
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
       },
       {
         "done": false,
@@ -48708,11 +48718,6 @@
         "done": false,
         "source": "todo",
         "text": "Organize closet"
-      },
-      {
-        "done": false,
-        "source": "todo",
-        "text": "Change out pillows and flowers"
       },
       {
         "done": false,
@@ -48737,12 +48742,17 @@
       {
         "done": false,
         "source": "todo",
-        "text": "find upholstery cleaner and power washer"
+        "text": "NOLS application"
       },
       {
         "done": false,
         "source": "todo",
-        "text": "A&T Master Cleaning Margarita's Furniture Cleaning on thumbtack"
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "find upholstery cleaner and power washer"
       },
       {
         "done": false,
@@ -48753,28 +48763,6 @@
         "done": false,
         "source": "todo",
         "text": "Add doorknobs to basement"
-      },
-      {
-        "done": false,
-        "source": "chore",
-        "text": "🧥 Drop off dry cleaning"
-      }
-    ],
-    "2026-05-24": [
-      {
-        "done": false,
-        "source": "chore",
-        "text": "📞 Call Mom"
-      },
-      {
-        "done": false,
-        "source": "chore",
-        "text": "🌱 Water plants"
-      },
-      {
-        "done": false,
-        "source": "chore",
-        "text": "🐶 Pick up dog poop"
       }
     ],
     "_seeded": {
@@ -48785,7 +48773,9 @@
     },
     "_suppress": {
       "2026-05-23": [
-        "🐶 pick up dog poop"
+        "🐶 pick up dog poop",
+        "🧘 book pilates & otf classes",
+        "🌻 weed the garden"
       ]
     }
   },
@@ -49441,6 +49431,25 @@
           }
         ],
         "weight": 154
+      },
+      "2026-05-24": {
+        "foods": [
+          {
+            "cal": 250,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kennys chicken",
+            "protein": 40
+          }
+        ]
       }
     },
     "profile": {

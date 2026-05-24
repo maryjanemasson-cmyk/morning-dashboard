@@ -251,6 +251,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e5b8b25412e4a6",
+    "startTime": "2026-06-06T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-06T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   }
 ];
 
@@ -450,8 +461,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 15, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 13, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 6, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "Instacart",
+      "subject": "Tell us how we did"
+    },
     {
       "sender": "Instacart",
       "subject": "Your Asian Food Market order is confirmed for May 24"
@@ -465,10 +492,6 @@ window.EMAIL_DATA = {
       "subject": "Oh hi, elegant leather gloves \ud83d\udc4b"
     },
     {
-      "sender": "Royal Carpet & Upholstery Cleaning",
-      "subject": "\ud83d\udcac Reminder: Royal Carpet & Upholstery Cleaning sent you a message"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20662\u2069 \"Lavazza Super Crema Whole...\""
     },
@@ -479,18 +502,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Save up to 30% off best sellers"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 24 May 2026"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sun, 5/24 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
     }
   ],
   "items": [
@@ -658,6 +669,39 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "id": "19e30cdbaec81010",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-06",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e5b8b25412e4a6",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-13",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e5b8d358ae9314",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-15",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e5b8dda8397e10",
       "sender": "FORM BY TWO"
     }
   ]
