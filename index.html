@@ -128,6 +128,11 @@
       margin-bottom: 0.5rem;
     }
     .mini-cal-month { font-size: 0.8rem; font-weight: 600; color: #3d3529; }
+    .mini-cal-nav {
+      background: none; border: none; cursor: pointer; padding: 0 0.4rem;
+      font-size: 1rem; color: #9c8b76; line-height: 1; user-select: none;
+    }
+    .mini-cal-nav:hover { color: #3d3529; }
     .mini-cal table { width: 100%; border-collapse: collapse; }
     .mini-cal th {
       font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
@@ -758,6 +763,7 @@
 
     // ── Mini Calendar (interactive) ──
     let selectedCalDate = null;
+    let calMonthOffset = 0;  // 0 = current month, +1 = next, -1 = prev
 
     function getEventsForDate(dateStr) {
       const cal = window.CALENDAR_EVENTS || [];
@@ -794,11 +800,17 @@
     }
 
     function onCalDayClick(day) {
-      const now = new Date();
-      const dateStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      const base = new Date();
+      const target = new Date(base.getFullYear(), base.getMonth() + calMonthOffset, 1);
+      const dateStr = `${target.getFullYear()}-${String(target.getMonth()+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
       selectedCalDate = dateStr;
       renderMiniCalendar();
       showDayEvents(dateStr, day);
+    }
+
+    function shiftCalMonth(delta) {
+      calMonthOffset += delta;
+      renderMiniCalendar();
     }
 
     function showDayEvents(dateStr, day) {
@@ -829,18 +841,22 @@
 
     function resetToToday() {
       selectedCalDate = null;
+      calMonthOffset = 0;
       renderMiniCalendar();
       renderCalendar();
     }
 
     function renderMiniCalendar() {
       const now = new Date();
-      const year = now.getFullYear(), month = now.getMonth();
+      const target = new Date(now.getFullYear(), now.getMonth() + calMonthOffset, 1);
+      const year = target.getFullYear(), month = target.getMonth();
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
       const daysInPrev = new Date(year, month, 0).getDate();
-      const today = now.getDate();
-      const monthName = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      // Only mark "today" if we're actually viewing the current month
+      const isCurrentMonth = (year === now.getFullYear() && month === now.getMonth());
+      const today = isCurrentMonth ? now.getDate() : -1;
+      const monthName = target.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
       // Collect event dates from CALENDAR_EVENTS + TRAVEL_DATA
       const eventDates = new Set();
@@ -867,9 +883,16 @@
         }
       });
 
-      const selectedDay = selectedCalDate ? parseInt(selectedCalDate.slice(8,10)) : null;
+      // Only highlight the selected day if it's actually in the month we're viewing
+      const selectedMonthStr = `${year}-${String(month+1).padStart(2,'0')}`;
+      const selectedDay = (selectedCalDate && selectedCalDate.slice(0,7) === selectedMonthStr)
+        ? parseInt(selectedCalDate.slice(8,10)) : null;
 
-      let html = `<div class="mini-cal"><div class="mini-cal-header"><span class="mini-cal-month">${monthName}</span></div>`;
+      let html = `<div class="mini-cal"><div class="mini-cal-header">`
+        + `<button class="mini-cal-nav" onclick="shiftCalMonth(-1)" title="Previous month">&lsaquo;</button>`
+        + `<span class="mini-cal-month">${monthName}</span>`
+        + `<button class="mini-cal-nav" onclick="shiftCalMonth(1)" title="Next month">&rsaquo;</button>`
+        + `</div>`;
       html += '<table><tr>';
       ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(d => html += `<th>${d}</th>`);
       html += '</tr><tr>';
