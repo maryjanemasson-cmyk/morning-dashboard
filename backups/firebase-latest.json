@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-24T09:00:20",
+    "captured_at": "2026-05-24T11:00:18",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -9757,8 +9757,8 @@
           "_origFile": "s19_020.png",
           "file": "wardrobe-thumbs/s19_020.png",
           "height": 27,
-          "left": 42.3,
-          "top": 13.8,
+          "left": 47.6,
+          "top": 12.2,
           "width": 18.8
         },
         {
@@ -9783,6 +9783,22 @@
           "height": 25,
           "left": 85.2,
           "top": 75.9,
+          "width": 15
+        },
+        {
+          "_origFile": "s10_012.png",
+          "file": "wardrobe-thumbs/s10_012.png",
+          "height": 23.2,
+          "left": 17.4,
+          "top": 67.4,
+          "width": 12.9
+        },
+        {
+          "_origFile": "s20_018.png",
+          "file": "piece_427ff7c72da46407.png",
+          "height": 25,
+          "left": 35,
+          "top": 13.7,
           "width": 15
         }
       ]
@@ -10121,8 +10137,8 @@
           "_origFile": "s03_005.png",
           "file": "wardrobe-thumbs/s03_005.png",
           "height": 19.6,
-          "left": 66.9,
-          "top": 64.5,
+          "left": 67.5,
+          "top": 61.8,
           "width": 11.8
         },
         {
@@ -10137,7 +10153,7 @@
           "_origFile": "s02_015.png",
           "file": "wardrobe-thumbs/s02_015.png",
           "height": 35.28,
-          "left": 0.0,
+          "left": 0,
           "top": 64.72,
           "width": 20.4
         },
@@ -10193,25 +10209,25 @@
           "_origFile": "s32_012.png",
           "file": "wardrobe-thumbs/s32_012.png",
           "height": 37.9,
-          "left": 42.4,
-          "top": 60.9,
+          "left": 41.5,
+          "top": 61.1,
           "width": 17.7
         },
         {
           "_origFile": "s25_013.png",
           "file": "wardrobe-thumbs/s25_013.png",
           "height": 21,
-          "left": 65,
-          "top": 38,
+          "left": 67.5,
+          "top": 40,
           "width": 12.8
         },
         {
           "_origFile": "s24_013.png",
           "file": "wardrobe-thumbs/s24_013.png",
-          "height": 25,
-          "left": 19.6,
-          "top": 22.1,
-          "width": 15
+          "height": 24.3,
+          "left": 15.1,
+          "top": 24.4,
+          "width": 13.4
         },
         {
           "_origFile": "s25_010.png",
@@ -10224,25 +10240,25 @@
         {
           "_origFile": "s25_007.png",
           "file": "wardrobe-thumbs/s25_007.png",
-          "height": 21.3,
-          "left": 35.5,
-          "top": 29.1,
-          "width": 12.8
+          "height": 20.3,
+          "left": 30.1,
+          "top": 32.9,
+          "width": 11.4
         },
         {
           "_origFile": "s18_005.png",
           "file": "wardrobe-thumbs/s18_005.png",
           "height": 20.1,
-          "left": 66.4,
-          "top": 17.3,
+          "left": 66.7,
+          "top": 17.5,
           "width": 12
         },
         {
           "_origFile": "s19_020.png",
           "file": "wardrobe-thumbs/s19_020.png",
           "height": 25,
-          "left": 50.2,
-          "top": 30.2,
+          "left": 50.9,
+          "top": 20.5,
           "width": 15
         },
         {
@@ -10252,6 +10268,22 @@
           "left": 16.8,
           "top": 71.9,
           "width": 10.5
+        },
+        {
+          "_origFile": "s20_018.png",
+          "file": "piece_427ff7c72da46407.png",
+          "height": 25,
+          "left": 41.6,
+          "top": 34.3,
+          "width": 15
+        },
+        {
+          "_origFile": "s04_013.png",
+          "file": "wardrobe-thumbs/s04_013.png",
+          "height": 22.3,
+          "left": 60.6,
+          "top": 76.3,
+          "width": 10.3
         }
       ]
     },
@@ -10408,6 +10440,14 @@
           "left": 56.4,
           "top": 80.1,
           "width": 12.2
+        },
+        {
+          "_origFile": "s20_018.png",
+          "file": "piece_427ff7c72da46407.png",
+          "height": 30.7,
+          "left": 28.1,
+          "top": 4.9,
+          "width": 18.3
         }
       ]
     },
@@ -33493,10 +33533,10 @@
         {
           "_origFile": "s01_012.png",
           "file": "wardrobe-thumbs/s01_012.png",
-          "height": 65.16,
+          "height": 28.5,
           "left": 0,
           "top": 0,
-          "width": 35.85
+          "width": 18.1
         }
       ]
     },
@@ -33834,10 +33874,10 @@
         {
           "_origFile": "s01_012.png",
           "file": "wardrobe-thumbs/s01_012.png",
-          "height": 69.6,
+          "height": 26.5,
           "left": 0,
           "top": 0,
-          "width": 39.6
+          "width": 16.8
         },
         {
           "_origFile": "s01_013.png",
@@ -39512,6 +39552,538 @@
           "height": 25,
           "left": 80.6,
           "top": 0,
+          "width": 15
+        }
+      ]
+    },
+    "2093": {
+      "layout": [
+        {
+          "_origFile": "s16_002.png",
+          "file": "wardrobe-thumbs/s16_002.png",
+          "height": 43.6,
+          "left": 9.2,
+          "top": 18.5,
+          "width": 24.5
+        },
+        {
+          "_origFile": "s13_013.png",
+          "file": "wardrobe-thumbs/s13_013.png",
+          "height": 25,
+          "left": 31.6,
+          "top": 15.1,
+          "width": 15
+        },
+        {
+          "_origFile": "custom_1777735223907.jpg",
+          "file": "wardrobe-thumbs/custom_1777735223907.jpg",
+          "height": 25,
+          "left": 82.7,
+          "top": 0,
+          "width": 15
+        },
+        {
+          "_origFile": "s01_024.png",
+          "file": "wardrobe-thumbs/s01_024.png",
+          "height": 21.8,
+          "left": 3.1,
+          "top": 3.1,
+          "width": 12.8
+        },
+        {
+          "_origFile": "s32_001.png",
+          "file": "wardrobe-thumbs/s32_001.png",
+          "height": 35.2,
+          "left": 37.7,
+          "top": 43.6,
+          "width": 19.1
+        },
+        {
+          "_origFile": "s09_011.png",
+          "file": "wardrobe-thumbs/s09_011.png",
+          "height": 25,
+          "left": 65.2,
+          "top": 60.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s10_004.png",
+          "file": "wardrobe-thumbs/s10_004.png",
+          "height": 25,
+          "left": 67.4,
+          "top": 79.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s11_004.png",
+          "file": "wardrobe-thumbs/s11_004.png",
+          "height": 25,
+          "left": 16.7,
+          "top": 74.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_001.png",
+          "file": "piece_fb6d3489c3013ec7.png",
+          "height": 25,
+          "left": 79.5,
+          "top": 50.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_016.png",
+          "file": "wardrobe-thumbs/s03_016.png",
+          "height": 25,
+          "left": 3.6,
+          "top": 66,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_012.png",
+          "file": "piece_b2638e42cc12f54c.png",
+          "height": 25,
+          "left": 82,
+          "top": 70.6,
+          "width": 15
+        },
+        {
+          "_origFile": "s23_009.png",
+          "file": "wardrobe-thumbs/s23_009.png",
+          "height": 25,
+          "left": 46.2,
+          "top": 14.6,
+          "width": 15
+        }
+      ]
+    },
+    "2094": {
+      "layout": [
+        {
+          "_origFile": "s13_006.png",
+          "file": "wardrobe-thumbs/s13_006.png",
+          "height": 32.7,
+          "left": 70,
+          "top": 24.8,
+          "width": 17.1
+        },
+        {
+          "_origFile": "s14_002.png",
+          "file": "wardrobe-thumbs/s14_002.png",
+          "height": 35,
+          "left": 0,
+          "top": 11.8,
+          "width": 16.9
+        },
+        {
+          "_origFile": "s22_006.png",
+          "file": "piece_c809ce204750d055.png",
+          "height": 34.7,
+          "left": 51.5,
+          "top": 8.1,
+          "width": 19
+        },
+        {
+          "_origFile": "s32_001.png",
+          "file": "wardrobe-thumbs/s32_001.png",
+          "height": 38.5,
+          "left": 38.6,
+          "top": 39,
+          "width": 19.6
+        },
+        {
+          "_origFile": "s10_004.png",
+          "file": "wardrobe-thumbs/s10_004.png",
+          "height": 25,
+          "left": 29.7,
+          "top": 77.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s11_007.png",
+          "file": "wardrobe-thumbs/s11_007.png",
+          "height": 22,
+          "left": 16.3,
+          "top": 76.5,
+          "width": 11.4
+        },
+        {
+          "_origFile": "s11_004.png",
+          "file": "wardrobe-thumbs/s11_004.png",
+          "height": 25,
+          "left": 1.9,
+          "top": 62.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_003.png",
+          "file": "piece_ed111ca4a44f83ad.png",
+          "height": 25,
+          "left": 61.5,
+          "top": 77.6,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_017.png",
+          "file": "piece_a2a8b0d205ac2e20.png",
+          "height": 25,
+          "left": 76,
+          "top": 54.9,
+          "width": 15
+        },
+        {
+          "_origFile": "s04_010.png",
+          "file": "wardrobe-thumbs/s04_010.png",
+          "height": 25,
+          "left": 78.9,
+          "top": 71.3,
+          "width": 15
+        },
+        {
+          "_origFile": "s26_011.png",
+          "file": "piece_ae2a7f2756bcfa54.png",
+          "height": 25,
+          "left": 39.7,
+          "top": 11.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s26_002.png",
+          "file": "wardrobe-thumbs/s26_002.png",
+          "height": 25,
+          "left": 26,
+          "top": 11.9,
+          "width": 15
+        },
+        {
+          "_origFile": "C003.jpg",
+          "file": "wardrobe-thumbs/C003.jpg",
+          "height": 25,
+          "left": 17.6,
+          "top": 49.3,
+          "width": 15
+        },
+        {
+          "_origFile": "custom_1777735223907.jpg",
+          "file": "wardrobe-thumbs/custom_1777735223907.jpg",
+          "height": 25,
+          "left": 82.3,
+          "top": 0,
+          "width": 15
+        }
+      ]
+    },
+    "2095": {
+      "layout": [
+        {
+          "_origFile": "s14_014.png",
+          "file": "piece_97d046961913750e.png",
+          "height": 40.7,
+          "left": 8.1,
+          "top": 7.1,
+          "width": 25.1
+        },
+        {
+          "_origFile": "s14_007.png",
+          "file": "piece_3df4e7f907d0e0f3.png",
+          "height": 41.8,
+          "left": 68.5,
+          "top": 12.3,
+          "width": 22.9
+        },
+        {
+          "_origFile": "s21_020.png",
+          "file": "piece_dddaa606f9cabcc8.png",
+          "height": 45.4,
+          "left": 44.2,
+          "top": 4,
+          "width": 25.4
+        },
+        {
+          "_origFile": "s32_001.png",
+          "file": "wardrobe-thumbs/s32_001.png",
+          "height": 36.8,
+          "left": 36.1,
+          "top": 36.1,
+          "width": 21.6
+        },
+        {
+          "_origFile": "s11_003.png",
+          "file": "wardrobe-thumbs/s11_003.png",
+          "height": 25,
+          "left": 61.4,
+          "top": 60.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s10_004.png",
+          "file": "wardrobe-thumbs/s10_004.png",
+          "height": 25,
+          "left": 18.4,
+          "top": 67.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_008.png",
+          "file": "piece_662a13c9280e37c8.png",
+          "height": 41.4,
+          "left": 1,
+          "top": 56.9,
+          "width": 21.7
+        },
+        {
+          "_origFile": "s03_002.png",
+          "file": "wardrobe-thumbs/s03_002.png",
+          "height": 25,
+          "left": 78.2,
+          "top": 65.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s24_002.png",
+          "file": "piece_d4d65372b854d5b8.png",
+          "height": 25,
+          "left": 33.5,
+          "top": 13.7,
+          "width": 15
+        },
+        {
+          "_origFile": "custom_1777735223907.jpg",
+          "file": "wardrobe-thumbs/custom_1777735223907.jpg",
+          "height": 25,
+          "left": 85.9,
+          "top": 0,
+          "width": 15
+        },
+        {
+          "_origFile": "C003.jpg",
+          "file": "wardrobe-thumbs/C003.jpg",
+          "height": 25,
+          "left": 13.6,
+          "top": 43.8,
+          "width": 15
+        }
+      ]
+    },
+    "2096": {
+      "layout": [
+        {
+          "_origFile": "s33_013.png",
+          "file": "wardrobe-thumbs/s33_013.png",
+          "height": 44.1,
+          "left": 37.8,
+          "top": 37.7,
+          "width": 21.3
+        },
+        {
+          "_origFile": "s21_019.png",
+          "file": "piece_d3f885d82e130a01.png",
+          "height": 48.5,
+          "left": 33.8,
+          "top": 1.6,
+          "width": 28.5
+        },
+        {
+          "_origFile": "s07_008.png",
+          "file": "wardrobe-thumbs/s07_008.png",
+          "height": 25,
+          "left": 18.2,
+          "top": 74.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s09_007.png",
+          "file": "wardrobe-thumbs/s09_007.png",
+          "height": 25,
+          "left": 3.5,
+          "top": 51.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s09_002.png",
+          "file": "wardrobe-thumbs/s09_002.png",
+          "height": 25,
+          "left": 48.7,
+          "top": 77.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s09_004.png",
+          "file": "piece_e201c9158f2f53ef.png",
+          "height": 31.1,
+          "left": 56.1,
+          "top": 54.3,
+          "width": 19.6
+        },
+        {
+          "_origFile": "s09_018.png",
+          "file": "wardrobe-thumbs/s09_018.png",
+          "height": 25,
+          "left": 71.5,
+          "top": 58.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s09_017.png",
+          "file": "wardrobe-thumbs/s09_017.png",
+          "height": 25,
+          "left": 66.8,
+          "top": 77.6,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_018.png",
+          "file": "wardrobe-thumbs/s07_018.png",
+          "height": 25,
+          "left": 21.7,
+          "top": 53.3,
+          "width": 15
+        },
+        {
+          "_origFile": "s02_015.png",
+          "file": "piece_c31f76ac749a8f9c.png",
+          "height": 25,
+          "left": 82.9,
+          "top": 73.5,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_010.png",
+          "file": "wardrobe-thumbs/s03_010.png",
+          "height": 25,
+          "left": 1.3,
+          "top": 22.7,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_015.png",
+          "file": "wardrobe-thumbs/s03_015.png",
+          "height": 25,
+          "left": 1.7,
+          "top": 74.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_016.png",
+          "file": "wardrobe-thumbs/s03_016.png",
+          "height": 25,
+          "left": 83.9,
+          "top": 46.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_004.png",
+          "file": "piece_90244ae3d5b39997.png",
+          "height": 25,
+          "left": 81.7,
+          "top": 26.1,
+          "width": 15
+        },
+        {
+          "_origFile": "custom_1777735223907.jpg",
+          "file": "wardrobe-thumbs/custom_1777735223907.jpg",
+          "height": 25,
+          "left": 80.9,
+          "top": 0,
+          "width": 15
+        }
+      ]
+    },
+    "2097": {
+      "layout": [
+        {
+          "_origFile": "s14_001.png",
+          "file": "piece_8c4a52b9bf10975e.png",
+          "height": 35.3,
+          "left": 7.5,
+          "top": 46.3,
+          "width": 17.9
+        },
+        {
+          "_origFile": "s14_005.png",
+          "file": "wardrobe-thumbs/s14_005.png",
+          "height": 33,
+          "left": 6.5,
+          "top": 9.6,
+          "width": 17.9
+        },
+        {
+          "_origFile": "s25_010.png",
+          "file": "piece_bdb98d1597310a92.png",
+          "height": 31.9,
+          "left": 33.8,
+          "top": 7.3,
+          "width": 18.9
+        },
+        {
+          "_origFile": "s33_013.png",
+          "file": "wardrobe-thumbs/s33_013.png",
+          "height": 47.8,
+          "left": 32.6,
+          "top": 36.1,
+          "width": 23.7
+        },
+        {
+          "_origFile": "s09_017.png",
+          "file": "wardrobe-thumbs/s09_017.png",
+          "height": 22.4,
+          "left": 66.8,
+          "top": 64.4,
+          "width": 12.6
+        },
+        {
+          "_origFile": "s09_018.png",
+          "file": "wardrobe-thumbs/s09_018.png",
+          "height": 25,
+          "left": 62.1,
+          "top": 79.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s04_013.png",
+          "file": "wardrobe-thumbs/s04_013.png",
+          "height": 25,
+          "left": 56,
+          "top": 34.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s02_015.png",
+          "file": "piece_c31f76ac749a8f9c.png",
+          "height": 25,
+          "left": 83.3,
+          "top": 48.2,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_015.png",
+          "file": "wardrobe-thumbs/s03_015.png",
+          "height": 25,
+          "left": 80.8,
+          "top": 74.6,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_016.png",
+          "file": "wardrobe-thumbs/s03_016.png",
+          "height": 25,
+          "left": 81.5,
+          "top": 22.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s01_017.png",
+          "file": "wardrobe-thumbs/s01_017.png",
+          "height": 25,
+          "left": 84.3,
+          "top": 0,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_001.png",
+          "file": "piece_fb6d3489c3013ec7.png",
+          "height": 25,
+          "left": 56.7,
+          "top": 14.4,
           "width": 15
         }
       ]

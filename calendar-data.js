@@ -450,8 +450,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Netflix",
+      "subject": "\ud83d\udd14 Reminder: F1 Canadian Grand Prix: Race"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Sunday Deals + Memorial Day deals = \ud83c\udf89\ud83d\udc83"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Oh hi, elegant leather gloves \ud83d\udc4b"
+    },
     {
       "sender": "Royal Carpet & Upholstery Cleaning",
       "subject": "\ud83d\udcac Reminder: Royal Carpet & Upholstery Cleaning sent you a message"
@@ -479,18 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "Today's Rollup"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: Cancer may take her life. Here\u2019s what a hymn made her see."
-    },
-    {
-      "sender": "Dropbox",
-      "subject": "Mary Jane, you\u2019re nearing your Dropbox storage limit."
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Do I regret what I bought(and what I didnt) from Chanel Spring 2026"
     }
   ],
   "items": [
