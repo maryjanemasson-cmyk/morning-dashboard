@@ -461,8 +461,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Laurel and Blush",
+      "subject": "How to style your new pillows"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Cottonelle Ultra Soft...\""
@@ -498,10 +502,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Instacart",
       "subject": "Your Asian Food Market order is confirmed for May 24"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Get excited: Shop Week starts May 26 \ud83d\udc9c"
     }
   ],
   "items": [

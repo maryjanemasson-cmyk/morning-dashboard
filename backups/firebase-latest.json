@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-24T16:39:20",
+    "captured_at": "2026-05-24T17:00:23",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -48353,7 +48353,7 @@
       "category": "Dinner",
       "cook": "500 min",
       "cuisine": "Mexican",
-      "image": "[object Object]",
+      "image": "https://asset.jamieoliver.com/images/cq7w2e71/production/efcf15963bffd4bbeb32cca0019a372037c6b6a1-959x1279.jpg/164126809?rect=0,1,959,1278&w=640&h=853&fm=webp&q=80&fit=crop&auto=format",
       "ingredients": "1kg higher-welfare beef brisket\n2 bay leaves\n1 teaspoon cumin seeds\n1 teaspoon coriander seeds\n1 teaspoon chilli powder\n1 tablespoon plain flour\nolive oil\n2 x 400g tins of quality plum tomatoes\n1 x 500g bag of frozen soffrito mix\n2 x 400g tins of black beans\n500ml organic beef stock",
       "instructions": "1. Cut the brisket into 2–3cm chunks.\n\n2. Strip the bay leaves into a pestle and mortar, removing their stems. Add the cumin and coriander seeds, chilli powder and a pinch of sea salt, and bash until fine. Muddle in the flour.\n\n3. Rub the super-charged seasoned flour all over the beef brisket chunks, making sure they’re well coated.\n\n4. Drizzle 1 tablespoon of olive oil into a wide, low-sided pan on a medium heat. Once hot, add the beef and cook for 8 to 10 minutes, or until well browned all over.\n\n5. Transfer to your slow cooker*, scraping in all the crispy bits from the bottom of the pan. Scrunch in the tomatoes with your hands, then add the soffrito mix, black beans (juice and all) and beef stock.\n\n6. Mix well, cover, then cook on low for 8 to 12 hours, or until tender. Delicious served with soured cream, pickled red onions and fresh coriander.",
       "name": "Slow-cooker chilli con carne",
@@ -48363,7 +48363,7 @@
       "servings": "6",
       "source": "https://www.jamieoliver.com/recipes/beef/slow-cooker-chilli-con-carne/",
       "tags": "",
-      "updated": "2026-05-01T15:45:15.442Z"
+      "updated": "2026-05-24T20:52:31.208Z"
     },
     "-OrZD514EfkpMesQTjhH": {
       "category": "Dinner",
@@ -48417,7 +48417,7 @@
       "category": "Dessert",
       "cook": "30 min",
       "cuisine": "",
-      "image": "[object Object]",
+      "image": "https://static01.nyt.com/images/2023/04/27/dining/03COOKING-JORDANMARSHMUFFIN2/03COOKING-JORDANMARSHMUFFIN2-superJumbo-v2.jpg?format=pjpg&quality=75&auto=webp&disable=upscale",
       "ingredients": "1/2 cup softened butter\n1 1/4 cups sugar\n2 eggs\n1 teaspoon vanilla extract\n2 cups flour\n1/2 teaspoon salt\n2 teaspoons baking powder\n1/2 cup milk\n2 cups blueberries, washed, drained and picked over\n3 teaspoons sugar",
       "instructions": "1. Preheat the oven to 375.\n\n2. Cream the butter and sugar until light.\n\n3. Add the eggs, one at a time, beating well after each addition. Add vanilla.\n\n4. Sift together the flour, salt and baking powder, and add to the creamed mixture alternately with the milk.\n\n5. Crush 1/2 cup blueberries with a fork, and mix into the batter. Fold in the remaining whole berries.\n\n6. Line a 12 cup standard muffin tin with cupcake liners, and fill with batter. Sprinkle the 3 teaspoons sugar over the tops of the muffins, and bake at 375 degrees for about 30-35 minutes.\n\n7. Remove muffins from tin and cool at least 30 minutes. Store, uncovered, or the muffins will be too moist the second day, if they last that long.",
       "name": "Jordan Marsh’s Blueberry Muffins",
@@ -48427,23 +48427,7 @@
       "servings": "12 muffins",
       "source": "https://cooking.nytimes.com/recipes/2868-jordan-marshs-blueberry-muffins?unlocked_article_code=1.i1A.MuBp.8clsPXyQ_Av8&smid=ck-recipe-iOS-share",
       "tags": "",
-      "updated": "2026-05-16T19:55:02.802Z"
-    },
-    "-OsmM3S_Th1_vMZUFpmD": {
-      "category": "Dessert",
-      "cook": "30 min",
-      "cuisine": "",
-      "image": "[object Object]",
-      "ingredients": "1/2 cup softened butter\n1 1/4 cups sugar\n2 eggs\n1 teaspoon vanilla extract\n2 cups flour\n1/2 teaspoon salt\n2 teaspoons baking powder\n1/2 cup milk\n2 cups blueberries, washed, drained and picked over\n3 teaspoons sugar",
-      "instructions": "1. Preheat the oven to 375.\n\n2. Cream the butter and sugar until light.\n\n3. Add the eggs, one at a time, beating well after each addition. Add vanilla.\n\n4. Sift together the flour, salt and baking powder, and add to the creamed mixture alternately with the milk.\n\n5. Crush 1/2 cup blueberries with a fork, and mix into the batter. Fold in the remaining whole berries.\n\n6. Line a 12 cup standard muffin tin with cupcake liners, and fill with batter. Sprinkle the 3 teaspoons sugar over the tops of the muffins, and bake at 375 degrees for about 30-35 minutes.\n\n7. Remove muffins from tin and cool at least 30 minutes. Store, uncovered, or the muffins will be too moist the second day, if they last that long.",
-      "name": "Jordan Marsh’s Blueberry Muffins",
-      "notes": "",
-      "prep": "10 min",
-      "rating": 0,
-      "servings": "12 muffins",
-      "source": "https://cooking.nytimes.com/recipes/2868-jordan-marshs-blueberry-muffins?unlocked_article_code=1.i1A.MuBp.8clsPXyQ_Av8&smid=ck-recipe-iOS-share",
-      "tags": "",
-      "updated": "2026-05-16T19:56:08.966Z"
+      "updated": "2026-05-24T20:51:35.957Z"
     },
     "-OsqQdvbkvouZ4Ym20ml": {
       "category": "Dinner",
@@ -48888,7 +48872,7 @@
     "f1-movie": true
   },
   "chores": {
-    "book-pilates": "2026-05-16",
+    "book-pilates": "2026-05-24",
     "call-mom": "2026-05-17",
     "dog-poop": "2026-05-16",
     "dry-cleaning": "2026-05-23",
@@ -49431,6 +49415,45 @@
           }
         ],
         "weight": 154
+      },
+      "2026-05-23": {
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 255,
+            "name": "protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "kenny's chicken",
+            "protein": 40
+          },
+          {
+            "cal": 520,
+            "name": "Lamb chops (3)",
+            "protein": 52
+          },
+          {
+            "cal": 165,
+            "name": "Baked potato",
+            "protein": 4
+          },
+          {
+            "cal": 20,
+            "name": "Asparagus (6 spears)",
+            "protein": 2
+          },
+          {
+            "cal": 100,
+            "name": "Butter (1 tablespoon)",
+            "protein": 0
+          }
+        ]
       },
       "2026-05-24": {
         "foods": [
