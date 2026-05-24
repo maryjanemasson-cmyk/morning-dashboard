@@ -461,8 +461,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Cottonelle Ultra Soft...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
+    },
+    {
+      "sender": "Spotify",
+      "subject": "Updates to Our Privacy Policy"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 15, 2026 at 6:00 AM"
@@ -486,22 +502,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shop",
       "subject": "Get excited: Shop Week starts May 26 \ud83d\udc9c"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Oh hi, elegant leather gloves \ud83d\udc4b"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20662\u2069 \"Lavazza Super Crema Whole...\""
-    },
-    {
-      "sender": "A&T master cleaning",
-      "subject": "\ud83d\udcac Reminder: A&T master cleaning sent you a message"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Save up to 30% off best sellers"
     }
   ],
   "items": [
@@ -623,6 +623,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Cottonelle Ultra Soft...\"",
+      "date": "2026-05-24",
+      "id": "19e5bb47424ece10",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
