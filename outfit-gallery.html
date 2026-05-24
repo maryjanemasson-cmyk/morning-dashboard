@@ -437,11 +437,14 @@
       // Collection (season) filters
       let toolbarHtml = '<div style="width:100%;margin-bottom:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">';
       toolbarHtml += '<span style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#2c2418;margin-right:0.3rem;">Collections:</span>';
-      const collectionSeasons = ['All', ...SEASONS];
+      const collectionSeasons = ['All', ...SEASONS, 'No season'];
       collectionSeasons.forEach(s => {
-        const count = s === 'All'
-          ? outfits.filter(o => !_deletedOutfits[o.slide]).length
-          : outfits.filter(o => !_deletedOutfits[o.slide] && o.season === s).length;
+        const matches = o => {
+          if (s === 'All') return true;
+          if (s === 'No season') return !SEASONS.includes(o.season);
+          return o.season === s;
+        };
+        const count = outfits.filter(o => !_deletedOutfits[o.slide] && matches(o)).length;
         toolbarHtml += `<button class="filter-btn ${activeSeason===s?'active':''}" onclick="activeSeason='${s}';render();">${s} <span style="opacity:0.6;font-size:0.6rem;">${count}</span></button>`;
       });
       toolbarHtml += '</div>';
@@ -461,7 +464,11 @@
       if (activeFilter !== 'All') filtered = filtered.filter(o => o._filterCat === activeFilter);
 
       // Apply season filter
-      if (activeSeason !== 'All') filtered = filtered.filter(o => o.season === activeSeason);
+      if (activeSeason === 'No season') {
+        filtered = filtered.filter(o => !SEASONS.includes(o.season));
+      } else if (activeSeason !== 'All') {
+        filtered = filtered.filter(o => o.season === activeSeason);
+      }
 
       // Apply slide filter from wardrobe link
       if (slideFilter) {
@@ -480,8 +487,17 @@
       toolbarHtml += `<button onclick="createNewOutfit()" style="margin-left:auto;padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ New Outfit</button>`;
       document.getElementById('toolbar').innerHTML = toolbarHtml;
 
-      // Sort by custom order if set
-      filtered.sort((a, b) => (a._order || 0) - (b._order || 0));
+      // Sort: season first (Spring -> Summer -> Fall -> Winter -> unset),
+      // then custom order within season, then slide ID for a stable tiebreaker.
+      const SEASON_RANK = { Spring: 0, Summer: 1, Fall: 2, Winter: 3 };
+      filtered.sort((a, b) => {
+        const sa = SEASON_RANK[a.season] ?? 4;
+        const sb = SEASON_RANK[b.season] ?? 4;
+        if (sa !== sb) return sa - sb;
+        const oa = a._order || 0, ob = b._order || 0;
+        if (oa !== ob) return oa - ob;
+        return (a.slide || 0) - (b.slide || 0);
+      });
 
       let html = '';
       filtered.forEach((o, idx) => {
