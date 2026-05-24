@@ -450,8 +450,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Royal Carpet & Upholstery Cleaning",
+      "subject": "\ud83d\udcac Reminder: Royal Carpet & Upholstery Cleaning sent you a message"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20662\u2069 \"Lavazza Super Crema Whole...\""
+    },
+    {
+      "sender": "A&T master cleaning",
+      "subject": "\ud83d\udcac Reminder: A&T master cleaning sent you a message"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Save up to 30% off best sellers"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 24 May 2026"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sun, 5/24 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: Cancer may take her life. Here\u2019s what a hymn made her see."
+    },
     {
       "sender": "Dropbox",
       "subject": "Mary Jane, you\u2019re nearing your Dropbox storage limit."
@@ -459,38 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Tamara Kalinic from Material Witness",
       "subject": "Do I regret what I bought(and what I didnt) from Chanel Spring 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Anthropic, PBC",
-      "subject": "Your receipt from Anthropic, PBC #2711-7669-5232"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Important Notice: Your May 2026 Statement"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"dpHUE Root Touch-Up Kit,...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Nongshim Shin Ramyun...\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "WE DO WEDDINGS"
-    },
-    {
-      "sender": "All Furniture Services\u00ae LLC Repair & Restoration",
-      "subject": "\ud83d\udcac All Furniture Services\u00ae LLC Repair & Restoration got back to you about your Upholstery and Furniture Cleaning project"
     }
   ],
   "items": [
