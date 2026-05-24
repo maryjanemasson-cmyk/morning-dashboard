@@ -450,8 +450,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Instacart",
+      "subject": "Your Instacart order receipt"
+    },
+    {
+      "sender": "Life360 Trackers",
+      "subject": "Up to 40% off Tile ends tomorrow!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"Lavazza Super Crema Whole...\""
+    },
+    {
+      "sender": "Instacart",
+      "subject": "Your Asian Food Market order is confirmed for May 24"
+    },
+    {
+      "sender": "All Furniture Services\u00ae LLC Repair & Restoration",
+      "subject": "\ud83d\udcac Reminder: All Furniture Services\u00ae LLC Repair & Restoration sent you a message"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Get excited: Shop Week starts May 26 \ud83d\udc9c"
+    },
     {
       "sender": "Netflix",
       "subject": "\ud83d\udd14 Reminder: F1 Canadian Grand Prix: Race"
@@ -467,30 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Royal Carpet & Upholstery Cleaning",
       "subject": "\ud83d\udcac Reminder: Royal Carpet & Upholstery Cleaning sent you a message"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20662\u2069 \"Lavazza Super Crema Whole...\""
-    },
-    {
-      "sender": "A&T master cleaning",
-      "subject": "\ud83d\udcac Reminder: A&T master cleaning sent you a message"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Save up to 30% off best sellers"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 24 May 2026"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sun, 5/24 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
     }
   ],
   "items": [
@@ -612,6 +612,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20662\u2069 \"Lavazza Super Crema Whole...\"",
+      "date": "2026-05-24",
+      "id": "19e5a9a874b85a35",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
