@@ -571,11 +571,14 @@
             <div class="field">
               <label>Activity</label>
               <select id="ex-type">
+                <option value="lagree">Lagree</option>
+                <option value="otf">OTF / Orangetheory</option>
+                <option value="pilates">Pilates</option>
+                <option value="yoga">Yoga</option>
                 <option value="walk">Walking</option>
                 <option value="run">Running</option>
                 <option value="bike">Cycling</option>
                 <option value="strength">Strength training</option>
-                <option value="yoga">Yoga / Pilates</option>
                 <option value="swim">Swimming</option>
                 <option value="elliptical">Elliptical / Cardio machine</option>
                 <option value="other">Other</option>
@@ -761,7 +764,8 @@
     // ── Activity calorie burn (rough METs * weight kg * hours) ──
     const MET = {
       walk: 3.5, run: 9.0, bike: 7.0, strength: 5.0,
-      yoga: 3.0, swim: 7.0, elliptical: 6.0, other: 4.0
+      yoga: 3.0, pilates: 3.5, lagree: 6.0, otf: 8.0,
+      swim: 7.0, elliptical: 6.0, other: 4.0
     };
     function calcBurn(type, mins) {
       const kg = profile.weight_lb / 2.2046;
