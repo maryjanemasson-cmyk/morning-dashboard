@@ -453,6 +453,10 @@ window.EMAIL_DATA = {
   "unreadCount": 22,
   "threads": [
     {
+      "sender": "Dropbox",
+      "subject": "Mary Jane, you\u2019re nearing your Dropbox storage limit."
+    },
+    {
       "sender": "Tamara Kalinic from Material Witness",
       "subject": "Do I regret what I bought(and what I didnt) from Chanel Spring 2026"
     },
@@ -487,10 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "All Furniture Services\u00ae LLC Repair & Restoration",
       "subject": "\ud83d\udcac All Furniture Services\u00ae LLC Repair & Restoration got back to you about your Upholstery and Furniture Cleaning project"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Fabulous picnic bakes that travel well"
     }
   ],
   "items": [
