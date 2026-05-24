@@ -396,6 +396,10 @@
     .weight-range-toggle button.active {
       background: #c9b99a; color: #2c2418; border-color: #c9b99a; font-weight: 600;
     }
+    .weight-axis {
+      display: flex; justify-content: space-between; font-size: 0.62rem;
+      color: #b8a48e; margin-top: 0.25rem; font-family: 'Inter', sans-serif;
+    }
     .weight-stats {
       display: flex; gap: 0.8rem; font-size: 0.7rem; color: #9c8b76;
       margin-top: 0.4rem; flex-wrap: wrap;
@@ -662,6 +666,7 @@
             <button data-range="ALL">All</button>
           </div>
           <div class="weight-trend" id="weight-trend"></div>
+          <div class="weight-axis" id="weight-axis"></div>
           <div class="weight-stats" id="weight-stats"></div>
           <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:#9c8b76;margin-top:0.3rem;">
             <span id="weight-current">—</span>
@@ -1142,10 +1147,12 @@
 
       const trend = document.getElementById('weight-trend');
       const stats = document.getElementById('weight-stats');
+      const axis = document.getElementById('weight-axis');
 
       if (entries.length < 2) {
         trend.innerHTML = `<div style="text-align:center;color:#b8a48e;font-size:0.78rem;padding-top:60px;font-style:italic;">Log weight on a few days to see trend</div>`;
         stats.innerHTML = '';
+        axis.innerHTML = '';
       } else {
         const ws = entries.map(e => e.weight);
         const min = Math.min(...ws, profile.goal_lb) - 1;
@@ -1169,6 +1176,22 @@
             ${showDots ? pts.map(p => `<circle class="dot" cx="${p[0]}" cy="${p[1]}" r="1.2"/>`).join('') : ''}
           </svg>
         `;
+
+        // Axis labels: start, middle, end dates (middle only for 1M+)
+        const fmt = iso => {
+          const d = new Date(iso + 'T12:00:00');
+          const includeYear = weightRange === '1Y' || weightRange === 'ALL';
+          return d.toLocaleDateString('en-US',
+            includeYear ? { month: 'short', day: 'numeric', year: 'numeric' }
+                        : { month: 'short', day: 'numeric' });
+        };
+        const startDate = entries[0].date;
+        const endDate = entries[entries.length-1].date;
+        const showMid = entries.length >= 14;
+        const midDate = entries[Math.floor(entries.length / 2)].date;
+        axis.innerHTML = `<span>${fmt(startDate)}</span>`
+          + (showMid ? `<span>${fmt(midDate)}</span>` : '')
+          + `<span>${fmt(endDate)}</span>`;
 
         // Stats: delta over range, min, max, avg
         const first = entries[0].weight, last = entries[entries.length-1].weight;
