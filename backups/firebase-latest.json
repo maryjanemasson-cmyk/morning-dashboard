@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-24T13:00:20",
+    "captured_at": "2026-05-24T15:00:21",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -4583,7 +4583,8 @@
           "top": 12.6,
           "width": 8.4
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "29": {
       "layout": [
@@ -5792,7 +5793,8 @@
           "top": 51.2,
           "width": 9.3
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "37": {
       "layout": [
@@ -5940,7 +5942,8 @@
           "top": 36,
           "width": 11.9
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "38": {
       "layout": [
@@ -6189,7 +6192,8 @@
           "top": 65.5,
           "width": 15
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "40": {
       "layout": [
@@ -6742,7 +6746,8 @@
           "top": 40.9,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "44": {
       "layout": [
@@ -9125,24 +9130,24 @@
           "_origFile": "s28_005.png",
           "file": "wardrobe-thumbs/s28_005.png",
           "height": 36.4,
-          "left": 40.8,
-          "top": 48.7,
+          "left": 41.5,
+          "top": 42,
           "width": 12.7
         },
         {
           "_origFile": "s28_011.png",
           "file": "wardrobe-thumbs/s28_011.png",
           "height": 37.6,
-          "left": 53.6,
-          "top": 46.9,
+          "left": 51.2,
+          "top": 41.4,
           "width": 16.9
         },
         {
           "_origFile": "s28_006.png",
           "file": "wardrobe-thumbs/s28_006.png",
           "height": 33.3,
-          "left": 28.3,
-          "top": 51.9,
+          "left": 29.2,
+          "top": 43.5,
           "width": 11.6
         },
         {
@@ -9165,8 +9170,8 @@
           "_origFile": "s04_004.png",
           "file": "wardrobe-thumbs/s04_004.png",
           "height": 37.5,
-          "left": 77.5,
-          "top": 62.5,
+          "left": 81.2,
+          "top": 68.9,
           "width": 22.5
         },
         {
@@ -9197,8 +9202,8 @@
           "_origFile": "s09_019.png",
           "file": "wardrobe-thumbs/s09_019.png",
           "height": 22.6,
-          "left": 71.1,
-          "top": 77.8,
+          "left": 64,
+          "top": 79.4,
           "width": 13.4
         },
         {
@@ -9272,6 +9277,14 @@
           "left": 85.8,
           "top": 58.1,
           "width": 11
+        },
+        {
+          "_origFile": "s10_012.png",
+          "file": "wardrobe-thumbs/s10_012.png",
+          "height": 22.3,
+          "left": 71.3,
+          "top": 67.9,
+          "width": 12.3
         }
       ]
     },
@@ -9693,7 +9706,8 @@
           "top": 16.7,
           "width": 10.6
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "64": {
       "layout": [
@@ -10253,7 +10267,8 @@
           "top": 75.4,
           "width": 12.2
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "68": {
       "layout": [
@@ -10401,7 +10416,8 @@
           "top": 10,
           "width": 17.4
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "69": {
       "layout": [
@@ -10785,7 +10801,8 @@
           "top": 4.9,
           "width": 18.3
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "71": {
       "layout": [
@@ -12257,7 +12274,8 @@
           "top": 8.1,
           "width": 20.8
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "83": {
       "layout": [
@@ -12373,7 +12391,8 @@
           "top": 76.4,
           "width": 12.1
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "1003": {
       "occasion": "Travel"
@@ -12878,7 +12897,8 @@
           "top": 20.1,
           "width": 11.6
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1007": {
       "layout": [
@@ -13402,8 +13422,8 @@
           "_origFile": "s07_009.png",
           "file": "wardrobe-thumbs/s07_009.png",
           "height": 25,
-          "left": 54.9,
-          "top": 76.7,
+          "left": 67.1,
+          "top": 80.3,
           "width": 15
         },
         {
@@ -13434,8 +13454,8 @@
           "_origFile": "s03_002.png",
           "file": "wardrobe-thumbs/s03_002.png",
           "height": 25,
-          "left": 54.2,
-          "top": 53.7,
+          "left": 54.3,
+          "top": 79.8,
           "width": 15
         },
         {
@@ -13450,8 +13470,8 @@
           "_origFile": "s01_004.png",
           "file": "wardrobe-thumbs/s01_004.png",
           "height": 19.2,
-          "left": 56.1,
-          "top": 40.6,
+          "left": 44.2,
+          "top": 37,
           "width": 9.6
         },
         {
@@ -13465,17 +13485,17 @@
         {
           "_origFile": "s01_017.png",
           "file": "wardrobe-thumbs/s01_017.png",
-          "height": 28.3,
-          "left": 34.2,
+          "height": 19.7,
+          "left": 34.1,
           "top": 0,
-          "width": 17.2
+          "width": 14.4
         },
         {
           "_origFile": "s21_004.png",
           "file": "wardrobe-thumbs/s21_004.png",
           "height": 23.7,
-          "left": 22.9,
-          "top": 20.3,
+          "left": 25,
+          "top": 18.3,
           "width": 14
         },
         {
@@ -13503,18 +13523,10 @@
           "width": 17.3
         },
         {
-          "_origFile": "s27_011.png",
-          "file": "wardrobe-thumbs/s27_011.png",
-          "height": 40.4,
-          "left": 18.9,
-          "top": 44.6,
-          "width": 16.9
-        },
-        {
           "_origFile": "s29_005.png",
           "file": "wardrobe-thumbs/s29_005.png",
           "height": 35.8,
-          "left": 37,
+          "left": 50.3,
           "top": 49,
           "width": 15.7
         },
@@ -13522,9 +13534,33 @@
           "_origFile": "s29_008.png",
           "file": "wardrobe-thumbs/s29_008.png",
           "height": 41.9,
-          "left": 69,
-          "top": 45.2,
+          "left": 68.7,
+          "top": 42.9,
           "width": 17.4
+        },
+        {
+          "_origFile": "s27_001.png",
+          "file": "wardrobe-thumbs/s27_001.png",
+          "height": 34.8,
+          "left": 35.3,
+          "top": 49.2,
+          "width": 15.5
+        },
+        {
+          "_origFile": "s20_011.png",
+          "file": "piece_a1d716ac64d4c608.png",
+          "height": 25,
+          "left": 39.3,
+          "top": 17.7,
+          "width": 15
+        },
+        {
+          "_origFile": "C005.jpg",
+          "file": "wardrobe-thumbs/C005.jpg",
+          "height": 32,
+          "left": 16.6,
+          "top": 48.8,
+          "width": 21.3
         }
       ]
     },
@@ -13550,8 +13586,8 @@
           "_origFile": "s01_005.png",
           "file": "wardrobe-thumbs/s01_005.png",
           "height": 17.2,
-          "left": 19,
-          "top": 30.7,
+          "left": 19.6,
+          "top": 25,
           "width": 11.9
         },
         {
@@ -13574,8 +13610,8 @@
           "_origFile": "s18_005.png",
           "file": "wardrobe-thumbs/s18_005.png",
           "height": 23.7,
-          "left": 66.4,
-          "top": 13.5,
+          "left": 69.2,
+          "top": 20.1,
           "width": 13.4
         },
         {
@@ -13590,8 +13626,8 @@
           "_origFile": "s24_002.png",
           "file": "wardrobe-thumbs/s24_002.png",
           "height": 25,
-          "left": 51.2,
-          "top": 12.8,
+          "left": 52.1,
+          "top": 19.6,
           "width": 15
         },
         {
@@ -13606,16 +13642,16 @@
           "_origFile": "s03_002.png",
           "file": "wardrobe-thumbs/s03_002.png",
           "height": 25,
-          "left": 17.7,
-          "top": 42.1,
+          "left": 14.3,
+          "top": 41.9,
           "width": 15
         },
         {
           "_origFile": "s03_005.png",
           "file": "wardrobe-thumbs/s03_005.png",
           "height": 25,
-          "left": 83.2,
-          "top": 56.2,
+          "left": 86.1,
+          "top": 57.1,
           "width": 15
         },
         {
@@ -13645,26 +13681,26 @@
         {
           "_origFile": "s27_005.png",
           "file": "wardrobe-thumbs/s27_005.png",
-          "height": 47.7,
-          "left": 33.5,
-          "top": 38.5,
-          "width": 19.9
+          "height": 45.8,
+          "left": 25.8,
+          "top": 36.6,
+          "width": 17.9
         },
         {
           "_origFile": "s27_007.png",
           "file": "wardrobe-thumbs/s27_007.png",
-          "height": 53.4,
-          "left": 64.4,
-          "top": 36.8,
-          "width": 19.1
+          "height": 50.4,
+          "left": 68.1,
+          "top": 43.1,
+          "width": 16.9
         },
         {
           "_origFile": "s29_008.png",
           "file": "wardrobe-thumbs/s29_008.png",
-          "height": 52.2,
-          "left": 48.8,
-          "top": 35.7,
-          "width": 19.8
+          "height": 50.6,
+          "left": 55,
+          "top": 39.8,
+          "width": 17.8
         },
         {
           "_origFile": "s03_018.png",
@@ -13689,6 +13725,22 @@
           "left": 84.3,
           "top": 0.3,
           "width": 15
+        },
+        {
+          "_origFile": "s27_001.png",
+          "file": "wardrobe-thumbs/s27_001.png",
+          "height": 44.1,
+          "left": 40.9,
+          "top": 40.9,
+          "width": 17.7
+        },
+        {
+          "_origFile": "s01_015.png",
+          "file": "wardrobe-thumbs/s01_015.png",
+          "height": 18.2,
+          "left": 71.1,
+          "top": 0,
+          "width": 10.7
         }
       ]
     },
@@ -13782,8 +13834,8 @@
           "_origFile": "s03_018.png",
           "file": "wardrobe-thumbs/s03_018.png",
           "height": 25,
-          "left": 86.7,
-          "top": 32.8,
+          "left": 82.4,
+          "top": 38.5,
           "width": 15
         },
         {
@@ -13798,8 +13850,8 @@
           "_origFile": "s03_002.png",
           "file": "wardrobe-thumbs/s03_002.png",
           "height": 25,
-          "left": 12.9,
-          "top": 58.7,
+          "left": 21.4,
+          "top": 80.9,
           "width": 15
         },
         {
@@ -13886,16 +13938,16 @@
           "_origFile": "s07_006.png",
           "file": "wardrobe-thumbs/s07_006.png",
           "height": 21.3,
-          "left": 72.7,
-          "top": 46.6,
+          "left": 75.1,
+          "top": 62.5,
           "width": 12.1
         },
         {
           "_origFile": "s07_008.png",
           "file": "wardrobe-thumbs/s07_008.png",
           "height": 25,
-          "left": 84.6,
-          "top": 59.5,
+          "left": 87.2,
+          "top": 59.9,
           "width": 15
         },
         {
@@ -13918,8 +13970,8 @@
           "_origFile": "s09_007.png",
           "file": "wardrobe-thumbs/s09_007.png",
           "height": 21.4,
-          "left": 72.8,
-          "top": 66.5,
+          "left": 72.7,
+          "top": 81,
           "width": 11.7
         },
         {
@@ -13934,25 +13986,33 @@
           "_origFile": "s27_001.png",
           "file": "wardrobe-thumbs/s27_001.png",
           "height": 41.1,
-          "left": 26,
-          "top": 45.8,
+          "left": 20.6,
+          "top": 43.5,
           "width": 18.5
         },
         {
           "_origFile": "s27_007.png",
           "file": "wardrobe-thumbs/s27_007.png",
           "height": 34.5,
-          "left": 55.7,
-          "top": 48.4,
+          "left": 58.4,
+          "top": 47.7,
           "width": 17.1
         },
         {
           "_origFile": "s29_005.png",
           "file": "wardrobe-thumbs/s29_005.png",
           "height": 36.9,
-          "left": 40.9,
-          "top": 47.2,
+          "left": 45.6,
+          "top": 45.6,
           "width": 16.7
+        },
+        {
+          "_origFile": "C005.jpg",
+          "file": "wardrobe-thumbs/C005.jpg",
+          "height": 36.4,
+          "left": 32.8,
+          "top": 47.5,
+          "width": 18.7
         }
       ]
     },
@@ -14090,8 +14150,8 @@
           "_origFile": "s07_004.png",
           "file": "wardrobe-thumbs/s07_004.png",
           "height": 19.9,
-          "left": 12.6,
-          "top": 66.4,
+          "left": 12,
+          "top": 65,
           "width": 13.2
         },
         {
@@ -14114,8 +14174,8 @@
           "_origFile": "s07_009.png",
           "file": "wardrobe-thumbs/s07_009.png",
           "height": 20.3,
-          "left": 23.3,
-          "top": 80.2,
+          "left": 14,
+          "top": 81.1,
           "width": 12.2
         },
         {
@@ -14133,6 +14193,38 @@
           "left": 64.2,
           "top": 73.6,
           "width": 10
+        },
+        {
+          "_origFile": "s07_007.png",
+          "file": "wardrobe-thumbs/s07_007.png",
+          "height": 25,
+          "left": 84,
+          "top": 56.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s06_003.png",
+          "file": "piece_aaffb7d16103846d.png",
+          "height": 25,
+          "left": 84.8,
+          "top": 77.6,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_008.png",
+          "file": "wardrobe-thumbs/s07_008.png",
+          "height": 25,
+          "left": 42.5,
+          "top": 74.4,
+          "width": 15
+        },
+        {
+          "_origFile": "s02_012.png",
+          "file": "wardrobe-thumbs/s02_012.png",
+          "height": 25,
+          "left": 24.7,
+          "top": 73.5,
+          "width": 15
         }
       ]
     },
@@ -16930,8 +17022,8 @@
           "_origFile": "s03_002.png",
           "file": "wardrobe-thumbs/s03_002.png",
           "height": 25,
-          "left": 58.7,
-          "top": 34.5,
+          "left": 55.9,
+          "top": 78.7,
           "width": 15
         },
         {
@@ -16962,16 +17054,16 @@
           "_origFile": "s20_013.png",
           "file": "wardrobe-thumbs/s20_013.png",
           "height": 25,
-          "left": 21.7,
-          "top": 5.2,
+          "left": 4.8,
+          "top": 9.1,
           "width": 15
         },
         {
           "_origFile": "s20_020.png",
           "file": "wardrobe-thumbs/s20_020.png",
           "height": 25,
-          "left": 5.6,
-          "top": 5.7,
+          "left": 39.2,
+          "top": 7.9,
           "width": 15
         },
         {
@@ -16985,10 +17077,10 @@
         {
           "_origFile": "s27_001.png",
           "file": "wardrobe-thumbs/s27_001.png",
-          "height": 50.5,
-          "left": 34.7,
-          "top": 33.6,
-          "width": 21.6
+          "height": 46.2,
+          "left": 41.8,
+          "top": 30.4,
+          "width": 19.3
         },
         {
           "_origFile": "s01_017.png",
@@ -17002,41 +17094,65 @@
           "_origFile": "s07_003.png",
           "file": "wardrobe-thumbs/s07_003.png",
           "height": 24.8,
-          "left": 56,
-          "top": 51.1,
+          "left": 70.1,
+          "top": 77.2,
           "width": 14.8
         },
         {
           "_origFile": "s20_005.png",
           "file": "wardrobe-thumbs/s20_005.png",
           "height": 25,
-          "left": 36.8,
-          "top": 5.8,
+          "left": 23,
+          "top": 7.4,
           "width": 15
         },
         {
           "_origFile": "s07_006.png",
           "file": "wardrobe-thumbs/s07_006.png",
           "height": 21.1,
-          "left": 22.4,
-          "top": 57.9,
+          "left": 18.9,
+          "top": 58.1,
           "width": 10.5
         },
         {
           "_origFile": "s08_001.png",
           "file": "wardrobe-thumbs/s08_001.png",
           "height": 19.2,
-          "left": 80.9,
-          "top": 77.8,
+          "left": 85.9,
+          "top": 75.1,
           "width": 12.6
         },
         {
           "_origFile": "s09_007.png",
           "file": "wardrobe-thumbs/s09_007.png",
           "height": 19.6,
-          "left": 17.2,
-          "top": 76.7,
+          "left": 17.1,
+          "top": 77.2,
           "width": 11.2
+        },
+        {
+          "_origFile": "s20_011.png",
+          "file": "piece_a1d716ac64d4c608.png",
+          "height": 30.9,
+          "left": 53.5,
+          "top": 2.6,
+          "width": 16.2
+        },
+        {
+          "_origFile": "s29_008.png",
+          "file": "wardrobe-thumbs/s29_008.png",
+          "height": 38.2,
+          "left": 30,
+          "top": 33.6,
+          "width": 17
+        },
+        {
+          "_origFile": "s29_002.png",
+          "file": "wardrobe-thumbs/s29_002.png",
+          "height": 35.4,
+          "left": 55,
+          "top": 34.6,
+          "width": 18.7
         }
       ]
     },
@@ -17654,7 +17770,8 @@
           "top": 40,
           "width": 19.6
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1042": {
       "layout": [
@@ -17862,7 +17979,8 @@
           "top": 48.9,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1045": {
       "layout": [
@@ -17922,7 +18040,8 @@
           "top": 48.2,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1046": {
       "layout": [
@@ -18070,7 +18189,8 @@
           "top": 30.2,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1048": {
       "layout": [
@@ -18138,7 +18258,8 @@
           "top": 9.2,
           "width": 23.4
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1049": {
       "layout": [
@@ -18562,7 +18683,8 @@
           "top": 77.1,
           "width": 12.8
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1054": {
       "layout": [
@@ -19480,7 +19602,8 @@
           "top": 54.5,
           "width": 12
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1070": {
       "layout": [
@@ -19620,7 +19743,8 @@
           "top": 28.4,
           "width": 13
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1076": {
       "layout": [
@@ -19728,7 +19852,8 @@
           "top": 7.2,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1079": {
       "layout": [
@@ -19876,7 +20001,8 @@
           "top": 79.2,
           "width": 13.2
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1082": {
       "layout": [
@@ -20046,7 +20172,7 @@
           "width": 15
         }
       ],
-      "season": "Spring"
+      "season": "Fall"
     },
     "1084": {
       "layout": [
@@ -20154,7 +20280,8 @@
           "top": 18.1,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1086": {
       "layout": [
@@ -20278,7 +20405,8 @@
           "top": 49.7,
           "width": 17.7
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1088": {
       "layout": [
@@ -20642,7 +20770,8 @@
           "top": 23.3,
           "width": 16.6
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1093": {
       "layout": [
@@ -20814,7 +20943,8 @@
           "top": 38.8,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1094": {
       "layout": [
@@ -23239,7 +23369,8 @@
           "top": 69,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1134": {
       "layout": [
@@ -23315,7 +23446,8 @@
           "top": 74.4,
           "width": 13.7
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1135": {
       "layout": [
@@ -24589,7 +24721,8 @@
           "top": 39.4,
           "width": 11.6
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1155": {
       "layout": [
@@ -24658,7 +24791,7 @@
           "width": 34.6
         }
       ],
-      "season": "Spring"
+      "season": "Fall"
     },
     "1156": {
       "layout": [
@@ -24754,8 +24887,8 @@
           "_origFile": "s02_012.png",
           "file": "wardrobe-thumbs/s02_012.png",
           "height": 25,
-          "left": 16.3,
-          "top": 64,
+          "left": 14.5,
+          "top": 70.8,
           "width": 15
         },
         {
@@ -24813,6 +24946,14 @@
           "left": 57.3,
           "top": 4.7,
           "width": 10.7
+        },
+        {
+          "_origFile": "C005.jpg",
+          "file": "wardrobe-thumbs/C005.jpg",
+          "height": 32.8,
+          "left": 13.3,
+          "top": 35.7,
+          "width": 17.3
         }
       ],
       "season": "Fall"
@@ -25083,7 +25224,8 @@
           "top": 12.5,
           "width": 15
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1166": {
       "layout": [
@@ -25263,7 +25405,8 @@
           "top": 6.5,
           "width": 16
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1172": {
       "layout": [
@@ -25419,7 +25562,8 @@
           "top": 7.1,
           "width": 17.9
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1176": {
       "layout": [
@@ -25583,7 +25727,8 @@
           "top": 29.7,
           "width": 12
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1179": {
       "layout": [
@@ -25775,12 +25920,12 @@
           "_origFile": "s04_004.png",
           "file": "wardrobe-thumbs/s04_004.png",
           "height": 45.46,
-          "left": 0.0,
+          "left": 0,
           "top": 31.52,
           "width": 25.34
         }
       ],
-      "season": "Fall"
+      "season": "Spring"
     },
     "1184": {
       "layout": [
@@ -25945,16 +26090,16 @@
           "_origFile": "s04_004.png",
           "file": "wardrobe-thumbs/s04_004.png",
           "height": 41.1,
-          "left": 63.32,
-          "top": 58.9,
+          "left": 75.7,
+          "top": 62.8,
           "width": 26.86
         },
         {
           "_origFile": "s03_014.png",
           "file": "wardrobe-thumbs/s03_014.png",
           "height": 25,
-          "left": 78,
-          "top": 47.7,
+          "left": 2.4,
+          "top": 74.4,
           "width": 15
         },
         {
@@ -25969,7 +26114,7 @@
           "_origFile": "s09_013.png",
           "file": "wardrobe-thumbs/s09_013.png",
           "height": 21.1,
-          "left": 21.4,
+          "left": 17.4,
           "top": 79.1,
           "width": 11.9
         },
@@ -26004,6 +26149,30 @@
           "left": 61.5,
           "top": 46.2,
           "width": 15.6
+        },
+        {
+          "_origFile": "s07_017.png",
+          "file": "piece_ad351fe81b84369a.png",
+          "height": 25,
+          "left": 77,
+          "top": 17.5,
+          "width": 15
+        },
+        {
+          "_origFile": "s09_019.png",
+          "file": "piece_d10383194feae1d3.png",
+          "height": 25,
+          "left": 77.4,
+          "top": 34.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s01_007.png",
+          "file": "piece_9e55e52b0d3452ae.png",
+          "height": 25,
+          "left": 40,
+          "top": 30,
+          "width": 15
         }
       ],
       "season": "Spring"
@@ -26114,7 +26283,8 @@
           "top": 47.9,
           "width": 21.1
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1189": {
       "layout": [
@@ -26701,7 +26871,8 @@
           "top": 27,
           "width": 16
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1199": {
       "layout": [
@@ -27006,7 +27177,8 @@
           "top": 34.6,
           "width": 14.7
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1204": {
       "layout": [
@@ -27030,88 +27202,112 @@
           "_origFile": "s10_003.png",
           "file": "wardrobe-thumbs/s10_003.png",
           "height": 25,
-          "left": 18.6,
-          "top": 70.4,
+          "left": 25.1,
+          "top": 67.7,
           "width": 15
         },
         {
           "_origFile": "s04_002.png",
           "file": "wardrobe-thumbs/s04_002.png",
           "height": 25,
-          "left": 76.8,
-          "top": 69.1,
+          "left": 66.8,
+          "top": 77.3,
           "width": 15
         },
         {
           "_origFile": "s03_003.png",
           "file": "wardrobe-thumbs/s03_003.png",
           "height": 22.9,
-          "left": 62.3,
-          "top": 56.6,
+          "left": 56.7,
+          "top": 65,
           "width": 13.1
         },
         {
           "_origFile": "s03_005.png",
           "file": "wardrobe-thumbs/s03_005.png",
           "height": 25,
-          "left": 12.7,
-          "top": 48.3,
+          "left": 12.4,
+          "top": 74.2,
           "width": 15
         },
         {
           "_origFile": "s23_008.png",
           "file": "wardrobe-thumbs/s23_008.png",
-          "height": 25,
-          "left": 54.9,
-          "top": 10.2,
-          "width": 15
+          "height": 34.5,
+          "left": 48.2,
+          "top": 2.8,
+          "width": 17.6
         },
         {
           "_origFile": "s25_003.png",
           "file": "wardrobe-thumbs/s25_003.png",
           "height": 25,
-          "left": 38.5,
-          "top": 8.3,
+          "left": 33.9,
+          "top": 6.9,
           "width": 15
         },
         {
           "_origFile": "s23_004.png",
           "file": "wardrobe-thumbs/s23_004.png",
           "height": 25,
-          "left": 22.9,
-          "top": 9.2,
+          "left": 20.5,
+          "top": 8.3,
           "width": 15
         },
         {
           "_origFile": "s15_002.png",
           "file": "wardrobe-thumbs/s15_002.png",
           "height": 27.1,
-          "left": 2.1,
-          "top": 12.8,
+          "left": 2.4,
+          "top": 8.7,
           "width": 16.2
         },
         {
           "_origFile": "s01_003.png",
           "file": "wardrobe-thumbs/s01_003.png",
           "height": 25,
-          "left": 58.2,
-          "top": 32.9,
+          "left": 38.5,
+          "top": 22.3,
           "width": 15
         },
         {
           "_origFile": "s01_012.png",
           "file": "wardrobe-thumbs/s01_012.png",
-          "height": 32,
-          "left": 70.9,
-          "top": 0,
-          "width": 18.8
+          "height": 22.6,
+          "left": 85.9,
+          "top": 0.7,
+          "width": 13.9
         },
         {
           "_origFile": "s08_004.png",
           "file": "wardrobe-thumbs/s08_004.png",
           "height": 25,
-          "left": 35.2,
-          "top": 73.8,
+          "left": 32.3,
+          "top": 79,
+          "width": 15
+        },
+        {
+          "_origFile": "s14_005.png",
+          "file": "wardrobe-thumbs/s14_005.png",
+          "height": 34.5,
+          "left": 0,
+          "top": 39.8,
+          "width": 20.1
+        },
+        {
+          "_origFile": "s21_002.png",
+          "file": "wardrobe-thumbs/s21_002.png",
+          "height": 25,
+          "left": 63.6,
+          "top": 15.5,
+          "width": 15
+        },
+        {
+          "_origFile": "s26_008.png",
+          "file": "wardrobe-thumbs/s26_008.png",
+          "height": 25,
+          "left": 77.8,
+          "top": 27.3,
           "width": 15
         }
       ],
@@ -27191,7 +27387,8 @@
           "top": 15.3,
           "width": 15
         }
-      ]
+      ],
+      "season": "Winter"
     },
     "1209": {
       "layout": [
@@ -27903,7 +28100,8 @@
           "top": 45.6,
           "width": 18.4
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1222": {
       "layout": [
@@ -28075,7 +28273,8 @@
           "top": 39.1,
           "width": 20.6
         }
-      ]
+      ],
+      "season": "Fall"
     },
     "1224": {
       "layout": [
@@ -28207,7 +28406,8 @@
           "top": 7.8,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1227": {
       "layout": [
@@ -28283,7 +28483,8 @@
           "top": 72.8,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "1228": {
       "layout": [
@@ -29181,7 +29382,8 @@
           "top": 78,
           "width": 11.6
         }
-      ]
+      ],
+      "season": "Winter"
     },
     "2005": {
       "layout": [
@@ -29321,7 +29523,8 @@
           "top": 39.6,
           "width": 17.7
         }
-      ]
+      ],
+      "season": "Winter"
     },
     "2006": {
       "layout": [
@@ -29918,7 +30121,8 @@
           "top": 7.2,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2010": {
       "layout": [
@@ -30066,7 +30270,8 @@
           "top": 0,
           "width": 9.3
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2011": {
       "layout": [
@@ -32562,7 +32767,8 @@
           "top": 22.1,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2038": {
       "layout": [
@@ -33362,7 +33568,8 @@
           "top": 18.7,
           "width": 15
         }
-      ]
+      ],
+      "season": "Winter"
     },
     "2044": {
       "layout": [
@@ -33489,10 +33696,10 @@
         {
           "_origFile": "s01_012.png",
           "file": "wardrobe-thumbs/s01_012.png",
-          "height": 58.59,
-          "left": 64.84,
+          "height": 23.1,
+          "left": 81.5,
           "top": 0,
-          "width": 35.16
+          "width": 21.2
         },
         {
           "_origFile": "s14_010.png",
@@ -33637,10 +33844,10 @@
         {
           "_origFile": "s01_012.png",
           "file": "wardrobe-thumbs/s01_012.png",
-          "height": 71.25,
+          "height": 27.2,
           "left": 0,
           "top": 0,
-          "width": 44.3
+          "width": 18.4
         }
       ]
     },
@@ -36091,7 +36298,8 @@
           "top": 9.6,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2066": {
       "layout": [
@@ -36528,7 +36736,8 @@
           "top": 15.1,
           "width": 16.2
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2069": {
       "layout": [
@@ -39502,7 +39711,8 @@
           "top": 11.9,
           "width": 16
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2090": {
       "layout": [
@@ -39534,24 +39744,24 @@
           "_origFile": "s27_001.png",
           "file": "wardrobe-thumbs/s27_001.png",
           "height": 39.1,
-          "left": 24.7,
-          "top": 44.3,
+          "left": 20.9,
+          "top": 44.5,
           "width": 19.5
         },
         {
           "_origFile": "s27_005.png",
           "file": "wardrobe-thumbs/s27_005.png",
           "height": 34.6,
-          "left": 55.3,
-          "top": 44.2,
+          "left": 48.8,
+          "top": 44.7,
           "width": 17.2
         },
         {
           "_origFile": "s27_010.png",
           "file": "wardrobe-thumbs/s27_010.png",
           "height": 35.8,
-          "left": 42.2,
-          "top": 44.2,
+          "left": 36.3,
+          "top": 45.8,
           "width": 16.7
         },
         {
@@ -39625,6 +39835,14 @@
           "left": 79.1,
           "top": 14.6,
           "width": 17.3
+        },
+        {
+          "_origFile": "s27_013.png",
+          "file": "wardrobe-thumbs/s27_013.png",
+          "height": 32.8,
+          "left": 62.4,
+          "top": 43.8,
+          "width": 17
         }
       ]
     },
@@ -39877,10 +40095,10 @@
         {
           "_origFile": "s04_004.png",
           "file": "piece_0d53b9a6d82cbe3e.png",
-          "height": 30.0,
-          "left": 82.0,
+          "height": 30,
+          "left": 82,
           "top": 68.7,
-          "width": 18.0
+          "width": 18
         },
         {
           "_origFile": "s02_002.png",
@@ -39893,10 +40111,10 @@
         {
           "_origFile": "s03_008.png",
           "file": "piece_662a13c9280e37c8.png",
-          "height": 30.0,
+          "height": 30,
           "left": 69.3,
           "top": 56.5,
-          "width": 18.0
+          "width": 18
         },
         {
           "_origFile": "s03_014.png",
@@ -39922,7 +40140,8 @@
           "top": 0,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2093": {
       "layout": [
@@ -40230,7 +40449,8 @@
           "top": 43.8,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2096": {
       "layout": [
@@ -40354,7 +40574,8 @@
           "top": 0,
           "width": 15
         }
-      ]
+      ],
+      "season": "Summer"
     },
     "2097": {
       "layout": [
@@ -40454,7 +40675,8 @@
           "top": 14.4,
           "width": 15
         }
-      ]
+      ],
+      "season": "Spring"
     },
     "2098": {
       "layout": [
@@ -41477,7 +41699,7 @@
       ],
       "name": "Weekend/OOTD",
       "occasion": "OOTD",
-      "season": "Spring"
+      "season": "Fall"
     },
     "2179": {
       "layout": [
@@ -41508,10 +41730,10 @@
         {
           "_origFile": "s02_015.png",
           "file": "wardrobe-thumbs/s02_015.png",
-          "height": 30.0,
-          "left": 82.0,
+          "height": 30,
+          "left": 82,
           "top": 30.5,
-          "width": 18.0
+          "width": 18
         },
         {
           "_origFile": "s03_016.png",
@@ -41636,7 +41858,7 @@
       ],
       "name": "OOTD",
       "occasion": "OOTD",
-      "season": "Spring"
+      "season": "Fall"
     },
     "2180": {
       "layout": [
@@ -41913,7 +42135,7 @@
       ],
       "name": "OOTD",
       "occasion": "OOTD",
-      "season": "Spring"
+      "season": "Summer"
     },
     "2183": {
       "layout": [
@@ -41968,7 +42190,7 @@
       ],
       "name": "Weekend brunch",
       "occasion": "OOTD",
-      "season": "Spring"
+      "season": "Summer"
     },
     "2184": {
       "layout": [
@@ -43330,7 +43552,7 @@
       ],
       "name": "Weekend brunch",
       "occasion": "Casual",
-      "season": "Spring"
+      "season": "Summer"
     },
     "2196": {
       "layout": [
@@ -44615,7 +44837,7 @@
       ],
       "name": "Travel/Office",
       "occasion": "Office",
-      "season": "Spring"
+      "season": "Summer"
     },
     "2207": {
       "layout": [
@@ -44766,7 +44988,7 @@
       ],
       "name": "Weekend/Travel",
       "occasion": "Casual",
-      "season": "Spring"
+      "season": "Fall"
     },
     "2208": {
       "layout": [
@@ -45741,6 +45963,133 @@
       "name": "OOTD",
       "occasion": "OOTD",
       "season": "Spring"
+    },
+    "2217": {
+      "layout": [
+        {
+          "_origFile": "s18_005.png",
+          "file": "wardrobe-thumbs/s18_005.png",
+          "height": 25,
+          "left": 16.5,
+          "top": 13.2,
+          "width": 15
+        },
+        {
+          "_origFile": "s18_002.png",
+          "file": "piece_1d76891aaa52796b.png",
+          "height": 25,
+          "left": 31.6,
+          "top": 10.7,
+          "width": 15
+        },
+        {
+          "_origFile": "s18_011.png",
+          "file": "wardrobe-thumbs/s18_011.png",
+          "height": 25,
+          "left": 46.8,
+          "top": 11.2,
+          "width": 15
+        },
+        {
+          "_origFile": "C006.jpg",
+          "file": "piece_ddfd982b90fc5e6d.png",
+          "height": 29.5,
+          "left": 61.4,
+          "top": 11.9,
+          "width": 17.9
+        },
+        {
+          "_origFile": "s30_011.png",
+          "file": "wardrobe-thumbs/s30_011.png",
+          "height": 39.1,
+          "left": 37.9,
+          "top": 39.3,
+          "width": 22
+        },
+        {
+          "_origFile": "s07_003.png",
+          "file": "wardrobe-thumbs/s07_003.png",
+          "height": 25,
+          "left": 68.4,
+          "top": 41.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_016.png",
+          "file": "wardrobe-thumbs/s07_016.png",
+          "height": 25,
+          "left": 77.4,
+          "top": 71.2,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_007.png",
+          "file": "wardrobe-thumbs/s07_007.png",
+          "height": 25,
+          "left": 17.3,
+          "top": 62.6,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_006.png",
+          "file": "wardrobe-thumbs/s07_006.png",
+          "height": 25,
+          "left": 15,
+          "top": 78.3,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_010.png",
+          "file": "wardrobe-thumbs/s07_010.png",
+          "height": 25,
+          "left": 3.2,
+          "top": 56.5,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_008.png",
+          "file": "wardrobe-thumbs/s07_008.png",
+          "height": 25,
+          "left": 0,
+          "top": 75.5,
+          "width": 15
+        },
+        {
+          "_origFile": "s07_018.png",
+          "file": "wardrobe-thumbs/s07_018.png",
+          "height": 25,
+          "left": 15.3,
+          "top": 39.3,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_018.png",
+          "file": "wardrobe-thumbs/s03_018.png",
+          "height": 25,
+          "left": 82.9,
+          "top": 54,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_001.png",
+          "file": "piece_fb6d3489c3013ec7.png",
+          "height": 25,
+          "left": 0.8,
+          "top": 40.2,
+          "width": 15
+        },
+        {
+          "_origFile": "s03_002.png",
+          "file": "wardrobe-thumbs/s03_002.png",
+          "height": 25,
+          "left": 80.6,
+          "top": 24.6,
+          "width": 15
+        }
+      ],
+      "name": "Weekend casual",
+      "occasion": "Casual",
+      "season": "Summer"
     }
   },
   "wardrobeCustomItems": {
