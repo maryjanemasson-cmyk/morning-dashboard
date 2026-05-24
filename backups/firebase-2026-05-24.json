@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-24T17:00:23",
+    "captured_at": "2026-05-24T19:18:21",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -49456,6 +49456,13 @@
         ]
       },
       "2026-05-24": {
+        "exercise": [
+          {
+            "cal": 463,
+            "mins": 50,
+            "type": "OTF / Orangetheory"
+          }
+        ],
         "foods": [
           {
             "cal": 250,
@@ -49471,8 +49478,19 @@
             "cal": 525,
             "name": "Kennys chicken",
             "protein": 40
+          },
+          {
+            "cal": 150,
+            "name": "Beer",
+            "protein": 1
+          },
+          {
+            "cal": 160,
+            "name": "Licorice, 2 long pieces",
+            "protein": 0
           }
-        ]
+        ],
+        "weight": 153.4
       }
     },
     "profile": {

@@ -461,15 +461,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "Laurel and Blush",
-      "subject": "How to style your new pillows"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Enter for a chance to win a $500 Lowe\u2019s e-gift card"
+    },
+    {
+      "sender": "New Jersey Irrigation Services",
+      "subject": "Hey Mary Jane And Christian, How was your experience with New Jersey Irrigation Services?"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Shipped: \"Cottonelle Ultra Soft...\""
+      "subject": "Ordered: \"200 Count Napkins 2 Ply...\""
+    },
+    {
+      "sender": "Thumbtack",
+      "subject": "Give quick, private feedback on your Thumbtack pro"
+    },
+    {
+      "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
+      "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
     },
     {
       "sender": "Amazon.com",
@@ -490,18 +502,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 13, 2026 at 10:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 6, 2026 at 10:00 AM"
-    },
-    {
-      "sender": "Instacart",
-      "subject": "Tell us how we did"
-    },
-    {
-      "sender": "Instacart",
-      "subject": "Your Asian Food Market order is confirmed for May 24"
     }
   ],
   "items": [
