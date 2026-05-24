@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-23T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-23T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30c2e79c9db82",
-    "startTime": "2026-05-23T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-23T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Orange 60 Min 2G",
     "location": "Orangetheory Fitness - Princeton, NJ\n640 Nassau Park Blvd\nPrinceton NJ 08540",
     "description": "",
@@ -251,6 +229,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udf93 PRISMS \u2014 Commencement / Last Day",
+    "location": "19 Lambert Drive, Princeton, NJ 08540",
+    "description": "Commencement Ceremony \u2014 Summer Break begins after ceremony\nPRISMS, 19 Lambert Drive, Princeton NJ",
+    "startTime": "",
+    "startDate": "2026-06-06",
+    "endTime": "",
+    "endDate": "2026-06-07",
+    "calendar": "Family",
+    "colorId": "2"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-06T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-06T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -450,23 +450,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Do I regret what I bought(and what I didnt) from Chanel Spring 2026"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Anthropic, PBC",
+      "subject": "Your receipt from Anthropic, PBC #2711-7669-5232"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "American Express",
       "subject": "Important Notice: Your May 2026 Statement"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Delivered: \"Cascade Complete Dishwasher...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amazon.com",
       "subject": "Delivered: \"dpHUE Root Touch-Up Kit,...\""
-    },
-    {
-      "sender": "Croissant",
-      "subject": "The Reality Of Resale"
     },
     {
       "sender": "Amazon.com",
@@ -483,14 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bake Time",
       "subject": "Fabulous picnic bakes that travel well"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
-    },
-    {
-      "sender": "Sex & Cancer Link \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "Doctors Link a Common Sex Habit to Cancer"
     }
   ],
   "items": [
@@ -607,22 +607,18 @@ window.EMAIL_DATA = {
       "sender": "Administration Office FASP"
     },
     {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-05-23",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e30c2e79c9db82",
-      "sender": "FORM BY TWO"
-    },
-    {
       "type": "return",
       "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item",
+      "date": "2026-05-24",
+      "id": "19e58810aa83a243",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
