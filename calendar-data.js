@@ -453,16 +453,20 @@ window.EMAIL_DATA = {
   "unreadCount": 21,
   "threads": [
     {
-      "sender": "Quince",
-      "subject": "Delivered: Mongolian Cashmere Throw"
+      "sender": "American Express",
+      "subject": "Important Notice: Your May 2026 Statement"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"Pacific Shaving Company...\""
+      "subject": "Delivered: \"Cascade Complete Dishwasher...\" and \u20661\u2069 more item"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"dpHUE Root Touch-Up Kit,...\""
+    },
+    {
+      "sender": "Croissant",
+      "subject": "The Reality Of Resale"
     },
     {
       "sender": "Amazon.com",
@@ -487,10 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sex & Cancer Link \u2014 Emily Harrison, MD | FIP Health",
       "subject": "Doctors Link a Common Sex Habit to Cancer"
-    },
-    {
-      "sender": "The Real \\\"Next Plandemic\\\" - Turbo Trade Pro",
-      "subject": "Forg\u0435t Hantavirus. 1,700 Americans died t\u03bfday from something worse."
     }
   ],
   "items": [
