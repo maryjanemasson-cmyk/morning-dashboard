@@ -758,11 +758,12 @@
         const todayDesc = today.hourly[4].weatherDesc[0].value;
         const todayRain = Math.max(...today.hourly.map(h => parseInt(h.chanceofrain)));
 
-        // Hourly rain strip for today — only render hours from "now" onward
+        // Hourly precipitation strip for today — only render hours from "now" onward
         // wttr.in's hourly[] is 8 entries per day at 0,300,600,900,1200,1500,1800,2100
         const nowH = new Date().getHours();
         const upcoming = today.hourly.filter(h => parseInt(h.time) / 100 >= Math.floor(nowH / 3) * 3);
-        const maxRainSoon = Math.max(0, ...upcoming.map(h => parseInt(h.chanceofrain)));
+        const chanceOf = h => Math.max(parseInt(h.chanceofrain || 0), parseInt(h.chanceofsnow || 0));
+        const maxRainSoon = Math.max(0, ...upcoming.map(chanceOf));
         let rainStripHTML = '';
         if (maxRainSoon >= 20) {
           const bucket = pct => {
@@ -786,12 +787,15 @@
             if (mm < 22)  return 'moderate';
             return 'heavy';
           };
-          rainStripHTML = '<div class="wx-rain-strip"><div class="wx-rain-strip-label">Rain hours today</div><div class="wx-rain-strip-hours">';
+          rainStripHTML = '<div class="wx-rain-strip"><div class="wx-rain-strip-label">Precipitation hours today</div><div class="wx-rain-strip-hours">';
           upcoming.forEach(h => {
-            const pct = parseInt(h.chanceofrain);
+            const rain = parseInt(h.chanceofrain || 0);
+            const snow = parseInt(h.chanceofsnow || 0);
+            const pct = Math.max(rain, snow);
             const mm = parseFloat(h.precipMM);
             const lab = intensity(mm, pct);
-            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(h.time)}</div><div class="rh-pct">${pct}%</div>${lab ? `<div class="rh-intensity">${lab}</div>` : ''}</div>`;
+            const icon = pct < 20 ? '' : (snow > rain ? '❄' : '💧'); // ❄ or 💧
+            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(h.time)}</div><div class="rh-pct">${icon} ${pct}%</div>${lab ? `<div class="rh-intensity">${lab}</div>` : ''}</div>`;
           });
           rainStripHTML += '</div></div>';
         }
