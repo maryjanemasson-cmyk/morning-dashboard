@@ -483,11 +483,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "MileagePlus Program",
-      "subject": "Your London trip: Earn extra miles with Vrbo"
+      "sender": "Brother USA",
+      "subject": "Last Chance! Save on Brother Genuine Ink & Toner this Memorial Day weekend!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"AEOCKY 4500 Sq.Ft Energy...\" and \u20661\u2069 more item"
     },
     {
       "sender": "Amex Offers from American Express",
@@ -504,18 +508,6 @@ window.EMAIL_DATA = {
     {
       "sender": "New Jersey Irrigation Services",
       "subject": "Hey Mary Jane And Christian, How was your experience with New Jersey Irrigation Services?"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"200 Count Napkins 2 Ply...\""
-    },
-    {
-      "sender": "Thumbtack",
-      "subject": "Give quick, private feedback on your Thumbtack pro"
-    },
-    {
-      "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
-      "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
     }
   ],
   "items": [
