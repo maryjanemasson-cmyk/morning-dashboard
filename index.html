@@ -771,105 +771,184 @@
     // (e.g. "what's the weather in NYC today?"). Cleared by the "Home" pill.
     let weatherOverride = null;
 
+    // Map WMO weather code → short text description (also fed to weatherIcon).
+    function wmoDesc(c) {
+      if (c === 0) return 'Sunny';
+      if (c === 1) return 'Mainly clear';
+      if (c === 2) return 'Partly cloudy';
+      if (c === 3) return 'Overcast';
+      if (c === 45 || c === 48) return 'Fog';
+      if (c === 51 || c === 53 || c === 55) return 'Drizzle';
+      if (c === 56 || c === 57) return 'Freezing drizzle';
+      if (c === 61) return 'Light rain';
+      if (c === 63) return 'Rain';
+      if (c === 65) return 'Heavy rain';
+      if (c === 66 || c === 67) return 'Freezing rain';
+      if (c === 71) return 'Light snow';
+      if (c === 73) return 'Snow';
+      if (c === 75) return 'Heavy snow';
+      if (c === 77) return 'Snow grains';
+      if (c === 80 || c === 81 || c === 82) return 'Rain showers';
+      if (c === 85 || c === 86) return 'Snow showers';
+      if (c === 95) return 'Thunderstorm';
+      if (c === 96 || c === 99) return 'Thunderstorm with hail';
+      return 'Cloudy';
+    }
+    const isSnowCode = c => (c >= 71 && c <= 77) || c === 85 || c === 86;
+
+    // US state abbreviation → full name (for "Princeton, NJ" style inputs)
+    const US_STATES = {
+      AL:'Alabama', AK:'Alaska', AZ:'Arizona', AR:'Arkansas', CA:'California',
+      CO:'Colorado', CT:'Connecticut', DE:'Delaware', DC:'District of Columbia',
+      FL:'Florida', GA:'Georgia', HI:'Hawaii', ID:'Idaho', IL:'Illinois',
+      IN:'Indiana', IA:'Iowa', KS:'Kansas', KY:'Kentucky', LA:'Louisiana',
+      ME:'Maine', MD:'Maryland', MA:'Massachusetts', MI:'Michigan',
+      MN:'Minnesota', MS:'Mississippi', MO:'Missouri', MT:'Montana',
+      NE:'Nebraska', NV:'Nevada', NH:'New Hampshire', NJ:'New Jersey',
+      NM:'New Mexico', NY:'New York', NC:'North Carolina', ND:'North Dakota',
+      OH:'Ohio', OK:'Oklahoma', OR:'Oregon', PA:'Pennsylvania', RI:'Rhode Island',
+      SC:'South Carolina', SD:'South Dakota', TN:'Tennessee', TX:'Texas',
+      UT:'Utah', VT:'Vermont', VA:'Virginia', WA:'Washington', WV:'West Virginia',
+      WI:'Wisconsin', WY:'Wyoming'
+    };
+
+    // Geocode → cache in localStorage so we only geocode each city once.
+    // Handles "City", "City, ST" (US state code), and "City, Country" inputs.
+    async function geocode(input) {
+      const key = 'wx-geo-' + input.toLowerCase();
+      const cached = localStorage.getItem(key);
+      if (cached) return JSON.parse(cached);
+
+      // Parse "City, suffix" — suffix might be a US state code or a country.
+      let city = input.trim(), suffix = '';
+      const parts = input.split(',').map(s => s.trim());
+      if (parts.length >= 2) {
+        city = parts[0];
+        suffix = parts.slice(1).join(', ');
+      }
+      const stateFull = US_STATES[suffix.toUpperCase()];
+
+      // Query with bare city to keep Open-Meteo happy, get up to 10 results,
+      // then filter to one matching the suffix if provided.
+      const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10&language=en&format=json`;
+      const res = await fetchWithTimeout(url, 8000);
+      const json = await res.json();
+      if (!json.results || !json.results.length) throw new Error(`Location not found: ${input}`);
+
+      let pick = json.results[0];
+      if (suffix) {
+        const want = (stateFull || suffix).toLowerCase();
+        const match = json.results.find(r =>
+          (r.admin1 || '').toLowerCase() === want ||
+          (r.country || '').toLowerCase() === want ||
+          (r.country_code || '').toLowerCase() === suffix.toLowerCase()
+        );
+        if (match) pick = match;
+      }
+      const geo = { lat: pick.latitude, lon: pick.longitude, name: pick.name, region: pick.admin1 || '', country: pick.country_code || '' };
+      localStorage.setItem(key, JSON.stringify(geo));
+      return geo;
+    }
+
     async function loadWeather() {
       try {
         const tripLoc = currentLocation();
         const queryLoc = weatherOverride || tripLoc || WEATHER_HOME;
-        // Cache-buster every 5 min so a page reload (or the Refresh button)
-        // can actually pull fresh weather, not a stale browser-cached response.
-        const cb = Math.floor(Date.now() / 300000);
-        const url = `https://wttr.in/${encodeURIComponent(queryLoc)}?format=j1&_=${cb}`;
-        const res = await fetchWithTimeout(url, 6000);
-        const data = await res.json();
-        const cur = data.current_condition[0];
-        const loc = data.nearest_area[0];
-        const desc = cur.weatherDesc[0].value;
-        const days = data.weather;
-        const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-        const today = days[0];
-        const todayDesc = today.hourly[4].weatherDesc[0].value;
-        const todayRain = Math.max(...today.hourly.map(h => parseInt(h.chanceofrain)));
+        const geo = await geocode(queryLoc);
 
-        // Hourly precipitation strip for today — only render hours from "now" onward
-        // wttr.in's hourly[] is 8 entries per day at 0,300,600,900,1200,1500,1800,2100
+        // Open-Meteo: no API key, reliable CORS, broadly unblocked.
+        const cb = Math.floor(Date.now() / 300000);
+        const fcUrl = `https://api.open-meteo.com/v1/forecast`
+          + `?latitude=${geo.lat}&longitude=${geo.lon}`
+          + `&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,visibility`
+          + `&hourly=temperature_2m,precipitation_probability,precipitation,snowfall,weather_code`
+          + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset`
+          + `&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
+          + `&timezone=auto&forecast_days=5&_=${cb}`;
+        const res = await fetchWithTimeout(fcUrl, 10000);
+        const data = await res.json();
+
+        const curr = data.current;
+        const desc = wmoDesc(curr.weather_code);
+        const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+        const todayDesc = wmoDesc(data.daily.weather_code[0]);
+        const todayMax  = Math.round(data.daily.temperature_2m_max[0]);
+        const todayRain = Math.round(data.daily.precipitation_probability_max[0] || 0);
+
+        // Build hourly precip strip from today's hours, current hour onward.
+        const todayDateStr = (data.daily.time && data.daily.time[0]) || curr.time.slice(0,10);
         const nowH = new Date().getHours();
-        const upcoming = today.hourly.filter(h => parseInt(h.time) / 100 >= Math.floor(nowH / 3) * 3);
-        const chanceOf = h => Math.max(parseInt(h.chanceofrain || 0), parseInt(h.chanceofsnow || 0));
-        const maxRainSoon = Math.max(0, ...upcoming.map(chanceOf));
+        const hourlyIdxs = data.hourly.time
+          .map((t, i) => ({ t, i, h: parseInt(t.slice(11,13)) }))
+          .filter(o => o.t.startsWith(todayDateStr) && o.h >= Math.floor(nowH / 3) * 3 && o.h % 3 === 0);
+
+        const maxRainSoon = Math.max(0, ...hourlyIdxs.map(o => data.hourly.precipitation_probability[o.i] || 0));
         let rainStripHTML = '';
         if (maxRainSoon >= 20) {
-          const bucket = pct => {
-            if (pct >= 70) return 'heavy';
-            if (pct >= 40) return 'med';
-            if (pct >= 20) return 'lite';
-            return 'dry';
-          };
-          const fmtHour = t => {
-            const h = parseInt(t) / 100;
-            if (h === 0) return '12a';
-            if (h === 12) return '12p';
-            return h < 12 ? `${h}a` : `${h-12}p`;
-          };
-          // Intensity label from precipMM over the 3-hour window
-          // (NWS thresholds: <0.1mm/hr trace, 0.1-2.5 light, 2.5-7.6 mod, >7.6 heavy)
-          const intensity = (mm, pct) => {
+          const bucket = pct => pct >= 70 ? 'heavy' : pct >= 40 ? 'med' : pct >= 20 ? 'lite' : 'dry';
+          const fmtHour = h => h === 0 ? '12a' : h === 12 ? '12p' : (h < 12 ? `${h}a` : `${h-12}p`);
+          // precipitation here is in inches per hour, converted to mm for NWS thresholds
+          // (<0.1mm trace, 0.1-2.5 light, 2.5-7.6 moderate, >7.6 heavy)
+          const intensity = (inch, pct) => {
             if (pct < 20) return '';
-            if (mm < 0.3) return 'trace';
-            if (mm < 7.5) return 'light';
-            if (mm < 22)  return 'moderate';
+            const mm = inch * 25.4;
+            if (mm < 0.1) return 'trace';
+            if (mm < 2.5) return 'light';
+            if (mm < 7.6) return 'moderate';
             return 'heavy';
           };
           rainStripHTML = '<div class="wx-rain-strip"><div class="wx-rain-strip-label">Precipitation hours today</div><div class="wx-rain-strip-hours">';
-          upcoming.forEach(h => {
-            const rain = parseInt(h.chanceofrain || 0);
-            const snow = parseInt(h.chanceofsnow || 0);
-            const pct = Math.max(rain, snow);
-            const mm = parseFloat(h.precipMM);
-            const lab = intensity(mm, pct);
-            const icon = pct < 20 ? '' : (snow > rain ? '❄' : '💧'); // ❄ or 💧
-            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(h.time)}</div><div class="rh-pct">${icon} ${pct}%</div>${lab ? `<div class="rh-intensity">${lab}</div>` : ''}</div>`;
+          hourlyIdxs.forEach(o => {
+            const pct = Math.round(data.hourly.precipitation_probability[o.i] || 0);
+            const inch = data.hourly.precipitation[o.i] || 0;
+            const code = data.hourly.weather_code[o.i];
+            const lab = intensity(inch, pct);
+            const icon = pct < 20 ? '' : (isSnowCode(code) ? '❄' : '💧');
+            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(o.h)}</div><div class="rh-pct">${icon} ${pct}%</div>${lab ? `<div class="rh-intensity">${lab}</div>` : ''}</div>`;
           });
           rainStripHTML += '</div></div>';
         }
 
-        // Future days only (skip today)
+        // Future days (skip today)
         let fHTML = '<div class="wx-forecast-row">';
-        days.slice(1).forEach(day => {
-          const date = new Date(day.date + 'T12:00:00');
+        for (let i = 1; i < data.daily.time.length; i++) {
+          const date = new Date(data.daily.time[i] + 'T12:00:00');
           const name = dayNames[date.getDay()];
-          const dd = day.hourly[4].weatherDesc[0].value;
-          const mr = Math.max(...day.hourly.map(h => parseInt(h.chanceofrain)));
-          fHTML += `<div class="wx-fday"><div class="fname">${name}</div><div class="ficon">${weatherIcon(dd)}</div><div class="ftemps"><span class="fhi">${day.maxtempF}\u00B0</span> ${day.mintempF}\u00B0</div><div class="frain ${mr===0?'none':''}">${mr>0?mr+'%':'dry'}</div></div>`;
-        });
+          const dd = wmoDesc(data.daily.weather_code[i]);
+          const mr = Math.round(data.daily.precipitation_probability_max[i] || 0);
+          fHTML += `<div class="wx-fday"><div class="fname">${name}</div><div class="ficon">${weatherIcon(dd)}</div><div class="ftemps"><span class="fhi">${Math.round(data.daily.temperature_2m_max[i])}°</span> ${Math.round(data.daily.temperature_2m_min[i])}°</div><div class="frain ${mr===0?'none':''}">${mr>0?mr+'%':'dry'}</div></div>`;
+        }
         fHTML += '</div>';
 
+        const locLabel = geo.region ? `${geo.name}, ${geo.region}` : geo.name;
         document.getElementById('weather-content').innerHTML = `
-          <div class="wx-location">${loc.areaName[0].value}, ${loc.region[0].value}</div>
+          <div class="wx-location">${locLabel}</div>
           <div class="wx-top-row">
             <div class="wx-now">
               <div class="wx-col-label">Now</div>
               <div class="wx-big-icon">${weatherIcon(desc)}</div>
-              <div class="wx-big-temp">${cur.temp_F}<span class="deg">\u00B0</span></div>
+              <div class="wx-big-temp">${Math.round(curr.temperature_2m)}<span class="deg">°</span></div>
               <div class="wx-cond-text">${desc}</div>
             </div>
             <div class="wx-today-forecast">
               <div class="wx-col-label">Today</div>
               <div class="wx-big-icon">${weatherIcon(todayDesc)}</div>
-              <div class="wx-hilo"><span class="hi">${today.maxtempF}\u00B0</span></div>
+              <div class="wx-hilo"><span class="hi">${todayMax}°</span></div>
               <div class="wx-cond-text">${todayDesc}</div>
               ${todayRain > 0 ? '<div style="font-size:0.7rem;color:#7ca3c7;margin-top:0.15rem;">' + todayRain + '% rain</div>' : ''}
             </div>
           </div>
-          <div class="wx-details"><span>Humidity ${cur.humidity}%</span><span>Wind ${cur.windspeedMiles}mph</span><span>Feels ${cur.FeelsLikeF}\u00B0</span><span>Vis ${cur.visibility}mi</span></div>
+          <div class="wx-details"><span>Humidity ${curr.relative_humidity_2m}%</span><span>Wind ${Math.round(curr.wind_speed_10m)}mph</span><span>Feels ${Math.round(curr.apparent_temperature)}°</span><span>Vis ${Math.round((curr.visibility || 0) / 1609)}mi</span></div>
           ${rainStripHTML}
           ${fHTML}
           <div class="wx-lookup">
             <label>Other city</label>
             <input type="text" id="wx-lookup-input" placeholder="e.g. NYC, Boston, Paris" />
             <button id="wx-lookup-btn">Look up</button>
-            <button class="home-pill" id="wx-home-pill" style="display:${weatherOverride ? 'inline-block' : 'none'};">\u21BA Home</button>
+            <button class="home-pill" id="wx-home-pill" style="display:${weatherOverride ? 'inline-block' : 'none'};">↺ Home</button>
           </div>`;
-        // Wire up the lookup form
+
         const input = document.getElementById('wx-lookup-input');
         const submit = () => {
           const v = input.value.trim();
@@ -883,7 +962,10 @@
           weatherOverride = null;
           loadWeather();
         };
-        document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>\uD83C\uDF05 ${days[0].astronomy[0].sunrise}</span><span>\uD83C\uDF07 ${days[0].astronomy[0].sunset}</span></div>`;
+
+        const sunrise = (data.daily.sunrise[0] || '').slice(11, 16);
+        const sunset  = (data.daily.sunset[0]  || '').slice(11, 16);
+        document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>🌅 ${sunrise}</span><span>🌇 ${sunset}</span></div>`;
       } catch(e) {
         console.error('[weather] loadWeather failed:', e);
         document.getElementById('weather-content').innerHTML =
