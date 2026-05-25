@@ -120,6 +120,32 @@
     .wx-fday .ftemps .fhi { font-weight: 500; color: #3d3529; }
     .wx-fday .frain { font-size: 0.58rem; color: #7ca3c7; margin-top: 0.1rem; }
     .wx-fday .frain.none { color: #4a8c6f; }
+    /* Hourly rain strip (only shown when any hour today has rain) */
+    .wx-rain-strip {
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+    }
+    .wx-rain-strip-label {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #9c8b76; margin-bottom: 0.35rem;
+    }
+    .wx-rain-strip-hours {
+      display: flex; gap: 0.2rem;
+    }
+    .wx-rain-hour {
+      flex: 1; text-align: center; padding: 0.3rem 0.1rem;
+      border-radius: 6px; background: #f5f0e8;
+    }
+    .wx-rain-hour .rh-time {
+      font-size: 0.58rem; color: #9c8b76; font-weight: 600;
+    }
+    .wx-rain-hour .rh-pct {
+      font-size: 0.72rem; color: #2c2418; font-weight: 500; margin-top: 0.1rem;
+    }
+    .wx-rain-hour.dry  { background: #f5f0e8; }
+    .wx-rain-hour.lite { background: #d9e6f1; }
+    .wx-rain-hour.med  { background: #a8c8e1; color: #1a2f47; }
+    .wx-rain-hour.heavy{ background: #6b94c2; color: #fff; }
+    .wx-rain-hour.heavy .rh-time { color: rgba(255,255,255,0.85); }
 
     /* Mini Calendar */
     .mini-cal { width: 100%; }
@@ -727,6 +753,33 @@
         const todayDesc = today.hourly[4].weatherDesc[0].value;
         const todayRain = Math.max(...today.hourly.map(h => parseInt(h.chanceofrain)));
 
+        // Hourly rain strip for today — only render hours from "now" onward
+        // wttr.in's hourly[] is 8 entries per day at 0,300,600,900,1200,1500,1800,2100
+        const nowH = new Date().getHours();
+        const upcoming = today.hourly.filter(h => parseInt(h.time) / 100 >= Math.floor(nowH / 3) * 3);
+        const maxRainSoon = Math.max(0, ...upcoming.map(h => parseInt(h.chanceofrain)));
+        let rainStripHTML = '';
+        if (maxRainSoon >= 20) {
+          const bucket = pct => {
+            if (pct >= 70) return 'heavy';
+            if (pct >= 40) return 'med';
+            if (pct >= 20) return 'lite';
+            return 'dry';
+          };
+          const fmtHour = t => {
+            const h = parseInt(t) / 100;
+            if (h === 0) return '12a';
+            if (h === 12) return '12p';
+            return h < 12 ? `${h}a` : `${h-12}p`;
+          };
+          rainStripHTML = '<div class="wx-rain-strip"><div class="wx-rain-strip-label">Rain hours today</div><div class="wx-rain-strip-hours">';
+          upcoming.forEach(h => {
+            const pct = parseInt(h.chanceofrain);
+            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(h.time)}</div><div class="rh-pct">${pct}%</div></div>`;
+          });
+          rainStripHTML += '</div></div>';
+        }
+
         // Future days only (skip today)
         let fHTML = '<div class="wx-forecast-row">';
         days.slice(1).forEach(day => {
@@ -756,6 +809,7 @@
             </div>
           </div>
           <div class="wx-details"><span>Humidity ${cur.humidity}%</span><span>Wind ${cur.windspeedMiles}mph</span><span>Feels ${cur.FeelsLikeF}\u00B0</span><span>Vis ${cur.visibility}mi</span></div>
+          ${rainStripHTML}
           ${fHTML}`;
         document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>\uD83C\uDF05 ${days[0].astronomy[0].sunrise}</span><span>\uD83C\uDF07 ${days[0].astronomy[0].sunset}</span></div>`;
       } catch(e) { document.getElementById('weather-content').innerHTML = '<span style="color:#b8a48e">Unavailable</span>'; }
