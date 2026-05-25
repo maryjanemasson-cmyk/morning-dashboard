@@ -461,8 +461,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "chrislovesjulia",
+      "subject": "Our CLJ-approved Memorial Day picks"
+    },
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "ACTION NEEDED: Please eSign your document"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Enter for a chance to win a $500 Lowe\u2019s e-gift card"
@@ -494,14 +502,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Spotify",
       "subject": "Updates to Our Privacy Policy"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 15, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 13, 2026 at 10:00 AM"
     }
   ],
   "items": [

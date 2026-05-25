@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-24T19:18:21",
+    "captured_at": "2026-05-24T21:00:18",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -48488,7 +48488,20 @@
       "dinner": "-Or0BDv7UBXo2p36NCyz"
     }
   },
-  "mealGroceries": null,
+  "mealGroceries": [
+    {
+      "done": false,
+      "text": "600g chicken thigh fillets"
+    },
+    {
+      "done": false,
+      "text": "250ml double cream"
+    },
+    {
+      "done": false,
+      "text": "1 inch ginger, grated"
+    }
+  ],
   "groceries": null,
   "weekendPlan": {
     "2026-05-09": [
@@ -49487,6 +49500,11 @@
           {
             "cal": 160,
             "name": "Licorice, 2 long pieces",
+            "protein": 0
+          },
+          {
+            "cal": 175,
+            "name": "Margarita",
             "protein": 0
           }
         ],
