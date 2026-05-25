@@ -483,11 +483,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "no-reply",
-      "subject": "Did your recent Amazon order meet your expectations? Review it on Amazon"
+      "sender": "Rhone",
+      "subject": "See the summer catalog"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 25 May 2026"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "this cookie will land in your Top 5"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -512,18 +524,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
-    },
-    {
-      "sender": "Spotify",
-      "subject": "Updates to Our Privacy Policy"
-    },
-    {
-      "sender": "Instacart",
-      "subject": "Your Asian Food Market order is confirmed for May 24"
     }
   ],
   "items": [
