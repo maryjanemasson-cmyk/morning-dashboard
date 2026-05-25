@@ -824,11 +824,30 @@
     }
 
     let _zoomFile = null; // track original filename for crop tool
+
+    // Resolve an item's best image source. Handles three cases:
+    //   - "s10_003.png" → wardrobeCrops/s10_003_png (if override exists) or wardrobe-thumbs/…
+    //   - "C010" (custom) → wardrobeCrops/C010_png override, or items[].._customImage
+    //   - "data:image/png;..." → passthrough
+    function resolveItemSrc(file) {
+      if (!file) return '';
+      if (file.startsWith('data:')) return file;
+      const fileKey = file.replace(/\./g, '_');
+      // Try crop overrides with both the raw key and a "_png" suffix (used by
+      // custom items whose file is just the id with no extension).
+      if (_savedCrops && _savedCrops[fileKey]) return _savedCrops[fileKey];
+      if (_savedCrops && _savedCrops[fileKey + '_png']) return _savedCrops[fileKey + '_png'];
+      // Custom items: look up _customImage from items[] when file has no dot
+      if (!file.includes('.')) {
+        const it = items.find(x => x && (x.id === file || x.file === file));
+        if (it && it._customImage) return it._customImage;
+      }
+      return IMG_PATH + file;
+    }
+
     function zoomImage(file) {
       _zoomFile = file;
-      const fileKey = file.replace(/\./g, '_');
-      const cropSrc = _savedCrops[fileKey];
-      document.getElementById('zoom-img').src = cropSrc || (file.startsWith('data:') ? file : IMG_PATH + file);
+      document.getElementById('zoom-img').src = resolveItemSrc(file);
       document.getElementById('zoom-modal').classList.add('open');
     }
 
@@ -1693,8 +1712,9 @@
 
       // Prefer the existing wardrobeCrops override (e.g. a white-background
       // version) as the crop source, so cropping doesn't undo the override.
-      const fileKey = _wcropFile.replace(/\./g, '_');
-      const origSrc = (_savedCrops && _savedCrops[fileKey]) || (IMG_PATH + _wcropFile);
+      // resolveItemSrc handles custom items (whose file is the bare id, no
+      // extension, and whose image lives in wardrobeCustomItems instead of disk).
+      const origSrc = resolveItemSrc(_wcropFile);
 
       const imgEl = new window.Image();
       imgEl.crossOrigin = 'anonymous';
