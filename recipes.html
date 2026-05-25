@@ -846,9 +846,14 @@
       const ingredients = [];
       const instructions = [];
 
+      // Metadata-style lines like "Serves: 4" / "Prep: 5 min" — already pulled
+      // out separately for f-servings/f-prep/f-cook; skip from ing/ins.
+      const isMeta = s => /^(serves?|servings?|yields?|makes|prep|cook|total)\s*(time)?\s*[:\-]/i.test(s);
+
       for (let i = titleIdx + 1; i < lines.length; i++) {
         const line = lines[i];
         if (noiseRe.test(line)) continue;
+        if (isMeta(line)) continue;
         if (isIngHeader(line) && !isInsHeader(line)) { mode = 'ing'; continue; }
         if (isInsHeader(line)) { mode = 'ins'; continue; }
 
@@ -856,9 +861,11 @@
         if (!stripped) continue;
 
         // Heuristic: in "scan" mode, lines with measurements go to ingredients,
-        // sentences starting with imperative verbs go to instructions.
+        // sentences starting with imperative verbs go to instructions. The verb
+        // must be followed by a space + letter (so "Cook: 15 min" or "Serves: 4"
+        // are NOT mistaken for imperative — those have `:` after the verb).
         const isMeasure = measure.test(stripped);
-        const startsImperative = /^(preheat|combine|mix|whisk|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest)/i.test(stripped);
+        const startsImperative = /^(preheat|combine|mix|whisk|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest)\s+[a-z]/i.test(stripped);
 
         if (mode === 'ing') ingredients.push(stripped);
         else if (mode === 'ins') instructions.push(stripped);
