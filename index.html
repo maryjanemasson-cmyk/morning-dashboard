@@ -746,7 +746,10 @@
       try {
         const tripLoc = currentLocation();
         const queryLoc = tripLoc || WEATHER_HOME;
-        const url = `https://wttr.in/${encodeURIComponent(queryLoc)}?format=j1`;
+        // Cache-buster every 5 min so a page reload (or the Refresh button)
+        // can actually pull fresh weather, not a stale browser-cached response.
+        const cb = Math.floor(Date.now() / 300000);
+        const url = `https://wttr.in/${encodeURIComponent(queryLoc)}?format=j1&_=${cb}`;
         const res = await fetchWithTimeout(url, 6000);
         const data = await res.json();
         const cur = data.current_condition[0];
