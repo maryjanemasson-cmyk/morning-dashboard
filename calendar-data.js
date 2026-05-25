@@ -483,8 +483,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "BOSS",
+      "subject": "Up to 30% off Father's Day Gifts"
+    },
+    {
+      "sender": "noreply@mytix.njtransit.com",
+      "subject": "NJ TRANSIT - Receipt"
+    },
     {
       "sender": "Rhone",
       "subject": "See the summer catalog"
@@ -516,14 +524,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Thumbtack",
       "subject": "Give quick, private feedback on your Thumbtack pro"
-    },
-    {
-      "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
-      "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
     }
   ],
   "items": [
