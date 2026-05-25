@@ -219,7 +219,7 @@
         <div id="cat-filters"></div>
         <span class="item-count" id="cat-count"></span>
         <button id="show-hidden-toggle" onclick="toggleShowHidden()" style="padding:0.35rem 0.7rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#9c8b76;font-size:0.72rem;cursor:pointer;font-family:inherit;white-space:nowrap;display:none;">Show hidden</button>
-        <button onclick="document.getElementById('add-item-modal').classList.add('open')" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
+        <button onclick="document.getElementById('add-item-modal').classList.add('open'); refreshSubcategoryOptions();" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
       </div>
       <div id="cat-grid" class="cat-grid"></div>
     </div>
@@ -319,7 +319,10 @@
         </div>
         <div style="flex:1;">
           <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Subcategory</label>
-          <input type="text" id="add-subcategory" placeholder="e.g. Heels, Blazers..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+          <select id="add-subcategory-select" style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;background:#fff;">
+            <option value="">— pick category first —</option>
+          </select>
+          <input type="text" id="add-subcategory-custom" placeholder="New subcategory name..." style="display:none;width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;margin-top:0.3rem;" />
         </div>
       </div>
 
@@ -1244,6 +1247,40 @@
     // ── Add New Item ──
     let _urlImageData = null; // stores fetched URL image as data URL
 
+    // Repopulate the subcategory <select> with existing subcategories for the
+    // chosen category, so picking "Flats" merges with other flats instead of
+    // creating a near-duplicate via typo or capitalization.
+    function refreshSubcategoryOptions() {
+      const cat = document.getElementById('add-category').value;
+      const sel = document.getElementById('add-subcategory-select');
+      const custom = document.getElementById('add-subcategory-custom');
+      // Collect unique subcategories that already exist for this category
+      const seen = new Map(); // lowercase → original casing (preserve user's preferred form)
+      for (const it of items) {
+        if (it && it.category === cat && it.subcategory) {
+          const key = it.subcategory.toLowerCase();
+          if (!seen.has(key)) seen.set(key, it.subcategory);
+        }
+      }
+      const sorted = Array.from(seen.values()).sort((a, b) => a.localeCompare(b));
+      sel.innerHTML = '<option value="">— select —</option>'
+        + sorted.map(s => `<option value="${s}">${s}</option>`).join('')
+        + '<option value="__new__">+ New subcategory…</option>';
+      custom.style.display = 'none';
+      custom.value = '';
+    }
+    // Toggle the custom text input when "+ New subcategory…" is picked
+    document.addEventListener('DOMContentLoaded', () => {
+      const sel = document.getElementById('add-subcategory-select');
+      const custom = document.getElementById('add-subcategory-custom');
+      const cat = document.getElementById('add-category');
+      if (sel) sel.addEventListener('change', () => {
+        if (sel.value === '__new__') { custom.style.display = ''; custom.focus(); }
+        else custom.style.display = 'none';
+      });
+      if (cat) cat.addEventListener('change', refreshSubcategoryOptions);
+    });
+
     function switchPhotoTab(tab) {
       const fileBtn = document.getElementById('photo-tab-file');
       const urlBtn = document.getElementById('photo-tab-url');
@@ -1443,7 +1480,15 @@
     function saveNewItem() {
       const fileInput = document.getElementById('add-photo');
       const category = document.getElementById('add-category').value;
-      const subcategory = document.getElementById('add-subcategory').value.trim() || category;
+      // Subcategory: pick from existing list, or use "+ New" custom input.
+      let subcategory;
+      const subSel = document.getElementById('add-subcategory-select').value;
+      if (subSel === '__new__') {
+        subcategory = document.getElementById('add-subcategory-custom').value.trim();
+      } else {
+        subcategory = subSel.trim();
+      }
+      if (!subcategory) subcategory = category;
       const brand = document.getElementById('add-brand').value.trim();
       const color = document.getElementById('add-color').value.trim();
 
@@ -1501,7 +1546,11 @@
           }
         }
         if (bestIdx === -1) bestIdx = items.length;
-        items.splice(bestIdx, 0, newItem);
+        // Idempotent: if the Firebase listener already added this id (it can
+        // fire synchronously from set() on a warm cache), skip the splice.
+        if (!items.some(it => it && it.id === id)) {
+          items.splice(bestIdx, 0, newItem);
+        }
 
         // Save the new order to Firebase for the category view only.
         // We intentionally don't write wardrobeOrder/all here: when a filter
@@ -1522,7 +1571,9 @@
         document.getElementById('add-photo-preview').innerHTML = '';
         document.getElementById('add-photo-url').value = '';
         document.getElementById('url-status').textContent = '';
-        document.getElementById('add-subcategory').value = '';
+        document.getElementById('add-subcategory-select').value = '';
+        document.getElementById('add-subcategory-custom').value = '';
+        document.getElementById('add-subcategory-custom').style.display = 'none';
         document.getElementById('add-brand').value = '';
         document.getElementById('add-color').value = '';
         _urlImageData = null;
