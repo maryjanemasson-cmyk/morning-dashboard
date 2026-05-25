@@ -295,6 +295,7 @@
         </div>
         <div id="photo-file-section">
           <input type="file" id="add-photo" accept="image/*" style="font-size:0.82rem;font-family:inherit;" />
+          <div style="font-size:0.68rem;color:#9c8b76;margin-top:0.35rem;">Tip: copy a screenshot or image (Cmd+C / Ctrl+C) and paste here with Cmd+V / Ctrl+V.</div>
         </div>
         <div id="photo-url-section" style="display:none;">
           <div style="display:flex;gap:0.4rem;">
@@ -1414,6 +1415,29 @@
           `<img src="${ev.target.result}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
       };
       reader.readAsDataURL(file);
+    });
+
+    // Clipboard paste — when the Add Item modal is open, intercept any pasted
+    // image and route it through the same path as a URL-fetched image.
+    document.addEventListener('paste', async function(e) {
+      const modal = document.getElementById('add-item-modal');
+      if (!modal || !modal.classList.contains('open')) return;
+      const items = (e.clipboardData && e.clipboardData.items) || [];
+      for (const it of items) {
+        if (it.type && it.type.startsWith('image/')) {
+          e.preventDefault();
+          const blob = it.getAsFile();
+          if (!blob) continue;
+          const dataUrl = await blobToDataUrl(blob);
+          _urlImageData = dataUrl;
+          // Clear the file input so saveNewItem prefers the pasted image
+          document.getElementById('add-photo').value = '';
+          document.getElementById('add-photo-preview').innerHTML =
+            `<img src="${dataUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`
+          + `<div style="font-size:0.68rem;color:#4a8c6f;margin-top:0.25rem;">✓ Image pasted from clipboard</div>`;
+          return;
+        }
+      }
     });
 
     function saveNewItem() {
