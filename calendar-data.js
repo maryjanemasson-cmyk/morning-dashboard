@@ -483,39 +483,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Premium White Napkins, 1/8...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"200 Count Napkins 2 Ply...\""
-    },
-    {
-      "sender": "Porter Stansberry \u2014 Robert Jacobs, Finance Insider",
-      "subject": "The truth about America\u2019s 250th anniversary"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - All Levels - 45 minutes on May 25, 2026"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Secret File\u2019s Release \u2014 Robert Jacobs, Finance Insider",
-      "subject": "Pelosi\u2019s Final Humiliation Is Happening NOW"
-    },
-    {
-      "sender": "Healthy Fruit Myth \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "The \u201cHealthy\u201d Fruit That May Drain Your Energy"
-    },
-    {
-      "sender": "Heart Attack Symptoms \u2014 Emily Harrison, MD | FIP Health",
-      "subject": "The 3 symptoms that mean you\u2019re hours away from a heart attack"
+      "sender": "no-reply",
+      "subject": "Did your recent Amazon order meet your expectations? Review it on Amazon"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -524,6 +496,34 @@ window.EMAIL_DATA = {
     {
       "sender": "New Jersey Irrigation Services",
       "subject": "Hey Mary Jane And Christian, How was your experience with New Jersey Irrigation Services?"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"200 Count Napkins 2 Ply...\""
+    },
+    {
+      "sender": "Thumbtack",
+      "subject": "Give quick, private feedback on your Thumbtack pro"
+    },
+    {
+      "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
+      "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
+    },
+    {
+      "sender": "Spotify",
+      "subject": "Updates to Our Privacy Policy"
+    },
+    {
+      "sender": "Instacart",
+      "subject": "Your Asian Food Market order is confirmed for May 24"
     }
   ],
   "items": [
@@ -651,20 +651,6 @@ window.EMAIL_DATA = {
       "sender": "FORM BY TWO"
     },
     {
-      "type": "delivery",
-      "title": "Shipped: \"Premium White Napkins, 1/8...\"",
-      "date": "2026-05-25",
-      "id": "19e5e5b50bbf81a0",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"200 Count Napkins 2 Ply...\"",
-      "date": "2026-05-25",
-      "id": "19e5d7559961aa28",
-      "sender": "Amazon.com"
-    },
-    {
       "type": "class",
       "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
       "name": "CP Reformer Flow 2 (50 Mins) class",
@@ -706,6 +692,17 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "id": "19e5b8d358ae9314",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-15",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19e5b8dda8397e10",
       "sender": "FORM BY TWO"
     }
   ]
