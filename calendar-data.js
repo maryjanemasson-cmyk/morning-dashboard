@@ -483,8 +483,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (a8e1f89)"
+    },
     {
       "sender": "BOSS",
       "subject": "Up to 30% off Father's Day Gifts"
@@ -520,10 +524,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"200 Count Napkins 2 Ply...\""
-    },
-    {
-      "sender": "Thumbtack",
-      "subject": "Give quick, private feedback on your Thumbtack pro"
     }
   ],
   "items": [
