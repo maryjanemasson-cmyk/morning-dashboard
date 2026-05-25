@@ -120,6 +120,31 @@
     .wx-fday .ftemps .fhi { font-weight: 500; color: #3d3529; }
     .wx-fday .frain { font-size: 0.58rem; color: #7ca3c7; margin-top: 0.1rem; }
     .wx-fday .frain.none { color: #4a8c6f; }
+    /* "Look up another city" mini form */
+    .wx-lookup {
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+      display: flex; gap: 0.3rem; align-items: center; font-size: 0.7rem;
+    }
+    .wx-lookup label {
+      color: #9c8b76; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; font-size: 0.58rem;
+    }
+    .wx-lookup input {
+      flex: 1; padding: 0.3rem 0.5rem; border: 1px solid #ebe5dc;
+      border-radius: 6px; font-family: inherit; font-size: 0.78rem;
+      color: #2c2418; background: #fff;
+    }
+    .wx-lookup input:focus { outline: none; border-color: #c9b99a; }
+    .wx-lookup button {
+      padding: 0.3rem 0.7rem; border: none; border-radius: 6px;
+      background: #013E7D; color: #fff; font-family: inherit;
+      font-size: 0.7rem; cursor: pointer;
+    }
+    .wx-lookup .home-pill {
+      padding: 0.2rem 0.5rem; border: 1px solid #c9b99a; border-radius: 999px;
+      background: #faf5ed; color: #6b5d4d; font-size: 0.65rem; cursor: pointer;
+      font-family: inherit; display: none;
+    }
     /* Hourly rain strip (only shown when any hour today has rain) */
     .wx-rain-strip {
       margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
@@ -742,10 +767,14 @@
     // auto-detection (which guesses based on the CDN node and often picks NYC).
     const WEATHER_HOME = 'Princeton, NJ';
 
+    // When set, overrides the auto-detected location for one-off lookups
+    // (e.g. "what's the weather in NYC today?"). Cleared by the "Home" pill.
+    let weatherOverride = null;
+
     async function loadWeather() {
       try {
         const tripLoc = currentLocation();
-        const queryLoc = tripLoc || WEATHER_HOME;
+        const queryLoc = weatherOverride || tripLoc || WEATHER_HOME;
         // Cache-buster every 5 min so a page reload (or the Refresh button)
         // can actually pull fresh weather, not a stale browser-cached response.
         const cb = Math.floor(Date.now() / 300000);
@@ -833,7 +862,27 @@
           </div>
           <div class="wx-details"><span>Humidity ${cur.humidity}%</span><span>Wind ${cur.windspeedMiles}mph</span><span>Feels ${cur.FeelsLikeF}\u00B0</span><span>Vis ${cur.visibility}mi</span></div>
           ${rainStripHTML}
-          ${fHTML}`;
+          ${fHTML}
+          <div class="wx-lookup">
+            <label>Other city</label>
+            <input type="text" id="wx-lookup-input" placeholder="e.g. NYC, Boston, Paris" />
+            <button id="wx-lookup-btn">Look up</button>
+            <button class="home-pill" id="wx-home-pill" style="display:${weatherOverride ? 'inline-block' : 'none'};">\u21BA Home</button>
+          </div>`;
+        // Wire up the lookup form
+        const input = document.getElementById('wx-lookup-input');
+        const submit = () => {
+          const v = input.value.trim();
+          if (!v) return;
+          weatherOverride = v;
+          loadWeather();
+        };
+        document.getElementById('wx-lookup-btn').onclick = submit;
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+        document.getElementById('wx-home-pill').onclick = () => {
+          weatherOverride = null;
+          loadWeather();
+        };
         document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>\uD83C\uDF05 ${days[0].astronomy[0].sunrise}</span><span>\uD83C\uDF07 ${days[0].astronomy[0].sunset}</span></div>`;
       } catch(e) { document.getElementById('weather-content').innerHTML = '<span style="color:#b8a48e">Unavailable</span>'; }
     }
