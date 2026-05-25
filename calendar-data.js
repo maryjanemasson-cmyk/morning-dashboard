@@ -483,15 +483,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
     {
       "sender": "AT&T Account Management",
       "subject": "AT&T payment processed for account ending in 5982"
-    },
-    {
-      "sender": "US Open",
-      "subject": "REMINDER: Amex Presale Tickets\u00ae\ufe0f Are On Sale Tomorrow"
     },
     {
       "sender": "GOAT",
@@ -524,6 +520,10 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson@icloud.com",
       "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
+    },
+    {
+      "sender": "Spotify",
+      "subject": "Updates to Our Privacy Policy"
     }
   ],
   "items": [
