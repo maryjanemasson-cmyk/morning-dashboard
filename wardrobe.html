@@ -1269,8 +1269,10 @@
       custom.style.display = 'none';
       custom.value = '';
     }
-    // Toggle the custom text input when "+ New subcategory…" is picked
-    document.addEventListener('DOMContentLoaded', () => {
+    // Toggle the custom text input when "+ New subcategory…" is picked.
+    // This runs at script-load time; the script tag is at the bottom of <body>
+    // so the elements already exist in the DOM.
+    {
       const sel = document.getElementById('add-subcategory-select');
       const custom = document.getElementById('add-subcategory-custom');
       const cat = document.getElementById('add-category');
@@ -1279,7 +1281,7 @@
         else custom.style.display = 'none';
       });
       if (cat) cat.addEventListener('change', refreshSubcategoryOptions);
-    });
+    }
 
     function switchPhotoTab(tab) {
       const fileBtn = document.getElementById('photo-tab-file');
