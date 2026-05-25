@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-25T11:00:26",
+    "captured_at": "2026-05-25T13:00:24",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -46090,6 +46090,21 @@
       "name": "Weekend casual",
       "occasion": "Casual",
       "season": "Summer"
+    },
+    "2218": {
+      "layout": [
+        {
+          "_origFile": "s35_002.png",
+          "file": "s35_002.png",
+          "height": 36.3,
+          "left": 12.8,
+          "top": 5.4,
+          "width": 25.1
+        }
+      ],
+      "name": "Spring travel",
+      "occasion": "Casual",
+      "season": "Spring"
     }
   },
   "wardrobeCustomItems": {
@@ -47947,6 +47962,31 @@
       "season": "Spring",
       "updated": "2026-05-03T18:41:23.918Z"
     },
+    "2218": {
+      "items": [
+        {
+          "file": "s35_002.png",
+          "h": 150,
+          "w": 120,
+          "x": 61,
+          "y": 22.46875
+        }
+      ],
+      "layout": [
+        {
+          "_origFile": "s35_002.png",
+          "file": "s35_002.png",
+          "height": 36.3,
+          "left": 12.8,
+          "top": 5.4,
+          "width": 25.1
+        }
+      ],
+      "name": "Spring travel",
+      "occasion": "Casual",
+      "season": "Spring",
+      "updated": "2026-05-25T15:41:35.909Z"
+    },
     "-Ore-iBGa9xmlHwDLklL": {
       "items": [
         {
@@ -48518,6 +48558,9 @@
     },
     "2026-05-23": {
       "dinner": "-Or0BDv7UBXo2p36NCyz"
+    },
+    "2026-05-24": {
+      "breakfast": "-Or0FPrK0TI-GGzjAIlL"
     }
   },
   "mealGroceries": [
@@ -48532,6 +48575,14 @@
     {
       "done": false,
       "text": "1 inch ginger, grated"
+    },
+    {
+      "done": false,
+      "text": "2  large eggs, (warmed under warm running water)"
+    },
+    {
+      "done": false,
+      "text": "1 tbsp (6g) cocoa powder (I prefer this Dutch cocoa or this one)"
     }
   ],
   "groceries": null,
@@ -48794,11 +48845,102 @@
         "text": "Add doorknobs to basement"
       }
     ],
+    "2026-05-30": [
+      {
+        "done": false,
+        "source": "gmail",
+        "text": "Amazon returns (16 items to mail)"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Meal prep"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "electrician"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "NOLS application"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      }
+    ],
+    "2026-05-31": [
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      }
+    ],
     "_seeded": {
       "2026-05-16": true,
       "2026-05-17": true,
       "2026-05-23": true,
-      "2026-05-24": true
+      "2026-05-24": true,
+      "2026-05-30": true,
+      "2026-05-31": true
     },
     "_suppress": {
       "2026-05-23": [
@@ -48907,6 +49049,15 @@
       "score": 65,
       "title": "Legends",
       "where": "Netflix"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Crime / Mystery",
+      "id": "custom_1779722860284",
+      "rating": "8.4/10",
+      "score": 84,
+      "title": "Broadchurch",
+      "where": "ITV1"
     }
   ],
   "watchlist": {
@@ -49541,6 +49692,15 @@
           }
         ],
         "weight": 153.4
+      },
+      "2026-05-25": {
+        "foods": [
+          {
+            "cal": 350,
+            "name": "Protein oats",
+            "protein": 25
+          }
+        ]
       }
     },
     "profile": {

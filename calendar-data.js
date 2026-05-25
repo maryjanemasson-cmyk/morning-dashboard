@@ -483,19 +483,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "It's Memorial Day, and the deals are still running\ud83d\ude0e"
+      "sender": "AT&T Account Management",
+      "subject": "AT&T payment processed for account ending in 5982"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "20% Off Ends Tonight"
+      "sender": "US Open",
+      "subject": "REMINDER: Amex Presale Tickets\u00ae\ufe0f Are On Sale Tomorrow"
     },
     {
-      "sender": "admission@peddie.org via SurveyMonkey",
-      "subject": "Parents of Accepted Students Survey 2026"
+      "sender": "GOAT",
+      "subject": "TOP RELEASE ROUNDUP"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
