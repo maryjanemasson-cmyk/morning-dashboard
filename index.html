@@ -884,7 +884,13 @@
           loadWeather();
         };
         document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>\uD83C\uDF05 ${days[0].astronomy[0].sunrise}</span><span>\uD83C\uDF07 ${days[0].astronomy[0].sunset}</span></div>`;
-      } catch(e) { document.getElementById('weather-content').innerHTML = '<span style="color:#b8a48e">Unavailable</span>'; }
+      } catch(e) {
+        console.error('[weather] loadWeather failed:', e);
+        document.getElementById('weather-content').innerHTML =
+          `<span style="color:#b8a48e">Weather unavailable</span>
+           <div style="font-size:0.65rem;color:#c2553a;margin-top:0.3rem;">${(e && e.message) || e}</div>
+           <button onclick="loadWeather()" style="margin-top:0.4rem;padding:0.25rem 0.6rem;border:1px solid #ebe5dc;border-radius:6px;background:#fff;font-family:inherit;font-size:0.7rem;cursor:pointer;">Retry</button>`;
+      }
     }
 
     // ── Mini Calendar (interactive) ──
