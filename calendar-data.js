@@ -483,11 +483,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "AT&T Account Management",
-      "subject": "AT&T payment processed for account ending in 5982"
+      "sender": "MileagePlus Program",
+      "subject": "Your London trip: Earn extra miles with Vrbo"
+    },
+    {
+      "sender": "Amex Offers from American Express",
+      "subject": "Christian, your new Amex Offers are inside!"
     },
     {
       "sender": "GOAT",
@@ -512,18 +516,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
       "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
-    },
-    {
-      "sender": "Spotify",
-      "subject": "Updates to Our Privacy Policy"
     }
   ],
   "items": [
