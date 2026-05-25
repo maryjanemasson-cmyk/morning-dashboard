@@ -483,8 +483,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "It's Memorial Day, and the deals are still running\ud83d\ude0e"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "20% Off Ends Tonight"
+    },
+    {
+      "sender": "admission@peddie.org via SurveyMonkey",
+      "subject": "Parents of Accepted Students Survey 2026"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Enter for a chance to win a $500 Lowe\u2019s e-gift card"
@@ -512,18 +524,6 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson@icloud.com",
       "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
-    },
-    {
-      "sender": "Spotify",
-      "subject": "Updates to Our Privacy Policy"
-    },
-    {
-      "sender": "Instacart",
-      "subject": "Your Asian Food Market order is confirmed for May 24"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Get excited: Shop Week starts May 26 \ud83d\udc9c"
     }
   ],
   "items": [
