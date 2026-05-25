@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Orange 60 Min 2G",
-    "location": "Orangetheory Fitness - Princeton, NJ\n640 Nassau Park Blvd\nPrinceton NJ 08540",
-    "description": "",
-    "startTime": "2026-05-24T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-24T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Furniture cleaning",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-24T16:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-24T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "\ud83c\udfeb PRISMS \u2014 Memorial Day (No Classes)",
     "location": "",
     "description": "Memorial Day \u2014 No Classes",
@@ -262,6 +240,50 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "\u2708\ufe0f GLT Summit Europe \u2014 Lisbon",
+    "location": "Lisbon, Portugal",
+    "description": "GLT Summit Europe. UA flights 64/65, confirmation HPJ362.",
+    "startTime": "",
+    "startDate": "2026-06-07",
+    "endTime": "",
+    "endDate": "2026-06-13",
+    "calendar": "Personal",
+    "colorId": "11"
+  },
+  {
+    "summary": "\u2708\ufe0f GLT Summit Europe \u2014 Lisbon",
+    "location": "Lisbon, Portugal",
+    "description": "GLT Summit Europe. UA flights 64/65, confirmation HPJ362.",
+    "startTime": "",
+    "startDate": "2026-06-07",
+    "endTime": "",
+    "endDate": "2026-06-13",
+    "calendar": "Chris",
+    "colorId": ""
+  },
+  {
+    "summary": "\u2708 UA64 EWR \u2192 LIS",
+    "location": "Newark (EWR) \u2192 Lisbon (LIS)",
+    "description": "United Airlines 64, Terminal C\\nDepart: 8:25 PM EDT from EWR\\nArrive: 8:20 AM WEST at LIS, Terminal 1",
+    "startTime": "2026-06-07T20:25:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-08T08:20:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\u2708\ufe0f UA64 EWR \u2192 LIS",
+    "location": "Newark (EWR)",
+    "description": "Sun, Jun 7\n8:25 PM EDT\n[Flight] EWR to LIS\nUnited Airlines 64, Terminal C, Gate\nMon, Jun 8\n8:20 AM WEST\nArrive Lisbon (LIS)\nTerminal 1, Gate",
+    "startTime": "2026-06-07T20:25:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-08T03:20:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -461,15 +483,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 28,
   "threads": [
     {
-      "sender": "chrislovesjulia",
-      "subject": "Our CLJ-approved Memorial Day picks"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Premium White Napkins, 1/8...\""
     },
     {
-      "sender": "Ameriprise Financial",
-      "subject": "ACTION NEEDED: Please eSign your document"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"200 Count Napkins 2 Ply...\""
+    },
+    {
+      "sender": "Porter Stansberry \u2014 Robert Jacobs, Finance Insider",
+      "subject": "The truth about America\u2019s 250th anniversary"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - All Levels - 45 minutes on May 25, 2026"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Secret File\u2019s Release \u2014 Robert Jacobs, Finance Insider",
+      "subject": "Pelosi\u2019s Final Humiliation Is Happening NOW"
+    },
+    {
+      "sender": "Healthy Fruit Myth \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "The \u201cHealthy\u201d Fruit That May Drain Your Energy"
+    },
+    {
+      "sender": "Heart Attack Symptoms \u2014 Emily Harrison, MD | FIP Health",
+      "subject": "The 3 symptoms that mean you\u2019re hours away from a heart attack"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -478,30 +524,6 @@ window.EMAIL_DATA = {
     {
       "sender": "New Jersey Irrigation Services",
       "subject": "Hey Mary Jane And Christian, How was your experience with New Jersey Irrigation Services?"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"200 Count Napkins 2 Ply...\""
-    },
-    {
-      "sender": "Thumbtack",
-      "subject": "Give quick, private feedback on your Thumbtack pro"
-    },
-    {
-      "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
-      "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
-    },
-    {
-      "sender": "Spotify",
-      "subject": "Updates to Our Privacy Policy"
     }
   ],
   "items": [
@@ -611,39 +633,11 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "school",
-      "title": "1 week Away until 8th Grade Graduation Trip",
-      "date": "2026-05-21",
-      "id": "19e4c3c2bbc55d56",
-      "sender": "Administration Office FASP"
-    },
-    {
       "type": "return",
       "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Cottonelle Ultra Soft...\"",
-      "date": "2026-05-24",
-      "id": "19e5bb47424ece10",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20662\u2069 \"Lavazza Super Crema Whole...\"",
-      "date": "2026-05-24",
-      "id": "19e5a9a874b85a35",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item",
-      "date": "2026-05-24",
-      "id": "19e58810aa83a243",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
@@ -655,6 +649,20 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e30cb4b53233bc",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Premium White Napkins, 1/8...\"",
+      "date": "2026-05-25",
+      "id": "19e5e5b50bbf81a0",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"200 Count Napkins 2 Ply...\"",
+      "date": "2026-05-25",
+      "id": "19e5d7559961aa28",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
@@ -698,17 +706,6 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "id": "19e5b8d358ae9314",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-15",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e5b8dda8397e10",
       "sender": "FORM BY TWO"
     }
   ]
