@@ -141,11 +141,16 @@
     .wx-rain-hour .rh-pct {
       font-size: 0.72rem; color: #2c2418; font-weight: 500; margin-top: 0.1rem;
     }
+    .wx-rain-hour .rh-intensity {
+      font-size: 0.52rem; text-transform: uppercase; letter-spacing: 0.5px;
+      color: #6b5d4d; margin-top: 0.05rem; font-weight: 600;
+    }
     .wx-rain-hour.dry  { background: #f5f0e8; }
     .wx-rain-hour.lite { background: #d9e6f1; }
     .wx-rain-hour.med  { background: #a8c8e1; color: #1a2f47; }
     .wx-rain-hour.heavy{ background: #6b94c2; color: #fff; }
-    .wx-rain-hour.heavy .rh-time { color: rgba(255,255,255,0.85); }
+    .wx-rain-hour.heavy .rh-time,
+    .wx-rain-hour.heavy .rh-intensity { color: rgba(255,255,255,0.85); }
 
     /* Mini Calendar */
     .mini-cal { width: 100%; }
@@ -772,10 +777,21 @@
             if (h === 12) return '12p';
             return h < 12 ? `${h}a` : `${h-12}p`;
           };
+          // Intensity label from precipMM over the 3-hour window
+          // (NWS thresholds: <0.1mm/hr trace, 0.1-2.5 light, 2.5-7.6 mod, >7.6 heavy)
+          const intensity = (mm, pct) => {
+            if (pct < 20) return '';
+            if (mm < 0.3) return 'trace';
+            if (mm < 7.5) return 'light';
+            if (mm < 22)  return 'moderate';
+            return 'heavy';
+          };
           rainStripHTML = '<div class="wx-rain-strip"><div class="wx-rain-strip-label">Rain hours today</div><div class="wx-rain-strip-hours">';
           upcoming.forEach(h => {
             const pct = parseInt(h.chanceofrain);
-            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(h.time)}</div><div class="rh-pct">${pct}%</div></div>`;
+            const mm = parseFloat(h.precipMM);
+            const lab = intensity(mm, pct);
+            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(h.time)}</div><div class="rh-pct">${pct}%</div>${lab ? `<div class="rh-intensity">${lab}</div>` : ''}</div>`;
           });
           rainStripHTML += '</div></div>';
         }
