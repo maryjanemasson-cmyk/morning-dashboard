@@ -271,6 +271,7 @@
       <div id="filter-buttons"></div>
       <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
       <button class="add-btn" onclick="openUrlModal()" style="background:#4a8c6f;">+ Add by URL</button>
+      <button class="add-btn" onclick="openIgModal()" style="background:linear-gradient(45deg,#e1306c,#fd8d32);">+ From Instagram</button>
     </div>
 
     <div id="recipe-grid" class="recipe-grid"></div>
@@ -278,6 +279,32 @@
       <div class="emoji">&#x1F373;</div>
       <p>No recipes yet. Add your first one!</p>
       <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+    </div>
+  </div>
+
+  <!-- Instagram Import Modal -->
+  <div class="modal-overlay" id="ig-modal">
+    <div class="modal" style="max-width:560px;">
+      <button class="modal-close" onclick="closeModal('ig-modal')">&times;</button>
+      <div class="modal-title">Import Recipe from Instagram</div>
+      <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Instagram blocks direct fetching — but if you paste the Reel's caption text, the parser will split it into title / ingredients / steps.</p>
+
+      <div class="form-group">
+        <label class="form-label">Instagram URL (optional, saved as Source)</label>
+        <input class="form-input" id="ig-url-input" placeholder="https://www.instagram.com/reel/..." />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Caption text (paste from Instagram)</label>
+        <textarea class="form-textarea" id="ig-caption-input" placeholder="Paste the full Reel caption here — including ingredients list and instructions..." style="min-height:200px;"></textarea>
+      </div>
+
+      <div id="ig-status" style="font-size:0.8rem;color:#9c8b76;margin-bottom:1rem;display:none;"></div>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeModal('ig-modal')">Cancel</button>
+        <button class="btn-save" onclick="parseIgCaption()" style="background:linear-gradient(45deg,#e1306c,#fd8d32);">Parse Caption</button>
+      </div>
     </div>
   </div>
 
@@ -775,6 +802,88 @@
 
       btn.disabled = false;
       btn.textContent = 'Fetch Recipe';
+    }
+
+    function openIgModal() {
+      document.getElementById('ig-url-input').value = '';
+      document.getElementById('ig-caption-input').value = '';
+      document.getElementById('ig-status').style.display = 'none';
+      document.getElementById('ig-modal').classList.add('open');
+    }
+
+    // Heuristic parser tuned for Instagram Reel captions.
+    function parseIgCaption() {
+      const raw = document.getElementById('ig-caption-input').value.trim();
+      const url = document.getElementById('ig-url-input').value.trim();
+      if (!raw) { alert('Paste the caption first.'); return; }
+
+      // Strip leading "engagement" lines that aren't part of the recipe
+      const noiseRe = /^(save this|comment|tag a friend|follow|follow @|recipe below|recipe in (the )?comments|full recipe|written recipe)/i;
+      // Remove all hashtags (collect them as tags) and trim emoji-only lines.
+      const allHashtags = [...raw.matchAll(/#([A-Za-z0-9_]+)/g)].map(m => m[1]);
+      let text = raw.replace(/#[A-Za-z0-9_]+/g, '').replace(/‍|️/g, '');
+      const lines = text.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+
+      // Detect a section header anywhere on the line
+      const isIngHeader = s => /\b(ingredients?|you'?ll need|what you need|grocery list)\b/i.test(s);
+      const isInsHeader = s => /\b(instructions?|directions?|method|steps?|how to|to make|preparation|recipe)\b/i.test(s) && !/\bsave\b/i.test(s);
+
+      // Strip common bullet characters from the start of an ingredient/step line
+      const stripBullet = s => s.replace(/^[•‣◦⁃∙\-\*▫◾▢○·→☛✍✋✍]+\s*/, '')
+                                .replace(/^\d+[\.\)]\s*/, '')   // "1." or "1)"
+                                .replace(/^[0-9]️?⃣\s*/, '') // 1️⃣
+                                .trim();
+
+      // Find the title: first line that isn't pure emoji/noise, after stripping decorations
+      let titleIdx = 0;
+      while (titleIdx < lines.length && (noiseRe.test(lines[titleIdx]) || /^[\s\p{Emoji}✀-➿]+$/u.test(lines[titleIdx]))) titleIdx++;
+      const titleLine = (lines[titleIdx] || '').replace(/[✀-➿\u{1F300}-\u{1FAFF}\u{2600}-\u{26FF}]/gu, '').trim();
+      const title = titleLine.replace(/^[*_-]+|[*_-]+$/g, '').trim();
+
+      // Walk through remaining lines, assign to ingredients / instructions
+      const measure = /\b(\d+[\d./\s]*)?\s*(cups?|tbsp|tablespoons?|tsp|teaspoons?|oz|ounces?|lb|lbs|pounds?|g|grams?|kg|ml|l|liters?|pinch|dash|cloves?|sticks?|cans?|jars?|bunch|handful)\b/i;
+      let mode = 'scan';
+      const ingredients = [];
+      const instructions = [];
+
+      for (let i = titleIdx + 1; i < lines.length; i++) {
+        const line = lines[i];
+        if (noiseRe.test(line)) continue;
+        if (isIngHeader(line) && !isInsHeader(line)) { mode = 'ing'; continue; }
+        if (isInsHeader(line)) { mode = 'ins'; continue; }
+
+        const stripped = stripBullet(line);
+        if (!stripped) continue;
+
+        // Heuristic: in "scan" mode, lines with measurements go to ingredients,
+        // sentences starting with imperative verbs go to instructions.
+        const isMeasure = measure.test(stripped);
+        const startsImperative = /^(preheat|combine|mix|whisk|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest)/i.test(stripped);
+
+        if (mode === 'ing') ingredients.push(stripped);
+        else if (mode === 'ins') instructions.push(stripped);
+        else if (isMeasure && !startsImperative) { ingredients.push(stripped); mode = 'ing'; }
+        else if (startsImperative) { instructions.push(stripped); mode = 'ins'; }
+        else ingredients.push(stripped);  // default — usually still ingredients in scan mode
+      }
+
+      // Extract servings / prep / cook hints from anywhere in the text
+      const servingsM = raw.match(/(?:serves|servings|makes|yields?)[:\s]+(\d+[\d\-\s]*)/i);
+      const prepM = raw.match(/prep(?:\s*time)?[:\s]+(\d+\s*(?:min|hr|hour|hours|minutes))/i);
+      const cookM = raw.match(/cook(?:\s*time)?[:\s]+(\d+\s*(?:min|hr|hour|hours|minutes))/i);
+
+      // Open the existing edit modal and pre-fill it
+      closeModal('ig-modal');
+      openAddModal();
+      document.getElementById('f-name').value = title;
+      document.getElementById('f-source').value = url;
+      document.getElementById('f-ingredients').value = ingredients.join('\n');
+      document.getElementById('f-instructions').value = instructions
+        .map((s, i) => `${i+1}. ${s}`).join('\n\n');
+      if (servingsM) document.getElementById('f-servings').value = servingsM[1].trim();
+      if (prepM) document.getElementById('f-prep').value = prepM[1].trim();
+      if (cookM) document.getElementById('f-cook').value = cookM[1].trim();
+      if (allHashtags.length) document.getElementById('f-tags').value = allHashtags.slice(0, 8).join(', ');
     }
 
     function parseFromPaste() {
