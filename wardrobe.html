@@ -1499,6 +1499,14 @@
     });
 
     function saveNewItem() {
+      try {
+        _saveNewItemInner();
+      } catch (e) {
+        console.error('[saveNewItem]', e);
+        alert('Could not save: ' + (e && e.message ? e.message : e));
+      }
+    }
+    function _saveNewItemInner() {
       const fileInput = document.getElementById('add-photo');
       const category = document.getElementById('add-category').value;
       // Subcategory: pick from existing list, or use "+ New" custom input.
