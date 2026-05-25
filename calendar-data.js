@@ -483,36 +483,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 11,
   "threads": [
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (a8e1f89)"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Up to 30% off Father's Day Gifts"
-    },
-    {
-      "sender": "noreply@mytix.njtransit.com",
-      "subject": "NJ TRANSIT - Receipt"
-    },
-    {
-      "sender": "Rhone",
-      "subject": "See the summer catalog"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 25 May 2026"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "this cookie will land in your Top 5"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Enter for a chance to win a $500 Lowe\u2019s e-gift card"
@@ -524,6 +496,34 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"200 Count Napkins 2 Ply...\""
+    },
+    {
+      "sender": "Thumbtack",
+      "subject": "Give quick, private feedback on your Thumbtack pro"
+    },
+    {
+      "sender": "Impact Your Money \u2014 Robert Jacobs, Finance Insider",
+      "subject": "The trader who called 2020 and 2022 crashes issues new prediction that will impact your money"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Nongshim Shin Ramyun...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Come to this Orangetheory class with me \ud83e\udd1c\ud83e\udd1b"
+    },
+    {
+      "sender": "Spotify",
+      "subject": "Updates to Our Privacy Policy"
+    },
+    {
+      "sender": "Instacart",
+      "subject": "Your Asian Food Market order is confirmed for May 24"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Get excited: Shop Week starts May 26 \ud83d\udc9c"
     }
   ],
   "items": [

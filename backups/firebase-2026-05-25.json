@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-05-25T08:16:31",
+    "captured_at": "2026-05-25T09:00:24",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -48465,6 +48465,22 @@
       "source": "https://www.halfbakedharvest.com/coconut-curry-salmon/",
       "tags": "",
       "updated": "2026-05-17T15:54:26.615Z"
+    },
+    "-OtU4sqNSGXJ6SLTp31O": {
+      "category": "Dessert",
+      "cook": "9 min",
+      "cuisine": "",
+      "image": "https://scientificallysweet.com/wp-content/uploads/2026/05/IMG_7393-funfetti-cookies-feature.jpg",
+      "ingredients": "¾ cup (170g) unsalted butter, (softened)\n½ cup plus 1 tbsp (115g) granulated sugar\n½ cup (110g) packed light brown sugar\n1 ½ tsp (7ml) pure vanilla extract\n1  large egg, (at room temperature)\n1  large egg yolk, (at room temperature)\n1 tbsp (15ml) whole milk,  (at room temperature)\n2 cups (284g) all-purpose flour\n¾ tsp baking powder\n½ tsp baking soda\n½ tsp salt\n½ cup (80g) rainbow jimmies sprinkles (sprinkle rods)\n3 tbsp (40g) granulated sugar for rolling  ((optional))\n3 tbsp rainbow confetti sprinkles for rolling  ((optional))",
+      "instructions": "1. Make the cookie dough. Combine soft butter with both sugars and vanilla in a large bowl and mix with an electric hand mixer on medium-high speed for 1-2 minutes until pale and fluffy. You can also mix by hand using the creaming method with a wide rubber spatula. Add the egg and mix until well incorporated and smooth, then mix in egg yolk and milk.\n\n2. Combine flour, baking powder, baking soda and salt in a medium bowl and whisk to blend evenly. Add these dry ingredients to the butter/sugar mixture and fold it in until mostly combined with a few streaks a flour remaining. Add sprinkles and fold them in until evenly combined. Cover the bowl and refrigerate for 1 hour.\n\n3. Preheat your oven to 350°F. Line two large cookie sheets with parchment paper.\n\n4. Bake the cookies. Use a 1.35-oz cookie scoop to portion dough and roll into smooth balls, then roll the dough balls in granulated sugar so they are evenly coated. Sometimes I skip this step and press the top of the dough balls in confetti sprinkles instead.\n\n5. Place the dough balls onto prepared baking sheets spacing them at least 3 inches apart with room to spread. Bake for 9-12 minutes until puffed and the edges are just lightly golden and the bottoms are lightly browned. The centers will puff up and still feel slightly soft in the middle. They will deflate slightly as they cool. Transfer baking trays to a wire rack to cool for 2 minutes then transfer cookies individually to a wire rack to cool completely.",
+      "name": "Soft &amp; Chewy Sprinkle Sugar Cookies",
+      "notes": "",
+      "prep": "20 min",
+      "rating": 0,
+      "servings": "16",
+      "source": "https://scientificallysweet.com/soft-sprinkle-sugar-cookies/",
+      "tags": "",
+      "updated": "2026-05-25T12:23:59.564Z"
     }
   },
   "mealPlan": {
