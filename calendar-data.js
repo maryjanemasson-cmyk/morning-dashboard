@@ -450,8 +450,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "US Open",
+      "subject": "Amex Presale Tickets\u00ae\ufe0f for the 2026 US Open On Sale TODAY"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Tue, 5/26 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 26 May 2026"
@@ -479,18 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "YOU\u2019RE ON THE LIST"
-    },
-    {
-      "sender": "Ethan Vane | Insidora",
-      "subject": "Gold investors: make this brilliant move now"
-    },
-    {
-      "sender": "Brother USA",
-      "subject": "Last Chance! Save on Brother Genuine Ink & Toner this Memorial Day weekend!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"AEOCKY 4500 Sq.Ft Energy...\" and \u20661\u2069 more item"
     }
   ],
   "items": [
