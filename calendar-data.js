@@ -450,47 +450,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "US Open",
-      "subject": "Amex Presale Tickets\u00ae\ufe0f for the 2026 US Open On Sale TODAY"
+      "sender": "Hotels.com",
+      "subject": "Join to save up to 20% on select stays\u200b"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Tue, 5/26 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 26 May 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Zojirushi NS-ZCC10...\""
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Challenge du jour \ud83e\udd13\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"AEOCKY 4500 Sq.Ft Energy...\""
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Sarah & Philippa's edit just for you!"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
     },
     {
       "sender": "Reformation",
       "subject": "YOU\u2019RE ON THE LIST"
+    },
+    {
+      "sender": "Brother USA",
+      "subject": "Last Chance! Save on Brother Genuine Ink & Toner this Memorial Day weekend!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"AEOCKY 4500 Sq.Ft Energy...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Amex Offers from American Express",
+      "subject": "Christian, your new Amex Offers are inside!"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "TOP RELEASE ROUNDUP"
     }
   ],
   "items": [
@@ -616,13 +604,6 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e30dfede9f1fbb",
       "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"AEOCKY 4500 Sq.Ft Energy...\"",
-      "date": "2026-05-26",
-      "id": "19e632e08692f1a7",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
