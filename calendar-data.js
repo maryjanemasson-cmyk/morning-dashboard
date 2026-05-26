@@ -450,12 +450,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 3,
   "threads": [
-    {
-      "sender": "Venmo",
-      "subject": "You paid Beatrice Trad $150.00"
-    },
     {
       "sender": "MileagePlus Program",
       "subject": "Earn miles and save on your car rental for your Lisbon trip"
@@ -467,14 +463,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "YOU\u2019RE ON THE LIST"
-    },
-    {
-      "sender": "Brother USA",
-      "subject": "Last Chance! Save on Brother Genuine Ink & Toner this Memorial Day weekend!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"AEOCKY 4500 Sq.Ft Energy...\" and \u20661\u2069 more item"
     }
   ],
   "items": [
