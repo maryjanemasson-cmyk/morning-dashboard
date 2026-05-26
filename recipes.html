@@ -290,13 +290,17 @@
       <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Instagram blocks direct fetching — but if you paste the Reel's caption text, the parser will split it into title / ingredients / steps.</p>
 
       <div class="form-group">
-        <label class="form-label">Instagram URL (optional, saved as Source)</label>
-        <input class="form-input" id="ig-url-input" placeholder="https://www.instagram.com/reel/..." />
+        <label class="form-label">Instagram URL</label>
+        <div style="display:flex;gap:0.4rem;">
+          <input class="form-input" id="ig-url-input" placeholder="https://www.instagram.com/reel/..." style="flex:1;" />
+          <button onclick="igFetchCaption()" id="ig-fetch-btn" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:linear-gradient(45deg,#e1306c,#fd8d32);color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">Fetch caption</button>
+        </div>
+        <div style="font-size:0.65rem;color:#9c8b76;margin-top:0.3rem;">Requires the local ig-server (set up once via ~/tripit-sync/setup-ig-server.sh). Falls back to manual paste below.</div>
       </div>
 
       <div class="form-group">
-        <label class="form-label">Caption text (paste from Instagram)</label>
-        <textarea class="form-textarea" id="ig-caption-input" placeholder="Paste the full Reel caption here — including ingredients list and instructions..." style="min-height:200px;"></textarea>
+        <label class="form-label">Caption text</label>
+        <textarea class="form-textarea" id="ig-caption-input" placeholder="Paste the caption manually here, OR click Fetch caption above to pull it automatically..." style="min-height:200px;"></textarea>
       </div>
 
       <div id="ig-status" style="font-size:0.8rem;color:#9c8b76;margin-bottom:1rem;display:none;"></div>
@@ -809,6 +813,49 @@
       document.getElementById('ig-caption-input').value = '';
       document.getElementById('ig-status').style.display = 'none';
       document.getElementById('ig-modal').classList.add('open');
+    }
+
+    // Hit the local ig-server to fetch the caption text from an IG URL.
+    // Requires the launchd-managed Python service on port 8768.
+    async function igFetchCaption() {
+      const url = document.getElementById('ig-url-input').value.trim();
+      if (!url) { alert('Paste an Instagram URL first.'); return; }
+      const btn = document.getElementById('ig-fetch-btn');
+      const status = document.getElementById('ig-status');
+      btn.disabled = true;
+      const orig = btn.textContent;
+      btn.textContent = 'Fetching…';
+      status.style.display = '';
+      status.textContent = 'Asking ig-server to fetch caption…';
+      status.style.color = '#9c8b76';
+      try {
+        const res = await fetch('http://127.0.0.1:8768/caption', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url }),
+        });
+        if (!res.ok) {
+          const errBody = await res.text();
+          throw new Error(`server returned ${res.status}: ${errBody}`);
+        }
+        const data = await res.json();
+        if (data.caption && data.caption.trim()) {
+          document.getElementById('ig-caption-input').value = data.caption;
+          status.textContent = `✓ Caption fetched (${data.caption.length} chars${data.cached ? ', cached' : ''}). Click Parse below.`;
+          status.style.color = '#4a8c6f';
+        } else {
+          status.textContent = 'Server returned no caption — paste manually below.';
+          status.style.color = '#c2553a';
+        }
+      } catch (e) {
+        status.innerHTML = `Could not reach ig-server: <code>${(e && e.message) || e}</code><br>`
+          + 'Either run <code>bash ~/tripit-sync/setup-ig-server.sh</code> first, '
+          + 'or paste the caption manually below.';
+        status.style.color = '#c2553a';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = orig;
+      }
     }
 
     // Heuristic parser tuned for Instagram Reel captions.
