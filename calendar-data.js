@@ -450,11 +450,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "New Booking Confirmation"
+      "sender": "Venmo",
+      "subject": "You paid Beatrice Trad $150.00"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles and save on your car rental for your Lisbon trip"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"AEOCKY 4500 Sq.Ft Energy...\""
     },
     {
       "sender": "Reformation",
@@ -467,10 +475,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"AEOCKY 4500 Sq.Ft Energy...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
     }
   ],
   "items": [
