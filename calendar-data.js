@@ -450,8 +450,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 26 May 2026"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Zojirushi NS-ZCC10...\""
+    },
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Challenge du jour \ud83e\udd13\""
@@ -483,14 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"AEOCKY 4500 Sq.Ft Energy...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "TOP RELEASE ROUNDUP"
     }
   ],
   "items": [
