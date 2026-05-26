@@ -483,7 +483,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 4,
   "threads": [
     {
       "sender": "Brother USA",
@@ -500,14 +500,6 @@ window.EMAIL_DATA = {
     {
       "sender": "GOAT",
       "subject": "TOP RELEASE ROUNDUP"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Enter for a chance to win a $500 Lowe\u2019s e-gift card"
-    },
-    {
-      "sender": "New Jersey Irrigation Services",
-      "subject": "Hey Mary Jane And Christian, How was your experience with New Jersey Irrigation Services?"
     }
   ],
   "items": [
