@@ -450,12 +450,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 5,
   "threads": [
-    {
-      "sender": "Hotels.com",
-      "subject": "Join to save up to 20% on select stays\u200b"
-    },
     {
       "sender": "Club Pilates Princeton",
       "subject": "New Booking Confirmation"
@@ -475,10 +471,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amex Offers from American Express",
       "subject": "Christian, your new Amex Offers are inside!"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "TOP RELEASE ROUNDUP"
     }
   ],
   "items": [
