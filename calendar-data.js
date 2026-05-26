@@ -1,60 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\ud83c\udfeb PRISMS \u2014 Memorial Day (No Classes)",
-    "location": "",
-    "description": "Memorial Day \u2014 No Classes",
-    "startTime": "",
-    "startDate": "2026-05-25",
-    "endTime": "",
-    "endDate": "2026-05-26",
-    "calendar": "Family",
-    "colorId": "2"
-  },
-  {
-    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Memorial Day (No School)",
-    "location": "",
-    "description": "School Closed: Memorial Day",
-    "startTime": "",
-    "startDate": "2026-05-25",
-    "endTime": "",
-    "endDate": "2026-05-26",
-    "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-05-25T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-25T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "Lagree - All Levels - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30cb4b53233bc",
-    "startTime": "2026-05-25T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-25T09:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Vintage shopping NTC",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-25T11:15:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-25T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30dfede9f1fbb",
@@ -284,6 +229,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Graduations & End-of-Year Events",
+    "location": "75 Mapleton Road, Princeton, NJ 08540",
+    "description": "Kindergarten Graduation\nGrades 5 & 8 Graduations\nEnd-of-Year Events\n(Exact ceremony dates TBC \u2014 check FASP calendar)",
+    "startTime": "",
+    "startDate": "2026-06-08",
+    "endTime": "",
+    "endDate": "2026-06-11",
+    "calendar": "Family",
+    "colorId": "5"
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-06-08T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-08T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -483,8 +450,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Challenge du jour \ud83e\udd13\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"AEOCKY 4500 Sq.Ft Energy...\""
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Sarah & Philippa's edit just for you!"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "YOU\u2019RE ON THE LIST"
+    },
+    {
+      "sender": "Ethan Vane | Insidora",
+      "subject": "Gold investors: make this brilliant move now"
+    },
     {
       "sender": "Brother USA",
       "subject": "Last Chance! Save on Brother Genuine Ink & Toner this Memorial Day weekend!"
@@ -617,17 +608,6 @@ window.EMAIL_DATA = {
     },
     {
       "type": "class",
-      "title": "Lagree - All Levels - 45 minutes \u00b7 9:00 AM",
-      "name": "Lagree - All Levels - 45 minutes",
-      "date": "2026-05-25",
-      "time": "09:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e30cb4b53233bc",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "class",
       "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
       "name": "CP Reformer Flow 2 (50 Mins) class",
       "date": "2026-05-26",
@@ -636,6 +616,20 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19e30dfede9f1fbb",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"AEOCKY 4500 Sq.Ft Energy...\"",
+      "date": "2026-05-26",
+      "id": "19e632e08692f1a7",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Zojirushi NS-ZCC10...\"",
+      "date": "2026-05-26",
+      "id": "19e61e24cd10d53d",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
