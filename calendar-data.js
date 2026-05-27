@@ -439,8 +439,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Mysora 3 Pack Large Wooden...\" and \u20665\u2069 more items"
@@ -468,14 +472,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Lisbon trip"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"AEOCKY 4500 Sq.Ft Energy...\""
     }
   ],
   "items": [
