@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "CP Reformer Flow 2 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30dfede9f1fbb",
-    "startTime": "2026-05-26T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-26T06:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Lagree - All Levels - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30cdbaec81010",
@@ -450,8 +439,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
+    },
+    {
+      "sender": "Ways to earn income, Ethan Vane | Insidora",
+      "subject": "Work From Home (part-time)"
+    },
+    {
+      "sender": "New 1776 Moment, Ethan Vane | Insidora",
+      "subject": "Have you heard about this?"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -463,10 +464,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"AEOCKY 4500 Sq.Ft Energy...\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "YOU\u2019RE ON THE LIST"
     }
   ],
   "items": [
@@ -581,24 +578,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
-      "name": "CP Reformer Flow 2 (50 Mins) class",
-      "date": "2026-05-26",
-      "time": "06:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19e30dfede9f1fbb",
-      "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Zojirushi NS-ZCC10...\"",
-      "date": "2026-05-26",
-      "id": "19e61e24cd10d53d",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
