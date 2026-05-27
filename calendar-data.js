@@ -439,8 +439,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"PERLESMITH Swivel Universal...\""
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "MrBeast Workshops are almost out \ud83d\ude33"
+    },
     {
       "sender": "US Open",
       "subject": "REMINDER: 2026 US Open Tickets are On Sale to the Public Tomorrow"
@@ -586,6 +594,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"PERLESMITH Swivel Universal...\"",
+      "date": "2026-05-27",
+      "id": "19e6a58beb024871",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
