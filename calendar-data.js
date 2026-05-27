@@ -439,19 +439,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"WSZJINB 1.5In x 16Ft Cinch...\""
     },
     {
-      "sender": "Ways to earn income, Ethan Vane | Insidora",
-      "subject": "Work From Home (part-time)"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Goldelith Cocktail for...\""
     },
     {
-      "sender": "New 1776 Moment, Ethan Vane | Insidora",
-      "subject": "Have you heard about this?"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Mysora 3 Pack Large Wooden...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Victor Mouse Traps M035-12,...\""
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -578,6 +582,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Hanz de Fuko Claymation \u2013...\"",
+      "date": "2026-05-27",
+      "id": "19e68c2e3c0a12ea",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
