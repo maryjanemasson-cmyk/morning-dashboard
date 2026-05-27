@@ -439,15 +439,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 9,
   "threads": [
     {
       "sender": "Amazon.com",
-      "subject": "Shipped: \"PERLESMITH Swivel Universal...\""
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "MrBeast Workshops are almost out \ud83d\ude33"
+      "subject": "Shipped: \"Mysora 3 Pack Large Wooden...\" and \u20665\u2069 more items"
     },
     {
       "sender": "US Open",
@@ -597,9 +593,9 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"PERLESMITH Swivel Universal...\"",
+      "title": "Shipped: \"Mysora 3 Pack Large Wooden...\" and \u20665\u2069 more items",
       "date": "2026-05-27",
-      "id": "19e6a58beb024871",
+      "id": "19e6acbb3c71440f",
       "sender": "Amazon.com"
     },
     {
