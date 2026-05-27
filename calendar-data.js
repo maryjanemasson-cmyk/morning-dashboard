@@ -439,19 +439,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 5,
   "threads": [
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"WSZJINB 1.5In x 16Ft Cinch...\""
-    },
-    {
-      "sender": "Amazon.com",
       "subject": "Ordered: \"Goldelith Cocktail for...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Mysora 3 Pack Large Wooden...\""
     },
     {
       "sender": "Amazon.com",
