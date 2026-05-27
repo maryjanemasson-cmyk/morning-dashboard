@@ -439,8 +439,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "US Open",
+      "subject": "REMINDER: 2026 US Open Tickets are On Sale to the Public Tomorrow"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "What will you discover today? \ud83d\udd0e"
+    },
+    {
+      "sender": "Team @ WAT THE BRAND",
+      "subject": "Hey Mary, it's the WAT Team checking in!"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Goldelith Cocktail for...\""
