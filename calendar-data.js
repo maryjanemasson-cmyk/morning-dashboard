@@ -439,15 +439,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "FORM BY TWO",
-      "subject": "Receipt #299682809"
+      "sender": "The Shore Insider News Letter",
+      "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Membership Renewal Confirmation"
+      "sender": "Dulce at TurboTax Monthly",
+      "subject": "\ud83e\udded Navigating markets right now"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Final Hours To Shop Sale"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"GRAMMS Clear Protein Powder...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 381615436231"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Hulu: $12.78\u00a0USD"
     },
     {
       "sender": "Reformation",
@@ -456,30 +480,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"GRAMMS Clear Protein Powder...\" and \u20663\u2069 more items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Premium White Napkins, 1/8...\""
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Mysora 3 Pack Large Wooden...\" and \u20665\u2069 more items"
-    },
-    {
-      "sender": "US Open",
-      "subject": "REMINDER: 2026 US Open Tickets are On Sale to the Public Tomorrow"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "What will you discover today? \ud83d\udd0e"
-    },
-    {
-      "sender": "Team @ WAT THE BRAND",
-      "subject": "Hey Mary, it's the WAT Team checking in!"
     }
   ],
   "items": [
@@ -596,20 +596,6 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "delivery",
-      "title": "Shipped: \"Mysora 3 Pack Large Wooden...\" and \u20665\u2069 more items",
-      "date": "2026-05-27",
-      "id": "19e6acbb3c71440f",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Hanz de Fuko Claymation \u2013...\"",
-      "date": "2026-05-27",
-      "id": "19e68c2e3c0a12ea",
-      "sender": "Amazon.com"
-    },
-    {
       "type": "class",
       "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
       "name": "Lagree - All Levels - 45 minutes",
@@ -619,6 +605,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e30cdbaec81010",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"GRAMMS Clear Protein Powder...\" and \u20661\u2069 more item",
+      "date": "2026-05-28",
+      "id": "19e6d1ce18bf24e6",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
