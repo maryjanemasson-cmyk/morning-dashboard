@@ -256,15 +256,15 @@ window.CALENDAR_EVENTS = [
 
 window.TRAVEL_DATA = [
   {
-    "destination": "Chicago, IL",
+    "destination": "Chicago \u2192 Boston",
     "start": "2026-05-29",
-    "end": "2026-06-01",
+    "end": "2026-06-04",
     "icon": "\u2708\ufe0f",
     "items": [
       {
         "summary": "UA1525 EWR to ORD",
         "location": "Newark (EWR)",
-        "description": "",
+        "description": "Outbound \u2014 Princeton to Chicago",
         "start": "2026-05-29T14:24:00+00:00",
         "end": "2026-05-29T17:06:00+00:00",
         "type": "flight"
@@ -272,23 +272,7 @@ window.TRAVEL_DATA = [
       {
         "summary": "UA1606 ORD to BOS",
         "location": "Chicago (ORD)",
-        "description": "Departure to Boston",
-        "start": "2026-06-01T15:25:00+00:00",
-        "end": "2026-06-01T18:02:00+00:00",
-        "type": "flight"
-      }
-    ]
-  },
-  {
-    "destination": "Boston, MA",
-    "start": "2026-06-01",
-    "end": "2026-06-04",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA1606 ORD to BOS",
-        "location": "Chicago (ORD)",
-        "description": "",
+        "description": "Chicago to Boston (Mon)",
         "start": "2026-06-01T15:25:00+00:00",
         "end": "2026-06-01T18:02:00+00:00",
         "type": "flight"
@@ -296,7 +280,7 @@ window.TRAVEL_DATA = [
       {
         "summary": "UA1307 BOS to EWR",
         "location": "Boston (BOS)",
-        "description": "Early-morning departure",
+        "description": "Return home (Thu morning)",
         "start": "2026-06-04T13:30:00+00:00",
         "end": "2026-06-04T14:58:00+00:00",
         "type": "flight"
