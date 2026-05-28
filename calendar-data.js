@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal A Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMnPdC0NtjYLSw0iwjW245lQbLuiIXIZMU\n",
+    "startTime": "2026-05-29T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-05-29T07:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708\ufe0f UA1525 EWR \u2192 ORD",
     "location": "Newark (EWR)",
     "description": "Fri, May 29\n10:24 AM EDT\n[Flight] EWR to ORD\nUnited Airlines 1525, Terminal TERMINAL A, Gate\n12:06 PM CDT\nArrive Chicago (ORD)\nTerminal TERMINAL 1, Gate",
@@ -439,35 +450,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 28 May 2026"
+      "sender": "Buck Mason",
+      "subject": "Summer Polos"
+    },
+    {
+      "sender": "Willow Wellness",
+      "subject": "Don\u2019t Lose Access to Your Medications"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"Shameless Snacks So Beary...\""
+      "subject": "Ordered: \"Ceecisee 50+ Women's...\""
     },
     {
-      "sender": "Bank of America Commercial Card",
-      "subject": "You have a new statement available"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"OLLY Men's Multivitamin...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Suwimut Set of 3 Glass...\""
     },
     {
       "sender": "The Shore Insider News Letter",
       "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
-    },
-    {
-      "sender": "Dulce at TurboTax Monthly",
-      "subject": "\ud83e\udded Navigating markets right now"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Final Hours To Shop Sale"
     },
     {
       "sender": "Club Pilates Princeton",
@@ -480,6 +487,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Take a good look"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"GRAMMS Clear Protein Powder...\" and \u20663\u2069 more items"
     }
   ],
   "items": [
@@ -608,17 +619,24 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Shipped: \u20662\u2069 \"Shameless Snacks So Beary...\"",
-      "date": "2026-05-28",
-      "id": "19e6e0428ae639c3",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
       "title": "Shipped: \"GRAMMS Clear Protein Powder...\" and \u20661\u2069 more item",
       "date": "2026-05-28",
       "id": "19e6d1ce18bf24e6",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
+      "date": "2026-05-28",
+      "id": "19e6e6679d15e68d",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Aphratti Women's Long Sleeve",
+      "date": "2026-05-28",
+      "id": "19e6e667836b297a",
+      "sender": "return@amazon.com"
     },
     {
       "type": "class",
