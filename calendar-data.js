@@ -439,8 +439,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 28 May 2026"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"Shameless Snacks So Beary...\""
+    },
+    {
+      "sender": "Bank of America Commercial Card",
+      "subject": "You have a new statement available"
+    },
     {
       "sender": "The Shore Insider News Letter",
       "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
@@ -458,16 +470,8 @@ window.EMAIL_DATA = {
       "subject": "Final Hours To Shop Sale"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"GRAMMS Clear Protein Powder...\" and \u20661\u2069 more item"
-    },
-    {
       "sender": "Club Pilates Princeton",
       "subject": "Payment Receipt"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 381615436231"
     },
     {
       "sender": "PayPal",
@@ -476,10 +480,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Take a good look"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"GRAMMS Clear Protein Powder...\" and \u20663\u2069 more items"
     }
   ],
   "items": [
@@ -605,6 +605,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e30cdbaec81010",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20662\u2069 \"Shameless Snacks So Beary...\"",
+      "date": "2026-05-28",
+      "id": "19e6e0428ae639c3",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
