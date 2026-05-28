@@ -450,8 +450,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "US Open",
+      "subject": "Tickets to the 2026 US Open are on sale today!"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 8 new invitations"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "\u202f J.Crew Credit Services\u202f \u202f",
+      "subject": "Don't miss out: 20% off your next J.Crew purchase"
+    },
+    {
+      "sender": "Keep Your Cadence Inc.",
+      "subject": "Welcome to the Cadence Loyalty Program!"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Olivia Rodrigo called \u260e\ufe0f\ud83c\udfa4\ud83e\ude77"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Shameless Snacks So Beary...\""
+    },
     {
       "sender": "Buck Mason",
       "subject": "Summer Polos"
@@ -463,34 +491,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Ceecisee 50+ Women's...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"OLLY Men's Multivitamin...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Suwimut Set of 3 Glass...\""
-    },
-    {
-      "sender": "The Shore Insider News Letter",
-      "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Hulu: $12.78\u00a0USD"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Take a good look"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"GRAMMS Clear Protein Powder...\" and \u20663\u2069 more items"
     }
   ],
   "items": [
