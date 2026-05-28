@@ -576,6 +576,13 @@
     async function fetchWeather(trip) {
       const container = document.getElementById('weatherContainer');
       container.innerHTML = '<div class="weather-loading">Loading weather...</div>';
+
+      // Multi-city: trip.segments = [{city, start, end}, ...]. Each segment is
+      // weathered independently and the results render with city labels.
+      if (Array.isArray(trip.segments) && trip.segments.length > 1) {
+        return fetchWeatherSegments(trip.segments);
+      }
+
       try {
         const city = trip.destination.split(',')[0].trim();
         // 1. Geocode — fetch up to 10 matches, then pick the one that best
@@ -648,6 +655,90 @@
       } catch (e) {
         container.innerHTML = '<div class="weather-loading">Weather unavailable</div>';
       }
+    }
+
+    // Fetch + render weather for a multi-city trip's segments.
+    async function fetchWeatherSegments(segments) {
+      const container = document.getElementById('weatherContainer');
+      let combinedHtml = '';
+      let anyTypical = false;
+      for (const seg of segments) {
+        const city = (seg.city || '').split(',')[0].trim();
+        try {
+          const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10`).then(r => r.json());
+          if (!geo.results || !geo.results.length) throw new Error('city not found');
+          const match = pickBestGeoMatch(geo.results, seg.city);
+          if (!match) throw new Error('city not matched');
+          const { latitude, longitude } = match;
+
+          const startD = parseDate(seg.start), endD = parseDate(seg.end);
+          const segDays = [];
+          for (let d = new Date(startD); d <= endD; d.setDate(d.getDate() + 1)) {
+            segDays.push(d.toISOString().slice(0, 10));
+          }
+          const today0 = new Date(); today0.setHours(0,0,0,0);
+          const horizonEnd = new Date(today0); horizonEnd.setDate(today0.getDate() + 15);
+          const forecastable = segDays.filter(s => parseDate(s) <= horizonEnd);
+          const farOut       = segDays.filter(s => parseDate(s) >  horizonEnd);
+          const segMap = {};
+
+          if (forecastable.length) {
+            const fc = await fetch(
+              `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
+              `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max` +
+              `&forecast_days=16&temperature_unit=fahrenheit&timezone=auto`
+            ).then(r => r.json());
+            (fc.daily?.time || []).forEach((d, i) => {
+              if (segDays.includes(d)) segMap[d] = {
+                source: 'forecast',
+                high: Math.round(fc.daily.temperature_2m_max[i]),
+                low:  Math.round(fc.daily.temperature_2m_min[i]),
+                code: fc.daily.weather_code[i],
+                rain: fc.daily.precipitation_probability_max?.[i] ?? null,
+              };
+            });
+          }
+          if (farOut.length) {
+            const histStart = new Date(parseDate(farOut[0])); histStart.setFullYear(histStart.getFullYear()-1);
+            const histEnd   = new Date(parseDate(farOut[farOut.length-1])); histEnd.setFullYear(histEnd.getFullYear()-1);
+            const hist = await fetch(
+              `https://archive-api.open-meteo.com/v1/archive?latitude=${latitude}&longitude=${longitude}` +
+              `&start_date=${histStart.toISOString().slice(0,10)}&end_date=${histEnd.toISOString().slice(0,10)}` +
+              `&daily=temperature_2m_max,temperature_2m_min,weather_code` +
+              `&temperature_unit=fahrenheit&timezone=auto`
+            ).then(r => r.json());
+            (hist.daily?.time || []).forEach((d, i) => {
+              const dt = parseDate(d); dt.setFullYear(dt.getFullYear() + 1);
+              const cur = dt.toISOString().slice(0,10);
+              if (segDays.includes(cur)) segMap[cur] = {
+                source: 'typical',
+                high: Math.round(hist.daily.temperature_2m_max[i]),
+                low:  Math.round(hist.daily.temperature_2m_min[i]),
+                code: hist.daily.weather_code[i],
+                rain: null,
+              };
+            });
+            anyTypical = true;
+          }
+
+          // Per-segment header + grid
+          const days = segDays.map(s => {
+            const d = segMap[s];
+            if (!d) return `<div class="weather-day"><div class="wd-label">${dayLabel(s)}</div><div class="wd-icon">--</div><div class="wd-temps">--</div></div>`;
+            const subline = d.source === 'typical'
+              ? '<div class="wd-rain" style="color:#b8a48e;">typical</div>'
+              : (d.rain != null ? `<div class="wd-rain">${d.rain}% rain</div>` : '');
+            return `<div class="weather-day${d.source === 'typical' ? ' is-typical' : ''}"><div class="wd-label">${dayLabel(s)}</div><div class="wd-icon">${wmoIcon(d.code)}</div><div class="wd-temps">${d.high}° / ${d.low}°</div>${subline}</div>`;
+          }).join('');
+          combinedHtml += `<div style="font-size:0.72rem;font-weight:600;color:#6b5d4d;margin:0.8rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:1px;">${seg.city}</div><div class="weather-grid">${days}</div>`;
+        } catch (e) {
+          combinedHtml += `<div style="font-size:0.72rem;color:#6b5d4d;margin-top:0.6rem;"><strong>${seg.city}</strong>: weather unavailable (${e.message})</div>`;
+        }
+      }
+      const note = anyTypical
+        ? `<div style="font-size:0.7rem;color:#9c8b76;margin-top:0.5rem;">Days marked <em>typical</em> show last year's actual weather for the same dates — useful as a rough estimate until the trip is closer.</div>`
+        : '';
+      container.innerHTML = combinedHtml + note;
     }
 
     function renderWeather(tripDays, dailyMap, hasTypical) {

@@ -260,6 +260,18 @@ window.TRAVEL_DATA = [
     "start": "2026-05-29",
     "end": "2026-06-04",
     "icon": "\u2708\ufe0f",
+    "segments": [
+      {
+        "city": "Chicago, IL",
+        "start": "2026-05-29",
+        "end": "2026-06-01"
+      },
+      {
+        "city": "Boston, MA",
+        "start": "2026-06-01",
+        "end": "2026-06-04"
+      }
+    ],
     "items": [
       {
         "summary": "UA1525 EWR to ORD",
