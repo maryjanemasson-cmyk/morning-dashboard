@@ -258,7 +258,7 @@ window.TRAVEL_DATA = [
   {
     "destination": "Chicago, IL",
     "start": "2026-05-29",
-    "end": "2026-05-29",
+    "end": "2026-06-01",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -268,13 +268,21 @@ window.TRAVEL_DATA = [
         "start": "2026-05-29T14:24:00+00:00",
         "end": "2026-05-29T17:06:00+00:00",
         "type": "flight"
+      },
+      {
+        "summary": "UA1606 ORD to BOS",
+        "location": "Chicago (ORD)",
+        "description": "Departure to Boston",
+        "start": "2026-06-01T15:25:00+00:00",
+        "end": "2026-06-01T18:02:00+00:00",
+        "type": "flight"
       }
     ]
   },
   {
     "destination": "Boston, MA",
     "start": "2026-06-01",
-    "end": "2026-06-01",
+    "end": "2026-06-04",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -284,19 +292,11 @@ window.TRAVEL_DATA = [
         "start": "2026-06-01T15:25:00+00:00",
         "end": "2026-06-01T18:02:00+00:00",
         "type": "flight"
-      }
-    ]
-  },
-  {
-    "destination": "Newark, NJ",
-    "start": "2026-06-04",
-    "end": "2026-06-04",
-    "icon": "\u2708\ufe0f",
-    "items": [
+      },
       {
         "summary": "UA1307 BOS to EWR",
         "location": "Boston (BOS)",
-        "description": "",
+        "description": "Early-morning departure",
         "start": "2026-06-04T13:30:00+00:00",
         "end": "2026-06-04T14:58:00+00:00",
         "type": "flight"
@@ -368,6 +368,30 @@ window.TRAVEL_DATA = [
     ]
   },
   {
+    "destination": "Washington, DC",
+    "start": "2026-06-19",
+    "end": "2026-06-21",
+    "icon": "\ud83d\ude97",
+    "items": [
+      {
+        "summary": "Check-in: The Dupont Circle Hotel",
+        "location": "1500 New Hampshire Ave NW, Washington, DC 20036",
+        "description": "Family trip, driving from Princeton. Note: leaving on Juneteenth (federal holiday) \u2014 expect heavier I-95/295 traffic.",
+        "start": "2026-06-19T15:00:00+00:00",
+        "end": "2026-06-19T16:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "Check-out: The Dupont Circle Hotel",
+        "location": "1500 New Hampshire Ave NW, Washington, DC 20036",
+        "description": "Driving back to Princeton",
+        "start": "2026-06-21T11:00:00+00:00",
+        "end": "2026-06-21T12:00:00+00:00",
+        "type": "hotel"
+      }
+    ]
+  },
+  {
     "destination": "Cambridge, MA",
     "start": "2026-06-30",
     "end": "2026-07-03",
@@ -410,7 +434,7 @@ window.TRAVEL_DATA = [
   {
     "destination": "London, United Kingdom",
     "start": "2026-07-06",
-    "end": "2026-07-10",
+    "end": "2026-07-09",
     "icon": "\u2708\ufe0f",
     "items": [
       {
@@ -422,8 +446,8 @@ window.TRAVEL_DATA = [
         "type": "flight"
       },
       {
-        "summary": "Check-in: Wilde Aparthotels London Paddington",
-        "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
+        "summary": "Check-in: HO HO WILDE APARTHOTELS LONDON P",
+        "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
         "description": "",
         "start": "2026-07-06T14:00:00+00:00",
         "end": "2026-07-06T15:00:00+00:00",
@@ -433,16 +457,16 @@ window.TRAVEL_DATA = [
         "summary": "UA905 LHR to EWR",
         "location": "London (LHR)",
         "description": "",
-        "start": "2026-07-10T08:30:00+00:00",
-        "end": "2026-07-10T16:30:00+00:00",
+        "start": "2026-07-09T08:30:00+00:00",
+        "end": "2026-07-09T16:30:00+00:00",
         "type": "flight"
       },
       {
-        "summary": "Check-out: Wilde Aparthotels London Paddington",
-        "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
+        "summary": "Check-out: HO HO WILDE APARTHOTELS LONDON P",
+        "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
         "description": "",
-        "start": "2026-07-10T10:00:00+00:00",
-        "end": "2026-07-10T11:00:00+00:00",
+        "start": "2026-07-09T10:00:00+00:00",
+        "end": "2026-07-09T11:00:00+00:00",
         "type": "hotel"
       }
     ]
@@ -450,8 +474,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Julia Marcum",
+      "subject": "What I'd gift Chris this Father's Day"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "20% OFF: Your Favorite Styles Are Selling Fast"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"OLLY Men's Multivitamin...\" and \u20661\u2069 more item"
@@ -483,14 +515,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Ceecisee 50+ Women's...\""
-    },
-    {
-      "sender": "The Shore Insider News Letter",
-      "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
     }
   ],
   "items": [
