@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "\ud83c\udfeb PRISMS \u2014 Semester 2 Exams",
+    "location": "",
+    "description": "End of Semester 2 \u2014 Exam Week\nJun 5: Graduation Rehearsal / Placement Tests / Campus Cleanup",
+    "startTime": "",
+    "startDate": "2026-06-01",
+    "endTime": "",
+    "endDate": "2026-06-06",
+    "calendar": "Family",
+    "colorId": "2"
+  },
+  {
     "summary": "Trip Overview Summary",
     "location": "Microsoft Teams Meeting",
     "description": "Air Journey ORD - BOS   \n   \nTraveler: Mary Jane Hinrichs   \n   \nRecord Locator: WAVWZS   \n   \nFlight Segment  ORD - BOS   \nDeparture: Monday, 06/01/2026 10:25 am   \nLocation: Chicago, IL (ORD)   \nTerminal: TERMINAL 1   \n   \nUnited Airlines   \nFlight number: UA1606   \nSeat: 8C   \n   \nArrival: Monday, 06/01/2026 02:02 pm   \nLocation: Boston, MA (BOS)   \nTerminal: TERMINAL B   \n   \nConfirmation: K0MZ02   \n\nMicrosoft Teams meeting \nJoin: https://teams.microsoft.com/meet/316567632729595?p=mJXqNzBPweosHcwF5I\nMeeting ID: 316 567 632 729 595\nPasscode: VZ6uC2fo\nHelp: https://aka.ms/JoinTeamsMeeting?omkt=en-US\nSystem reference: https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d\n________________________________\nDial in by phone\n+1 213-458-8494,,999061232# United States, Los Angeles\n\nFind a local number: https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=999061232\nPhone conference ID: 999 061 232#\n________________________________\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 123 243 361 0\nMore info: https://www.webex.com/msteams?confid=1232433610&tenantkey=ipsen&domain=m.webex.com\n________________________________\nFor organisers\nMeeting options: https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4@thread.v2&messageId=0&language=en-US\nReset dial-in PIN: https://dialin.teams.microsoft.com/usp/pstnconferencing",
@@ -110,6 +121,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "\ud83c\udf93 Christian (son) \u2014 School Ends",
+    "location": "",
+    "description": "CEH/\u00c9cole de Princeton school year ends.",
+    "startTime": "",
+    "startDate": "2026-06-04",
+    "endTime": "",
+    "endDate": "2026-06-05",
+    "calendar": "Family",
+    "colorId": "5"
+  },
+  {
     "summary": "\u2708\ufe0f UA1307 BOS \u2192 EWR",
     "location": "Boston (BOS)",
     "description": "Thu, Jun 4\n9:30 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 1307, Terminal TERMINAL B, Gate\n10:58 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
@@ -119,6 +141,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udf93 PRISMS \u2014 Commencement / Last Day",
+    "location": "19 Lambert Drive, Princeton, NJ 08540",
+    "description": "Commencement Ceremony \u2014 Summer Break begins after ceremony\nPRISMS, 19 Lambert Drive, Princeton NJ",
+    "startTime": "",
+    "startDate": "2026-06-06",
+    "endTime": "",
+    "endDate": "2026-06-07",
+    "calendar": "Family",
+    "colorId": "2"
   },
   {
     "summary": "Nathaniel \u2014 Math",
@@ -185,6 +218,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Graduations & End-of-Year Events",
+    "location": "75 Mapleton Road, Princeton, NJ 08540",
+    "description": "Kindergarten Graduation\nGrades 5 & 8 Graduations\nEnd-of-Year Events\n(Exact ceremony dates TBC \u2014 check FASP calendar)",
+    "startTime": "",
+    "startDate": "2026-06-08",
+    "endTime": "",
+    "endDate": "2026-06-11",
+    "calendar": "Family",
+    "colorId": "5"
   },
   {
     "summary": "Weekly planning \u2014 update task tracker",
@@ -395,8 +439,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Receipt #299682809"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Membership Renewal Confirmation"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Take a good look"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"GRAMMS Clear Protein Powder...\" and \u20663\u2069 more items"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Premium White Napkins, 1/8...\""
@@ -420,18 +480,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Team @ WAT THE BRAND",
       "subject": "Hey Mary, it's the WAT Team checking in!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Goldelith Cocktail for...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Victor Mouse Traps M035-12,...\""
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
