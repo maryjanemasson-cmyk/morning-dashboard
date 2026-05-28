@@ -260,6 +260,7 @@ window.TRAVEL_DATA = [
     "start": "2026-05-29",
     "end": "2026-06-04",
     "icon": "\u2708\ufe0f",
+    "outfitSlide": 2234,
     "segments": [
       {
         "city": "Chicago, IL",

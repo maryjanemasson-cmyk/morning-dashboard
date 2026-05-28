@@ -278,6 +278,14 @@
     }
     .packing-input-row input:focus { outline: none; border-color: #c9b99a; }
     .packing-items { list-style: none; }
+    .packing-category { margin-bottom: 0.9rem; }
+    .packing-category:last-child { margin-bottom: 0; }
+    .packing-cat-label {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.2px; color: #6b5d4d; margin-bottom: 0.3rem;
+      padding-bottom: 0.25rem; border-bottom: 1px solid #ebe5dc;
+    }
+    .packing-cat-list { list-style: none; }
     .packing-item {
       display: flex;
       align-items: center;
@@ -341,6 +349,7 @@
       <div class="card-title"><span class="icon">&#9925;</span> Weather Forecast</div>
       <div class="detail-dest" id="detailDest">--</div>
       <div class="detail-dates" id="detailDates"></div>
+      <div id="outfitLink" style="margin-top:0.5rem;display:none;"></div>
       <div id="weatherContainer"><div class="weather-loading">Loading weather...</div></div>
     </div>
 
@@ -512,6 +521,14 @@
       if (!selectedTrip) return;
       document.getElementById('detailDest').textContent = selectedTrip.destination;
       document.getElementById('detailDates').textContent = formatDateRange(selectedTrip.start, selectedTrip.end);
+      // Optional: link to a pre-planned outfit slide on the outfit-gallery page
+      const outfitEl = document.getElementById('outfitLink');
+      if (selectedTrip.outfitSlide) {
+        outfitEl.innerHTML = `<a href="outfit-gallery.html?slides=${selectedTrip.outfitSlide}" style="display:inline-block;padding:0.3rem 0.7rem;background:#013E7D;color:#fff;font-size:0.72rem;border-radius:6px;text-decoration:none;">👗 Pre-planned outfit (#${selectedTrip.outfitSlide})</a>`;
+        outfitEl.style.display = '';
+      } else {
+        outfitEl.style.display = 'none';
+      }
       fetchWeather(selectedTrip);
     }
 
@@ -868,15 +885,44 @@
       });
     }
 
+    // Same classifier as the Python seed script, used both for rendering
+    // existing items missing a category and for assigning one to new items.
+    function categorizeItem(text) {
+      const t = (text || '').toLowerCase();
+      if (/\b(passport|id|ticket|boarding pass|visa|insurance card|tsa|global entry)\b/.test(t)) return 'Documents';
+      if (/\b(charger|laptop|phone|headphones?|earbuds|adapter|cable|kindle|ipad|tablet|airpods)\b/.test(t)) return 'Electronics';
+      if (/\b(toothbrush|toothpaste|deodorant|sunscreen|shampoo|toiletries|razor|skincare|makeup|lotion|brush|comb|moisturizer|perfume|nail|q-tips|floss|contacts)\b/.test(t)) return 'Toiletries';
+      if (/\b(sneakers?|flats?|heels?|boots?|sandals?|loafers?)\b/.test(t)) return 'Shoes';
+      if (/\b(dress|walking|comfortable|tennis|running|hiking|gym|evening)\s+shoes?\b/.test(t)) return 'Shoes';
+      if (/\b(bag|wallet|sunglasses|umbrella|sun hat|jewelry|watch|belt|scarf|hat\b|necklace|bracelet|earrings)\b/.test(t)) return 'Bags & Accessories';
+      if (/\b(blazer|pants?|shirts?|dress|skirt|jacket|raincoat|trench|pajamas?|socks?|underwear|bras?|t-?shirts?|sundress|sweater|cardigan|tights|outfit|shorts|coat|workout|leggings)\b/.test(t)) return 'Clothing';
+      return 'Other';
+    }
+    const PACKING_CAT_ORDER = ['Clothing', 'Shoes', 'Bags & Accessories', 'Toiletries', 'Electronics', 'Documents', 'Other'];
+
     function renderPacking(items) {
-      packingListEl.innerHTML = Object.entries(items).map(([id, item]) => {
-        const autoTag = item.auto ? ` <span style="font-size:0.6rem;color:#b8a48e;text-transform:uppercase;letter-spacing:0.5px;margin-left:0.3rem;" title="Auto-calculated from trip length">auto</span>` : '';
-        return `<li class="packing-item">
-          <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
-          <span class="item-text${item.checked ? ' checked' : ''}">${escHtml(item.text)}${autoTag}</span>
-          <button class="item-delete" data-id="${id}">&times;</button>
-        </li>`;
+      // Group by category; auto-classify any item missing one
+      const buckets = {};
+      Object.entries(items).forEach(([id, item]) => {
+        const cat = item.category || categorizeItem(item.text || '');
+        (buckets[cat] = buckets[cat] || []).push([id, item]);
+      });
+      // Render each category as a section with a header
+      const html = PACKING_CAT_ORDER.filter(c => buckets[c]).map(cat => {
+        const rows = buckets[cat].map(([id, item]) => {
+          const autoTag = item.auto ? ` <span style="font-size:0.6rem;color:#b8a48e;text-transform:uppercase;letter-spacing:0.5px;margin-left:0.3rem;" title="Auto-calculated from trip length">auto</span>` : '';
+          return `<li class="packing-item">
+            <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
+            <span class="item-text${item.checked ? ' checked' : ''}">${escHtml(item.text)}${autoTag}</span>
+            <button class="item-delete" data-id="${id}">&times;</button>
+          </li>`;
+        }).join('');
+        return `<div class="packing-category">
+          <div class="packing-cat-label">${cat} <span style="color:#b8a48e;font-weight:400;">(${buckets[cat].length})</span></div>
+          <ul class="packing-cat-list">${rows}</ul>
+        </div>`;
       }).join('');
+      packingListEl.innerHTML = html;
 
       packingListEl.querySelectorAll('input[type="checkbox"]').forEach(cb => {
         cb.addEventListener('change', () => {
@@ -908,7 +954,7 @@
       const text = packingInput.value.trim();
       if (!text || !selectedTrip) return;
       const key = tripKey(selectedTrip);
-      db.ref('travelPacking/' + key).push({ text, checked: false });
+      db.ref('travelPacking/' + key).push({ text, checked: false, category: categorizeItem(text) });
       packingInput.value = '';
     }
 
