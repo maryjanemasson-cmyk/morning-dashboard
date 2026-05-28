@@ -450,20 +450,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "US Open",
-      "subject": "Tickets to the 2026 US Open are on sale today!"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 8 new invitations"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
     {
       "sender": "\u202f J.Crew Credit Services\u202f \u202f",
       "subject": "Don't miss out: 20% off your next J.Crew purchase"
@@ -491,6 +479,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Ceecisee 50+ Women's...\""
+    },
+    {
+      "sender": "The Shore Insider News Letter",
+      "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Hulu: $12.78\u00a0USD"
     }
   ],
   "items": [
@@ -637,6 +637,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "school",
+      "title": "Grade 8 Florida Trip - Information Update",
+      "date": "2026-05-28",
+      "id": "19e6fbef509a0e62",
+      "sender": "Administration Office FASP"
     },
     {
       "type": "class",
