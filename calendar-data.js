@@ -471,27 +471,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 29 May 2026"
+    },
     {
       "sender": "Empower Online Delivery",
       "subject": "Your Retirement Plan Regulatory Documents"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $8,255.88 deposit was credited to your account."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"90 L Large Storage Bags, 6...\""
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "Reformation",
@@ -512,6 +504,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Olivia Rodrigo called \u260e\ufe0f\ud83c\udfa4\ud83e\ude77"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Shameless Snacks So Beary...\""
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Summer Polos"
     }
   ],
   "items": [
