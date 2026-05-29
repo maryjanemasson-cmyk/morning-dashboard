@@ -493,8 +493,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Laurel and Blush",
+      "subject": "The story behind your pillows"
+    },
+    {
+      "sender": "William Camper (Nassau Tennis Club)",
+      "subject": "NRTC Triples Event June 5th"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 381669543980"
+    },
+    {
+      "sender": "Administration Office FASP",
+      "subject": "Florida Update - What a fun first day"
+    },
+    {
+      "sender": "Resy",
+      "subject": "Experience North America\u2019s 50 Best Restaurants"
+    },
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
       "subject": "New shareholder documents are available online"
@@ -514,71 +534,9 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "A peek inside my Pinterest board"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Cute stuff awaits."
-    },
-    {
-      "sender": "REVOLVE",
-      "subject": "Thanks for your back in stock request"
-    },
-    {
-      "sender": "The State of New Jersey",
-      "subject": "NJ Updates: Avoiding Online Investment Scams, Human Trafficking Hotline, and More"
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Allegra K Women's Denim",
-      "date": "2026-05-15",
-      "id": "19e2d432cd48fdfc",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Levi's Womens Flynn Western",
-      "date": "2026-05-15",
-      "id": "19e2d42068172985",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Levi's Womens Flynn Western",
-      "date": "2026-05-15",
-      "id": "19e2d414c1083a3c",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Cadence Extender - Adds",
-      "date": "2026-05-15",
-      "id": "19e2d405ed1faa14",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Zeyune 3 Pcs Spring Purple Faux",
-      "date": "2026-05-15",
-      "id": "19e2d3f2bd0ef4b6",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: CUSHIONAIRE Miami Kitten Heels",
-      "date": "2026-05-15",
-      "id": "19e2d3dbafc3b1a1",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: Advance refund issued for Zeyune 3 Pcs Spring Purple Faux",
@@ -690,6 +648,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-29",
       "id": "19e71f2033aab2ba",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #381669543980",
+      "date": "2026-05-29",
+      "id": "19e755d7fb3991cf",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
