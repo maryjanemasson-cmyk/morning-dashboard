@@ -251,6 +251,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "iCloud",
     "colorId": ""
+  },
+  {
+    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Last Day of School",
+    "location": "75 Mapleton Road, Princeton, NJ 08540",
+    "description": "Last Day of School 2025-2026\n(Verify exact date on FASP calendar \u2014 approximately Jun 12)",
+    "startTime": "",
+    "startDate": "2026-06-12",
+    "endTime": "",
+    "endDate": "2026-06-13",
+    "calendar": "Family",
+    "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udf93 Nathaniel \u2014 School Ends (PRISMS)",
+    "location": "",
+    "description": "Nathaniel's last day at PRISMS.",
+    "startTime": "",
+    "startDate": "2026-06-12",
+    "endTime": "",
+    "endDate": "2026-06-13",
+    "calendar": "Family",
+    "colorId": "7"
   }
 ];
 
@@ -471,47 +493,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 29 May 2026"
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
     },
     {
-      "sender": "Empower Online Delivery",
-      "subject": "Your Retirement Plan Regulatory Documents"
+      "sender": "NOLS Admissions",
+      "subject": "Re: Nathaniel Hinrichs NOLs adventure"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Welcome To Weather Labs"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Up to 30% Off Timeless BOSS Styles"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Boston"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "A peek inside my Pinterest board"
     },
     {
       "sender": "Reformation",
-      "subject": "YOUR RETURN"
+      "subject": "Cute stuff awaits."
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"OLLY Men's Multivitamin...\" and \u20661\u2069 more item"
+      "sender": "REVOLVE",
+      "subject": "Thanks for your back in stock request"
     },
     {
-      "sender": "\u202f J.Crew Credit Services\u202f \u202f",
-      "subject": "Don't miss out: 20% off your next J.Crew purchase"
-    },
-    {
-      "sender": "Keep Your Cadence Inc.",
-      "subject": "Welcome to the Cadence Loyalty Program!"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Olivia Rodrigo called \u260e\ufe0f\ud83c\udfa4\ud83e\ude77"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Shameless Snacks So Beary...\""
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Summer Polos"
+      "sender": "The State of New Jersey",
+      "subject": "NJ Updates: Avoiding Online Investment Scams, Human Trafficking Hotline, and More"
     }
   ],
   "items": [
