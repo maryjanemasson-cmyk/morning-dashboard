@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Lagree - All Levels - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e30cdbaec81010",
-    "startTime": "2026-05-28T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-28T06:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "NSH must be at Philly airport \u2708\ufe0f AA2807 Philadelphia \u2192 Tampa",
     "location": "Microsoft Teams Meeting",
     "description": "Meeting Point:\nTerminal will be provided closer to date\n\nAirline: American Airlines\nFlight: AA2807\n\nFrom: Philadelphia Airport (PHL)\nDeparture: 7:00 AM\n\nTo: Tampa International Airport (TPA)\nArrival: ~9:43 AM (local time)\nThis invite was sent by Copilot on behalf of Mary Jane HINRICHS\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/370018824107206?p=3eEb9Z5lZHtqWE6C52\nMeeting ID: 370 018 824 107 206\nPasscode: Vc2Tj2MF\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Yjk1OTE3ZDYtNzE5My00YjUyLThjNjYtNDExOTVlZjVjY2Vm%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,534878927#<tel:+12134588494,,534878927> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=534878927>\nPhone conference ID: 534 878 927#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 126 983 499 6\nMore info<https://www.webex.com/msteams?confid=1269834996&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Yjk1OTE3ZDYtNzE5My00YjUyLThjNjYtNDExOTVlZjVjY2Vm@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
@@ -251,6 +240,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Meghan bday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-11T07:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-11T08:45:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
   }
 ];
 
@@ -471,8 +471,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Empower Online Delivery",
+      "subject": "Your Retirement Plan Regulatory Documents"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $8,255.88 deposit was credited to your account."
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"90 L Large Storage Bags, 6...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Reformation",
       "subject": "YOUR RETURN"
@@ -492,26 +512,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Olivia Rodrigo called \u260e\ufe0f\ud83c\udfa4\ud83e\ude77"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Shameless Snacks So Beary...\""
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Summer Polos"
-    },
-    {
-      "sender": "Willow Wellness",
-      "subject": "Don\u2019t Lose Access to Your Medications"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Ceecisee 50+ Women's...\""
-    },
-    {
-      "sender": "The Shore Insider News Letter",
-      "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
     }
   ],
   "items": [
@@ -628,31 +628,6 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "class",
-      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - All Levels - 45 minutes",
-      "date": "2026-05-28",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e30cdbaec81010",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"OLLY Men's Multivitamin...\" and \u20661\u2069 more item",
-      "date": "2026-05-28",
-      "id": "19e70508cc120c30",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"GRAMMS Clear Protein Powder...\" and \u20661\u2069 more item",
-      "date": "2026-05-28",
-      "id": "19e6d1ce18bf24e6",
-      "sender": "Amazon.com"
-    },
-    {
       "type": "return",
       "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
       "date": "2026-05-28",
@@ -679,6 +654,20 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6fbef509a0e62",
       "sender": "Administration Office FASP"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"90 L Large Storage Bags, 6...\"",
+      "date": "2026-05-29",
+      "id": "19e7230006b9c774",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item",
+      "date": "2026-05-29",
+      "id": "19e71f2033aab2ba",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
