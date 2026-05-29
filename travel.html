@@ -824,18 +824,34 @@
     // Edit/delete behaviour: deleted auto items are NOT re-added on reload —
     // only items that still match the pattern get their numbers refreshed.
     const PACKING_RULES = [
-      { key: 'underwear',   match: /Underwear/i,
-        text: n => `${Math.ceil(n * 1.5)} pairs Underwear` },
-      { key: 'bras',        match: /Bras/i,
-        text: n => `${Math.ceil(n * 0.5)} Bras` },
-      { key: 'pajamas',     match: /Pajamas/i,
-        text: n => `${n} set${n === 1 ? '' : 's'} Pajamas` },
-      { key: 'socks',       match: /Socks/i,
-        text: () => `2 pairs Socks (baseline — adjust for shoes)` },
-      { key: 'medications', match: /Medications/i,
-        text: () => `Medications` },
-      { key: 'headphones',  match: /Headphones/i,
-        text: () => `Headphones` },
+      { key: 'underwear',     match: /Underwear/i,
+        text: n => `${Math.ceil(n * 1.5)} pairs Underwear`,        category: 'Clothing' },
+      { key: 'bras',          match: /Bras/i,
+        text: n => `${Math.ceil(n * 0.5)} Bras`,                    category: 'Clothing' },
+      { key: 'pajamas',       match: /Pajamas/i,
+        text: n => `${n} set${n === 1 ? '' : 's'} Pajamas`,         category: 'Clothing' },
+      { key: 'socks',         match: /Socks/i,
+        text: () => `2 pairs Socks (baseline — adjust for shoes)`,  category: 'Clothing' },
+      { key: 'toothbrush',    match: /Toothbrush/i,
+        text: () => `Toothbrush`,                                    category: 'Toiletries' },
+      { key: 'toiletries',    match: /Toiletries(?! bag)|Toiletries bag/i,
+        text: () => `Toiletries bag`,                                category: 'Toiletries' },
+      { key: 'bath_puff',     match: /Bath puff/i,
+        text: () => `Bath puff`,                                     category: 'Toiletries' },
+      { key: 'curling_iron',  match: /Curling iron/i,
+        text: () => `Curling iron`,                                  category: 'Toiletries' },
+      { key: 'hair_supplies', match: /Hair supplies/i,
+        text: () => `Hair supplies (brush, hairties, product)`,      category: 'Toiletries' },
+      { key: 'medications',   match: /Medications/i,
+        text: () => `Medications`,                                   category: 'Toiletries' },
+      { key: 'chargers',      match: /Chargers/i,
+        text: () => `Chargers (phone + laptop)`,                     category: 'Electronics' },
+      { key: 'headphones',    match: /Headphones/i,
+        text: () => `Headphones`,                                    category: 'Electronics' },
+      { key: 'work_badge',    match: /Work badge/i,
+        text: () => `Work badge`,                                    category: 'Documents' },
+      { key: 'passport',      match: /Passport/i,
+        text: () => `Passport (if needed)`,                          category: 'Documents' },
     ];
 
     function autoPopulatePacking(trip) {
@@ -844,7 +860,7 @@
       const updates = {};
       PACKING_RULES.forEach(rule => {
         const id = db.ref('travelPacking/' + key).push().key;
-        updates[id] = { text: rule.text(nights), checked: false, auto: rule.key };
+        updates[id] = { text: rule.text(nights), checked: false, auto: rule.key, category: rule.category || categorizeItem(rule.text(nights)) };
       });
       db.ref('travelPacking/' + key).update(updates);
     }
@@ -860,9 +876,10 @@
           item.auto === r.key || r.match.test(item.text || ''));
         if (!rule) return;
         const expected = rule.text(nights);
-        if (item.text !== expected || item.auto !== rule.key) {
+        if (item.text !== expected || item.auto !== rule.key || (rule.category && item.category !== rule.category)) {
           updates[id + '/text'] = expected;
           updates[id + '/auto'] = rule.key;
+          if (rule.category) updates[id + '/category'] = rule.category;
         }
       });
       if (Object.keys(updates).length) {
