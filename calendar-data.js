@@ -493,35 +493,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Laurel and Blush",
-      "subject": "The story behind your pillows"
-    },
-    {
-      "sender": "William Camper (Nassau Tennis Club)",
-      "subject": "NRTC Triples Event June 5th"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 381669543980"
-    },
-    {
-      "sender": "Administration Office FASP",
-      "subject": "Florida Update - What a fun first day"
-    },
-    {
-      "sender": "Resy",
-      "subject": "Experience North America\u2019s 50 Best Restaurants"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item"
     },
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
       "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "NOLS Admissions",
-      "subject": "Re: Nathaniel Hinrichs NOLs adventure"
     },
     {
       "sender": "The Weather Channel",
@@ -534,6 +514,26 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "A peek inside my Pinterest board"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Cute stuff awaits."
+    },
+    {
+      "sender": "REVOLVE",
+      "subject": "Thanks for your back in stock request"
+    },
+    {
+      "sender": "The State of New Jersey",
+      "subject": "NJ Updates: Avoiding Online Investment Scams, Human Trafficking Hotline, and More"
     }
   ],
   "items": [
