@@ -907,13 +907,26 @@
         const cat = item.category || categorizeItem(item.text || '');
         (buckets[cat] = buckets[cat] || []).push([id, item]);
       });
-      // Render each category as a section with a header
+      // Render each category as a section with a header. If an item's text
+      // ends with a (sXX_YYY) or (CNNN) piece id, turn that suffix into a
+      // link that deep-opens the wardrobe page on that item.
       const html = PACKING_CAT_ORDER.filter(c => buckets[c]).map(cat => {
         const rows = buckets[cat].map(([id, item]) => {
           const autoTag = item.auto ? ` <span style="font-size:0.6rem;color:#b8a48e;text-transform:uppercase;letter-spacing:0.5px;margin-left:0.3rem;" title="Auto-calculated from trip length">auto</span>` : '';
+          // Linkify trailing (pid) — escape body text, then re-attach as link
+          const text = item.text || '';
+          const pidMatch = text.match(/^(.*?)\s*\((s\d+_\d+|C\d+)\)\s*$/);
+          let textHtml;
+          if (pidMatch) {
+            const body = escHtml(pidMatch[1]);
+            const pid = pidMatch[2];
+            textHtml = `${body} <a href="wardrobe.html?item=${pid}" target="_blank" style="font-size:0.7rem;color:#9c8b76;text-decoration:none;border-bottom:1px dotted #c9b99a;">(${pid})</a>`;
+          } else {
+            textHtml = escHtml(text);
+          }
           return `<li class="packing-item">
             <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
-            <span class="item-text${item.checked ? ' checked' : ''}">${escHtml(item.text)}${autoTag}</span>
+            <span class="item-text${item.checked ? ' checked' : ''}">${textHtml}${autoTag}</span>
             <button class="item-delete" data-id="${id}">&times;</button>
           </li>`;
         }).join('');

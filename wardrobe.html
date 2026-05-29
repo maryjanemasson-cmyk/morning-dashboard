@@ -854,6 +854,27 @@
     renderCatFilters();
     renderCatalogue();
 
+    // Deep-link support: ?item=sXX_YYY opens the zoom view for that piece.
+    // Wait for the Firebase crops listener to fire so resolveItemSrc() finds
+    // any custom-image or _savedCrops override before we render the zoom.
+    (function handleItemDeepLink() {
+      const params = new URLSearchParams(window.location.search);
+      const want = params.get('item');
+      if (!want) return;
+      const tryOpen = () => {
+        // Match by file basename (handles 's01_003' or 's01_003.png')
+        const norm = want.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+        const match = items.find(it => {
+          const id = (it.file || '').replace(/\.(png|jpg|jpeg|webp)$/i, '');
+          return id === norm || (it.id || '') === norm;
+        });
+        if (match) zoomImage(match.file);
+        else alert(`Item ${want} not found in your wardrobe.`);
+      };
+      // small delay so the Firebase _savedCrops listener has populated
+      setTimeout(tryOpen, 600);
+    })();
+
     // ── Outfit Builder ──
     let canvasItems = [];
     let dragItemFile = null;
