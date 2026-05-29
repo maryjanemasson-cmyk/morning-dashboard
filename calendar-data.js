@@ -471,15 +471,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Julia Marcum",
-      "subject": "What I'd gift Chris this Father's Day"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "20% OFF: Your Favorite Styles Are Selling Fast"
+      "sender": "Reformation",
+      "subject": "YOUR RETURN"
     },
     {
       "sender": "Amazon.com",
@@ -512,6 +508,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Ceecisee 50+ Women's...\""
+    },
+    {
+      "sender": "The Shore Insider News Letter",
+      "subject": "Jersey Shore Business Spotlight - Wildwoods Convention Center"
     }
   ],
   "items": [
