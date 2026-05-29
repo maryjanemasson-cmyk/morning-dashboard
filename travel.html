@@ -852,6 +852,10 @@
         text: () => `Work badge`,                                    category: 'Documents' },
       { key: 'passport',      match: /Passport/i,
         text: () => `Passport (if needed)`,                          category: 'Documents' },
+      { key: 'jewelry',       match: /Jewelry/i,
+        text: () => `Jewelry`,                                       category: 'Bags & Accessories' },
+      { key: 'belt',          match: /^Belt\b/i,
+        text: () => `Belt`,                                          category: 'Bags & Accessories' },
     ];
 
     function autoPopulatePacking(trip) {
