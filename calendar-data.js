@@ -493,11 +493,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item"
+      "sender": "PNC Alerts",
+      "subject": "A new device was used to access your PNC Online Banking"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 50.171.53.57"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Chase security alert: You signed in with a new device"
     },
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
@@ -526,14 +534,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Cute stuff awaits."
-    },
-    {
-      "sender": "REVOLVE",
-      "subject": "Thanks for your back in stock request"
-    },
-    {
-      "sender": "The State of New Jersey",
-      "subject": "NJ Updates: Avoiding Online Investment Scams, Human Trafficking Hotline, and More"
     }
   ],
   "items": [
@@ -651,9 +651,9 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "FedEx shipped #381669543980",
-      "date": "2026-05-29",
-      "id": "19e755d7fb3991cf",
+      "title": "FedEx arriving tomorrow #381669543980",
+      "date": "2026-05-30",
+      "id": "19e7612247e756ff",
       "sender": "FedEx Delivery Manager"
     },
     {
