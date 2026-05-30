@@ -485,6 +485,10 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "Thumbtack",
+      "subject": "Give quick, private feedback on your Thumbtack pro"
+    },
+    {
       "sender": "Empower Online Delivery",
       "subject": "Your Retirement Plan Regulatory Documents"
     },
@@ -519,10 +523,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
     }
   ],
   "items": [
