@@ -482,16 +482,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 13,
   "threads": [
-    {
-      "sender": "Thumbtack",
-      "subject": "Give quick, private feedback on your Thumbtack pro"
-    },
-    {
-      "sender": "Empower Online Delivery",
-      "subject": "Your Retirement Plan Regulatory Documents"
-    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -523,6 +515,14 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "A peek inside my Pinterest board"
     }
   ],
   "items": [
