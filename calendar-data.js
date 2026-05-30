@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "NSH must be at Philly airport \u2708\ufe0f AA2807 Philadelphia \u2192 Tampa",
-    "location": "Microsoft Teams Meeting",
-    "description": "Meeting Point:\nTerminal will be provided closer to date\n\nAirline: American Airlines\nFlight: AA2807\n\nFrom: Philadelphia Airport (PHL)\nDeparture: 7:00 AM\n\nTo: Tampa International Airport (TPA)\nArrival: ~9:43 AM (local time)\nThis invite was sent by Copilot on behalf of Mary Jane HINRICHS\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/370018824107206?p=3eEb9Z5lZHtqWE6C52\nMeeting ID: 370 018 824 107 206\nPasscode: Vc2Tj2MF\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Yjk1OTE3ZDYtNzE5My00YjUyLThjNjYtNDExOTVlZjVjY2Vm%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,534878927#<tel:+12134588494,,534878927> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=534878927>\nPhone conference ID: 534 878 927#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 126 983 499 6\nMore info<https://www.webex.com/msteams?confid=1269834996&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Yjk1OTE3ZDYtNzE5My00YjUyLThjNjYtNDExOTVlZjVjY2Vm@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
-    "startTime": "2026-05-29T04:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-29T06:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Newark Airport Parking",
-    "location": "Newark Liberty International Airport, Terminal A Parking",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMnPdC0NtjYLSw0iwjW245lQbLuiIXIZMU\n",
-    "startTime": "2026-05-29T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-29T07:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\u2708\ufe0f UA1525 EWR \u2192 ORD",
-    "location": "Newark (EWR)",
-    "description": "Fri, May 29\n10:24 AM EDT\n[Flight] EWR to ORD\nUnited Airlines 1525, Terminal TERMINAL A, Gate\n12:06 PM CDT\nArrive Chicago (ORD)\nTerminal TERMINAL 1, Gate",
-    "startTime": "2026-05-29T10:24:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-29T13:06:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -273,6 +240,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "2026-06-13",
     "calendar": "Family",
     "colorId": "7"
+  },
+  {
+    "summary": "\u2708\ufe0f UA65 LIS \u2192 EWR",
+    "location": "Lisbon (LIS)",
+    "description": "Fri, Jun 12\n10:25 AM WEST\n[Flight] LIS to EWR\nUnited Airlines 65, Terminal 1, Gate\n12:55 PM EDT\nArrive Newark (EWR)\nTerminal B, Gate",
+    "startTime": "2026-06-12T05:25:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-12T12:55:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\u2708 UA65 LIS \u2192 EWR",
+    "location": "Lisbon (LIS) \u2192 Newark (EWR)",
+    "description": "United Airlines 65, Terminal 1\\nDepart: 10:25 AM WEST from LIS\\nArrive: 1:00 PM EDT at EWR, Terminal B",
+    "startTime": "2026-06-12T05:25:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-12T08:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -496,6 +485,14 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "Empower Online Delivery",
+      "subject": "Your Retirement Plan Regulatory Documents"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
       "sender": "PNC Alerts",
       "subject": "A new device was used to access your PNC Online Banking"
     },
@@ -526,14 +523,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "A peek inside my Pinterest board"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Cute stuff awaits."
     }
   ],
   "items": [
@@ -634,20 +623,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6fbef509a0e62",
       "sender": "Administration Office FASP"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"90 L Large Storage Bags, 6...\"",
-      "date": "2026-05-29",
-      "id": "19e7230006b9c774",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Ceecisee 50+ Women's...\" and \u20661\u2069 more item",
-      "date": "2026-05-29",
-      "id": "19e71f2033aab2ba",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
