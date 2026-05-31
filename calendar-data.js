@@ -493,8 +493,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "McGee & Co.",
+      "subject": "Why Wait? Comfort Delivered, Quickly."
+    },
     {
       "sender": "Tamara Kalinic from Material Witness",
       "subject": "Chic is not what you think it is | part 2"
