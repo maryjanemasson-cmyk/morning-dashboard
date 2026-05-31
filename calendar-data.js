@@ -493,19 +493,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "McGee & Co.",
-      "subject": "Why Wait? Comfort Delivered, Quickly."
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Chic is not what you think it is | part 2"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "BOSS",
+      "subject": "Up to 30% Off Father's Day Gifts"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
