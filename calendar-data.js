@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-05-30T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-05-30T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "\ud83c\udfeb PRISMS \u2014 Semester 2 Exams",
     "location": "",
     "description": "End of Semester 2 \u2014 Exam Week\nJun 5: Graduation Rehearsal / Placement Tests / Campus Cleanup",
@@ -262,6 +251,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-13T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-13T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e5b8d358ae9314",
+    "startTime": "2026-06-13T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-13T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   }
 ];
 
@@ -482,113 +493,42 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Chic is not what you think it is | part 2"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A new device was used to access your PNC Online Banking"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "3X Points + Spring Yard Deals Start Here"
     },
     {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 50.171.53.57"
+      "sender": "LOOK OPTIC",
+      "subject": "Flash Sale: Up to 60% Off!"
     },
     {
-      "sender": "Chase",
-      "subject": "Chase security alert: You signed in with a new device"
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
     },
     {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Welcome To Weather Labs"
+      "sender": "Walpole Outdoors",
+      "subject": "Build the Backyard You\u2019ll Never Want to Leave"
     },
     {
       "sender": "BOSS",
-      "subject": "Up to 30% Off Timeless BOSS Styles"
+      "subject": "Don't miss out on up to 30% off!"
     },
     {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Get up to 45% OFF select appliances \ud83c\udf89"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "A peek inside my Pinterest board"
+      "sender": "Life360",
+      "subject": "New on Life360: the subscription cleanup crew \ud83e\uddf9"
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for Zeyune 3 Pcs Spring Purple Faux",
-      "date": "2026-05-16",
-      "id": "19e326b485697d54",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for CUSHIONAIRE Miami Kitten Heels",
-      "date": "2026-05-16",
-      "id": "19e326a8a1696875",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for Cadence Extender - Adds",
-      "date": "2026-05-16",
-      "id": "19e3269e9272e7f1",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for Levi's Womens Flynn Western",
-      "date": "2026-05-16",
-      "id": "19e3201107cac5b7",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Zeyune 3 Pcs Spring Purple Faux",
-      "date": "2026-05-16",
-      "id": "19e31fc3fb993089",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Levi's Womens Flynn Western",
-      "date": "2026-05-16",
-      "id": "19e31fc1b32a7a4b",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: CUSHIONAIRE Miami Kitten Heels",
-      "date": "2026-05-16",
-      "id": "19e31fb7b7212378",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Levi's Womens Flynn Western",
-      "date": "2026-05-16",
-      "id": "19e31fb4b9382ee4",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Cadence Extender - Adds",
-      "date": "2026-05-16",
-      "id": "19e31fae5f1e3d1a",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
@@ -623,13 +563,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6fbef509a0e62",
       "sender": "Administration Office FASP"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #381669543980",
-      "date": "2026-05-30",
-      "id": "19e7612247e756ff",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
