@@ -493,15 +493,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 4,
   "threads": [
     {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Challenge : deviner le mot \""
+      "sender": "FASP Administration",
+      "subject": "Re: Arrival - Grade 8 is Coming Home"
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, your trip to Newark, NJ is starting soon!"
+      "sender": "Venmo",
+      "subject": "You paid Carla Dupont $220.00"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -510,10 +510,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"CRZ YOGA Secretsculpt...\""
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Snap up french botanical art \u26a1"
     }
   ],
   "items": [
