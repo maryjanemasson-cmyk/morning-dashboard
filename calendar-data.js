@@ -493,35 +493,43 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "BOSS",
-      "subject": "Up to 30% Off Father's Day Gifts"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "3X Points + Spring Yard Deals Start Here"
+      "sender": "IHG One Rewards",
+      "subject": "Enjoy a look at your May IHG One Rewards eStatement"
     },
     {
       "sender": "LOOK OPTIC",
-      "subject": "Flash Sale: Up to 60% Off!"
+      "subject": "Ending Soon: Free Collector's Case"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
+      "sender": "LOOK OPTIC",
+      "subject": "Only 4 Hours Left: Up to 60% Off"
     },
     {
-      "sender": "Walpole Outdoors",
-      "subject": "Build the Backyard You\u2019ll Never Want to Leave"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Don't forget! Let us know what you think."
     },
     {
-      "sender": "BOSS",
-      "subject": "Don't miss out on up to 30% off!"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"CRZ YOGA Secretsculpt...\""
     },
     {
-      "sender": "Life360",
-      "subject": "New on Life360: the subscription cleanup crew \ud83e\uddf9"
+      "sender": "Etsy",
+      "subject": "Snap up french botanical art \u26a1"
+    },
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: This is the reality of European-style social spending"
     }
   ],
   "items": [
@@ -559,6 +567,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6fbef509a0e62",
       "sender": "Administration Office FASP"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"CRZ YOGA Secretsculpt...\"",
+      "date": "2026-05-31",
+      "id": "19e804ef792a92e4",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
