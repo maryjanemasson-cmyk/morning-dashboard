@@ -745,19 +745,41 @@
     }
 
     // ── Weather ──
-    // Detect where the user actually is today: prefer an all-day "Trip — X"
-    // calendar event that contains today, else fall back to wttr.in's
-    // IP-based geolocation (which can be wildly wrong).
+    // Detect where the user actually is today. Preference order:
+    //   1. TRAVEL_DATA's active trip (and its current segment if multi-city)
+    //   2. A "Trip — X" calendar event with a city-shaped location
+    // The calendar-event path filters out junk like "Microsoft Teams Meeting"
+    // that TripIt imports as a placeholder.
     function currentLocation() {
-      const events = window.CALENDAR_EVENTS || [];
       const now = new Date();
       const todayIso = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+
+      // (1) TRAVEL_DATA — durable, manually-maintained
+      const trips = window.TRAVEL_DATA || [];
+      const active = trips.find(t => t.start && t.end && t.start <= todayIso && todayIso <= t.end);
+      if (active) {
+        // Multi-city: find the segment that contains today
+        if (Array.isArray(active.segments)) {
+          const seg = active.segments.find(s => s.start <= todayIso && todayIso <= s.end);
+          if (seg && seg.city) return seg.city;
+        }
+        // Single-city (or fallback): destination, stripped of the "→ X" tail
+        const dest = active.destination || '';
+        if (dest.includes('→')) {
+          return dest.split('→')[0].trim();
+        }
+        if (dest) return dest;
+      }
+
+      // (2) Calendar event fallback, with junk-location filter
+      const events = window.CALENDAR_EVENTS || [];
+      const junkLoc = /(teams|zoom|meet\.google|webex|skype|http|microsoft)/i;
       const trip = events.find(e => {
         const isTrip = (e.summary || '').toLowerCase().includes('trip');
         if (!isTrip || !e.location) return false;
+        if (junkLoc.test(e.location)) return false;
         const start = e.startDate || (e.startTime || '').slice(0, 10);
         const end   = e.endDate   || (e.endTime   || '').slice(0, 10);
-        // iCal all-day end dates are exclusive
         return start && end && start <= todayIso && todayIso < end;
       });
       return trip ? trip.location : null;
