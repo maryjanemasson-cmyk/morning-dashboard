@@ -273,17 +273,6 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
-  },
-  {
-    "summary": "June Trip - Paris",
-    "location": "Paris, France",
-    "description": "Mary Jane Hinrichs is in Paris, France from Jun 15 to 18, 2026",
-    "startTime": "",
-    "startDate": "2026-06-15",
-    "endTime": "",
-    "endDate": "2026-06-19",
-    "calendar": "Personal",
-    "colorId": ""
   }
 ];
 
