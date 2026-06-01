@@ -504,31 +504,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "Jen Sall",
-      "subject": "The places that stay with us"
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Challenge : deviner le mot \""
     },
     {
-      "sender": "Etsy",
-      "subject": "Made with heart \ud83e\udde1"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Hi, June \ud83d\udc52"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Styles Defining the Start of June"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Mon, 6/1 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, your trip to Newark, NJ is starting soon!"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -541,10 +525,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Snap up french botanical art \u26a1"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
     }
   ],
   "items": [
