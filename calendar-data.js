@@ -273,6 +273,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "June Trip - Paris",
+    "location": "Paris, France",
+    "description": "Mary Jane Hinrichs is in Paris, France from Jun 15 to 18, 2026",
+    "startTime": "",
+    "startDate": "2026-06-15",
+    "endTime": "",
+    "endDate": "2026-06-19",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -493,23 +504,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "PayPal",
+      "subject": "Apple Services: $26.97\u00a0USD"
     },
     {
-      "sender": "IHG One Rewards",
-      "subject": "Enjoy a look at your May IHG One Rewards eStatement"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Ending Soon: Free Collector's Case"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Only 4 Hours Left: Up to 60% Off"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 381615436231"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -555,25 +558,11 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "school",
-      "title": "Florida Trip Account PIN",
-      "date": "2026-05-28",
-      "id": "19e70494bf6c8f44",
-      "sender": "Administration Office FASP"
-    },
-    {
-      "type": "school",
-      "title": "Grade 8 Florida Trip - Information Update",
-      "date": "2026-05-28",
-      "id": "19e6fbef509a0e62",
-      "sender": "Administration Office FASP"
-    },
-    {
       "type": "delivery",
-      "title": "Shipped: \"CRZ YOGA Secretsculpt...\"",
-      "date": "2026-05-31",
-      "id": "19e804ef792a92e4",
-      "sender": "Amazon.com"
+      "title": "FedEx arriving tomorrow #381615436231",
+      "date": "2026-06-01",
+      "id": "19e818d1510fc518",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
