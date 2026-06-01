@@ -504,15 +504,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "PayPal",
-      "subject": "Apple Services: $26.97\u00a0USD"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 381615436231"
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -529,10 +525,6 @@ window.EMAIL_DATA = {
     {
       "sender": "classmanager@nassautennis.net",
       "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: This is the reality of European-style social spending"
     }
   ],
   "items": [
