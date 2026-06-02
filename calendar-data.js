@@ -493,8 +493,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 7,
   "threads": [
+    {
+      "sender": "Enza Costa",
+      "subject": "Waitlist Notification: The item you requested is back in stock"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
+    },
+    {
+      "sender": "REVOLVE",
+      "subject": "Your order #367058406 has been shipped"
+    },
+    {
+      "sender": "ATTIRE THE STUDIO",
+      "subject": "You left items in your cart"
+    },
     {
       "sender": "hpdirector nassautennis.net",
       "subject": "Month of May Summary - Nassau HPTA"
@@ -506,14 +522,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Venmo",
       "subject": "You paid Carla Dupont $220.00"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Don't forget! Let us know what you think."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"CRZ YOGA Secretsculpt...\""
     }
   ],
   "items": [
