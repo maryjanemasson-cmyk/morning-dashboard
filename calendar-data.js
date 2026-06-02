@@ -529,16 +529,16 @@ window.EMAIL_DATA = {
   "unreadCount": 6,
   "threads": [
     {
+      "sender": "New York Jets",
+      "subject": "Want To Jet Away To An Away Game? \u2708\ufe0f"
+    },
+    {
       "sender": "PayPal",
       "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
     },
     {
       "sender": "LinkedIn Guide to Creating via LinkedIn",
       "subject": "Turn Your Insight Into Influence"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Elsa Hosk's Off-Duty Trench"
     },
     {
       "sender": "The Shade Store",
