@@ -526,20 +526,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 2,
   "threads": [
-    {
-      "sender": "Almina Concept",
-      "subject": "Order 42463 confirmed"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "New arrivals you'll wear on repeat"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
@@ -570,13 +558,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\"",
-      "date": "2026-06-02",
-      "id": "19e8730413d831b1",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
