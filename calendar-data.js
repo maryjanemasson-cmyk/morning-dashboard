@@ -526,27 +526,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "service@paypal.com",
-      "subject": "Time to pick a monthly PayPal Debit category"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Tell us how we did"
-    },
-    {
-      "sender": "Glass House",
-      "subject": "You're Invited: Backyard Bash!"
-    },
-    {
-      "sender": "Synchrony Offers",
-      "subject": "Mary, don\u2019t forget your $500 in Synchrony Travel Credits"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for May"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
     },
     {
       "sender": "Ameriprise Financial",
@@ -567,6 +551,10 @@ window.EMAIL_DATA = {
     {
       "sender": "The Shade Store",
       "subject": "REMINDER: Your 25% Off is Waiting"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
     }
   ],
   "items": [
