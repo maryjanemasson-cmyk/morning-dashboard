@@ -526,8 +526,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for May"
+    },
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "Your latest account statement is available online"
+    },
     {
       "sender": "New York Jets",
       "subject": "Want To Jet Away To An Away Game? \u2708\ufe0f"
