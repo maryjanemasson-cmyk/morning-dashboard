@@ -526,8 +526,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 5,
   "threads": [
+    {
+      "sender": "Almina Concept",
+      "subject": "Order 42463 confirmed"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
@@ -535,18 +539,6 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "New arrivals you'll wear on repeat"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Attire The Studio",
-      "subject": "Your cart is waiting"
-    },
-    {
-      "sender": "Want to Burn Fat? | Golden Retire Memo",
-      "subject": "30-second \"Water Hack\u201d Helps Melt Stubborn Belly Fat (see how)"
     },
     {
       "sender": "Amazon.com",
