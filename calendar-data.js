@@ -11,50 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
-    "summary": "Trip Overview Summary",
-    "location": "Microsoft Teams Meeting",
-    "description": "Air Journey ORD - BOS   \n   \nTraveler: Mary Jane Hinrichs   \n   \nRecord Locator: WAVWZS   \n   \nFlight Segment  ORD - BOS   \nDeparture: Monday, 06/01/2026 10:25 am   \nLocation: Chicago, IL (ORD)   \nTerminal: TERMINAL 1   \n   \nUnited Airlines   \nFlight number: UA1606   \nSeat: 8C   \n   \nArrival: Monday, 06/01/2026 02:02 pm   \nLocation: Boston, MA (BOS)   \nTerminal: TERMINAL B   \n   \nConfirmation: K0MZ02   \n\nMicrosoft Teams meeting \nJoin: https://teams.microsoft.com/meet/316567632729595?p=mJXqNzBPweosHcwF5I\nMeeting ID: 316 567 632 729 595\nPasscode: VZ6uC2fo\nHelp: https://aka.ms/JoinTeamsMeeting?omkt=en-US\nSystem reference: https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d\n________________________________\nDial in by phone\n+1 213-458-8494,,999061232# United States, Los Angeles\n\nFind a local number: https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=999061232\nPhone conference ID: 999 061 232#\n________________________________\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 123 243 361 0\nMore info: https://www.webex.com/msteams?confid=1232433610&tenantkey=ipsen&domain=m.webex.com\n________________________________\nFor organisers\nMeeting options: https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_OTkyZDMzYTYtYmRhMi00YWI5LTgzNjAtMmM5YmI2ZDRkMDM4@thread.v2&messageId=0&language=en-US\nReset dial-in PIN: https://dialin.teams.microsoft.com/usp/pstnconferencing",
-    "startTime": "",
-    "startDate": "2026-06-01",
-    "endTime": "",
-    "endDate": "2026-06-02",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-06-01T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-01T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "\u2708\ufe0f UA1606 ORD \u2192 BOS",
-    "location": "Chicago (ORD)",
-    "description": "Mon, Jun 1\n10:25 AM CDT\n[Flight] ORD to BOS\nUnited Airlines 1606, Terminal TERMINAL 1, Gate\n2:02 PM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
-    "startTime": "2026-06-01T11:25:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-01T14:02:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "NSH Pick up at PHL (Return Flight) - lands at 8:37pm",
-    "location": "Philadelphia International Airport (PHL)",
-    "description": "Pickup window for return flight\n\n\u2708\ufe0f AA2900 Tampa \u2192 Philadelphia (evening)\nArrival: Philadelphia Airport around 8:37 PMMicrosoft Teams meeting \n\n",
-    "startTime": "2026-06-01T20:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-01T22:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "\ud83d\ude82 Amtrak - New London, CT - Union Station (NLC) \u2192 Princeton Junction, NJ (PJC)",
     "location": "New London, CT - Union Station (NLC); NLC, New London, CT - Union Station (NLC)",
     "description": "Wed, Jun 3\n7:11 PM EDT\n[Rail] Amtrak - New London, CT - Union Station (NLC) to Princeton Junction, NJ (PJC)\nDepart New London, CT - Union Station (NLC) NLC, New London, CT - Union Station (NLC)\n11:00 PM EDT\nArrive Princeton Junction, NJ (PJC) PJC, Princeton Junction, NJ (PJC)",
@@ -273,6 +229,83 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "June Trip - Paris",
+    "location": "Paris, France",
+    "description": "Mary Jane Hinrichs is in Paris, France from Jun 15 to 18, 2026",
+    "startTime": "",
+    "startDate": "2026-06-15",
+    "endTime": "",
+    "endDate": "2026-06-19",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e5b8dda8397e10",
+    "startTime": "2026-06-15T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-15T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
+    "summary": "Meghan bday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-15T07:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-15T08:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Meghan bday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-15T07:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-15T08:45:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-06-15T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-15T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Le Bellune Paris",
+    "location": "35 Boulevard Victor, Paris, 75015, France",
+    "description": "Mon, Jun 15\n3:00 PM CEST\n[Lodging] Arrive Le Bellune Paris\nCheck-In: 3:00pm\n35 Boulevard Victor, Paris, 75015, France\n+33 1 85 72 62 62",
+    "startTime": "2026-06-15T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-15T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\u2708\ufe0f UA54 EWR \u2192 CDG",
+    "location": "Newark (EWR)",
+    "description": "9:35 PM EDT\n[Flight] EWR to CDG\nUnited Airlines 54, Terminal TERMINAL C, Gate\nTue, Jun 16\n10:55 AM CEST\nArrive Paris (CDG)\nTerminal AEROGARE 1, Gate",
+    "startTime": "2026-06-15T21:35:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-16T04:55:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -496,32 +529,32 @@ window.EMAIL_DATA = {
   "unreadCount": 7,
   "threads": [
     {
-      "sender": "Enza Costa",
-      "subject": "Waitlist Notification: The item you requested is back in stock"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "New arrivals you'll wear on repeat"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Attire The Studio",
+      "subject": "Your cart is waiting"
+    },
+    {
+      "sender": "Want to Burn Fat? | Golden Retire Memo",
+      "subject": "30-second \"Water Hack\u201d Helps Melt Stubborn Belly Fat (see how)"
     },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
     },
     {
-      "sender": "REVOLVE",
-      "subject": "Your order #367058406 has been shipped"
-    },
-    {
-      "sender": "ATTIRE THE STUDIO",
-      "subject": "You left items in your cart"
-    },
-    {
       "sender": "hpdirector nassautennis.net",
       "subject": "Month of May Summary - Nassau HPTA"
-    },
-    {
-      "sender": "FASP Administration",
-      "subject": "Re: Arrival - Grade 8 is Coming Home"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Carla Dupont $220.00"
     }
   ],
   "items": [
@@ -548,10 +581,10 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "FedEx arriving tomorrow #381615436231",
-      "date": "2026-06-01",
-      "id": "19e818d1510fc518",
-      "sender": "FedEx Delivery Manager"
+      "title": "Shipped: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\"",
+      "date": "2026-06-02",
+      "id": "19e8730413d831b1",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
