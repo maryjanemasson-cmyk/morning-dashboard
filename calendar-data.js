@@ -526,8 +526,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 2,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
+    },
+    {
+      "sender": "LinkedIn Guide to Creating via LinkedIn",
+      "subject": "Turn Your Insight Into Influence"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Elsa Hosk's Off-Duty Trench"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "REMINDER: Your 25% Off is Waiting"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
