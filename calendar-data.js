@@ -526,8 +526,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Princeton Academy of Art",
+      "subject": "Register now! Starting soon at Princeton Academy of Art"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 381615436231"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Bloomingdale's Loyallist",
       "subject": "Your June Monthly Loyallist Rewards Statement"
@@ -555,18 +567,6 @@ window.EMAIL_DATA = {
     {
       "sender": "New York Jets",
       "subject": "Want To Jet Away To An Away Game? \u2708\ufe0f"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
-    },
-    {
-      "sender": "LinkedIn Guide to Creating via LinkedIn",
-      "subject": "Turn Your Insight Into Influence"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "REMINDER: Your 25% Off is Waiting"
     }
   ],
   "items": [
@@ -593,9 +593,9 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "FedEx shipped #872552592588",
-      "date": "2026-06-02",
-      "id": "19e8af8f7fac4aa4",
+      "title": "FedEx arriving tomorrow #381615436231",
+      "date": "2026-06-03",
+      "id": "19e8bd40e2d834e0",
       "sender": "FedEx Delivery Manager"
     },
     {
