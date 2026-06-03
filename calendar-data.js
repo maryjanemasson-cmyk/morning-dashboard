@@ -526,28 +526,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 9,
   "threads": [
-    {
-      "sender": "Reformation",
-      "subject": "SAVE SOME FOR US"
-    },
-    {
-      "sender": "Live Nation Concerts",
-      "subject": "On Sale: Heems at Pearl Street Warehouse"
-    },
-    {
-      "sender": "NORDSTROM CARD SERVICES",
-      "subject": "Don't have your card on you? Just use our app!"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "At Home in Kauai with Chan"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Merchant credit/refund was issued to your account"
-    },
     {
       "sender": "BOSS",
       "subject": "Up to 30% off ends today!"
@@ -567,6 +547,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Bloomingdale's Loyallist",
       "subject": "Your June Monthly Loyallist Rewards Statement"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, confirm your income"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Vacation Edit"
+    },
+    {
+      "sender": "Julia Marcum",
+      "subject": "If you cut my summer open\u2026"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
     }
   ],
   "items": [
