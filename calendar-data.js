@@ -526,8 +526,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Bloomingdale's Loyallist",
+      "subject": "Your June Monthly Loyallist Rewards Statement"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, confirm your income"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Vacation Edit"
+    },
+    {
+      "sender": "Julia Marcum",
+      "subject": "If you cut my summer open\u2026"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
@@ -551,10 +567,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Shade Store",
       "subject": "REMINDER: Your 25% Off is Waiting"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
     }
   ],
   "items": [
@@ -578,6 +590,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #872552592588",
+      "date": "2026-06-02",
+      "id": "19e8af8f7fac4aa4",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
