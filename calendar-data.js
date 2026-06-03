@@ -526,15 +526,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Princeton Academy of Art",
-      "subject": "Register now! Starting soon at Princeton Academy of Art"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 381615436231"
+      "sender": "Nina",
+      "subject": "RE: Faster clinical trial startups in Europe and Asia"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -567,6 +563,10 @@ window.EMAIL_DATA = {
     {
       "sender": "New York Jets",
       "subject": "Want To Jet Away To An Away Game? \u2708\ufe0f"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
     }
   ],
   "items": [
