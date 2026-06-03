@@ -526,8 +526,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Holafly",
+      "subject": "Mary! Today is the last day to use your discount for Portugal"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Up to 30% off ends today!"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Back in Stock: Muse in Shiny Rose Gold Brown Gradient Tint and Rose Gold"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 6/3 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
     {
       "sender": "Nina",
       "subject": "RE: Faster clinical trial startups in Europe and Asia"
@@ -547,26 +567,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chan Luu",
       "subject": "The Vacation Edit"
-    },
-    {
-      "sender": "Julia Marcum",
-      "subject": "If you cut my summer open\u2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
-    },
-    {
-      "sender": "Ameriprise Financial",
-      "subject": "Your latest account statement is available online"
-    },
-    {
-      "sender": "New York Jets",
-      "subject": "Want To Jet Away To An Away Game? \u2708\ufe0f"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
     }
   ],
   "items": [
