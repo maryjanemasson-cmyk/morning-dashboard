@@ -526,8 +526,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "FGT Customer Service",
+      "subject": "Know Before You Go To Gov Ball \ud83d\uddfd"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Final hours to save up to 30% off!"
+    },
+    {
+      "sender": "Walpole Outdoors",
+      "subject": "Mailbox Makeover Month: Save 20%"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your June 4 flight"
+    },
     {
       "sender": "MileagePlus Program",
       "subject": "Try Award Accelerator on your upcoming trip to Lisbon"
@@ -551,22 +567,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bloomingdale's Loyallist",
       "subject": "Your June Monthly Loyallist Rewards Statement"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, confirm your income"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Vacation Edit"
-    },
-    {
-      "sender": "Julia Marcum",
-      "subject": "If you cut my summer open\u2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"BELKIN USB 3.1 GEN 1 Type-C...\""
     }
   ],
   "items": [
