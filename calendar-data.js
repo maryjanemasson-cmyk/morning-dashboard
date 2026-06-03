@@ -526,8 +526,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Try Award Accelerator on your upcoming trip to Lisbon"
+    },
     {
       "sender": "BOSS",
       "subject": "Up to 30% off ends today!"
