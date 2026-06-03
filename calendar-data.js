@@ -526,23 +526,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "The Korean Skincare That Came Home With Me"
+      "sender": "Reformation",
+      "subject": "SAVE SOME FOR US"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
+      "sender": "Live Nation Concerts",
+      "subject": "On Sale: Heems at Pearl Street Warehouse"
     },
     {
-      "sender": "Etsy",
-      "subject": "Small shops, big creative chops"
+      "sender": "NORDSTROM CARD SERVICES",
+      "subject": "Don't have your card on you? Just use our app!"
     },
     {
-      "sender": "Holafly",
-      "subject": "Mary! Today is the last day to use your discount for Portugal"
+      "sender": "Chan Luu",
+      "subject": "At Home in Kauai with Chan"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Merchant credit/refund was issued to your account"
     },
     {
       "sender": "BOSS",
@@ -553,20 +557,16 @@ window.EMAIL_DATA = {
       "subject": "Back in Stock: Muse in Shiny Rose Gold Brown Gradient Tint and Rose Gold"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 6/3 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
       "sender": "Nina",
       "subject": "RE: Faster clinical trial startups in Europe and Asia"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Bloomingdale's Loyallist",
+      "subject": "Your June Monthly Loyallist Rewards Statement"
     }
   ],
   "items": [
