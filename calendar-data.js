@@ -529,6 +529,18 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "The Korean Skincare That Came Home With Me"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Small shops, big creative chops"
+    },
+    {
       "sender": "Holafly",
       "subject": "Mary! Today is the last day to use your discount for Portugal"
     },
@@ -555,18 +567,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Bloomingdale's Loyallist",
-      "subject": "Your June Monthly Loyallist Rewards Statement"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, confirm your income"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Vacation Edit"
     }
   ],
   "items": [
