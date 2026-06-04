@@ -504,19 +504,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 15,
   "threads": [
     {
+      "sender": "Shameless Snacks",
+      "subject": "Here's $10 to Feed Your Snack Addiction Mary Jane"
+    },
+    {
+      "sender": "COS",
+      "subject": "Take another look"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Welcome to the family."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 872664403502"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Order 6EE25BDA2E confirmed"
+    },
+    {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"OAKA Protein Gummies, 20g...\" and \u20663\u2069 more items"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence"
+      "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
     },
     {
       "sender": "French Language Accelerator",
@@ -533,18 +545,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
-    },
-    {
-      "sender": "Elizabeth Ferrara",
-      "subject": "Share Your Feedback"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Summer Knits, Always in Season."
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
     }
   ],
   "items": [
@@ -553,6 +553,13 @@ window.EMAIL_DATA = {
       "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
+      "date": "2026-05-28",
+      "id": "19e6e6679d15e68d",
       "sender": "return@amazon.com"
     },
     {
@@ -568,6 +575,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-04",
       "id": "19e90a92c08b2e8c",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #872664403502",
+      "date": "2026-06-04",
+      "id": "19e94b64d2041b21",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
