@@ -504,35 +504,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Our WAT Community"
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les points communs entre le fran\u00e7ais et l'anglais \""
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, your trip to Lisbon, Portugal is starting soon!"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Reformation",
+      "subject": "START SUMMERING"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "Chan Luu",
+      "subject": "The Baroque Pearl Tassel Necklace"
     },
     {
-      "sender": "BOSS",
-      "subject": "Up to 30% off ends today!"
+      "sender": "Sephora",
+      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Back in Stock: Muse in Shiny Rose Gold Brown Gradient Tint and Rose Gold"
+      "sender": "MyLowe's Rewards",
+      "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
     },
     {
-      "sender": "Nina",
-      "subject": "RE: Faster clinical trial startups in Europe and Asia"
+      "sender": "Etsy",
+      "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
+    },
+    {
+      "sender": "Elizabeth Ferrara",
+      "subject": "Share Your Feedback"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Summer Knits, Always in Season."
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
     }
   ],
   "items": [
