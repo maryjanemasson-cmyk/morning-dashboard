@@ -11,28 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
-    "summary": "\ud83d\ude82 Amtrak - New London, CT - Union Station (NLC) \u2192 Princeton Junction, NJ (PJC)",
-    "location": "New London, CT - Union Station (NLC); NLC, New London, CT - Union Station (NLC)",
-    "description": "Wed, Jun 3\n7:11 PM EDT\n[Rail] Amtrak - New London, CT - Union Station (NLC) to Princeton Junction, NJ (PJC)\nDepart New London, CT - Union Station (NLC) NLC, New London, CT - Union Station (NLC)\n11:00 PM EDT\nArrive Princeton Junction, NJ (PJC) PJC, Princeton Junction, NJ (PJC)",
-    "startTime": "2026-06-03T19:11:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-03T23:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "9"
-  },
-  {
-    "summary": "Amtrak: 177 Northeast Regional",
-    "location": "27 Water Street , New London CT 06320",
-    "description": "Your reservation number is 0E52E3. Use the Amtrak app to access your eTicket or change this reservation.",
-    "startTime": "2026-06-03T19:11:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-03T23:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "\ud83c\udf93 Christian (son) \u2014 School Ends",
     "location": "",
     "description": "CEH/\u00c9cole de Princeton school year ends.",
@@ -526,11 +504,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Nassau Tennis Club Leagues Team",
-      "subject": "Men's League - Spot opens for Men's Singles Thursday 9:30pm"
+      "sender": "WAT THE BRAND",
+      "subject": "Our WAT Community"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "UPS",
@@ -547,10 +533,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Nina",
       "subject": "RE: Faster clinical trial startups in Europe and Asia"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
@@ -577,10 +559,10 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "FedEx arriving tomorrow #381615436231",
-      "date": "2026-06-03",
-      "id": "19e8bd40e2d834e0",
-      "sender": "FedEx Delivery Manager"
+      "title": "Shipped: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items",
+      "date": "2026-06-04",
+      "id": "19e90a92c08b2e8c",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
