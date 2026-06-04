@@ -504,15 +504,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Alo Yoga",
-      "subject": "Your ALO order #39816550 has arrived"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"OAKA Protein Gummies, 20g...\" and \u20663\u2069 more items"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: New Scheduled Delivery Date and Estimated Delivery Time"
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
+    },
+    {
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence"
     },
     {
       "sender": "French Language Accelerator",
@@ -541,10 +545,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, May 28 2026"
     }
   ],
   "items": [
@@ -553,13 +553,6 @@ window.EMAIL_DATA = {
       "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
       "date": "2026-05-23",
       "id": "19e54e42527ad455",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
-      "date": "2026-05-28",
-      "id": "19e6e6679d15e68d",
       "sender": "return@amazon.com"
     },
     {
