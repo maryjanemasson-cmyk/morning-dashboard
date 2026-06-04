@@ -504,23 +504,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "Alo Yoga",
+      "subject": "Your ALO order #39816550 has arrived"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: New Scheduled Delivery Date and Estimated Delivery Time"
+    },
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Les points communs entre le fran\u00e7ais et l'anglais \""
-    },
-    {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, your trip to Lisbon, Portugal is starting soon!"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "START SUMMERING"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Baroque Pearl Tassel Necklace"
     },
     {
       "sender": "Sephora",
@@ -545,6 +541,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, May 28 2026"
     }
   ],
   "items": [
