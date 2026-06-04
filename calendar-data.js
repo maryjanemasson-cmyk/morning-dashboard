@@ -526,27 +526,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "FGT Customer Service",
-      "subject": "Know Before You Go To Gov Ball \ud83d\uddfd"
+      "sender": "Nassau Tennis Club Leagues Team",
+      "subject": "Men's League - Spot opens for Men's Singles Thursday 9:30pm"
     },
     {
-      "sender": "BOSS",
-      "subject": "Final hours to save up to 30% off!"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Mailbox Makeover Month: Save 20%"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your June 4 flight"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Try Award Accelerator on your upcoming trip to Lisbon"
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
     },
     {
       "sender": "BOSS",
@@ -563,10 +551,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Bloomingdale's Loyallist",
-      "subject": "Your June Monthly Loyallist Rewards Statement"
     }
   ],
   "items": [
