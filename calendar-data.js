@@ -504,27 +504,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Shameless Snacks",
-      "subject": "Here's $10 to Feed Your Snack Addiction Mary Jane"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Host, shop, celebrate! June's here with summer deals \u2600\ufe0f"
     },
     {
-      "sender": "COS",
-      "subject": "Take another look"
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Lisbon"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "Welcome to the family."
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access Ends At Midnight"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 872664403502"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Order 6EE25BDA2E confirmed"
+      "sender": "Cape May Yoga",
+      "subject": "Cape May Yoga has changed booking software!"
     },
     {
       "sender": "Amazon.com",
@@ -545,6 +541,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
+    },
+    {
+      "sender": "Elizabeth Ferrara",
+      "subject": "Share Your Feedback"
     }
   ],
   "items": [
