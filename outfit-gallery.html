@@ -1043,90 +1043,89 @@
     }
 
     // Create new outfit
-    // Format an outfit slide as readable plain text and put it on the clipboard
-    // so the user can paste into Notes, Messages, email, etc.
+    // Render the outfit's layout to an offscreen canvas and put the resulting
+    // PNG on the clipboard — paste into Messages, Notes, email, etc.
     async function copyOutfitToClipboard(slide, btn) {
       const o = outfits.find(x => x.slide === slide);
       if (!o) { alert('Outfit not found.'); return; }
       const edit = _outfitEdits[slide] || {};
-      const name = edit.name || o.name || ('Outfit #' + slide);
-      const season = edit.season || o.season || '';
-      const occasion = edit.occasion || o.occasion || o._filterCat || '';
-      const tags = edit.tags || o._tags || [];
       const layout = (edit.layout && edit.layout.length) ? edit.layout : (o.layout || []);
+      if (!layout.length) { alert('No pieces in this outfit yet.'); return; }
 
-      // Build piece descriptions, looking up the wardrobe catalog
-      const wardrobe = window.WARDROBE_ITEMS || [];
-      const byId = new Map();
-      wardrobe.forEach(it => {
-        const f = (it.file || '').replace(/\.(png|jpg|jpeg|webp)$/i, '').toLowerCase();
-        if (f) byId.set(f, it);
-      });
-      function describe(file) {
-        const base = (file || '').replace(/^.*\//, '').replace(/\.(png|jpg|jpeg|webp)$/i, '').toLowerCase();
-        const it = byId.get(base);
-        if (!it) return base;  // unknown — just use the id
-        const sub = (it.subcategory || '').replace(/s$/, '');
-        const color = (it.colors || [])[0] || '';
-        const brand = (it.labels || [])[0] || '';
-        const parts = [];
-        if (brand) parts.push(brand);
-        if (color) parts.push(color);
-        if (sub) parts.push(sub);
-        return `${parts.join(' ')} (${base})`;
+      const orig = btn.textContent;
+      btn.textContent = '⏳ Rendering…';
+
+      // 4:5 portrait canvas — pasteable Instagram/Notes-friendly size.
+      const W = 1080, H = 1350;
+      const canvas = document.createElement('canvas');
+      canvas.width = W; canvas.height = H;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#f9f7f4';  // match dashboard cream
+      ctx.fillRect(0, 0, W, H);
+
+      // Helper to resolve the same src the preview renderer uses
+      function resolveSrc(item) {
+        const f = item.file.startsWith('../') ? item.file.substring(3) : item.file;
+        const checkFile = (item._origFile || f).replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
+        const cropKey = checkFile.replace(/\./g, '_');
+        const cropped = _wardrobeCrops && _wardrobeCrops[cropKey];
+        if (cropped) return cropped;
+        if (f.startsWith('data:')) return f;
+        if (f.startsWith('wardrobe-thumbs/')) return f;
+        return IMG_PATH + f;
+      }
+      function loadImg(src) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          // Only set crossOrigin for remote http(s) URLs (not data: URIs)
+          if (/^https?:/i.test(src)) img.crossOrigin = 'anonymous';
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('failed to load ' + src.slice(0, 80)));
+          img.src = src;
+        });
       }
 
-      // Group pieces by category for the output
-      const buckets = new Map();
-      const seen = new Set();
-      layout.forEach(item => {
-        const file = item._origFile || item.file || '';
-        const base = (file || '').replace(/^.*\//, '').replace(/\.(png|jpg|jpeg|webp)$/i, '').toLowerCase();
-        if (seen.has(base)) return;  // dedupe — layout can repeat (e.g. one item placed twice)
-        seen.add(base);
-        const it = byId.get(base);
-        const cat = (it && it.category) || 'Other';
-        if (!buckets.has(cat)) buckets.set(cat, []);
-        buckets.get(cat).push(describe(file));
-      });
-      const CAT_ORDER = ['Tops','Knitwear','Dresses','Jackets & Coats','Pants','Skirts','Shoes','Bags','Accessories','Other'];
-      const orderedCats = CAT_ORDER.filter(c => buckets.has(c))
-        .concat([...buckets.keys()].filter(c => !CAT_ORDER.includes(c)));
-
-      // Assemble the text
-      const lines = [];
-      lines.push(`Outfit #${slide} — "${name}"`);
-      const meta = [season, occasion].filter(Boolean).join(' / ');
-      if (meta) lines.push(meta);
-      if (tags.length) lines.push('Tags: ' + tags.join(', '));
-      lines.push(`${seen.size} piece${seen.size === 1 ? '' : 's'}:`);
-      lines.push('');
-      orderedCats.forEach(cat => {
-        const arr = buckets.get(cat);
-        lines.push(`${cat} (${arr.length})`);
-        arr.forEach(d => lines.push('• ' + d));
-        lines.push('');
-      });
-      const text = lines.join('\n').trimEnd();
-
       try {
-        await navigator.clipboard.writeText(text);
-        const orig = btn.textContent;
-        btn.textContent = '✓ Copied';
-        btn.style.background = '#e7f4ec';
-        setTimeout(() => {
-          btn.textContent = orig;
-          btn.style.background = '';
-        }, 1500);
+        // Draw each piece at its layout-percent position
+        for (const item of layout) {
+          const src = resolveSrc(item);
+          let img;
+          try {
+            img = await loadImg(src);
+          } catch (e) {
+            console.warn('skipping piece, image failed:', item.file, e);
+            continue;
+          }
+          const x = (item.left   / 100) * W;
+          const y = (item.top    / 100) * H;
+          const w = (item.width  / 100) * W;
+          const h = (item.height / 100) * H;
+          ctx.drawImage(img, x, y, w, h);
+        }
+
+        // Convert canvas → Blob → clipboard
+        const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+        if (!blob) throw new Error('canvas.toBlob returned null');
+
+        if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
+          await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+          btn.textContent = '✓ Image copied';
+          btn.style.background = '#e7f4ec';
+        } else {
+          // Fallback: download the PNG so the user can attach/paste manually
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url; a.download = `outfit_${slide}.png`;
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 5000);
+          btn.textContent = '↓ Downloaded';
+        }
       } catch (e) {
-        // Fallback for older browsers / restricted contexts: textarea trick
-        const ta = document.createElement('textarea');
-        ta.value = text; document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); btn.textContent = '✓ Copied'; }
-        catch { alert('Copy failed: ' + e.message); }
-        document.body.removeChild(ta);
-        setTimeout(() => { btn.textContent = '📋 Copy'; }, 1500);
+        console.error('[copy outfit]', e);
+        btn.textContent = '✗ Failed';
+        alert('Could not copy image: ' + (e.message || e));
+      } finally {
+        setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 1800);
       }
     }
 
