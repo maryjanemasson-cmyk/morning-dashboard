@@ -82,6 +82,13 @@
     }
     .outfit-card:hover .delete-card-btn { opacity:1; }
     .outfit-card .delete-card-btn:hover { background:#fde8e8; }
+    .outfit-card .duplicate-card-btn {
+      position:absolute; top:6px; right:70px; background:rgba(255,255,255,0.9);
+      border:none; border-radius:4px; padding:2px 6px; font-size:0.7rem;
+      color:#4a8c6f; cursor:pointer; z-index:5; opacity:0; transition:opacity 0.15s;
+    }
+    .outfit-card:hover .duplicate-card-btn { opacity:1; }
+    .outfit-card .duplicate-card-btn:hover { background:#e7f4ec; }
 
     /* Detail modal */
     .modal-overlay {
@@ -532,6 +539,7 @@
           <div class="outfit-preview" onclick="showDetail(${o.slide})">
             <span class="drag-handle">&#x2630;</span>
             <button class="delete-card-btn" onclick="event.stopPropagation();deleteOutfitCard(${o.slide})">&times; Delete</button>
+            <button class="duplicate-card-btn" onclick="event.stopPropagation();duplicateOutfit(${o.slide})" title="Duplicate this outfit">📋 Copy</button>
             ${previewImgs}
           </div>
           <div class="outfit-card-info">
@@ -1035,6 +1043,46 @@
     }
 
     // Create new outfit
+    // Duplicate an existing outfit: clone its layout, season, occasion, tags
+    // under a fresh slide ID. The new outfit opens in edit mode so the user
+    // can tweak it immediately.
+    function duplicateOutfit(srcSlide) {
+      const src = outfits.find(o => o.slide === srcSlide);
+      if (!src) { alert('Source outfit not found.'); return; }
+      const maxSlide = Math.max(...outfits.map(o => o.slide), 0);
+      const newSlide = maxSlide + 1;
+      const srcEdit = _outfitEdits[srcSlide] || {};
+      const srcName = (srcEdit.name || src.name || src._filterCat || 'Outfit') + ' (copy)';
+      const updates = {
+        occasion: srcEdit.occasion || src.occasion || src._filterCat || 'Casual',
+        season:   srcEdit.season   || src.season   || 'Spring',
+        name:     srcName,
+        // Deep-copy layout so edits to the new outfit don't mutate the source
+        layout:   JSON.parse(JSON.stringify(srcEdit.layout || src.layout || [])),
+        tags:     [...(srcEdit.tags || src._tags || [])],
+      };
+      // Local outfits[] entry so render() shows it without waiting for Firebase
+      outfits.push({
+        slide: newSlide,
+        name: srcName,
+        occasion: updates.occasion,
+        season: updates.season,
+        images: [], image_count: 0, sized_images: [],
+        layout: updates.layout,
+        _tags: updates.tags,
+        _filterCat: updates.occasion,
+      });
+      _outfitEdits[newSlide] = updates;
+      db.ref('outfitEdits/' + newSlide).set(updates).then(() => {
+        render();
+        // Open the duplicate in edit mode so the user lands right in editing
+        _editingOutfit = newSlide;
+        _editMode = true;
+        _editLayout = updates.layout;
+        renderDetail();
+      });
+    }
+
     function createNewOutfit() {
       // Generate next slide number (after all existing)
       const maxSlide = Math.max(...outfits.map(o => o.slide), 0);
