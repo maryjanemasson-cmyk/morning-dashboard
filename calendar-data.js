@@ -11,28 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
-    "summary": "\ud83c\udf93 Christian (son) \u2014 School Ends",
-    "location": "",
-    "description": "CEH/\u00c9cole de Princeton school year ends.",
-    "startTime": "",
-    "startDate": "2026-06-04",
-    "endTime": "",
-    "endDate": "2026-06-05",
-    "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "\u2708\ufe0f UA1307 BOS \u2192 EWR",
-    "location": "Boston (BOS)",
-    "description": "Thu, Jun 4\n9:30 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 1307, Terminal TERMINAL B, Gate\n10:58 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
-    "startTime": "2026-06-04T09:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-04T10:58:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "\ud83c\udf93 PRISMS \u2014 Commencement / Last Day",
     "location": "19 Lambert Drive, Princeton, NJ 08540",
     "description": "Commencement Ceremony \u2014 Summer Break begins after ceremony\nPRISMS, 19 Lambert Drive, Princeton NJ",
@@ -284,6 +262,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "\u2708\ufe0f UA56 CDG \u2192 EWR",
+    "location": "Paris (CDG)",
+    "description": "Thu, Jun 18\n9:45 AM CEST\n[Flight] CDG to EWR\nUnited Airlines 56, Terminal AEROGARE 1, Gate\n11:55 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-06-18T03:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-18T11:55:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Le Bellune Paris",
+    "location": "35 Boulevard Victor, Paris, 75015, France",
+    "description": "11:00 AM CEST\n[Lodging] Depart Le Bellune Paris\nCheck-Out: 11:00am\n35 Boulevard Victor, Paris, 75015, France\n+33 1 85 72 62 62",
+    "startTime": "2026-06-18T05:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-18T06:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "Your Appointment at Suite Blend Color Bar",
+    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
+    "description": "SERVICES\nHaircut, Single Color Root Touch Up\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/4ec0c8963b6674613e03846af6b4cebd5e84",
+    "startTime": "2026-06-18T12:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-18T14:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -504,8 +515,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $11,457.87 deposit was credited to your account."
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Summer Fridays Tinted Lip...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $380.73 deposit was credited to your account."
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Sale is live! Save up to 40% \u2600\ufe0f"
+    },
+    {
+      "sender": "Jamie Reed Reed",
+      "subject": "Confidential Leadership Opportunity Aligned With Your Translational Science Background"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Host, shop, celebrate! June's here with summer deals \u2600\ufe0f"
@@ -521,30 +556,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Cape May Yoga",
       "subject": "Cape May Yoga has changed booking software!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Les points communs entre le fran\u00e7ais et l'anglais \""
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
-    },
-    {
-      "sender": "Elizabeth Ferrara",
-      "subject": "Share Your Feedback"
     }
   ],
   "items": [
@@ -571,17 +582,10 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items",
-      "date": "2026-06-04",
-      "id": "19e90a92c08b2e8c",
+      "title": "Shipped: \"Summer Fridays Tinted Lip...\" and \u20661\u2069 more item",
+      "date": "2026-06-05",
+      "id": "19e96498c8bdef92",
       "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #872664403502",
-      "date": "2026-06-04",
-      "id": "19e94b64d2041b21",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
