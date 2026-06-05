@@ -1108,6 +1108,8 @@
         }
         if (skipped.length) {
           console.warn(`[copy outfit] ${skipped.length} piece(s) skipped:`, skipped);
+          // Show skip count as a hover-tooltip on the button + browser-tab status
+          btn.title = `${skipped.length} piece(s) couldn't load:\n` + skipped.join('\n');
         }
 
         // Convert canvas → Blob → clipboard
@@ -1116,8 +1118,15 @@
 
         if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
           await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-          btn.textContent = '✓ Image copied';
-          btn.style.background = '#e7f4ec';
+          btn.textContent = skipped.length ? `✓ Copied (${skipped.length} missing)` : '✓ Image copied';
+          btn.style.background = skipped.length ? '#fff3cd' : '#e7f4ec';
+          if (skipped.length) {
+            // Show the user a list of which pieces didn't make it
+            const msg = `Image copied, but ${skipped.length} piece(s) couldn't load:\n\n` +
+                        skipped.slice(0, 10).join('\n') +
+                        (skipped.length > 10 ? `\n…and ${skipped.length - 10} more` : '');
+            setTimeout(() => alert(msg), 200);
+          }
         } else {
           // Fallback: download the PNG so the user can attach/paste manually
           const url = URL.createObjectURL(blob);
