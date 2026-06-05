@@ -515,35 +515,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 4,
   "threads": [
+    {
+      "sender": "Thumbtack",
+      "subject": "2026 Updates to the Thumbtack Terms of Use"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udfac Epic fantasy and wild parody take the screen"
+    },
+    {
+      "sender": "iCloud",
+      "subject": "Join Christian  Hinrichs\u2019s \u201cWork\u201d calendar?"
+    },
     {
       "sender": "Laurel and Blush",
       "subject": "Are you in the trade?"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Your Paris trip: Eliminate jet lag with Timeshifter"
-    },
-    {
-      "sender": "COS Customer Service",
-      "subject": "Thank you for shopping at COS"
-    },
-    {
-      "sender": "COS Customer Service",
-      "subject": "Your COS order is on its way"
-    },
-    {
-      "sender": "Administration Office FASP",
-      "subject": "Afterschool Program - Week of June 8-12"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
     }
   ],
   "items": [
