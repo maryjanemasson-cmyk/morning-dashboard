@@ -1076,12 +1076,20 @@
       }
       function loadImg(src) {
         return new Promise((resolve, reject) => {
-          const img = new Image();
-          // Only set crossOrigin for remote http(s) URLs (not data: URIs)
-          if (/^https?:/i.test(src)) img.crossOrigin = 'anonymous';
-          img.onload = () => resolve(img);
-          img.onerror = () => reject(new Error('failed to load ' + src.slice(0, 80)));
-          img.src = src;
+          const tryLoad = (useCors) => {
+            const img = new Image();
+            if (useCors && !src.startsWith('data:')) img.crossOrigin = 'anonymous';
+            img.onload = () => resolve(img);
+            img.onerror = () => {
+              // If the CORS attempt failed (e.g. server doesn't send the
+              // header), retry without it. The image will load but the canvas
+              // will be tainted — we let that bubble up to toBlob below.
+              if (useCors) tryLoad(false);
+              else reject(new Error('failed to load ' + src.slice(0, 80)));
+            };
+            img.src = src;
+          };
+          tryLoad(true);
         });
       }
 
