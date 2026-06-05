@@ -515,8 +515,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 2,
+  "unreadCount": 7,
   "threads": [
+    {
+      "sender": "Laurel and Blush",
+      "subject": "Are you in the trade?"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Your Paris trip: Eliminate jet lag with Timeshifter"
+    },
+    {
+      "sender": "COS Customer Service",
+      "subject": "Thank you for shopping at COS"
+    },
+    {
+      "sender": "COS Customer Service",
+      "subject": "Your COS order is on its way"
+    },
+    {
+      "sender": "Administration Office FASP",
+      "subject": "Afterschool Program - Week of June 8-12"
+    },
     {
       "sender": "UPS",
       "subject": "Your UPS Package was delivered"
