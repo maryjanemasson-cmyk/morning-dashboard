@@ -1076,23 +1076,18 @@
       }
       function loadImg(src) {
         return new Promise((resolve, reject) => {
-          const tryLoad = (useCors) => {
-            const img = new Image();
-            if (useCors && !src.startsWith('data:')) img.crossOrigin = 'anonymous';
-            img.onload = () => resolve(img);
-            img.onerror = () => {
-              // If the CORS attempt failed (e.g. server doesn't send the
-              // header), retry without it. The image will load but the canvas
-              // will be tainted — we let that bubble up to toBlob below.
-              if (useCors) tryLoad(false);
-              else reject(new Error('failed to load ' + src.slice(0, 80)));
-            };
-            img.src = src;
-          };
-          tryLoad(true);
+          const img = new Image();
+          // Always request with CORS unless it's a data: URI. If the server
+          // doesn't send the right header, the load fails and we reject —
+          // the caller skips that piece rather than tainting the canvas.
+          if (!src.startsWith('data:')) img.crossOrigin = 'anonymous';
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('CORS or 404: ' + src.slice(0, 100)));
+          img.src = src;
         });
       }
 
+      const skipped = [];
       try {
         // Draw each piece at its layout-percent position
         for (const item of layout) {
@@ -1101,7 +1096,8 @@
           try {
             img = await loadImg(src);
           } catch (e) {
-            console.warn('skipping piece, image failed:', item.file, e);
+            console.warn('[copy outfit] SKIPPED', item.file, '→', e.message);
+            skipped.push(item.file);
             continue;
           }
           const x = (item.left   / 100) * W;
@@ -1109,6 +1105,9 @@
           const w = (item.width  / 100) * W;
           const h = (item.height / 100) * H;
           ctx.drawImage(img, x, y, w, h);
+        }
+        if (skipped.length) {
+          console.warn(`[copy outfit] ${skipped.length} piece(s) skipped:`, skipped);
         }
 
         // Convert canvas → Blob → clipboard
