@@ -515,32 +515,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 7,
   "threads": [
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $11,457.87 deposit was credited to your account."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Summer Fridays Tinted Lip...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $380.73 deposit was credited to your account."
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Lisbon"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access Ends At Midnight"
-    },
-    {
-      "sender": "Cape May Yoga",
-      "subject": "Cape May Yoga has changed booking software!"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
@@ -556,6 +532,18 @@ window.EMAIL_DATA = {
     {
       "sender": "MyLowe's Rewards",
       "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
+    },
+    {
+      "sender": "Elizabeth Ferrara",
+      "subject": "Share Your Feedback"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Summer Knits, Always in Season."
     }
   ],
   "items": [
@@ -579,13 +567,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Summer Fridays Tinted Lip...\" and \u20661\u2069 more item",
-      "date": "2026-06-05",
-      "id": "19e96498c8bdef92",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
