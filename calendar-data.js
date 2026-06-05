@@ -518,8 +518,8 @@ window.EMAIL_DATA = {
   "unreadCount": 2,
   "threads": [
     {
-      "sender": "Bradford Carpenter",
-      "subject": "URGENT: End-of-Year Cleanup Today"
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
     },
     {
       "sender": "Amazon.com",
