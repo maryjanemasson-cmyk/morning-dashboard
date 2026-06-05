@@ -515,47 +515,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 2,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "YOUR RETURN CONFIRMATION"
-    },
-    {
-      "sender": "Chris Loves Julia",
-      "subject": "9 things every summer party needs"
-    },
-    {
-      "sender": "COS",
-      "subject": "Welcome to COS Membership"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "BOSS Summer Sale Starts Now!"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "FREE gifts on Dad's wishlist\ud83e\udd73"
-    },
-    {
-      "sender": "American Airlines",
-      "subject": "Your trip confirmation (JFK - JAC)"
+      "sender": "Bradford Carpenter",
+      "subject": "URGENT: End-of-Year Cleanup Today"
     },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Les points communs entre le fran\u00e7ais et l'anglais \""
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
     }
   ],
   "items": [
