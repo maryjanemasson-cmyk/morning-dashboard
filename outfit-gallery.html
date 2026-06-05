@@ -1055,8 +1055,10 @@
       const orig = btn.textContent;
       btn.textContent = '⏳ Rendering…';
 
-      // 4:5 portrait canvas — pasteable Instagram/Notes-friendly size.
-      const W = 1080, H = 1350;
+      // 16:9 canvas matches the dashboard's .outfit-preview aspect ratio
+      // (padding-bottom: 56.25%), so the layout positions/sizes — which are
+      // percent-based and designed for that ratio — render undistorted.
+      const W = 1920, H = 1080;
       const canvas = document.createElement('canvas');
       canvas.width = W; canvas.height = H;
       const ctx = canvas.getContext('2d');
