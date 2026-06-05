@@ -515,8 +515,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "YOUR RETURN CONFIRMATION"
+    },
+    {
+      "sender": "Chris Loves Julia",
+      "subject": "9 things every summer party needs"
+    },
+    {
+      "sender": "COS",
+      "subject": "Welcome to COS Membership"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "BOSS Summer Sale Starts Now!"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "FREE gifts on Dad's wishlist\ud83e\udd73"
+    },
+    {
+      "sender": "American Airlines",
+      "subject": "Your trip confirmation (JFK - JAC)"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
@@ -528,22 +556,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sephora",
       "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
-    },
-    {
-      "sender": "Elizabeth Ferrara",
-      "subject": "Share Your Feedback"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Summer Knits, Always in Season."
     }
   ],
   "items": [
@@ -567,6 +579,13 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Out for delivery: \"CRZ YOGA Secretsculpt...\"",
+      "date": "2026-06-05",
+      "id": "19e97f288c34d084",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
