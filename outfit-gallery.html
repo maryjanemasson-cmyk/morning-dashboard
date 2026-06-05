@@ -1077,13 +1077,17 @@
       function loadImg(src) {
         return new Promise((resolve, reject) => {
           const img = new Image();
-          // Always request with CORS unless it's a data: URI. If the server
-          // doesn't send the right header, the load fails and we reject —
-          // the caller skips that piece rather than tainting the canvas.
-          if (!src.startsWith('data:')) img.crossOrigin = 'anonymous';
+          let finalSrc = src;
+          if (!src.startsWith('data:')) {
+            img.crossOrigin = 'anonymous';
+            // Cache-bust so we don't reuse a cached response from an earlier
+            // <img> load (which would have been cached without the CORS
+            // attribute, causing this CORS-mode request to fail/taint).
+            finalSrc = src + (src.includes('?') ? '&' : '?') + 'cb=' + Date.now();
+          }
           img.onload = () => resolve(img);
           img.onerror = () => reject(new Error('CORS or 404: ' + src.slice(0, 100)));
-          img.src = src;
+          img.src = finalSrc;
         });
       }
 
