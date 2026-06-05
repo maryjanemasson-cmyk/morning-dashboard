@@ -515,7 +515,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 15,
   "threads": [
     {
       "sender": "PNC Alerts",
@@ -530,22 +530,6 @@ window.EMAIL_DATA = {
       "subject": "A $380.73 deposit was credited to your account."
     },
     {
-      "sender": "Hotels.com",
-      "subject": "Sale is live! Save up to 40% \u2600\ufe0f"
-    },
-    {
-      "sender": "Jamie Reed Reed",
-      "subject": "Confidential Leadership Opportunity Aligned With Your Translational Science Background"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Host, shop, celebrate! June's here with summer deals \u2600\ufe0f"
-    },
-    {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Lisbon"
     },
@@ -556,6 +540,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Cape May Yoga",
       "subject": "Cape May Yoga has changed booking software!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Starbucks Whole Coffee...\" and \u20664\u2069 more items"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les points communs entre le fran\u00e7ais et l'anglais \""
+    },
+    {
+      "sender": "Sephora",
+      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
     }
   ],
   "items": [
