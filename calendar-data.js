@@ -537,8 +537,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "We know we're cute"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Amazon Shipping US",
+      "subject": "Your Shameless Foods LLC package was delivered"
+    },
+    {
+      "sender": "COS Customer Service",
+      "subject": "Your order has arrived"
+    },
     {
       "sender": "Reformation",
       "subject": "Take a good look"
@@ -562,22 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Shade Store",
       "subject": "ENDING SOON: The Summer Design Event"
-    },
-    {
-      "sender": "Google Play",
-      "subject": "Your Google Play Order Receipt from Jun 6, 2026"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 06 Jun 2026"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 6/6 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
     }
   ],
   "items": [
