@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\ud83c\udfeb PRISMS \u2014 Semester 2 Exams",
-    "location": "",
-    "description": "End of Semester 2 \u2014 Exam Week\nJun 5: Graduation Rehearsal / Placement Tests / Campus Cleanup",
-    "startTime": "",
-    "startDate": "2026-06-01",
-    "endTime": "",
-    "endDate": "2026-06-06",
-    "calendar": "Family",
-    "colorId": "2"
-  },
-  {
     "summary": "\ud83c\udf93 PRISMS \u2014 Commencement / Last Day",
     "location": "19 Lambert Drive, Princeton, NJ 08540",
     "description": "Commencement Ceremony \u2014 Summer Break begins after ceremony\nPRISMS, 19 Lambert Drive, Princeton NJ",
@@ -295,6 +284,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "DC Trip \u2014 Dupont Circle Hotel",
+    "location": "The Dupont Circle Hotel, 1500 New Hampshire Ave NW, Washington, DC 20036",
+    "description": "Personal family trip to Washington DC\nDriving from Princeton\nStaying at The Dupont Circle Hotel\nDriving back June 21\n\nNote: Departing on Juneteenth (federal holiday) \u2014 expect heavier traffic on I-95/295.",
+    "startTime": "",
+    "startDate": "2026-06-19",
+    "endTime": "",
+    "endDate": "2026-06-22",
+    "calendar": "Family",
+    "colorId": "10"
+  },
+  {
+    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Juneteenth (No School)",
+    "location": "",
+    "description": "School Closed: Juneteenth Day",
+    "startTime": "",
+    "startDate": "2026-06-19",
+    "endTime": "",
+    "endDate": "2026-06-20",
+    "calendar": "Family",
+    "colorId": "5"
   }
 ];
 
@@ -515,27 +526,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "PNC Alerts",
-      "subject": "A new device was used to access your PNC Online Banking"
+      "sender": "Amazon.com",
+      "subject": "Amazon.com order of Camino Island: A Novel."
     },
     {
-      "sender": "United Airlines",
-      "subject": "Quick reminders about your upcoming trip to Lisbon"
+      "sender": "Shop",
+      "subject": "Your Almina Concept  cart? Saved \u2705 over on Shop"
     },
     {
-      "sender": "Thumbtack",
-      "subject": "2026 Updates to the Thumbtack Terms of Use"
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 6, 2026"
     },
     {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udfac Epic fantasy and wild parody take the screen"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 381828052107"
     },
     {
-      "sender": "Laurel and Blush",
-      "subject": "Are you in the trade?"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Anderic",
+      "subject": "Anderic - Newsletter: How To Find The Right Replacement? Summer Energy Tips"
+    },
+    {
+      "sender": "Amazon Shipping US",
+      "subject": "Your package from Shameless Foods LLC has shipped"
+    },
+    {
+      "sender": "Nike",
+      "subject": "Your Nike gear has shipped"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 2600:4040:a031:4500:bd61:e5fb:17c:e68a"
     }
   ],
   "items": [
@@ -561,13 +592,6 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "delivery",
-      "title": "Out for delivery: \"CRZ YOGA Secretsculpt...\"",
-      "date": "2026-06-05",
-      "id": "19e97f288c34d084",
-      "sender": "Amazon.com"
-    },
-    {
       "type": "class",
       "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
       "name": "Lagree - Foundations - 45 minutes",
@@ -577,6 +601,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e5b8b25412e4a6",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item",
+      "date": "2026-06-06",
+      "id": "19e9ac81709e0c30",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
