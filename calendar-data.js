@@ -526,24 +526,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 9,
   "threads": [
-    {
-      "sender": "Amazon.com",
-      "subject": "Amazon.com order of Camino Island: A Novel."
-    },
-    {
-      "sender": "Shop",
-      "subject": "Your Almina Concept  cart? Saved \u2705 over on Shop"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 6, 2026"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 381828052107"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item"
@@ -557,16 +541,28 @@ window.EMAIL_DATA = {
       "subject": "Anderic - Newsletter: How To Find The Right Replacement? Summer Energy Tips"
     },
     {
-      "sender": "Amazon Shipping US",
-      "subject": "Your package from Shameless Foods LLC has shipped"
-    },
-    {
       "sender": "Nike",
       "subject": "Your Nike gear has shipped"
     },
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 2600:4040:a031:4500:bd61:e5fb:17c:e68a"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Quick reminders about your upcoming trip to Lisbon"
+    },
+    {
+      "sender": "Thumbtack",
+      "subject": "2026 Updates to the Thumbtack Terms of Use"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udfac Epic fantasy and wild parody take the screen"
+    },
+    {
+      "sender": "Laurel and Blush",
+      "subject": "Are you in the trade?"
     }
   ],
   "items": [
