@@ -529,28 +529,28 @@ window.EMAIL_DATA = {
   "unreadCount": 9,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item"
+      "sender": "Google Play",
+      "subject": "Your Google Play Order Receipt from Jun 6, 2026"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 06 Jun 2026"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 6/6 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
     },
     {
       "sender": "Anderic",
       "subject": "Anderic - Newsletter: How To Find The Right Replacement? Summer Energy Tips"
     },
     {
-      "sender": "Nike",
-      "subject": "Your Nike gear has shipped"
-    },
-    {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 2600:4040:a031:4500:bd61:e5fb:17c:e68a"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Quick reminders about your upcoming trip to Lisbon"
     },
     {
       "sender": "Thumbtack",
@@ -566,13 +566,6 @@ window.EMAIL_DATA = {
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for Allegra K Women's Denim",
-      "date": "2026-05-23",
-      "id": "19e54e42527ad455",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
@@ -597,13 +590,6 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e5b8b25412e4a6",
       "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item",
-      "date": "2026-06-06",
-      "id": "19e9ac81709e0c30",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
