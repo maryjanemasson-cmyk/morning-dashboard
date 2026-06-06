@@ -515,8 +515,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 5,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "A new device was used to access your PNC Online Banking"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Quick reminders about your upcoming trip to Lisbon"
+    },
     {
       "sender": "Thumbtack",
       "subject": "2026 Updates to the Thumbtack Terms of Use"
@@ -524,10 +532,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Cineplex",
       "subject": "\ud83c\udfac Epic fantasy and wild parody take the screen"
-    },
-    {
-      "sender": "iCloud",
-      "subject": "Join Christian  Hinrichs\u2019s \u201cWork\u201d calendar?"
     },
     {
       "sender": "Laurel and Blush",
