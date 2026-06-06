@@ -537,8 +537,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Quick Reminder: Share Your Affiliate discount code To Earn!"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your June 7 flight"
+    },
     {
       "sender": "Reformation",
       "subject": "We know we're cute"
@@ -570,14 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Expandable Garden Hose 75...\""
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "25% Off Progressives: See Near And Far In Style"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "ENDING SOON: The Summer Design Event"
     }
   ],
   "items": [
