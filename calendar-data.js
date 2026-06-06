@@ -526,43 +526,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "Google Play",
-      "subject": "Your Google Play Order Receipt from Jun 6, 2026"
+      "sender": "Nike",
+      "subject": "How did we do? Please provide your feedback"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 06 Jun 2026"
+      "sender": "MyLowe's Rewards",
+      "subject": "Beach mode activated \u2600\ufe0f"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 6/6 is ready to view"
+      "sender": "FORM BY TWO",
+      "subject": "June at FORM BY TWO | Updates, Summer Offers & More"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
+      "sender": "Chase",
+      "subject": "Your credit card statement is available"
     },
     {
-      "sender": "Anderic",
-      "subject": "Anderic - Newsletter: How To Find The Right Replacement? Summer Energy Tips"
+      "sender": "Bake Time",
+      "subject": "Cookies, I didn\u2019t forget about you"
     },
     {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 2600:4040:a031:4500:bd61:e5fb:17c:e68a"
+      "sender": "FASP Parents Association",
+      "subject": "Vote now: FASP - Parents Association Volunteers for 2026-27 School Year"
     },
     {
-      "sender": "Thumbtack",
-      "subject": "2026 Updates to the Thumbtack Terms of Use"
+      "sender": "UPS",
+      "subject": "Your Package is Coming Today"
     },
     {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udfac Epic fantasy and wild parody take the screen"
+      "sender": "Horizon BCBSNJ Member Services",
+      "subject": "Christian, your claim has been processed"
     },
     {
-      "sender": "Laurel and Blush",
-      "subject": "Are you in the trade?"
+      "sender": "COS",
+      "subject": "Pastel tones"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Toughknit Tees"
     }
   ],
   "items": [
