@@ -537,35 +537,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Delivered"
-    },
-    {
-      "sender": "Picture Show Entertainment",
-      "subject": "Picture Show Entertainment Receipt"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence"
+      "sender": "Reformation",
+      "subject": "Take a good look"
     },
     {
       "sender": "Reformation",
-      "subject": "YOUR FAVORITE SHORT"
+      "subject": "So this is goodbye"
     },
     {
-      "sender": "World of Hyatt",
-      "subject": "Explore Limited-time Summer Offers"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Tatcha The Serum Stick |...\""
     },
     {
-      "sender": "Chase",
-      "subject": "Your credit card statement is available"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Expandable Garden Hose 75...\""
     },
     {
       "sender": "LOOK OPTIC",
@@ -578,6 +566,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Google Play",
       "subject": "Your Google Play Order Receipt from Jun 6, 2026"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 06 Jun 2026"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 6/6 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
     }
   ],
   "items": [
@@ -605,6 +605,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19e5b8b25412e4a6",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Expandable Garden Hose 75...\"",
+      "date": "2026-06-06",
+      "id": "19e9e1f76d90200a",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
