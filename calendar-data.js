@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Backrooms",
+    "location": "Picture Show at East Windsor, 319 US Hwy 130 East Windsor, NJ 08520",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOgp8TSpMagdbs7bet9UOydzz6p_9RCarw\n",
+    "startTime": "2026-06-06T16:40:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-06T17:40:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708\ufe0f GLT Summit Europe \u2014 Lisbon",
     "location": "Lisbon, Portugal",
     "description": "GLT Summit Europe. UA flights 64/65, confirmation HPJ362.",
@@ -526,47 +537,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Nike",
-      "subject": "How did we do? Please provide your feedback"
+      "sender": "UPS",
+      "subject": "UPS Update: Package Delivered"
     },
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Beach mode activated \u2600\ufe0f"
+      "sender": "Picture Show Entertainment",
+      "subject": "Picture Show Entertainment Receipt"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "June at FORM BY TWO | Updates, Summer Offers & More"
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
+    },
+    {
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "YOUR FAVORITE SHORT"
+    },
+    {
+      "sender": "World of Hyatt",
+      "subject": "Explore Limited-time Summer Offers"
     },
     {
       "sender": "Chase",
       "subject": "Your credit card statement is available"
     },
     {
-      "sender": "Bake Time",
-      "subject": "Cookies, I didn\u2019t forget about you"
+      "sender": "LOOK OPTIC",
+      "subject": "25% Off Progressives: See Near And Far In Style"
     },
     {
-      "sender": "FASP Parents Association",
-      "subject": "Vote now: FASP - Parents Association Volunteers for 2026-27 School Year"
+      "sender": "The Shade Store",
+      "subject": "ENDING SOON: The Summer Design Event"
     },
     {
-      "sender": "UPS",
-      "subject": "Your Package is Coming Today"
-    },
-    {
-      "sender": "Horizon BCBSNJ Member Services",
-      "subject": "Christian, your claim has been processed"
-    },
-    {
-      "sender": "COS",
-      "subject": "Pastel tones"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Toughknit Tees"
+      "sender": "Google Play",
+      "subject": "Your Google Play Order Receipt from Jun 6, 2026"
     }
   ],
   "items": [
