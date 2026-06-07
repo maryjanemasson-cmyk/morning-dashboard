@@ -537,8 +537,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Your Summer Upgrade: 25% Off Progressives"
+    },
+    {
+      "sender": "Chase",
+      "subject": "You updated your digital wallet"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
+    },
     {
       "sender": "Shameless Snacks",
       "subject": "Quick Reminder: Share Your Affiliate discount code To Earn!"
@@ -566,18 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Take a good look"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Tatcha The Serum Stick |...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Expandable Garden Hose 75...\""
     }
   ],
   "items": [
