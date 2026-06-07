@@ -537,47 +537,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "American Express",
-      "subject": "Merchant credit/refund was issued to your account"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 381615436231"
     },
     {
-      "sender": "Chase Fraud Alert",
-      "subject": "Action Needed: Please confirm this transaction"
+      "sender": "LOOK OPTIC",
+      "subject": "Your Summer Upgrade: 25% Off Progressives"
     },
     {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for GRACE KARIN Womens Long Sleeve...."
+      "sender": "Chase",
+      "subject": "You updated your digital wallet"
     },
     {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for Aphratti Women's Long Sleeve...."
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your June 7 flight"
     },
     {
-      "sender": "return@amazon.com",
-      "subject": "Advance refund issued for CRZ YOGA Secretsculpt Butterlift...."
-    },
-    {
-      "sender": "TurboTax",
-      "subject": "Your TurboTax account has been updated"
-    },
-    {
-      "sender": "NOLS Matching Gift Challenge",
-      "subject": "Countdown to Founders Day"
-    },
-    {
-      "sender": "Attire The Studio",
-      "subject": "Your summer essentials mary jane"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Steampunk switch plates, here\ud83d\udccd"
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for GRACE KARIN Womens Long Sleeve..."
+      "sender": "Amazon Shipping US",
+      "subject": "Your Shameless Foods LLC package was delivered"
     }
   ],
   "items": [
@@ -601,48 +581,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea07249546e369",
       "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for GRACE KARIN Womens Long Sleeve",
-      "date": "2026-06-07",
-      "id": "19ea2d9fc665b29d",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for Aphratti Women's Long Sleeve",
-      "date": "2026-06-07",
-      "id": "19ea2d9d2593a906",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Advance refund issued for CRZ YOGA Secretsculpt Butterlift",
-      "date": "2026-06-07",
-      "id": "19ea2d97e82e17a2",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
-      "date": "2026-06-07",
-      "id": "19ea26af542951e4",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Aphratti Women's Long Sleeve",
-      "date": "2026-06-07",
-      "id": "19ea26ac97197ed5",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
-      "date": "2026-06-07",
-      "id": "19ea26a7b3be7db8",
-      "sender": "return@amazon.com"
     },
     {
       "type": "return",
