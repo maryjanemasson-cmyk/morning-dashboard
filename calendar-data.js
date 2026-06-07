@@ -537,47 +537,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 381615436231"
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for GRACE KARIN Womens Long Sleeve..."
     },
     {
       "sender": "return@amazon.com",
-      "subject": "Return request confirmed for CRZ YOGA Secretsculpt Butterlift..."
+      "subject": "Dropoff confirmed for Aphratti Women's Long Sleeve..."
     },
     {
-      "sender": "Mary Jane HINRICHS",
-      "subject": "FW: File from Mary Jane HINRICHS"
+      "sender": "return@amazon.com",
+      "subject": "Dropoff confirmed for CRZ YOGA Secretsculpt Butterlift..."
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Your Summer Upgrade: 25% Off Progressives"
+      "sender": "Almina Concept",
+      "subject": "Final Chance on our Bestselling Summer Knit"
     },
     {
-      "sender": "Chase",
-      "subject": "You updated your digital wallet"
+      "sender": "Zulily Deals",
+      "subject": "\ud83d\udc9c Bags, leggings, dresses & more"
     },
     {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your June 7 flight"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Your kitchen's craving a refresh \ud83d\udc40"
     },
     {
-      "sender": "Amazon Shipping US",
-      "subject": "Your Shameless Foods LLC package was delivered"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
+      "sender": "Sephora",
+      "subject": "Checking us out??"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"Tatcha The Serum Stick |...\""
+      "subject": "Ordered: \"Armor All Car Cleaning...\""
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Expandable Garden Hose 75...\""
+      "sender": "chrislovesjulia",
+      "subject": "2 weeks till Father's Day \ud83e\udd0e"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Check your pre-approval status for an Amex\u00ae Business Line of Credit."
     }
   ],
   "items": [
@@ -601,6 +601,27 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea07249546e369",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
+      "date": "2026-06-07",
+      "id": "19ea26af542951e4",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Aphratti Women's Long Sleeve",
+      "date": "2026-06-07",
+      "id": "19ea26ac97197ed5",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
+      "date": "2026-06-07",
+      "id": "19ea26a7b3be7db8",
+      "sender": "return@amazon.com"
     },
     {
       "type": "return",
