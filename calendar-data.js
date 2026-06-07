@@ -537,11 +537,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 381615436231"
+      "sender": "Kathleen McKeever",
+      "subject": "Join us for Kathleen's exclusive party on Saturday, June 20, 2026. We\u2019d love to see you there!"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Cute stuff awaits."
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"all Fabric Softener Dryer...\""
     },
     {
       "sender": "LOOK OPTIC",
@@ -554,10 +562,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your June 7 flight"
-    },
-    {
-      "sender": "Amazon Shipping US",
-      "subject": "Your Shameless Foods LLC package was delivered"
     }
   ],
   "items": [
@@ -595,28 +599,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-08",
       "id": "19ea07ef5b533e74",
       "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-13",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e5b8d358ae9314",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-15",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e5b8dda8397e10",
-      "sender": "FORM BY TWO"
     }
   ]
 };
