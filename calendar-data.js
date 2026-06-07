@@ -1,49 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\ud83c\udf93 PRISMS \u2014 Commencement / Last Day",
-    "location": "19 Lambert Drive, Princeton, NJ 08540",
-    "description": "Commencement Ceremony \u2014 Summer Break begins after ceremony\nPRISMS, 19 Lambert Drive, Princeton NJ",
-    "startTime": "",
-    "startDate": "2026-06-06",
-    "endTime": "",
-    "endDate": "2026-06-07",
-    "calendar": "Family",
-    "colorId": "2"
-  },
-  {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-06T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-06T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e5b8b25412e4a6",
-    "startTime": "2026-06-06T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-06T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Backrooms",
-    "location": "Picture Show at East Windsor, 319 US Hwy 130 East Windsor, NJ 08520",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOgp8TSpMagdbs7bet9UOydzz6p_9RCarw\n",
-    "startTime": "2026-06-06T16:40:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-06T17:40:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "\u2708\ufe0f GLT Summit Europe \u2014 Lisbon",
     "location": "Lisbon, Portugal",
     "description": "GLT Summit Europe. UA flights 64/65, confirmation HPJ362.",
@@ -317,6 +273,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "2026-06-20",
     "calendar": "Family",
     "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udf82 Nathaniel's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-06-20",
+    "endTime": "",
+    "endDate": "2026-06-21",
+    "calendar": "Chris",
+    "colorId": ""
+  },
+  {
+    "summary": "\ud83c\udf82 Nathaniel's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-06-20",
+    "endTime": "",
+    "endDate": "2026-06-21",
+    "calendar": "Family",
+    "colorId": "7"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-20T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-20T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -537,8 +526,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "My Tokyo & Seoul Outfit Diary"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 872664403502"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 872552592588"
+    },
+    {
+      "sender": "Link",
+      "subject": "Review your May account activity"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 2600:4040:a033:0:6d29:d175:42b8:858d"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Tatcha The Serum Stick |...\""
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "Your Summer Upgrade: 25% Off Progressives"
@@ -548,36 +565,8 @@ window.EMAIL_DATA = {
       "subject": "You updated your digital wallet"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Quick Reminder: Share Your Affiliate discount code To Earn!"
-    },
-    {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your June 7 flight"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "We know we're cute"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"OAKA Protein Gummies, 20g...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amazon Shipping US",
-      "subject": "Your Shameless Foods LLC package was delivered"
-    },
-    {
-      "sender": "COS Customer Service",
-      "subject": "Your order has arrived"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Take a good look"
     }
   ],
   "items": [
@@ -596,22 +585,25 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-06",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19e5b8b25412e4a6",
-      "sender": "FORM BY TWO"
+      "type": "delivery",
+      "title": "Shipped: \"Tatcha The Serum Stick |...\"",
+      "date": "2026-06-07",
+      "id": "19e9fa3c4a79d3bf",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"Expandable Garden Hose 75...\"",
-      "date": "2026-06-06",
-      "id": "19e9e1f76d90200a",
-      "sender": "Amazon.com"
+      "title": "FedEx arriving tomorrow #872552592588",
+      "date": "2026-06-07",
+      "id": "19ea07249546e369",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #872664403502",
+      "date": "2026-06-08",
+      "id": "19ea07ef5b533e74",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
