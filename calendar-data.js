@@ -540,8 +540,12 @@ window.EMAIL_DATA = {
   "unreadCount": 11,
   "threads": [
     {
-      "sender": "Mary Jane HINRICHS",
-      "subject": "pay"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 381615436231"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Return request confirmed for CRZ YOGA Secretsculpt Butterlift..."
     },
     {
       "sender": "Mary Jane HINRICHS",
@@ -574,10 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Expandable Garden Hose 75...\""
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "25% Off Progressives: See Near And Far In Style"
     }
   ],
   "items": [
@@ -601,6 +601,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea07249546e369",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
+      "date": "2026-06-07",
+      "id": "19ea1ce19e14b8e7",
+      "sender": "return@amazon.com"
     },
     {
       "type": "delivery",
