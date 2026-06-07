@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal C Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOpKAOgoSrCDb547nbfM22uOfaSiuNsVMM\n",
+    "startTime": "2026-06-07T18:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-07T19:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708 UA64 EWR \u2192 LIS",
     "location": "Newark (EWR) \u2192 Lisbon (LIS)",
     "description": "United Airlines 64, Terminal C\\nDepart: 8:25 PM EDT from EWR\\nArrive: 8:20 AM WEST at LIS, Terminal 1",
@@ -526,35 +537,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "My Tokyo & Seoul Outfit Diary"
+      "sender": "Mary Jane HINRICHS",
+      "subject": "pay"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 872664403502"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 872552592588"
-    },
-    {
-      "sender": "Link",
-      "subject": "Review your May account activity"
-    },
-    {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 2600:4040:a033:0:6d29:d175:42b8:858d"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Tatcha The Serum Stick |...\""
+      "sender": "Mary Jane HINRICHS",
+      "subject": "FW: File from Mary Jane HINRICHS"
     },
     {
       "sender": "LOOK OPTIC",
@@ -567,6 +558,26 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your June 7 flight"
+    },
+    {
+      "sender": "Amazon Shipping US",
+      "subject": "Your Shameless Foods LLC package was delivered"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Tatcha The Serum Stick |...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Expandable Garden Hose 75...\""
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "25% Off Progressives: See Near And Far In Style"
     }
   ],
   "items": [
@@ -583,13 +594,6 @@ window.EMAIL_DATA = {
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Tatcha The Serum Stick |...\"",
-      "date": "2026-06-07",
-      "id": "19e9fa3c4a79d3bf",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
