@@ -537,47 +537,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "American Express",
+      "subject": "Merchant credit/refund was issued to your account"
+    },
+    {
+      "sender": "Chase Fraud Alert",
+      "subject": "Action Needed: Please confirm this transaction"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for GRACE KARIN Womens Long Sleeve...."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for Aphratti Women's Long Sleeve...."
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Advance refund issued for CRZ YOGA Secretsculpt Butterlift...."
+    },
+    {
+      "sender": "TurboTax",
+      "subject": "Your TurboTax account has been updated"
+    },
+    {
+      "sender": "NOLS Matching Gift Challenge",
+      "subject": "Countdown to Founders Day"
+    },
+    {
+      "sender": "Attire The Studio",
+      "subject": "Your summer essentials mary jane"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Steampunk switch plates, here\ud83d\udccd"
+    },
     {
       "sender": "return@amazon.com",
       "subject": "Dropoff confirmed for GRACE KARIN Womens Long Sleeve..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for Aphratti Women's Long Sleeve..."
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Dropoff confirmed for CRZ YOGA Secretsculpt Butterlift..."
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Final Chance on our Bestselling Summer Knit"
-    },
-    {
-      "sender": "Zulily Deals",
-      "subject": "\ud83d\udc9c Bags, leggings, dresses & more"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Your kitchen's craving a refresh \ud83d\udc40"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Checking us out??"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Armor All Car Cleaning...\""
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "2 weeks till Father's Day \ud83e\udd0e"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Check your pre-approval status for an Amex\u00ae Business Line of Credit."
     }
   ],
   "items": [
@@ -601,6 +601,27 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea07249546e369",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for GRACE KARIN Womens Long Sleeve",
+      "date": "2026-06-07",
+      "id": "19ea2d9fc665b29d",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for Aphratti Women's Long Sleeve",
+      "date": "2026-06-07",
+      "id": "19ea2d9d2593a906",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Advance refund issued for CRZ YOGA Secretsculpt Butterlift",
+      "date": "2026-06-07",
+      "id": "19ea2d97e82e17a2",
+      "sender": "return@amazon.com"
     },
     {
       "type": "return",
