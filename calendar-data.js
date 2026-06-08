@@ -569,12 +569,20 @@ window.EMAIL_DATA = {
   "unreadCount": 16,
   "threads": [
     {
-      "sender": "Massimo Dutti",
-      "subject": "Available item notification"
+      "sender": "Deanna Ferrante",
+      "subject": "Grade 8 and 5 Graduation Reminders, June 11"
     },
     {
-      "sender": "Cadence",
-      "subject": "Delivered"
+      "sender": "Amex Offers from American Express",
+      "subject": "Christian, your new Amex Offers are inside!"
+    },
+    {
+      "sender": "Cody Kaemmerlen, NOLS",
+      "subject": "Hours left - TRIPLE your impact"
+    },
+    {
+      "sender": "American Airlines",
+      "subject": "Thanks for booking: Use these tips to prepare for your trip to Jackson"
     },
     {
       "sender": "Deanna Ferrante",
@@ -599,14 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Vive les vacances \ud83d\ude0e\""
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 872664403502"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "A shipment from order 42463 is out for delivery"
     }
   ],
   "items": [
@@ -644,6 +644,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-08",
       "id": "19ea07ef5b533e74",
       "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "school",
+      "title": "Grade 8 and 5 Graduation Reminders, June 11",
+      "date": "2026-06-08",
+      "id": "19ea8ee471f40dfe",
+      "sender": "Deanna Ferrante"
     }
   ]
 };
