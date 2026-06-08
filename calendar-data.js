@@ -22,28 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "\u2708 UA64 EWR \u2192 LIS",
-    "location": "Newark (EWR) \u2192 Lisbon (LIS)",
-    "description": "United Airlines 64, Terminal C\\nDepart: 8:25 PM EDT from EWR\\nArrive: 8:20 AM WEST at LIS, Terminal 1",
-    "startTime": "2026-06-07T20:25:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-08T08:20:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\u2708\ufe0f UA64 EWR \u2192 LIS",
-    "location": "Newark (EWR)",
-    "description": "Sun, Jun 7\n8:25 PM EDT\n[Flight] EWR to LIS\nUnited Airlines 64, Terminal C, Gate\nMon, Jun 8\n8:20 AM WEST\nArrive Lisbon (LIS)\nTerminal 1, Gate",
-    "startTime": "2026-06-07T20:25:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-08T03:20:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Graduations & End-of-Year Events",
     "location": "75 Mapleton Road, Princeton, NJ 08540",
     "description": "Kindergarten Graduation\nGrades 5 & 8 Graduations\nEnd-of-Year Events\n(Exact ceremony dates TBC \u2014 check FASP calendar)",
@@ -52,17 +30,6 @@ window.CALENDAR_EVENTS = [
     "endTime": "",
     "endDate": "2026-06-11",
     "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-06-08T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-08T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
     "colorId": "5"
   },
   {
@@ -306,6 +273,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-06-22T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-22T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -569,6 +547,10 @@ window.EMAIL_DATA = {
   "unreadCount": 16,
   "threads": [
     {
+      "sender": "United Airlines",
+      "subject": "Tell us how we did"
+    },
+    {
       "sender": "Deanna Ferrante",
       "subject": "Grade 8 and 5 Graduation Reminders, June 11"
     },
@@ -603,10 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 88.157.132.150"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Vive les vacances \ud83d\ude0e\""
     }
   ],
   "items": [
@@ -630,20 +608,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Armor All Car Cleaning...\" and \u20661\u2069 more item",
-      "date": "2026-06-08",
-      "id": "19ea56b5d91bc524",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #872664403502",
-      "date": "2026-06-08",
-      "id": "19ea07ef5b533e74",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "school",
