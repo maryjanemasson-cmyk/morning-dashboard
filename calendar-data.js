@@ -22,17 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Newark Airport Parking",
-    "location": "Newark Liberty International Airport, Terminal C Parking",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOpKAOgoSrCDb547nbfM22uOfaSiuNsVMM\n",
-    "startTime": "2026-06-07T18:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-07T19:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "\u2708 UA64 EWR \u2192 LIS",
     "location": "Newark (EWR) \u2192 Lisbon (LIS)",
     "description": "United Airlines 64, Terminal C\\nDepart: 8:25 PM EDT from EWR\\nArrive: 8:20 AM WEST at LIS, Terminal 1",
@@ -533,35 +522,91 @@ window.TRAVEL_DATA = [
         "type": "hotel"
       }
     ]
+  },
+  {
+    "destination": "Cambridge, MA",
+    "start": "2026-07-21",
+    "end": "2026-07-23",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA375 EWR to BOS",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-07-21T14:00:00+00:00",
+        "end": "2026-07-21T15:16:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-in: Kimpton Marlowe by IHG",
+        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
+        "description": "",
+        "start": "2026-07-21T19:00:00+00:00",
+        "end": "2026-07-21T20:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "Check-out: Kimpton Marlowe by IHG",
+        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
+        "description": "",
+        "start": "2026-07-23T15:00:00+00:00",
+        "end": "2026-07-23T16:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA1076 BOS to EWR",
+        "location": "Boston (BOS)",
+        "description": "",
+        "start": "2026-07-23T18:30:00+00:00",
+        "end": "2026-07-23T20:02:00+00:00",
+        "type": "flight"
+      }
+    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Kathleen McKeever",
-      "subject": "Join us for Kathleen's exclusive party on Saturday, June 20, 2026. We\u2019d love to see you there!"
+      "sender": "Massimo Dutti",
+      "subject": "Available item notification"
     },
     {
-      "sender": "Reformation",
-      "subject": "Cute stuff awaits."
+      "sender": "Cadence",
+      "subject": "Delivered"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"all Fabric Softener Dryer...\""
+      "sender": "Deanna Ferrante",
+      "subject": "FASP: Roadwork continues for pickup today"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Your Summer Upgrade: 25% Off Progressives"
+      "sender": "National Building Museum",
+      "subject": "This Summer, the Great Hall Becomes THE PLAYGROUND"
     },
     {
-      "sender": "Chase",
-      "subject": "You updated your digital wallet"
+      "sender": "Big Mamma",
+      "subject": "Notre vaisselle, \u00e0 vous \u2764\ufe0f"
     },
     {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your June 7 flight"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 872664403502"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 88.157.132.150"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Vive les vacances \ud83d\ude0e\""
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 872664403502"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "A shipment from order 42463 is out for delivery"
     }
   ],
   "items": [
@@ -580,18 +625,18 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #872552592588",
-      "date": "2026-06-07",
-      "id": "19ea07249546e369",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
       "type": "return",
       "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Armor All Car Cleaning...\" and \u20661\u2069 more item",
+      "date": "2026-06-08",
+      "id": "19ea56b5d91bc524",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
