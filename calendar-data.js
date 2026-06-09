@@ -584,15 +584,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Fresh from the studio \ud83c\udfa8"
+      "sender": "Tory Burch",
+      "subject": "Thank you for your order #810631137"
     },
     {
       "sender": "COS",
-      "subject": "VIP early access to sale \u2013 up to 50% off"
+      "subject": "Mary Jane, we\u2019ve saved your pieces"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Your Boston trip: Have you booked your hotel?"
+    },
+    {
+      "sender": "Claude Team",
+      "subject": "Claude Fable 5 is here"
+    },
+    {
+      "sender": "Axia Women's Health",
+      "subject": "What's Up, Down There: Pool Season, Learning About Pelvic Organ Prolapse + More"
+    },
+    {
+      "sender": "Google",
+      "subject": "New privacy settings for Search services"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Fresh from the studio \ud83c\udfa8"
     },
     {
       "sender": "PayPal",
@@ -605,26 +625,6 @@ window.EMAIL_DATA = {
     {
       "sender": "GOAT",
       "subject": "TOP RELEASE ROUNDUP"
-    },
-    {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Our Neutral Essentials"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 25% OFF! Grills and patio are party-ready \ud83e\udd73"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Back in stock: The Asher Oversized Long Sleeve Tee."
-    },
-    {
-      "sender": "Jamie Reed Reed",
-      "subject": "Re: Confidential Leadership Opportunity Aligned With Your Translational Science Background"
     }
   ],
   "items": [
