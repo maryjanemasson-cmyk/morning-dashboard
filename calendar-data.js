@@ -544,47 +544,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Emily Ley",
-      "subject": "Welcome to Substack!"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "What World Brain Tumor Day means to us"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Armor All Car Cleaning...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Expandable Garden Hose 75...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Bounty Quick Size Paper...\""
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Tell us how we did"
+      "sender": "WAT THE BRAND",
+      "subject": "Your Travel Set Just Landed \u2708\ufe0f"
     },
     {
       "sender": "Deanna Ferrante",
-      "subject": "Grade 8 and 5 Graduation Reminders, June 11"
+      "subject": "FASP: Roadwork continues for pickup today"
     },
     {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
+      "sender": "National Building Museum",
+      "subject": "This Summer, the Great Hall Becomes THE PLAYGROUND"
     },
     {
-      "sender": "Cody Kaemmerlen, NOLS",
-      "subject": "Hours left - TRIPLE your impact"
+      "sender": "Big Mamma",
+      "subject": "Notre vaisselle, \u00e0 vous \u2764\ufe0f"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 872664403502"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 88.157.132.150"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Vive les vacances \ud83d\ude0e\""
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 872664403502"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "A shipment from order 42463 is out for delivery"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Taupe: The Soft Color Perfect For Summer"
     }
   ],
   "items": [
@@ -608,13 +608,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "school",
-      "title": "Grade 8 and 5 Graduation Reminders, June 11",
-      "date": "2026-06-08",
-      "id": "19ea8ee471f40dfe",
-      "sender": "Deanna Ferrante"
     }
   ]
 };
