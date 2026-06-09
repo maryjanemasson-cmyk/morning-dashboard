@@ -544,8 +544,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Chan Luu",
+      "subject": "Summer Scarves"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Newark"
+    },
     {
       "sender": "National Building Museum",
       "subject": "This Summer, the Great Hall Becomes THE PLAYGROUND"
@@ -584,13 +592,6 @@ window.EMAIL_DATA = {
       "title": "Mail Amazon return: Aphratti Women's Long Sleeve",
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
-      "date": "2026-06-07",
-      "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
     }
   ]
