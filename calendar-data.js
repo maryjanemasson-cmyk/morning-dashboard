@@ -584,8 +584,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Julia Marcum",
+      "subject": "Why we hired an interior designer for Merrimore House"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "There is some real money on the table here!"
+    },
+    {
+      "sender": "COS",
+      "subject": "VIPs only: up to 50% off"
+    },
+    {
+      "sender": "Other Promotions & Offers from United",
+      "subject": "Starting at $55/mo for fast, reliable home internet in select areas"
+    },
     {
       "sender": "Tory Burch",
       "subject": "Thank you for your order #810631137"
@@ -609,22 +625,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "New privacy settings for Search services"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Fresh from the studio \ud83c\udfa8"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Disney Plus: $25.59\u00a0USD"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "TOP RELEASE ROUNDUP"
     }
   ],
   "items": [
