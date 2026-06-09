@@ -540,15 +540,71 @@ window.TRAVEL_DATA = [
         "type": "flight"
       }
     ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-09-20",
+    "end": "2026-09-25",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "Check-in: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-09-20T13:00:00+00:00",
+        "end": "2026-09-20T14:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-09-21T01:15:00+00:00",
+        "end": "2026-09-21T08:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-09-25T07:45:00+00:00",
+        "end": "2026-09-25T15:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-out: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-09-25T09:00:00+00:00",
+        "end": "2026-09-25T10:00:00+00:00",
+        "type": "hotel"
+      }
+    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Art To Frames",
-      "subject": "You Hung It Too High. Here Is How to Fix It."
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Our Neutral Essentials"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 25% OFF! Grills and patio are party-ready \ud83e\udd73"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Back in stock: The Asher Oversized Long Sleeve Tee."
+    },
+    {
+      "sender": "Jamie Reed Reed",
+      "subject": "Re: Confidential Leadership Opportunity Aligned With Your Translational Science Background"
     },
     {
       "sender": "Buck Mason",
@@ -557,10 +613,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Our Latest Silhouette Has Landed"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
       "sender": "National Building Museum",
@@ -573,14 +625,6 @@ window.EMAIL_DATA = {
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 88.157.132.150"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Vive les vacances \ud83d\ude0e\""
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 872664403502"
     }
   ],
   "items": [
