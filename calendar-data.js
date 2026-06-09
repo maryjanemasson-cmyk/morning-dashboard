@@ -544,8 +544,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Emily Ley",
+      "subject": "Welcome to Substack!"
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "What World Brain Tumor Day means to us"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Armor All Car Cleaning...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Expandable Garden Hose 75...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Bounty Quick Size Paper...\""
+    },
     {
       "sender": "United Airlines",
       "subject": "Tell us how we did"
@@ -561,30 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Cody Kaemmerlen, NOLS",
       "subject": "Hours left - TRIPLE your impact"
-    },
-    {
-      "sender": "American Airlines",
-      "subject": "Thanks for booking: Use these tips to prepare for your trip to Jackson"
-    },
-    {
-      "sender": "Deanna Ferrante",
-      "subject": "FASP: Roadwork continues for pickup today"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "This Summer, the Great Hall Becomes THE PLAYGROUND"
-    },
-    {
-      "sender": "Big Mamma",
-      "subject": "Notre vaisselle, \u00e0 vous \u2764\ufe0f"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 872664403502"
-    },
-    {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 88.157.132.150"
     }
   ],
   "items": [
