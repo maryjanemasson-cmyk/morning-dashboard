@@ -544,16 +544,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 6,
   "threads": [
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Your Travel Set Just Landed \u2708\ufe0f"
-    },
-    {
-      "sender": "Deanna Ferrante",
-      "subject": "FASP: Roadwork continues for pickup today"
-    },
     {
       "sender": "National Building Museum",
       "subject": "This Summer, the Great Hall Becomes THE PLAYGROUND"
@@ -561,10 +553,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Big Mamma",
       "subject": "Notre vaisselle, \u00e0 vous \u2764\ufe0f"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 872664403502"
     },
     {
       "sender": "SimpleFIN Bridge",
@@ -577,10 +565,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 872664403502"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "A shipment from order 42463 is out for delivery"
     },
     {
       "sender": "LOOK OPTIC",
