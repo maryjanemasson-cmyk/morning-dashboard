@@ -544,15 +544,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "Summer Scarves"
+      "sender": "Art To Frames",
+      "subject": "You Hung It Too High. Here Is How to Fix It."
     },
     {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Newark"
+      "sender": "Buck Mason",
+      "subject": "Summer Shorts"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Our Latest Silhouette Has Landed"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
       "sender": "National Building Museum",
@@ -573,10 +581,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 872664403502"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Taupe: The Soft Color Perfect For Summer"
     }
   ],
   "items": [
@@ -592,6 +596,13 @@ window.EMAIL_DATA = {
       "title": "Mail Amazon return: Aphratti Women's Long Sleeve",
       "date": "2026-05-28",
       "id": "19e6e667836b297a",
+      "sender": "return@amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
+      "date": "2026-06-07",
+      "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
     }
   ]
