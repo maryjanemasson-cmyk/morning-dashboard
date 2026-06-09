@@ -584,8 +584,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Fresh from the studio \ud83c\udfa8"
+    },
+    {
+      "sender": "COS",
+      "subject": "VIP early access to sale \u2013 up to 50% off"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Disney Plus: $25.59\u00a0USD"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "TOP RELEASE ROUNDUP"
+    },
     {
       "sender": "Support at TripIt",
       "subject": "Mary Jane, check out your TripIt itinerary for"
@@ -605,26 +625,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Jamie Reed Reed",
       "subject": "Re: Confidential Leadership Opportunity Aligned With Your Translational Science Background"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Summer Shorts"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Our Latest Silhouette Has Landed"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "This Summer, the Great Hall Becomes THE PLAYGROUND"
-    },
-    {
-      "sender": "Big Mamma",
-      "subject": "Notre vaisselle, \u00e0 vous \u2764\ufe0f"
-    },
-    {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 88.157.132.150"
     }
   ],
   "items": [
