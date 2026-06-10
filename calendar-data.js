@@ -587,15 +587,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Happening soon: FREE Toy Box Workshop \ud83c\udf89"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "What Other Women Outsource"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Is Effortless Style Actually Effortless? (No. But.)"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Who Wears Short Shorts?"
+    },
     {
       "sender": "The Shade Store",
       "subject": "LAST DAY TO SAVE: 25% Off Your Order"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 6/10 is ready to view"
     },
     {
       "sender": "LOOK OPTIC",
@@ -616,18 +628,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Fresh from the studio \ud83c\udfa8"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Disney Plus: $25.59\u00a0USD"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "TOP RELEASE ROUNDUP"
     }
   ],
   "items": [
