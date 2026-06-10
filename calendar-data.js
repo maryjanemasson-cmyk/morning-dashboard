@@ -587,19 +587,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "Reminder: Preorder your meal for your flight to New York/Newark (EWR) on June 12"
+      "sender": "The Shade Store",
+      "subject": "LAST DAY TO SAVE: 25% Off Your Order"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 6/10 is ready to view"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "3 Reasons Why Customers Choose LOOK"
     },
     {
       "sender": "United Airlines",
       "subject": "Preorder your meal for your flight to New York/Newark (EWR) on June 12"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Thanks for your purchase with United"
     },
     {
       "sender": "Axia Women's Health",
@@ -624,10 +628,6 @@ window.EMAIL_DATA = {
     {
       "sender": "GOAT",
       "subject": "TOP RELEASE ROUNDUP"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 25% OFF! Grills and patio are party-ready \ud83e\udd73"
     }
   ],
   "items": [
