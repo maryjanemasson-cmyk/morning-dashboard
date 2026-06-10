@@ -587,8 +587,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "COS",
+      "subject": "Checkout now: your order is waiting"
+    },
     {
       "sender": "Jamie Reed Reed",
       "subject": "Re: Confidential Leadership Opportunity Aligned With Your Translational Science Background"
