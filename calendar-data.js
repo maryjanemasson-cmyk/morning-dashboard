@@ -340,14 +340,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA64 EWR to LIS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-06-08T00:25:00+00:00",
-        "end": "2026-06-08T07:20:00+00:00",
-        "type": "flight"
-      },
-      {
         "summary": "UA65 LIS to EWR",
         "location": "Lisbon (LIS)",
         "description": "",
@@ -584,8 +576,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
+    },
     {
       "sender": "Julia Marcum",
       "subject": "Why we hired an interior designer for Merrimore House"
@@ -621,10 +617,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Axia Women's Health",
       "subject": "What's Up, Down There: Pool Season, Learning About Pelvic Organ Prolapse + More"
-    },
-    {
-      "sender": "Google",
-      "subject": "New privacy settings for Search services"
     }
   ],
   "items": [
