@@ -590,12 +590,12 @@ window.EMAIL_DATA = {
   "unreadCount": 8,
   "threads": [
     {
-      "sender": "COS",
-      "subject": "Checkout now: your order is waiting"
+      "sender": "MileagePlus Program",
+      "subject": "Your Boston trip: Earn extra miles with Vrbo"
     },
     {
-      "sender": "Jamie Reed Reed",
-      "subject": "Re: Confidential Leadership Opportunity Aligned With Your Translational Science Background"
+      "sender": "COS",
+      "subject": "Checkout now: your order is waiting"
     },
     {
       "sender": "MyLowe's Rewards",
