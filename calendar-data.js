@@ -587,47 +587,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Plucked from the Etsyverse \ud83e\ude90"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Ending soon: Your mystery bonus offer"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SMOOTH OPERATOR"
-    },
-    {
-      "sender": "Nassau Management",
-      "subject": "ICYMI: Cancellation and Make-Up Policy"
-    },
-    {
-      "sender": "Diana @ Shameless Snacks",
-      "subject": "(1) Diana sent you a message"
-    },
-    {
-      "sender": "COS",
-      "subject": "Sale now on: up to 50% off"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
-    },
-    {
-      "sender": "NYT Cooking",
-      "subject": "Cold peanut noodles for ginger lovers"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "Be first to hear about new openings"
+      "sender": "Jamie Reed Reed",
+      "subject": "Re: Confidential Leadership Opportunity Aligned With Your Translational Science Background"
     },
     {
       "sender": "MyLowe's Rewards",
       "subject": "Happening soon: FREE Toy Box Workshop \ud83c\udf89"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Is Effortless Style Actually Effortless? (No. But.)"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Who Wears Short Shorts?"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "LAST DAY TO SAVE: 25% Off Your Order"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "3 Reasons Why Customers Choose LOOK"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Preorder your meal for your flight to New York/Newark (EWR) on June 12"
     }
   ],
   "items": [
