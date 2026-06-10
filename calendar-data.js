@@ -587,8 +587,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "Reminder: Preorder your meal for your flight to New York/Newark (EWR) on June 12"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Preorder your meal for your flight to New York/Newark (EWR) on June 12"
+    },
     {
       "sender": "United Airlines",
       "subject": "Thanks for your purchase with United"
@@ -620,14 +628,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Up to 25% OFF! Grills and patio are party-ready \ud83e\udd73"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Summer Shorts"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Our Latest Silhouette Has Landed"
     }
   ],
   "items": [
