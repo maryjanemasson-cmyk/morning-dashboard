@@ -66,6 +66,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "7"
   },
   {
+    "summary": "Flight to Newark (UA 65)",
+    "location": "Lisbon LIS",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOzjMD93OTefCcDc5EXHmeZc5b8yLjqAsg\n",
+    "startTime": "2026-06-12T05:25:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-12T12:55:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708\ufe0f UA65 LIS \u2192 EWR",
     "location": "Lisbon (LIS)",
     "description": "Fri, Jun 12\n10:25 AM WEST\n[Flight] LIS to EWR\nUnited Airlines 65, Terminal 1, Gate\n12:55 PM EDT\nArrive Newark (EWR)\nTerminal B, Gate",
@@ -576,47 +587,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
-    },
-    {
-      "sender": "Julia Marcum",
-      "subject": "Why we hired an interior designer for Merrimore House"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "There is some real money on the table here!"
-    },
-    {
-      "sender": "COS",
-      "subject": "VIPs only: up to 50% off"
-    },
-    {
-      "sender": "Other Promotions & Offers from United",
-      "subject": "Starting at $55/mo for fast, reliable home internet in select areas"
-    },
-    {
-      "sender": "Tory Burch",
-      "subject": "Thank you for your order #810631137"
-    },
-    {
-      "sender": "COS",
-      "subject": "Mary Jane, we\u2019ve saved your pieces"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Your Boston trip: Have you booked your hotel?"
-    },
-    {
-      "sender": "Claude Team",
-      "subject": "Claude Fable 5 is here"
+      "sender": "United Airlines",
+      "subject": "Thanks for your purchase with United"
     },
     {
       "sender": "Axia Women's Health",
       "subject": "What's Up, Down There: Pool Season, Learning About Pelvic Organ Prolapse + More"
+    },
+    {
+      "sender": "Google",
+      "subject": "New privacy settings for Search services"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Fresh from the studio \ud83c\udfa8"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Disney Plus: $25.59\u00a0USD"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "TOP RELEASE ROUNDUP"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 25% OFF! Grills and patio are party-ready \ud83e\udd73"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Summer Shorts"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Our Latest Silhouette Has Landed"
     }
   ],
   "items": [
@@ -640,6 +651,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #381828052107",
+      "date": "2026-06-11",
+      "id": "19eafedb52a322f2",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
