@@ -590,16 +590,16 @@ window.EMAIL_DATA = {
   "unreadCount": 3,
   "threads": [
     {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
       "sender": "The Shade Store",
       "subject": "LAST DAY TO SAVE: 25% Off Your Order"
     },
     {
       "sender": "LOOK OPTIC",
       "subject": "3 Reasons Why Customers Choose LOOK"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Preorder your meal for your flight to New York/Newark (EWR) on June 12"
     }
   ],
   "items": [
