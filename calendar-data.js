@@ -590,12 +590,12 @@ window.EMAIL_DATA = {
   "unreadCount": 8,
   "threads": [
     {
-      "sender": "MileagePlus Program",
-      "subject": "Your Boston trip: Earn extra miles with Vrbo"
+      "sender": "UPS",
+      "subject": "UPS Update: New Scheduled Delivery Date and Estimated Delivery Time"
     },
     {
-      "sender": "COS",
-      "subject": "Checkout now: your order is waiting"
+      "sender": "MileagePlus Program",
+      "subject": "Your Boston trip: Earn extra miles with Vrbo"
     },
     {
       "sender": "MyLowe's Rewards",
