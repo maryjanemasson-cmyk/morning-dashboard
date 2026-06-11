@@ -587,39 +587,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Diana @ Shameless Snacks",
+      "subject": "Shameless Snacks is at your local Target \ud83d\udccd"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Ready to claim your BOSS FC token?"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "WE DID OUR RESEARCH"
+    },
+    {
+      "sender": "Proton",
+      "subject": "Refer friends and get years of Proton for free"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Mizumi Earrings in Black Obsidian"
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order is ready to ship #810631137"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 381828052107"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Calling discerning shoppers \ud83d\udce3"
+    },
+    {
+      "sender": "Reverso",
+      "subject": "Information about your account"
+    },
     {
       "sender": "Ticketmaster",
       "subject": "The US Open is Electric: Experience it Live"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "Countdown to the US Open: Game, Set, Match"
-    },
-    {
-      "sender": "Princeton Academy of Art",
-      "subject": "Register now! Starting soon at Princeton Academy of Art"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Breeze Cotton"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "The cashback from your last purchase is here! Here's how to use it"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Jun 4 2026"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
     }
   ],
   "items": [
