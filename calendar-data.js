@@ -587,8 +587,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Lowe\u2019s & Live Nation = concert perks unlocked\u2728"
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order has shipped #810631137"
+    },
     {
       "sender": "Points.com - Wyndham Rewards",
       "subject": "Still Thinking About Your Next Stay?"
@@ -620,14 +628,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Holafly",
       "subject": "The cashback from your last purchase is here! Here's how to use it"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Jun 4 2026"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
     }
   ],
   "items": [
