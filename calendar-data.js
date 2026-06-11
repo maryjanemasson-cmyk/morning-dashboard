@@ -22,28 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Graduations & End-of-Year Events",
-    "location": "75 Mapleton Road, Princeton, NJ 08540",
-    "description": "Kindergarten Graduation\nGrades 5 & 8 Graduations\nEnd-of-Year Events\n(Exact ceremony dates TBC \u2014 check FASP calendar)",
-    "startTime": "",
-    "startDate": "2026-06-08",
-    "endTime": "",
-    "endDate": "2026-06-11",
-    "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "Meghan bday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-11T07:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-11T08:45:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Last Day of School",
     "location": "75 Mapleton Road, Princeton, NJ 08540",
     "description": "Last Day of School 2025-2026\n(Verify exact date on FASP calendar \u2014 approximately Jun 12)",
@@ -587,19 +565,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Lowe\u2019s & Live Nation = concert perks unlocked\u2728"
+      "sender": "Lisa U",
+      "subject": "JOIN INDOOR TENNIS: NJ District Team Tennis Challenge for 14's & 12's: Registration Closes TOMORROW"
     },
     {
-      "sender": "Tory Burch",
-      "subject": "Your order has shipped #810631137"
-    },
-    {
-      "sender": "Points.com - Wyndham Rewards",
-      "subject": "Still Thinking About Your Next Stay?"
+      "sender": "Shangri-La Circle",
+      "subject": "Your Shangri-La Circle Account Summary"
     },
     {
       "sender": "Nest Home Report",
@@ -628,6 +602,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Holafly",
       "subject": "The cashback from your last purchase is here! Here's how to use it"
+    },
+    {
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Jun 4 2026"
     }
   ],
   "items": [
@@ -637,13 +615,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #381828052107",
-      "date": "2026-06-11",
-      "id": "19eafedb52a322f2",
-      "sender": "FedEx Delivery Manager"
     }
   ]
 };
