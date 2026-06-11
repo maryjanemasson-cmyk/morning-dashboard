@@ -587,11 +587,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 381828052107"
+      "sender": "Ticketmaster",
+      "subject": "The US Open is Electric: Experience it Live"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Ticketmaster",
+      "subject": "Countdown to the US Open: Game, Set, Match"
+    },
+    {
+      "sender": "Princeton Academy of Art",
+      "subject": "Register now! Starting soon at Princeton Academy of Art"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Breeze Cotton"
     },
     {
       "sender": "Holafly",
@@ -602,32 +618,8 @@ window.EMAIL_DATA = {
       "subject": "Weekly digest for Thu, Jun 4 2026"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "Tissue Jersey"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Thu, 6/11 is ready to view"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access: Up To 60% Off"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "Pink lemonade, but make it cookies."
-    },
-    {
-      "sender": "The Frankie Shop",
-      "subject": "Thank you for your order!"
-    },
-    {
       "sender": "Unroll.Me",
       "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "LAST DAY TO SAVE: 25% Off Your Order"
     }
   ],
   "items": [
