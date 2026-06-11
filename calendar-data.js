@@ -587,36 +587,50 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 381828052107"
+    },
+    {
+      "sender": "Holafly",
+      "subject": "The cashback from your last purchase is here! Here's how to use it"
+    },
+    {
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Jun 4 2026"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "Tissue Jersey"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Thu, 6/11 is ready to view"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access: Up To 60% Off"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "Pink lemonade, but make it cookies."
+    },
+    {
+      "sender": "The Frankie Shop",
+      "subject": "Thank you for your order!"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
     },
     {
       "sender": "The Shade Store",
       "subject": "LAST DAY TO SAVE: 25% Off Your Order"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "3 Reasons Why Customers Choose LOOK"
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: GRACE KARIN Womens Long Sleeve",
-      "date": "2026-05-28",
-      "id": "19e6e6679d15e68d",
-      "sender": "return@amazon.com"
-    },
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Aphratti Women's Long Sleeve",
-      "date": "2026-05-28",
-      "id": "19e6e667836b297a",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
