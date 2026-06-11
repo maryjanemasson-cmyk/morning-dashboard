@@ -587,28 +587,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 3,
   "threads": [
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: New Scheduled Delivery Date and Estimated Delivery Time"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Your Boston trip: Earn extra miles with Vrbo"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Happening soon: FREE Toy Box Workshop \ud83c\udf89"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Is Effortless Style Actually Effortless? (No. But.)"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Who Wears Short Shorts?"
-    },
     {
       "sender": "The Shade Store",
       "subject": "LAST DAY TO SAVE: 25% Off Your Order"
