@@ -565,47 +565,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Potluck desserts you can make in a 9x13 pan"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access Ends Soon"
-    },
-    {
       "sender": "Amazon.com",
-      "subject": "Delivered: \"CeraVe AM Facial...\""
+      "subject": "Ordered: \"Azmall Bluetooth Wireless...\""
     },
     {
-      "sender": "Nike",
-      "subject": "Delivery confirmed"
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "\"He's strong. He's happy. He's ours.\""
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 872972157740"
+      "sender": "Uber One",
+      "subject": "Join Uber One. Take your benefits abroad."
     },
     {
-      "sender": "Lisa U",
-      "subject": "JOIN INDOOR TENNIS: NJ District Team Tennis Challenge for 14's & 12's: Registration Closes TOMORROW"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: The World Cup Heats Up \u26bd"
     },
     {
-      "sender": "Shangri-La Circle",
-      "subject": "Your Shangri-La Circle Account Summary"
+      "sender": "Reformation",
+      "subject": "SPACE EX"
     },
     {
-      "sender": "Nest Home Report",
-      "subject": "Nest May Home Report for Home"
+      "sender": "Reformation",
+      "subject": "Do you still want me"
     },
     {
-      "sender": "Ticketmaster",
-      "subject": "The US Open is Electric: Experience it Live"
+      "sender": "The Frankie Shop",
+      "subject": "A shipment from order #590848 has been delivered"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Build your perfect summer box. $3.05/bag. \ud83c\udf6c"
+    },
+    {
+      "sender": "Chris Loves Julia",
+      "subject": "9 Amazon home finds under $100"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "We've cracked the code on Dad's gifts"
     }
   ],
   "items": [
@@ -615,6 +615,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #872972157740",
+      "date": "2026-06-12",
+      "id": "19eb964ecd8de64d",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
