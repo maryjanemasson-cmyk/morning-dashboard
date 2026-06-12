@@ -1523,18 +1523,17 @@
 
     // Clipboard paste — when the Add Item modal is open, intercept any pasted
     // image and route it through the same path as a URL-fetched image.
-    document.addEventListener('paste', async function(e) {
+    async function _handleModalPaste(e) {
       const modal = document.getElementById('add-item-modal');
       if (!modal || !modal.classList.contains('open')) return;
-      const items = (e.clipboardData && e.clipboardData.items) || [];
-      for (const it of items) {
+      const cbItems = (e.clipboardData && e.clipboardData.items) || [];
+      for (const it of cbItems) {
         if (it.type && it.type.startsWith('image/')) {
           e.preventDefault();
           const blob = it.getAsFile();
           if (!blob) continue;
           const dataUrl = await blobToDataUrl(blob);
           _urlImageData = dataUrl;
-          // Clear the file input so saveNewItem prefers the pasted image
           document.getElementById('add-photo').value = '';
           document.getElementById('add-photo-preview').innerHTML =
             `<img src="${dataUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`
@@ -1542,7 +1541,12 @@
           return;
         }
       }
-    });
+    }
+    // Bind both at the document and modal level — iOS Safari sometimes drops
+    // document-level paste events if no element inside the page is focused.
+    document.addEventListener('paste', _handleModalPaste);
+    const _addModal = document.getElementById('add-item-modal');
+    if (_addModal) _addModal.addEventListener('paste', _handleModalPaste);
 
     function saveNewItem() {
       try {
