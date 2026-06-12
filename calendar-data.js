@@ -576,15 +576,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Lisa U",
+      "subject": "REGISTRATION CLOSES in 7 HOURS:: NJ District Team Tennis Challenge for 14's & 12's:"
+    },
     {
       "sender": "NBC",
       "subject": "Your NBC Update"
-    },
-    {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at The Perch at the Peacock Inn is confirmed"
     },
     {
       "sender": "FASP",
