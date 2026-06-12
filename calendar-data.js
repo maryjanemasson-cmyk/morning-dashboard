@@ -77,6 +77,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "7"
   },
   {
+    "summary": "Reservation at The Perch at the Peacock Inn",
+    "location": "The Perch at the Peacock Inn, 20 Bayard Lane, (Between Nassau Street and Bayard Lane), Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOu_9LxY0D4YIjTXw_2Cp9q6IEpGjiyl5g\n",
+    "startTime": "2026-06-12T18:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-12T19:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -565,11 +576,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Azmall Bluetooth Wireless...\""
+      "sender": "NBC",
+      "subject": "Your NBC Update"
+    },
+    {
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at The Perch at the Peacock Inn is confirmed"
+    },
+    {
+      "sender": "FASP",
+      "subject": "Picnic + Flash Mob"
     },
     {
       "sender": "Pediatric Brain Tumor Foundation",
@@ -598,14 +617,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "Build your perfect summer box. $3.05/bag. \ud83c\udf6c"
-    },
-    {
-      "sender": "Chris Loves Julia",
-      "subject": "9 Amazon home finds under $100"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "We've cracked the code on Dad's gifts"
     }
   ],
   "items": [
