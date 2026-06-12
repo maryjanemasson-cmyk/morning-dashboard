@@ -565,8 +565,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "Potluck desserts you can make in a 9x13 pan"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access Ends Soon"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"CeraVe AM Facial...\""
+    },
+    {
+      "sender": "Nike",
+      "subject": "Delivery confirmed"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 872972157740"
+    },
     {
       "sender": "Lisa U",
       "subject": "JOIN INDOOR TENNIS: NJ District Team Tennis Challenge for 14's & 12's: Registration Closes TOMORROW"
@@ -582,30 +606,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Ticketmaster",
       "subject": "The US Open is Electric: Experience it Live"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "Countdown to the US Open: Game, Set, Match"
-    },
-    {
-      "sender": "Princeton Academy of Art",
-      "subject": "Register now! Starting soon at Princeton Academy of Art"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Breeze Cotton"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "The cashback from your last purchase is here! Here's how to use it"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Jun 4 2026"
     }
   ],
   "items": [
