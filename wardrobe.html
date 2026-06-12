@@ -219,7 +219,7 @@
         <div id="cat-filters"></div>
         <span class="item-count" id="cat-count"></span>
         <button id="show-hidden-toggle" onclick="toggleShowHidden()" style="padding:0.35rem 0.7rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#9c8b76;font-size:0.72rem;cursor:pointer;font-family:inherit;white-space:nowrap;display:none;">Show hidden</button>
-        <button onclick="document.getElementById('add-item-modal').classList.add('open'); refreshSubcategoryOptions();" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
+        <button onclick="resetAddItemModal(); document.getElementById('add-item-modal').classList.add('open'); refreshSubcategoryOptions();" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
       </div>
       <div id="cat-grid" class="cat-grid"></div>
     </div>
@@ -1321,6 +1321,31 @@
         else custom.style.display = 'none';
       });
       if (cat) cat.addEventListener('change', refreshSubcategoryOptions);
+    }
+
+    // Reset every field in the Add Item modal so reopening it doesn't show
+    // the previous item's photo/brand/color/etc. Called from the + Add Item
+    // button onclick and also after successful save.
+    function resetAddItemModal() {
+      _urlImageData = null;
+      const photoInput = document.getElementById('add-photo');
+      if (photoInput) photoInput.value = '';
+      const urlInput = document.getElementById('add-photo-url');
+      if (urlInput) urlInput.value = '';
+      const status = document.getElementById('url-status');
+      if (status) { status.textContent = ''; status.style.color = '#9c8b76'; }
+      const preview = document.getElementById('add-photo-preview');
+      if (preview) preview.innerHTML = '';
+      const brand = document.getElementById('add-brand');
+      if (brand) brand.value = '';
+      const color = document.getElementById('add-color');
+      if (color) color.value = '';
+      const subSel = document.getElementById('add-subcategory-select');
+      if (subSel) subSel.value = '';
+      const subCustom = document.getElementById('add-subcategory-custom');
+      if (subCustom) { subCustom.value = ''; subCustom.style.display = 'none'; }
+      // Default to File tab in case the user left it on URL
+      if (typeof switchPhotoTab === 'function') switchPhotoTab('file');
     }
 
     function switchPhotoTab(tab) {
