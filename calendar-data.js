@@ -472,15 +472,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "SimpleFIN Bridge",
-      "subject": "API Usage Warning - SimpleFIN Bridge"
+      "sender": "Hulu",
+      "subject": "Your Subscription Will Be Canceled"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 13, 2026"
+      "sender": "Disney+",
+      "subject": "Confirmation of a Hulu profile in Disney+"
+    },
+    {
+      "sender": "Disney+",
+      "subject": "We noticed a new login"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -509,10 +513,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pediatric Brain Tumor Foundation",
       "subject": "\"He's strong. He's happy. He's ours.\""
-    },
-    {
-      "sender": "Uber One",
-      "subject": "Join Uber One. Take your benefits abroad."
     }
   ],
   "items": [
