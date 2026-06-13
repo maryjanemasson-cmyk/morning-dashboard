@@ -472,47 +472,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "ALO",
-      "subject": "Wore it? Now rate it"
+      "sender": "Verizon Notification",
+      "subject": "Your bill is now available online"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "FLIP FLOPPING"
+    },
+    {
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Gathered just for you \ud83d\ude0d"
+    },
+    {
+      "sender": "Laurent Chapuis",
+      "subject": "Private Sale: It Takes Two (Varietals) to Tango... Truly Authentic Field Blend from Argentina's Rising Star"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"OAKA Protein Gummies (6...\""
+    },
+    {
+      "sender": "Microsoft Rewards",
+      "subject": " Your shot at cash and soccer fun\u2014don\u2019t sit out"
+    },
+    {
+      "sender": "Kenny's Meals Lawrence",
+      "subject": "Your order from Kenny's Meals Lawrence"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "\u23f3 Your $15 gift card expires soon Mary Jane"
     },
     {
       "sender": "MyLowe's Rewards",
       "subject": "Father's Day win? FREE grill spatula for members"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Peach cobbler will always please"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "HAPPENING NOW: Up to 25% Off Your Order"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 13 Jun 2026"
-    },
-    {
-      "sender": "COS",
-      "subject": "Best of: up to 50% off"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Stock Up On Styles Up To 60% Off"
     }
   ],
   "items": [
@@ -532,6 +532,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ebf6640f986503",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20662\u2069 \"OAKA Protein Gummies (6...\"",
+      "date": "2026-06-13",
+      "id": "19ec194b51129d8b",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
