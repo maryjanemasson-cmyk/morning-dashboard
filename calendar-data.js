@@ -334,22 +334,6 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Lisbon, Portugal",
-    "start": "2026-06-07",
-    "end": "2026-06-12",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA65 LIS to EWR",
-        "location": "Lisbon (LIS)",
-        "description": "",
-        "start": "2026-06-12T09:25:00+00:00",
-        "end": "2026-06-12T16:55:00+00:00",
-        "type": "flight"
-      }
-    ]
-  },
-  {
     "destination": "Paris, France",
     "start": "2026-06-15",
     "end": "2026-06-18",
@@ -576,8 +560,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Tuti from LOOK OPTIC",
+      "subject": "Up To 60% Off My Father's Day Favorites"
+    },
     {
       "sender": "Lisa U",
       "subject": "REGISTRATION CLOSES in 7 HOURS:: NJ District Team Tennis Challenge for 14's & 12's:"
@@ -613,10 +601,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Frankie Shop",
       "subject": "A shipment from order #590848 has been delivered"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Build your perfect summer box. $3.05/bag. \ud83c\udf6c"
     }
   ],
   "items": [
