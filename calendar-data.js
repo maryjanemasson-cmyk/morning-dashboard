@@ -494,8 +494,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"OAKA Protein Gummies (6...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Ceecisee 50+ Women's...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"illy Instant Coffee...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"OLLY Men's Multivitamin...\""
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order has been delivered #810631137"
+    },
     {
       "sender": "COS",
       "subject": "Limited time: your order is waiting"
@@ -515,26 +535,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn",
       "subject": "You have 2 new invitations"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"OLLY Men's Multivitamin...\""
-    },
-    {
-      "sender": "Laurent Chapuis",
-      "subject": "Private Sale: It Takes Two (Varietals) to Tango... Truly Authentic Field Blend from Argentina's Rising Star"
-    },
-    {
-      "sender": "Microsoft Rewards",
-      "subject": " Your shot at cash and soccer fun\u2014don\u2019t sit out"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Father's Day win? FREE grill spatula for members"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
     }
   ],
   "items": [
@@ -554,6 +554,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ebf6640f986503",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Ceecisee 50+ Women's...\"",
+      "date": "2026-06-13",
+      "id": "19ec31f558c7dbbb",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
