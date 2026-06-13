@@ -187,6 +187,28 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29cc4294f2ad",
+    "startTime": "2026-06-20T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-20T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29d889dd808e",
+    "startTime": "2026-06-22T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-22T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -472,8 +494,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "COS",
+      "subject": "Limited time: your order is waiting"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 29, 2026 at 5:00 PM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 22, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 20, 2026 at 10:00 AM"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 2 new invitations"
@@ -497,22 +535,6 @@ window.EMAIL_DATA = {
     {
       "sender": "GOAT",
       "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "HAPPENING NOW: Up to 25% Off Your Order"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 13 Jun 2026"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Stock Up On Styles Up To 60% Off"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Warm Weather Restocks and Arrivals"
     }
   ],
   "items": [
@@ -553,6 +575,39 @@ window.EMAIL_DATA = {
       "date": "2026-06-13",
       "id": "19ebf0ec773f42fb",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-20",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19ec29cc4294f2ad",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-22",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19ec29d889dd808e",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 5:00 PM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-06-29",
+      "time": "17:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19ec29fc3834680a",
+      "sender": "FORM BY TWO"
     }
   ]
 };
