@@ -472,47 +472,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "Hulu",
-      "subject": "Your Subscription Will Be Canceled"
+      "sender": "ALO",
+      "subject": "Wore it? Now rate it"
     },
     {
-      "sender": "Disney+",
-      "subject": "Confirmation of a Hulu profile in Disney+"
+      "sender": "MyLowe's Rewards",
+      "subject": "Father's Day win? FREE grill spatula for members"
     },
     {
-      "sender": "Disney+",
-      "subject": "We noticed a new login"
+      "sender": "GOAT",
+      "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Bake Time",
+      "subject": "Peach cobbler will always please"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Azmall Bluetooth Wireless...\""
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
     },
     {
-      "sender": "Tuti from LOOK OPTIC",
-      "subject": "Up To 60% Off My Father's Day Favorites"
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
     },
     {
-      "sender": "Lisa U",
-      "subject": "REGISTRATION CLOSES in 7 HOURS:: NJ District Team Tennis Challenge for 14's & 12's:"
+      "sender": "The Shade Store",
+      "subject": "HAPPENING NOW: Up to 25% Off Your Order"
     },
     {
-      "sender": "NBC",
-      "subject": "Your NBC Update"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 13 Jun 2026"
     },
     {
-      "sender": "FASP",
-      "subject": "Picnic + Flash Mob"
+      "sender": "COS",
+      "subject": "Best of: up to 50% off"
     },
     {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "\"He's strong. He's happy. He's ours.\""
+      "sender": "LOOK OPTIC",
+      "subject": "Stock Up On Styles Up To 60% Off"
     }
   ],
   "items": [
