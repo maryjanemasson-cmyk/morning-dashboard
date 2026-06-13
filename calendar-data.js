@@ -1,93 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\u2708\ufe0f GLT Summit Europe \u2014 Lisbon",
-    "location": "Lisbon, Portugal",
-    "description": "GLT Summit Europe. UA flights 64/65, confirmation HPJ362.",
-    "startTime": "",
-    "startDate": "2026-06-07",
-    "endTime": "",
-    "endDate": "2026-06-13",
-    "calendar": "Personal",
-    "colorId": "11"
-  },
-  {
-    "summary": "\u2708\ufe0f GLT Summit Europe \u2014 Lisbon",
-    "location": "Lisbon, Portugal",
-    "description": "GLT Summit Europe. UA flights 64/65, confirmation HPJ362.",
-    "startTime": "",
-    "startDate": "2026-06-07",
-    "endTime": "",
-    "endDate": "2026-06-13",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
-    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Last Day of School",
-    "location": "75 Mapleton Road, Princeton, NJ 08540",
-    "description": "Last Day of School 2025-2026\n(Verify exact date on FASP calendar \u2014 approximately Jun 12)",
-    "startTime": "",
-    "startDate": "2026-06-12",
-    "endTime": "",
-    "endDate": "2026-06-13",
-    "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "\ud83c\udf93 Nathaniel \u2014 School Ends (PRISMS)",
-    "location": "",
-    "description": "Nathaniel's last day at PRISMS.",
-    "startTime": "",
-    "startDate": "2026-06-12",
-    "endTime": "",
-    "endDate": "2026-06-13",
-    "calendar": "Family",
-    "colorId": "7"
-  },
-  {
-    "summary": "Flight to Newark (UA 65)",
-    "location": "Lisbon LIS",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOzjMD93OTefCcDc5EXHmeZc5b8yLjqAsg\n",
-    "startTime": "2026-06-12T05:25:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-12T12:55:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\u2708\ufe0f UA65 LIS \u2192 EWR",
-    "location": "Lisbon (LIS)",
-    "description": "Fri, Jun 12\n10:25 AM WEST\n[Flight] LIS to EWR\nUnited Airlines 65, Terminal 1, Gate\n12:55 PM EDT\nArrive Newark (EWR)\nTerminal B, Gate",
-    "startTime": "2026-06-12T05:25:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-12T12:55:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\u2708 UA65 LIS \u2192 EWR",
-    "location": "Lisbon (LIS) \u2192 Newark (EWR)",
-    "description": "United Airlines 65, Terminal 1\\nDepart: 10:25 AM WEST from LIS\\nArrive: 1:00 PM EDT at EWR, Terminal B",
-    "startTime": "2026-06-12T05:25:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-12T08:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "Reservation at The Perch at the Peacock Inn",
-    "location": "The Perch at the Peacock Inn, 20 Bayard Lane, (Between Nassau Street and Bayard Lane), Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOu_9LxY0D4YIjTXw_2Cp9q6IEpGjiyl5g\n",
-    "startTime": "2026-06-12T18:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-12T19:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -560,8 +472,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 13, 2026"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Azmall Bluetooth Wireless...\""
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Paris"
+    },
     {
       "sender": "Tuti from LOOK OPTIC",
       "subject": "Up To 60% Off My Father's Day Favorites"
@@ -585,22 +513,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Uber One",
       "subject": "Join Uber One. Take your benefits abroad."
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: The World Cup Heats Up \u26bd"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SPACE EX"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Do you still want me"
-    },
-    {
-      "sender": "The Frankie Shop",
-      "subject": "A shipment from order #590848 has been delivered"
     }
   ],
   "items": [
@@ -612,11 +524,21 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-13",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19ebf6640f986503",
+      "sender": "FORM BY TWO"
+    },
+    {
       "type": "delivery",
-      "title": "FedEx arriving tomorrow #872972157740",
-      "date": "2026-06-12",
-      "id": "19eb964ecd8de64d",
-      "sender": "FedEx Delivery Manager"
+      "title": "Shipped: \"Azmall Bluetooth Wireless...\"",
+      "date": "2026-06-13",
+      "id": "19ebf0ec773f42fb",
+      "sender": "Amazon.com"
     }
   ]
 };
