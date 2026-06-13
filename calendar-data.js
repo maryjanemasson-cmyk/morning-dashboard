@@ -472,8 +472,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "API Usage Warning - SimpleFIN Bridge"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 13, 2026"
@@ -485,10 +489,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Azmall Bluetooth Wireless...\""
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Paris"
     },
     {
       "sender": "Tuti from LOOK OPTIC",
