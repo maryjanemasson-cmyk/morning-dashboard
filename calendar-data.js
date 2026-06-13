@@ -472,47 +472,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Verizon Notification",
-      "subject": "Your bill is now available online"
+      "sender": "LinkedIn",
+      "subject": "You have 2 new invitations"
     },
     {
-      "sender": "Reformation",
-      "subject": "FLIP FLOPPING"
-    },
-    {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence is ready for delivery"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Gathered just for you \ud83d\ude0d"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"OLLY Men's Multivitamin...\""
     },
     {
       "sender": "Laurent Chapuis",
       "subject": "Private Sale: It Takes Two (Varietals) to Tango... Truly Authentic Field Blend from Argentina's Rising Star"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"OAKA Protein Gummies (6...\""
-    },
-    {
       "sender": "Microsoft Rewards",
       "subject": " Your shot at cash and soccer fun\u2014don\u2019t sit out"
     },
     {
-      "sender": "Kenny's Meals Lawrence",
-      "subject": "Your order from Kenny's Meals Lawrence"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "\u23f3 Your $15 gift card expires soon Mary Jane"
-    },
-    {
       "sender": "MyLowe's Rewards",
       "subject": "Father's Day win? FREE grill spatula for members"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "HAPPENING NOW: Up to 25% Off Your Order"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 13 Jun 2026"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Stock Up On Styles Up To 60% Off"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Warm Weather Restocks and Arrivals"
     }
   ],
   "items": [
@@ -532,6 +532,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ebf6640f986503",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20662\u2069 \"OLLY Men's Multivitamin...\"",
+      "date": "2026-06-13",
+      "id": "19ec2328a69f17ae",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
