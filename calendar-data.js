@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Obsession",
+    "location": "AMC MarketFair 10, 3521 Us-1, Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPOjWBQu91uKdNpAA14i6xxjrgKj4kUwEw\n",
+    "startTime": "2026-06-14T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-14T18:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "June Trip - Paris",
     "location": "Paris, France",
     "description": "Mary Jane Hinrichs is in Paris, France from Jun 15 to 18, 2026",
@@ -494,47 +505,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"OAKA Protein Gummies (6...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Ceecisee 50+ Women's...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"illy Instant Coffee...\""
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 \"OLLY Men's Multivitamin...\""
     },
     {
-      "sender": "Tory Burch",
-      "subject": "Your order has been delivered #810631137"
-    },
-    {
-      "sender": "COS",
-      "subject": "Limited time: your order is waiting"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 29, 2026 at 5:00 PM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 22, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 20, 2026 at 10:00 AM"
-    },
-    {
       "sender": "LinkedIn",
       "subject": "You have 2 new invitations"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"OLLY Men's Multivitamin...\""
+    },
+    {
+      "sender": "Laurent Chapuis",
+      "subject": "Private Sale: It Takes Two (Varietals) to Tango... Truly Authentic Field Blend from Argentina's Rising Star"
+    },
+    {
+      "sender": "Microsoft Rewards",
+      "subject": " Your shot at cash and soccer fun\u2014don\u2019t sit out"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Father's Day win? FREE grill spatula for members"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "HAPPENING NOW: Up to 25% Off Your Order"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 13 Jun 2026"
     }
   ],
   "items": [
@@ -554,13 +565,6 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ebf6640f986503",
       "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Ceecisee 50+ Women's...\"",
-      "date": "2026-06-13",
-      "id": "19ec31f558c7dbbb",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
