@@ -538,47 +538,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 32,
   "threads": [
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Five best vintage pieces I acquired"
+      "sender": "PayPal",
+      "subject": "BestBuy.com LLC: $213.20\u00a0USD"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Clorox Clean-Up Multi...\""
+      "sender": "Best Buy Notifications",
+      "subject": "Thanks for your order\u2014we're getting it ready."
     },
     {
-      "sender": "Zulily Deals",
-      "subject": "\ud83d\udc9c What's hot this week at Zulily"
+      "sender": "service@paypal.com",
+      "subject": "Stay logged in on this trusted device"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"illy Instant Coffee...\""
+      "sender": "Best Buy Notifications",
+      "subject": "You've updated your BestBuy.com\u00ae password."
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Zep Acidic Toilet Bowl...\" and \u20661\u2069 more item"
+      "sender": "Best Buy Notifications",
+      "subject": "Congrats\u2014You've linked your Google and Best Buy accounts."
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"3 Opeings Large Clothes...\""
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Best Buy"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Clorox Clean-Up Multi...\""
+      "sender": "Emily Ley",
+      "subject": "The Sunday Scroll #145"
     },
     {
-      "sender": "Reformation",
-      "subject": "Take us home"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Google",
+      "subject": "Mary Jane, review your Google Account settings"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"OLLY Men's Multivitamin...\""
+      "sender": "Google",
+      "subject": "Security alert"
     }
   ],
   "items": [
