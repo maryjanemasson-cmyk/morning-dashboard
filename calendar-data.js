@@ -549,19 +549,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "LinkedIn",
-      "subject": "You have 2 new invitations"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Didog Soft PU Leather Dog...\""
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "The Perfect Holiday Tops"
+      "sender": "FORM BY TWO",
+      "subject": "Booking Cancellation Confirmation"
     },
     {
       "sender": "Best Buy Services Notifications",
@@ -590,6 +582,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Best Buy Notifications",
       "subject": "You've updated your BestBuy.com\u00ae password."
+    },
+    {
+      "sender": "Best Buy Notifications",
+      "subject": "Congrats\u2014You've linked your Google and Best Buy accounts."
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Best Buy"
     }
   ],
   "items": [
