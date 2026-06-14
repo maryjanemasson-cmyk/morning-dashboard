@@ -538,11 +538,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 28,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Special finds, bubbling up \ud83e\udee7"
+      "sender": "MyLowe's Rewards",
+      "subject": "11x points to celebrate Brunson\u2019s championship! \ud83c\udfc0\ud83c\udfc6"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Back In Stock: The High Neck Jacket"
+    },
+    {
+      "sender": "Best Buy Notifications",
+      "subject": "Your order is ready for curbside pickup."
     },
     {
       "sender": "PayPal",
@@ -571,14 +579,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Best Buy Notifications",
       "subject": "Congrats\u2014You've linked your Google and Best Buy accounts."
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Best Buy"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "The Sunday Scroll #145"
     }
   ],
   "items": [
