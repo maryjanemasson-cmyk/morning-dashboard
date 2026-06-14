@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-13T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-13T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e5b8d358ae9314",
-    "startTime": "2026-06-13T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-13T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Obsession",
     "location": "AMC MarketFair 10, 3521 Us-1, Princeton, NJ 08540",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPOjWBQu91uKdNpAA14i6xxjrgKj4kUwEw\n",
@@ -229,6 +207,61 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udf82 Christian's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-06-27",
+    "endTime": "",
+    "endDate": "2026-06-28",
+    "calendar": "Chris",
+    "colorId": ""
+  },
+  {
+    "summary": "\ud83c\udf82 Christian's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-06-27",
+    "endTime": "",
+    "endDate": "2026-06-28",
+    "calendar": "Family",
+    "colorId": "5"
+  },
+  {
+    "summary": "Christian Edward's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-27T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-27T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Christian Edward's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-27T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-27T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-27T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-27T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -505,8 +538,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Five best vintage pieces I acquired"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Clorox Clean-Up Multi...\""
+    },
+    {
+      "sender": "Zulily Deals",
+      "subject": "\ud83d\udc9c What's hot this week at Zulily"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"illy Instant Coffee...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Zep Acidic Toilet Bowl...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"3 Opeings Large Clothes...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Clorox Clean-Up Multi...\""
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Take us home"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -514,38 +579,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 \"OLLY Men's Multivitamin...\""
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 2 new invitations"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"OLLY Men's Multivitamin...\""
-    },
-    {
-      "sender": "Laurent Chapuis",
-      "subject": "Private Sale: It Takes Two (Varietals) to Tango... Truly Authentic Field Blend from Argentina's Rising Star"
-    },
-    {
-      "sender": "Microsoft Rewards",
-      "subject": " Your shot at cash and soccer fun\u2014don\u2019t sit out"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Father's Day win? FREE grill spatula for members"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "Air Jordan 3 Retro 'Bin23' Just Landed"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "HAPPENING NOW: Up to 25% Off Your Order"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 13 Jun 2026"
     }
   ],
   "items": [
@@ -557,34 +590,24 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-13",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19ebf6640f986503",
-      "sender": "FORM BY TWO"
-    },
-    {
       "type": "delivery",
-      "title": "Shipped: \u20662\u2069 \"OLLY Men's Multivitamin...\"",
-      "date": "2026-06-13",
-      "id": "19ec2328a69f17ae",
+      "title": "Shipped: \"Clorox Clean-Up Multi...\"",
+      "date": "2026-06-14",
+      "id": "19ec4e325838247a",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \u20662\u2069 \"OAKA Protein Gummies (6...\"",
-      "date": "2026-06-13",
-      "id": "19ec194b51129d8b",
+      "title": "Shipped: \"illy Instant Coffee...\"",
+      "date": "2026-06-14",
+      "id": "19ec4552dbc40dfa",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"Azmall Bluetooth Wireless...\"",
-      "date": "2026-06-13",
-      "id": "19ebf0ec773f42fb",
+      "title": "Shipped: \"3 Opeings Large Clothes...\"",
+      "date": "2026-06-14",
+      "id": "19ec4250505c5919",
       "sender": "Amazon.com"
     },
     {
