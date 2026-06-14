@@ -143,6 +143,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "CP Reformer Flow 2 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec6d0c1a6ca823",
+    "startTime": "2026-06-19T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-19T06:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "\ud83c\udf82 Nathaniel's Birthday",
     "location": "",
     "description": "",
@@ -538,20 +549,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 23,
   "threads": [
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "11x points to celebrate Brunson\u2019s championship! \ud83c\udfc0\ud83c\udfc6"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Back In Stock: The High Neck Jacket"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Your order is ready for curbside pickup."
-    },
     {
       "sender": "PayPal",
       "subject": "Apple Services: $9.99\u00a0USD"
@@ -579,6 +578,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Best Buy Notifications",
       "subject": "Congrats\u2014You've linked your Google and Best Buy accounts."
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Best Buy"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "The Sunday Scroll #145"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
     }
   ],
   "items": [
@@ -609,6 +620,17 @@ window.EMAIL_DATA = {
       "date": "2026-06-14",
       "id": "19ec4250505c5919",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
+      "name": "CP Reformer Flow 2 (50 Mins) class",
+      "date": "2026-06-19",
+      "time": "06:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19ec6d0c1a6ca823",
+      "sender": "Club Pilates Princeton"
     },
     {
       "type": "class",
