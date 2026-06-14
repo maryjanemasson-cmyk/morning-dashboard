@@ -549,8 +549,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 2 new invitations"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Didog Soft PU Leather Dog...\""
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The Perfect Holiday Tops"
+    },
+    {
+      "sender": "Best Buy Services Notifications",
+      "subject": "Mary Jane: here's your Internet Security Software"
+    },
     {
       "sender": "PayPal",
       "subject": "Apple Services: $9.99\u00a0USD"
@@ -574,22 +590,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Best Buy Notifications",
       "subject": "You've updated your BestBuy.com\u00ae password."
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Congrats\u2014You've linked your Google and Best Buy accounts."
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Best Buy"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "The Sunday Scroll #145"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
     }
   ],
   "items": [
