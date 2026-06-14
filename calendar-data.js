@@ -541,16 +541,28 @@ window.EMAIL_DATA = {
   "unreadCount": 32,
   "threads": [
     {
+      "sender": "Etsy",
+      "subject": "Special finds, bubbling up \ud83e\udee7"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Apple Services: $9.99\u00a0USD"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 14 Jun 2026"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: An anniversary cage match? America has seen this humiliating spectacle before."
+    },
+    {
       "sender": "PayPal",
       "subject": "BestBuy.com LLC: $213.20\u00a0USD"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Thanks for your order\u2014we're getting it ready."
-    },
-    {
-      "sender": "service@paypal.com",
-      "subject": "Stay logged in on this trusted device"
     },
     {
       "sender": "Best Buy Notifications",
@@ -567,18 +579,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Emily Ley",
       "subject": "The Sunday Scroll #145"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
-    },
-    {
-      "sender": "Google",
-      "subject": "Mary Jane, review your Google Account settings"
-    },
-    {
-      "sender": "Google",
-      "subject": "Security alert"
     }
   ],
   "items": [
