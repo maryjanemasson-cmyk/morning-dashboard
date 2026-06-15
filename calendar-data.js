@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Obsession",
-    "location": "AMC MarketFair 10, 3521 Us-1, Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPOjWBQu91uKdNpAA14i6xxjrgKj4kUwEw\n",
-    "startTime": "2026-06-14T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-14T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "June Trip - Paris",
     "location": "Paris, France",
     "description": "Mary Jane Hinrichs is in Paris, France from Jun 15 to 18, 2026",
@@ -272,6 +261,17 @@ window.CALENDAR_EVENTS = [
     "endTime": "2026-06-27T11:00:00-04:00",
     "endDate": "",
     "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "William Hinrichs birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-06-28T00:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-28T01:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
     "colorId": ""
   }
 ];
@@ -549,8 +549,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Newark"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Martha Stewart Ryder Gold...\""
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Cute stuff awaits."
+    },
+    {
+      "sender": "Alo Yoga Returns",
+      "subject": "Alo Yoga Return Confirmation"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Didog Soft PU Leather Dog...\""
+    },
     {
       "sender": "Reformation",
       "subject": "YOUR RETURN"
@@ -565,31 +585,11 @@ window.EMAIL_DATA = {
     },
     {
       "sender": "Amazon.com",
-      "subject": "Delivered: \"illy Instant Coffee...\""
-    },
-    {
-      "sender": "Amazon.com",
       "subject": "Delivered: \"Ceecisee 50+ Women's...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"3 Opeings Large Clothes...\""
     },
     {
       "sender": "Best Buy Services Notifications",
       "subject": "Mary Jane: here's your Internet Security Software"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Apple Services: $9.99\u00a0USD"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 14 Jun 2026"
     }
   ],
   "items": [
@@ -602,23 +602,9 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"Clorox Clean-Up Multi...\"",
-      "date": "2026-06-14",
-      "id": "19ec4e325838247a",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"illy Instant Coffee...\"",
-      "date": "2026-06-14",
-      "id": "19ec4552dbc40dfa",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"3 Opeings Large Clothes...\"",
-      "date": "2026-06-14",
-      "id": "19ec4250505c5919",
+      "title": "Shipped: \"Didog Soft PU Leather Dog...\"",
+      "date": "2026-06-15",
+      "id": "19ec8ce49453bea2",
       "sender": "Amazon.com"
     },
     {
