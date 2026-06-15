@@ -66,6 +66,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal C Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMoIbra6vLXW4uBEHU3lmUgk0fc4oG0Zdw\n",
+    "startTime": "2026-06-15T19:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-15T20:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708\ufe0f UA54 EWR \u2192 CDG",
     "location": "Newark (EWR)",
     "description": "9:35 PM EDT\n[Flight] EWR to CDG\nUnited Airlines 54, Terminal TERMINAL C, Gate\nTue, Jun 16\n10:55 AM CEST\nArrive Paris (CDG)\nTerminal AEROGARE 1, Gate",
@@ -549,8 +560,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 15 Jun 2026"
+    },
+    {
+      "sender": "Google Pay",
+      "subject": "Mary Jane, you added a new card to use with Google Pay"
+    },
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Newark"
@@ -564,16 +583,8 @@ window.EMAIL_DATA = {
       "subject": "Cute stuff awaits."
     },
     {
-      "sender": "Alo Yoga Returns",
-      "subject": "Alo Yoga Return Confirmation"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Didog Soft PU Leather Dog...\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "YOUR RETURN"
     },
     {
       "sender": "LOOK OPTIC",
