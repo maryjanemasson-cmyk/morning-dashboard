@@ -573,47 +573,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Didog Soft PU Leather Dog...\""
-    },
-    {
-      "sender": "Alo Yoga Returns",
-      "subject": "Alo Yoga Return \u2013 Thanks for shipping your return"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Martha Stewart Ryder Gold...\""
-    },
-    {
-      "sender": "Nike",
-      "subject": "Your Nike gear has shipped"
-    },
-    {
-      "sender": "Bekah Sanders",
-      "subject": "NOLS Pre-Departure Q&A Webinar Registration - In 2 Weeks!"
-    },
-    {
-      "sender": "Laurel and Blush",
-      "subject": "Re: Order 10773"
+      "sender": "Best Buy Notifications",
+      "subject": "\ud83d\udce6 Your package is on its way. \ud83d\udce6"
     },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Zep Shower Tub and Tile...\""
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
+      "sender": "The Container Store",
+      "subject": "Please share your feedback on your recent purchase"
     },
     {
-      "sender": "Bruce Santos",
-      "subject": "Invitation: Philly Outdoor Concert @ Sat Jul 4 5pm - Sun Jul 5, 2026 12am (EDT) (maryjanemasson@gmail.com)"
+      "sender": "HPDirector@nassautennis.net",
+      "subject": "Report Absence"
     },
     {
-      "sender": "Jose Rodriguez",
-      "subject": "Tennis Summer Camp"
+      "sender": "National Building Museum",
+      "subject": "Help Preserve the Stories Behind Our Built World"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "Egg White Brownies are ready for you!"
+    },
+    {
+      "sender": "Joao Pinho",
+      "subject": "HP Summer Camp Begins 6/29"
+    },
+    {
+      "sender": "Elizabeth Pointe",
+      "subject": "Top 10% worldwide\u2014 thanks to you!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Zep Acidic Toilet Bowl...\""
+    },
+    {
+      "sender": "Google Pay",
+      "subject": "Mary Jane, you added a new card to use with Google Pay"
     }
   ],
   "items": [
@@ -623,13 +623,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Martha Stewart Ryder Gold...\"",
-      "date": "2026-06-15",
-      "id": "19ecce85fca8f2ec",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
