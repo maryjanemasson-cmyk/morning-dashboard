@@ -22,17 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
-    "summary": "Meghan bday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-15T07:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-15T08:45:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -560,8 +549,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Challenge de la semaine ! \""
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Make a maker's day"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "HOT VACATION"
+    },
     {
       "sender": "The Container Store",
       "subject": "Please share your feedback on your recent purchase"
@@ -589,18 +590,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Zep Acidic Toilet Bowl...\""
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "Google Pay",
-      "subject": "Mary Jane, you added a new card to use with Google Pay"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Newark"
     }
   ],
   "items": [
