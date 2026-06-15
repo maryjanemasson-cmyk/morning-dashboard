@@ -277,6 +277,12 @@
       opacity: 0.5;
     }
     .entry .del:hover { opacity: 1; }
+    .entry .fav {
+      background: none; border: none; color: #c9a24a;
+      font-size: 1rem; cursor: pointer; padding: 0 0.2rem;
+      opacity: 0.55;
+    }
+    .entry .fav:hover, .entry .fav.on { opacity: 1; }
 
     .day-total {
       display: flex; justify-content: space-between;
@@ -377,6 +383,59 @@
       transition: all 0.15s;
     }
     .quick-add .chip:hover { background: #ebe5dc; color: #2c2418; }
+    .quick-add .chip-wrap { display: inline-flex; align-items: stretch; }
+    .quick-add .chip-wrap .chip {
+      border-top-right-radius: 0; border-bottom-right-radius: 0;
+    }
+    .quick-add .chip-del {
+      font-size: 0.72rem; background: #efe7da; border: 1px solid #ebe5dc;
+      border-left: none; color: #b08a8a; cursor: pointer;
+      padding: 0 0.45rem; border-radius: 0 14px 14px 0;
+      transition: all 0.15s;
+    }
+    .quick-add .chip-del:hover { background: #e4cfcf; color: #b55; }
+    .quick-add .chip-wrap.manual .chip { background: #f3edde; border-color: #e6dcc2; color: #8a7320; }
+    .quick-add .chip-wrap.manual .chip:hover { background: #ece2c8; color: #6b5816; }
+
+    /* Favorites dropdown */
+    .fav-menu { position: relative; margin-top: 0.6rem; }
+    .fav-toggle {
+      font-size: 0.72rem; background: #f5f0e8; border: 1px solid #ebe5dc;
+      color: #6b5d4d; padding: 0.35rem 0.75rem; border-radius: 14px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+    }
+    .fav-toggle:hover { background: #ebe5dc; color: #2c2418; }
+    .fav-toggle .caret { font-size: 0.6rem; opacity: 0.7; }
+    .fav-panel {
+      display: none; position: absolute; z-index: 50; top: calc(100% + 0.3rem); left: 0;
+      min-width: 240px; max-width: 320px; max-height: 300px; overflow-y: auto;
+      background: #fff; border: 1px solid #e6dcc8; border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12); padding: 0.3rem;
+    }
+    .fav-panel.open { display: block; }
+    .fav-group-label {
+      font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+      color: #b8a48e; padding: 0.4rem 0.5rem 0.2rem;
+    }
+    .fav-row {
+      display: flex; align-items: center; gap: 0.5rem;
+      border-radius: 7px; padding: 0; transition: background 0.12s;
+    }
+    .fav-row:hover { background: #f7f2ea; }
+    .fav-row .fav-log {
+      flex: 1; text-align: left; background: none; border: none; cursor: pointer;
+      font-family: inherit; font-size: 0.8rem; color: #3d3529; padding: 0.45rem 0.5rem;
+      display: flex; align-items: baseline; gap: 0.5rem;
+    }
+    .fav-row .fav-log .fav-cal { font-size: 0.68rem; color: #9c8b76; margin-left: auto; }
+    .fav-row.manual .fav-log { color: #8a7320; }
+    .fav-row .fav-x {
+      background: none; border: none; color: #c2a3a3; cursor: pointer;
+      font-size: 0.95rem; padding: 0.2rem 0.5rem; border-radius: 6px;
+    }
+    .fav-row .fav-x:hover { color: #b55; background: #f0e2e2; }
+    .fav-empty { font-size: 0.72rem; color: #b8a48e; padding: 0.5rem; }
 
     /* Weight trend */
     .weight-trend { height: 160px; margin-top: 0.4rem; position: relative; }
@@ -549,7 +608,7 @@
               <span id="mf-photo-note" style="font-size:0.7rem;color:#9c8b76;display:none;">Photo will be attached.</span>
             </div>
           </div>
-          <div class="quick-add" id="quick-add"></div>
+          <div class="fav-menu" id="quick-add"></div>
 
           <ul class="entry-list" id="food-list"></ul>
           <div class="day-total" id="food-total" style="display:none;">
@@ -777,6 +836,9 @@
     };
     let todayDay = { foods: [], exercise: [], weight: null };
     let weekData = {};
+    let _favorites = {};   // favKey -> { name, cal, protein }  (manually saved)
+    let _favHidden = {};   // favKey -> true  (auto-favorites the user removed)
+    const favKey = name => (name || '').trim().toLowerCase().replace(/[.#$/\[\]]/g, '_');
 
     // ── TDEE math ──
     function calcTDEE(p) {
@@ -940,6 +1002,7 @@
           const thumb = f.photo
             ? `<img class="thumb" src="${f.photo}" alt="" onclick="openPhotoOverlay(this.src)" />`
             : '';
+          const isFav = !!_favorites[favKey(f.name)];
           return `<li class="entry" style="${f.photo ? 'gap:0.6rem;' : ''}">
             ${thumb}
             <span class="name">${escapeHtml(f.name)}</span>
@@ -947,6 +1010,7 @@
               <span class="cal">${f.cal} cal</span>
               <span class="pro">${f.protein || 0}g</span>
             </span>
+            <button class="fav${isFav ? ' on' : ''}" onclick="saveFavorite(${i})" aria-label="Save as favorite" title="${isFav ? 'Saved as favorite' : 'Save as favorite'}">${isFav ? '★' : '☆'}</button>
             <button class="del" onclick="deleteFood(${i})" aria-label="Delete">×</button>
           </li>`;
         }).join('');
@@ -985,6 +1049,21 @@
     window.deleteFood = (i) => {
       todayDay.foods.splice(i, 1);
       db.ref('health/days/' + _viewDay).set(todayDay);
+    };
+    window.saveFavorite = (i) => {
+      const f = (todayDay.foods || [])[i];
+      if (!f || !f.name) return;
+      const key = favKey(f.name);
+      if (_favorites[key]) {
+        // Already a favorite — tapping the star again removes it.
+        db.ref('health/favorites/' + key).remove();
+        db.ref('health/favoritesHidden/' + key).set(true);
+        toast('Removed from favorites');
+        return;
+      }
+      db.ref('health/favorites/' + key).set({ name: f.name.trim(), cal: f.cal || 0, protein: f.protein || 0 });
+      db.ref('health/favoritesHidden/' + key).remove();
+      toast('★ Saved to favorites');
     };
     window.deleteExercise = (i) => {
       todayDay.exercise.splice(i, 1);
@@ -1028,6 +1107,15 @@
       renderStepsTrend();
       renderQuickAdd();
     });
+    db.ref('health/favorites').on('value', snap => {
+      _favorites = snap.val() || {};
+      renderQuickAdd();
+      renderToday();  // refresh the ★/☆ state on logged foods
+    });
+    db.ref('health/favoritesHidden').on('value', snap => {
+      _favHidden = snap.val() || {};
+      renderQuickAdd();
+    });
 
     // ── Quick-add favorites ──
     // Builds a row of one-tap chips for the user's most-frequently-logged
@@ -1036,50 +1124,95 @@
     function renderQuickAdd() {
       const el = document.getElementById('quick-add');
       if (!el) return;
-      // Aggregate food counts and stats across all logged days
-      const stats = new Map();  // norm-name → { displayName, count, cals[], pros[] }
-      Object.values(weekData).forEach(day => {
-        (day && day.foods || []).forEach(f => {
-          if (!f || !f.name) return;
-          const norm = f.name.trim().toLowerCase();
-          if (!norm) return;
-          if (!stats.has(norm)) stats.set(norm, { displayName: f.name.trim(), count: 0, cals: [], pros: [] });
-          const s = stats.get(norm);
-          s.count++;
-          if (Number.isFinite(f.cal)) s.cals.push(f.cal);
-          if (Number.isFinite(f.protein)) s.pros.push(f.protein);
-        });
-      });
-      // Sort by count desc, take top 8
-      const top = Array.from(stats.values())
-        .filter(s => s.count >= 2)  // need at least 2 logs to count as "favorite"
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 8);
-      if (!top.length) { el.innerHTML = ''; return; }
       const median = arr => {
         if (!arr.length) return 0;
         const s = [...arr].sort((a, b) => a - b);
         const m = Math.floor(s.length / 2);
         return s.length % 2 ? s[m] : Math.round((s[m-1] + s[m]) / 2);
       };
-      el.innerHTML = '<span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;align-self:center;margin-right:0.2rem;">Favorites:</span>' +
-        top.map((s, i) => {
-          const mc = median(s.cals);
-          const mp = median(s.pros);
-          return `<button class="chip" data-idx="${i}" title="Logged ${s.count}× · ~${mc} cal${mp ? ', ' + mp + 'g protein' : ''}">${s.displayName} <span style="opacity:0.65;font-size:0.65rem;">${mc}</span></button>`;
-        }).join('');
-      // Wire up clicks
-      const data = top.map(s => ({ name: s.displayName, cal: median(s.cals), protein: median(s.pros) }));
-      el.querySelectorAll('.chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-          const d = data[parseInt(chip.dataset.idx)];
+      // Aggregate food counts and stats across all logged days, keyed by favKey.
+      const stats = new Map();  // favKey → { displayName, count, cals[], pros[] }
+      Object.values(weekData).forEach(day => {
+        (day && day.foods || []).forEach(f => {
+          if (!f || !f.name) return;
+          const k = favKey(f.name);
+          if (!k) return;
+          if (!stats.has(k)) stats.set(k, { displayName: f.name.trim(), count: 0, cals: [], pros: [] });
+          const s = stats.get(k);
+          s.count++;
+          if (Number.isFinite(f.cal)) s.cals.push(f.cal);
+          if (Number.isFinite(f.protein)) s.pros.push(f.protein);
+        });
+      });
+
+      // Build the merged chip list: manual favorites first (always shown),
+      // then auto-favorites (logged ≥2×) that aren't already manual/hidden.
+      const chips = [];  // { key, name, cal, protein, manual }
+      Object.entries(_favorites).forEach(([key, fav]) => {
+        if (!fav || !fav.name) return;
+        chips.push({ key, name: fav.name, cal: fav.cal || 0, protein: fav.protein || 0, manual: true });
+      });
+      Array.from(stats.entries())
+        .filter(([k, s]) => s.count >= 2 && !_favorites[k] && !_favHidden[k])
+        .sort((a, b) => b[1].count - a[1].count)
+        .slice(0, 8)
+        .forEach(([key, s]) => {
+          chips.push({ key, name: s.displayName, cal: median(s.cals), protein: median(s.pros), manual: false });
+        });
+
+      if (!chips.length) { el.innerHTML = ''; return; }
+
+      const wasOpen = !!el.querySelector('.fav-panel.open');
+      const manualChips = chips.filter(c => c.manual);
+      const autoChips = chips.filter(c => !c.manual);
+      const rowHtml = (c, i) =>
+        `<div class="fav-row${c.manual ? ' manual' : ''}">` +
+          `<button class="fav-log" data-idx="${i}">${c.manual ? '★ ' : ''}${escapeHtml(c.name)}<span class="fav-cal">${c.cal} cal${c.protein ? ' · ' + c.protein + 'g' : ''}</span></button>` +
+          `<button class="fav-x" data-idx="${i}" title="Remove from favorites" aria-label="Remove">×</button>` +
+        `</div>`;
+
+      let panel = '';
+      if (manualChips.length) panel += `<div class="fav-group-label">Saved</div>` + manualChips.map(c => rowHtml(c, chips.indexOf(c))).join('');
+      if (autoChips.length) panel += `<div class="fav-group-label">Frequent</div>` + autoChips.map(c => rowHtml(c, chips.indexOf(c))).join('');
+
+      el.innerHTML =
+        `<button class="fav-toggle" id="fav-toggle">★ Favorites <span style="opacity:0.6;">(${chips.length})</span> <span class="caret">▾</span></button>` +
+        `<div class="fav-panel${wasOpen ? ' open' : ''}" id="fav-panel">${panel}</div>`;
+
+      const panelEl = el.querySelector('#fav-panel');
+      el.querySelector('#fav-toggle').addEventListener('click', e => {
+        e.stopPropagation();
+        panelEl.classList.toggle('open');
+      });
+      panelEl.querySelectorAll('.fav-log').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const c = chips[parseInt(btn.dataset.idx)];
           todayDay.foods = todayDay.foods || [];
-          todayDay.foods.push({ name: d.name, cal: d.cal, protein: d.protein });
+          todayDay.foods.push({ name: c.name, cal: c.cal, protein: c.protein });
           db.ref('health/days/' + _viewDay).set(todayDay);
-          toast(`+${d.cal} cal logged (${d.name})`);
+          toast(`+${c.cal} cal logged (${c.name})`);
+          panelEl.classList.remove('open');
+        });
+      });
+      panelEl.querySelectorAll('.fav-x').forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const c = chips[parseInt(btn.dataset.idx)];
+          if (c.manual) db.ref('health/favorites/' + c.key).remove();
+          db.ref('health/favoritesHidden/' + c.key).set(true);  // keep auto-favs from reappearing
+          toast('Removed from favorites');
         });
       });
     }
+
+    // Close the favorites dropdown when clicking outside it.
+    document.addEventListener('click', e => {
+      const menu = document.getElementById('quick-add');
+      if (menu && !menu.contains(e.target)) {
+        const panel = menu.querySelector('.fav-panel.open');
+        if (panel) panel.classList.remove('open');
+      }
+    });
 
     function renderWeek() {
       const grid = document.getElementById('week-grid');

@@ -289,11 +289,29 @@
     .packing-item {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 0.5rem;
       padding: 0.4rem 0;
       border-bottom: 1px solid #f0ebe3;
       font-size: 0.85rem;
     }
+    .outfit-thumb {
+      display: block;
+      width: 140px;
+      padding-bottom: 78.75px; /* 56.25% of 140 */
+      position: relative;
+      margin: 0.15rem 0 0.15rem 1.6rem;
+      background: #f9f7f4;
+      border: 1px solid #ebe5dc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .outfit-thumb img {
+      position: absolute;
+      object-fit: contain;
+      background: #f9f7f4;
+    }
+    .outfit-thumb.empty { display: none; }
     .packing-item:last-child { border-bottom: none; }
     .packing-item input[type="checkbox"] {
       accent-color: #c9b99a;
@@ -372,6 +390,11 @@
       <div class="packing-input-row">
         <input type="text" id="packingInput" placeholder="Add item...">
         <button class="btn" id="addPackingBtn">Add</button>
+      </div>
+      <div class="packing-input-row">
+        <input type="number" id="outfitInput" min="1" placeholder="Outfit # to pack…" style="flex:0 0 9rem;">
+        <input type="text" id="outfitNote" placeholder="Note (optional)…">
+        <button class="btn" id="addOutfitBtn">Link outfit</button>
       </div>
       <ul class="packing-items" id="packingList"></ul>
     </div>
@@ -848,6 +871,8 @@
         text: () => `Medications`,                                   category: 'Toiletries' },
       { key: 'chargers',      match: /Chargers/i,
         text: () => `Chargers (phone + laptop)`,                     category: 'Electronics' },
+      { key: 'converters',    match: /Converters?|Plug adapter/i,
+        text: () => `Converters / plug adapters`,                    category: 'Electronics' },
       { key: 'headphones',    match: /Headphones/i,
         text: () => `Headphones`,                                    category: 'Electronics' },
       { key: 'work_badge',    match: /Work badge/i,
@@ -893,6 +918,34 @@
       }
     }
 
+    // Essentials we always make sure exist (backfilled into trips that were
+    // created before a rule existed). Deleting one is remembered so it won't
+    // come back — see the delete handler + travelPackingDeleted.
+    const ALWAYS_PACK = ['passport', 'work_badge', 'converters', 'curling_iron'];
+
+    function backfillAutoRules(trip, items) {
+      const key = tripKey(trip);
+      db.ref('travelPackingDeleted/' + key).once('value').then(snap => {
+        const deleted = snap.val() || {};
+        const nights = tripNights(trip);
+        const updates = {};
+        ALWAYS_PACK.forEach(ruleKey => {
+          if (deleted[ruleKey]) return; // user removed it on purpose
+          const rule = PACKING_RULES.find(r => r.key === ruleKey);
+          if (!rule) return;
+          const present = Object.values(items).some(it =>
+            it.auto === rule.key || rule.match.test(it.text || ''));
+          if (present) return;
+          const id = db.ref('travelPacking/' + key).push().key;
+          updates[id] = { text: rule.text(nights), checked: false, auto: rule.key,
+                          category: rule.category || categorizeItem(rule.text(nights)) };
+        });
+        if (Object.keys(updates).length) {
+          db.ref('travelPacking/' + key).update(updates); // re-fires the listener
+        }
+      });
+    }
+
     function loadPacking() {
       if (!selectedTrip) return;
       const key = tripKey(selectedTrip);
@@ -903,6 +956,7 @@
           autoPopulatePacking(selectedTrip);
           return; // The .on listener will fire again with the new data
         }
+        backfillAutoRules(selectedTrip, items);
         syncAutoCounts(selectedTrip, items);
         renderPacking(items);
       });
@@ -938,19 +992,28 @@
           const autoTag = item.auto ? ` <span style="font-size:0.6rem;color:#b8a48e;text-transform:uppercase;letter-spacing:0.5px;margin-left:0.3rem;" title="Auto-calculated from trip length">auto</span>` : '';
           // Linkify trailing (pid) — escape body text, then re-attach as link
           const text = item.text || '';
+          const outfitMatch = text.match(/^Outfit #(\d+)\s*(.*)$/);
           const pidMatch = text.match(/^(.*?)\s*\((s\d+_\d+|C\d+)\)\s*$/);
           let textHtml;
-          if (pidMatch) {
+          if (outfitMatch) {
+            const num = outfitMatch[1];
+            const note = outfitMatch[2] ? ' ' + escHtml(outfitMatch[2]) : '';
+            textHtml = `Outfit <a href="outfit-gallery.html?slides=${num}" target="_blank" style="color:#9c8b76;text-decoration:none;border-bottom:1px dotted #c9b99a;">#${num}</a>${note}`;
+          } else if (pidMatch) {
             const body = escHtml(pidMatch[1]);
             const pid = pidMatch[2];
             textHtml = `${body} <a href="wardrobe.html?item=${pid}" target="_blank" style="font-size:0.7rem;color:#9c8b76;text-decoration:none;border-bottom:1px dotted #c9b99a;">(${pid})</a>`;
           } else {
             textHtml = escHtml(text);
           }
+          const thumbHtml = outfitMatch
+            ? `<a class="outfit-thumb empty" data-slide="${outfitMatch[1]}" href="outfit-gallery.html?slides=${outfitMatch[1]}" target="_blank" title="Open outfit #${outfitMatch[1]}"></a>`
+            : '';
           return `<li class="packing-item">
             <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
             <span class="item-text${item.checked ? ' checked' : ''}">${textHtml}${autoTag}</span>
-            <button class="item-delete" data-id="${id}">&times;</button>
+            <button class="item-delete" data-id="${id}" data-auto="${item.auto || ''}">&times;</button>
+            ${thumbHtml}
           </li>`;
         }).join('');
         return `<div class="packing-category">
@@ -972,7 +1035,76 @@
         btn.addEventListener('click', () => {
           const id = btn.dataset.id;
           const key = tripKey(selectedTrip);
+          // Remember deletion of a backfilled essential so it won't re-appear.
+          if (btn.dataset.auto && ALWAYS_PACK.includes(btn.dataset.auto)) {
+            db.ref('travelPackingDeleted/' + key + '/' + btn.dataset.auto).set(true);
+          }
           db.ref('travelPacking/' + key + '/' + id).remove();
+        });
+      });
+
+      if (packingListEl.querySelector('.outfit-thumb')) populateOutfitThumbs();
+    }
+
+    // --- Outfit thumbnails (lazy-loaded outfit data) ---
+    let _outfitMap = null;      // slide -> outfit (with layout/images)
+    let _outfitMapPromise = null;
+
+    function ensureOutfitData() {
+      if (_outfitMapPromise) return _outfitMapPromise;
+      _outfitMapPromise = new Promise(resolve => {
+        const finish = () => {
+          // Use the original outfit-data.js layouts only — every image in those
+          // resolves on disk. (Firebase edit-layouts reference wardrobe pieces
+          // that need the gallery's crop cache, so they're skipped here.)
+          const map = {};
+          (window.OUTFIT_DATA || []).forEach(o => { map[o.slide] = o; });
+          _outfitMap = map;
+          resolve(map);
+        };
+        if (window.OUTFIT_DATA) { finish(); return; }
+        const s = document.createElement('script');
+        s.src = 'outfit-data.js';
+        s.onload = finish;
+        s.onerror = () => { _outfitMap = {}; resolve({}); };
+        document.head.appendChild(s);
+      });
+      return _outfitMapPromise;
+    }
+
+    function outfitThumbInner(o) {
+      const IMG = 'outfit-images/';
+      if (o.layout && o.layout.length) {
+        return o.layout.map(item => {
+          let f = item.file.startsWith('../') ? item.file.substring(3) : item.file;
+          const src = f.startsWith('data:') ? f
+            : f.startsWith('wardrobe-thumbs/') ? f
+            : IMG + f;
+          return `<img src="${src}" alt="" loading="lazy"
+            style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;">`;
+        }).join('');
+      }
+      if (o.images && o.images.length) {
+        // No layout — tile the first few images across the box.
+        return o.images.slice(0, 4).map((f, i) =>
+          `<img src="${IMG}${f}" alt="" loading="lazy"
+            style="left:${i * 25}%;top:0;width:25%;height:100%;">`
+        ).join('');
+      }
+      return '';
+    }
+
+    function populateOutfitThumbs() {
+      ensureOutfitData().then(map => {
+        packingListEl.querySelectorAll('.outfit-thumb').forEach(el => {
+          if (el.dataset.filled) return;
+          const o = map[parseInt(el.dataset.slide, 10)];
+          const inner = o ? outfitThumbInner(o) : '';
+          if (inner) {
+            el.innerHTML = inner;
+            el.classList.remove('empty');
+            el.dataset.filled = '1';
+          }
         });
       });
     }
@@ -992,6 +1124,24 @@
       const key = tripKey(selectedTrip);
       db.ref('travelPacking/' + key).push({ text, checked: false, category: categorizeItem(text) });
       packingInput.value = '';
+    }
+
+    // --- Link an outfit into the packing list ---
+    const outfitInput = document.getElementById('outfitInput');
+    const outfitNote = document.getElementById('outfitNote');
+    document.getElementById('addOutfitBtn').addEventListener('click', addOutfitItem);
+    outfitInput.addEventListener('keydown', e => { if (e.key === 'Enter') addOutfitItem(); });
+    outfitNote.addEventListener('keydown', e => { if (e.key === 'Enter') addOutfitItem(); });
+
+    function addOutfitItem() {
+      const num = parseInt(outfitInput.value, 10);
+      if (!num || num < 1 || !selectedTrip) return;
+      const note = outfitNote.value.trim();
+      const text = 'Outfit #' + num + (note ? ' ' + note : '');
+      const key = tripKey(selectedTrip);
+      db.ref('travelPacking/' + key).push({ text, checked: false, category: 'Clothing' });
+      outfitInput.value = '';
+      outfitNote.value = '';
     }
 
     // --- Init ---
