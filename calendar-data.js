@@ -545,6 +545,30 @@ window.TRAVEL_DATA = [
         "type": "hotel"
       }
     ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-10-25",
+    "end": "2026-10-30",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-10-26T02:45:00+00:00",
+        "end": "2026-10-26T10:25:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-10-30T08:25:00+00:00",
+        "end": "2026-10-30T16:50:00+00:00",
+        "type": "flight"
+      }
+    ]
   }
 ];
 
@@ -552,16 +576,20 @@ window.EMAIL_DATA = {
   "unreadCount": 19,
   "threads": [
     {
+      "sender": "Bruce Santos",
+      "subject": "Invitation: Philly Outdoor Concert @ Sat Jul 4 5pm - Sun Jul 5, 2026 12am (EDT) (maryjanemasson@gmail.com)"
+    },
+    {
+      "sender": "Jose Rodriguez",
+      "subject": "Tennis Summer Camp"
+    },
+    {
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
+    },
+    {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Challenge de la semaine ! \""
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Make a maker's day"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "HOT VACATION"
     },
     {
       "sender": "The Container Store",
@@ -586,10 +614,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Elizabeth Pointe",
       "subject": "Top 10% worldwide\u2014 thanks to you!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Zep Acidic Toilet Bowl...\""
     }
   ],
   "items": [
