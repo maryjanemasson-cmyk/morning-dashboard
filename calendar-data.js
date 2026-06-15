@@ -209,6 +209,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "CP Reformer Flow 1.5 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ecb7628b5139c2",
+    "startTime": "2026-06-26T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-26T06:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "\ud83c\udf82 Christian's Birthday",
     "location": "",
     "description": "",
@@ -549,11 +560,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 17,
   "threads": [
     {
+      "sender": "The Container Store",
+      "subject": "Please share your feedback on your recent purchase"
+    },
+    {
+      "sender": "HPDirector@nassautennis.net",
+      "subject": "Report Absence"
+    },
+    {
+      "sender": "National Building Museum",
+      "subject": "Help Preserve the Stories Behind Our Built World"
+    },
+    {
       "sender": "Christina Marsigliese",
-      "subject": "Leftover egg whites become the Fudgiest Brownies!"
+      "subject": "Egg White Brownies are ready for you!"
+    },
+    {
+      "sender": "Joao Pinho",
+      "subject": "HP Summer Camp Begins 6/29"
+    },
+    {
+      "sender": "Elizabeth Pointe",
+      "subject": "Top 10% worldwide\u2014 thanks to you!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Zep Acidic Toilet Bowl...\""
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
     },
     {
       "sender": "Google Pay",
@@ -562,34 +601,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Newark"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Martha Stewart Ryder Gold...\""
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Cute stuff awaits."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Didog Soft PU Leather Dog...\""
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Ending Soon: Up to 60% Off Select Styles"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Clorox Clean-Up Multi...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Ceecisee 50+ Women's...\""
-    },
-    {
-      "sender": "Best Buy Services Notifications",
-      "subject": "Mary Jane: here's your Internet Security Software"
     }
   ],
   "items": [
@@ -599,6 +610,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Zep Acidic Toilet Bowl...\"",
+      "date": "2026-06-15",
+      "id": "19ecb763c875d342",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
@@ -639,6 +657,17 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29d889dd808e",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 6:00 AM",
+      "name": "CP Reformer Flow 1.5 (50 Mins) class",
+      "date": "2026-06-26",
+      "time": "06:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19ecb7628b5139c2",
+      "sender": "Club Pilates Princeton"
     },
     {
       "type": "class",
