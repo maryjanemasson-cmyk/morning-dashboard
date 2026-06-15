@@ -29,17 +29,6 @@ window.CALENDAR_EVENTS = [
     "startDate": "",
     "endTime": "2026-06-15T08:45:00-04:00",
     "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Meghan bday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-15T07:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-15T08:45:00-04:00",
-    "endDate": "",
     "calendar": "iCloud",
     "colorId": ""
   },
@@ -560,11 +549,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 15 Jun 2026"
+      "sender": "Christina Marsigliese",
+      "subject": "Leftover egg whites become the Fudgiest Brownies!"
     },
     {
       "sender": "Google Pay",
