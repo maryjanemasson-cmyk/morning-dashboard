@@ -573,8 +573,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Didog Soft PU Leather Dog...\""
+    },
+    {
+      "sender": "Alo Yoga Returns",
+      "subject": "Alo Yoga Return \u2013 Thanks for shipping your return"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Martha Stewart Ryder Gold...\""
+    },
+    {
+      "sender": "Nike",
+      "subject": "Your Nike gear has shipped"
+    },
+    {
+      "sender": "Bekah Sanders",
+      "subject": "NOLS Pre-Departure Q&A Webinar Registration - In 2 Weeks!"
+    },
+    {
+      "sender": "Laurel and Blush",
+      "subject": "Re: Order 10773"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Zep Shower Tub and Tile...\""
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
+    },
     {
       "sender": "Bruce Santos",
       "subject": "Invitation: Philly Outdoor Concert @ Sat Jul 4 5pm - Sun Jul 5, 2026 12am (EDT) (maryjanemasson@gmail.com)"
@@ -582,38 +614,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Jose Rodriguez",
       "subject": "Tennis Summer Camp"
-    },
-    {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Challenge de la semaine ! \""
-    },
-    {
-      "sender": "The Container Store",
-      "subject": "Please share your feedback on your recent purchase"
-    },
-    {
-      "sender": "HPDirector@nassautennis.net",
-      "subject": "Report Absence"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Help Preserve the Stories Behind Our Built World"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "Egg White Brownies are ready for you!"
-    },
-    {
-      "sender": "Joao Pinho",
-      "subject": "HP Summer Camp Begins 6/29"
-    },
-    {
-      "sender": "Elizabeth Pointe",
-      "subject": "Top 10% worldwide\u2014 thanks to you!"
     }
   ],
   "items": [
@@ -623,6 +623,20 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Martha Stewart Ryder Gold...\"",
+      "date": "2026-06-15",
+      "id": "19ecce85fca8f2ec",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Zep Shower Tub and Tile...\"",
+      "date": "2026-06-15",
+      "id": "19eccb83116bd411",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
