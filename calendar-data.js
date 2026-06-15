@@ -549,11 +549,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "FORM BY TWO",
-      "subject": "Booking Cancellation Confirmation"
+      "sender": "Reformation",
+      "subject": "YOUR RETURN"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Ending Soon: Up to 60% Off Select Styles"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Clorox Clean-Up Multi...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"illy Instant Coffee...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Ceecisee 50+ Women's...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"3 Opeings Large Clothes...\""
     },
     {
       "sender": "Best Buy Services Notifications",
@@ -570,26 +590,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 14 Jun 2026"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: An anniversary cage match? America has seen this humiliating spectacle before."
-    },
-    {
-      "sender": "PayPal",
-      "subject": "BestBuy.com LLC: $213.20\u00a0USD"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "You've updated your BestBuy.com\u00ae password."
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Congrats\u2014You've linked your Google and Best Buy accounts."
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Best Buy"
     }
   ],
   "items": [
