@@ -11,28 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Newark Airport Parking",
-    "location": "Newark Liberty International Airport, Terminal C Parking",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMoIbra6vLXW4uBEHU3lmUgk0fc4oG0Zdw\n",
-    "startTime": "2026-06-15T19:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-15T20:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\u2708\ufe0f UA54 EWR \u2192 CDG",
-    "location": "Newark (EWR)",
-    "description": "9:35 PM EDT\n[Flight] EWR to CDG\nUnited Airlines 54, Terminal TERMINAL C, Gate\nTue, Jun 16\n10:55 AM CEST\nArrive Paris (CDG)\nTerminal AEROGARE 1, Gate",
-    "startTime": "2026-06-15T21:35:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-16T04:55:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "\u2708\ufe0f UA56 CDG \u2192 EWR",
     "location": "Paris (CDG)",
     "description": "Thu, Jun 18\n9:45 AM CEST\n[Flight] CDG to EWR\nUnited Airlines 56, Terminal AEROGARE 1, Gate\n11:55 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL B, Gate",
@@ -273,6 +251,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "Trip \u2014 Cambridge, MA",
+    "location": "Cambridge, MA",
+    "description": "Cambridge, MA \u2014 Jun 30 to Jul 3, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
+    "startTime": "",
+    "startDate": "2026-06-30",
+    "endTime": "",
+    "endDate": "2026-07-04",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "\u2708\ufe0f UA1110 EWR \u2192 BOS",
+    "location": "Newark (EWR)",
+    "description": "Tue, Jun 30\n8:32 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 1110, Terminal TERMINAL C, Gate\n9:48 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-06-30T08:32:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-30T09:48:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Kimpton Marlowe by IHG",
+    "location": "25 Edwin H. Land Blvd, Cambridge, MA 02141",
+    "description": "Check-In: 3:00 PM\\nPhone: +1 617 868-8000",
+    "startTime": "2026-06-30T15:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-30T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -573,8 +584,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "American Express",
+      "subject": "Christian, it\u2019s time to confirm your income"
+    },
+    {
+      "sender": "Julia Marcum",
+      "subject": "Stop mixing your fruit"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Mary Jane Masson, your May account statement is available."
+    },
+    {
+      "sender": "Microsoft Store",
+      "subject": "Meet the new Surface lineup\u2014with limited-time offers"
+    },
+    {
+      "sender": "Synchrony Offers",
+      "subject": "Mary, save instantly with up to $500 in Synchrony Travel Credits"
+    },
+    {
+      "sender": "Holafly",
+      "subject": "Mary! Today is the last day to use your discount"
+    },
+    {
+      "sender": "Proton",
+      "subject": "Matchday Deals: Never miss a World Cup match again"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Tell us how we did"
+    },
     {
       "sender": "Resy",
       "subject": "This just in from the James Beard Foundation\u00ae"
@@ -582,38 +625,6 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson@icloud.com",
       "subject": "Fm"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Order #195800 confirmed"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Your package has been delivered"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "\ud83d\udce6 Your package is out for delivery. \ud83d\udce6"
-    },
-    {
-      "sender": "Nike",
-      "subject": "Your order is arriving soon"
     }
   ],
   "items": [
@@ -623,20 +634,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"AUVON TENS Unit Pads...\"",
-      "date": "2026-06-16",
-      "id": "19ed143887ce1fd2",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #482327861926",
-      "date": "2026-06-16",
-      "id": "19ecdb8e21a852a6",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
