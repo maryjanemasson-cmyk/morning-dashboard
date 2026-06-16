@@ -11,39 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19e5b8dda8397e10",
-    "startTime": "2026-06-15T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-15T06:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-06-15T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-15T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: Le Bellune Paris",
-    "location": "35 Boulevard Victor, Paris, 75015, France",
-    "description": "Mon, Jun 15\n3:00 PM CEST\n[Lodging] Arrive Le Bellune Paris\nCheck-In: 3:00pm\n35 Boulevard Victor, Paris, 75015, France\n+33 1 85 72 62 62",
-    "startTime": "2026-06-15T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-15T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "Newark Airport Parking",
     "location": "Newark Liberty International Airport, Terminal C Parking",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMoIbra6vLXW4uBEHU3lmUgk0fc4oG0Zdw\n",
@@ -198,6 +165,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "CP Reformer Flow 2 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ed0c67d8c1cc4a",
+    "startTime": "2026-06-23T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-23T06:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "CP Reformer Flow 1.5 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ecb7628b5139c2",
@@ -273,6 +251,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "iCloud",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-06-29T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-29T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29fc3834680a",
+    "startTime": "2026-06-29T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-29T17:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   }
 ];
 
@@ -576,44 +576,44 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "Resy",
+      "subject": "This just in from the James Beard Foundation\u00ae"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Fm"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Order #195800 confirmed"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
+    },
+    {
       "sender": "Best Buy Notifications",
-      "subject": "\ud83d\udce6 Your package is on its way. \ud83d\udce6"
+      "subject": "Your package has been delivered"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Zep Shower Tub and Tile...\""
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
     },
     {
-      "sender": "The Container Store",
-      "subject": "Please share your feedback on your recent purchase"
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
     },
     {
-      "sender": "HPDirector@nassautennis.net",
-      "subject": "Report Absence"
+      "sender": "Best Buy Notifications",
+      "subject": "\ud83d\udce6 Your package is out for delivery. \ud83d\udce6"
     },
     {
-      "sender": "National Building Museum",
-      "subject": "Help Preserve the Stories Behind Our Built World"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "Egg White Brownies are ready for you!"
-    },
-    {
-      "sender": "Joao Pinho",
-      "subject": "HP Summer Camp Begins 6/29"
-    },
-    {
-      "sender": "Elizabeth Pointe",
-      "subject": "Top 10% worldwide\u2014 thanks to you!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Zep Acidic Toilet Bowl...\""
-    },
-    {
-      "sender": "Google Pay",
-      "subject": "Mary Jane, you added a new card to use with Google Pay"
+      "sender": "Nike",
+      "subject": "Your order is arriving soon"
     }
   ],
   "items": [
@@ -626,24 +626,17 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"Zep Shower Tub and Tile...\"",
-      "date": "2026-06-15",
-      "id": "19eccb83116bd411",
+      "title": "Shipped: \"AUVON TENS Unit Pads...\"",
+      "date": "2026-06-16",
+      "id": "19ed143887ce1fd2",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \"Zep Acidic Toilet Bowl...\"",
-      "date": "2026-06-15",
-      "id": "19ecb763c875d342",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Didog Soft PU Leather Dog...\"",
-      "date": "2026-06-15",
-      "id": "19ec8ce49453bea2",
-      "sender": "Amazon.com"
+      "title": "FedEx arriving tomorrow #482327861926",
+      "date": "2026-06-16",
+      "id": "19ecdb8e21a852a6",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
@@ -677,6 +670,17 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29d889dd808e",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
+      "name": "CP Reformer Flow 2 (50 Mins) class",
+      "date": "2026-06-23",
+      "time": "06:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19ed0c67d8c1cc4a",
+      "sender": "Club Pilates Princeton"
     },
     {
       "type": "class",
