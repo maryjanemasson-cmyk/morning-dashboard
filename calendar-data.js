@@ -576,16 +576,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 19,
   "threads": [
-    {
-      "sender": "DHL EXPRESS",
-      "subject": "DHL On Demand Delivery"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "You can still book a 3-night getaway and get $100 back with Holiday Inn Club Vacations\u00ae"
-    },
     {
       "sender": "Pini Parma",
       "subject": "A shipment from order #195800 is on the way"
@@ -603,10 +595,6 @@ window.EMAIL_DATA = {
       "subject": "\ud83d\udcec Today's Rollup"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Two Tone Short"
-    },
-    {
       "sender": "Mathnasium of Princeton",
       "subject": "Payment Receipt from Mathnasium of Princeton"
     },
@@ -617,6 +605,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "What do you get the dad who has everything\ud83e\udd14"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, it\u2019s time to confirm your income"
+    },
+    {
+      "sender": "Julia Marcum",
+      "subject": "Stop mixing your fruit"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Mary Jane Masson, your May account statement is available."
     }
   ],
   "items": [
