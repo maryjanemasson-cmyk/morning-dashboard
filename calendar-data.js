@@ -576,47 +576,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "DHL EXPRESS",
+      "subject": "DHL On Demand Delivery"
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "You can still book a 3-night getaway and get $100 back with Holiday Inn Club Vacations\u00ae"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "A shipment from order #195800 is on the way"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Not Sure Which Size is Best?"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 6/17 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Two Tone Short"
+    },
+    {
+      "sender": "Mathnasium of Princeton",
+      "subject": "Payment Receipt from Mathnasium of Princeton"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Lagree Portal",
-      "subject": "Lagree Portal & Ticketing System \u2013 Account Registration"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Signed By Alex"
-    },
-    {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "What do you get the dad who has everything\ud83e\udd14"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, it\u2019s time to confirm your income"
-    },
-    {
-      "sender": "Julia Marcum",
-      "subject": "Stop mixing your fruit"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Mary Jane Masson, your May account statement is available."
-    },
-    {
-      "sender": "Microsoft Store",
-      "subject": "Meet the new Surface lineup\u2014with limited-time offers"
-    },
-    {
-      "sender": "Synchrony Offers",
-      "subject": "Mary, save instantly with up to $500 in Synchrony Travel Credits"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "Mary! Today is the last day to use your discount"
     }
   ],
   "items": [
