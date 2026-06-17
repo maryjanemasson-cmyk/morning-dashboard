@@ -340,14 +340,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "Check-in: Le Bellune Paris",
-        "location": "35 Boulevard Victor, Paris, 75015, France",
-        "description": "",
-        "start": "2026-06-15T13:00:00+00:00",
-        "end": "2026-06-15T14:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "UA54 EWR to CDG",
         "location": "Newark (EWR)",
         "description": "",
@@ -584,8 +576,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Lagree Portal",
+      "subject": "Lagree Portal & Ticketing System \u2013 Account Registration"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Signed By Alex"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "What do you get the dad who has everything\ud83e\udd14"
+    },
     {
       "sender": "American Express",
       "subject": "Christian, it\u2019s time to confirm your income"
@@ -609,22 +617,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Holafly",
       "subject": "Mary! Today is the last day to use your discount"
-    },
-    {
-      "sender": "Proton",
-      "subject": "Matchday Deals: Never miss a World Cup match again"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Tell us how we did"
-    },
-    {
-      "sender": "Resy",
-      "subject": "This just in from the James Beard Foundation\u00ae"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Fm"
     }
   ],
   "items": [
