@@ -340,14 +340,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA54 EWR to CDG",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-06-16T01:35:00+00:00",
-        "end": "2026-06-16T08:55:00+00:00",
-        "type": "flight"
-      },
-      {
         "summary": "UA56 CDG to EWR",
         "location": "Paris (CDG)",
         "description": "",
@@ -576,47 +568,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Pini Parma",
-      "subject": "A shipment from order #195800 is on the way"
+      "sender": "Tory Burch",
+      "subject": "We are working on your order #810678179"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 873214100609"
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order has shipped #810678179"
     },
     {
       "sender": "LOOK OPTIC",
-      "subject": "Not Sure Which Size is Best?"
+      "subject": "Aviators That Flatter"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 6/17 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Mathnasium of Princeton",
-      "subject": "Payment Receipt from Mathnasium of Princeton"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "What do you get the dad who has everything\ud83e\udd14"
+      "sender": "LinkedIn",
+      "subject": "You have 1 new invitation"
     },
     {
       "sender": "American Express",
-      "subject": "Christian, it\u2019s time to confirm your income"
+      "subject": "Christian, don\u2019t miss out! You\u2019ve been selected to earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
     },
     {
-      "sender": "Julia Marcum",
-      "subject": "Stop mixing your fruit"
+      "sender": "Washington University in St. Louis",
+      "subject": "Information about Demonstrated Interest at WashU"
     },
     {
-      "sender": "PayPal",
-      "subject": "Mary Jane Masson, your May account statement is available."
+      "sender": "us.bape.com",
+      "subject": "A shipment from order #572438 is on the way"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your June 18 flight"
+    },
+    {
+      "sender": "Abby Arad and Mandana Dayani from Your Stylist Says...",
+      "subject": "Live with Abby Arad"
     }
   ],
   "items": [
