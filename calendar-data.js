@@ -568,47 +568,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Aviators That Flatter"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 1 new invitation"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, don\u2019t miss out! You\u2019ve been selected to earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "Information about Demonstrated Interest at WashU"
-    },
-    {
-      "sender": "Abby Arad and Mandana Dayani from Your Stylist Says...",
-      "subject": "Live with Abby Arad"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Don't Forget, Mary Jane: Install your Webroot Internet Security Software"
-    },
-    {
-      "sender": "Diana @ Shameless Snacks",
-      "subject": "A Little Something from Diana..."
-    },
-    {
       "sender": "Pini Parma",
-      "subject": "A shipment from order #195800 is on the way"
+      "subject": "A shipment from order #195800 is out for delivery"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Not Sure Which Size is Best?"
+      "sender": "DHL EXPRESS",
+      "subject": "DHL On Demand Delivery"
+    },
+    {
+      "sender": "PURE Insurance",
+      "subject": "Recent updates from PURE l Read our latest newsletter"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Starting now: Up to 40% off!"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "Once BAPE, Always BAPE"
+    },
+    {
+      "sender": "Tip Top Cocktails",
+      "subject": "You Can Still Get Dad a Gift \ud83c\udf81"
+    },
+    {
+      "sender": "LE BELLUNE Hotel & Spa PARIS - R\u00e9ception",
+      "subject": "LE BELLUNE, Bar, H\u00f4tel & Spa - Satisfaction survey"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Make it a small-shop summer \ud83d\ude0e"
+    },
+    {
+      "sender": "COS",
+      "subject": "Sale: further reductions"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "The Apps That Help Me Run My Life"
     }
   ],
   "items": [
