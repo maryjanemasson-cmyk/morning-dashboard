@@ -568,19 +568,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Tory Burch",
-      "subject": "We are working on your order #810678179"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 873214100609"
-    },
-    {
-      "sender": "Tory Burch",
-      "subject": "Your order has shipped #810678179"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "LOOK OPTIC",
@@ -599,16 +591,24 @@ window.EMAIL_DATA = {
       "subject": "Information about Demonstrated Interest at WashU"
     },
     {
-      "sender": "us.bape.com",
-      "subject": "A shipment from order #572438 is on the way"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your June 18 flight"
-    },
-    {
       "sender": "Abby Arad and Mandana Dayani from Your Stylist Says...",
       "subject": "Live with Abby Arad"
+    },
+    {
+      "sender": "Best Buy Notifications",
+      "subject": "Don't Forget, Mary Jane: Install your Webroot Internet Security Software"
+    },
+    {
+      "sender": "Diana @ Shameless Snacks",
+      "subject": "A Little Something from Diana..."
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "A shipment from order #195800 is on the way"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Not Sure Which Size is Best?"
     }
   ],
   "items": [
