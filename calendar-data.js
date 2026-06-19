@@ -544,8 +544,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Snowden Recommendation Posts",
+      "subject": "Avoid this place if you are looking to have a..."
+    },
+    {
+      "sender": "GreenDrop Information",
+      "subject": "Last chance to schedule for next week\u2019s pickup!"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "A shipment from order #572438 has been delivered"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Cottonelle Ultra Soft...\""
+    },
+    {
+      "sender": "Misha Mehta, PhD at Pediatric Brain Tumor Foundation",
+      "subject": "The numbers tell an important story. \ud83d\udcca"
+    },
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 2600:4040:a044:1800:b8f0:ce7a:42fb:847e"
@@ -559,32 +583,8 @@ window.EMAIL_DATA = {
       "subject": "Your shipment was delivered 873214100609"
     },
     {
-      "sender": "Tory Burch",
-      "subject": "Your order has been delivered #810678179"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Wagner's 13008 Deluxe Wild...\""
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access: 25% Off Sun and Sun Progressives"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Back in Stock: The Vienna Coat"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 19 Jun 2026"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     }
   ],
   "items": [
@@ -605,6 +605,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19ec6d0c1a6ca823",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Cottonelle Ultra Soft...\"",
+      "date": "2026-06-19",
+      "id": "19ee11b092a1abbd",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
