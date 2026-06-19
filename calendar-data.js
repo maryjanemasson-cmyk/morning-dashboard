@@ -121,6 +121,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Reservation at Aquavit",
+    "location": "Aquavit, 65 E 55th St, New York, NY 10022",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMB7nqorYeMHpiKIa1wdP_tDVH3d6MECBg\n",
+    "startTime": "2026-06-20T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-20T18:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Lagree - Foundations - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29d889dd808e",
@@ -330,30 +341,6 @@ window.TRAVEL_DATA = [
         "start": "2026-06-04T13:30:00+00:00",
         "end": "2026-06-04T14:58:00+00:00",
         "type": "flight"
-      }
-    ]
-  },
-  {
-    "destination": "Paris, France",
-    "start": "2026-06-15",
-    "end": "2026-06-18",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA56 CDG to EWR",
-        "location": "Paris (CDG)",
-        "description": "",
-        "start": "2026-06-18T07:45:00+00:00",
-        "end": "2026-06-18T15:55:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: Le Bellune Paris",
-        "location": "35 Boulevard Victor, Paris, 75015, France",
-        "description": "",
-        "start": "2026-06-18T09:00:00+00:00",
-        "end": "2026-06-18T10:00:00+00:00",
-        "type": "hotel"
       }
     ]
   },
@@ -568,27 +555,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Pini Parma",
-      "subject": "A shipment from order #195800 is out for delivery"
-    },
-    {
-      "sender": "DHL EXPRESS",
-      "subject": "DHL On Demand Delivery"
-    },
-    {
-      "sender": "PURE Insurance",
-      "subject": "Recent updates from PURE l Read our latest newsletter"
+      "sender": "Tory Burch",
+      "subject": "Your order has shipped #810678179"
     },
     {
       "sender": "BOSS",
       "subject": "Starting now: Up to 40% off!"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "Once BAPE, Always BAPE"
     },
     {
       "sender": "Tip Top Cocktails",
@@ -609,6 +584,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Emily Ley",
       "subject": "The Apps That Help Me Run My Life"
+    },
+    {
+      "sender": "Enterprise Plus",
+      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus June eStatement"
+    },
+    {
+      "sender": "Princeton Academy of Art",
+      "subject": "Register now! Starting soon at Princeton Academy of Art"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Up to 25% Off All Window Treatments & Hardware"
     }
   ],
   "items": [
