@@ -837,7 +837,9 @@
     // Geocode → cache in localStorage so we only geocode each city once.
     // Handles "City", "City, ST" (US state code), and "City, Country" inputs.
     async function geocode(input) {
-      const key = 'wx-geo-' + input.toLowerCase();
+      // Cache key is versioned (v2) so older, mis-resolved entries (e.g. a
+      // "Princeton, NJ" that cached to Indiana) are flushed automatically.
+      const key = 'wx-geo2-' + input.toLowerCase();
       const cached = localStorage.getItem(key);
       if (cached) return JSON.parse(cached);
 
@@ -847,6 +849,13 @@
       if (parts.length >= 2) {
         city = parts[0];
         suffix = parts.slice(1).join(', ');
+      } else {
+        // No comma: detect a trailing US state code, e.g. "Princeton NJ".
+        const m = city.match(/^(.*\S)\s+([A-Za-z]{2})$/);
+        if (m && US_STATES[m[2].toUpperCase()]) {
+          city = m[1].trim();
+          suffix = m[2];
+        }
       }
       const stateFull = US_STATES[suffix.toUpperCase()];
 
@@ -857,16 +866,23 @@
       const json = await res.json();
       if (!json.results || !json.results.length) throw new Error(`Location not found: ${input}`);
 
-      let pick = json.results[0];
+      const byPopulation = (a, b) => (b.population || 0) - (a.population || 0);
+      let pick = null;
       if (suffix) {
         const want = (stateFull || suffix).toLowerCase();
-        const match = json.results.find(r =>
+        // There can be several same-state matches — take the most populous.
+        const matches = json.results.filter(r =>
           (r.admin1 || '').toLowerCase() === want ||
           (r.country || '').toLowerCase() === want ||
           (r.country_code || '').toLowerCase() === suffix.toLowerCase()
         );
-        if (match) pick = match;
+        if (matches.length) pick = matches.sort(byPopulation)[0];
       }
+      // No suffix, or suffix didn't match anything: the API orders by relevance
+      // (which surfaces tiny towns first), so fall back to the most populous
+      // result instead of results[0].
+      if (!pick) pick = json.results.slice().sort(byPopulation)[0];
+
       const geo = { lat: pick.latitude, lon: pick.longitude, name: pick.name, region: pick.admin1 || '', country: pick.country_code || '' };
       localStorage.setItem(key, JSON.stringify(geo));
       return geo;
