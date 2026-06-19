@@ -544,19 +544,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 873214100609"
-    },
-    {
-      "sender": "Enza Costa",
-      "subject": "Cotton Mini Stripe"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Support Your Team and Earn Double Points"
+      "sender": "The Container Store",
+      "subject": "Reminder: Please share your feedback on your recent purchase"
     },
     {
       "sender": "LOOK OPTIC",
@@ -585,6 +577,14 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Starting now: Up to 40% off!"
+    },
+    {
+      "sender": "Tip Top Cocktails",
+      "subject": "You Can Still Get Dad a Gift \ud83c\udf81"
+    },
+    {
+      "sender": "LE BELLUNE Hotel & Spa PARIS - R\u00e9ception",
+      "subject": "LE BELLUNE, Bar, H\u00f4tel & Spa - Satisfaction survey"
     }
   ],
   "items": [
