@@ -544,8 +544,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Apple Magic Keyboard with...\""
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -581,10 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Enterprise Plus",
       "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus June eStatement"
-    },
-    {
-      "sender": "Princeton Academy of Art",
-      "subject": "Register now! Starting soon at Princeton Academy of Art"
     }
   ],
   "items": [
