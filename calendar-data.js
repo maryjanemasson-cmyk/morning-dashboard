@@ -547,8 +547,24 @@ window.EMAIL_DATA = {
   "unreadCount": 11,
   "threads": [
     {
-      "sender": "The Container Store",
-      "subject": "Reminder: Please share your feedback on your recent purchase"
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 2600:4040:a044:1800:b8f0:ce7a:42fb:847e"
+    },
+    {
+      "sender": "headtrainer1563",
+      "subject": "Re: Holiday Weekend Schedule Update \u2013 Friday, July 3rd \ud83e\udde1\ud83c\uddfa\ud83c\uddf8"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 873214100609"
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order has been delivered #810678179"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Wagner's 13008 Deluxe Wild...\""
     },
     {
       "sender": "LOOK OPTIC",
@@ -569,22 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Starting now: Up to 40% off!"
-    },
-    {
-      "sender": "Tip Top Cocktails",
-      "subject": "You Can Still Get Dad a Gift \ud83c\udf81"
-    },
-    {
-      "sender": "LE BELLUNE Hotel & Spa PARIS - R\u00e9ception",
-      "subject": "LE BELLUNE, Bar, H\u00f4tel & Spa - Satisfaction survey"
     }
   ],
   "items": [
