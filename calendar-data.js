@@ -544,19 +544,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 16,
   "threads": [
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"Apple Magic Keyboard with...\""
+      "subject": "Shipped: \"Apple Magic Keyboard with...\""
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 19 Jun 2026"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Tory Burch",
-      "subject": "Your order has shipped #810678179"
     },
     {
       "sender": "BOSS",
@@ -581,10 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Emily Ley",
       "subject": "The Apps That Help Me Run My Life"
-    },
-    {
-      "sender": "Enterprise Plus",
-      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus June eStatement"
     }
   ],
   "items": [
@@ -605,6 +605,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19ec6d0c1a6ca823",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Apple Magic Keyboard with...\"",
+      "date": "2026-06-19",
+      "id": "19edf897c9efc57b",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
