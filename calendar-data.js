@@ -544,11 +544,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Apple Magic Keyboard with...\""
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 873214100609"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "Cotton Mini Stripe"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Support Your Team and Earn Double Points"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access: 25% Off Sun and Sun Progressives"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Back in Stock: The Vienna Coat"
     },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
@@ -565,26 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Starting now: Up to 40% off!"
-    },
-    {
-      "sender": "Tip Top Cocktails",
-      "subject": "You Can Still Get Dad a Gift \ud83c\udf81"
-    },
-    {
-      "sender": "LE BELLUNE Hotel & Spa PARIS - R\u00e9ception",
-      "subject": "LE BELLUNE, Bar, H\u00f4tel & Spa - Satisfaction survey"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Make it a small-shop summer \ud83d\ude0e"
-    },
-    {
-      "sender": "COS",
-      "subject": "Sale: further reductions"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "The Apps That Help Me Run My Life"
     }
   ],
   "items": [
