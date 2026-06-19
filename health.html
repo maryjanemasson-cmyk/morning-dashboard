@@ -438,12 +438,16 @@
     .fav-empty { font-size: 0.72rem; color: #b8a48e; padding: 0.5rem; }
 
     /* Weight trend */
-    .weight-trend { height: 160px; margin-top: 0.4rem; position: relative; }
+    .weight-trend { height: 184px; margin-top: 0.4rem; position: relative; }
     .weight-trend svg { width: 100%; height: 100%; }
     .weight-trend .line { stroke: #c9b99a; stroke-width: 2; fill: none; }
     .weight-trend .area { fill: rgba(201, 185, 154, 0.15); }
     .weight-trend .dot { fill: #2c2418; }
     .weight-trend .goal-line { stroke: #4a8c6f; stroke-width: 1; stroke-dasharray: 3,3; }
+    .weight-trend .grid { stroke: #efe8db; stroke-width: 1; }
+    .weight-trend .axis-line { stroke: #d8ccba; stroke-width: 1; }
+    .weight-trend .tick { fill: #a8987f; font-size: 9px; font-family: 'Inter', sans-serif; }
+    .weight-trend .goal-label { fill: #4a8c6f; font-size: 9px; font-weight: 600; font-family: 'Inter', sans-serif; }
     .weight-range-toggle {
       display: flex; gap: 0.25rem; margin-top: 0.5rem; flex-wrap: wrap;
     }
@@ -466,6 +470,27 @@
     .weight-stats .stat-value { color: #2c2418; font-weight: 600; }
     .weight-stats .delta-down { color: #4a8c6f; }
     .weight-stats .delta-up   { color: #c2553a; }
+    .weight-history { margin-top: 0.5rem; }
+    .weight-history > summary {
+      cursor: pointer; font-size: 0.72rem; color: #9c8b76; padding: 0.2rem 0;
+      font-family: 'Inter', sans-serif; list-style: none; user-select: none;
+    }
+    .weight-history > summary::-webkit-details-marker { display: none; }
+    .weight-history > summary::before { content: '\25B8\00A0'; color: #c9b99a; }
+    .weight-history[open] > summary::before { content: '\25BE\00A0'; }
+    .weight-history-list { max-height: 180px; overflow-y: auto; margin-top: 0.2rem; }
+    .weight-history-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 0.74rem; padding: 0.28rem 0.3rem; border-top: 1px solid #f0e9dc;
+      font-family: 'Inter', sans-serif; gap: 0.5rem;
+      cursor: pointer; border-radius: 4px;
+    }
+    .weight-history-row:hover { background: #f6f0e6; }
+    .weight-history-row .wh-date { color: #9c8b76; flex: 1; }
+    .weight-history-row .wh-weight { color: #2c2418; font-weight: 600; }
+    .weight-history-row .wh-delta { font-size: 0.66rem; width: 46px; text-align: right; color: #c4b6a0; }
+    .weight-history-row .wh-delta.down { color: #4a8c6f; }
+    .weight-history-row .wh-delta.up   { color: #c2553a; }
 
     .steps-trend { height: 80px; margin-top: 0.4rem; position: relative; }
     .steps-trend svg { width: 100%; height: 100%; }
@@ -732,6 +757,10 @@
             <span id="weight-goal">—</span>
           </div>
           <div class="progress-bar"><div class="fill" id="weight-progress" style="width:0%;"></div></div>
+          <details class="weight-history" id="weight-history">
+            <summary>Measurement history</summary>
+            <div class="weight-history-list" id="weight-history-list"></div>
+          </details>
         </div>
 
         <div class="card">
@@ -972,6 +1001,17 @@
         }
       }
     }
+
+    // Click a measurement-history row → load that day for editing and jump to
+    // the weight input (setViewDay fills it from that day's saved weight).
+    window.editWeightDay = (d) => {
+      setViewDay(d);
+      const inp = document.getElementById('weight-today');
+      if (inp) {
+        inp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => { inp.focus(); inp.select(); }, 250);
+      }
+    };
 
     // Wire the date picker
     setTimeout(() => {
@@ -1341,43 +1381,65 @@
         axis.innerHTML = '';
       } else {
         const ws = entries.map(e => e.weight);
-        const min = Math.min(...ws, profile.goal_lb) - 1;
-        const max = Math.max(...ws) + 1;
-        const w = 100, h = 160;
-        const pts = entries.map((e, i) => {
-          const x = (i / (entries.length - 1)) * w;
-          const y = h - ((e.weight - min) / (max - min)) * (h - 10) - 5;
-          return [x, y, e];
-        });
-        const path = pts.map((p, i) => (i === 0 ? `M ${p[0]} ${p[1]}` : `L ${p[0]} ${p[1]}`)).join(' ');
-        const area = `${path} L ${w} ${h} L 0 ${h} Z`;
-        const goalY = h - ((profile.goal_lb - min) / (max - min)) * (h - 10) - 5;
-        // Hide dots when there are too many to be readable (>60 points)
-        const showDots = entries.length <= 60;
-        trend.innerHTML = `
-          <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-            <path class="area" d="${area}" />
-            <path class="line" d="${path}" />
-            <line class="goal-line" x1="0" y1="${goalY}" x2="${w}" y2="${goalY}" />
-            ${showDots ? pts.map(p => `<circle class="dot" cx="${p[0]}" cy="${p[1]}" r="1.2"/>`).join('') : ''}
-          </svg>
-        `;
+        // y-range spans the data + goal, with a little breathing room
+        const dataMin = Math.min(...ws, profile.goal_lb);
+        const dataMax = Math.max(...ws, profile.goal_lb);
+        const min = dataMin - 0.8;
+        const max = dataMax + 0.8;
 
-        // Axis labels: start, middle, end dates (middle only for 1M+)
+        // Pixel geometry: viewBox == on-screen size so dots stay round and
+        // axis text isn't stretched. mL/mB reserve room for the y/x axes.
+        const W = trend.clientWidth || 320, H = 184;
+        const mL = 34, mR = 12, mT = 10, mB = 22;
+        const pw = W - mL - mR, ph = H - mT - mB;
+        const x0 = mL, x1 = mL + pw, y1 = mT + ph;
+        const sx = i => entries.length === 1 ? mL + pw / 2 : mL + (i / (entries.length - 1)) * pw;
+        const sy = v => mT + (1 - (v - min) / (max - min)) * ph;
+
+        // Nice round y-axis tick values across the range
+        const niceStep = (range, target) => {
+          const raw = range / target, pow = Math.pow(10, Math.floor(Math.log10(raw)));
+          const n = raw / pow;
+          return (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * pow;
+        };
+        const step = niceStep(max - min, 4);
+        const yticks = [];
+        for (let t = Math.ceil(min / step) * step; t <= max + 1e-9; t += step) yticks.push(+t.toFixed(2));
+
+        const pts = entries.map((e, i) => [sx(i), sy(e.weight), e]);
+        const path = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(' ');
+        const area = `${path} L ${x1.toFixed(1)} ${y1} L ${x0} ${y1} Z`;
+        const goalY = sy(profile.goal_lb);
+        const showDots = entries.length <= 60;
+
+        // x-axis date labels: start, (mid for 1M+), end
         const fmt = iso => {
           const d = new Date(iso + 'T12:00:00');
           const includeYear = weightRange === '1Y' || weightRange === 'ALL';
           return d.toLocaleDateString('en-US',
-            includeYear ? { month: 'short', day: 'numeric', year: 'numeric' }
+            includeYear ? { month: 'short', day: 'numeric', year: '2-digit' }
                         : { month: 'short', day: 'numeric' });
         };
-        const startDate = entries[0].date;
-        const endDate = entries[entries.length-1].date;
-        const showMid = entries.length >= 14;
-        const midDate = entries[Math.floor(entries.length / 2)].date;
-        axis.innerHTML = `<span>${fmt(startDate)}</span>`
-          + (showMid ? `<span>${fmt(midDate)}</span>` : '')
-          + `<span>${fmt(endDate)}</span>`;
+        const xticks = [{ i: 0, a: 'start' }];
+        if (entries.length >= 14) xticks.push({ i: Math.floor((entries.length - 1) / 2), a: 'middle' });
+        xticks.push({ i: entries.length - 1, a: 'end' });
+        const fmtY = t => t % 1 === 0 ? t.toFixed(0) : t.toFixed(1);
+
+        trend.innerHTML = `
+          <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+            ${yticks.map(t => `<line class="grid" x1="${x0}" y1="${sy(t).toFixed(1)}" x2="${x1}" y2="${sy(t).toFixed(1)}"/>`).join('')}
+            ${yticks.map(t => `<text class="tick" x="${x0 - 5}" y="${(sy(t) + 3).toFixed(1)}" text-anchor="end">${fmtY(t)}</text>`).join('')}
+            <line class="axis-line" x1="${x0}" y1="${mT}" x2="${x0}" y2="${y1}"/>
+            <line class="axis-line" x1="${x0}" y1="${y1}" x2="${x1}" y2="${y1}"/>
+            <path class="area" d="${area}" />
+            <path class="line" d="${path}" />
+            <line class="goal-line" x1="${x0}" y1="${goalY.toFixed(1)}" x2="${x1}" y2="${goalY.toFixed(1)}" />
+            <text class="goal-label" x="${x1}" y="${(goalY - 4).toFixed(1)}" text-anchor="end">goal ${profile.goal_lb}</text>
+            ${showDots ? pts.map(p => `<circle class="dot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2.2"/>`).join('') : ''}
+            ${xticks.map(t => `<text class="tick" x="${sx(t.i).toFixed(1)}" y="${H - 7}" text-anchor="${t.a}">${fmt(entries[t.i].date)}</text>`).join('')}
+          </svg>
+        `;
+        axis.innerHTML = '';   // dates now live on the SVG x-axis
 
         // Stats: delta over range, min, max, avg
         const first = entries[0].weight, last = entries[entries.length-1].weight;
@@ -1402,6 +1464,32 @@
       const done = start - latest;
       const pct = range > 0 ? Math.max(0, Math.min(100, (done / range) * 100)) : 0;
       document.getElementById('weight-progress').style.width = pct + '%';
+
+      // Measurement-history dropdown: every logged weight (lifetime, newest
+      // first) with the day-over-day change. Independent of the range toggle.
+      const histEl = document.getElementById('weight-history-list');
+      const histSum = document.querySelector('#weight-history summary');
+      if (histEl) {
+        if (histSum) histSum.textContent = `Measurement history (${all.length})`;
+        const fmtH = iso => new Date(iso + 'T12:00:00')
+          .toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: '2-digit' });
+        const desc = all.slice().reverse();   // newest first
+        histEl.innerHTML = desc.length
+          ? desc.map((e, idx) => {
+              const prev = desc[idx + 1];      // chronologically earlier entry
+              let d = '<span class="wh-delta"></span>';
+              if (prev) {
+                const diff = e.weight - prev.weight;
+                const cls = diff < 0 ? 'down' : diff > 0 ? 'up' : '';
+                const sign = diff > 0 ? '+' : '';
+                d = `<span class="wh-delta ${cls}">${diff === 0 ? '—' : sign + diff.toFixed(1)}</span>`;
+              }
+              return `<div class="weight-history-row" onclick="editWeightDay('${e.date}')" title="Edit this day's weight">`
+                + `<span class="wh-date">${fmtH(e.date)}</span>`
+                + `<span class="wh-weight">${e.weight.toFixed(1)} lb</span>${d}</div>`;
+            }).join('')
+          : `<div style="font-size:0.72rem;color:#b8a48e;font-style:italic;padding:0.3rem 0;">No measurements yet</div>`;
+      }
     }
 
     // Wire up the range toggle
@@ -1412,6 +1500,13 @@
       document.querySelectorAll('#weight-range-toggle button').forEach(b =>
         b.classList.toggle('active', b.dataset.range === weightRange));
       renderWeight();
+    });
+
+    // Re-render on resize so the pixel-based axes/dots stay crisp (debounced)
+    let _weightResizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(_weightResizeTimer);
+      _weightResizeTimer = setTimeout(renderWeight, 150);
     });
 
     document.getElementById('btn-log-weight').onclick = () => {
