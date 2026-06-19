@@ -341,6 +341,12 @@
         if (insertIdx === -1) insertIdx = baseItems.length;
         baseItems.splice(insertIdx, 0, newItem);
       }
+      // Refresh the open Add Piece view so newly-synced items (and any new
+      // category) appear immediately — mirrors the wardrobeOrder/Hidden
+      // listeners below. renderDetail rebuilds the category buttons (so a
+      // brand-new category gets a button) and re-renders the grid while
+      // restoring the user's search + scroll.
+      if (_addPanelOpen) renderDetail();
     });
 
     // Mirror the wardrobe page's saved item order so the Add Piece grid matches
@@ -727,7 +733,15 @@
         // Quick filter buttons
         const qf = document.getElementById('add-quick-filters');
         if (qf) {
-          const cats = ['Tops', 'Pants', 'Dresses', 'Skirts', 'Shoes', 'Bags', 'Jewelry', 'Knitwear', 'Jackets & Coats', 'Casual', 'Shorts', 'Accessories'];
+          // Derive category buttons from the actual wardrobe data so no
+          // category is ever orphaned (e.g. "Inspiration" or custom-item
+          // categories). Keep the curated order first, then append any extras.
+          const preferredCats = ['Tops', 'Pants', 'Dresses', 'Skirts', 'Shoes', 'Bags', 'Jewelry', 'Knitwear', 'Jackets & Coats', 'Casual', 'Shorts', 'Accessories'];
+          const presentCats = [...new Set((window.WARDROBE_ITEMS || []).map(i => i.category).filter(Boolean))];
+          const cats = [
+            ...preferredCats.filter(c => presentCats.includes(c)),
+            ...presentCats.filter(c => !preferredCats.includes(c)).sort()
+          ];
           qf.innerHTML = `<button style="font-size:0.55rem;padding:0.15rem 0.4rem;border-radius:10px;border:1px solid #ddd;background:${!_addCatFilter?'#013E7D':'#fff'};color:${!_addCatFilter?'#fff':'#5a5a6e'};cursor:pointer;font-family:inherit;"
               onclick="_addCatFilter=null;document.getElementById('add-search').value='';renderAddPanel();">All</button>` +
             cats.map(c =>
@@ -942,7 +956,7 @@
 
       const grid = document.getElementById('add-grid');
       if (!grid) return;
-      const MAX_SHOW = 200;
+      const MAX_SHOW = 1000;
       grid.innerHTML = filtered.slice(0, MAX_SHOW).map(i => {
         const tooltip = [i.subcategory, ...(i.labels || []), ...(i.colors || [])].join(', ');
         const fileKey = i.file.replace(/\./g, '_');
