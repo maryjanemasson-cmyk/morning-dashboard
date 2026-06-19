@@ -1,49 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "June Trip - Paris",
-    "location": "Paris, France",
-    "description": "Mary Jane Hinrichs is in Paris, France from Jun 15 to 18, 2026",
-    "startTime": "",
-    "startDate": "2026-06-15",
-    "endTime": "",
-    "endDate": "2026-06-19",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\u2708\ufe0f UA56 CDG \u2192 EWR",
-    "location": "Paris (CDG)",
-    "description": "Thu, Jun 18\n9:45 AM CEST\n[Flight] CDG to EWR\nUnited Airlines 56, Terminal AEROGARE 1, Gate\n11:55 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL B, Gate",
-    "startTime": "2026-06-18T03:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-18T11:55:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: Le Bellune Paris",
-    "location": "35 Boulevard Victor, Paris, 75015, France",
-    "description": "11:00 AM CEST\n[Lodging] Depart Le Bellune Paris\nCheck-Out: 11:00am\n35 Boulevard Victor, Paris, 75015, France\n+33 1 85 72 62 62",
-    "startTime": "2026-06-18T05:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-18T06:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "Your Appointment at Suite Blend Color Bar",
-    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
-    "description": "SERVICES\nHaircut, Single Color Root Touch Up\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/4ec0c8963b6674613e03846af6b4cebd5e84",
-    "startTime": "2026-06-18T12:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-18T14:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "DC Trip \u2014 Dupont Circle Hotel",
     "location": "The Dupont Circle Hotel, 1500 New Hampshire Ave NW, Washington, DC 20036",
     "description": "Personal family trip to Washington DC\nDriving from Princeton\nStaying at The Dupont Circle Hotel\nDriving back June 21\n\nNote: Departing on Juneteenth (federal holiday) \u2014 expect heavier traffic on I-95/295.",
@@ -295,6 +251,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "Ann Hinrich's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-07-02",
+    "endTime": "",
+    "endDate": "2026-07-03",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Ann Hinrich's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-02T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-02T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Ann Hinrich's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-02T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-02T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
   }
 ];
 
@@ -558,6 +547,10 @@ window.EMAIL_DATA = {
   "unreadCount": 14,
   "threads": [
     {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
       "sender": "Tory Burch",
       "subject": "Your order has shipped #810678179"
     },
@@ -592,10 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Princeton Academy of Art",
       "subject": "Register now! Starting soon at Princeton Academy of Art"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Up to 25% Off All Window Treatments & Hardware"
     }
   ],
   "items": [
