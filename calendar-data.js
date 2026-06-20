@@ -544,47 +544,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 34,
   "threads": [
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Father's Day is TOMORROW \ud83d\udd0a"
+      "sender": "Sephora",
+      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
     },
     {
-      "sender": "Reformation",
-      "subject": "We know we're cute"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Course-Ready. Clubhouse Approved."
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 6/20 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 20 Jun 2026"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Santos Necklace"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Your Go-To Summer Top"
+      "sender": "Almina Concept",
+      "subject": "Nadya Styles Her Almina Concept Essentials"
     },
     {
       "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 20, 2026"
+      "subject": "Mary, what did you think about Lagree - Foundations - 45 minutes?"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "Festive desserts to fete the Fourth"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Christophe CANOZ",
+      "subject": "Thank you for your visit to Louis Vuitton"
+    },
+    {
+      "sender": "Holafly",
+      "subject": "Mary, share your thoughts and get a reward! \u2b50\ud83e\ude99"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Draped Linen"
+    },
+    {
+      "sender": "COS",
+      "subject": "Best of: further reductions"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "25% Off Sun & Sun Progressives Starts Now!"
     }
   ],
   "items": [
