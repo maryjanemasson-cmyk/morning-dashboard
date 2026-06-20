@@ -544,8 +544,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 36,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Cascade Complete Dishwasher...\" and \u20663\u2069 more items"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"XFasten Double Sided Carpet...\""
+    },
+    {
+      "sender": "noreply@mytix.njtransit.com",
+      "subject": "NJ TRANSIT - Receipt"
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "It's Birthday Time!"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Refund update for Levi's Womens Flynn Western Core Dress (Also Available in Plus)."
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Celebrate independent makers \ud83e\udd73"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
+    },
     {
       "sender": "Zenoti",
       "subject": "Thank you for visiting EMA"
@@ -557,34 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "AT&T Online Services",
       "subject": "Your AT&T wireless bill is ready to view"
-    },
-    {
-      "sender": "Laurent Chapuis",
-      "subject": "Private Sale: The 2022 Vintage Shines on Ch\u00e2teau Talbot: A Once in a Half-Century Masterpiece"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "BAPE\u00ae NEW ARRIVALS"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Nadya Styles Her Almina Concept Essentials"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Mary, what did you think about Lagree - Foundations - 45 minutes?"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Festive desserts to fete the Fourth"
-    },
-    {
-      "sender": "Christophe CANOZ",
-      "subject": "Thank you for your visit to Louis Vuitton"
     }
   ],
   "items": [
@@ -626,6 +626,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-20",
       "id": "19ee33312ec39343",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Refund update for Levi's Womens Flynn Western Core Dress (Also Available in Plus)",
+      "date": "2026-06-20",
+      "id": "19ee6430971fd750",
+      "sender": "return@amazon.com"
     },
     {
       "type": "class",
