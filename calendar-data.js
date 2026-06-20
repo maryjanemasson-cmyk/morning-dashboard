@@ -544,39 +544,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Snowden Recommendation Posts",
-      "subject": "Avoid this place if you are looking to have a..."
-    },
-    {
-      "sender": "GreenDrop Information",
-      "subject": "Last chance to schedule for next week\u2019s pickup!"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "A shipment from order #572438 has been delivered"
-    },
-    {
       "sender": "Amazon.com",
-      "subject": "Shipped: \"Cottonelle Ultra Soft...\""
+      "subject": "Ordered: \"XFasten Double Sided Carpet...\""
     },
     {
-      "sender": "Misha Mehta, PhD at Pediatric Brain Tumor Foundation",
-      "subject": "The numbers tell an important story. \ud83d\udcca"
+      "sender": "Design Decor",
+      "subject": "Mary jane, Step Into Effortless Elegance at Home"
+    },
+    {
+      "sender": "Design Decor Knoxville",
+      "subject": "Order #15017 confirmed"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access Ends at Midnight"
+    },
+    {
+      "sender": "Uber Receipts",
+      "subject": "[Mary Jane Hinrichs's Family] Your Friday evening trip with Uber"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udf7f Big feelings and bigger mysteries take over Friday"
     },
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 2600:4040:a044:1800:b8f0:ce7a:42fb:847e"
-    },
-    {
-      "sender": "headtrainer1563",
-      "subject": "Re: Holiday Weekend Schedule Update \u2013 Friday, July 3rd \ud83e\udde1\ud83c\uddfa\ud83c\uddf8"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -585,6 +581,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Wagner's 13008 Deluxe Wild...\""
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access: 25% Off Sun and Sun Progressives"
     }
   ],
   "items": [
