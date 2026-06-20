@@ -544,8 +544,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"XFasten Double Sided Carpet...\""
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 20, 2026"
+    },
     {
       "sender": "IDnotify",
       "subject": "Your Monthly Update From IDnotify"
@@ -577,14 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Design Decor",
       "subject": "Mary jane, Step Into Effortless Elegance at Home"
-    },
-    {
-      "sender": "Design Decor Knoxville",
-      "subject": "Order #15017 confirmed"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access Ends at Midnight"
     }
   ],
   "items": [
@@ -605,6 +605,20 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29cc4294f2ad",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Your package will be delivered soon D3757236",
+      "date": "2026-06-20",
+      "id": "19ee3d1b26bdd623",
+      "sender": "Aritzia"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"XFasten Double Sided Carpet...\"",
+      "date": "2026-06-20",
+      "id": "19ee3afc1a911928",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
