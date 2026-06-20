@@ -544,8 +544,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Father's Day is TOMORROW \ud83d\udd0a"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "We know we're cute"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Course-Ready. Clubhouse Approved."
+    },
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 6/20 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 20 Jun 2026"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Santos Necklace"
+    },
     {
       "sender": "WAT THE BRAND",
       "subject": "Your Go-To Summer Top"
@@ -553,38 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 20, 2026"
-    },
-    {
-      "sender": "IDnotify",
-      "subject": "Your Monthly Update From IDnotify"
-    },
-    {
-      "sender": "Chewy.com",
-      "subject": "We're getting your Autoship order ready"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "stapp@bartlett.com",
-      "subject": "Tree Tips Newsletter \u2013 Summer 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Cascade Complete Dishwasher...\" and \u20663\u2069 more items"
-    },
-    {
-      "sender": "Printemps New York",
-      "subject": "A Celebration of Community"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"XFasten Double Sided Carpet...\""
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Mary jane, Step Into Effortless Elegance at Home"
     }
   ],
   "items": [
