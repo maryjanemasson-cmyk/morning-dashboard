@@ -544,8 +544,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your Go-To Summer Top"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"XFasten Double Sided Carpet...\""
@@ -581,10 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"XFasten Double Sided Carpet...\""
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Mary jane, Step Into Effortless Elegance at Home"
     }
   ],
   "items": [
