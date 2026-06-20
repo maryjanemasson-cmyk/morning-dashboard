@@ -544,8 +544,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 30,
   "threads": [
+    {
+      "sender": "Zenoti",
+      "subject": "Thank you for visiting EMA"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "TECHNICALLY SPEAKING"
+    },
+    {
+      "sender": "AT&T Online Services",
+      "subject": "Your AT&T wireless bill is ready to view"
+    },
+    {
+      "sender": "Laurent Chapuis",
+      "subject": "Private Sale: The 2022 Vintage Shines on Ch\u00e2teau Talbot: A Once in a Half-Century Masterpiece"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "BAPE\u00ae NEW ARRIVALS"
+    },
     {
       "sender": "Sephora",
       "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
@@ -563,28 +583,8 @@ window.EMAIL_DATA = {
       "subject": "Festive desserts to fete the Fourth"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
       "sender": "Christophe CANOZ",
       "subject": "Thank you for your visit to Louis Vuitton"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "Mary, share your thoughts and get a reward! \u2b50\ud83e\ude99"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Draped Linen"
-    },
-    {
-      "sender": "COS",
-      "subject": "Best of: further reductions"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "25% Off Sun & Sun Progressives Starts Now!"
     }
   ],
   "items": [
