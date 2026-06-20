@@ -11,28 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
-    "summary": "\ud83c\uddeb\ud83c\uddf7 FASP \u2014 Juneteenth (No School)",
-    "location": "",
-    "description": "School Closed: Juneteenth Day",
-    "startTime": "",
-    "startDate": "2026-06-19",
-    "endTime": "",
-    "endDate": "2026-06-20",
-    "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "CP Reformer Flow 2 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec6d0c1a6ca823",
-    "startTime": "2026-06-19T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-19T06:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "\ud83c\udf82 Nathaniel's Birthday",
     "location": "",
     "description": "",
@@ -284,6 +262,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "iCloud",
     "colorId": ""
+  },
+  {
+    "summary": "\u2708\ufe0f UA570 BOS \u2192 EWR",
+    "location": "Boston (BOS)",
+    "description": "Fri, Jul 3\n8:00 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 570, Terminal TERMINAL B, Gate\n9:23 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
+    "startTime": "2026-07-03T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-03T09:23:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Kimpton Marlowe by IHG",
+    "location": "25 Edwin H. Land Blvd, Cambridge, MA 02141",
+    "description": "Check-Out: 11:00 AM\\nPhone: +1 617 868-8000",
+    "startTime": "2026-07-03T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-03T12:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -544,8 +544,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "IDnotify",
+      "subject": "Your Monthly Update From IDnotify"
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "We're getting your Autoship order ready"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "stapp@bartlett.com",
+      "subject": "Tree Tips Newsletter \u2013 Summer 2026"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Cascade Complete Dishwasher...\" and \u20663\u2069 more items"
+    },
+    {
+      "sender": "Printemps New York",
+      "subject": "A Celebration of Community"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"XFasten Double Sided Carpet...\""
@@ -561,30 +585,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Early Access Ends at Midnight"
-    },
-    {
-      "sender": "Uber Receipts",
-      "subject": "[Mary Jane Hinrichs's Family] Your Friday evening trip with Uber"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udf7f Big feelings and bigger mysteries take over Friday"
-    },
-    {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 2600:4040:a044:1800:b8f0:ce7a:42fb:847e"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 873214100609"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Wagner's 13008 Deluxe Wild...\""
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access: 25% Off Sun and Sun Progressives"
     }
   ],
   "items": [
@@ -597,31 +597,6 @@ window.EMAIL_DATA = {
     },
     {
       "type": "class",
-      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
-      "name": "CP Reformer Flow 2 (50 Mins) class",
-      "date": "2026-06-19",
-      "time": "06:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19ec6d0c1a6ca823",
-      "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Cottonelle Ultra Soft...\"",
-      "date": "2026-06-19",
-      "id": "19ee11b092a1abbd",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Apple Magic Keyboard with...\"",
-      "date": "2026-06-19",
-      "id": "19edf897c9efc57b",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "class",
       "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
       "name": "Lagree - Foundations - 45 minutes",
       "date": "2026-06-20",
@@ -630,6 +605,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29cc4294f2ad",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Cascade Complete Dishwasher...\" and \u20663\u2069 more items",
+      "date": "2026-06-20",
+      "id": "19ee33312ec39343",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
