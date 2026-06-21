@@ -522,8 +522,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "Williams Sonoma, Inc...: $158.87\u00a0USD"
+    },
+    {
+      "sender": "Williams Sonoma",
+      "subject": "Williams Sonoma Order Confirmation #361723022444"
+    },
+    {
+      "sender": "Aritzia",
+      "subject": "Your package has arrived #D3757236"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Home Techpro Rug Pads...\""
+    },
     {
       "sender": "PayPal",
       "subject": "Your linked credit card still earns points"
@@ -547,18 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Green Drop",
       "subject": "Reminder: Our donation truck is headed your way"
-    },
-    {
-      "sender": "Aquavit",
-      "subject": "Modified reservation for Aquavit on Saturday, June 20, 2026, 5:00\u202fPM"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Disney+",
-      "subject": "We noticed a new login"
     }
   ],
   "items": [
