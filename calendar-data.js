@@ -522,8 +522,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Dad's day is today. No pressure \ud83d\ude09"
+    },
+    {
+      "sender": "Laurel and Blush",
+      "subject": "Complete your look in one click"
+    },
     {
       "sender": "PayPal",
       "subject": "Williams Sonoma, Inc...: $158.87\u00a0USD"
@@ -555,14 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "& Other Stories",
       "subject": "Sale: 100+ new styles added"
-    },
-    {
-      "sender": "COS",
-      "subject": "Just in: summer recharged"
-    },
-    {
-      "sender": "Green Drop",
-      "subject": "Reminder: Our donation truck is headed your way"
     }
   ],
   "items": [
