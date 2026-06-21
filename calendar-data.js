@@ -522,8 +522,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Aquavit",
+      "subject": "Thank you for visiting Aquavit"
+    },
+    {
+      "sender": "Suite Blend Color Bar",
+      "subject": "Your appointment with Suite Blend Color Bar has been scheduled"
+    },
+    {
+      "sender": "COS",
+      "subject": "Just in: summer recharged"
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "Happy Father\u2019s Day! \ud83d\udc99"
+    },
     {
       "sender": "Green Drop",
       "subject": "Reminder: Our donation truck is headed your way"
@@ -547,22 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "It's Birthday Time!"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "TECHNICALLY SPEAKING"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "BAPE\u00ae NEW ARRIVALS"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
     }
   ],
   "items": [
