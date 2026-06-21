@@ -522,8 +522,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Pini Parma",
+      "subject": "Reminder: Private Summer Sale Now Live"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Can you develop good taste?"
+    },
+    {
+      "sender": "Alo Yoga",
+      "subject": "Here's Your ALO Order Confirmation: EXCHL-39816550-1"
+    },
     {
       "sender": "Shop",
       "subject": "Your Afloral cart? Saved \u2705 over on Shop"
@@ -551,18 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Zenoti",
       "subject": "Reminder for your appointment on Jun 22, 2026 at 3:30 PM"
-    },
-    {
-      "sender": "Disney+",
-      "subject": "We noticed a new login"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"XFasten Double Sided Carpet...\""
-    },
-    {
-      "sender": "noreply@mytix.njtransit.com",
-      "subject": "NJ TRANSIT - Receipt"
     }
   ],
   "items": [
