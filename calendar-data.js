@@ -11,61 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
-    "summary": "\ud83c\udf82 Nathaniel's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-06-20",
-    "endTime": "",
-    "endDate": "2026-06-21",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
-    "summary": "\ud83c\udf82 Nathaniel's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-06-20",
-    "endTime": "",
-    "endDate": "2026-06-21",
-    "calendar": "Family",
-    "colorId": "7"
-  },
-  {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-20T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-20T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29cc4294f2ad",
-    "startTime": "2026-06-20T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-20T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Reservation at Aquavit",
-    "location": "Aquavit, 65 E 55th St, New York, NY 10022",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMB7nqorYeMHpiKIa1wdP_tDVH3d6MECBg\n",
-    "startTime": "2026-06-20T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-20T18:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Lagree - Foundations - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29d889dd808e",
@@ -284,6 +229,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-04T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-04T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Philly Outdoor Concert",
+    "location": "Benjamin Franklin Parkway, Benjamin Franklin Pkwy, Philadelphia, PA, USA",
+    "description": "<ul><li dir=\"ltr\"><strong>5:00 PM \u2013 11:45 PM\u00a0</strong>\u2014 Main Event\u00a0Concert (TBD: Dinner to overlap / arrive late)</li><li dir=\"ltr\"><strong>11:45 PM\u00a0</strong>\u2014 Fireworks Finale over the Philadelphia Museum of Art &amp; Skyline</li></ul><br><br>Christina Aguilera, Jill Scott, The Roots,\u00a0Will Smith, DJ Jazzy Jeff,\u00a0 Seal, Wanda Sykes, State Property, Kathy Sledge, Infinity Song, and More<br><br><a href=\"https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/\" target=\"_blank\">https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/</a>",
+    "startTime": "2026-07-04T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-05T00:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Philly Outdoor Concert",
+    "location": "Benjamin Franklin Parkway, Benjamin Franklin Pkwy, Philadelphia, PA, USA",
+    "description": "<ul><li dir=\"ltr\"><strong>5:00 PM \u2013 11:45 PM\u00a0</strong>\u2014 Main Event\u00a0Concert (TBD: Dinner to overlap / arrive late)</li><li dir=\"ltr\"><strong>11:45 PM\u00a0</strong>\u2014 Fireworks Finale over the Philadelphia Museum of Art &amp; Skyline</li></ul><br><br>Christina Aguilera, Jill Scott, The Roots,\u00a0Will Smith, DJ Jazzy Jeff,\u00a0 Seal, Wanda Sykes, State Property, Kathy Sledge, Infinity Song, and More<br><br><a href=\"https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/\" target=\"_blank\">https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/</a>",
+    "startTime": "2026-07-04T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-05T00:00:00-04:00",
+    "endDate": "",
+    "calendar": "Chris",
+    "colorId": ""
   }
 ];
 
@@ -544,8 +522,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "French American School Princeton",
+      "subject": "Your statement for French American School Princeton for 2026-07-01 is available to view."
+    },
+    {
+      "sender": "Green Drop",
+      "subject": "Reminder: Our donation truck is headed your way"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -577,14 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "It's Birthday Time!"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "TECHNICALLY SPEAKING"
     }
   ],
   "items": [
@@ -594,38 +572,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-07",
       "id": "19ea1ce19e14b8e7",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-20",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19ec29cc4294f2ad",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Your package will be delivered soon D3757236",
-      "date": "2026-06-20",
-      "id": "19ee3d1b26bdd623",
-      "sender": "Aritzia"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"XFasten Double Sided Carpet...\"",
-      "date": "2026-06-20",
-      "id": "19ee3afc1a911928",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Cascade Complete Dishwasher...\" and \u20663\u2069 more items",
-      "date": "2026-06-20",
-      "id": "19ee33312ec39343",
-      "sender": "Amazon.com"
     },
     {
       "type": "return",
