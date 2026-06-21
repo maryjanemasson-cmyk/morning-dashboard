@@ -522,8 +522,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Shop",
+      "subject": "Your Afloral cart? Saved \u2705 over on Shop"
+    },
     {
       "sender": "French American School Princeton",
       "subject": "Your statement for French American School Princeton for 2026-07-01 is available to view."
@@ -559,10 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "noreply@mytix.njtransit.com",
       "subject": "NJ TRANSIT - Receipt"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "It's Birthday Time!"
     }
   ],
   "items": [
