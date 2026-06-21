@@ -522,23 +522,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Aquavit",
-      "subject": "Thank you for visiting Aquavit"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\""
     },
     {
-      "sender": "Suite Blend Color Bar",
-      "subject": "Your appointment with Suite Blend Color Bar has been scheduled"
+      "sender": "& Other Stories",
+      "subject": "Sale: 100+ new styles added"
     },
     {
       "sender": "COS",
       "subject": "Just in: summer recharged"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "Happy Father\u2019s Day! \ud83d\udc99"
     },
     {
       "sender": "Green Drop",
@@ -563,6 +559,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "It's Birthday Time!"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
     }
   ],
   "items": [
@@ -572,6 +572,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-20",
       "id": "19ee6430971fd750",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\"",
+      "date": "2026-06-21",
+      "id": "19eeb17e36460795",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
