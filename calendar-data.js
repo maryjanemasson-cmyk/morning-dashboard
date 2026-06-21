@@ -522,8 +522,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Pup-Peroni Original Beef...\""
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #146"
+    },
+    {
+      "sender": "French American School Princeton",
+      "subject": "Payment Received for French American School Princeton"
+    },
     {
       "sender": "Pini Parma",
       "subject": "Reminder: Private Summer Sale Now Live"
@@ -551,18 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Aquavit",
-      "subject": "Modified reservation for Aquavit on Saturday, June 20, 2026, 5:00\u202fPM"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Zenoti",
-      "subject": "Reminder for your appointment on Jun 22, 2026 at 3:30 PM"
     }
   ],
   "items": [
