@@ -544,11 +544,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 36,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Cascade Complete Dishwasher...\" and \u20663\u2069 more items"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Aquavit",
+      "subject": "Modified reservation for Aquavit on Saturday, June 20, 2026, 5:00\u202fPM"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Zenoti",
+      "subject": "Reminder for your appointment on Jun 22, 2026 at 3:30 PM"
+    },
+    {
+      "sender": "Disney+",
+      "subject": "We noticed a new login"
     },
     {
       "sender": "Amazon.com",
@@ -563,28 +579,12 @@ window.EMAIL_DATA = {
       "subject": "It's Birthday Time!"
     },
     {
-      "sender": "return@amazon.com",
-      "subject": "Refund update for Levi's Womens Flynn Western Core Dress (Also Available in Plus)."
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Celebrate independent makers \ud83e\udd73"
-    },
-    {
       "sender": "LinkedIn",
       "subject": "You have 3 new invitations"
     },
     {
-      "sender": "Zenoti",
-      "subject": "Thank you for visiting EMA"
-    },
-    {
       "sender": "Reformation",
       "subject": "TECHNICALLY SPEAKING"
-    },
-    {
-      "sender": "AT&T Online Services",
-      "subject": "Your AT&T wireless bill is ready to view"
     }
   ],
   "items": [
