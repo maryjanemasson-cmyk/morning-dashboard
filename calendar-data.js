@@ -522,8 +522,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "Your linked credit card still earns points"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Build Your Capsule Wardrobe"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\""
@@ -551,18 +559,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Disney+",
       "subject": "We noticed a new login"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"XFasten Double Sided Carpet...\""
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "It's Birthday Time!"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
     }
   ],
   "items": [
