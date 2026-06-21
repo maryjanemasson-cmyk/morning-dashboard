@@ -522,57 +522,50 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 16,
   "threads": [
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Pup-Peroni Original Beef...\""
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #146"
-    },
-    {
-      "sender": "French American School Princeton",
-      "subject": "Payment Received for French American School Princeton"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Reminder: Private Summer Sale Now Live"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Can you develop good taste?"
-    },
-    {
-      "sender": "Alo Yoga",
-      "subject": "Here's Your ALO Order Confirmation: EXCHL-39816550-1"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Your Afloral cart? Saved \u2705 over on Shop"
-    },
-    {
-      "sender": "French American School Princeton",
-      "subject": "Your statement for French American School Princeton for 2026-07-01 is available to view."
-    },
     {
       "sender": "Green Drop",
       "subject": "Reminder: Our donation truck is headed your way"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Aquavit",
+      "subject": "Modified reservation for Aquavit on Saturday, June 20, 2026, 5:00\u202fPM"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Disney+",
+      "subject": "We noticed a new login"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"XFasten Double Sided Carpet...\""
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "It's Birthday Time!"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "TECHNICALLY SPEAKING"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "BAPE\u00ae NEW ARRIVALS"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "Run, don\u2019t walk \ud83c\udfc3\ud83d\udca8"
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift",
-      "date": "2026-06-07",
-      "id": "19ea1ce19e14b8e7",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: Refund update for Levi's Womens Flynn Western Core Dress (Also Available in Plus)",
