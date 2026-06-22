@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "CP Reformer Flow 2 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19eeffb3200dfc9e",
+    "startTime": "2026-06-25T16:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-25T16:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "CP Reformer Flow 1.5 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ecb7628b5139c2",
@@ -522,8 +533,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Almina Concept",
+      "subject": "Our Elevated Summer Tops"
+    },
     {
       "sender": "PayPal",
       "subject": "Spotify USA Inc: $23.45\u00a0USD"
@@ -531,10 +546,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Club Pilates Princeton",
       "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 26, 2026 at 6:00 AM"
     },
     {
       "sender": "Amazon.com",
@@ -559,10 +570,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 \"Home Techpro Rug Pads...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\""
     }
   ],
   "items": [
@@ -600,6 +607,17 @@ window.EMAIL_DATA = {
       "duration_min": 50,
       "location": "Club Pilates Princeton",
       "id": "19ed0c67d8c1cc4a",
+      "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 4:00 PM",
+      "name": "CP Reformer Flow 2 (50 Mins) class",
+      "date": "2026-06-25",
+      "time": "16:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19eeffb3200dfc9e",
       "sender": "Club Pilates Princeton"
     },
     {
