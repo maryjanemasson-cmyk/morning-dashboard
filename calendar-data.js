@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19eefb8983f9303d",
+    "startTime": "2026-06-26T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-26T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "\ud83c\udf82 Christian's Birthday",
     "location": "",
     "description": "",
@@ -511,11 +522,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Anthropic, PBC",
-      "subject": "Your receipt from Anthropic, PBC #2748-6281-8059"
+      "sender": "PayPal",
+      "subject": "Spotify USA Inc: $23.45\u00a0USD"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 26, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"OMOTON Vertical Laptop...\""
     },
     {
       "sender": "Chan Luu",
@@ -540,14 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\""
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Sale: 100+ new styles added"
-    },
-    {
-      "sender": "COS",
-      "subject": "Just in: summer recharged"
     }
   ],
   "items": [
@@ -570,6 +585,13 @@ window.EMAIL_DATA = {
       "sender": "FORM BY TWO"
     },
     {
+      "type": "delivery",
+      "title": "FedEx shipped #529024058278",
+      "date": "2026-06-22",
+      "id": "19eef83554a195d3",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
       "type": "class",
       "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
       "name": "CP Reformer Flow 2 (50 Mins) class",
@@ -579,6 +601,17 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19ed0c67d8c1cc4a",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-06-26",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19eefb8983f9303d",
+      "sender": "FORM BY TWO"
     },
     {
       "type": "class",
