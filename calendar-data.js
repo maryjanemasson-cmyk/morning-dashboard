@@ -514,12 +514,12 @@ window.EMAIL_DATA = {
   "unreadCount": 9,
   "threads": [
     {
-      "sender": "Big Mamma",
-      "subject": "Free gelato \ud83c\udf66"
+      "sender": "Anthropic, PBC",
+      "subject": "Your receipt from Anthropic, PBC #2748-6281-8059"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 22 Jun 2026"
+      "sender": "Chan Luu",
+      "subject": "See Something You Like?"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
