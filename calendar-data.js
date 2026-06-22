@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "DC Trip \u2014 Dupont Circle Hotel",
-    "location": "The Dupont Circle Hotel, 1500 New Hampshire Ave NW, Washington, DC 20036",
-    "description": "Personal family trip to Washington DC\nDriving from Princeton\nStaying at The Dupont Circle Hotel\nDriving back June 21\n\nNote: Departing on Juneteenth (federal holiday) \u2014 expect heavier traffic on I-95/295.",
-    "startTime": "",
-    "startDate": "2026-06-19",
-    "endTime": "",
-    "endDate": "2026-06-22",
-    "calendar": "Family",
-    "colorId": "10"
-  },
-  {
     "summary": "Lagree - Foundations - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29d889dd808e",
@@ -522,8 +511,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Laurel and Blush",
+      "subject": "You left items at checkout"
+    },
+    {
+      "sender": "",
+      "subject": "Kearny Bank Loan payment sent as a check"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Pup-Peroni Original Beef...\""
+    },
+    {
+      "sender": "Ro",
+      "subject": "Your account has been updated"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHOP REF X UMBRO FIRST"
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "4 Hours Left: 25% Off Sun and Sun Progressives"
@@ -539,26 +552,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Williams Sonoma, Inc...: $158.87\u00a0USD"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Home Techpro Rug Pads...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\""
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Sale: 100+ new styles added"
-    },
-    {
-      "sender": "COS",
-      "subject": "Just in: summer recharged"
-    },
-    {
-      "sender": "Green Drop",
-      "subject": "Reminder: Our donation truck is headed your way"
     }
   ],
   "items": [
@@ -570,20 +563,6 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "delivery",
-      "title": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\"",
-      "date": "2026-06-21",
-      "id": "19eeb17e36460795",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #873345671868",
-      "date": "2026-06-21",
-      "id": "19eec75c6e040cd6",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
       "type": "class",
       "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
       "name": "Lagree - Foundations - 45 minutes",
@@ -593,6 +572,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29d889dd808e",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Pup-Peroni Original Beef...\"",
+      "date": "2026-06-22",
+      "id": "19eed84625c73370",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
