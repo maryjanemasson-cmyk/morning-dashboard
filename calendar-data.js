@@ -511,35 +511,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Laurel and Blush",
-      "subject": "You left items at checkout"
+      "sender": "Big Mamma",
+      "subject": "Free gelato \ud83c\udf66"
     },
     {
-      "sender": "",
-      "subject": "Kearny Bank Loan payment sent as a check"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Pup-Peroni Original Beef...\""
-    },
-    {
-      "sender": "Ro",
-      "subject": "Your account has been updated"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHOP REF X UMBRO FIRST"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "4 Hours Left: 25% Off Sun and Sun Progressives"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 22 Jun 2026"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -552,6 +532,22 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Williams Sonoma, Inc...: $158.87\u00a0USD"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 \"Home Techpro Rug Pads...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"Home Techpro Rug Pads...\""
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Sale: 100+ new styles added"
+    },
+    {
+      "sender": "COS",
+      "subject": "Just in: summer recharged"
     }
   ],
   "items": [
@@ -572,13 +568,6 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29d889dd808e",
       "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Pup-Peroni Original Beef...\"",
-      "date": "2026-06-22",
-      "id": "19eed84625c73370",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
