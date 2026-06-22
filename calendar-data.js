@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "Reservation at Witherspoon Grill",
+    "location": "Witherspoon Grill, 57 Witherspoon St, Princeton, NJ 08542",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPSrfoSJ0XDoKqxtaVs6Vpv0Pi6p6SIq_Y\n",
+    "startTime": "2026-06-22T19:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-22T20:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ed0c67d8c1cc4a",
@@ -536,6 +547,14 @@ window.EMAIL_DATA = {
   "unreadCount": 7,
   "threads": [
     {
+      "sender": "Eleanor Dath",
+      "subject": "Automatic reply: Introductions for potential travel planning"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"OMOTON Vertical Laptop...\""
+    },
+    {
       "sender": "Almina Concept",
       "subject": "Our Elevated Summer Tops"
     },
@@ -554,14 +573,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chan Luu",
       "subject": "See Something You Like?"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Dad's day is today. No pressure \ud83d\ude09"
-    },
-    {
-      "sender": "Laurel and Blush",
-      "subject": "Complete your look in one click"
     }
   ],
   "items": [
@@ -582,6 +593,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19ec29d889dd808e",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"OMOTON Vertical Laptop...\"",
+      "date": "2026-06-22",
+      "id": "19ef12b090fca1b0",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
