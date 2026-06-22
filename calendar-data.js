@@ -533,7 +533,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 7,
   "threads": [
     {
       "sender": "Almina Concept",
@@ -562,14 +562,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Laurel and Blush",
       "subject": "Complete your look in one click"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Williams Sonoma, Inc...: $158.87\u00a0USD"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 \"Home Techpro Rug Pads...\""
     }
   ],
   "items": [
@@ -592,13 +584,6 @@ window.EMAIL_DATA = {
       "sender": "FORM BY TWO"
     },
     {
-      "type": "delivery",
-      "title": "FedEx shipped #529024058278",
-      "date": "2026-06-22",
-      "id": "19eef83554a195d3",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
       "type": "class",
       "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
       "name": "CP Reformer Flow 2 (50 Mins) class",
@@ -608,6 +593,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19ed0c67d8c1cc4a",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #529024058278",
+      "date": "2026-06-23",
+      "id": "19ef0c4fab5604a0",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
