@@ -522,8 +522,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "4 Hours Left: 25% Off Sun and Sun Progressives"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Dad's day is today. No pressure \ud83d\ude09"
@@ -537,24 +541,8 @@ window.EMAIL_DATA = {
       "subject": "Williams Sonoma, Inc...: $158.87\u00a0USD"
     },
     {
-      "sender": "Williams Sonoma",
-      "subject": "Williams Sonoma Order Confirmation #361723022444"
-    },
-    {
-      "sender": "Aritzia",
-      "subject": "Your package has arrived #D3757236"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 \"Home Techpro Rug Pads...\""
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Your linked credit card still earns points"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Build Your Capsule Wardrobe"
     },
     {
       "sender": "Amazon.com",
@@ -563,6 +551,14 @@ window.EMAIL_DATA = {
     {
       "sender": "& Other Stories",
       "subject": "Sale: 100+ new styles added"
+    },
+    {
+      "sender": "COS",
+      "subject": "Just in: summer recharged"
+    },
+    {
+      "sender": "Green Drop",
+      "subject": "Reminder: Our donation truck is headed your way"
     }
   ],
   "items": [
@@ -579,6 +575,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-21",
       "id": "19eeb17e36460795",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #873345671868",
+      "date": "2026-06-21",
+      "id": "19eec75c6e040cd6",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
