@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "ALO",
-      "subject": "Tell us what's up"
+      "sender": "Etsy",
+      "subject": "A COUPON just for you!"
+    },
+    {
+      "sender": "House of Beauty by Fran\u00e7ois",
+      "subject": "Mary Jane ,Time for a Touch-up ?"
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "Your Autoship order was delivered"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 529024058278"
+    },
+    {
+      "sender": "Peloton",
+      "subject": "Every class you want, anywhere you need it"
+    },
+    {
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "Sale extended! Save $25 on junk removal."
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
     },
     {
       "sender": "BOSS",
       "subject": "Up to 40% off men's & 50% off women's!"
     },
     {
-      "sender": "Medium",
-      "subject": "Stop Memorizing Design Patterns: Use This Decision Tree Instead | Alina Kovtun\u2728 in Women in Technology"
-    },
-    {
       "sender": "UPS",
       "subject": "UPS Update: Package Scheduled for Delivery Today"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Save $2,110 on an appliance suite? YES\ud83d\ude0d"
-    },
-    {
-      "sender": "Medium",
-      "subject": "We still believe the internet should make you smarter"
-    },
-    {
       "sender": "COS",
       "subject": "Dresses: the modern maxi"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Sodapop Seersucker"
-    },
-    {
-      "sender": "Life360 Trackers",
-      "subject": "Prime Day deals are LIVE!"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 529024058278"
     }
   ],
   "items": [
