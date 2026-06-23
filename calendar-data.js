@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29d889dd808e",
-    "startTime": "2026-06-22T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-22T06:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-06-22T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-22T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "Reservation at Witherspoon Grill",
-    "location": "Witherspoon Grill, 57 Witherspoon St, Princeton, NJ 08542",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPSrfoSJ0XDoKqxtaVs6Vpv0Pi6p6SIq_Y\n",
-    "startTime": "2026-06-22T19:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-22T20:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ed0c67d8c1cc4a",
@@ -284,6 +251,61 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Chris",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-07-06T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "\u2708\ufe0f UA122 EWR \u2192 LHR",
+    "location": "Newark (EWR)",
+    "description": "Mon, Jul 6\n9:45 AM EDT\n[Flight] EWR to LHR\nUnited Airlines 122, Terminal TERMINAL C, Gate\n9:35 PM BST\nArrive London (LHR)\nTerminal TERMINAL 2, Gate",
+    "startTime": "2026-07-06T09:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T16:35:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\u2708\ufe0f UA122 EWR \u2192 LHR",
+    "location": "Newark (EWR)",
+    "description": "Mon, Jul 6\n9:45 AM EDT\n[Flight] EWR to LHR\nUnited Airlines 122, Terminal C, Gate\n9:35 PM BST\nArrive London (LHR)\nTerminal 2, Gate",
+    "startTime": "2026-07-06T09:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T16:35:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Wilde Aparthotels London Paddington",
+    "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
+    "description": "3:00 PM BST\n[Lodging] Arrive Wilde Aparthotels London Paddington\nCheck-In: 3:00pm\n4 North Wharf Road, London, W2 1NW, United Kingdom\n44-203-6872480",
+    "startTime": "2026-07-06T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: HO HO WILDE APARTHOTELS LONDON P",
+    "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
+    "description": "3:00 PM BST\n[Lodging] Arrive HO HO WILDE APARTHOTELS LONDON P\nCheck-In: 3:00pm\n4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom\n44-203-6872480",
+    "startTime": "2026-07-06T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -544,8 +566,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Chewy.com",
+      "subject": "Your Autoship package will arrive today between 11 am and 3 pm"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"GMS Optical Adhesive...\""
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order will arrive soon #810678179"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "And it\u2019s off! UPS has your order \ud83d\ude9a"
+    },
+    {
+      "sender": "Emily from Holafly",
+      "subject": "A simpler way to redeem your HolaCoins \u2728"
+    },
+    {
+      "sender": "Williams Sonoma",
+      "subject": "Thank you for shopping with us"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS: Get Ready for Your Package!"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"OMOTON Vertical Laptop...\""
@@ -553,22 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Almina Concept",
       "subject": "Our Elevated Summer Tops"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Spotify USA Inc: $23.45\u00a0USD"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"OMOTON Vertical Laptop...\""
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "See Something You Like?"
     }
   ],
   "items": [
@@ -581,24 +619,6 @@ window.EMAIL_DATA = {
     },
     {
       "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-22",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19ec29d889dd808e",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"OMOTON Vertical Laptop...\"",
-      "date": "2026-06-22",
-      "id": "19ef12b090fca1b0",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "class",
       "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
       "name": "CP Reformer Flow 2 (50 Mins) class",
       "date": "2026-06-23",
@@ -607,6 +627,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19ed0c67d8c1cc4a",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"GMS Optical Adhesive...\"",
+      "date": "2026-06-23",
+      "id": "19ef3022e60ea47e",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
