@@ -566,8 +566,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "ALO",
+      "subject": "Tell us what's up"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Up to 40% off men's & 50% off women's!"
+    },
+    {
+      "sender": "Medium",
+      "subject": "Stop Memorizing Design Patterns: Use This Decision Tree Instead | Alina Kovtun\u2728 in Women in Technology"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Save $2,110 on an appliance suite? YES\ud83d\ude0d"
+    },
+    {
+      "sender": "Medium",
+      "subject": "We still believe the internet should make you smarter"
+    },
+    {
+      "sender": "COS",
+      "subject": "Dresses: the modern maxi"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Sodapop Seersucker"
+    },
     {
       "sender": "Life360 Trackers",
       "subject": "Prime Day deals are LIVE!"
@@ -575,38 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 529024058278"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "You'll love this one"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "\u26a1 20% OFF on Amazon + a new flavor drop"
-    },
-    {
-      "sender": "Greg @ PrepMaven",
-      "subject": "Level Up"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Evita Has Landed in a Shiny New Hue"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "What's Next?"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Unsexy Prime Day Deals That Are Actually Worth It"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Tue, 6/23 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
     }
   ],
   "items": [
