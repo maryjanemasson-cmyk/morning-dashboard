@@ -544,12 +544,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 6,
   "threads": [
-    {
-      "sender": "Eleanor Dath",
-      "subject": "Automatic reply: Introductions for potential travel planning"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"OMOTON Vertical Laptop...\""
