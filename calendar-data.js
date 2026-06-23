@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 23 Jun 2026"
+      "sender": "Life360 Trackers",
+      "subject": "Prime Day deals are LIVE!"
     },
     {
-      "sender": "UPS",
-      "subject": "You've Submitted a Delivery Change Request"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 529024058278"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"GMS Optical Adhesive...\""
+      "sender": "Chan Luu",
+      "subject": "You'll love this one"
     },
     {
-      "sender": "Emily from Holafly",
-      "subject": "A simpler way to redeem your HolaCoins \u2728"
+      "sender": "Shameless Snacks",
+      "subject": "\u26a1 20% OFF on Amazon + a new flavor drop"
     },
     {
-      "sender": "Williams Sonoma",
-      "subject": "Thank you for shopping with us"
+      "sender": "Greg @ PrepMaven",
+      "subject": "Level Up"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"OMOTON Vertical Laptop...\""
+      "sender": "LOOK OPTIC",
+      "subject": "Evita Has Landed in a Shiny New Hue"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "Our Elevated Summer Tops"
+      "sender": "us.bape.com",
+      "subject": "What's Next?"
     },
     {
-      "sender": "PayPal",
-      "subject": "Spotify USA Inc: $23.45\u00a0USD"
+      "sender": "Emily Ley",
+      "subject": "Unsexy Prime Day Deals That Are Actually Worth It"
     },
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Tue, 6/23 is ready to view"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"OMOTON Vertical Laptop...\""
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     }
   ],
   "items": [
