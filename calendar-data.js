@@ -566,8 +566,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Big Mamma",
+      "subject": "R\u00e9assort de notre vaisselle \u2764\ufe0f"
+    },
+    {
+      "sender": "Chris Loves Julia",
+      "subject": "13 Prime Day finds \ud83c\udfe1"
+    },
+    {
+      "sender": "headtrainer1563",
+      "subject": "\ud83d\udd25 Post-July 4th Burn \u2013 Special Schedule on Friday, July 10th!"
+    },
     {
       "sender": "Etsy",
       "subject": "A COUPON just for you!"
@@ -577,36 +589,24 @@ window.EMAIL_DATA = {
       "subject": "Mary Jane ,Time for a Touch-up ?"
     },
     {
-      "sender": "Chewy.com",
-      "subject": "Your Autoship order was delivered"
-    },
-    {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 529024058278"
-    },
-    {
-      "sender": "Peloton",
-      "subject": "Every class you want, anywhere you need it"
     },
     {
       "sender": "College Hunks Hauling Junk and Moving",
       "subject": "Sale extended! Save $25 on junk removal."
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
-    },
-    {
       "sender": "BOSS",
       "subject": "Up to 40% off men's & 50% off women's!"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
       "sender": "COS",
       "subject": "Dresses: the modern maxi"
+    },
+    {
+      "sender": "Life360 Trackers",
+      "subject": "Prime Day deals are LIVE!"
     }
   ],
   "items": [
