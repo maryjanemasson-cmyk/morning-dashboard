@@ -566,27 +566,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Chewy.com",
-      "subject": "Your Autoship package will arrive today between 11 am and 3 pm"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 23 Jun 2026"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "UPS",
+      "subject": "You've Submitted a Delivery Change Request"
     },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"GMS Optical Adhesive...\""
-    },
-    {
-      "sender": "Tory Burch",
-      "subject": "Your order will arrive soon #810678179"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "And it\u2019s off! UPS has your order \ud83d\ude9a"
     },
     {
       "sender": "Emily from Holafly",
@@ -597,16 +589,24 @@ window.EMAIL_DATA = {
       "subject": "Thank you for shopping with us"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS: Get Ready for Your Package!"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Shipped: \"OMOTON Vertical Laptop...\""
     },
     {
       "sender": "Almina Concept",
       "subject": "Our Elevated Summer Tops"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Spotify USA Inc: $23.45\u00a0USD"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"OMOTON Vertical Laptop...\""
     }
   ],
   "items": [
