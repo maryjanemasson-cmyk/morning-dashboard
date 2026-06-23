@@ -566,31 +566,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Cadence",
+      "subject": "What do you think of your purchase from Cadence?"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Remember to share your input, Mary Jane!"
+    },
     {
       "sender": "& Other Stories",
       "subject": "New arrivals for summer"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Save up to 40%\u00a0before summer slips away\u00a0 \ud83c\udfc4"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Unlock a Year of Insider Access"
-    },
-    {
-      "sender": "Big Mamma",
-      "subject": "R\u00e9assort de notre vaisselle \u2764\ufe0f"
-    },
-    {
-      "sender": "Chris Loves Julia",
-      "subject": "13 Prime Day finds \ud83c\udfe1"
     },
     {
       "sender": "headtrainer1563",
@@ -607,6 +595,18 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 529024058278"
+    },
+    {
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "Sale extended! Save $25 on junk removal."
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Up to 40% off men's & 50% off women's!"
+    },
+    {
+      "sender": "COS",
+      "subject": "Dresses: the modern maxi"
     }
   ],
   "items": [
