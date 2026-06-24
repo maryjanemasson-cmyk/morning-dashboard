@@ -569,6 +569,10 @@ window.EMAIL_DATA = {
   "unreadCount": 34,
   "threads": [
     {
+      "sender": "Etsy",
+      "subject": "Your order = NJ! \ud83d\ude9a"
+    },
+    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
@@ -603,10 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "GO OUTSIDE"
-    },
-    {
-      "sender": "NORDSTROM CARD SERVICES",
-      "subject": "Maryjane, our app makes paying in store easy!"
     }
   ],
   "items": [
