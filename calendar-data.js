@@ -2,17 +2,6 @@ window.CALENDAR_EVENTS = [
   {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
     "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ed0c67d8c1cc4a",
-    "startTime": "2026-06-23T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-23T06:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "CP Reformer Flow 2 (50 Mins) class",
-    "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19eeffb3200dfc9e",
     "startTime": "2026-06-25T16:00:00-04:00",
     "startDate": "",
@@ -566,8 +555,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Ody at TurboTax",
+      "subject": "Your spot on the priority list"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Summer Sale Now Live"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "24 Hours Before Everyone Else"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "YOUR RETURN CONFIRMATION"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"GMS Optical Adhesive...\""
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 7 new invitations"
@@ -583,30 +596,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Cadence",
       "subject": "What do you think of your purchase from Cadence?"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Remember to share your input, Mary Jane!"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "New arrivals for summer"
-    },
-    {
-      "sender": "headtrainer1563",
-      "subject": "\ud83d\udd25 Post-July 4th Burn \u2013 Special Schedule on Friday, July 10th!"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "A COUPON just for you!"
-    },
-    {
-      "sender": "House of Beauty by Fran\u00e7ois",
-      "subject": "Mary Jane ,Time for a Touch-up ?"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 529024058278"
     }
   ],
   "items": [
@@ -616,31 +605,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-20",
       "id": "19ee6430971fd750",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 6:00 AM",
-      "name": "CP Reformer Flow 2 (50 Mins) class",
-      "date": "2026-06-23",
-      "time": "06:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19ed0c67d8c1cc4a",
-      "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"GMS Optical Adhesive...\"",
-      "date": "2026-06-23",
-      "id": "19ef3022e60ea47e",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #529024058278",
-      "date": "2026-06-23",
-      "id": "19ef0c4fab5604a0",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
