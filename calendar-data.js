@@ -555,8 +555,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "& Other Stories",
+      "subject": "Your 10% off ends at midnight"
+    },
+    {
+      "sender": "Nina",
+      "subject": "Re: Faster clinical trial startups in Europe and Asia"
+    },
     {
       "sender": "Ody at TurboTax",
       "subject": "Your spot on the priority list"
@@ -588,14 +596,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Club Pilates Princeton",
       "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Tell us about your last order"
-    },
-    {
-      "sender": "Cadence",
-      "subject": "What do you think of your purchase from Cadence?"
     }
   ],
   "items": [
