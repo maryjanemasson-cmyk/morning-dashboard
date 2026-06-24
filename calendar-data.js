@@ -566,8 +566,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 7 new invitations"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Tell us about your last order"
+    },
     {
       "sender": "Cadence",
       "subject": "What do you think of your purchase from Cadence?"
@@ -595,18 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 529024058278"
-    },
-    {
-      "sender": "College Hunks Hauling Junk and Moving",
-      "subject": "Sale extended! Save $25 on junk removal."
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Up to 40% off men's & 50% off women's!"
-    },
-    {
-      "sender": "COS",
-      "subject": "Dresses: the modern maxi"
     }
   ],
   "items": [
