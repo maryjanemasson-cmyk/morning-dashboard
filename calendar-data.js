@@ -566,8 +566,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 38,
   "threads": [
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Try Award Accelerator on your upcoming trip to Boston"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Sonic Singles To Go Limeade...\""
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Design Decor Knoxville",
+      "subject": "A shipment from order #15017 has been delivered"
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your order has been delivered #810678179"
+    },
     {
       "sender": "Etsy",
       "subject": "Your order = NJ! \ud83d\ude9a"
@@ -587,26 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Don't Forget, Mary Jane: Install your Webroot Internet Security Software"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "TOP RELEASE ROUNDUP"
-    },
-    {
-      "sender": "Google",
-      "subject": "Learn more about our updated Terms of Service"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Our Summer Warehouse Sale is Heating Up!"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "GO OUTSIDE"
     }
   ],
   "items": [
