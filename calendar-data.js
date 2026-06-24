@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19efa892071c08c9",
+    "startTime": "2026-06-25T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-25T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "CP Reformer Flow 2 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19eeffb3200dfc9e",
@@ -555,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 34,
   "threads": [
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Few slots left for MrBeast Workshop \ud83c\udf89"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "COS",
-      "subject": "Sale: new pieces added"
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
     },
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "My Ten Favourite Fragrances of All Time"
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 25, 2026 at 6:00 AM"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
+      "sender": "FORM BY TWO",
+      "subject": "Booking Cancellation Confirmation"
     },
     {
-      "sender": "Venmo",
-      "subject": "Your May 2026 transaction history"
+      "sender": "Best Buy Notifications",
+      "subject": "Don't Forget, Mary Jane: Install your Webroot Internet Security Software"
     },
     {
-      "sender": "The Shade Store",
-      "subject": "Last Day: Up to 25% Off Your Order"
+      "sender": "GOAT",
+      "subject": "TOP RELEASE ROUNDUP"
     },
     {
-      "sender": "The Frankie Shop",
-      "subject": "Refund notification"
+      "sender": "Google",
+      "subject": "Learn more about our updated Terms of Service"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "\u26a1 20% OFF on Amazon NOW"
+      "sender": "Chloe at Sur La Table",
+      "subject": "Our Summer Warehouse Sale is Heating Up!"
     },
     {
-      "sender": "Greg @ PrepMaven",
-      "subject": "Summer Brain Drain"
+      "sender": "Reformation",
+      "subject": "GO OUTSIDE"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Restocked: Muse Gold Pink Tint"
+      "sender": "NORDSTROM CARD SERVICES",
+      "subject": "Maryjane, our app makes paying in store easy!"
     }
   ],
   "items": [
@@ -605,6 +616,17 @@ window.EMAIL_DATA = {
       "date": "2026-06-20",
       "id": "19ee6430971fd750",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-06-25",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19efa892071c08c9",
+      "sender": "FORM BY TWO"
     },
     {
       "type": "class",
