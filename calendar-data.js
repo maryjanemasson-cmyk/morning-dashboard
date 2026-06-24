@@ -566,8 +566,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 38,
+  "unreadCount": 40,
   "threads": [
+    {
+      "sender": "Etsy Transactions",
+      "subject": "Your Etsy Purchase from SYNOVAKids (4100012311)"
+    },
+    {
+      "sender": "Diana @ Shameless Snacks",
+      "subject": "I never email like this."
+    },
+    {
+      "sender": "Venmo",
+      "subject": "You paid Timothy Miles $2.00"
+    },
+    {
+      "sender": "Etsy Conversations",
+      "subject": "You have unread messages! \ud83d\udc8c"
+    },
     {
       "sender": "MileagePlus Program",
       "subject": "Try Award Accelerator on your upcoming trip to Boston"
@@ -591,22 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Your order = NJ! \ud83d\ude9a"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 25, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Booking Cancellation Confirmation"
     }
   ],
   "items": [
