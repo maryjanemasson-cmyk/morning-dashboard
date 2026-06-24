@@ -555,15 +555,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Few slots left for MrBeast Workshop \ud83c\udf89"
+    },
+    {
+      "sender": "COS",
+      "subject": "Sale: new pieces added"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "My Ten Favourite Fragrances of All Time"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "Your May 2026 transaction history"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Last Day: Up to 25% Off Your Order"
+    },
     {
       "sender": "The Frankie Shop",
       "subject": "Refund notification"
-    },
-    {
-      "sender": "Valerie from Holafly",
-      "subject": "Earn up to EUR \u20ac100!"
     },
     {
       "sender": "Shameless Snacks",
@@ -576,26 +596,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Restocked: Muse Gold Pink Tint"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 24 Jun 2026"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Your 10% off ends at midnight"
-    },
-    {
-      "sender": "Ody at TurboTax",
-      "subject": "Your spot on the priority list"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "24 Hours Before Everyone Else"
     }
   ],
   "items": [
