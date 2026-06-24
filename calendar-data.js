@@ -555,47 +555,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "The Frankie Shop",
+      "subject": "Refund notification"
+    },
+    {
+      "sender": "Valerie from Holafly",
+      "subject": "Earn up to EUR \u20ac100!"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "\u26a1 20% OFF on Amazon NOW"
+    },
+    {
+      "sender": "Greg @ PrepMaven",
+      "subject": "Summer Brain Drain"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Restocked: Muse Gold Pink Tint"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 24 Jun 2026"
+    },
     {
       "sender": "& Other Stories",
       "subject": "Your 10% off ends at midnight"
-    },
-    {
-      "sender": "Nina",
-      "subject": "Re: Faster clinical trial startups in Europe and Asia"
     },
     {
       "sender": "Ody at TurboTax",
       "subject": "Your spot on the priority list"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "Summer Sale Now Live"
-    },
-    {
       "sender": "WAT THE BRAND",
       "subject": "24 Hours Before Everyone Else"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "YOUR RETURN CONFIRMATION"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"GMS Optical Adhesive...\""
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 7 new invitations"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "New Booking Confirmation"
     }
   ],
   "items": [
