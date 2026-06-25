@@ -566,39 +566,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 40,
+  "unreadCount": 33,
   "threads": [
     {
-      "sender": "Etsy Transactions",
-      "subject": "Your Etsy Purchase from SYNOVAKids (4100012311)"
+      "sender": "MANGO",
+      "subject": "Mary Jane Hinrichs, your item is nearly sold out \ud83d\udecd\ufe0f"
     },
     {
-      "sender": "Diana @ Shameless Snacks",
-      "subject": "I never email like this."
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Timothy Miles $2.00"
-    },
-    {
-      "sender": "Etsy Conversations",
-      "subject": "You have unread messages! \ud83d\udc8c"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Try Award Accelerator on your upcoming trip to Boston"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Sonic Singles To Go Limeade...\""
+      "sender": "Holafly",
+      "subject": "Don\u00b4t forget! Your opinion helps us improve."
     },
     {
       "sender": "UPS",
       "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Design Decor Knoxville",
-      "subject": "A shipment from order #15017 has been delivered"
     },
     {
       "sender": "Tory Burch",
@@ -607,6 +587,26 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Your order = NJ! \ud83d\ude9a"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 25, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
+      "sender": "Best Buy Notifications",
+      "subject": "Don't Forget, Mary Jane: Install your Webroot Internet Security Software"
     }
   ],
   "items": [
