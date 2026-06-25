@@ -566,8 +566,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 33,
+  "unreadCount": 34,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "End of Summer Sale | Up to 50% Off"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Refund ineligible for Levi's Womens Flynn Western...."
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Mary, you have a new item to review."
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - All Levels - 45 minutes on June 25, 2026"
+    },
     {
       "sender": "MANGO",
       "subject": "Mary Jane Hinrichs, your item is nearly sold out \ud83d\udecd\ufe0f"
@@ -591,22 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 25, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "Best Buy Notifications",
-      "subject": "Don't Forget, Mary Jane: Install your Webroot Internet Security Software"
     }
   ],
   "items": [
@@ -638,6 +638,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19eeffb3200dfc9e",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Refund ineligible for Levi's Womens Flynn Western",
+      "date": "2026-06-25",
+      "id": "19efd361978a0a05",
+      "sender": "return@amazon.com"
     },
     {
       "type": "class",
