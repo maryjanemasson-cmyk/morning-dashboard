@@ -566,27 +566,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 30,
   "threads": [
     {
-      "sender": "WAT THE BRAND",
-      "subject": "End of Summer Sale | Up to 50% Off"
+      "sender": "Chan Luu",
+      "subject": "The High Summer 26 Collection"
     },
     {
-      "sender": "return@amazon.com",
-      "subject": "Refund ineligible for Levi's Womens Flynn Western...."
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Mary, you have a new item to review."
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - All Levels - 45 minutes on June 25, 2026"
-    },
-    {
-      "sender": "MANGO",
-      "subject": "Mary Jane Hinrichs, your item is nearly sold out \ud83d\udecd\ufe0f"
+      "sender": "G7",
+      "subject": "Cap sur la saison estivale avec G7 \u2600\ufe0f"
     },
     {
       "sender": "Holafly",
@@ -607,6 +595,18 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 25, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Booking Cancellation Confirmation"
     }
   ],
   "items": [
