@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "July 4th prep begins in your backyard \ud83c\udf8a"
+      "sender": "Reformation",
+      "subject": "EXTREME HEAT"
     },
     {
-      "sender": "theclubnj@playbypoint.com",
-      "subject": "July 4th at The Club"
+      "sender": "Bekah Sanders",
+      "subject": "NOLS Pre-Departure Q&A Webinar Registration - Next Week!"
+    },
+    {
+      "sender": "DIOR",
+      "subject": "How Can We Assist ?"
+    },
+    {
+      "sender": "AT&T Account Management",
+      "subject": "AT&T payment processed for account ending in 5982"
     },
     {
       "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
+      "subject": "UPS Update: Package Scheduled for Delivery Tomorrow"
     },
     {
-      "sender": "Princeton Academy of Art",
-      "subject": "Coming up soon at Princeton Academy of Art"
+      "sender": "Nike",
+      "subject": "Your Nike gear has shipped"
     },
     {
-      "sender": "COS",
-      "subject": "The summer set"
+      "sender": "Eugene Mok",
+      "subject": "Placement Test Results Released"
     },
     {
-      "sender": "Buck Mason",
-      "subject": "Avalon Knits"
+      "sender": "noreply@mytix.njtransit.com",
+      "subject": "NJ TRANSIT - Receipt"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "Fluid Silk Rib"
+      "sender": "Shameless Snacks",
+      "subject": "The Best Deals of June Are Here! \ud83d\udd25"
     },
     {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Vos lectures ou visionnages du moment ?\""
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Agentic AI: How to Save on Tokens | Ida Silfverski\u00f6ld in Data Science Collective"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The High Summer 26 Collection"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "July 4th prep begins in your backyard \ud83c\udf8a"
     }
   ],
   "items": [
