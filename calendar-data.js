@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 34,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "The High Summer 26 Collection"
+      "sender": "Enza Costa",
+      "subject": "Fluid Silk Rib"
     },
     {
-      "sender": "G7",
-      "subject": "Cap sur la saison estivale avec G7 \u2600\ufe0f"
+      "sender": "BOSS",
+      "subject": "Winning style worn by the USMNT"
     },
     {
-      "sender": "Holafly",
-      "subject": "Don\u00b4t forget! Your opinion helps us improve."
+      "sender": "LOOK OPTIC",
+      "subject": "Exclusive Access: BOGO Free on Select Medium Styles"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "Christina Marsigliese",
+      "subject": "Introducing: No Sweat, All Sweet!"
     },
     {
-      "sender": "Tory Burch",
-      "subject": "Your order has been delivered #810678179"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Thu, 6/25 is ready to view"
     },
     {
-      "sender": "Etsy",
-      "subject": "Your order = NJ! \ud83d\ude9a"
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Vos lectures ou visionnages du moment ?\""
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     },
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
+      "sender": "Medium Daily Digest",
+      "subject": "Agentic AI: How to Save on Tokens | Ida Silfverski\u00f6ld in Data Science Collective"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes June 25, 2026 at 6:00 AM"
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "How to Pack"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Booking Cancellation Confirmation"
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Jun 18 2026"
     }
   ],
   "items": [
