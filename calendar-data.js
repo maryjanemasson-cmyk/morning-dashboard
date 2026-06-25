@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "July 4th prep begins in your backyard \ud83c\udf8a"
+    },
+    {
+      "sender": "theclubnj@playbypoint.com",
+      "subject": "July 4th at The Club"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Princeton Academy of Art",
+      "subject": "Coming up soon at Princeton Academy of Art"
+    },
+    {
+      "sender": "COS",
+      "subject": "The summer set"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Avalon Knits"
+    },
     {
       "sender": "Enza Costa",
       "subject": "Fluid Silk Rib"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Winning style worn by the USMNT"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Exclusive Access: BOGO Free on Select Medium Styles"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "Introducing: No Sweat, All Sweet!"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Thu, 6/25 is ready to view"
     },
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Vos lectures ou visionnages du moment ?\""
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
       "sender": "Medium Daily Digest",
       "subject": "Agentic AI: How to Save on Tokens | Ida Silfverski\u00f6ld in Data Science Collective"
     },
     {
-      "sender": "Abby Arad from Your Stylist Says...",
-      "subject": "How to Pack"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Jun 18 2026"
+      "sender": "Chan Luu",
+      "subject": "The High Summer 26 Collection"
     }
   ],
   "items": [
