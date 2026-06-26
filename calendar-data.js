@@ -566,27 +566,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Mary, you have a new item to review."
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 873345671868"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Our Cyber Summer Sale Ends Today!"
-    },
-    {
-      "sender": "Alo Yoga",
-      "subject": "Part of your ALO order EXCHL-39816550-1 has arrived"
-    },
-    {
-      "sender": "Napoli Gang by Big Mamma",
-      "subject": "Napoli Gang ouvre son premier restaurant ! \ud83c\udf55\ud83c\udf55"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Sonic Singles To Go Limeade...\""
     },
     {
       "sender": "Amazon.com",
@@ -607,6 +591,14 @@ window.EMAIL_DATA = {
     {
       "sender": "TurboTax Monthly",
       "subject": "Make your money work this summer, Mary."
+    },
+    {
+      "sender": "Valeria from Holafly",
+      "subject": "Blink and you\u2019ll miss it\u2026"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "America's 250th special member exclusive is here \ud83c\uddfa\ud83c\uddf8"
     }
   ],
   "items": [
