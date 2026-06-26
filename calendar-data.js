@@ -566,35 +566,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "American Express",
-      "subject": "Merchant credit/refund was issued to your account"
+      "sender": "Etsy",
+      "subject": "Mary, you have a new item to review."
     },
     {
-      "sender": "chrislovesjulia",
-      "subject": "I've dreamed of this"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 873345671868"
     },
     {
-      "sender": "J. Crew Credit Services",
-      "subject": "Mary jane, earn $20 in J.Crew Passport rewards with this offer"
+      "sender": "Chloe at Sur La Table",
+      "subject": "Our Cyber Summer Sale Ends Today!"
     },
     {
-      "sender": "COS",
-      "subject": "Just for you: 15% off summer arrivals"
+      "sender": "Alo Yoga",
+      "subject": "Part of your ALO order EXCHL-39816550-1 has arrived"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
-    },
-    {
-      "sender": "The State of New Jersey",
-      "subject": "NJ Updates: How to Get REAL ID, Summer Fire Safety, and More"
-    },
-    {
-      "sender": "Administration Office FASP",
-      "subject": "Lost and Found Reminder"
+      "sender": "Napoli Gang by Big Mamma",
+      "subject": "Napoli Gang ouvre son premier restaurant ! \ud83c\udf55\ud83c\udf55"
     },
     {
       "sender": "Amazon.com",
@@ -607,6 +599,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "Prime Day ends in hours. You're still here \ud83d\udc40"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Bento Box Menus: A Better Way to Navigate Lists | UX Movement"
+    },
+    {
+      "sender": "TurboTax Monthly",
+      "subject": "Make your money work this summer, Mary."
     }
   ],
   "items": [
