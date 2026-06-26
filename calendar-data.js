@@ -566,11 +566,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Ends Tonight: BOGO Free on Mediums"
+      "sender": "American Express",
+      "subject": "Merchant credit/refund was issued to your account"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "I've dreamed of this"
+    },
+    {
+      "sender": "J. Crew Credit Services",
+      "subject": "Mary jane, earn $20 in J.Crew Passport rewards with this offer"
+    },
+    {
+      "sender": "COS",
+      "subject": "Just for you: 15% off summer arrivals"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "The State of New Jersey",
+      "subject": "NJ Updates: How to Get REAL ID, Summer Fire Safety, and More"
+    },
+    {
+      "sender": "Administration Office FASP",
+      "subject": "Lost and Found Reminder"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Out for delivery: \"Loloi Chris Loves Julia...\""
     },
     {
       "sender": "Unroll.Me",
@@ -579,34 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "Prime Day ends in hours. You're still here \ud83d\udc40"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Bento Box Menus: A Better Way to Navigate Lists | UX Movement"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Introducing: The Mini Capri Crochet Wrap Skirt"
-    },
-    {
-      "sender": "TurboTax Monthly",
-      "subject": "Make your money work this summer, Mary."
-    },
-    {
-      "sender": "Valeria from Holafly",
-      "subject": "Blink and you\u2019ll miss it\u2026"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "America's 250th special member exclusive is here \ud83c\uddfa\ud83c\uddf8"
-    },
-    {
-      "sender": "Google",
-      "subject": "Security alert"
-    },
-    {
-      "sender": "Harvard Business Review",
-      "subject": "Final Call! HBR Survey: Revenue-Generating Teams"
     }
   ],
   "items": [
@@ -648,10 +648,24 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
+      "title": "Out for delivery: \"Loloi Chris Loves Julia...\"",
+      "date": "2026-06-26",
+      "id": "19f0414316a17edc",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
       "title": "Shipped: \"Sonic Singles To Go Limeade...\"",
       "date": "2026-06-26",
       "id": "19f01f34bd4bf977",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "school",
+      "title": "Lost and Found Reminder",
+      "date": "2026-06-26",
+      "id": "19f0430f67008dbb",
+      "sender": "Administration Office FASP"
     },
     {
       "type": "class",
