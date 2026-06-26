@@ -22,17 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
-    "summary": "SITC Biotech Strategic Meeting @ NYSE",
-    "location": "",
-    "description": "SITC Biotech Strategic Meeting at the NYSE \u2014 Friday, June 26, 2026, 8:00 a.m.\u20133:45 p.m. ET.\n\nYou are a registered ATTENDEE (not a panelist).\n\nKEY TIMES:\n- 8:00\u20138:45a: Arrivals & breakfast (arrive after 8:00 for security)\n- 8:45a: Programming begins\n- 9:00\u20139:45a: Bell Ringing Ceremony + floor tour \u2014 BE PRESENT BY 9:15a to join bell ringing\n- 11:55a\u201312:35p: Panel \"Liquidity in Biotechs, M&A\" \u2014 Mary Jane Hinrichs, PhD (Ipsen) is a panelist\n- 12:35\u20131:30p: Lunch\n- 3:40\u20133:45p: Closing remarks\n\nLOCATION: NYSE, 18 Broad Street, 7th Floor, Freedom Hall. Enter at security checkpoint (white tent) at Broad St & Exchange Pl; bring government photo ID; airport-style security.\n\nNOTE: World Cup match in NJ today \u2014 NYC gridlock/street closures 10a\u20139p; subway recommended.\n\nContact: SITCExecOffice@sitcancer.org. Coordinator: Damaris Torres (Rutgers).",
-    "startTime": "2026-06-26T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-26T15:45:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
     "summary": "\ud83c\udf82 Christian's Birthday",
     "location": "",
     "description": "",
@@ -577,8 +566,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Ends Tonight: BOGO Free on Mediums"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Prime Day ends in hours. You're still here \ud83d\udc40"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Bento Box Menus: A Better Way to Navigate Lists | UX Movement"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Introducing: The Mini Capri Crochet Wrap Skirt"
+    },
     {
       "sender": "TurboTax Monthly",
       "subject": "Make your money work this summer, Mary."
@@ -598,26 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Harvard Business Review",
       "subject": "Final Call! HBR Survey: Revenue-Generating Teams"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "35 years of Care, Cure, and Community"
-    },
-    {
-      "sender": "noreply@mytix.njtransit.com",
-      "subject": "NJ TRANSIT - Receipt"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "The Best Deals of June Are Here! \ud83d\udd25"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "July 4th prep begins in your backyard \ud83c\udf8a"
-    },
-    {
-      "sender": "theclubnj@playbypoint.com",
-      "subject": "July 4th at The Club"
     }
   ],
   "items": [
