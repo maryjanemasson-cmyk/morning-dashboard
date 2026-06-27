@@ -566,23 +566,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Summer Savings | Up To 50% Off"
-    },
     {
       "sender": "Kang's Black Belt Academy Inc",
       "subject": "Happy Birthday"
-    },
-    {
-      "sender": "Anthropic Team",
-      "subject": "[No Action Required]: Higher rate limits on the Claude API"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Membership Renewal Confirmation"
     },
     {
       "sender": "FORM BY TWO",
@@ -607,6 +595,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Uber Receipts",
       "subject": "[Mary Jane Hinrichs's Family] Your Friday afternoon trip with Uber"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Sonic Singles To Go Limeade...\""
     }
   ],
   "items": [
