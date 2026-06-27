@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Boston"
+      "sender": "Almina Concept",
+      "subject": "The Pieces You Need Right Now"
     },
     {
-      "sender": "Kang's Black Belt Academy Inc",
-      "subject": "Happy Birthday"
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Receipt #311648392"
+      "sender": "Bake Time",
+      "subject": "A peaches and cream Victoria sandwich worthy of Mary Berry"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
+      "sender": "Design Decor",
+      "subject": "Perfect touches for summer styling"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "4 Hours Left: BOGO on Medium Styles"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Backyard, July 4th prep and up to 30% OFF \ud83d\ude0e"
     },
     {
-      "sender": "Etsy",
-      "subject": "A COUPON just for you!"
+      "sender": "Tory Burch",
+      "subject": "Your return shipping label #810678179)"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "Can You Keep a Secret? Open Up!"
+      "sender": "The Shade Store",
+      "subject": "Mind if we stop by?"
     },
     {
-      "sender": "Uber Receipts",
-      "subject": "[Mary Jane Hinrichs's Family] Your Friday afternoon trip with Uber"
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Failure -  Attempt"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Buck Mason",
+      "subject": "The Chamula Huarache Returns"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "COS",
+      "subject": "Reminder: 15% off just for you"
     }
   ],
   "items": [
