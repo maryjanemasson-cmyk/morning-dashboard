@@ -566,8 +566,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "RECOUPLING"
+    },
+    {
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, your trip to Cambridge, MA is starting soon!"
+    },
+    {
+      "sender": "World of Hyatt",
+      "subject": "Earn More Bonus Points for Your Summer Stays"
+    },
+    {
+      "sender": "Tory Burch",
+      "subject": "Your return is on its way #810678179"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "ADIDAS ORIGINALS x BAPE\u00ae"
+    },
     {
       "sender": "Almina Concept",
       "subject": "The Pieces You Need Right Now"
@@ -587,26 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Backyard, July 4th prep and up to 30% OFF \ud83d\ude0e"
-    },
-    {
-      "sender": "Tory Burch",
-      "subject": "Your return shipping label #810678179)"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Mind if we stop by?"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Failure -  Attempt"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Chamula Huarache Returns"
-    },
-    {
-      "sender": "COS",
-      "subject": "Reminder: 15% off just for you"
     }
   ],
   "items": [
