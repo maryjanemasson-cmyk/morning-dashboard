@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "CP Reformer Flow 1.5 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ecb7628b5139c2",
-    "startTime": "2026-06-26T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-26T06:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Lagree - All Levels - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19eefb8983f9303d",
-    "startTime": "2026-06-26T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-26T06:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "\ud83c\udf82 Christian's Birthday",
     "location": "",
     "description": "",
@@ -306,6 +284,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "\u2708\ufe0f UA905 LHR \u2192 EWR",
+    "location": "London (LHR)",
+    "description": "Fri, Jul 10\n9:30 AM BST\n[Flight] LHR to EWR\nUnited Airlines 905, Terminal TERMINAL 2, Gate\n12:30 PM EDT\nArrive Newark (EWR)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-07-10T04:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-10T12:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Wilde Aparthotels London Paddington",
+    "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
+    "description": "11:00 AM BST\n[Lodging] Depart Wilde Aparthotels London Paddington\nCheck-Out: 11:00am\n4 North Wharf Road, London, W2 1NW, United Kingdom\n44-203-6872480",
+    "startTime": "2026-07-10T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-10T07:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -566,8 +566,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Summer Savings | Up To 50% Off"
+    },
+    {
+      "sender": "Kang's Black Belt Academy Inc",
+      "subject": "Happy Birthday"
+    },
+    {
+      "sender": "Anthropic Team",
+      "subject": "[No Action Required]: Higher rate limits on the Claude API"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Membership Renewal Confirmation"
@@ -595,18 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Uber Receipts",
       "subject": "[Mary Jane Hinrichs's Family] Your Friday afternoon trip with Uber"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Sonic Singles To Go Limeade...\""
     }
   ],
   "items": [
@@ -623,42 +623,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - All Levels - 45 minutes",
-      "date": "2026-06-26",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19eefb8983f9303d",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "class",
-      "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 6:00 AM",
-      "name": "CP Reformer Flow 1.5 (50 Mins) class",
-      "date": "2026-06-26",
-      "time": "06:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19ecb7628b5139c2",
-      "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Out for delivery: \"Loloi Chris Loves Julia...\"",
-      "date": "2026-06-26",
-      "id": "19f0414316a17edc",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Sonic Singles To Go Limeade...\"",
-      "date": "2026-06-26",
-      "id": "19f01f34bd4bf977",
-      "sender": "Amazon.com"
     },
     {
       "type": "school",
