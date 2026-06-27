@@ -566,8 +566,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Boston"
+    },
     {
       "sender": "Kang's Black Belt Academy Inc",
       "subject": "Happy Birthday"
@@ -603,10 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "UPS",
       "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Sonic Singles To Go Limeade...\""
     }
   ],
   "items": [
