@@ -566,15 +566,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Nike",
-      "subject": "We\u2019re tracking your return"
+      "sender": "United Airlines",
+      "subject": "Your United Airlines booking confirmation \u2013  NDK4D4"
     },
     {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "It's Birthday Time!"
+      "sender": "Walpole Outdoors",
+      "subject": "Plan This Summer. Enjoy It for Years to Come."
     },
     {
       "sender": "Slate Flosser",
