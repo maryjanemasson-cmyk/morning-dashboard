@@ -566,7 +566,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 12,
   "threads": [
     {
       "sender": "Nike",
@@ -589,6 +589,10 @@ window.EMAIL_DATA = {
       "subject": "Happy Birthday"
     },
     {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
       "sender": "FORM BY TWO",
       "subject": "Receipt #311648392"
     },
@@ -603,10 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "A COUPON just for you!"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Can You Keep a Secret? Open Up!"
     }
   ],
   "items": [
@@ -630,17 +630,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-26",
       "id": "19f0430f67008dbb",
       "sender": "Administration Office FASP"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - All Levels - 45 minutes \u00b7 5:00 PM",
-      "name": "Lagree - All Levels - 45 minutes",
-      "date": "2026-06-29",
-      "time": "17:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19ec29fc3834680a",
-      "sender": "FORM BY TWO"
     }
   ]
 };
