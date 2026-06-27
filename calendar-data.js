@@ -566,8 +566,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Membership Renewal Confirmation"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Receipt #311648392"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "4 Hours Left: BOGO on Medium Styles"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "A COUPON just for you!"
+    },
     {
       "sender": "Shameless Snacks",
       "subject": "Can You Keep a Secret? Open Up!"
@@ -587,26 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Sonic Singles To Go Limeade...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Out for delivery: \"Loloi Chris Loves Julia...\""
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Prime Day ends in hours. You're still here \ud83d\udc40"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Bento Box Menus: A Better Way to Navigate Lists | UX Movement"
-    },
-    {
-      "sender": "TurboTax Monthly",
-      "subject": "Make your money work this summer, Mary."
     }
   ],
   "items": [
