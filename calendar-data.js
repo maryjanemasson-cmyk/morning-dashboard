@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "RECOUPLING"
+      "sender": "Nike",
+      "subject": "We\u2019re tracking your return"
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, your trip to Cambridge, MA is starting soon!"
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "It's Birthday Time!"
     },
     {
-      "sender": "World of Hyatt",
-      "subject": "Earn More Bonus Points for Your Summer Stays"
+      "sender": "Slate Flosser",
+      "subject": "Order #86347 confirmed"
     },
     {
-      "sender": "Tory Burch",
-      "subject": "Your return is on its way #810678179"
+      "sender": "Ameriprise Financial",
+      "subject": "A new administrative document is available online"
     },
     {
-      "sender": "us.bape.com",
-      "subject": "ADIDAS ORIGINALS x BAPE\u00ae"
+      "sender": "Kang's Black Belt Academy Inc",
+      "subject": "Happy Birthday"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "The Pieces You Need Right Now"
+      "sender": "FORM BY TWO",
+      "subject": "Receipt #311648392"
     },
     {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
     },
     {
-      "sender": "Bake Time",
-      "subject": "A peaches and cream Victoria sandwich worthy of Mary Berry"
+      "sender": "LOOK OPTIC",
+      "subject": "4 Hours Left: BOGO on Medium Styles"
     },
     {
-      "sender": "Design Decor",
-      "subject": "Perfect touches for summer styling"
+      "sender": "Etsy",
+      "subject": "A COUPON just for you!"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Backyard, July 4th prep and up to 30% OFF \ud83d\ude0e"
+      "sender": "Shameless Snacks",
+      "subject": "Can You Keep a Secret? Open Up!"
     }
   ],
   "items": [
