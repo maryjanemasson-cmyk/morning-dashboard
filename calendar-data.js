@@ -275,6 +275,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e697878c89c6",
+    "startTime": "2026-07-10T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-10T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -284,6 +295,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e6a26c5b9494",
+    "startTime": "2026-07-11T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-11T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   }
 ];
 
@@ -547,44 +569,44 @@ window.EMAIL_DATA = {
   "unreadCount": 27,
   "threads": [
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 4, 2026 at 10:00 AM"
+      "sender": "COS",
+      "subject": "New for summer"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 29, 2026 at 6:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Booking Cancellation Confirmation"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Cue the fireworks! July 4th savings are ON\ud83c\udf89"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Delivered: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items"
+      "subject": "Shipped: \"DOBREVA Women's Balconette...\""
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 28 Jun 2026"
+      "sender": "Viski",
+      "subject": "Welcome, grab your discount inside \ud83d\udc49"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
+      "sender": "Viski",
+      "subject": "Order #114324 confirmed"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "What comes after analytics | Sven Balnojan, PhD in Dashboards Suck"
+      "sender": "ChatGPT",
+      "subject": "Your scheduled tasks are getting better"
     },
     {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: What\u2019s America really like? Ask the World Cup tourists."
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 11, 2026 at 10:00 AM"
     },
     {
-      "sender": "Route",
-      "subject": "Your 2Modern shipment is protected by Route."
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes July 10, 2026 at 6:00 AM"
     },
     {
-      "sender": "2Modern Furniture & Lighting",
-      "subject": "2Modern Order Confirmation for Order #328917"
+      "sender": "Buck Mason",
+      "subject": "The Station Shirt"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 4, 2026 at 10:00 AM"
     }
   ],
   "items": [
@@ -608,6 +630,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-26",
       "id": "19f0430f67008dbb",
       "sender": "Administration Office FASP"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"DOBREVA Women's Balconette...\"",
+      "date": "2026-06-28",
+      "id": "19f0e8a39504b79d",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
@@ -636,6 +665,28 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "id": "19f0e2a05ff5fafe",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-07-10",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f0e697878c89c6",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-07-11",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f0e6a26c5b9494",
       "sender": "FORM BY TWO"
     }
   ]
