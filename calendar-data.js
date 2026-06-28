@@ -566,16 +566,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 42,
+  "unreadCount": 38,
   "threads": [
-    {
-      "sender": "Grand Hyatt",
-      "subject": "Reservation Details for Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
-    },
-    {
-      "sender": "World of Hyatt",
-      "subject": "A Change to Your Account Has Been Requested"
-    },
     {
       "sender": "Trip.com",
       "subject": "Flight Booking Confirmed:  Cartagena - Medellin, Medellin - Bogota"
@@ -607,6 +599,14 @@ window.EMAIL_DATA = {
     {
       "sender": "eticket@avianca.com",
       "subject": "CHRISTIAN EDWARD HINRICHS, 22AUG/1200/BOGOTA"
+    },
+    {
+      "sender": "eticket@avianca.com",
+      "subject": "MARY JANE HINRICHS, 22AUG/1200/BOGOTA"
+    },
+    {
+      "sender": "eticket@avianca.com",
+      "subject": "CHRISTIAN HINRICHS, 22AUG/1200/BOGOTA"
     }
   ],
   "items": [
