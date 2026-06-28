@@ -566,11 +566,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 38,
+  "unreadCount": 35,
   "threads": [
     {
-      "sender": "MileagePlus Program",
-      "subject": "Find top Bogota hotels for your upcoming trip"
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Screenshot 2026-06-28 at 5.59.35\u202fPM"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item"
     },
     {
       "sender": "IHG One Rewards",
@@ -603,10 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Trip.com",
       "subject": "Trip.com - Your All-in-one Travel Companion"
-    },
-    {
-      "sender": "pagosavianca",
-      "subject": "Avianca payment confirmation"
     }
   ],
   "items": [
@@ -630,6 +630,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-26",
       "id": "19f0430f67008dbb",
       "sender": "Administration Office FASP"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item",
+      "date": "2026-06-28",
+      "id": "19f10390a44f3f70",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
