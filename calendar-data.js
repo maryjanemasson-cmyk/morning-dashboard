@@ -1,60 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\ud83c\udf82 Christian's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-06-27",
-    "endTime": "",
-    "endDate": "2026-06-28",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
-    "summary": "\ud83c\udf82 Christian's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-06-27",
-    "endTime": "",
-    "endDate": "2026-06-28",
-    "calendar": "Family",
-    "colorId": "5"
-  },
-  {
-    "summary": "Christian Edward's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-27T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-27T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Christian Edward's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-27T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-27T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-27T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-27T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "William Hinrichs birthday",
     "location": "",
     "description": "",
@@ -306,6 +251,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-11T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-11T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -566,8 +522,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Our Summer Sale Continues"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "My Six Favourite Watches for Women"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Club Pilates Account Update Needed"
+    },
+    {
+      "sender": "Privia Health",
+      "subject": "Changes have been made to your Patient Portal permissions with Privia Health"
+    },
     {
       "sender": "Reformation",
       "subject": "So this is goodbye"
@@ -579,34 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "United States of Ari...: $124.20\u00a0USD"
-    },
-    {
-      "sender": "Aritzia",
-      "subject": "Order confirmation #D4055579"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Thanks for your purchase with United"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Your United reservation for Bogot\u00e1, CO (BOG) is processing"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Your United Airlines booking confirmation \u2013  NDK4D4"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Plan This Summer. Enjoy It for Years to Come."
-    },
-    {
-      "sender": "Slate Flosser",
-      "subject": "Order #86347 confirmed"
-    },
-    {
-      "sender": "Ameriprise Financial",
-      "subject": "A new administrative document is available online"
     }
   ],
   "items": [
@@ -630,6 +586,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-26",
       "id": "19f0430f67008dbb",
       "sender": "Administration Office FASP"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items",
+      "date": "2026-06-28",
+      "id": "19f0d5b84a2d6be1",
+      "sender": "Amazon.com"
     }
   ]
 };
