@@ -566,8 +566,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "ORDER CONFIRMATION"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "United States of Ari...: $124.20\u00a0USD"
+    },
+    {
+      "sender": "Aritzia",
+      "subject": "Order confirmation #D4055579"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Thanks for your purchase with United"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Your United reservation for Bogot\u00e1, CO (BOG) is processing"
+    },
     {
       "sender": "United Airlines",
       "subject": "Your United Airlines booking confirmation \u2013  NDK4D4"
@@ -583,30 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Ameriprise Financial",
       "subject": "A new administrative document is available online"
-    },
-    {
-      "sender": "Kang's Black Belt Academy Inc",
-      "subject": "Happy Birthday"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Receipt #311648392"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "4 Hours Left: BOGO on Medium Styles"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "A COUPON just for you!"
     }
   ],
   "items": [
