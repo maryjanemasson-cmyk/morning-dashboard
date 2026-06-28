@@ -566,47 +566,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 42,
   "threads": [
     {
-      "sender": "COS",
-      "subject": "New for summer"
+      "sender": "Grand Hyatt",
+      "subject": "Reservation Details for Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Cue the fireworks! July 4th savings are ON\ud83c\udf89"
+      "sender": "World of Hyatt",
+      "subject": "A Change to Your Account Has Been Requested"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"DOBREVA Women's Balconette...\""
+      "sender": "Trip.com",
+      "subject": "Flight Booking Confirmed:  Cartagena - Medellin, Medellin - Bogota"
     },
     {
-      "sender": "Viski",
-      "subject": "Welcome, grab your discount inside \ud83d\udc49"
+      "sender": "Trip.com",
+      "subject": "Update on your frequent traveler information"
     },
     {
-      "sender": "Viski",
-      "subject": "Order #114324 confirmed"
+      "sender": "Trip.com",
+      "subject": "Payment Successful"
     },
     {
-      "sender": "ChatGPT",
-      "subject": "Your scheduled tasks are getting better"
+      "sender": "Trip.com",
+      "subject": "Trip.com - Your All-in-one Travel Companion"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 11, 2026 at 10:00 AM"
+      "sender": "Ro",
+      "subject": "The first GLP-1 pill you can take anytime daily"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes July 10, 2026 at 6:00 AM"
+      "sender": "pagosavianca",
+      "subject": "Avianca payment confirmation"
     },
     {
-      "sender": "Buck Mason",
-      "subject": "The Station Shirt"
+      "sender": "eticket@avianca.com",
+      "subject": "NATHANIEL HINRICHS, 22AUG/1200/BOGOTA"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 4, 2026 at 10:00 AM"
+      "sender": "eticket@avianca.com",
+      "subject": "CHRISTIAN EDWARD HINRICHS, 22AUG/1200/BOGOTA"
     }
   ],
   "items": [
