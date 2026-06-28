@@ -569,6 +569,26 @@ window.EMAIL_DATA = {
   "unreadCount": 38,
   "threads": [
     {
+      "sender": "MileagePlus Program",
+      "subject": "Find top Bogota hotels for your upcoming trip"
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "Enjoy a look at your June IHG One Rewards eStatement"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Pssst! Your next mini bucket\u2019s here \ud83e\udd2b"
+    },
+    {
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Velvet Pear"
+    },
+    {
+      "sender": "The New York Times",
+      "subject": "Tell us about your recent experience with Customer Care"
+    },
+    {
       "sender": "Trip.com",
       "subject": "Flight Booking Confirmed:  Cartagena - Medellin, Medellin - Bogota"
     },
@@ -585,28 +605,8 @@ window.EMAIL_DATA = {
       "subject": "Trip.com - Your All-in-one Travel Companion"
     },
     {
-      "sender": "Ro",
-      "subject": "The first GLP-1 pill you can take anytime daily"
-    },
-    {
       "sender": "pagosavianca",
       "subject": "Avianca payment confirmation"
-    },
-    {
-      "sender": "eticket@avianca.com",
-      "subject": "NATHANIEL HINRICHS, 22AUG/1200/BOGOTA"
-    },
-    {
-      "sender": "eticket@avianca.com",
-      "subject": "CHRISTIAN EDWARD HINRICHS, 22AUG/1200/BOGOTA"
-    },
-    {
-      "sender": "eticket@avianca.com",
-      "subject": "MARY JANE HINRICHS, 22AUG/1200/BOGOTA"
-    },
-    {
-      "sender": "eticket@avianca.com",
-      "subject": "CHRISTIAN HINRICHS, 22AUG/1200/BOGOTA"
     }
   ],
   "items": [
