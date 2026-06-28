@@ -11,6 +11,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e2948cdc1c04",
+    "startTime": "2026-06-29T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-29T06:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -130,6 +141,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e2a05ff5fafe",
+    "startTime": "2026-07-04T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-04T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   },
   {
     "summary": "Philly Outdoor Concert",
@@ -522,47 +544,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "2Modern Furniture & Lighting",
-      "subject": "2Modern Order Confirmation for Order #328917"
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 4, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes June 29, 2026 at 6:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Booking Cancellation Confirmation"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Shipped: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items"
+      "subject": "Delivered: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "Our Summer Sale Continues"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 28 Jun 2026"
     },
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "My Six Favourite Watches for Women"
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
     },
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
+      "sender": "Medium Daily Digest",
+      "subject": "What comes after analytics | Sven Balnojan, PhD in Dashboards Suck"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: What\u2019s America really like? Ask the World Cup tourists."
     },
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "Club Pilates Account Update Needed"
+      "sender": "Route",
+      "subject": "Your 2Modern shipment is protected by Route."
     },
     {
-      "sender": "Privia Health",
-      "subject": "Changes have been made to your Patient Portal permissions with Privia Health"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "ORDER CONFIRMATION"
+      "sender": "2Modern Furniture & Lighting",
+      "subject": "2Modern Order Confirmation for Order #328917"
     }
   ],
   "items": [
@@ -593,6 +615,28 @@ window.EMAIL_DATA = {
       "date": "2026-06-28",
       "id": "19f0d5b84a2d6be1",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-06-29",
+      "time": "06:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f0e2948cdc1c04",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-07-04",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f0e2a05ff5fafe",
+      "sender": "FORM BY TWO"
     }
   ]
 };
