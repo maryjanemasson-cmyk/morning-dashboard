@@ -566,7 +566,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 35,
+  "unreadCount": 34,
   "threads": [
     {
       "sender": "maryjanemasson@icloud.com",
