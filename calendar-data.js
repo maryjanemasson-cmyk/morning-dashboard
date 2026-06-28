@@ -522,8 +522,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "2Modern Furniture & Lighting",
+      "subject": "2Modern Order Confirmation for Order #328917"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items"
@@ -559,10 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "ORDER CONFIRMATION"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "United States of Ari...: $124.20\u00a0USD"
     }
   ],
   "items": [
