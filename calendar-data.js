@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "William Hinrichs birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-06-28T00:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-28T01:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "Lagree - Foundations - 45 minutes",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e2948cdc1c04",
@@ -566,19 +555,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 37,
   "threads": [
     {
-      "sender": "Christina Marsigliese",
-      "subject": "4th of July Desserts not to miss"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 7 new invitations"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Anbbas 4in1 Badger Hair...\""
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "support@eatshameless.com",
+      "subject": "Extend Your Joy with Shameless Snacks"
+    },
+    {
+      "sender": "Williams Sonoma",
+      "subject": "Williams Sonoma Shipping Confirmation #361723022444"
+    },
+    {
+      "sender": "Uber Receipts",
+      "subject": "[Mary Jane Hinrichs's Family] Your Sunday evening trip with Uber"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Dressed for Somewhere Warm"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 29, 2026"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "4th of July Desserts not to miss"
     },
     {
       "sender": "maryjanemasson@icloud.com",
@@ -587,26 +596,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "Enjoy a look at your June IHG One Rewards eStatement"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Pssst! Your next mini bucket\u2019s here \ud83e\udd2b"
-    },
-    {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Velvet Pear"
-    },
-    {
-      "sender": "The New York Times",
-      "subject": "Tell us about your recent experience with Customer Care"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "Flight Booking Confirmed:  Cartagena - Medellin, Medellin - Bogota"
     }
   ],
   "items": [
@@ -632,27 +621,6 @@ window.EMAIL_DATA = {
       "sender": "Administration Office FASP"
     },
     {
-      "type": "delivery",
-      "title": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item",
-      "date": "2026-06-28",
-      "id": "19f10390a44f3f70",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"DOBREVA Women's Balconette...\"",
-      "date": "2026-06-28",
-      "id": "19f0e8a39504b79d",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"La Roche-Posay Toleriane...\" and \u20662\u2069 more items",
-      "date": "2026-06-28",
-      "id": "19f0d5b84a2d6be1",
-      "sender": "Amazon.com"
-    },
-    {
       "type": "class",
       "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
       "name": "Lagree - Foundations - 45 minutes",
@@ -662,6 +630,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f0e2948cdc1c04",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Anbbas 4in1 Badger Hair...\"",
+      "date": "2026-06-29",
+      "id": "19f12022a55aa9b4",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
