@@ -569,6 +569,18 @@ window.EMAIL_DATA = {
   "unreadCount": 34,
   "threads": [
     {
+      "sender": "Christina Marsigliese",
+      "subject": "4th of July Desserts not to miss"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 7 new invitations"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
       "sender": "maryjanemasson@icloud.com",
       "subject": "Screenshot 2026-06-28 at 5.59.35\u202fPM"
     },
@@ -595,18 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Trip.com",
       "subject": "Flight Booking Confirmed:  Cartagena - Medellin, Medellin - Bogota"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "Update on your frequent traveler information"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "Payment Successful"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "Trip.com - Your All-in-one Travel Companion"
     }
   ],
   "items": [
