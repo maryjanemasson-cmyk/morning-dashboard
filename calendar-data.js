@@ -566,15 +566,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 7,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your June 30 flight"
+    },
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "PARTIAL SHIPMENT"
     },
     {
       "sender": "Bekah Sanders",
@@ -595,10 +595,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chan Luu",
       "subject": "Dressed for Somewhere Warm"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item"
     }
   ],
   "items": [
