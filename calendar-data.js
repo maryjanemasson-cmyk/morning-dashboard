@@ -88,6 +88,28 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Ann Hinrich's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-02T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-02T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
+    "summary": "Ann Hinrich's Birthday",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-02T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-02T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708\ufe0f UA570 BOS \u2192 EWR",
     "location": "Boston (BOS)",
     "description": "Fri, Jul 3\n8:00 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 570, Terminal TERMINAL B, Gate\n9:23 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
@@ -544,8 +566,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "The New York Times",
+      "subject": "Make the most of your subscription."
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
+    },
+    {
+      "sender": "Bradford Carpenter",
+      "subject": "Summer Letter from the Student Life Office"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les plantes sauvages \""
+    },
+    {
+      "sender": "Viski",
+      "subject": "Curate your dream home bar"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "The Shopping List"
+    },
     {
       "sender": "Chan Luu",
       "subject": "Dressed for Somewhere Warm"
@@ -557,34 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "IHG One Rewards",
       "subject": "Enjoy a look at your June IHG One Rewards eStatement"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Pssst! Your next mini bucket\u2019s here \ud83e\udd2b"
-    },
-    {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Velvet Pear"
-    },
-    {
-      "sender": "The New York Times",
-      "subject": "Tell us about your recent experience with Customer Care"
-    },
-    {
-      "sender": "Viski",
-      "subject": "Welcome, grab your discount inside \ud83d\udc49"
-    },
-    {
-      "sender": "ChatGPT",
-      "subject": "Your scheduled tasks are getting better"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 11, 2026 at 10:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes July 10, 2026 at 6:00 AM"
     }
   ],
   "items": [
@@ -652,6 +674,17 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f0e6a26c5b9494",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 4:00 PM",
+      "name": "CP Reformer Flow 2 (50 Mins) class",
+      "date": "2026-07-16",
+      "time": "16:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19f13de3e5ee42e0",
+      "sender": "Club Pilates Princeton"
     }
   ]
 };
