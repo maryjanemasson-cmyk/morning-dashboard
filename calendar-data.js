@@ -566,8 +566,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Slate Flosser",
+      "subject": "A shipment from order #86347 is on the way"
+    },
+    {
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Mamoun's Falafel"
+    },
+    {
+      "sender": "National Building Museum",
+      "subject": "July at the Museum: THE PLAYGROUND Opens, Summer Late Nights, & More"
+    },
+    {
+      "sender": "DoorDash Order",
+      "subject": "Order Confirmation for Mary Jane from Mamoun's Falafel"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Made with heart \ud83e\udde1"
+    },
+    {
+      "sender": "Medium",
+      "subject": "Your free sample of the Medium Newsletter"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Starting today take up to 50% off"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "FREE beach bucket for members \u2600\ufe0f"
+    },
     {
       "sender": "The New York Times",
       "subject": "Make the most of your subscription."
@@ -575,38 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Club Pilates Princeton",
       "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "Bradford Carpenter",
-      "subject": "Summer Letter from the Student Life Office"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Les plantes sauvages \""
-    },
-    {
-      "sender": "Viski",
-      "subject": "Curate your dream home bar"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "The Shopping List"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Dressed for Somewhere Warm"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "Enjoy a look at your June IHG One Rewards eStatement"
     }
   ],
   "items": [
