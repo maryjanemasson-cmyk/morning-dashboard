@@ -555,47 +555,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 37,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Anbbas 4in1 Badger Hair...\""
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "support@eatshameless.com",
-      "subject": "Extend Your Joy with Shameless Snacks"
-    },
-    {
-      "sender": "Williams Sonoma",
-      "subject": "Williams Sonoma Shipping Confirmation #361723022444"
-    },
-    {
-      "sender": "Uber Receipts",
-      "subject": "[Mary Jane Hinrichs's Family] Your Sunday evening trip with Uber"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 29 Jun 2026"
     },
     {
       "sender": "Chan Luu",
       "subject": "Dressed for Somewhere Warm"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on June 29, 2026"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "4th of July Desserts not to miss"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Screenshot 2026-06-28 at 5.59.35\u202fPM"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "Enjoy a look at your June IHG One Rewards eStatement"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Pssst! Your next mini bucket\u2019s here \ud83e\udd2b"
+    },
+    {
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Velvet Pear"
+    },
+    {
+      "sender": "The New York Times",
+      "subject": "Tell us about your recent experience with Customer Care"
+    },
+    {
+      "sender": "Viski",
+      "subject": "Welcome, grab your discount inside \ud83d\udc49"
+    },
+    {
+      "sender": "ChatGPT",
+      "subject": "Your scheduled tasks are getting better"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 11, 2026 at 10:00 AM"
     }
   ],
   "items": [
@@ -630,13 +630,6 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f0e2948cdc1c04",
       "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Anbbas 4in1 Badger Hair...\"",
-      "date": "2026-06-29",
-      "id": "19f12022a55aa9b4",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
