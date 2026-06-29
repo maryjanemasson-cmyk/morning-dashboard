@@ -566,8 +566,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "PARTIAL SHIPMENT"
+    },
+    {
+      "sender": "Bekah Sanders",
+      "subject": "NOLS Pre-Departure Q&A Webinar Registration - Today!"
+    },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to P & J AUTO BODY & PAINTING LIMITED DBA P"
@@ -587,22 +599,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Low Back Bra Halter Bra...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "Enjoy a look at your June IHG One Rewards eStatement"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Pssst! Your next mini bucket\u2019s here \ud83e\udd2b"
-    },
-    {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Velvet Pear"
-    },
-    {
-      "sender": "The New York Times",
-      "subject": "Tell us about your recent experience with Customer Care"
     }
   ],
   "items": [
