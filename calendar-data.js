@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal A Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMt_PkwJ4S4Z404wt--qTJ5eQqsYQah4TA\n",
+    "startTime": "2026-06-30T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-06-30T07:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "\u2708\ufe0f UA1110 EWR \u2192 BOS",
     "location": "Newark (EWR)",
     "description": "Tue, Jun 30\n8:32 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 1110, Terminal TERMINAL C, Gate\n9:48 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
@@ -74,28 +85,6 @@ window.CALENDAR_EVENTS = [
     "endTime": "",
     "endDate": "2026-07-03",
     "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Ann Hinrich's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-02T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-02T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Ann Hinrich's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-02T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-02T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
     "colorId": ""
   },
   {
@@ -555,12 +544,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 11,
   "threads": [
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 29 Jun 2026"
-    },
     {
       "sender": "Chan Luu",
       "subject": "Dressed for Somewhere Warm"
@@ -596,6 +581,10 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 11, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - All Levels - 45 minutes July 10, 2026 at 6:00 AM"
     }
   ],
   "items": [
