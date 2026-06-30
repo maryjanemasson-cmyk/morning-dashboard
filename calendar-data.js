@@ -544,8 +544,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Bekah Sanders",
+      "subject": "Recording - NOLS Pre-Departure Q&A"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "Welcome back to Schoolhouse."
+    },
     {
       "sender": "Hotels.com",
       "subject": "Celebrate 250 years with up to 40% off"
