@@ -544,43 +544,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Fearless Tape - Double...\""
+      "sender": "Hotels.com",
+      "subject": "Celebrate 250 years with up to 40% off"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "The Blake Jeans"
+      "sender": "Horizon BCBSNJ Member Services",
+      "subject": "Christian, your claim has been processed"
     },
     {
       "sender": "American Express",
-      "subject": "A simple way to split the bill & share the costs"
+      "subject": "Christian, explore a High Yield Savings Account from American Express."
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 382331810502"
+      "sender": "Axia Women's Health",
+      "subject": "Mary Jane, your mammogram just got easier. Book at Axia."
     },
     {
-      "sender": "Alex from Holafly",
-      "subject": "Mary, stop running out of data abroad."
+      "sender": "Leslie Dan Faculty of Pharmacy, University of Toronto via LinkedIn",
+      "subject": "New multi-objective AI platform advances targeted delivery of mRNA therapies"
     },
     {
-      "sender": "Etsy",
-      "subject": "Mary, did you recently sign into Etsy?"
+      "sender": "COS",
+      "subject": "Take another look"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to P & J AUTO BODY & PAINTING LIMITED DBA P"
+      "sender": "COS",
+      "subject": "Trending for Summer 2026"
     },
     {
-      "sender": "Deer Guys",
-      "subject": "Receipt for payment to Deer Guys"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHE'S BUSY"
+      "sender": "LOOK OPTIC",
+      "subject": "4th of July Sale: 25% Off Sitewide"
     }
   ],
   "items": [
@@ -597,13 +593,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Fearless Tape - Double...\"",
-      "date": "2026-06-30",
-      "id": "19f1775a26b0e772",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
