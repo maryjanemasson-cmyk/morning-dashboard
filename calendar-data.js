@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e2948cdc1c04",
-    "startTime": "2026-06-29T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-29T06:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-06-29T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-29T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "Lagree - All Levels - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ec29fc3834680a",
-    "startTime": "2026-06-29T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-29T17:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Trip \u2014 Cambridge, MA",
     "location": "Cambridge, MA",
     "description": "Cambridge, MA \u2014 Jun 30 to Jul 3, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
@@ -306,6 +273,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-07-13T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-13T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -566,47 +544,43 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 9,
   "threads": [
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \"Fearless Tape - Double...\""
+      "subject": "Shipped: \"Fearless Tape - Double...\""
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "WAT THE BRAND",
+      "subject": "The Blake Jeans"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access Ends Tonight"
+      "sender": "American Express",
+      "subject": "A simple way to split the bill & share the costs"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"DOBREVA Women's Balconette...\""
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 382331810502"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Anbbas 4in1 Badger Hair...\""
+      "sender": "Alex from Holafly",
+      "subject": "Mary, stop running out of data abroad."
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Kona Collection"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your June 30 flight"
-    },
-    {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
-    },
-    {
-      "sender": "Bekah Sanders",
-      "subject": "NOLS Pre-Departure Q&A Webinar Registration - Today!"
+      "sender": "Etsy",
+      "subject": "Mary, did you recently sign into Etsy?"
     },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to P & J AUTO BODY & PAINTING LIMITED DBA P"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Receipt for payment to Deer Guys"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHE'S BUSY"
     }
   ],
   "items": [
@@ -625,22 +599,11 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "school",
-      "title": "Lost and Found Reminder",
-      "date": "2026-06-26",
-      "id": "19f0430f67008dbb",
-      "sender": "Administration Office FASP"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-06-29",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f0e2948cdc1c04",
-      "sender": "FORM BY TWO"
+      "type": "delivery",
+      "title": "Shipped: \"Fearless Tape - Double...\"",
+      "date": "2026-06-30",
+      "id": "19f1775a26b0e772",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
