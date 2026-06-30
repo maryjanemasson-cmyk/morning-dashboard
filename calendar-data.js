@@ -566,8 +566,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Fearless Tape - Double...\""
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access Ends Tonight"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"DOBREVA Women's Balconette...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Anbbas 4in1 Badger Hair...\""
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Kona Collection"
+    },
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your June 30 flight"
@@ -583,18 +607,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to P & J AUTO BODY & PAINTING LIMITED DBA P"
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Receipt for payment to Deer Guys"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHE'S BUSY"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Dressed for Somewhere Warm"
     }
   ],
   "items": [
