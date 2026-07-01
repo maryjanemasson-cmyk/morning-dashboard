@@ -522,20 +522,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 11,
   "threads": [
-    {
-      "sender": "Google Play",
-      "subject": "Updates to Google Play Terms of Service"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Joshua Niu $60.00"
-    },
     {
       "sender": "Claude Team",
       "subject": "New: Sonnet 5, Claude Design updates, loops"
@@ -543,14 +531,6 @@ window.EMAIL_DATA = {
     {
       "sender": "NBC",
       "subject": "Get Fourth of July Ready with NBC"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "\ud83d\udcb0COMING SOON: MyLowe's Money Days!\ud83d\udcb0"
-    },
-    {
-      "sender": "Bekah Sanders",
-      "subject": "Recording - NOLS Pre-Departure Q&A"
     },
     {
       "sender": "Schoolhouse",
@@ -563,6 +543,26 @@ window.EMAIL_DATA = {
     {
       "sender": "Horizon BCBSNJ Member Services",
       "subject": "Christian, your claim has been processed"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, explore a High Yield Savings Account from American Express."
+    },
+    {
+      "sender": "Axia Women's Health",
+      "subject": "Mary Jane, your mammogram just got easier. Book at Axia."
+    },
+    {
+      "sender": "Leslie Dan Faculty of Pharmacy, University of Toronto via LinkedIn",
+      "subject": "New multi-objective AI platform advances targeted delivery of mRNA therapies"
+    },
+    {
+      "sender": "COS",
+      "subject": "Take another look"
+    },
+    {
+      "sender": "COS",
+      "subject": "Trending for Summer 2026"
     }
   ],
   "items": [
