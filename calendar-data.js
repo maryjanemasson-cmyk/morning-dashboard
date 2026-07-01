@@ -11,39 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
-    "summary": "Newark Airport Parking",
-    "location": "Newark Liberty International Airport, Terminal A Parking",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMt_PkwJ4S4Z404wt--qTJ5eQqsYQah4TA\n",
-    "startTime": "2026-06-30T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-30T07:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\u2708\ufe0f UA1110 EWR \u2192 BOS",
-    "location": "Newark (EWR)",
-    "description": "Tue, Jun 30\n8:32 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 1110, Terminal TERMINAL C, Gate\n9:48 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
-    "startTime": "2026-06-30T08:32:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-30T09:48:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: Kimpton Marlowe by IHG",
-    "location": "25 Edwin H. Land Blvd, Cambridge, MA 02141",
-    "description": "Check-In: 3:00 PM\\nPhone: +1 617 868-8000",
-    "startTime": "2026-06-30T15:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-06-30T16:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "Ann Hinrich's Birthday",
     "location": "",
     "description": "",
@@ -284,6 +251,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Your Appointment at Suite Blend Color Bar",
+    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
+    "description": "SERVICE\nSingle Root Touch Up with blowout\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/f40421e2d14b4331fa6a3176b9a3464af507",
+    "startTime": "2026-07-14T13:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-14T15:05:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -544,8 +522,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Google Play",
+      "subject": "Updates to Google Play Terms of Service"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "You paid Joshua Niu $60.00"
+    },
+    {
+      "sender": "Claude Team",
+      "subject": "New: Sonnet 5, Claude Design updates, loops"
+    },
+    {
+      "sender": "NBC",
+      "subject": "Get Fourth of July Ready with NBC"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "\ud83d\udcb0COMING SOON: MyLowe's Money Days!\ud83d\udcb0"
+    },
     {
       "sender": "Bekah Sanders",
       "subject": "Recording - NOLS Pre-Departure Q&A"
@@ -561,30 +563,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Horizon BCBSNJ Member Services",
       "subject": "Christian, your claim has been processed"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, explore a High Yield Savings Account from American Express."
-    },
-    {
-      "sender": "Axia Women's Health",
-      "subject": "Mary Jane, your mammogram just got easier. Book at Axia."
-    },
-    {
-      "sender": "Leslie Dan Faculty of Pharmacy, University of Toronto via LinkedIn",
-      "subject": "New multi-objective AI platform advances targeted delivery of mRNA therapies"
-    },
-    {
-      "sender": "COS",
-      "subject": "Take another look"
-    },
-    {
-      "sender": "COS",
-      "subject": "Trending for Summer 2026"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "4th of July Sale: 25% Off Sitewide"
     }
   ],
   "items": [
@@ -601,6 +579,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Your package will be delivered soon D4055579",
+      "date": "2026-07-01",
+      "id": "19f1c03b8da9ec05",
+      "sender": "Aritzia"
     },
     {
       "type": "class",
