@@ -342,22 +342,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA1110 EWR to BOS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-06-30T12:32:00+00:00",
-        "end": "2026-06-30T13:48:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: Kimpton Marlowe by IHG",
-        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-        "description": "",
-        "start": "2026-06-30T19:00:00+00:00",
-        "end": "2026-06-30T20:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "UA570 BOS to EWR",
         "location": "Boston (BOS)",
         "description": "",
@@ -522,47 +506,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 23,
   "threads": [
     {
+      "sender": "Slate Flosser",
+      "subject": "A shipment from order #86347 is out for delivery"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to MOHAMMAD SHAIKH"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+    },
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "Your latest account statement is available online"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $11,471.09 deposit was credited to your account."
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Heading Away? Start Here."
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Mary, you have a new item to review."
+    },
+    {
       "sender": "Claude Team",
-      "subject": "New: Sonnet 5, Claude Design updates, loops"
+      "subject": "Claude Science is here"
     },
     {
-      "sender": "NBC",
-      "subject": "Get Fourth of July Ready with NBC"
+      "sender": "PayPal",
+      "subject": "Score new finds and pay over time. $0 down. Zero late fees."
     },
     {
-      "sender": "Schoolhouse",
-      "subject": "Welcome back to Schoolhouse."
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Celebrate 250 years with up to 40% off"
-    },
-    {
-      "sender": "Horizon BCBSNJ Member Services",
-      "subject": "Christian, your claim has been processed"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, explore a High Yield Savings Account from American Express."
-    },
-    {
-      "sender": "Axia Women's Health",
-      "subject": "Mary Jane, your mammogram just got easier. Book at Axia."
-    },
-    {
-      "sender": "Leslie Dan Faculty of Pharmacy, University of Toronto via LinkedIn",
-      "subject": "New multi-objective AI platform advances targeted delivery of mRNA therapies"
-    },
-    {
-      "sender": "COS",
-      "subject": "Take another look"
-    },
-    {
-      "sender": "COS",
-      "subject": "Trending for Summer 2026"
+      "sender": "NYTimes.com",
+      "subject": "Your family subscription needs attention."
     }
   ],
   "items": [
@@ -582,10 +566,10 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Your package will be delivered soon D4055579",
-      "date": "2026-07-01",
-      "id": "19f1c03b8da9ec05",
-      "sender": "Aritzia"
+      "title": "FedEx arriving tomorrow #382331810502",
+      "date": "2026-07-03",
+      "id": "19f213b62ef27bc4",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
