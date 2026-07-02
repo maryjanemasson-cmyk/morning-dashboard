@@ -506,11 +506,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 36,
+  "unreadCount": 31,
   "threads": [
     {
-      "sender": "Disney+",
-      "subject": "We noticed a new login"
+      "sender": "Slate Flosser",
+      "subject": "A shipment from order #86347 has been delivered"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (5c79958)"
     },
     {
       "sender": "Cloudflare",
@@ -527,10 +531,6 @@ window.EMAIL_DATA = {
     {
       "sender": "World of Hyatt",
       "subject": "Your Account Summary\u2014Your Next Trip Could Be Even More Rewarding"
-    },
-    {
-      "sender": "Aritzia",
-      "subject": "Your package has arrived #D4055579"
     },
     {
       "sender": "Etsy",
