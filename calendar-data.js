@@ -506,47 +506,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 36,
   "threads": [
     {
-      "sender": "Slate Flosser",
-      "subject": "A shipment from order #86347 is out for delivery"
+      "sender": "Disney+",
+      "subject": "We noticed a new login"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to MOHAMMAD SHAIKH"
+      "sender": "Cloudflare",
+      "subject": "New updates to your AI bot controls."
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+      "sender": "PURE Insurance",
+      "subject": "Reminder: You're still eligible for a free PURE Watertight home check"
     },
     {
-      "sender": "Ameriprise Financial",
-      "subject": "Your latest account statement is available online"
+      "sender": "Reformation",
+      "subject": "LOVE'S IN THE AIR"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $11,471.09 deposit was credited to your account."
+      "sender": "World of Hyatt",
+      "subject": "Your Account Summary\u2014Your Next Trip Could Be Even More Rewarding"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Heading Away? Start Here."
+      "sender": "Aritzia",
+      "subject": "Your package has arrived #D4055579"
     },
     {
       "sender": "Etsy",
-      "subject": "Mary, you have a new item to review."
+      "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
     },
     {
-      "sender": "Claude Team",
-      "subject": "Claude Science is here"
+      "sender": "LinkedIn Premium",
+      "subject": "Mary Jane, thanks for checking us out"
     },
     {
-      "sender": "PayPal",
-      "subject": "Score new finds and pay over time. $0 down. Zero late fees."
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 873584685606"
     },
     {
-      "sender": "NYTimes.com",
-      "subject": "Your family subscription needs attention."
+      "sender": "Microsoft Rewards",
+      "subject": "Harry Styles tix + a massive soccer giveaway"
     }
   ],
   "items": [
@@ -563,6 +563,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #873584685606",
+      "date": "2026-07-03",
+      "id": "19f23653ec1b8c9f",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "delivery",
