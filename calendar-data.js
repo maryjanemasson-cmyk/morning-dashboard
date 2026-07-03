@@ -11,39 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
-    "summary": "Ann Hinrich's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-07-02",
-    "endTime": "",
-    "endDate": "2026-07-03",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Ann Hinrich's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-02T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-02T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
-    "summary": "Ann Hinrich's Birthday",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-02T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-02T10:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "\u2708\ufe0f UA570 BOS \u2192 EWR",
     "location": "Boston (BOS)",
     "description": "Fri, Jul 3\n8:00 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 570, Terminal TERMINAL B, Gate\n9:23 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
@@ -262,6 +229,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Priya's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-07-16",
+    "endTime": "",
+    "endDate": "2026-07-17",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "CP Reformer Flow 2 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f13de3e5ee42e0",
+    "startTime": "2026-07-16T16:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-16T16:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   }
 ];
 
@@ -506,8 +495,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 30,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "EADEM Sunsuede SPF 50+ Lightweight Sunscreen & Blurring Primer Stick is back in stock."
+    },
+    {
+      "sender": "Empower",
+      "subject": "MASSMUTUAL Important Information"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (177cf04)"
+    },
     {
       "sender": "Instagram",
       "subject": "Instagram got an iPad upgrade"
@@ -527,26 +536,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Cloudflare",
       "subject": "New updates to your AI bot controls."
-    },
-    {
-      "sender": "PURE Insurance",
-      "subject": "Reminder: You're still eligible for a free PURE Watertight home check"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "LOVE'S IN THE AIR"
-    },
-    {
-      "sender": "World of Hyatt",
-      "subject": "Your Account Summary\u2014Your Next Trip Could Be Even More Rewarding"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Today's special \ud83d\udc69\u200d\ud83c\udf73"
-    },
-    {
-      "sender": "LinkedIn Premium",
-      "subject": "Mary Jane, thanks for checking us out"
     }
   ],
   "items": [
