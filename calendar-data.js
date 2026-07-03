@@ -495,8 +495,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Mary, you have a new item to review."
+    },
+    {
+      "sender": "Chloe at Sur La Table",
+      "subject": "Celebrate America's Birthday with 20% Off!"
+    },
+    {
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, your trip to London, United Kingdom is starting soon!"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Support Venezuela with miles or money"
+    },
     {
       "sender": "Unroll.Me",
       "subject": "\u2709\ufe0f Today's Rollup"
@@ -520,22 +536,6 @@ window.EMAIL_DATA = {
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
       "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Instagram",
-      "subject": "Instagram got an iPad upgrade"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "The Styles You'll Wear All Summer"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (5c79958)"
     }
   ],
   "items": [
