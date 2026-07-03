@@ -495,23 +495,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Mary, you have a new item to review."
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Celebrate America's Birthday with 20% Off!"
-    },
-    {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, your trip to London, United Kingdom is starting soon!"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Support Venezuela with miles or money"
+      "sender": "The New York Times",
+      "subject": "Need a moment? Save an article for later."
     },
     {
       "sender": "Unroll.Me",
@@ -536,6 +524,18 @@ window.EMAIL_DATA = {
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
       "subject": "New shareholder documents are available online"
+    },
+    {
+      "sender": "Instagram",
+      "subject": "Instagram got an iPad upgrade"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "The Styles You'll Wear All Summer"
     }
   ],
   "items": [
