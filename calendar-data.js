@@ -495,8 +495,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"dpHUE Root Touch-Up Kit,...\""
+    },
+    {
+      "sender": "The Frankie Shop",
+      "subject": "Thank you for your order!"
+    },
+    {
+      "sender": "Viski",
+      "subject": "A shipment from order #114324 has been delivered"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (110c80d)"
+    },
     {
       "sender": "The New York Times",
       "subject": "Need a moment? Save an article for later."
@@ -520,22 +536,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Empower",
       "subject": "MASSMUTUAL Important Information"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Instagram",
-      "subject": "Instagram got an iPad upgrade"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "The Styles You'll Wear All Summer"
     }
   ],
   "items": [
@@ -552,6 +552,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"dpHUE Root Touch-Up Kit,...\"",
+      "date": "2026-07-03",
+      "id": "19f2994ba4d3f223",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
