@@ -495,8 +495,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udf7f Big laughs, big heroes, one unforgettable Friday "
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Etsy Shipping Notifications",
+      "subject": "It's here! Your order from UnlimitedTextiles has been delivered."
+    },
+    {
+      "sender": "Element Brooklyn",
+      "subject": "Your Order #2270347 has been delivered \ud83c\udf31"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (8d71d8e)"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"dpHUE Root Touch-Up Kit,...\""
@@ -516,26 +536,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The New York Times",
       "subject": "Need a moment? Save an article for later."
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 03 Jul 2026"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "EADEM Sunsuede SPF 50+ Lightweight Sunscreen & Blurring Primer Stick is back in stock."
-    },
-    {
-      "sender": "Empower",
-      "subject": "MASSMUTUAL Important Information"
     }
   ],
   "items": [
