@@ -495,7 +495,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 16,
   "threads": [
     {
       "sender": "Unroll.Me",
