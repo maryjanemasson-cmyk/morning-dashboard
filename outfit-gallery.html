@@ -346,6 +346,27 @@
       // listeners below. renderDetail rebuilds the category buttons (so a
       // brand-new category gets a button) and re-renders the grid while
       // restoring the user's search + scroll.
+      applyWardrobeEdits();
+      if (_addPanelOpen) renderDetail();
+    });
+
+    // Mirror the wardrobe page's category/subcategory edits so items land in the
+    // same group and order as the wardrobe catalogue (e.g. items moved into
+    // "Belts", or a custom item recategorized). Without this the Add Piece grid
+    // clustered by the ORIGINAL subcategories and diverged from the wardrobe page.
+    let _itemOverrides = {};
+    function applyWardrobeEdits() {
+      (window.WARDROBE_ITEMS || []).forEach(i => {
+        const ov = _itemOverrides[i.id];
+        if (ov) {
+          if (ov.category) i.category = ov.category;
+          if (ov.subcategory) i.subcategory = ov.subcategory;
+        }
+      });
+    }
+    db.ref('wardrobeEdits').on('value', snap => {
+      _itemOverrides = snap.val() || {};
+      applyWardrobeEdits();
       if (_addPanelOpen) renderDetail();
     });
 
