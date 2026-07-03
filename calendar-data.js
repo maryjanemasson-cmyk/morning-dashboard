@@ -495,23 +495,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 31,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 03 Jul 2026"
-    },
-    {
-      "sender": "Viski",
-      "subject": "A shipment from order #114324 is out for delivery"
-    },
-    {
-      "sender": "Kimpton Hotels & Restaurants",
-      "subject": "Use Digital Checkout when you\u2019re ready"
-    },
-    {
-      "sender": "John Gregory-Smith",
-      "subject": "JohnGS recipe drop - Summer Pasta Recipes"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -530,12 +522,20 @@ window.EMAIL_DATA = {
       "subject": "New shareholder documents are available online"
     },
     {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (177cf04)"
-    },
-    {
       "sender": "Instagram",
       "subject": "Instagram got an iPad upgrade"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "The Styles You'll Wear All Summer"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (5c79958)"
     }
   ],
   "items": [
