@@ -495,8 +495,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 31,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 03 Jul 2026"
+    },
+    {
+      "sender": "Viski",
+      "subject": "A shipment from order #114324 is out for delivery"
+    },
+    {
+      "sender": "Kimpton Hotels & Restaurants",
+      "subject": "Use Digital Checkout when you\u2019re ready"
+    },
+    {
+      "sender": "John Gregory-Smith",
+      "subject": "JohnGS recipe drop - Summer Pasta Recipes"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -520,22 +536,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Instagram",
       "subject": "Instagram got an iPad upgrade"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "The Styles You'll Wear All Summer"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (5c79958)"
-    },
-    {
-      "sender": "Cloudflare",
-      "subject": "New updates to your AI bot controls."
     }
   ],
   "items": [
