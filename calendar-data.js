@@ -506,11 +506,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 31,
+  "unreadCount": 29,
   "threads": [
     {
-      "sender": "Slate Flosser",
-      "subject": "A shipment from order #86347 has been delivered"
+      "sender": "Instagram",
+      "subject": "Instagram got an iPad upgrade"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "The Styles You'll Wear All Summer"
     },
     {
       "sender": "maryjanemasson-cmyk",
@@ -539,14 +547,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn Premium",
       "subject": "Mary Jane, thanks for checking us out"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 873584685606"
-    },
-    {
-      "sender": "Microsoft Rewards",
-      "subject": "Harry Styles tix + a massive soccer giveaway"
     }
   ],
   "items": [
