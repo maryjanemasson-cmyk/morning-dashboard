@@ -505,24 +505,30 @@
       renderCatalogue();
     });
 
-    function renderCatalogue() {
-      // Apply saved order if available
-      const orderKey = catFilter !== 'All' ? catFilter.replace(/[.#$/\[\]]/g, '_') : 'all';
-      const savedOrder = _itemOrder[orderKey];
-      if (savedOrder && Array.isArray(savedOrder)) {
-        const orderMap = {};
-        savedOrder.forEach((id, idx) => orderMap[id] = idx);
-        items.sort((a, b) => {
-          const oa = orderMap[a.id] !== undefined ? orderMap[a.id] : 99999;
-          const ob = orderMap[b.id] !== undefined ? orderMap[b.id] : 99999;
-          return oa - ob;
-        });
-      }
+    function catOrderKey(cat) { return cat !== 'All' ? cat.replace(/[.#$/\[\]]/g, '_') : 'all'; }
 
+    // The saved drag order is the single source of truth for sequence within a
+    // category. Sort a COPY — never mutate the shared items[] array. Mutating it
+    // used to let one category view scramble another, and let a freshly-dragged
+    // order silently drift back on the next background re-render (crops/outfit
+    // links streaming in), which is why reorders "reverted over time".
+    // Items with no saved position fall to the end in their natural order.
+    // (renderCatalogue then groups this by subcategory for display.)
+    function orderedForCat(cat) {
+      const saved = _itemOrder[catOrderKey(cat)];
+      const list = items.filter(i => cat === 'All' || i.category === cat);
+      if (Array.isArray(saved)) {
+        const orderMap = {};
+        saved.forEach((id, idx) => orderMap[id] = idx);
+        list.sort((a, b) => (orderMap[a.id] ?? 99999) - (orderMap[b.id] ?? 99999));
+      }
+      return list;
+    }
+
+    function renderCatalogue() {
       const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
       const hiddenKey = (id) => id.replace(/[.#$/\[\]]/g, '_');
-      let filtered = items.filter(i => {
-        if (catFilter !== 'All' && i.category !== catFilter) return false;
+      let filtered = orderedForCat(catFilter).filter(i => {
         const isHidden = !!_hiddenItems[hiddenKey(i.id)];
         if (isHidden && !_showHidden) return false;
         if (search) {
@@ -535,9 +541,12 @@
       const outfitStatus = _outfitMapReady ? '' : ' (loading outfit links...)';
       document.getElementById('cat-count').textContent = filtered.length + ' items' + outfitStatus;
 
-      // When viewing a single category, cluster items by subcategory. Subcategory
-      // display order follows first appearance in the saved order, so dragging a
-      // small bag to the top pulls the whole Small Bags group with it.
+      // When viewing a single category, group items by subcategory so each
+      // subcategory's items stay together under one header (e.g. all Belts, then
+      // all Sunglasses). Group order follows first appearance in the saved order,
+      // so dragging an item up can carry its whole subcategory with it, and the
+      // saved drag order is preserved WITHIN each group (stable sort). This sorts
+      // `filtered` (a fresh array), never the shared items[] array.
       if (catFilter !== 'All') {
         const subOrder = {};
         let nextIdx = 0;
@@ -694,6 +703,7 @@
 
     db.ref('wardrobeOrder').on('value', snap => {
       _itemOrder = snap.val() || {};
+      renderCatalogue();
     });
 
     // Hidden items (soft-delete for non-custom items)
@@ -740,35 +750,22 @@
       e.preventDefault();
       if (!_dragItemId || _dragItemId === targetId) return;
 
-      // Find indices in current filtered view
-      const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
-      let filtered = items.filter(i => {
-        if (catFilter !== 'All' && i.category !== catFilter) return false;
-        if (search) {
-          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
-          if (!h.includes(search)) return false;
-        }
-        return true;
-      });
-
-      const srcIdx = filtered.findIndex(i => i.id === _dragItemId);
-      const tgtIdx = filtered.findIndex(i => i.id === targetId);
+      // Reorder within the full ordered category list (the same sequence the user
+      // sees), then persist that exact sequence. Working on this list — rather
+      // than mutating the shared items[] array — is what makes the new order the
+      // single source of truth so it survives reload and background re-renders.
+      const list = orderedForCat(catFilter);
+      const srcIdx = list.findIndex(i => i.id === _dragItemId);
+      const tgtIdx = list.findIndex(i => i.id === targetId);
       if (srcIdx === -1 || tgtIdx === -1) return;
 
-      // Move item in the master items array
-      const masterSrcIdx = items.findIndex(i => i.id === _dragItemId);
-      const masterTgtIdx = items.findIndex(i => i.id === targetId);
-      if (masterSrcIdx === -1 || masterTgtIdx === -1) return;
+      const [moved] = list.splice(srcIdx, 1);
+      const insertAt = srcIdx < tgtIdx ? tgtIdx - 1 : tgtIdx;
+      list.splice(insertAt, 0, moved);
 
-      const [moved] = items.splice(masterSrcIdx, 1);
-      const insertAt = masterSrcIdx < masterTgtIdx ? masterTgtIdx - 1 : masterTgtIdx;
-      items.splice(insertAt, 0, moved);
-
-      // Save new order to Firebase (just store array of IDs)
-      const orderKey = catFilter !== 'All' ? catFilter : 'all';
-      const safeKey = orderKey.replace(/[.#$/\[\]]/g, '_');
-      const newOrder = items.filter(i => catFilter === 'All' || i.category === catFilter).map(i => i.id);
-      // Optimistically update local state so renderCatalogue below uses the new order,
+      const safeKey = catOrderKey(catFilter);
+      const newOrder = list.map(i => i.id);
+      // Optimistically update local state so the re-render below uses the new order,
       // not the stale one still in _itemOrder until Firebase round-trips back.
       _itemOrder[safeKey] = newOrder;
       db.ref('wardrobeOrder/' + safeKey).set(newOrder);
@@ -1641,8 +1638,22 @@
         // to the static catalogue order with custom items spliced in by
         // category in outfit-gallery's loader.
         const catKey = category.replace(/[.#$/\[\]]/g, '_');
-        const catItems = items.filter(it => it.category === category).map(it => it.id);
-        db.ref('wardrobeOrder/' + catKey).set(catItems);
+        // Insert the new id into the EXISTING saved order (near its subcategory
+        // siblings) rather than rewriting the order from scratch — otherwise
+        // adding one item would wipe out however you'd hand-arranged the category.
+        let order = Array.isArray(_itemOrder[catKey])
+          ? _itemOrder[catKey].slice()
+          : items.filter(it => it.category === category).map(it => it.id);
+        if (!order.includes(id)) {
+          let insertPos = order.length;
+          for (let k = order.length - 1; k >= 0; k--) {
+            const it = items.find(x => x && x.id === order[k]);
+            if (it && it.subcategory === subcategory) { insertPos = k + 1; break; }
+          }
+          order.splice(insertPos, 0, id);
+        }
+        _itemOrder[catKey] = order;
+        db.ref('wardrobeOrder/' + catKey).set(order);
 
         // Close modal and reset
         document.getElementById('add-item-modal').classList.remove('open');
