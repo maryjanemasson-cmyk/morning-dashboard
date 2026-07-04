@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Trip \u2014 Cambridge, MA",
-    "location": "Cambridge, MA",
-    "description": "Cambridge, MA \u2014 Jun 30 to Jul 3, 2026. [TripIt manual sync \u2014 added by Claude while Google's iCal refresh catches up.]",
-    "startTime": "",
-    "startDate": "2026-06-30",
-    "endTime": "",
-    "endDate": "2026-07-04",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "\u2708\ufe0f UA570 BOS \u2192 EWR",
-    "location": "Boston (BOS)",
-    "description": "Fri, Jul 3\n8:00 AM EDT\n[Flight] BOS to EWR\nUnited Airlines 570, Terminal TERMINAL B, Gate\n9:23 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL C, Gate",
-    "startTime": "2026-07-03T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-03T09:23:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: Kimpton Marlowe by IHG",
-    "location": "25 Edwin H. Land Blvd, Cambridge, MA 02141",
-    "description": "Check-Out: 11:00 AM\\nPhone: +1 617 868-8000",
-    "startTime": "2026-07-03T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-03T12:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -471,47 +438,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Victoria's Secret Pink Wear...\""
+      "sender": "WAT THE BRAND",
+      "subject": "Considered Style. Exceptional Savings."
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on July 4, 2026"
     },
     {
-      "sender": "The New York Times",
-      "subject": "Need a moment? Save an article for later."
+      "sender": "Metropolis",
+      "subject": "Welcome to Metropolis: You\u2019ve officially unlocked the Princeton network"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "Trip.com",
+      "subject": "\u26a1 Your Early Access Starts Now"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 03 Jul 2026"
+      "sender": "Link",
+      "subject": "Your Mob subscription is confirmed"
+    },
+    {
+      "sender": "Google",
+      "subject": "\u2705 Mary Jane, finish setting up your Apple iPad Air (10.9-inch, 5th generation) with Google"
+    },
+    {
+      "sender": "Link",
+      "subject": "New login from iOS (Instagram)"
+    },
+    {
+      "sender": "Google",
+      "subject": "Security alert"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Sephora",
-      "subject": "EADEM Sunsuede SPF 50+ Lightweight Sunscreen & Blurring Primer Stick is back in stock."
-    },
-    {
-      "sender": "Empower",
-      "subject": "MASSMUTUAL Important Information"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Instagram",
-      "subject": "Instagram got an iPad upgrade"
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
     }
   ],
   "items": [
@@ -528,20 +495,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #873584685606",
-      "date": "2026-07-03",
-      "id": "19f23653ec1b8c9f",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #382331810502",
-      "date": "2026-07-03",
-      "id": "19f213b62ef27bc4",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
