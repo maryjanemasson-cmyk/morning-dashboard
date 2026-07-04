@@ -438,7 +438,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 14,
   "threads": [
     {
       "sender": "Element Brooklyn",
@@ -482,13 +482,6 @@ window.EMAIL_DATA = {
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Refund update for Levi's Womens Flynn Western Core Dress (Also Available in Plus)",
-      "date": "2026-06-20",
-      "id": "19ee6430971fd750",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: Refund ineligible for Levi's Womens Flynn Western",
