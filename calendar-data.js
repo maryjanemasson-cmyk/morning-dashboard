@@ -325,30 +325,6 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Cambridge, MA",
-    "start": "2026-06-30",
-    "end": "2026-07-03",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA570 BOS to EWR",
-        "location": "Boston (BOS)",
-        "description": "",
-        "start": "2026-07-03T12:00:00+00:00",
-        "end": "2026-07-03T13:23:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: Kimpton Marlowe by IHG",
-        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-        "description": "",
-        "start": "2026-07-03T15:00:00+00:00",
-        "end": "2026-07-03T16:00:00+00:00",
-        "type": "hotel"
-      }
-    ]
-  },
-  {
     "destination": "London, United Kingdom",
     "start": "2026-07-06",
     "end": "2026-07-09",
@@ -495,47 +471,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udf7f Big laughs, big heroes, one unforgettable Friday "
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Etsy Shipping Notifications",
-      "subject": "It's here! Your order from UnlimitedTextiles has been delivered."
-    },
-    {
-      "sender": "Element Brooklyn",
-      "subject": "Your Order #2270347 has been delivered \ud83c\udf31"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (8d71d8e)"
-    },
-    {
       "sender": "Amazon.com",
-      "subject": "Shipped: \"dpHUE Root Touch-Up Kit,...\""
+      "subject": "Ordered: \"Victoria's Secret Pink Wear...\""
     },
     {
-      "sender": "The Frankie Shop",
-      "subject": "Thank you for your order!"
-    },
-    {
-      "sender": "Viski",
-      "subject": "A shipment from order #114324 has been delivered"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (110c80d)"
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
     },
     {
       "sender": "The New York Times",
       "subject": "Need a moment? Save an article for later."
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 03 Jul 2026"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "EADEM Sunsuede SPF 50+ Lightweight Sunscreen & Blurring Primer Stick is back in stock."
+    },
+    {
+      "sender": "Empower",
+      "subject": "MASSMUTUAL Important Information"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
+    },
+    {
+      "sender": "Instagram",
+      "subject": "Instagram got an iPad upgrade"
     }
   ],
   "items": [
@@ -552,13 +528,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"dpHUE Root Touch-Up Kit,...\"",
-      "date": "2026-07-03",
-      "id": "19f2994ba4d3f223",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
