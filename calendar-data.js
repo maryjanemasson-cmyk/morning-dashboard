@@ -438,19 +438,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Mary Jane HINRICHS",
-      "subject": "pay"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 04 Jul 2026"
     },
     {
       "sender": "WAT THE BRAND",
       "subject": "Considered Style. Exceptional Savings."
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on July 4, 2026"
     },
     {
       "sender": "Google",
@@ -471,10 +467,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The New York Times",
       "subject": "Need a moment? Save an article for later."
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": [
