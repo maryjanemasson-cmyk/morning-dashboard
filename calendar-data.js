@@ -438,35 +438,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 04 Jul 2026"
+      "sender": "The Shade Store",
+      "subject": "Celebrate the Long Weekend with 15% Off Sitewide"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Considered Style. Exceptional Savings."
+      "sender": "Empower",
+      "subject": "Disclosure About Your Retirement Plan"
     },
     {
-      "sender": "Google",
-      "subject": "Security alert"
+      "sender": "Bake Time",
+      "subject": "Dreaming of Atlantic Beach pie"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Happy 250th, America! Savings up to $1,500 inside \ud83d\udc47"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Victoria's Secret Pink Wear...\""
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
+      "sender": "Almina Concept",
+      "subject": "Happy 4th: Take 20% Off"
     },
     {
-      "sender": "The New York Times",
-      "subject": "Need a moment? Save an article for later."
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (7798d3d)"
+    },
+    {
+      "sender": "COS",
+      "subject": "Sale continues: up to 60% off"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "From Sportsman Wool to Sodapop Seersucker"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Fireworks and 25% Off Great Frames"
     }
   ],
   "items": [
