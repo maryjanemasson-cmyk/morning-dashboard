@@ -438,12 +438,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 13,
   "threads": [
-    {
-      "sender": "Element Brooklyn",
-      "subject": "Thanks! Order #2272941 is confirmed \ud83c\udf31"
-    },
     {
       "sender": "Design Decor",
       "subject": "Mary jane, Thank You for Choosing Effortless Elegance"
@@ -479,6 +475,10 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "Considered Style. Exceptional Savings."
+    },
+    {
+      "sender": "Google",
+      "subject": "Security alert"
     }
   ],
   "items": [
