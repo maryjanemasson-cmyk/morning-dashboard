@@ -438,47 +438,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Element Brooklyn",
+      "subject": "Thanks! Order #2272941 is confirmed \ud83c\udf31"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Mary jane, Thank You for Choosing Effortless Elegance"
+    },
+    {
+      "sender": "IHG Hotels & Resorts",
+      "subject": "Tell Us About Your Recent Stay"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Shopping that feels good \ud83e\udde1"
+    },
     {
       "sender": "The Shade Store",
       "subject": "Celebrate the Long Weekend with 15% Off Sitewide"
-    },
-    {
-      "sender": "Empower",
-      "subject": "Disclosure About Your Retirement Plan"
     },
     {
       "sender": "Bake Time",
       "subject": "Dreaming of Atlantic Beach pie"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Happy 250th, America! Savings up to $1,500 inside \ud83d\udc47"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Happy 4th: Take 20% Off"
-    },
-    {
       "sender": "maryjanemasson-cmyk",
       "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (7798d3d)"
-    },
-    {
-      "sender": "COS",
-      "subject": "Sale continues: up to 60% off"
     },
     {
       "sender": "Buck Mason",
       "subject": "From Sportsman Wool to Sodapop Seersucker"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Fireworks and 25% Off Great Frames"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 04 Jul 2026"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Considered Style. Exceptional Savings."
     }
   ],
   "items": [
