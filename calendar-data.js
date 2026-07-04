@@ -438,8 +438,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Mary Jane HINRICHS",
+      "subject": "pay"
+    },
     {
       "sender": "WAT THE BRAND",
       "subject": "Considered Style. Exceptional Savings."
@@ -447,26 +451,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "Class Reminder for Lagree - Foundations - 45 minutes on July 4, 2026"
-    },
-    {
-      "sender": "Metropolis",
-      "subject": "Welcome to Metropolis: You\u2019ve officially unlocked the Princeton network"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\u26a1 Your Early Access Starts Now"
-    },
-    {
-      "sender": "Link",
-      "subject": "Your Mob subscription is confirmed"
-    },
-    {
-      "sender": "Google",
-      "subject": "\u2705 Mary Jane, finish setting up your Apple iPad Air (10.9-inch, 5th generation) with Google"
-    },
-    {
-      "sender": "Link",
-      "subject": "New login from iOS (Instagram)"
     },
     {
       "sender": "Google",
@@ -477,8 +461,20 @@ window.EMAIL_DATA = {
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Victoria's Secret Pink Wear...\""
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
+    },
+    {
+      "sender": "The New York Times",
+      "subject": "Need a moment? Save an article for later."
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": [
