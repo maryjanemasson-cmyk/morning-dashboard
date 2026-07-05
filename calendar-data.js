@@ -405,27 +405,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #148"
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 72.251.219.89"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Keep the Holiday Weekend Going With Up to 50% Off"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 05 Jul 2026"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sun, 7/5 is ready to view"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "How to Do Hard Things When You Have Zero Motivation | Darius Foroux"
     },
     {
       "sender": "Pini Parma",
       "subject": "Our favorite pieces of our summer sale"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "The summer trends I actually love wearing"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "TELL US EVERYTHING"
     },
     {
       "sender": "Design Decor",
@@ -438,14 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Shopping that feels good \ud83e\udde1"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Celebrate the Long Weekend with 15% Off Sitewide"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Dreaming of Atlantic Beach pie"
     }
   ],
   "items": [
