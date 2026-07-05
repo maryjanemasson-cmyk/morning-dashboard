@@ -438,7 +438,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
     {
       "sender": "Design Decor",
