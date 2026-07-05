@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "Reservation at Roots Ocean Prime",
+    "location": "Roots Ocean Prime, 98 University Place, Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOjzW9r2ApympyIVCioYcqDxOxs53GB1cI\n",
+    "startTime": "2026-07-05T18:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-05T19:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -405,47 +416,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "ALO",
+      "subject": "Wore it? Now rate it"
+    },
+    {
+      "sender": "Empower",
+      "subject": "Disclosure About Your Retirement Plan"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Missed July 4th? Here\u2019s one more chance \ud83d\udd5c"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Final Hours | 20% Off Site Wide"
+    },
+    {
+      "sender": "Reserve with Google",
+      "subject": "Your reservation at Roots Ocean Prime is confirmed"
+    },
+    {
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at Roots Ocean Prime is confirmed"
+    },
+    {
+      "sender": "COS",
+      "subject": "New from summer"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Sale Extended: 25% Off Sitewide This 4th of July Weekend"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Sunset Rayon Western"
+    },
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 72.251.219.89"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Keep the Holiday Weekend Going With Up to 50% Off"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 05 Jul 2026"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sun, 7/5 is ready to view"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "How to Do Hard Things When You Have Zero Motivation | Darius Foroux"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Our favorite pieces of our summer sale"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Mary jane, Thank You for Choosing Effortless Elegance"
-    },
-    {
-      "sender": "IHG Hotels & Resorts",
-      "subject": "Tell Us About Your Recent Stay"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Shopping that feels good \ud83e\udde1"
     }
   ],
   "items": [
@@ -455,6 +466,13 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Victoria's Secret Pink Wear...\"",
+      "date": "2026-07-05",
+      "id": "19f3285b1155be5f",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
