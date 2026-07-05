@@ -449,8 +449,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your July 6 flight"
+    },
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Velvet Pear Subscription"
@@ -486,10 +490,6 @@ window.EMAIL_DATA = {
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 72.251.219.89"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Keep the Holiday Weekend Going With Up to 50% Off"
     }
   ],
   "items": [
