@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "Roots Ocean Prime",
+    "location": "98 University Pl, Princeton, NJ 08540, USA",
+    "description": "",
+    "startTime": "2026-07-05T18:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-05T20:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Reservation at Roots Ocean Prime",
     "location": "Roots Ocean Prime, 98 University Place, Princeton, NJ 08540",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOjzW9r2ApympyIVCioYcqDxOxs53GB1cI\n",
@@ -8,6 +19,17 @@ window.CALENDAR_EVENTS = [
     "endTime": "2026-07-05T19:30:00-04:00",
     "endDate": "",
     "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Roots Ocean Prime",
+    "location": "98 University Pl, Princeton, NJ 08540, USA",
+    "description": "",
+    "startTime": "2026-07-05T18:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-05T20:00:00-04:00",
+    "endDate": "",
+    "calendar": "Chris",
     "colorId": ""
   },
   {
@@ -20,6 +42,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal C Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMRNmoNvJRjQ1MxhbBOAaKaDlk6cfIQiYU\n",
+    "startTime": "2026-07-06T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T09:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   },
   {
     "summary": "\u2708\ufe0f UA122 EWR \u2192 LHR",
@@ -416,16 +449,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 12,
   "threads": [
-    {
-      "sender": "ALO",
-      "subject": "Wore it? Now rate it"
-    },
-    {
-      "sender": "Empower",
-      "subject": "Disclosure About Your Retirement Plan"
-    },
     {
       "sender": "Shameless Snacks",
       "subject": "Missed July 4th? Here\u2019s one more chance \ud83d\udd5c"
@@ -433,10 +458,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Almina Concept",
       "subject": "Final Hours | 20% Off Site Wide"
-    },
-    {
-      "sender": "Reserve with Google",
-      "subject": "Your reservation at Roots Ocean Prime is confirmed"
     },
     {
       "sender": "Resy Reservations",
@@ -457,6 +478,18 @@ window.EMAIL_DATA = {
     {
       "sender": "SimpleFIN Bridge",
       "subject": "Transaction data accessed from new IP: 72.251.219.89"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Keep the Holiday Weekend Going With Up to 50% Off"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 05 Jul 2026"
     }
   ],
   "items": [
