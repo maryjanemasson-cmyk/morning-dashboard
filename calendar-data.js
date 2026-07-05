@@ -1,49 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-04T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-04T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e2a05ff5fafe",
-    "startTime": "2026-07-04T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-04T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Philly Outdoor Concert",
-    "location": "Benjamin Franklin Parkway, Benjamin Franklin Pkwy, Philadelphia, PA, USA",
-    "description": "<ul><li dir=\"ltr\"><strong>5:00 PM \u2013 11:45 PM\u00a0</strong>\u2014 Main Event\u00a0Concert (TBD: Dinner to overlap / arrive late)</li><li dir=\"ltr\"><strong>11:45 PM\u00a0</strong>\u2014 Fireworks Finale over the Philadelphia Museum of Art &amp; Skyline</li></ul><br><br>Christina Aguilera, Jill Scott, The Roots,\u00a0Will Smith, DJ Jazzy Jeff,\u00a0 Seal, Wanda Sykes, State Property, Kathy Sledge, Infinity Song, and More<br><br><a href=\"https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/\" target=\"_blank\">https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/</a>",
-    "startTime": "2026-07-04T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-05T00:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Philly Outdoor Concert",
-    "location": "Benjamin Franklin Parkway, Benjamin Franklin Pkwy, Philadelphia, PA, USA",
-    "description": "<ul><li dir=\"ltr\"><strong>5:00 PM \u2013 11:45 PM\u00a0</strong>\u2014 Main Event\u00a0Concert (TBD: Dinner to overlap / arrive late)</li><li dir=\"ltr\"><strong>11:45 PM\u00a0</strong>\u2014 Fireworks Finale over the Philadelphia Museum of Art &amp; Skyline</li></ul><br><br>Christina Aguilera, Jill Scott, The Roots,\u00a0Will Smith, DJ Jazzy Jeff,\u00a0 Seal, Wanda Sykes, State Property, Kathy Sledge, Infinity Song, and More<br><br><a href=\"https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/\" target=\"_blank\">https://july4thphilly.com/event/the-city-of-philadelphias-one-philly-unity-concert-for-america/</a>",
-    "startTime": "2026-07-04T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-05T00:00:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -218,6 +174,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-18T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-18T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -438,8 +405,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Pini Parma",
+      "subject": "Our favorite pieces of our summer sale"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "The summer trends I actually love wearing"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "TELL US EVERYTHING"
+    },
     {
       "sender": "Design Decor",
       "subject": "Mary jane, Thank You for Choosing Effortless Elegance"
@@ -463,22 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson-cmyk",
       "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (7798d3d)"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "From Sportsman Wool to Sodapop Seersucker"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 04 Jul 2026"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Considered Style. Exceptional Savings."
-    },
-    {
-      "sender": "Google",
-      "subject": "Security alert"
     }
   ],
   "items": [
@@ -488,17 +455,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-07-04",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f0e2a05ff5fafe",
-      "sender": "FORM BY TWO"
     },
     {
       "type": "class",
