@@ -405,8 +405,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #148"
+    },
     {
       "sender": "Pini Parma",
       "subject": "Our favorite pieces of our summer sale"
@@ -442,10 +446,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bake Time",
       "subject": "Dreaming of Atlantic Beach pie"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (7798d3d)"
     }
   ],
   "items": [
