@@ -449,8 +449,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Velvet Pear Subscription"
+    },
+    {
+      "sender": "return@amazon.com",
+      "subject": "Refund update for Levi's Womens Flynn Western...."
+    },
     {
       "sender": "Shameless Snacks",
       "subject": "Missed July 4th? Here\u2019s one more chance \ud83d\udd5c"
@@ -482,14 +490,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Keep the Holiday Weekend Going With Up to 50% Off"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 05 Jul 2026"
     }
   ],
   "items": [
@@ -506,6 +506,13 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f3285b1155be5f",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Refund update for Levi's Womens Flynn Western",
+      "date": "2026-07-05",
+      "id": "19f33b9dcc843d23",
+      "sender": "return@amazon.com"
     },
     {
       "type": "class",
