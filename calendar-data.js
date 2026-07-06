@@ -1,82 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-07-06T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "Newark Airport Parking",
-    "location": "Newark Liberty International Airport, Terminal C Parking",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMRNmoNvJRjQ1MxhbBOAaKaDlk6cfIQiYU\n",
-    "startTime": "2026-07-06T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T09:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\u2708\ufe0f UA122 EWR \u2192 LHR",
-    "location": "Newark (EWR)",
-    "description": "Mon, Jul 6\n9:45 AM EDT\n[Flight] EWR to LHR\nUnited Airlines 122, Terminal TERMINAL C, Gate\n9:35 PM BST\nArrive London (LHR)\nTerminal TERMINAL 2, Gate",
-    "startTime": "2026-07-06T09:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T16:35:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\u2708\ufe0f UA122 EWR \u2192 LHR",
-    "location": "Newark (EWR)",
-    "description": "Mon, Jul 6\n9:45 AM EDT\n[Flight] EWR to LHR\nUnited Airlines 122, Terminal C, Gate\n9:35 PM BST\nArrive London (LHR)\nTerminal 2, Gate",
-    "startTime": "2026-07-06T09:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T16:35:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "Flight to London (UA 122)",
-    "location": "Newark EWR",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNd9y1Hix1F8zH3v4RMdNdPtWJXiJ6378c\n",
-    "startTime": "2026-07-06T09:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T16:35:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: Wilde Aparthotels London Paddington",
-    "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
-    "description": "3:00 PM BST\n[Lodging] Arrive Wilde Aparthotels London Paddington\nCheck-In: 3:00pm\n4 North Wharf Road, London, W2 1NW, United Kingdom\n44-203-6872480",
-    "startTime": "2026-07-06T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: HO HO WILDE APARTHOTELS LONDON P",
-    "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
-    "description": "3:00 PM BST\n[Lodging] Arrive HO HO WILDE APARTHOTELS LONDON P\nCheck-In: 3:00pm\n4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom\n44-203-6872480",
-    "startTime": "2026-07-06T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-06T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "\u2708\ufe0f UA905 LHR \u2192 EWR",
     "location": "London (LHR)",
     "description": "Thu, Jul 9\n9:30 AM BST\n[Flight] LHR to EWR\nUnited Airlines 905, Terminal 2, Gate\n12:30 PM EDT\nArrive Newark (EWR)\nTerminal B, Gate",
@@ -204,6 +127,28 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-07-18T10:00:00-04:00",
     "startDate": "",
     "endTime": "2026-07-18T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-07-20T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-20T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "Decide: cancel or renew gym membership",
+    "location": "",
+    "description": "3-month membership expires around July 27, 2026. Decide this week whether to renew or cancel.",
+    "startTime": "2026-07-20T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-20T09:30:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -427,47 +372,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 29,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 06 Jul 2026"
+      "sender": "Link",
+      "subject": "Review your June account activity"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 4 new invitations"
+      "sender": "National Building Museum",
+      "subject": "Experience THE PLAYGROUND After Hours"
     },
     {
-      "sender": "Shop",
-      "subject": "Your Almina Concept  cart? Saved \u2705 over on Shop"
+      "sender": "Holafly",
+      "subject": "Your Holafly receipt is now available"
     },
     {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Velvet Pear Subscription"
+      "sender": "Design Decor Knoxville",
+      "subject": "What do you think of your purchase from Design Decor Knoxville?"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "Missed July 4th? Here\u2019s one more chance \ud83d\udd5c"
+      "sender": "BOSS",
+      "subject": "Show Your US Team Pride With BOSS"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "Final Hours | 20% Off Site Wide"
+      "sender": "La Felicit\u00e0",
+      "subject": "BIGFEST #4"
     },
     {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at Roots Ocean Prime is confirmed"
+      "sender": "us.bape.com",
+      "subject": "BAPE\u00ae WORLD: EXPLORE FALL / WINTER 2026"
     },
     {
-      "sender": "COS",
-      "subject": "New from summer"
+      "sender": "Reformation",
+      "subject": "TIME TO SERVE"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Sale Extended: 25% Off Sitewide This 4th of July Weekend"
+      "sender": "House of Beauty by Fran\u00e7ois",
+      "subject": "3D Nano Brows, Eyeliner, Lip Blush for as Low as $350, You Don't Want to Miss This!"
     }
   ],
   "items": [
