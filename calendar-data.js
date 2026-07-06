@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Roots Ocean Prime",
-    "location": "98 University Pl, Princeton, NJ 08540, USA",
-    "description": "",
-    "startTime": "2026-07-05T18:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-05T20:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at Roots Ocean Prime",
-    "location": "Roots Ocean Prime, 98 University Place, Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOjzW9r2ApympyIVCioYcqDxOxs53GB1cI\n",
-    "startTime": "2026-07-05T18:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-05T19:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Roots Ocean Prime",
-    "location": "98 University Pl, Princeton, NJ 08540, USA",
-    "description": "",
-    "startTime": "2026-07-05T18:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-05T20:00:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -75,6 +42,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "Flight to London (UA 122)",
+    "location": "Newark EWR",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNd9y1Hix1F8zH3v4RMdNdPtWJXiJ6378c\n",
+    "startTime": "2026-07-06T09:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-06T16:35:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   },
   {
     "summary": "\ud83c\udfe8 Check-in: Wilde Aparthotels London Paddington",
@@ -449,8 +427,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Newark"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Thanks for your purchase with United"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -482,14 +468,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Almina Concept",
       "subject": "Final Hours | 20% Off Site Wide"
-    },
-    {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at Roots Ocean Prime is confirmed"
-    },
-    {
-      "sender": "COS",
-      "subject": "New from summer"
     }
   ],
   "items": [
@@ -499,13 +477,6 @@ window.EMAIL_DATA = {
       "date": "2026-06-25",
       "id": "19efd361978a0a05",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Victoria's Secret Pink Wear...\"",
-      "date": "2026-07-05",
-      "id": "19f3285b1155be5f",
-      "sender": "Amazon.com"
     },
     {
       "type": "return",
