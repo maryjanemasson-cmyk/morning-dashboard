@@ -449,19 +449,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your July 6 flight"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "HEAD START"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 4 new invitations"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Your Almina Concept  cart? Saved \u2705 over on Shop"
     },
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Velvet Pear Subscription"
-    },
-    {
-      "sender": "return@amazon.com",
-      "subject": "Refund update for Levi's Womens Flynn Western...."
     },
     {
       "sender": "Shameless Snacks",
@@ -478,18 +490,6 @@ window.EMAIL_DATA = {
     {
       "sender": "COS",
       "subject": "New from summer"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Sale Extended: 25% Off Sitewide This 4th of July Weekend"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Sunset Rayon Western"
-    },
-    {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 72.251.219.89"
     }
   ],
   "items": [
