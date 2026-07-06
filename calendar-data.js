@@ -427,27 +427,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Newark"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Thanks for your purchase with United"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 06 Jul 2026"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "HEAD START"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
     },
     {
       "sender": "LinkedIn",
@@ -468,6 +456,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Almina Concept",
       "subject": "Final Hours | 20% Off Site Wide"
+    },
+    {
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at Roots Ocean Prime is confirmed"
+    },
+    {
+      "sender": "COS",
+      "subject": "New from summer"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Sale Extended: 25% Off Sitewide This 4th of July Weekend"
     }
   ],
   "items": [
