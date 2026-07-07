@@ -372,11 +372,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "AKC Reunite",
-      "subject": "Time to check Sophie's records and take advantage of special savings!"
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Get our NEW summer candle before everyone else\u2600\ufe0f"
+    },
+    {
+      "sender": "J. Crew Credit Services",
+      "subject": "Mary jane, earn $20 in J.Crew Passport rewards with this offer"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Tide 4-in-1 Ultra Oxi PODS...\""
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
+      "sender": "COS",
+      "subject": "A new coordination"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\u26a1 Take $200 Off Your Next Trip Today"
     },
     {
       "sender": "Unroll.Me",
@@ -385,34 +413,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Why Everybody is Leaving Spotify | iTalks with Max \ud83c\udf4f in Apple Hacks"
-    },
-    {
-      "sender": "The New York Times",
-      "subject": "Your guide to New York Times Cooking."
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Experience THE PLAYGROUND After Hours"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "Your Holafly receipt is now available"
-    },
-    {
-      "sender": "Design Decor Knoxville",
-      "subject": "What do you think of your purchase from Design Decor Knoxville?"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Show Your US Team Pride With BOSS"
-    },
-    {
-      "sender": "La Felicit\u00e0",
-      "subject": "BIGFEST #4"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "BAPE\u00ae WORLD: EXPLORE FALL / WINTER 2026"
     }
   ],
   "items": [
