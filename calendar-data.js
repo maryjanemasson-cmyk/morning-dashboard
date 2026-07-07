@@ -152,6 +152,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "AACR Drug Discovery in Boston",
+    "location": "Microsoft Teams Meeting",
+    "description": "\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/323636501049723?p=41T9dS7oS5oqnbnjek\nMeeting ID: 323 636 501 049 723\nPasscode: j95Yp3GR\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2Q3YTIwNTgtZDQxYi00YjU1LWFhMzktMWQ0MTI2MDJiM2U3%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,827395510#<tel:+12134588494,,827395510> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=827395510>\nPhone conference ID: 827 395 510#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 125 039 305 4\nMore info<https://www.webex.com/msteams?confid=1250393054&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Y2Q3YTIwNTgtZDQxYi00YjU1LWFhMzktMWQ0MTI2MDJiM2U3@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
+    "startTime": "2026-07-21T07:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-24T07:25:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "\u2708\ufe0f UA375 EWR \u2192 BOS",
+    "location": "Newark (EWR)",
+    "description": "Tue, Jul 21\n10:00 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 375, Terminal TERMINAL A, Gate\n11:16 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-07-21T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-21T11:16:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Kimpton Marlowe by IHG",
+    "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
+    "description": "3:00 PM EDT\n[Lodging] Arrive Kimpton Marlowe by IHG\nCheck-In: 3:00pm\n25 Edwin H. Land Blvd, Cambridge, MA, 02141\n+1 617 8688000",
+    "startTime": "2026-07-21T15:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-21T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -372,47 +405,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Schoolhouse",
+      "subject": "Summer's Best In Show"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"DOVE MEN + CARE...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 \"Tide Odor Defense + Oxi...\""
+    },
+    {
+      "sender": "Holafly",
+      "subject": "Mary! Today is the last day to use your discount for the United Kingdom"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Fresh from the studio \ud83c\udfa8"
+    },
+    {
+      "sender": "PRISMS Finance",
+      "subject": "July Invoice - Due August 1, 2026"
+    },
+    {
+      "sender": "COS",
+      "subject": "Take another look"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "The Shopping List: Mid-Summer Sales Edition"
+    },
     {
       "sender": "PayPal",
       "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
     },
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Get our NEW summer candle before everyone else\u2600\ufe0f"
-    },
-    {
       "sender": "J. Crew Credit Services",
       "subject": "Mary jane, earn $20 in J.Crew Passport rewards with this offer"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Tide 4-in-1 Ultra Oxi PODS...\""
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "COS",
-      "subject": "A new coordination"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\u26a1 Take $200 Off Your Next Trip Today"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Why Everybody is Leaving Spotify | iTalks with Max \ud83c\udf4f in Apple Hacks"
     }
   ],
   "items": [
