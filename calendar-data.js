@@ -372,23 +372,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Sephora",
-      "subject": "You have to act fast to grab this Dolce Glow pick"
+      "sender": "AKC Reunite",
+      "subject": "Time to check Sophie's records and take advantage of special savings!"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Last Call: 25% Off Ends at Midnight"
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
-      "sender": "Link",
-      "subject": "Review your June account activity"
+      "sender": "Medium Daily Digest",
+      "subject": "Why Everybody is Leaving Spotify | iTalks with Max \ud83c\udf4f in Apple Hacks"
     },
     {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
+      "sender": "The New York Times",
+      "subject": "Your guide to New York Times Cooking."
     },
     {
       "sender": "National Building Museum",
