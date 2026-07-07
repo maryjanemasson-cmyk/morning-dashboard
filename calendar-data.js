@@ -372,8 +372,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "Sephora",
+      "subject": "You have to act fast to grab this Dolce Glow pick"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Last Call: 25% Off Ends at Midnight"
+    },
     {
       "sender": "Link",
       "subject": "Review your June account activity"
@@ -405,14 +413,6 @@ window.EMAIL_DATA = {
     {
       "sender": "us.bape.com",
       "subject": "BAPE\u00ae WORLD: EXPLORE FALL / WINTER 2026"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "TIME TO SERVE"
-    },
-    {
-      "sender": "House of Beauty by Fran\u00e7ois",
-      "subject": "3D Nano Brows, Eyeliner, Lip Blush for as Low as $350, You Don't Want to Miss This!"
     }
   ],
   "items": [
