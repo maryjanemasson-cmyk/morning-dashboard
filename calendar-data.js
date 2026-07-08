@@ -265,22 +265,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA122 EWR to LHR",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-07-06T13:45:00+00:00",
-        "end": "2026-07-06T20:35:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: HO HO WILDE APARTHOTELS LONDON P",
-        "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
-        "description": "",
-        "start": "2026-07-06T14:00:00+00:00",
-        "end": "2026-07-06T15:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "UA905 LHR to EWR",
         "location": "London (LHR)",
         "description": "",
@@ -405,8 +389,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Julia Marcum",
+      "subject": "\ud83e\udd0e What you loved most this year"
+    },
+    {
+      "sender": "COS Customer Service",
+      "subject": "Your order has arrived"
+    },
+    {
+      "sender": "Bloomingdale's Loyallist",
+      "subject": "Your July Monthly Loyallist Rewards Statement"
+    },
+    {
+      "sender": "American Express",
+      "subject": "50% off Plan It\u00ae fees through 8/1/2026"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS: Get Ready for Your Package!"
+    },
     {
       "sender": "Schoolhouse",
       "subject": "Summer's Best In Show"
@@ -426,26 +430,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Fresh from the studio \ud83c\udfa8"
-    },
-    {
-      "sender": "PRISMS Finance",
-      "subject": "July Invoice - Due August 1, 2026"
-    },
-    {
-      "sender": "COS",
-      "subject": "Take another look"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "The Shopping List: Mid-Summer Sales Edition"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
-    },
-    {
-      "sender": "J. Crew Credit Services",
-      "subject": "Mary jane, earn $20 in J.Crew Passport rewards with this offer"
     }
   ],
   "items": [
