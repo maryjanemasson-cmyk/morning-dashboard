@@ -389,47 +389,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 36,
   "threads": [
     {
-      "sender": "Zenoti",
-      "subject": "Reminder for your appointment on Jul 10, 2026 at 12:30 PM"
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "Our summer shoes collection"
+      "sender": "United News & Deals",
+      "subject": "Upgrade to premium cabin on your upcoming flight"
     },
     {
-      "sender": "American Express",
-      "subject": "Merchant credit/refund was issued to your account"
+      "sender": "Holafly",
+      "subject": "Thank you for your purchase! Welcome to Holafly\u2019s rewards program."
     },
     {
-      "sender": "Reformation",
-      "subject": "WHEN ARE WE NOT"
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Five Things I Would Change About My Wedding (And Truly Nothing Else)"
     },
     {
-      "sender": "College Hunks Hauling Junk and Moving",
-      "subject": "Final Chance to Save $25 On Your Independence Day Cleanup"
+      "sender": "Big Mamma",
+      "subject": "Vous avez chaud ? On offre la glace"
     },
     {
-      "sender": "us.bape.com",
-      "subject": "FALL / WINTER 2026 TEES"
+      "sender": "2Modern Furniture & Lighting",
+      "subject": "2Modern Shipping Confirmation for Order #328917"
     },
     {
-      "sender": "COS",
-      "subject": "Sale: new summer pieces added"
+      "sender": "BOSS",
+      "subject": "Classic Colors. Modern Tennis Style."
     },
     {
-      "sender": "Reformation",
-      "subject": "PARTIAL SHIPMENT"
+      "sender": "PayPal",
+      "subject": "Big buys meet smaller payments with Pay Monthly"
     },
     {
-      "sender": "The New York Times",
-      "subject": "Your guide to New York Times Wirecutter."
+      "sender": "The Frankie Shop",
+      "subject": "A shipment from order #596681 is on the way"
     },
     {
-      "sender": "Design Decor",
-      "subject": "Not Your Average Fall Decor"
+      "sender": "Movoto",
+      "subject": "Track your home. Explore what's next"
     }
   ],
   "items": [
@@ -453,6 +453,13 @@ window.EMAIL_DATA = {
       "date": "2026-07-08",
       "id": "19f41da569999087",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #533346670524",
+      "date": "2026-07-09",
+      "id": "19f42f2d2845e5fe",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
