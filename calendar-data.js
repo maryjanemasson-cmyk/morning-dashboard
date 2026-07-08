@@ -389,47 +389,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 28,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Footlogics Full-Length...\""
+      "sender": "Zenoti",
+      "subject": "Reminder for your appointment on Jul 10, 2026 at 12:30 PM"
     },
     {
-      "sender": "Hotels.com",
-      "subject": "Last days to get up to 40% off \u23f3"
+      "sender": "Pini Parma",
+      "subject": "Our summer shoes collection"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "New In: Gina Has Landed!"
+      "sender": "American Express",
+      "subject": "Merchant credit/refund was issued to your account"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 7/8 is ready to view"
+      "sender": "Reformation",
+      "subject": "WHEN ARE WE NOT"
     },
     {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 135.136.16.19"
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "Final Chance to Save $25 On Your Independence Day Cleanup"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "us.bape.com",
+      "subject": "FALL / WINTER 2026 TEES"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "This is Feynman\u2019s Thinking Habit. It Made Him a Genius | Thomas Oppong"
+      "sender": "COS",
+      "subject": "Sale: new summer pieces added"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "Tethered Up"
+      "sender": "Reformation",
+      "subject": "PARTIAL SHIPMENT"
     },
     {
-      "sender": "PayPal",
-      "subject": "Apple Services: $21.31\u00a0USD"
+      "sender": "The New York Times",
+      "subject": "Your guide to New York Times Wirecutter."
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Design Decor",
+      "subject": "Not Your Average Fall Decor"
     }
   ],
   "items": [
