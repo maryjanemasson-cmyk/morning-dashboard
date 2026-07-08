@@ -389,15 +389,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 36,
+  "unreadCount": 32,
   "threads": [
+    {
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your July 9 flight"
+    },
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
-    },
-    {
-      "sender": "United News & Deals",
-      "subject": "Upgrade to premium cabin on your upcoming flight"
     },
     {
       "sender": "Holafly",
@@ -428,8 +428,8 @@ window.EMAIL_DATA = {
       "subject": "A shipment from order #596681 is on the way"
     },
     {
-      "sender": "Movoto",
-      "subject": "Track your home. Explore what's next"
+      "sender": "Zenoti",
+      "subject": "Reminder for your appointment on Jul 10, 2026 at 12:30 PM"
     }
   ],
   "items": [
@@ -446,13 +446,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Footlogics Full-Length...\"",
-      "date": "2026-07-08",
-      "id": "19f41da569999087",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
