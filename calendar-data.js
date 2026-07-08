@@ -22,17 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "2"
   },
   {
-    "summary": "\u2708\ufe0f UA905 LHR \u2192 EWR",
-    "location": "London (LHR)",
-    "description": "Fri, Jul 10\n9:30 AM BST\n[Flight] LHR to EWR\nUnited Airlines 905, Terminal TERMINAL 2, Gate\n12:30 PM EDT\nArrive Newark (EWR)\nTerminal TERMINAL B, Gate",
-    "startTime": "2026-07-10T04:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-10T12:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "\ud83c\udfe8 Check-out: Wilde Aparthotels London Paddington",
     "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
     "description": "11:00 AM BST\n[Lodging] Depart Wilde Aparthotels London Paddington\nCheck-Out: 11:00am\n4 North Wharf Road, London, W2 1NW, United Kingdom\n44-203-6872480",
@@ -53,6 +42,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "10"
+  },
+  {
+    "summary": "Mary Jane Hinrichs - 30-Minute Consultation - Eleanor Dath, Direct Travel",
+    "location": "",
+    "description": "This meeting was scheduled from the bookings page of Eleanor Dath.\n\nUse the following link to reschedule or cancel this meeting:\nManage meeting<https://outlook.office.com/bookwithme/user/5670952ed8714c8dab3513f73e7af98b@dt.com/booking/qKLjCzLz1ka1uYacAfE9nQ2?anonymous>\n-----Note added from booking page on Wednesday, July 8, 2026 3:04 AM-----\nLooking forward to discussing our intended trip to Colombia. Best, Mary Jane\n\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/232410643942514?p=dVuq8VDYmVdHZKEf2N\nMeeting ID: 232 410 643 942 514\nPasscode: iD3Nd2nE\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjA2YTg2ZGMtOWM5OC00YjA2LWE3N2EtMmM0ZjY3OWEzM2Mx%40thread.v2/0?context=%7b%22Tid%22%3a%221d8e03c1-e21d-46bd-89fa-fb73260b1bc8%22%2c%22Oid%22%3a%220a3c023f-a1f8-4f62-b16a-ec3f7f280867%22%7d>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=0a3c023f-a1f8-4f62-b16a-ec3f7f280867&tenantId=1d8e03c1-e21d-46bd-89fa-fb73260b1bc8&threadId=19_meeting_MjA2YTg2ZGMtOWM5OC00YjA2LWE3N2EtMmM0ZjY3OWEzM2Mx@thread.v2&messageId=0&language=en-US>\n________________________________________________________________________________\n",
+    "startTime": "2026-07-10T10:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-10T11:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   },
   {
     "summary": "Nathaniel \u2014 Math",
@@ -389,47 +389,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 25,
   "threads": [
     {
-      "sender": "Julia Marcum",
-      "subject": "\ud83e\udd0e What you loved most this year"
-    },
-    {
-      "sender": "COS Customer Service",
-      "subject": "Your order has arrived"
-    },
-    {
-      "sender": "Bloomingdale's Loyallist",
-      "subject": "Your July Monthly Loyallist Rewards Statement"
-    },
-    {
-      "sender": "American Express",
-      "subject": "50% off Plan It\u00ae fees through 8/1/2026"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS: Get Ready for Your Package!"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Summer's Best In Show"
-    },
-    {
       "sender": "Amazon.com",
-      "subject": "Delivered: \"DOVE MEN + CARE...\""
+      "subject": "Shipped: \"Footlogics Full-Length...\""
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 \"Tide Odor Defense + Oxi...\""
+      "sender": "Hotels.com",
+      "subject": "Last days to get up to 40% off \u23f3"
     },
     {
-      "sender": "Holafly",
-      "subject": "Mary! Today is the last day to use your discount for the United Kingdom"
+      "sender": "LOOK OPTIC",
+      "subject": "New In: Gina Has Landed!"
     },
     {
-      "sender": "Etsy",
-      "subject": "Fresh from the studio \ud83c\udfa8"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 7/8 is ready to view"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 135.136.16.19"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "This is Feynman\u2019s Thinking Habit. It Made Him a Genius | Thomas Oppong"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Tethered Up"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Apple Services: $21.31\u00a0USD"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
@@ -446,6 +446,13 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Footlogics Full-Length...\"",
+      "date": "2026-07-08",
+      "id": "19f41da569999087",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
