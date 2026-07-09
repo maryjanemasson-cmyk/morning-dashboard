@@ -389,15 +389,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 39,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles and save on your car rental for your Boston trip"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to EGOR KURBATOV"
+      "sender": "Element Brooklyn",
+      "subject": "Your Order #2272941 has been delivered \ud83c\udf31"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
     },
     {
       "sender": "Design Decor",
@@ -412,10 +416,6 @@ window.EMAIL_DATA = {
       "subject": "What I Know Now That I Wish She'd Known Then"
     },
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Thank you from Tamara"
-    },
-    {
       "sender": "Reformation",
       "subject": "STRIKING"
     },
@@ -424,12 +424,12 @@ window.EMAIL_DATA = {
       "subject": "One more chance to tell us what you think"
     },
     {
-      "sender": "The Frankie Shop",
-      "subject": "A shipment from order #596681 has been delivered"
+      "sender": "Hotels.com",
+      "subject": "5-star hotels you\u2019ll love, for less"
     },
     {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 874120191874"
+      "subject": "Your shipment is out for delivery today 874120191874"
     }
   ],
   "items": [
