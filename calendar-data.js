@@ -389,8 +389,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 34,
   "threads": [
+    {
+      "sender": "Bradford Carpenter",
+      "subject": "Fwd: Summer Letter from the Student Life Office"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "A guide to Early Action and application rounds at WashU"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 8 new invitations"
+    },
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your July 9 flight"
@@ -418,18 +430,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Classic Colors. Modern Tennis Style."
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Big buys meet smaller payments with Pay Monthly"
-    },
-    {
-      "sender": "The Frankie Shop",
-      "subject": "A shipment from order #596681 is on the way"
-    },
-    {
-      "sender": "Zenoti",
-      "subject": "Reminder for your appointment on Jul 10, 2026 at 12:30 PM"
     }
   ],
   "items": [
