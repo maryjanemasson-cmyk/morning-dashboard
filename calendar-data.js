@@ -389,63 +389,63 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 39,
   "threads": [
     {
-      "sender": "Bradford Carpenter",
-      "subject": "Fwd: Summer Letter from the Student Life Office"
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
-      "sender": "Washington University in St. Louis",
-      "subject": "A guide to Early Action and application rounds at WashU"
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to EGOR KURBATOV"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 8 new invitations"
+      "sender": "Design Decor",
+      "subject": "Don't reach for another plastic pumpkin..."
     },
     {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your July 9 flight"
+      "sender": "Etsy",
+      "subject": "Calling discerning shoppers \ud83d\udce3"
     },
     {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "Thank you for your purchase! Welcome to Holafly\u2019s rewards program."
+      "sender": "Emily Ley",
+      "subject": "What I Know Now That I Wish She'd Known Then"
     },
     {
       "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Five Things I Would Change About My Wedding (And Truly Nothing Else)"
+      "subject": "Thank you from Tamara"
     },
     {
-      "sender": "Big Mamma",
-      "subject": "Vous avez chaud ? On offre la glace"
+      "sender": "Reformation",
+      "subject": "STRIKING"
     },
     {
-      "sender": "2Modern Furniture & Lighting",
-      "subject": "2Modern Shipping Confirmation for Order #328917"
+      "sender": "IHG Hotels & Resorts",
+      "subject": "One more chance to tell us what you think"
     },
     {
-      "sender": "BOSS",
-      "subject": "Classic Colors. Modern Tennis Style."
+      "sender": "The Frankie Shop",
+      "subject": "A shipment from order #596681 has been delivered"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 874120191874"
     }
   ],
   "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Refund ineligible for Levi's Womens Flynn Western",
-      "date": "2026-06-25",
-      "id": "19efd361978a0a05",
-      "sender": "return@amazon.com"
-    },
     {
       "type": "return",
       "title": "Mail Amazon return: Refund update for Levi's Womens Flynn Western",
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #874120191874",
+      "date": "2026-07-09",
+      "id": "19f44812150d263a",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "delivery",
