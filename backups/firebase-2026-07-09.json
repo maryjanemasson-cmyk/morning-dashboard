@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-07-09T16:07:31",
+    "captured_at": "2026-07-09T13:03:12",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -30,13 +30,2036 @@
   "wardrobeOutfitLinks": null,
   "outfits": null,
   "recipes": null,
-  "mealPlan": null,
-  "mealGroceries": null,
+  "mealPlan": {
+    "2026-05-17": {
+      "breakfast": "protein oats",
+      "dinner": "-Or06AmKuA31e7ojFkqv",
+      "lunch": "kennys steak meal"
+    },
+    "2026-05-18": {
+      "breakfast": "protein oats",
+      "dinner": "-Or06AmKuA31e7ojFkqv",
+      "lunch": "kennys meals"
+    },
+    "2026-05-21": {
+      "dinner": "-Or0IIr7YOPnaKOc49OZ"
+    },
+    "2026-05-22": {
+      "dinner": "-Or0J32IuUfG62IeNjQj"
+    },
+    "2026-05-23": {
+      "dinner": "-Or0BDv7UBXo2p36NCyz"
+    },
+    "2026-05-24": {
+      "breakfast": "-Or0FPrK0TI-GGzjAIlL"
+    }
+  },
+  "mealGroceries": [
+    {
+      "done": false,
+      "text": "Milk"
+    },
+    {
+      "done": false,
+      "text": "Half and half"
+    },
+    {
+      "done": false,
+      "text": "Tomatillos"
+    },
+    {
+      "done": false,
+      "text": "Pork shoulder"
+    },
+    {
+      "done": false,
+      "text": "Jalapeño 2"
+    },
+    {
+      "done": false,
+      "text": "Poblano peppers 6"
+    },
+    {
+      "done": false,
+      "text": "Cilantro"
+    },
+    {
+      "done": false,
+      "text": "Sweet onion"
+    },
+    {
+      "done": false,
+      "text": "Chicken stock"
+    },
+    {
+      "done": false,
+      "text": "4 (6 ounce) salmon filets, cut into bite-size chunks"
+    },
+    {
+      "done": false,
+      "text": "8 ounces dried udon noodles"
+    },
+    {
+      "done": false,
+      "text": "Jessie and bens fries"
+    }
+  ],
   "groceries": null,
-  "weekendPlan": null,
-  "customWatchlist": null,
-  "watchlist": null,
-  "chores": null,
-  "todos": null,
-  "health": null
+  "weekendPlan": {
+    "2026-05-09": [
+      {
+        "done": true,
+        "text": "Drop off / pick up dry cleaning — Rocky Hill Dry Cleaners (closed Sun)"
+      },
+      {
+        "done": true,
+        "text": "Buy house plant + planter plants — Blooms of Bellemead (further out, closed Sun)"
+      },
+      {
+        "done": true,
+        "text": "Pick up prescriptions — Walgreens, N. Harrison St (same area as Nathaniel's math — combine)"
+      },
+      {
+        "done": false,
+        "text": "Pack for Cambridge"
+      },
+      {
+        "done": false,
+        "text": "Meal prep for the week"
+      },
+      {
+        "done": false,
+        "text": "Call Mom"
+      },
+      {
+        "done": false,
+        "text": "Water plants"
+      },
+      {
+        "done": false,
+        "text": "Plant plants"
+      },
+      {
+        "done": false,
+        "text": "Manicure, eyebrows"
+      },
+      {
+        "done": false,
+        "text": "🚗 Leave for dinner — Paladar, King of Prussia PA — by 4:00 PM (~1 hr drive)"
+      },
+      {
+        "done": false,
+        "text": "🍽️ Dinner @ Paladar Latin Kitchen & Rum Bar — 5:00–7:00 PM, KoP PA"
+      }
+    ],
+    "2026-05-10": [
+      {
+        "done": true,
+        "text": "8:30 AM — Leave for OTF"
+      },
+      {
+        "done": true,
+        "text": "9:00 AM — OTF class (1 hr)"
+      },
+      {
+        "done": true,
+        "text": "10:00 AM — Drive home"
+      },
+      {
+        "done": true,
+        "text": "10:30 AM — Shower + breakfast"
+      },
+      {
+        "done": false,
+        "text": "11:00 AM — Eyebrow care + book Pilates/OTF for week of May 17"
+      },
+      {
+        "done": true,
+        "text": "11:30 AM — Lunch"
+      },
+      {
+        "done": false,
+        "text": "12:00 PM — Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "text": "12:30 PM — Pack for Boston + lay out tomorrow’s travel outfit"
+      },
+      {
+        "done": false,
+        "text": "2:30 PM — Organize closet"
+      },
+      {
+        "done": true,
+        "text": "4:00 PM — Water plants + dog poop pickup"
+      },
+      {
+        "done": false,
+        "text": "Evening — Light dinner, charge devices, confirm Uber, 4:30 AM alarm, in bed by 9:30"
+      },
+      {
+        "done": true,
+        "text": "Online check-in for UA408 (~6:40 AM, opens 24 hr pre-flight)"
+      },
+      {
+        "done": true,
+        "text": "Confirm Uber / car to EWR for Mon 4:30 AM"
+      },
+      {
+        "done": true,
+        "text": "Set Monday 4:30 AM alarm"
+      },
+      {
+        "done": true,
+        "text": "Hotel reminder: Royal Sonesta Boston, 40 Edwin H. Land Blvd"
+      },
+      {
+        "done": true,
+        "text": "Call Mom (1d overdue)"
+      }
+    ],
+    "2026-05-16": [
+      {
+        "done": true,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      },
+      {
+        "done": true,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      },
+      {
+        "done": true,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": true,
+        "source": "todo",
+        "text": "Buy house plant and planter plants"
+      }
+    ],
+    "2026-05-17": [
+      {
+        "done": true,
+        "source": "gmail",
+        "text": "Amazon returns (6 items to mail)"
+      },
+      {
+        "done": true,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "manual",
+        "text": "make cookies and dinner"
+      },
+      {
+        "done": true,
+        "source": "manual",
+        "text": "plant flowers and deer spray"
+      },
+      {
+        "done": true,
+        "source": "todo",
+        "text": "Meal prep"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": true,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      }
+    ],
+    "2026-05-24": [
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "NOLS application"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "find upholstery cleaner and power washer"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      }
+    ],
+    "2026-05-30": [
+      {
+        "done": false,
+        "source": "gmail",
+        "text": "Amazon returns (16 items to mail)"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Meal prep"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "electrician"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "NOLS application"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      }
+    ],
+    "2026-05-31": [
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      }
+    ],
+    "2026-06-06": [
+      {
+        "done": false,
+        "source": "gmail",
+        "text": "Amazon returns (3 items to mail)"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      },
+      {
+        "done": true,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Meal prep"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "electrician"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "NOLS application"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Check on MAC"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Book DC trip"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Find clinical development training"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      }
+    ],
+    "2026-06-13": [
+      {
+        "done": false,
+        "source": "gmail",
+        "text": "Amazon returns (3 items to mail)"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "NOLS application"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Find clinical development training"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "💅 Pedicure"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "✨ Eyebrow care"
+      }
+    ],
+    "2026-06-20": [
+      {
+        "done": false,
+        "source": "gmail",
+        "text": "Mail Amazon return: CRZ YOGA Secretsculpt Butterlift"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "💅 Pedicure"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Find clinical development training"
+      }
+    ],
+    "2026-06-27": [
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Organize closet"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Change out pillows and flowers"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "house powerwash"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "finance dashboard"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Get Pressure Pros (Newtown, PA)"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Find clinical development training"
+      }
+    ],
+    "_seeded": {
+      "2026-05-16": true,
+      "2026-05-17": true,
+      "2026-05-23": true,
+      "2026-05-24": true,
+      "2026-05-30": true,
+      "2026-05-31": true,
+      "2026-06-06": true,
+      "2026-06-07": true,
+      "2026-06-13": true,
+      "2026-06-14": true,
+      "2026-06-20": true,
+      "2026-06-21": true,
+      "2026-06-27": true,
+      "2026-06-28": true
+    },
+    "_suppress": {
+      "2026-05-23": [
+        "🐶 pick up dog poop",
+        "🧘 book pilates & otf classes",
+        "🌻 weed the garden"
+      ],
+      "2026-06-13": [
+        "🧥 drop off dry cleaning",
+        "📞 call mom"
+      ],
+      "2026-06-27": [
+        "🧘 book pilates & otf classes",
+        "🧥 drop off dry cleaning",
+        "📞 call mom",
+        "🌱 water plants",
+        "🌻 weed the garden",
+        "💅 pedicure"
+      ]
+    }
+  },
+  "customWatchlist": [
+    {
+      "_custom": true,
+      "genre": "",
+      "id": "custom_1777773142486",
+      "rating": "",
+      "score": 0,
+      "title": "rogue heros",
+      "where": ""
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / War / History",
+      "id": "custom_1777773603426",
+      "rating": "7.7/10",
+      "score": 77,
+      "title": "SAS: Rogue Heroes",
+      "where": "BBC iPlayer"
+    },
+    {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1778178381398",
+      "rating": "6.1/10",
+      "score": 61,
+      "title": "The Four Seasons",
+      "where": "Netflix"
+    },
+    {
+      "_custom": true,
+      "genre": "Comedy / Horror",
+      "id": "custom_1778178402046",
+      "rating": "6.8/10",
+      "score": 68,
+      "title": "Widow's Bay",
+      "where": "Apple TV"
+    },
+    {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1778178468742",
+      "rating": "7.8/10",
+      "score": 78,
+      "title": "Shrinking",
+      "where": "Apple TV"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Crime",
+      "id": "custom_1778503143703",
+      "rating": "7.6/10",
+      "score": 76,
+      "title": "CSI: Miami",
+      "where": "CBS"
+    },
+    {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1778526028095",
+      "rating": "5.8/10",
+      "score": 58,
+      "title": "The Studio",
+      "where": "Apple TV"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Thriller / Espionage",
+      "id": "custom_1778692783445",
+      "rating": "8.2/10",
+      "score": 82,
+      "title": "Homeland",
+      "where": "Paramount+ with Showtime"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Romance / History",
+      "id": "custom_1778892202082",
+      "rating": "6.5/10",
+      "score": 65,
+      "title": "The Other Bennet Sister",
+      "where": "BBC iPlayer"
+    },
+    {
+      "_custom": true,
+      "genre": "Crime / Thriller",
+      "id": "custom_1778967226955",
+      "rating": "6.5/10",
+      "score": 65,
+      "title": "Legends",
+      "where": "Netflix"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Crime / Mystery",
+      "id": "custom_1779722860284",
+      "rating": "8.4/10",
+      "score": 84,
+      "title": "Broadchurch",
+      "where": "ITV1"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Romance",
+      "id": "custom_1779912115290",
+      "rating": "7.3/10",
+      "score": 73,
+      "title": "Off Campus",
+      "where": "Prime Video"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Thriller",
+      "id": "custom_1781088923661",
+      "rating": "7.4/10",
+      "score": 74,
+      "title": "Designated Survivor",
+      "where": "Netflix"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Crime / Mystery",
+      "id": "custom_1781121901077",
+      "rating": "7.9/10",
+      "score": 79,
+      "title": "The Closer",
+      "where": "TNT"
+    },
+    {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1781523617911",
+      "rating": "6.4/10",
+      "score": 64,
+      "title": "The Comeback",
+      "where": "HBO"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Comedy",
+      "id": "custom_1781523651096",
+      "rating": "5.7/10",
+      "score": 57,
+      "title": "DTF St. Louis",
+      "where": "HBO"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Comedy",
+      "id": "custom_1781523684477",
+      "rating": "6.6/10",
+      "score": 66,
+      "title": "Margo's Got Money Troubles",
+      "where": "Apple TV"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Medical",
+      "id": "custom_1781523702666",
+      "rating": "8.5/10",
+      "score": 85,
+      "title": "The Pitt",
+      "where": "HBO Max"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Crime / Legal",
+      "id": "custom_1781523712614",
+      "rating": "",
+      "score": 0,
+      "title": "Portobello",
+      "where": "HBO Max"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Crime / Thriller",
+      "id": "custom_1781984921123",
+      "rating": "6.3/10",
+      "score": 63,
+      "title": "Harlan Coben's I Will Find You",
+      "where": "Netflix"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Comedy / Thriller",
+      "id": "custom_1782005453755",
+      "rating": "7.2/10",
+      "score": 72,
+      "title": "Bodkin",
+      "where": "Netflix"
+    }
+  ],
+  "watchlist": {
+    "custom_1777773142486": true,
+    "custom_1778178459068": true,
+    "custom_1778503143703": true,
+    "custom_1778692783445": true,
+    "custom_1781523730323": true,
+    "dark-winds": true,
+    "f1-movie": true,
+    "lord-flies": true
+  },
+  "chores": {
+    "book-pilates": "2026-07-05",
+    "call-mom": "2026-07-05",
+    "dog-poop": "2026-07-06",
+    "dry-cleaning": "2026-06-27",
+    "eyebrows": "2026-06-28",
+    "pedicure": "2026-06-28",
+    "water-plants": "2026-07-06",
+    "weeding": "2026-07-05"
+  },
+  "todos": [
+    {
+      "done": false,
+      "text": "call vet"
+    },
+    {
+      "done": false,
+      "text": "Change out pillows and flowers"
+    },
+    {
+      "done": false,
+      "text": "Organize closet"
+    },
+    {
+      "done": false,
+      "text": "clean basement"
+    },
+    {
+      "done": false,
+      "text": "ceh closet door"
+    },
+    {
+      "done": false,
+      "text": "Add doorknobs to basement"
+    },
+    {
+      "done": false,
+      "text": "house powerwash"
+    },
+    {
+      "done": false,
+      "text": "finance dashboard"
+    },
+    {
+      "done": false,
+      "text": "Get Pressure Pros (Newtown, PA)"
+    },
+    {
+      "done": false,
+      "text": "Find clinical development training"
+    }
+  ],
+  "health": {
+    "days": {
+      "2026-05-05": {
+        "foods": [
+          {
+            "cal": 65,
+            "name": "Raspberries",
+            "protein": 1
+          },
+          {
+            "cal": 140,
+            "name": "Coconut yogurt",
+            "protein": 2
+          },
+          {
+            "cal": 160,
+            "name": "Pistachios",
+            "protein": 6
+          },
+          {
+            "cal": 200,
+            "name": "Peanut M&Ms",
+            "protein": 5
+          },
+          {
+            "cal": 855,
+            "name": "Wood fired oven pizza (3 slices)",
+            "protein": 33
+          },
+          {
+            "cal": 310,
+            "name": "Mai Tai",
+            "protein": 0
+          },
+          {
+            "cal": 320,
+            "name": "Chinese chicken salad with 2 tbsp dressing",
+            "protein": 28
+          }
+        ]
+      },
+      "2026-05-06": {
+        "foods": [
+          {
+            "cal": 65,
+            "name": "Raspberries",
+            "protein": 1
+          },
+          {
+            "cal": 140,
+            "name": "Coconut yogurt",
+            "protein": 2
+          },
+          {
+            "cal": 160,
+            "name": "Pistachios",
+            "protein": 6
+          },
+          {
+            "cal": 200,
+            "name": "Peanut M&Ms",
+            "protein": 5
+          },
+          {
+            "cal": 855,
+            "name": "Wood fired oven pizza (3 slices)",
+            "protein": 33
+          },
+          {
+            "cal": 310,
+            "name": "Mai Tai",
+            "protein": 0
+          },
+          {
+            "cal": 320,
+            "name": "Chinese chicken salad with 2 tbsp dressing",
+            "protein": 28
+          },
+          {
+            "cal": 130,
+            "name": "Fage Greek Yogurt",
+            "protein": 20
+          },
+          {
+            "cal": 50,
+            "name": "Strawberries (1 cup)",
+            "protein": 1
+          }
+        ]
+      },
+      "2026-05-07": {
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Barbell protein bar",
+            "protein": 20
+          },
+          {
+            "cal": 140,
+            "name": "Trader Joe's Fig Crackers",
+            "protein": 3
+          },
+          {
+            "cal": 155,
+            "name": "Cashews",
+            "protein": 5
+          },
+          {
+            "cal": 165,
+            "name": "Chocolates",
+            "protein": 2
+          }
+        ]
+      },
+      "2026-05-08": {
+        "exercise": [
+          {
+            "cal": 104,
+            "mins": 30,
+            "type": "Yoga / Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Barbell (assumed protein bar)",
+            "protein": 20
+          },
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 420,
+            "name": "Einstein bagel with cream cheese",
+            "protein": 16
+          },
+          {
+            "cal": 210,
+            "name": "Pork dumplings (5 small)",
+            "protein": 8
+          },
+          {
+            "cal": 150,
+            "name": "Beer",
+            "protein": 1
+          }
+        ]
+      },
+      "2026-05-09": {
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Barebells Protein Bar",
+            "protein": 20
+          },
+          {
+            "cal": 320,
+            "name": "Overnight oats with milk",
+            "protein": 12
+          },
+          {
+            "cal": 150,
+            "name": "Granola topping",
+            "protein": 4
+          },
+          {
+            "cal": 105,
+            "name": "Banana",
+            "protein": 1
+          },
+          {
+            "cal": 65,
+            "name": "Honey drizzle",
+            "protein": 0
+          },
+          {
+            "cal": 490,
+            "name": "Pork tacos",
+            "protein": 24
+          }
+        ]
+      },
+      "2026-05-10": {
+        "foods": [
+          {
+            "cal": 360,
+            "name": "Protein overnight oats",
+            "protein": 25
+          },
+          {
+            "cal": 485,
+            "name": "Eggs Benedict",
+            "protein": 16
+          }
+        ]
+      },
+      "2026-05-11": {
+        "foods": [
+          {
+            "cal": 155,
+            "name": "Two eggs (scrambled/fried)",
+            "protein": 13
+          },
+          {
+            "cal": 100,
+            "name": "Slice of toast with butter",
+            "protein": 3
+          }
+        ]
+      },
+      "2026-05-16": {
+        "exercise": [
+          {
+            "cal": 208,
+            "mins": 45,
+            "type": "Other"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 240,
+            "name": "Almond milk matcha latte",
+            "protein": 1
+          },
+          {
+            "cal": 200,
+            "name": "Barebells Protein Bar",
+            "protein": 20
+          },
+          {
+            "cal": 165,
+            "name": "Chicken breast",
+            "protein": 31
+          },
+          {
+            "cal": 135,
+            "name": "Cooked beans",
+            "protein": 8
+          },
+          {
+            "cal": 100,
+            "name": "Blue cheese",
+            "protein": 6
+          },
+          {
+            "cal": 290,
+            "name": "Ranch dressing",
+            "protein": 1
+          },
+          {
+            "cal": 180,
+            "name": "Popover",
+            "protein": 5
+          },
+          {
+            "cal": 285,
+            "name": "Arugula walnut salad",
+            "protein": 9
+          },
+          {
+            "cal": 185,
+            "name": "Strawberry margarita",
+            "protein": 0
+          },
+          {
+            "cal": 180,
+            "name": "Old Fashioned Cocktail",
+            "protein": 0
+          },
+          {
+            "cal": 100,
+            "name": "Butter",
+            "protein": 0
+          }
+        ],
+        "weight": 154
+      },
+      "2026-05-17": {
+        "exercise": [
+          {
+            "cal": 156,
+            "mins": 45,
+            "type": "Yoga / Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 255,
+            "name": "Kenny's protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kennys enchiladas",
+            "protein": 50
+          },
+          {
+            "cal": 78,
+            "name": "Shameless snacks",
+            "protein": 0
+          },
+          {
+            "cal": 415,
+            "name": "Salmon (8 oz)",
+            "protein": 50
+          },
+          {
+            "cal": 205,
+            "name": "Rice (cooked, 1 cup)",
+            "protein": 4
+          }
+        ],
+        "weight": 153.5
+      },
+      "2026-05-18": {
+        "exercise": [
+          {
+            "cal": 156,
+            "mins": 45,
+            "type": "Yoga / Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 350,
+            "name": "Protein oats",
+            "protein": 25,
+            "source": "planned"
+          },
+          {
+            "cal": 10,
+            "name": "Protein powder",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kenny's chicken mean",
+            "protein": 40
+          },
+          {
+            "cal": 70,
+            "name": "Shameless snacks",
+            "protein": 0
+          },
+          {
+            "cal": 105,
+            "name": "Banana",
+            "protein": 1
+          },
+          {
+            "cal": 205,
+            "name": "Rice (cooked, 1 cup)",
+            "protein": 4
+          },
+          {
+            "cal": 380,
+            "name": "Crispy Chilli Beef",
+            "protein": 22,
+            "source": "recipe"
+          }
+        ],
+        "steps": 1111
+      },
+      "2026-05-19": {
+        "foods": [
+          {
+            "cal": 240,
+            "name": "Oat milk latte",
+            "protein": 2
+          },
+          {
+            "cal": 150,
+            "name": "Chobani Vanilla Greek Yogurt 20g Protein",
+            "protein": 20
+          },
+          {
+            "cal": 130,
+            "name": "Chobani 20g Protein Yogurt Vanilla",
+            "protein": 20
+          },
+          {
+            "cal": 520,
+            "name": "Tatte chicken pita with extra chicken",
+            "protein": 38
+          },
+          {
+            "cal": 105,
+            "name": "Peanut M&Ms",
+            "protein": 3
+          },
+          {
+            "cal": 215,
+            "name": "White wine",
+            "protein": 0
+          },
+          {
+            "cal": 145,
+            "name": "Butter cake (1/4 slice)",
+            "protein": 2
+          },
+          {
+            "cal": 85,
+            "name": "Crab cake (1/8)",
+            "protein": 5
+          },
+          {
+            "cal": 80,
+            "name": "Steak (1 oz)",
+            "protein": 7
+          },
+          {
+            "cal": 85,
+            "name": "Half meatball",
+            "protein": 4
+          },
+          {
+            "cal": 10,
+            "name": "Pretzel stick",
+            "protein": 0
+          },
+          {
+            "cal": 165,
+            "name": "Half pretzel roll",
+            "protein": 5
+          }
+        ]
+      },
+      "2026-05-20": {
+        "foods": [
+          {
+            "cal": 550,
+            "name": "Tatte chicken pita with extra chicken",
+            "protein": 42
+          },
+          {
+            "cal": 620,
+            "name": "Lamb pita (Tatte)",
+            "protein": 28
+          },
+          {
+            "cal": 210,
+            "name": "Peanut M&Ms",
+            "protein": 5
+          },
+          {
+            "cal": 75,
+            "name": "Cherries",
+            "protein": 1
+          }
+        ]
+      },
+      "2026-05-21": {
+        "foods": [
+          {
+            "cal": 525,
+            "name": "Kenny's chicken meal",
+            "protein": 40
+          },
+          {
+            "cal": 75,
+            "name": "Cherries",
+            "protein": 1
+          },
+          {
+            "cal": 70,
+            "name": "shameless snacks",
+            "protein": 0
+          },
+          {
+            "cal": 110,
+            "name": "Lemonade protein powder",
+            "protein": 20
+          }
+        ]
+      },
+      "2026-05-22": {
+        "exercise": [
+          {
+            "cal": 156,
+            "mins": 45,
+            "type": "Yoga / Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 110,
+            "name": "Lemonade protein powder",
+            "protein": 20
+          }
+        ],
+        "weight": 154
+      },
+      "2026-05-23": {
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 255,
+            "name": "protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "kenny's chicken",
+            "protein": 40
+          },
+          {
+            "cal": 520,
+            "name": "Lamb chops (3)",
+            "protein": 52
+          },
+          {
+            "cal": 165,
+            "name": "Baked potato",
+            "protein": 4
+          },
+          {
+            "cal": 20,
+            "name": "Asparagus (6 spears)",
+            "protein": 2
+          },
+          {
+            "cal": 100,
+            "name": "Butter (1 tablespoon)",
+            "protein": 0
+          }
+        ]
+      },
+      "2026-05-24": {
+        "exercise": [
+          {
+            "cal": 463,
+            "mins": 50,
+            "type": "OTF / Orangetheory"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 250,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kennys chicken",
+            "protein": 40
+          },
+          {
+            "cal": 150,
+            "name": "Beer",
+            "protein": 1
+          },
+          {
+            "cal": 160,
+            "name": "Licorice, 2 long pieces",
+            "protein": 0
+          },
+          {
+            "cal": 175,
+            "name": "Margarita",
+            "protein": 0
+          }
+        ],
+        "weight": 153.4
+      },
+      "2026-05-25": {
+        "exercise": [
+          {
+            "cal": 312,
+            "mins": 45,
+            "type": "Lagree"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 350,
+            "name": "Protein oats",
+            "protein": 25
+          },
+          {
+            "cal": 370,
+            "name": "Pret a Manger Chicken Avocado Salad",
+            "protein": 32
+          },
+          {
+            "cal": 240,
+            "name": "Matcha latte",
+            "protein": 4
+          },
+          {
+            "cal": 180,
+            "name": "Bacon",
+            "protein": 12
+          },
+          {
+            "cal": 150,
+            "name": "Beer",
+            "protein": 1
+          },
+          {
+            "cal": 210,
+            "name": "3 eggs",
+            "protein": 18
+          },
+          {
+            "cal": 360,
+            "name": "Latkes",
+            "protein": 4
+          }
+        ],
+        "steps": 8500
+      },
+      "2026-05-26": {
+        "exercise": [
+          {
+            "cal": 182,
+            "mins": 45,
+            "type": "Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 250,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 140,
+            "name": "Water crackers",
+            "protein": 3
+          },
+          {
+            "cal": 525,
+            "name": "Kennys meals",
+            "protein": 40
+          }
+        ],
+        "weight": 154
+      },
+      "2026-05-27": {
+        "exercise": [
+          {
+            "cal": 182,
+            "mins": 45,
+            "type": "Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 1000,
+            "name": "All normal",
+            "protein": 80
+          },
+          {
+            "cal": 215,
+            "name": "Pork bun Chinese",
+            "protein": 8
+          },
+          {
+            "cal": 215,
+            "name": "Pork bun Chinese",
+            "protein": 8
+          },
+          {
+            "cal": 215,
+            "name": "Pork bun Chinese",
+            "protein": 8
+          }
+        ],
+        "weight": 154
+      },
+      "2026-05-28": {
+        "foods": [
+          {
+            "cal": 150,
+            "name": "Oatmeal",
+            "protein": 5
+          },
+          {
+            "cal": 130,
+            "name": "2% Greek yogurt plain",
+            "protein": 17
+          },
+          {
+            "cal": 55,
+            "name": "Jam",
+            "protein": 0
+          },
+          {
+            "cal": 522,
+            "name": "Kennys chicken",
+            "protein": 40
+          },
+          {
+            "cal": 70,
+            "name": "Lemonade protein",
+            "protein": 20
+          },
+          {
+            "cal": 80,
+            "name": "Shameless snack",
+            "protein": 0
+          },
+          {
+            "cal": 160,
+            "name": "Pistachios",
+            "protein": 6
+          },
+          {
+            "cal": 205,
+            "name": "Cooked rice",
+            "protein": 4
+          },
+          {
+            "cal": 320,
+            "name": "Pork stew",
+            "protein": 28
+          },
+          {
+            "cal": 160,
+            "name": "Whiskey sour",
+            "protein": 0
+          }
+        ],
+        "weight": 154
+      },
+      "2026-05-29": {
+        "foods": [
+          {
+            "cal": 300,
+            "name": "Protein oats",
+            "protein": 20
+          }
+        ],
+        "weight": 155
+      },
+      "2026-05-31": {
+        "foods": [
+          {
+            "cal": 165,
+            "name": "Nakd Bar",
+            "protein": 5
+          }
+        ]
+      },
+      "2026-06-04": {
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 300,
+            "name": "Einstein bagel",
+            "protein": 11
+          },
+          {
+            "cal": 200,
+            "name": "Cream cheese",
+            "protein": 4
+          }
+        ]
+      },
+      "2026-06-07": {
+        "exercise": [
+          {
+            "cal": 481,
+            "mins": 52,
+            "type": "OTF / Orangetheory"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 278,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 140,
+            "name": "Oaka protein gummies",
+            "protein": 20
+          },
+          {
+            "cal": 70,
+            "name": "Shameless snacks",
+            "protein": 0
+          },
+          {
+            "cal": 65,
+            "name": "Raspberries",
+            "protein": 1
+          },
+          {
+            "cal": 525,
+            "name": "Kenny's chicken meal",
+            "protein": 40
+          },
+          {
+            "cal": 200,
+            "name": "Protein lemonade",
+            "protein": 20
+          },
+          {
+            "cal": 285,
+            "name": "Ground beef 85% (1/3 pound)",
+            "protein": 23
+          },
+          {
+            "cal": 240,
+            "name": "Brioche burger bun",
+            "protein": 7
+          }
+        ],
+        "weight": 155
+      },
+      "2026-06-14": {
+        "exercise": [
+          {
+            "cal": 463,
+            "mins": 50,
+            "type": "OTF / Orangetheory"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 278,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 278,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 85,
+            "name": "Oaka Protein Gummies",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kenny's chicken",
+            "protein": 40
+          },
+          {
+            "cal": 65,
+            "name": "Raspberries",
+            "protein": 1
+          },
+          {
+            "cal": 380,
+            "name": "Chicken tacos",
+            "protein": 28
+          },
+          {
+            "cal": 210,
+            "name": "Plantain chips from Costco",
+            "protein": 2
+          }
+        ],
+        "weight": 152.5
+      },
+      "2026-06-15": {
+        "foods": [
+          {
+            "cal": 278,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 55,
+            "name": "Blackberries",
+            "protein": 2
+          },
+          {
+            "cal": 278,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kennys chicken",
+            "protein": 40
+          },
+          {
+            "cal": 85,
+            "name": "Oaka gummies",
+            "protein": 20
+          },
+          {
+            "cal": 120,
+            "name": "Prosecco",
+            "protein": 0
+          },
+          {
+            "cal": 400,
+            "name": "Steak fajita",
+            "protein": 45
+          }
+        ]
+      },
+      "2026-06-19": {
+        "exercise": [
+          {
+            "cal": 202,
+            "mins": 50,
+            "type": "Pilates"
+          }
+        ],
+        "foods": [
+          {
+            "cal": 278,
+            "name": "Protein oats",
+            "protein": 20
+          },
+          {
+            "cal": 525,
+            "name": "Kennys chicken",
+            "protein": 40
+          },
+          {
+            "cal": 210,
+            "name": "Pint of Guinness",
+            "protein": 2
+          },
+          {
+            "cal": 300,
+            "name": "Sausage pizza (1/3 of 12 inch)",
+            "protein": 13
+          },
+          {
+            "cal": 120,
+            "name": "Tuna crudo",
+            "protein": 26
+          },
+          {
+            "cal": 130,
+            "name": "Vanilla ice cream",
+            "protein": 2
+          }
+        ],
+        "weight": 154
+      },
+      "2026-06-26": {
+        "foods": [
+          {
+            "cal": 200,
+            "name": "Granola",
+            "protein": 5
+          },
+          {
+            "cal": 150,
+            "name": "Yogurt",
+            "protein": 20
+          },
+          {
+            "cal": 320,
+            "name": "Turkey sandwich",
+            "protein": 24
+          },
+          {
+            "cal": 420,
+            "name": "Roast beef sandwich",
+            "protein": 30
+          },
+          {
+            "cal": 855,
+            "name": "Sausage pizza",
+            "protein": 36
+          }
+        ]
+      },
+      "2026-07-03": {
+        "weight": 152
+      }
+    },
+    "favorites": {
+      "kennys chicken": {
+        "cal": 525,
+        "name": "Kennys chicken",
+        "protein": 40
+      }
+    },
+    "favoritesHidden": {
+      "banana": true,
+      "barebells protein bar": true,
+      "chinese chicken salad with 2 tbsp dressing": true,
+      "mai tai": true,
+      "peanut m&ms": true,
+      "pork bun chinese": true,
+      "rice (cooked, 1 cup)": true,
+      "tatte chicken pita with extra chicken": true,
+      "wood fired oven pizza (3 slices)": true
+    },
+    "profile": {
+      "activity": 1.375,
+      "age": 53,
+      "goal_lb": 145,
+      "height_in": 67,
+      "pace_lb_wk": 0.5,
+      "protein_g": 110,
+      "sex": "female",
+      "weight_lb": 153,
+      "worker_url": "https://noisy-mountain-d3f9.maryjanemasson.workers.dev"
+    }
+  }
 }
