@@ -389,8 +389,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "E-ZPass Customer Service",
+      "subject": "E-ZPass Statement"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\ud83d\udea8 Last Chance: Save $200 on Your Next Trip"
+    },
     {
       "sender": "MileagePlus Program",
       "subject": "Earn miles and save on your car rental for your Boston trip"
@@ -422,14 +430,6 @@ window.EMAIL_DATA = {
     {
       "sender": "IHG Hotels & Resorts",
       "subject": "One more chance to tell us what you think"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "5-star hotels you\u2019ll love, for less"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 874120191874"
     }
   ],
   "items": [
