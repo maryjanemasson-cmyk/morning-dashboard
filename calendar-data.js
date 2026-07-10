@@ -365,23 +365,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "BOSS",
+      "subject": "The Latest BOSS By Beckham"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $7,829.89 deposit was credited to your account."
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 7/10 is ready to view"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $540.82 deposit was credited to your account."
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 382516960012"
+      "sender": "Medium Daily Digest",
+      "subject": "Designing Podcast Cover Art for Global Brands | Tim McAuliffe"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 10 Jul 2026"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 135.136.16.14"
+    },
+    {
+      "sender": "The New York Times",
+      "subject": "Your guide to The Athletic."
     },
     {
       "sender": "Trip.com",
@@ -394,18 +406,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Element Brooklyn",
       "subject": "Your Order #2272941 has been delivered \ud83c\udf31"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Don't reach for another plastic pumpkin..."
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Calling discerning shoppers \ud83d\udce3"
     }
   ],
   "items": [
