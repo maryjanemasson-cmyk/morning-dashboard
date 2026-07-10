@@ -365,15 +365,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "BOSS",
-      "subject": "The Latest BOSS By Beckham"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 7/10 is ready to view"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Logitech MX Anywhere 3S...\""
     },
     {
       "sender": "Unroll.Me",
@@ -406,6 +402,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Element Brooklyn",
       "subject": "Your Order #2272941 has been delivered \ud83c\udf31"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
     }
   ],
   "items": [
