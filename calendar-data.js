@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\u2708\ufe0f UA905 LHR \u2192 EWR",
-    "location": "London (LHR)",
-    "description": "Thu, Jul 9\n9:30 AM BST\n[Flight] LHR to EWR\nUnited Airlines 905, Terminal 2, Gate\n12:30 PM EDT\nArrive Newark (EWR)\nTerminal B, Gate",
-    "startTime": "2026-07-09T04:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-09T12:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: HO HO WILDE APARTHOTELS LONDON P",
-    "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
-    "description": "11:00 AM BST\n[Lodging] Depart HO HO WILDE APARTHOTELS LONDON P\nCheck-Out: 11:00am\n4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom\n44-203-6872480",
-    "startTime": "2026-07-09T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-09T07:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "\ud83c\udfe8 Check-out: Wilde Aparthotels London Paddington",
     "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
     "description": "11:00 AM BST\n[Lodging] Depart Wilde Aparthotels London Paddington\nCheck-Out: 11:00am\n4 North Wharf Road, London, W2 1NW, United Kingdom\n44-203-6872480",
@@ -185,6 +163,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Kimpton Marlowe by IHG",
+    "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
+    "description": "Thu, Jul 23\n11:00 AM EDT\n[Lodging] Depart Kimpton Marlowe by IHG\nCheck-Out: 11:00am\n25 Edwin H. Land Blvd, Cambridge, MA, 02141\n+1 617 8688000",
+    "startTime": "2026-07-23T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-23T12:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\u2708\ufe0f UA1076 BOS \u2192 EWR",
+    "location": "Boston (BOS)",
+    "description": "2:30 PM EDT\n[Flight] BOS to EWR\nUnited Airlines 1076, Terminal TERMINAL B, Gate\n4:02 PM EDT\nArrive Newark (EWR)\nTerminal TERMINAL A, Gate",
+    "startTime": "2026-07-23T14:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-23T16:02:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -368,6 +368,22 @@ window.EMAIL_DATA = {
   "unreadCount": 26,
   "threads": [
     {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $7,829.89 deposit was credited to your account."
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $540.82 deposit was credited to your account."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 382516960012"
+    },
+    {
       "sender": "Trip.com",
       "subject": "\ud83d\udea8 Last Chance: Save $200 on Your Next Trip"
     },
@@ -390,22 +406,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Calling discerning shoppers \ud83d\udce3"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "What I Know Now That I Wish She'd Known Then"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "STRIKING"
-    },
-    {
-      "sender": "IHG Hotels & Resorts",
-      "subject": "One more chance to tell us what you think"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "5-star hotels you\u2019ll love, for less"
     }
   ],
   "items": [
@@ -415,20 +415,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #874120191874",
-      "date": "2026-07-09",
-      "id": "19f44812150d263a",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #533346670524",
-      "date": "2026-07-09",
-      "id": "19f42f2d2845e5fe",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
