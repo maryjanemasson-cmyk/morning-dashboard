@@ -259,30 +259,6 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "London, United Kingdom",
-    "start": "2026-07-06",
-    "end": "2026-07-09",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA905 LHR to EWR",
-        "location": "London (LHR)",
-        "description": "",
-        "start": "2026-07-09T08:30:00+00:00",
-        "end": "2026-07-09T16:30:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: HO HO WILDE APARTHOTELS LONDON P",
-        "location": "4 NORTH WHARF ROAD, LONDON GB W2 1NW, Greater London, W2 1NW, United Kingdom",
-        "description": "",
-        "start": "2026-07-09T10:00:00+00:00",
-        "end": "2026-07-09T11:00:00+00:00",
-        "type": "hotel"
-      }
-    ]
-  },
-  {
     "destination": "Cambridge, MA",
     "start": "2026-07-21",
     "end": "2026-07-23",
@@ -389,12 +365,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 26,
   "threads": [
-    {
-      "sender": "E-ZPass Customer Service",
-      "subject": "E-ZPass Statement"
-    },
     {
       "sender": "Trip.com",
       "subject": "\ud83d\udea8 Last Chance: Save $200 on Your Next Trip"
@@ -430,6 +402,10 @@ window.EMAIL_DATA = {
     {
       "sender": "IHG Hotels & Resorts",
       "subject": "One more chance to tell us what you think"
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "5-star hotels you\u2019ll love, for less"
     }
   ],
   "items": [
