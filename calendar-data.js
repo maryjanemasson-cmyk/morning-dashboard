@@ -365,47 +365,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Logitech MX Anywhere 3S...\""
+      "sender": "Viski",
+      "subject": "Mary jane, Get a $10 gift card when you write a review"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
+      "sender": "Uber One",
+      "subject": "Join Uber One to save on your travels"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "Designing Podcast Cover Art for Global Brands | Tim McAuliffe"
+      "sender": "Etsy",
+      "subject": "Mary, you have a new item to review."
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 10 Jul 2026"
+      "sender": "Schoolhouse",
+      "subject": "Meet the Forma Family"
     },
     {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 135.136.16.14"
-    },
-    {
-      "sender": "The New York Times",
-      "subject": "Your guide to The Athletic."
+      "sender": "Etsy",
+      "subject": "Unearth incredible finds \ud83e\ude8f"
     },
     {
       "sender": "Trip.com",
       "subject": "\ud83d\udea8 Last Chance: Save $200 on Your Next Trip"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Boston trip"
-    },
-    {
-      "sender": "Element Brooklyn",
-      "subject": "Your Order #2272941 has been delivered \ud83c\udf31"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
     }
   ],
   "items": [
@@ -426,6 +410,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f0e697878c89c6",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Swiffer Duster Refill + 1...\"",
+      "date": "2026-07-10",
+      "id": "19f4ce163c7d8060",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
