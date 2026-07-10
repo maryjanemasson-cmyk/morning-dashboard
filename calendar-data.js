@@ -365,7 +365,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 5,
   "threads": [
     {
       "sender": "Viski",
@@ -386,10 +386,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Unearth incredible finds \ud83e\ude8f"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udea8 Last Chance: Save $200 on Your Next Trip"
     }
   ],
   "items": [
