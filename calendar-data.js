@@ -466,8 +466,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Bake Time",
+      "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
+    },
+    {
+      "sender": "COS",
+      "subject": "Up to 60% off continues"
+    },
+    {
+      "sender": "Holafly",
+      "subject": "Mary, share your thoughts and get a reward! \u2b50\ud83e\ude99"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "\ud83d\udcb0TODAY & TOMORROW: Win MyLowe's Money Days prizes\ud83d\udcb0"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Moonstar for Buck Mason"
+    },
     {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Sat, 7/11 is ready to view"
@@ -487,26 +507,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chan Luu",
       "subject": "The Chloe Tunic in Turquoise"
-    },
-    {
-      "sender": "Facebook",
-      "subject": "90687230 is your Facebook code"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Exclusive Offer: Free Collector's Case"
-    },
-    {
-      "sender": "Viski",
-      "subject": "Mary jane, Get a $10 gift card when you write a review"
-    },
-    {
-      "sender": "Uber One",
-      "subject": "Join Uber One to save on your travels"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Mary, you have a new item to review."
     }
   ],
   "items": [
