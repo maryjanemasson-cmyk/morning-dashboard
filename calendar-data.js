@@ -466,23 +466,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Our Top Picks from the Sale"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on July 11, 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Logitech MX Anywhere 3S...\" and \u20663\u2069 more items"
+      "sender": "Facebook",
+      "subject": "90687230 is your Facebook code"
     },
     {
       "sender": "LOOK OPTIC",
