@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\ud83c\udfe8 Check-out: Wilde Aparthotels London Paddington",
-    "location": "4 North Wharf Road, London, W2 1NW, United Kingdom",
-    "description": "11:00 AM BST\n[Lodging] Depart Wilde Aparthotels London Paddington\nCheck-Out: 11:00am\n4 North Wharf Road, London, W2 1NW, United Kingdom\n44-203-6872480",
-    "startTime": "2026-07-10T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-10T07:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "Lagree - All Levels - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e697878c89c6",
-    "startTime": "2026-07-10T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-10T06:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Mary Jane Hinrichs - 30-Minute Consultation - Eleanor Dath, Direct Travel",
-    "location": "",
-    "description": "This meeting was scheduled from the bookings page of Eleanor Dath.\n\nUse the following link to reschedule or cancel this meeting:\nManage meeting<https://outlook.office.com/bookwithme/user/5670952ed8714c8dab3513f73e7af98b@dt.com/booking/qKLjCzLz1ka1uYacAfE9nQ2?anonymous>\n-----Note added from booking page on Wednesday, July 8, 2026 3:04 AM-----\nLooking forward to discussing our intended trip to Colombia. Best, Mary Jane\n\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/232410643942514?p=dVuq8VDYmVdHZKEf2N\nMeeting ID: 232 410 643 942 514\nPasscode: iD3Nd2nE\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjA2YTg2ZGMtOWM5OC00YjA2LWE3N2EtMmM0ZjY3OWEzM2Mx%40thread.v2/0?context=%7b%22Tid%22%3a%221d8e03c1-e21d-46bd-89fa-fb73260b1bc8%22%2c%22Oid%22%3a%220a3c023f-a1f8-4f62-b16a-ec3f7f280867%22%7d>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=0a3c023f-a1f8-4f62-b16a-ec3f7f280867&tenantId=1d8e03c1-e21d-46bd-89fa-fb73260b1bc8&threadId=19_meeting_MjA2YTg2ZGMtOWM5OC00YjA2LWE3N2EtMmM0ZjY3OWEzM2Mx@thread.v2&messageId=0&language=en-US>\n________________________________________________________________________________\n",
-    "startTime": "2026-07-10T10:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-10T11:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -499,8 +466,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Our Top Picks from the Sale"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations - 45 minutes on July 11, 2026"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Logitech MX Anywhere 3S...\" and \u20663\u2069 more items"
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "Exclusive Offer: Free Collector's Case"
@@ -536,24 +519,6 @@ window.EMAIL_DATA = {
     },
     {
       "type": "class",
-      "title": "Lagree - All Levels - 45 minutes \u00b7 6:00 AM",
-      "name": "Lagree - All Levels - 45 minutes",
-      "date": "2026-07-10",
-      "time": "06:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f0e697878c89c6",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Swiffer Duster Refill + 1...\"",
-      "date": "2026-07-10",
-      "id": "19f4ce163c7d8060",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "class",
       "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
       "name": "Lagree - Foundations - 45 minutes",
       "date": "2026-07-11",
@@ -562,6 +527,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f0e6a26c5b9494",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Logitech MX Anywhere 3S...\" and \u20663\u2069 more items",
+      "date": "2026-07-11",
+      "id": "19f4f428be38df27",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
