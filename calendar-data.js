@@ -466,8 +466,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 7/11 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 11 Jul 2026"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Stop trusting AI design output \u2014 use these 5 judgment rules instead | Nurkhon"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Chloe Tunic in Turquoise"
+    },
     {
       "sender": "Facebook",
       "subject": "90687230 is your Facebook code"
@@ -487,14 +507,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Mary, you have a new item to review."
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Meet the Forma Family"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Unearth incredible finds \ud83e\ude8f"
     }
   ],
   "items": [
