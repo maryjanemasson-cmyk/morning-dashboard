@@ -190,10 +190,10 @@ window.CALENDAR_EVENTS = [
 
 window.TRAVEL_DATA = [
   {
-    "destination": "Chicago → Boston",
+    "destination": "Chicago \u2192 Boston",
     "start": "2026-05-29",
     "end": "2026-06-04",
-    "icon": "✈️",
+    "icon": "\u2708\ufe0f",
     "outfitSlide": 2234,
     "segments": [
       {
@@ -211,7 +211,7 @@ window.TRAVEL_DATA = [
       {
         "summary": "UA1525 EWR to ORD",
         "location": "Newark (EWR)",
-        "description": "Outbound — Princeton to Chicago",
+        "description": "Outbound \u2014 Princeton to Chicago",
         "start": "2026-05-29T14:24:00+00:00",
         "end": "2026-05-29T17:06:00+00:00",
         "type": "flight"
@@ -238,12 +238,12 @@ window.TRAVEL_DATA = [
     "destination": "Washington, DC",
     "start": "2026-06-19",
     "end": "2026-06-21",
-    "icon": "🚗",
+    "icon": "\ud83d\ude97",
     "items": [
       {
         "summary": "Check-in: The Dupont Circle Hotel",
         "location": "1500 New Hampshire Ave NW, Washington, DC 20036",
-        "description": "Family trip, driving from Princeton. Note: leaving on Juneteenth (federal holiday) — expect heavier I-95/295 traffic.",
+        "description": "Family trip, driving from Princeton. Note: leaving on Juneteenth (federal holiday) \u2014 expect heavier I-95/295 traffic.",
         "start": "2026-06-19T15:00:00+00:00",
         "end": "2026-06-19T16:00:00+00:00",
         "type": "hotel"
@@ -262,7 +262,7 @@ window.TRAVEL_DATA = [
     "destination": "Cambridge, MA",
     "start": "2026-07-21",
     "end": "2026-07-23",
-    "icon": "✈️",
+    "icon": "\u2708\ufe0f",
     "items": [
       {
         "summary": "UA375 EWR to BOS",
@@ -299,13 +299,13 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Bogotá → Cartagena → Medellín",
+    "destination": "Bogot\u00e1 \u2192 Cartagena \u2192 Medell\u00edn",
     "start": "2026-08-21",
     "end": "2026-08-30",
-    "icon": "✈️",
+    "icon": "\u2708\ufe0f",
     "segments": [
       {
-        "city": "Bogotá, Colombia",
+        "city": "Bogot\u00e1, Colombia",
         "start": "2026-08-21",
         "end": "2026-08-22"
       },
@@ -315,20 +315,20 @@ window.TRAVEL_DATA = [
         "end": "2026-08-26"
       },
       {
-        "city": "Medellín, Colombia",
+        "city": "Medell\u00edn, Colombia",
         "start": "2026-08-26",
         "end": "2026-08-29"
       },
       {
-        "city": "Bogotá, Colombia",
+        "city": "Bogot\u00e1, Colombia",
         "start": "2026-08-29",
         "end": "2026-08-30"
       }
     ],
     "items": [
       {
-        "summary": "Check-in: Grand Hyatt Bogotá",
-        "location": "Bogotá, Colombia",
+        "summary": "Check-in: Grand Hyatt Bogot\u00e1",
+        "location": "Bogot\u00e1, Colombia",
         "description": "Arrival night. Conf 40023B21281583.",
         "start": "2026-08-21T15:00:00+00:00",
         "end": "2026-08-21T16:00:00+00:00",
@@ -337,38 +337,38 @@ window.TRAVEL_DATA = [
       {
         "summary": "UA268 EWR to BOG",
         "location": "Newark (EWR)",
-        "description": "Outbound — Princeton to Bogotá (overnight arrival 10:00 PM). Party of 4. Conf NDK4D4.",
+        "description": "Outbound \u2014 Princeton to Bogot\u00e1 (overnight arrival 10:00 PM). Party of 4. Conf NDK4D4.",
         "start": "2026-08-21T17:10:00+00:00",
         "end": "2026-08-21T22:00:00+00:00",
         "type": "flight"
       },
       {
-        "summary": "Check-out: Grand Hyatt Bogotá",
-        "location": "Bogotá, Colombia",
-        "description": "Tight morning — AV9786 departs BOG at noon, leave well before checkout.",
+        "summary": "Check-out: Grand Hyatt Bogot\u00e1",
+        "location": "Bogot\u00e1, Colombia",
+        "description": "Tight morning \u2014 AV9786 departs BOG at noon, leave well before checkout.",
         "start": "2026-08-22T12:00:00+00:00",
         "end": "2026-08-22T13:00:00+00:00",
         "type": "hotel"
       },
       {
         "summary": "AV9786 BOG to CTG",
-        "location": "Bogotá (BOG)",
-        "description": "Bogotá to Cartagena. Conf AUK9PS.",
+        "location": "Bogot\u00e1 (BOG)",
+        "description": "Bogot\u00e1 to Cartagena. Conf AUK9PS.",
         "start": "2026-08-22T12:00:00+00:00",
         "end": "2026-08-22T13:35:00+00:00",
         "type": "flight"
       },
       {
-        "summary": "Check-in: Sofitel Barú Cartagena Beach Resort",
-        "location": "Isla de Barú, Cartagena",
+        "summary": "Check-in: Sofitel Bar\u00fa Cartagena Beach Resort",
+        "location": "Isla de Bar\u00fa, Cartagena",
         "description": "4 nights, 2 rooms. Chase Trip 1019642642 (confs B0P5AHL0512 / B0P5AHL0514).",
         "start": "2026-08-22T15:00:00+00:00",
         "end": "2026-08-22T16:00:00+00:00",
         "type": "hotel"
       },
       {
-        "summary": "Check-out: Sofitel Barú Cartagena Beach Resort",
-        "location": "Isla de Barú, Cartagena",
+        "summary": "Check-out: Sofitel Bar\u00fa Cartagena Beach Resort",
+        "location": "Isla de Bar\u00fa, Cartagena",
         "description": "",
         "start": "2026-08-26T12:00:00+00:00",
         "end": "2026-08-26T13:00:00+00:00",
@@ -377,22 +377,22 @@ window.TRAVEL_DATA = [
       {
         "summary": "AV9791 CTG to MDE",
         "location": "Cartagena (CTG)",
-        "description": "Cartagena to Medellín (Avianca Business). Trip.com 1658113628790993 / PNR AUXJG7.",
+        "description": "Cartagena to Medell\u00edn (Avianca Business). Trip.com 1658113628790993 / PNR AUXJG7.",
         "start": "2026-08-26T14:35:00+00:00",
         "end": "2026-08-26T15:45:00+00:00",
         "type": "flight"
       },
       {
-        "summary": "Check-in: York Medellín, Curio Collection by Hilton",
-        "location": "Medellín, Colombia",
+        "summary": "Check-in: York Medell\u00edn, Curio Collection by Hilton",
+        "location": "Medell\u00edn, Colombia",
         "description": "3 nights, 2 rooms. Chase Trip 1019643545 (confs 2495823609 / 2495823501).",
         "start": "2026-08-26T15:00:00+00:00",
         "end": "2026-08-26T16:00:00+00:00",
         "type": "hotel"
       },
       {
-        "summary": "Check-out: York Medellín, Curio Collection by Hilton",
-        "location": "Medellín, Colombia",
+        "summary": "Check-out: York Medell\u00edn, Curio Collection by Hilton",
+        "location": "Medell\u00edn, Colombia",
         "description": "",
         "start": "2026-08-29T12:00:00+00:00",
         "end": "2026-08-29T13:00:00+00:00",
@@ -400,32 +400,32 @@ window.TRAVEL_DATA = [
       },
       {
         "summary": "AV9311 MDE to BOG",
-        "location": "Medellín (MDE)",
-        "description": "Medellín back to Bogotá (Avianca Business). Trip.com 1658113628790993 / PNR AUXJG7.",
+        "location": "Medell\u00edn (MDE)",
+        "description": "Medell\u00edn back to Bogot\u00e1 (Avianca Business). Trip.com 1658113628790993 / PNR AUXJG7.",
         "start": "2026-08-29T13:15:00+00:00",
         "end": "2026-08-29T14:15:00+00:00",
         "type": "flight"
       },
       {
-        "summary": "Check-in: Grand Hyatt Bogotá",
-        "location": "Bogotá, Colombia",
+        "summary": "Check-in: Grand Hyatt Bogot\u00e1",
+        "location": "Bogot\u00e1, Colombia",
         "description": "Departure night. Conf 40023B21283106.",
         "start": "2026-08-29T15:00:00+00:00",
         "end": "2026-08-29T16:00:00+00:00",
         "type": "hotel"
       },
       {
-        "summary": "Check-out: Grand Hyatt Bogotá",
-        "location": "Bogotá, Colombia",
-        "description": "Early — UA269 departs BOG 7:20 AM. Lobby departure ~5:00 AM.",
+        "summary": "Check-out: Grand Hyatt Bogot\u00e1",
+        "location": "Bogot\u00e1, Colombia",
+        "description": "Early \u2014 UA269 departs BOG 7:20 AM. Lobby departure ~5:00 AM.",
         "start": "2026-08-30T05:00:00+00:00",
         "end": "2026-08-30T06:00:00+00:00",
         "type": "hotel"
       },
       {
         "summary": "UA269 BOG to EWR",
-        "location": "Bogotá (BOG)",
-        "description": "Return home — arrive Newark 2:25 PM. Conf NDK4D4.",
+        "location": "Bogot\u00e1 (BOG)",
+        "description": "Return home \u2014 arrive Newark 2:25 PM. Conf NDK4D4.",
         "start": "2026-08-30T07:20:00+00:00",
         "end": "2026-08-30T14:25:00+00:00",
         "type": "flight"
@@ -436,7 +436,7 @@ window.TRAVEL_DATA = [
     "destination": "Paris, France",
     "start": "2026-09-20",
     "end": "2026-09-25",
-    "icon": "✈️",
+    "icon": "\u2708\ufe0f",
     "items": [
       {
         "summary": "Check-in: Le Bellune Paris",
@@ -476,7 +476,7 @@ window.TRAVEL_DATA = [
     "destination": "Paris, France",
     "start": "2026-10-25",
     "end": "2026-10-30",
-    "icon": "✈️",
+    "icon": "\u2708\ufe0f",
     "items": [
       {
         "summary": "UA54 EWR to CDG",
@@ -499,8 +499,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Exclusive Offer: Free Collector's Case"
+    },
     {
       "sender": "Viski",
       "subject": "Mary jane, Get a $10 gift card when you write a review"
