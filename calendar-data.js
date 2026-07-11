@@ -477,8 +477,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Sephora",
+      "subject": "NEW rhode!!!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Logitech MX Anywhere 3S...\" and \u20663\u2069 more items"
+    },
+    {
+      "sender": "Medium",
+      "subject": "How Medium is investing in the curation era"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\""
@@ -506,18 +518,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bake Time",
       "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
-    },
-    {
-      "sender": "COS",
-      "subject": "Up to 60% off continues"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "Mary, share your thoughts and get a reward! \u2b50\ud83e\ude99"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "\ud83d\udcb0TODAY & TOMORROW: Win MyLowe's Money Days prizes\ud83d\udcb0"
     }
   ],
   "items": [
