@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Reservation at El Vez",
+    "location": "",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNfOeh8jwIKGozHncjuEAW52T-a9sQN3pY\n",
+    "startTime": "2026-07-12T18:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-12T19:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -466,8 +477,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"COOK WITH COLOR Bag Clips...\""
+    },
+    {
+      "sender": "Etsy",
+      "subject": "The just-for-you edit \ud83d\udc96"
+    },
+    {
+      "sender": "OpenTable | El Vez Reservations",
+      "subject": "Your reservation confirmation for El Vez"
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "It's almost time for Nathaniel's dental check-up"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "BAPE\u00ae NEW ARRIVALS: BAPE\u00ae x CR7, BAPE STAs, GRAPHIC TEES, LEATHER BAGS, ACCESSORIES, BAPE\u00ae KIDS, & MORE"
+    },
     {
       "sender": "Bake Time",
       "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
@@ -483,30 +518,6 @@ window.EMAIL_DATA = {
     {
       "sender": "MyLowe's Rewards",
       "subject": "\ud83d\udcb0TODAY & TOMORROW: Win MyLowe's Money Days prizes\ud83d\udcb0"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Moonstar for Buck Mason"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 7/11 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 11 Jul 2026"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Stop trusting AI design output \u2014 use these 5 judgment rules instead | Nurkhon"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Chloe Tunic in Turquoise"
     }
   ],
   "items": [
