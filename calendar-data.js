@@ -477,8 +477,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Amazon",
+      "subject": "Your Amazon gift card is ready!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Amazon Gift Card - Print -...\""
+    },
     {
       "sender": "Sephora",
       "subject": "NEW rhode!!!"
@@ -510,14 +518,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "It's almost time for Nathaniel's dental check-up"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "BAPE\u00ae NEW ARRIVALS: BAPE\u00ae x CR7, BAPE STAs, GRAPHIC TEES, LEATHER BAGS, ACCESSORIES, BAPE\u00ae KIDS, & MORE"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
     }
   ],
   "items": [
