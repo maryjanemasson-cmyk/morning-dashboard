@@ -433,6 +433,17 @@
     }
     .checkup-date:hover { color: #6b5d4d; }
     .checkup-never { font-size: 0.65rem; color: #d4c5b5; font-style: italic; }
+    .checkup-ctrl {
+      font-size: 0.7rem; color: #9c8b76; cursor: pointer;
+      padding: 0 0.2rem; user-select: none;
+    }
+    .checkup-ctrl:hover { color: #c2553a; }
+    .checkup-ctrl.disabled { color: #e0d6c8; cursor: default; }
+    .checkup-add {
+      display: inline-block; margin-top: 0.5rem; font-size: 0.72rem;
+      color: #4a8c6f; cursor: pointer; font-weight: 600;
+    }
+    .checkup-add:hover { text-decoration: underline; }
 
     /* News */
     .section-label {
@@ -651,7 +662,10 @@
         </div>
 
         <div class="card">
-          <div class="card-title"><span class="icon">&bull;</span> Checkups</div>
+          <div class="card-title" style="display:flex;align-items:center;justify-content:space-between">
+            <span><span class="icon">&bull;</span> Checkups</span>
+            <span id="checkups-edit-toggle" onclick="toggleEditCheckups()" style="font-size:0.65rem;color:#9c8b76;cursor:pointer;font-weight:400;">Edit</span>
+          </div>
           <div id="checkups-section"></div>
         </div>
 
@@ -1372,7 +1386,9 @@
     fbGet('chores', data => { _chores = data || {}; renderChores(); });
 
     // ── Checkups ──
-    const CHECKUP_TYPES = [
+    // Default list, used to seed Firebase the first time. After that the list
+    // itself lives in Firebase ('checkupTypes') so it can be edited on any device.
+    const DEFAULT_CHECKUP_TYPES = [
       { id: 'physical', name: 'Annual Physical', months: 12 },
       { id: 'dentist', name: 'Dentist', months: 6 },
       { id: 'dermatologist', name: 'Dermatologist', months: 12 },
@@ -1381,12 +1397,26 @@
       { id: 'gyn', name: 'GYN', months: 12 },
     ];
 
-    let _checkups = {};
+    let _checkups = {};        // { id: 'YYYY-MM-DD' } last-visit dates
+    let _checkupTypes = null;  // [ {id, name, months} ] the editable list
+    let _editCheckups = false; // edit-mode toggle
+
+    function slugifyCheckup(name) {
+      let base = (name || 'checkup').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'checkup';
+      let id = base, n = 2;
+      const taken = (_checkupTypes || []).map(c => c.id);
+      while (taken.includes(id)) { id = base + '-' + n; n++; }
+      return id;
+    }
+
+    function saveCheckupTypes() { fbSet('checkupTypes', _checkupTypes); }
+
     function renderCheckups() {
+      if (!_checkupTypes) return;
       const data = _checkups;
       const now = new Date();
       let html = '';
-      CHECKUP_TYPES.forEach(c => {
+      _checkupTypes.forEach((c, i) => {
         const lastDate = data[c.id];
         let statusHtml, dateHtml;
         if (!lastDate) {
@@ -1409,15 +1439,91 @@
           }
           dateHtml = `<span class="checkup-date" onclick="updateCheckup('${c.id}')" title="Click to update">${lastStr}</span>`;
         }
-        html += `<div class="checkup-item">
-          <div class="checkup-name">${c.name}</div>
-          <div style="text-align:right">
-            ${statusHtml}<br>${dateHtml}
-            ${!lastDate ? '<br><span class="checkup-date" onclick="updateCheckup(\'' + c.id + '\')">Set date</span>' : ''}
-          </div>
-        </div>`;
+
+        if (_editCheckups) {
+          const upCls = i === 0 ? 'checkup-ctrl disabled' : 'checkup-ctrl';
+          const downCls = i === _checkupTypes.length - 1 ? 'checkup-ctrl disabled' : 'checkup-ctrl';
+          html += `<div class="checkup-item">
+            <span class="${upCls}" onclick="moveCheckup('${c.id}',-1)" title="Move up">&#9650;</span>
+            <span class="${downCls}" onclick="moveCheckup('${c.id}',1)" title="Move down">&#9660;</span>
+            <div class="checkup-name" onclick="renameCheckup('${c.id}')" title="Click to rename" style="cursor:pointer">${c.name}</div>
+            <span class="checkup-date" onclick="changeCheckupInterval('${c.id}')" title="Change interval">every ${c.months}mo</span>
+            <span class="checkup-ctrl" onclick="deleteCheckup('${c.id}')" title="Delete">&times;</span>
+          </div>`;
+        } else {
+          html += `<div class="checkup-item">
+            <div class="checkup-name">${c.name}</div>
+            <div style="text-align:right">
+              ${statusHtml}<br>${dateHtml}
+              ${!lastDate ? '<br><span class="checkup-date" onclick="updateCheckup(\'' + c.id + '\')">Set date</span>' : ''}
+            </div>
+          </div>`;
+        }
       });
+      if (_editCheckups) {
+        html += `<span class="checkup-add" onclick="addCheckup()">+ Add checkup</span>`;
+      }
       document.getElementById('checkups-section').innerHTML = html;
+    }
+
+    function toggleEditCheckups() {
+      _editCheckups = !_editCheckups;
+      const t = document.getElementById('checkups-edit-toggle');
+      if (t) t.textContent = _editCheckups ? 'Done' : 'Edit';
+      renderCheckups();
+    }
+
+    function addCheckup() {
+      const name = prompt('Name of the checkup? (e.g. "Bloodwork")');
+      if (!name || !name.trim()) return;
+      const mo = prompt('How often, in months? (e.g. 12 for yearly, 6 for twice a year)', '12');
+      const months = parseInt(mo, 10);
+      if (!months || months < 1) { alert('Please enter a whole number of months.'); return; }
+      _checkupTypes.push({ id: slugifyCheckup(name.trim()), name: name.trim(), months });
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function renameCheckup(id) {
+      const c = _checkupTypes.find(c => c.id === id);
+      if (!c) return;
+      const name = prompt('Rename checkup:', c.name);
+      if (!name || !name.trim()) return;
+      c.name = name.trim();
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function changeCheckupInterval(id) {
+      const c = _checkupTypes.find(c => c.id === id);
+      if (!c) return;
+      const mo = prompt('How often, in months?', String(c.months));
+      const months = parseInt(mo, 10);
+      if (!months || months < 1) { alert('Please enter a whole number of months.'); return; }
+      c.months = months;
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function deleteCheckup(id) {
+      const c = _checkupTypes.find(c => c.id === id);
+      if (!c) return;
+      if (!confirm('Delete "' + c.name + '"? Its saved date will also be removed.')) return;
+      _checkupTypes = _checkupTypes.filter(c => c.id !== id);
+      if (_checkups[id]) { delete _checkups[id]; fbSet('checkups', _checkups); }
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function moveCheckup(id, dir) {
+      const i = _checkupTypes.findIndex(c => c.id === id);
+      const j = i + dir;
+      if (i < 0 || j < 0 || j >= _checkupTypes.length) return;
+      const tmp = _checkupTypes[i];
+      _checkupTypes[i] = _checkupTypes[j];
+      _checkupTypes[j] = tmp;
+      saveCheckupTypes();
+      renderCheckups();
     }
 
     function updateCheckup(id) {
@@ -1428,7 +1534,18 @@
       _checkups[id] = parsed.toISOString().slice(0, 10);
       fbSet('checkups', _checkups);
     }
+
     fbGet('checkups', data => { _checkups = data || {}; renderCheckups(); });
+    fbGet('checkupTypes', data => {
+      if (Array.isArray(data) && data.length) {
+        _checkupTypes = data;
+      } else {
+        // First run: seed Firebase from the defaults so the list is editable.
+        _checkupTypes = DEFAULT_CHECKUP_TYPES.slice();
+        saveCheckupTypes();
+      }
+      renderCheckups();
+    });
 
     // ── News ──
     const categories = {
@@ -1445,11 +1562,15 @@
       try {
         // Source tiers:
         // SUBSCRIBED (unlimited): WSJ, NYT
-        // FREE (unlimited): AP, Reuters, NPR, BBC, The Hill, ProPublica, PBS
+        // FREE (unlimited): AP, Reuters, NPR, The Hill, ProPublica, PBS,
+        //                   Fierce Biotech, Fierce Pharma
         // METERED (track usage): Politico (~5/mo), STAT News (~5/mo), The Atlantic (~5/mo)
         const feedGroups = {
           top: [
             'https://feeds.apnews.com/rss/apf-topnews',
+            'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml',
+            'https://feeds.npr.org/1001/rss.xml',
+            'https://feeds.a.dj.com/rss/RSSWorldNews.xml',
           ],
           politics: [
             'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
@@ -1459,11 +1580,15 @@
           ],
           biotech: [
             'https://www.statnews.com/feed/',
+            'https://www.fiercebiotech.com/rss/xml',
+            'https://www.fiercepharma.com/rss/xml',
             'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml',
             'https://feeds.npr.org/103537970/rss.xml',
             'https://news.google.com/rss/search?q=biotech+pharma+FDA',
           ],
           economy: [
+            'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
+            'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',
             'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
             'https://feeds.npr.org/1006/rss.xml',
             'https://news.google.com/rss/search?q=economy+markets+wall+street',
@@ -1473,7 +1598,8 @@
         // Source classification
         const subscribedDomains = ['wsj.com', 'nytimes.com'];
         const freeDomains = ['apnews.com', 'reuters.com', 'npr.org',
-          'thehill.com', 'propublica.org', 'pbs.org'];
+          'thehill.com', 'propublica.org', 'pbs.org',
+          'fiercebiotech.com', 'fiercepharma.com'];
         const meteredDomains = {
           'politico.com': { name: 'Politico', limit: 5 },
           'statnews.com': { name: 'STAT News', limit: 5 },
@@ -1565,7 +1691,7 @@
         html += `<div class="news-section"><div class="section-label politics"><span class="cat-dot politics"></span> US Politics</div>${rl(buckets.politics, 5)}</div>`;
         html += `<div class="news-section"><div class="section-label biotech"><span class="cat-dot biotech"></span> Biotech & Health</div>${rl(buckets.biotech, 5)}</div>`;
         html += `<div class="news-section"><div class="section-label economy"><span class="cat-dot economy"></span> Economy & Markets</div>${rl(buckets.economy, 5)}</div>`;
-        if (buckets.other.length) html += `<div class="news-section" style="opacity:0.7"><div class="section-label other">Other Headlines</div>${rl(buckets.other, 3)}</div>`;
+        if (buckets.other.length) html += `<div class="news-section" style="opacity:0.7"><div class="section-label other">Other Headlines</div>${rl(buckets.other, 6)}</div>`;
         document.getElementById('news-sections').innerHTML = html;
       } catch(e) { document.getElementById('news-sections').innerHTML = '<p style="color:#b8a48e">Unable to load news.</p>'; }
     }
