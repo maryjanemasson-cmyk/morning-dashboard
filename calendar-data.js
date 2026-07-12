@@ -477,11 +477,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "Sephora",
-      "subject": "NEW rhode!!!"
+      "sender": "McGee and Co.",
+      "subject": "Thanks for your purchase!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"MEIRUBY Electric Candle...\""
+    },
+    {
+      "sender": "Aloriam",
+      "subject": "Aloriam Order #12644 - Please Read re: Current Order Turnaround Times"
+    },
+    {
+      "sender": "McGee & Co.",
+      "subject": "Order 1094271 confirmed"
+    },
+    {
+      "sender": "Tuti from LOOK OPTIC",
+      "subject": "Mary, A Special Gift For You"
     },
     {
       "sender": "Medium",
@@ -502,22 +518,6 @@ window.EMAIL_DATA = {
     {
       "sender": "OpenTable | El Vez Reservations",
       "subject": "Your reservation confirmation for El Vez"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "It's almost time for Nathaniel's dental check-up"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "BAPE\u00ae NEW ARRIVALS: BAPE\u00ae x CR7, BAPE STAs, GRAPHIC TEES, LEATHER BAGS, ACCESSORIES, BAPE\u00ae KIDS, & MORE"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
-    },
-    {
-      "sender": "COS",
-      "subject": "Up to 60% off continues"
     }
   ],
   "items": [
