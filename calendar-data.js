@@ -477,16 +477,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 7,
   "threads": [
-    {
-      "sender": "Design Decor",
-      "subject": "Be ready to set the tone for fall"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "We know we're cute"
-    },
     {
       "sender": "Tuti from LOOK OPTIC",
       "subject": "Mary, A Special Gift For You"
@@ -514,10 +506,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "It's almost time for Nathaniel's dental check-up"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
     }
   ],
   "items": [
