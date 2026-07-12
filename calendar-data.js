@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "Lagree - All Levels - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f55ac251559166",
+    "startTime": "2026-07-12T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-12T11:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Reservation at El Vez",
     "location": "",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNfOeh8jwIKGozHncjuEAW52T-a9sQN3pY\n",
@@ -466,23 +477,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Pini Parma",
-      "subject": "Lightweight summer trip essentials"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "June, In Outfits"
-    },
-    {
-      "sender": "Green Drop",
-      "subject": "Reminder: Our donation truck is headed your way"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Christian Hinrichs",
+      "subject": "Fwd: UMKC 30 year medical school reunion"
     },
     {
       "sender": "Tuti from LOOK OPTIC",
@@ -507,6 +506,18 @@ window.EMAIL_DATA = {
     {
       "sender": "OpenTable | El Vez Reservations",
       "subject": "Your reservation confirmation for El Vez"
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "It's almost time for Nathaniel's dental check-up"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
+    },
+    {
+      "sender": "COS",
+      "subject": "Up to 60% off continues"
     }
   ],
   "items": [
@@ -516,6 +527,17 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - All Levels - 45 minutes \u00b7 11:00 AM",
+      "name": "Lagree - All Levels - 45 minutes",
+      "date": "2026-07-12",
+      "time": "11:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f55ac251559166",
+      "sender": "FORM BY TWO"
     },
     {
       "type": "class",
