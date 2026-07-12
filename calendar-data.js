@@ -477,8 +477,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 4,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Tap for brass switch plates \ud83e\ude84"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Style notes: Checks"
+    },
     {
       "sender": "Tuti from LOOK OPTIC",
       "subject": "Mary, A Special Gift For You"
@@ -486,26 +494,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium",
       "subject": "How Medium is investing in the curation era"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"COOK WITH COLOR Bag Clips...\""
-    },
-    {
-      "sender": "Etsy",
-      "subject": "The just-for-you edit \ud83d\udc96"
-    },
-    {
-      "sender": "OpenTable | El Vez Reservations",
-      "subject": "Your reservation confirmation for El Vez"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "It's almost time for Nathaniel's dental check-up"
     }
   ],
   "items": [
