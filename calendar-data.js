@@ -510,8 +510,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
+    {
+      "sender": "no-reply@billing.metropolis.io",
+      "subject": "Metropolis Parking Payment"
+    },
     {
       "sender": "Club Pilates Princeton",
       "subject": "New Booking Confirmation"
