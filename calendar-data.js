@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-11T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-11T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f0e6a26c5b9494",
-    "startTime": "2026-07-11T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-11T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Reservation at El Vez",
     "location": "",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNfOeh8jwIKGozHncjuEAW52T-a9sQN3pY\n",
@@ -163,6 +141,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-07-25T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-25T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -480,20 +469,20 @@ window.EMAIL_DATA = {
   "unreadCount": 22,
   "threads": [
     {
-      "sender": "McGee and Co.",
-      "subject": "Thanks for your purchase!"
+      "sender": "Pini Parma",
+      "subject": "Lightweight summer trip essentials"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"MEIRUBY Electric Candle...\""
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "June, In Outfits"
     },
     {
-      "sender": "Aloriam",
-      "subject": "Aloriam Order #12644 - Please Read re: Current Order Turnaround Times"
+      "sender": "Green Drop",
+      "subject": "Reminder: Our donation truck is headed your way"
     },
     {
-      "sender": "McGee & Co.",
-      "subject": "Order 1094271 confirmed"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "Tuti from LOOK OPTIC",
@@ -527,24 +516,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-07-11",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f0e6a26c5b9494",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Logitech MX Anywhere 3S...\" and \u20663\u2069 more items",
-      "date": "2026-07-11",
-      "id": "19f4f428be38df27",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
