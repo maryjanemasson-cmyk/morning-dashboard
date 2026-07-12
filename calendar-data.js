@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "CP Reformer Flow 1.5 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577d835f99039",
+    "startTime": "2026-07-14T06:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-14T06:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Your Appointment at Suite Blend Color Bar",
     "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
     "description": "SERVICE\nSingle Root Touch Up with blowout\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/f40421e2d14b4331fa6a3176b9a3464af507",
@@ -66,6 +77,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577a242893857",
+    "startTime": "2026-07-16T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-16T17:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -75,6 +97,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Lagree - Foundations - 45 minutes",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577b77f9eb4b6",
+    "startTime": "2026-07-18T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-18T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   },
   {
     "summary": "Weekly planning \u2014 update task tracker",
@@ -477,23 +510,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Tap for brass switch plates \ud83e\ude84"
+      "sender": "Club Pilates Princeton",
+      "subject": "New Booking Confirmation"
     },
     {
-      "sender": "& Other Stories",
-      "subject": "Style notes: Checks"
+      "sender": "WAT THE BRAND",
+      "subject": "Build Your Resort Wardrobe"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 18, 2026 at 10:00 AM"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 16, 2026 at 5:00 PM"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with mob.co.uk"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Mobapp"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Cosabella\u00ae Never Say Never...\""
     },
     {
       "sender": "Tuti from LOOK OPTIC",
       "subject": "Mary, A Special Gift For You"
-    },
-    {
-      "sender": "Medium",
-      "subject": "How Medium is investing in the curation era"
     }
   ],
   "items": [
@@ -517,6 +566,28 @@ window.EMAIL_DATA = {
     },
     {
       "type": "class",
+      "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 6:00 AM",
+      "name": "CP Reformer Flow 1.5 (50 Mins) class",
+      "date": "2026-07-14",
+      "time": "06:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19f577d835f99039",
+      "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 5:00 PM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-07-16",
+      "time": "17:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f577a242893857",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
       "title": "CP Reformer Flow 2 (50 Mins) class \u00b7 4:00 PM",
       "name": "CP Reformer Flow 2 (50 Mins) class",
       "date": "2026-07-16",
@@ -525,6 +596,17 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19f13de3e5ee42e0",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "class",
+      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
+      "name": "Lagree - Foundations - 45 minutes",
+      "date": "2026-07-18",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "id": "19f577b77f9eb4b6",
+      "sender": "FORM BY TWO"
     }
   ]
 };
