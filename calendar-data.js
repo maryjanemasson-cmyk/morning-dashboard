@@ -477,11 +477,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Christian Hinrichs",
-      "subject": "Fwd: UMKC 30 year medical school reunion"
+      "sender": "Design Decor",
+      "subject": "Be ready to set the tone for fall"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "We know we're cute"
     },
     {
       "sender": "Tuti from LOOK OPTIC",
@@ -514,10 +518,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bake Time",
       "subject": "Homemade Pop-Tarts, Hostess Cupcakes and more"
-    },
-    {
-      "sender": "COS",
-      "subject": "Up to 60% off continues"
     }
   ],
   "items": [
