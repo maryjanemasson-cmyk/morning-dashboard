@@ -66,6 +66,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Appointment of Nathaniel Hinrichs",
+    "location": "",
+    "description": "Appointment of Nathaniel Hinrichs",
+    "startTime": "2026-07-17T13:10:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-17T13:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -488,31 +499,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 13,
   "threads": [
-    {
-      "sender": "Almina Concept",
-      "subject": "Take an additional 20% off sale"
-    },
-    {
-      "sender": "Glass House",
-      "subject": "Choose Your Own Drink Adventure \ud83c\udf78\u2728"
-    },
     {
       "sender": "noreply@cmrus.com",
       "subject": "Know Before You Go: AACR Drug Discovery and Development (AACR D3) conference starting July 21 in Boston"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "US Open Tickets: Be There for All the On-Court Action"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "The US Open: It\u2019s More Than a Tennis Tournament"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "Mark your calendars for your family's Dental appointment at Montgomery Pediatric Dentistry"
     },
     {
       "sender": "Design Decor",
@@ -529,6 +520,26 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"COOK WITH COLOR Bag Clips...\""
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les f\u00eates nationales \ud83c\udf86\""
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Romy Leather Charm Necklace"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "The M Jewelers",
+      "subject": "These Were Made for You\u2763\ufe0f"
     }
   ],
   "items": [
