@@ -488,19 +488,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 9,
   "threads": [
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Jose Rodriguez",
-      "subject": "Summer Tennis Camp"
-    },
-    {
-      "sender": "Claude Team",
-      "subject": "Fable 5 access and increased Claude Code rate limits are extended through Sunday, July 19"
     },
     {
       "sender": "Amazon.com",
@@ -529,6 +521,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "You shared some Google Account data with Mobapp"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Cosabella\u00ae Never Say Never...\""
     }
   ],
   "items": [
