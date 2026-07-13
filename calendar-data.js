@@ -488,8 +488,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Make a maker's day"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"COOK WITH COLOR Bag Clips...\""
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les f\u00eates nationales \ud83c\udf86\""
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Romy Leather Charm Necklace"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -501,18 +517,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The M Jewelers",
       "subject": "These Were Made for You\u2763\ufe0f"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 18, 2026 at 10:00 AM"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Confirmation: Lagree - Foundations - 45 minutes July 16, 2026 at 5:00 PM"
     },
     {
       "sender": "Google",
@@ -534,6 +538,13 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"COOK WITH COLOR Bag Clips...\"",
+      "date": "2026-07-13",
+      "id": "19f5b7c89c6c43dd",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
