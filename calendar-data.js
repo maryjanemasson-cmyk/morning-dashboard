@@ -510,8 +510,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "McGee & Co.",
+      "subject": "A shipment from order 1094271 is on the way"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Swiffer Duster Refill + 1...\""
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Cosabella\u00ae Never Say Never...\""
@@ -543,14 +551,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chan Luu",
       "subject": "The Romy Leather Charm Necklace"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item"
     }
   ],
   "items": [
