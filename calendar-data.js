@@ -513,8 +513,8 @@ window.EMAIL_DATA = {
   "unreadCount": 11,
   "threads": [
     {
-      "sender": "Suite Blend Color Bar",
-      "subject": "Reminder: Your appointment is on July 14, 2026 at 1:30 PM"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Cosabella\u00ae Never Say Never...\""
     },
     {
       "sender": "noreply@cmrus.com",
@@ -560,6 +560,13 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Cosabella\u00ae Never Say Never...\"",
+      "date": "2026-07-13",
+      "id": "19f5d10d111cbfe7",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
