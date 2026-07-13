@@ -11,6 +11,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "FW: Dinner with Dr. Qinqin Jiang at Witherspoon Grill ",
+    "location": " 57 Witherspoon St, Princeton, NJ 08542",
+    "description": "\n\nCONFIDENTIALITY NOTICE: This email communication may contain private, confidential, or legally privileged information intended for the sole use of the designated and/or duly authorized recipient(s). If you are not the intended recipient or have received this email in error, please notify the sender immediately by email and permanently delete all copies of this email including all attachments without reading them. If you are the intended recipient, secure the contents in a manner that conforms to all applicable state and/or federal requirements related to privacy and confidentiality of such information.\n\n\n________________________________\nFrom: Krystal Leidner <kl1088@cinj.rutgers.edu>\nSent: Wednesday, July 1, 2026 11:32:12 AM (UTC-05:00) Eastern Time (US & Canada)\nTo: Krystal Leidner <kl1088@cinj.rutgers.edu>; Christian Hinrichs <ch977@cinj.rutgers.edu>; Eileen White <epwhite@cinj.rutgers.edu>\nSubject: Dinner with Dr. Qinqin Jiang at Witherspoon Grill\nWhen: Monday, July 13, 2026 6:00 PM-8:00 PM.\nWhere: 57 Witherspoon St, Princeton, NJ 08542\n\nParty of 4 reservation under White - Dr. Jiang husband joining dinner his name is Chengyu Gao\n",
+    "startTime": "2026-07-13T18:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-13T20:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "CP Reformer Flow 1.5 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577d835f99039",
@@ -499,8 +510,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "Suite Blend Color Bar",
+      "subject": "Reminder: Your appointment is on July 14, 2026 at 1:30 PM"
+    },
     {
       "sender": "noreply@cmrus.com",
       "subject": "Know Before You Go: AACR Drug Discovery and Development (AACR D3) conference starting July 21 in Boston"
@@ -536,10 +551,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "The M Jewelers",
-      "subject": "These Were Made for You\u2763\ufe0f"
     }
   ],
   "items": [
