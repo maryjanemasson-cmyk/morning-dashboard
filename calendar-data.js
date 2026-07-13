@@ -510,23 +510,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item"
     },
     {
-      "sender": "no-reply@billing.metropolis.io",
-      "subject": "Metropolis Parking Payment"
+      "sender": "The M Jewelers",
+      "subject": "These Were Made for You\u2763\ufe0f"
     },
     {
       "sender": "Club Pilates Princeton",
       "subject": "New Booking Confirmation"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Build Your Resort Wardrobe"
     },
     {
       "sender": "FORM BY TWO",
@@ -547,10 +543,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \"Cosabella\u00ae Never Say Never...\""
-    },
-    {
-      "sender": "Tuti from LOOK OPTIC",
-      "subject": "Mary, A Special Gift For You"
     }
   ],
   "items": [
@@ -571,6 +563,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f55ac251559166",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item",
+      "date": "2026-07-13",
+      "id": "19f58d6909e3c480",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
