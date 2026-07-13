@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Lagree - All Levels - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f55ac251559166",
-    "startTime": "2026-07-12T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-12T11:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Reservation at El Vez",
-    "location": "",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNfOeh8jwIKGozHncjuEAW52T-a9sQN3pY\n",
-    "startTime": "2026-07-12T18:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-12T19:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -510,8 +488,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Jose Rodriguez",
+      "subject": "Summer Tennis Camp"
+    },
+    {
+      "sender": "Claude Team",
+      "subject": "Fable 5 access and increased Claude Code rate limits are extended through Sunday, July 19"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item"
@@ -539,10 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "You shared some Google Account data with Mobapp"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Cosabella\u00ae Never Say Never...\""
     }
   ],
   "items": [
@@ -552,17 +538,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - All Levels - 45 minutes \u00b7 11:00 AM",
-      "name": "Lagree - All Levels - 45 minutes",
-      "date": "2026-07-12",
-      "time": "11:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f55ac251559166",
-      "sender": "FORM BY TWO"
     },
     {
       "type": "delivery",
