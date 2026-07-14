@@ -513,6 +513,10 @@ window.EMAIL_DATA = {
   "unreadCount": 7,
   "threads": [
     {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"PETLIBRO Cat Water...\" and \u20661\u2069 more item"
+    },
+    {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Velvet Pear Subscription"
     },
@@ -535,10 +539,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "These brands are only at Lowe\u2019s\ud83c\udf1f"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Swiffer Duster Refill + 1...\""
     }
   ],
   "items": [
