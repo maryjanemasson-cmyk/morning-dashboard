@@ -510,8 +510,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Chan Luu",
+      "subject": "Silk Sarongs"
+    },
+    {
+      "sender": "Nest Home Report",
+      "subject": "Nest June Home Report for Home"
+    },
     {
       "sender": "PayPal",
       "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
