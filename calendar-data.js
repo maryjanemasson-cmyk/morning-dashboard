@@ -510,39 +510,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "WAT THE BRAND",
-      "subject": "End Of Summer Sale | Pieces Selling Fast"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 382516960012"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 874329061253"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Ending Soon: Free Collector's Case"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "McGee & Co.",
-      "subject": "A shipment from order 1094271 is on the way"
+      "sender": "Christian Hinrichs",
+      "subject": "Travel to NYC \u2014 V Foundation Boo-Yah"
     },
     {
       "sender": "Amazon.com",
@@ -551,6 +523,34 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Cosabella\u00ae Never Say Never...\""
+    },
+    {
+      "sender": "noreply@cmrus.com",
+      "subject": "Know Before You Go: AACR Drug Discovery and Development (AACR D3) conference starting July 21 in Boston"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Start Planning Your Fall Home Refresh"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "REMINDER: 15% Off Sitewide"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Make a maker's day"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"COOK WITH COLOR Bag Clips...\""
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les f\u00eates nationales \ud83c\udf86\""
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Romy Leather Charm Necklace"
     }
   ],
   "items": [
