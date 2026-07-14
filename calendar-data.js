@@ -510,15 +510,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 7,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "The Marseille Edit"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Get up to a 95% bonus when you buy miles"
+    },
     {
       "sender": "Hotels.com",
       "subject": "No plans? No problem"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Tide 4-in-1 Ultra Oxi PODS...\""
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
