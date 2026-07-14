@@ -513,24 +513,24 @@ window.EMAIL_DATA = {
   "unreadCount": 5,
   "threads": [
     {
+      "sender": "Hotels.com",
+      "subject": "No plans? No problem"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Tide 4-in-1 Ultra Oxi PODS...\""
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "These brands are only at Lowe\u2019s\ud83c\udf1f"
+    },
+    {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Swiffer Duster Refill + 1...\""
     },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Cosabella\u00ae Never Say Never...\""
-    },
-    {
-      "sender": "noreply@cmrus.com",
-      "subject": "Know Before You Go: AACR Drug Discovery and Development (AACR D3) conference starting July 21 in Boston"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Start Planning Your Fall Home Refresh"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "REMINDER: 15% Off Sitewide"
     }
   ],
   "items": [
@@ -551,6 +551,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19f577d835f99039",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \"Tide 4-in-1 Ultra Oxi PODS...\"",
+      "date": "2026-07-14",
+      "id": "19f6115a37a7a87c",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
