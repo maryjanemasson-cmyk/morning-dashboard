@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-07-13T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-13T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "FW: Dinner with Dr. Qinqin Jiang at Witherspoon Grill ",
-    "location": " 57 Witherspoon St, Princeton, NJ 08542",
-    "description": "\n\nCONFIDENTIALITY NOTICE: This email communication may contain private, confidential, or legally privileged information intended for the sole use of the designated and/or duly authorized recipient(s). If you are not the intended recipient or have received this email in error, please notify the sender immediately by email and permanently delete all copies of this email including all attachments without reading them. If you are the intended recipient, secure the contents in a manner that conforms to all applicable state and/or federal requirements related to privacy and confidentiality of such information.\n\n\n________________________________\nFrom: Krystal Leidner <kl1088@cinj.rutgers.edu>\nSent: Wednesday, July 1, 2026 11:32:12 AM (UTC-05:00) Eastern Time (US & Canada)\nTo: Krystal Leidner <kl1088@cinj.rutgers.edu>; Christian Hinrichs <ch977@cinj.rutgers.edu>; Eileen White <epwhite@cinj.rutgers.edu>\nSubject: Dinner with Dr. Qinqin Jiang at Witherspoon Grill\nWhen: Monday, July 13, 2026 6:00 PM-8:00 PM.\nWhere: 57 Witherspoon St, Princeton, NJ 08542\n\nParty of 4 reservation under White - Dr. Jiang husband joining dinner his name is Chengyu Gao\n",
-    "startTime": "2026-07-13T18:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-13T20:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "CP Reformer Flow 1.5 (50 Mins) class",
     "location": "Club Pilates Princeton",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577d835f99039",
@@ -193,6 +171,28 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-07-25T10:00:00-04:00",
     "startDate": "",
     "endTime": "2026-07-25T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-07-27T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-27T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "Flight to Jackson (AA 3246)",
+    "location": "New York JFK",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DO5rRTmMlQUMvdmF_awFbwEVeMwoVPp2c0\n",
+    "startTime": "2026-07-27T09:59:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-27T15:02:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -510,8 +510,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "End Of Summer Sale | Pieces Selling Fast"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 382516960012"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 874329061253"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "Ending Soon: Free Collector's Case"
@@ -531,26 +551,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"Cosabella\u00ae Never Say Never...\""
-    },
-    {
-      "sender": "noreply@cmrus.com",
-      "subject": "Know Before You Go: AACR Drug Discovery and Development (AACR D3) conference starting July 21 in Boston"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Start Planning Your Fall Home Refresh"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "REMINDER: 15% Off Sitewide"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Make a maker's day"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"COOK WITH COLOR Bag Clips...\""
     }
   ],
   "items": [
@@ -562,27 +562,6 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "delivery",
-      "title": "Shipped: \"Cosabella\u00ae Never Say Never...\"",
-      "date": "2026-07-13",
-      "id": "19f5d10d111cbfe7",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"COOK WITH COLOR Bag Clips...\"",
-      "date": "2026-07-13",
-      "id": "19f5b7c89c6c43dd",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20663\u2069 \"Wagner's 13008 Deluxe Wild...\" and \u20661\u2069 more item",
-      "date": "2026-07-13",
-      "id": "19f58d6909e3c480",
-      "sender": "Amazon.com"
-    },
-    {
       "type": "class",
       "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 6:00 AM",
       "name": "CP Reformer Flow 1.5 (50 Mins) class",
@@ -592,6 +571,13 @@ window.EMAIL_DATA = {
       "location": "Club Pilates Princeton",
       "id": "19f577d835f99039",
       "sender": "Club Pilates Princeton"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #382516960012",
+      "date": "2026-07-15",
+      "id": "19f5f00164910de8",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
