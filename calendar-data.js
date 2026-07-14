@@ -510,15 +510,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "Silk Sarongs"
-    },
-    {
-      "sender": "Nest Home Report",
-      "subject": "Nest June Home Report for Home"
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Velvet Pear Subscription"
     },
     {
       "sender": "PayPal",
@@ -543,10 +539,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Swiffer Duster Refill + 1...\""
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Cosabella\u00ae Never Say Never...\""
     }
   ],
   "items": [
