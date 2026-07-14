@@ -510,12 +510,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 5,
   "threads": [
-    {
-      "sender": "Christian Hinrichs",
-      "subject": "Travel to NYC \u2014 V Foundation Boo-Yah"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \"Swiffer Duster Refill + 1...\""
@@ -535,22 +531,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Shade Store",
       "subject": "REMINDER: 15% Off Sitewide"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Make a maker's day"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"COOK WITH COLOR Bag Clips...\""
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Les f\u00eates nationales \ud83c\udf86\""
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Romy Leather Charm Necklace"
     }
   ],
   "items": [
