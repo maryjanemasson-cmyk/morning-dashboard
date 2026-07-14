@@ -513,6 +513,14 @@ window.EMAIL_DATA = {
   "unreadCount": 13,
   "threads": [
     {
+      "sender": "LOOK OPTIC",
+      "subject": "Ending Soon: Free Collector's Case"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
       "sender": "McGee & Co.",
       "subject": "A shipment from order 1094271 is on the way"
     },
@@ -543,14 +551,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \"COOK WITH COLOR Bag Clips...\""
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Les f\u00eates nationales \ud83c\udf86\""
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Romy Leather Charm Necklace"
     }
   ],
   "items": [
