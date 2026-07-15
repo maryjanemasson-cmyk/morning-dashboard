@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "CP Reformer Flow 1.5 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577d835f99039",
-    "startTime": "2026-07-14T06:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-14T06:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Your Appointment at Suite Blend Color Bar",
-    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
-    "description": "SERVICE\nSingle Root Touch Up with blowout\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/f40421e2d14b4331fa6a3176b9a3464af507",
-    "startTime": "2026-07-14T13:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-14T15:05:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Priya's birthday",
     "location": "",
     "description": "",
@@ -544,24 +522,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 6:00 AM",
-      "name": "CP Reformer Flow 1.5 (50 Mins) class",
-      "date": "2026-07-14",
-      "time": "06:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19f577d835f99039",
-      "sender": "Club Pilates Princeton"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Tide 4-in-1 Ultra Oxi PODS...\"",
-      "date": "2026-07-14",
-      "id": "19f6115a37a7a87c",
-      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
