@@ -488,31 +488,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Velvet Pear Subscription"
+      "sender": "Chan Luu",
+      "subject": "The Techno Taffeta Ultra Wide Leg Trouser in Tulip Stem"
     },
     {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
+      "sender": "Club Pilates Princeton",
+      "subject": "Booking Cancellation Confirmation"
     },
     {
-      "sender": "& Other Stories",
-      "subject": "The Marseille Edit"
+      "sender": "Kensington",
+      "subject": "Our experts recommend where you should go next"
     },
     {
       "sender": "MileagePlus Program",
-      "subject": "Get up to a 95% bonus when you buy miles"
+      "subject": "Try Award Accelerator on your upcoming trip to Boston"
     },
     {
-      "sender": "Hotels.com",
-      "subject": "No plans? No problem"
+      "sender": "PayPal",
+      "subject": "Buy it now. Pay for it later."
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "These brands are only at Lowe\u2019s\ud83c\udf1f"
+      "sender": "Holafly",
+      "subject": "The cashback from your last purchase is here! Here's how to use it"
+    },
+    {
+      "sender": "MySchoolBucks",
+      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
+    },
+    {
+      "sender": "Bowdens Fireside Hearth and Home",
+      "subject": "\ud83d\udd25 Did You Know Bowden's Does More Than Fireplaces?"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "ORDER UP"
+    },
+    {
+      "sender": "ALO",
+      "subject": "Tell us what's up"
     }
   ],
   "items": [
