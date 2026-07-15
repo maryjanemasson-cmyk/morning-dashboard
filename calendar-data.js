@@ -510,12 +510,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 6,
   "threads": [
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"PETLIBRO Cat Water...\" and \u20661\u2069 more item"
-    },
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Velvet Pear Subscription"
