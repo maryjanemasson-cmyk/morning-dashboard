@@ -488,47 +488,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Lawrence Animal Hospital (lawrenceah@yourvetdoc.com)",
-      "subject": "Invoice from Lawrence Animal Hospital (907573)"
+      "sender": "IHG One Rewards",
+      "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
     },
     {
-      "sender": "Jules Thin Crust",
-      "subject": "Jules Thin Crust Summer Specials Are Here!"
+      "sender": "Enterprise Plus",
+      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus July eStatement"
     },
     {
-      "sender": "Pizzeria Popolare",
-      "subject": "Nouvelle carte, nouveaux prix"
+      "sender": "The Shade Store",
+      "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
     },
     {
-      "sender": "Emily Ley",
-      "subject": "My Worth It List: Time Edition"
+      "sender": "Buck Mason",
+      "subject": "The Seafarer Cardigan is Back"
     },
     {
-      "sender": "headtrainer1563",
-      "subject": "\ud83c\udfc3\u200d\u2640\ufe0f Marathon Month Registration is OPEN! \ud83c\udf0e\u2708\ufe0f"
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Our student of the month \ud83c\udf1f\""
     },
     {
-      "sender": "PayPal",
-      "subject": "Plan for the big match with PayPal"
+      "sender": "BOSS",
+      "subject": "Extra 15% off all sale starts now!"
     },
     {
-      "sender": "Etsy",
-      "subject": "Make it a small-shop summer \ud83d\ude0e"
+      "sender": "LOOK OPTIC",
+      "subject": "Game On: BOGO 60% Off Sitewide"
     },
     {
-      "sender": "Ro",
-      "subject": "The lowest cash-pay Wegovy\u00ae price, guaranteed"
+      "sender": "Medium Daily Digest",
+      "subject": "The Basics of Becoming Wise | Darius Foroux"
     },
     {
-      "sender": "Reformation",
-      "subject": "THE OCCASION COLLECTION"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 16 Jul 2026"
     },
     {
-      "sender": "Eleanor Dath",
-      "subject": "Re: Introductions for potential travel planning"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
     }
   ],
   "items": [
