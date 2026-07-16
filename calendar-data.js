@@ -488,11 +488,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "The Techno Taffeta Ultra Wide Leg Trouser in Tulip Stem"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 382516960012"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \"Large Capacity Travel...\""
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
     },
     {
       "sender": "Club Pilates Princeton",
@@ -521,14 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bowdens Fireside Hearth and Home",
       "subject": "\ud83d\udd25 Did You Know Bowden's Does More Than Fireplaces?"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "ORDER UP"
-    },
-    {
-      "sender": "ALO",
-      "subject": "Tell us what's up"
     }
   ],
   "items": [
@@ -540,13 +540,6 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #382516960012",
-      "date": "2026-07-15",
-      "id": "19f5f00164910de8",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
       "type": "class",
       "title": "Lagree - Foundations - 45 minutes \u00b7 5:00 PM",
       "name": "Lagree - Foundations - 45 minutes",
@@ -556,6 +549,13 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f577a242893857",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #382516960012",
+      "date": "2026-07-16",
+      "id": "19f686a09b234a49",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
