@@ -488,27 +488,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Airport Outfits \u2708\ufe0f"
-    },
-    {
-      "sender": "McGee & Co",
-      "subject": "Your package will arrive tomorrow!"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 382516960012"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \"Large Capacity Travel...\""
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 16 Jul 2026"
     },
     {
       "sender": "Amazon.com",
@@ -529,6 +513,22 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Buy it now. Pay for it later."
+    },
+    {
+      "sender": "Holafly",
+      "subject": "The cashback from your last purchase is here! Here's how to use it"
+    },
+    {
+      "sender": "MySchoolBucks",
+      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
+    },
+    {
+      "sender": "Bowdens Fireside Hearth and Home",
+      "subject": "\ud83d\udd25 Did You Know Bowden's Does More Than Fireplaces?"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "ORDER UP"
     }
   ],
   "items": [
