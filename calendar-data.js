@@ -488,8 +488,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Table"
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
+    },
+    {
+      "sender": "Enterprise Plus",
+      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus July eStatement"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Seafarer Cardigan is Back"
+    },
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Our student of the month \ud83c\udf1f\""
@@ -509,26 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 16 Jul 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Booking Cancellation Confirmation"
-    },
-    {
-      "sender": "Kensington",
-      "subject": "Our experts recommend where you should go next"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Try Award Accelerator on your upcoming trip to Boston"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Buy it now. Pay for it later."
     }
   ],
   "items": [
