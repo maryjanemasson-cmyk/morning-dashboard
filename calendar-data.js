@@ -488,8 +488,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Our student of the month \ud83c\udf1f\""
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Extra 15% off all sale starts now!"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Game On: BOGO 60% Off Sitewide"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "The Basics of Becoming Wise | Darius Foroux"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 16 Jul 2026"
@@ -513,22 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Buy it now. Pay for it later."
-    },
-    {
-      "sender": "Holafly",
-      "subject": "The cashback from your last purchase is here! Here's how to use it"
-    },
-    {
-      "sender": "MySchoolBucks",
-      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
-    },
-    {
-      "sender": "Bowdens Fireside Hearth and Home",
-      "subject": "\ud83d\udd25 Did You Know Bowden's Does More Than Fireplaces?"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "ORDER UP"
     }
   ],
   "items": [
