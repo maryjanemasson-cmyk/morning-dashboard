@@ -488,11 +488,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Table"
+      "sender": "PayPal",
+      "subject": "Plan for the big match with PayPal"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Make it a small-shop summer \ud83d\ude0e"
+    },
+    {
+      "sender": "Ro",
+      "subject": "The lowest cash-pay Wegovy\u00ae price, guaranteed"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "THE OCCASION COLLECTION"
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "Re: Introductions for potential travel planning"
     },
     {
       "sender": "IHG One Rewards",
@@ -513,22 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Our student of the month \ud83c\udf1f\""
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Extra 15% off all sale starts now!"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Game On: BOGO 60% Off Sitewide"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "The Basics of Becoming Wise | Darius Foroux"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 16 Jul 2026"
     }
   ],
   "items": [
