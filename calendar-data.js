@@ -488,8 +488,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Emily Ley",
+      "subject": "My Worth It List: Time Edition"
+    },
+    {
+      "sender": "headtrainer1563",
+      "subject": "\ud83c\udfc3\u200d\u2640\ufe0f Marathon Month Registration is OPEN! \ud83c\udf0e\u2708\ufe0f"
+    },
     {
       "sender": "PayPal",
       "subject": "Plan for the big match with PayPal"
@@ -521,14 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Shade Store",
       "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Seafarer Cardigan is Back"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Our student of the month \ud83c\udf1f\""
     }
   ],
   "items": [
