@@ -488,8 +488,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Lawrence Animal Hospital (lawrenceah@yourvetdoc.com)",
+      "subject": "Invoice from Lawrence Animal Hospital (907573)"
+    },
+    {
+      "sender": "Jules Thin Crust",
+      "subject": "Jules Thin Crust Summer Specials Are Here!"
+    },
+    {
+      "sender": "Pizzeria Popolare",
+      "subject": "Nouvelle carte, nouveaux prix"
+    },
     {
       "sender": "Emily Ley",
       "subject": "My Worth It List: Time Edition"
@@ -517,18 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Eleanor Dath",
       "subject": "Re: Introductions for potential travel planning"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
-    },
-    {
-      "sender": "Enterprise Plus",
-      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus July eStatement"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
     }
   ],
   "items": [
