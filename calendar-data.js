@@ -11,6 +11,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reservation at Roots Ocean Prime",
+    "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMNlRkaI31pDNVmKS56tmmpTUEVx0j2org\n",
+    "startTime": "2026-07-17T18:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-17T19:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -455,19 +466,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Walpole Outdoors",
-      "subject": "Refresh Your Home for Summer"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
+    },
+    {
+      "sender": "New York Jets",
+      "subject": "Be There For Back Together Weekend!"
+    },
+    {
+      "sender": "Lyft Receipts",
+      "subject": "Your ride with Giorgi on July 17"
+    },
+    {
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at Roots Ocean Prime is confirmed"
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "Your cancelled appointment at Montgomery Pediatric Dentistry"
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "See you soon for your family's dental appointment at Montgomery Pediatric Dentistry"
     },
     {
       "sender": "FORM BY TWO",
       "subject": "Class Reminder for Lagree - Foundations"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "The collection I've been dreaming about all year"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -478,24 +505,8 @@ window.EMAIL_DATA = {
       "subject": "Room for What's Coming \u2014 30% Off Starts Now"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 382516960012"
-    },
-    {
-      "sender": "Ellen Ge",
-      "subject": "Invitation to Meet - Leslie Dan Faculty of Pharmacy"
-    },
-    {
-      "sender": "COS",
-      "subject": "Summer signatures: T-shirts & tanks"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Meet the Millers"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Rare finds from real people \ud83d\udc40"
+      "sender": "LOOK OPTIC",
+      "subject": "The World Cup Sale Is Here: BOGO 60% Off"
     }
   ],
   "items": [
