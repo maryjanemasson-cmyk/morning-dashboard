@@ -455,8 +455,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 874329061253"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "The First Layer"
+    },
+    {
+      "sender": "Nathaniel Hinrichs (via Google Docs)",
+      "subject": "Share request for \"NOLS_Packing_Checklist.md\""
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "BOGO 60% Off Over World Cup Weekend"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 7/17 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "How to Generate 3D Models from Images with Python | Florent Poux, Ph.D. in Data Science Collective"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 17 Jul 2026"
@@ -468,34 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "The World Cup Sale Is Here: BOGO 60% Off"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, Congratulations! See how you can earn 75,000 Membership Rewards\u00ae points. Learn More"
-    },
-    {
-      "sender": "Printemps New York",
-      "subject": "Escape to the Riviera\u2014Printemps New York"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Reminder: Christian, you've been selected to earn 200,000 Membership Rewards\u00ae points with the Business Gold Card."
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
-    },
-    {
-      "sender": "Enterprise Plus",
-      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus July eStatement"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Seafarer Cardigan is Back"
     }
   ],
   "items": [
