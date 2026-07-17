@@ -466,8 +466,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "OpenAI",
+      "subject": "OpenAI Dev News: OpenAI Build Week, GPT-5.6, ChatGPT Work"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 532782672770"
+    },
+    {
+      "sender": "GreenDrop Information",
+      "subject": "Last chance to schedule for next week\u2019s pickup!"
+    },
     {
       "sender": "MySchoolBucks",
       "subject": "Upcoming Change to the MySchoolBucks Program Fee"
@@ -495,18 +507,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Montgomery Pediatric Dentistry",
       "subject": "Your cancelled appointment at Montgomery Pediatric Dentistry"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "See you soon for your family's dental appointment at Montgomery Pediatric Dentistry"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Don't miss this Closeout Event \ud83d\udc49"
     }
   ],
   "items": [
@@ -516,6 +516,13 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #532782672770",
+      "date": "2026-07-17",
+      "id": "19f71d3ce56d174a",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
