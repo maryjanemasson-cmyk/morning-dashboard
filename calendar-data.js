@@ -466,8 +466,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "MySchoolBucks",
+      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Your Silver Prices are waiting"
+    },
     {
       "sender": "Google",
       "subject": "You shared some Google Account data with Claude"
@@ -499,14 +507,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Don't miss this Closeout Event \ud83d\udc49"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Room for What's Coming \u2014 30% Off Starts Now"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "The World Cup Sale Is Here: BOGO 60% Off"
     }
   ],
   "items": [
