@@ -455,47 +455,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 23,
   "threads": [
     {
+      "sender": "Walpole Outdoors",
+      "subject": "Refresh Your Home for Summer"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "The collection I've been dreaming about all year"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Don't miss this Closeout Event \ud83d\udc49"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Room for What's Coming \u2014 30% Off Starts Now"
+    },
+    {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 874329061253"
+      "subject": "Your shipment is out for delivery today 382516960012"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "The First Layer"
+      "sender": "Ellen Ge",
+      "subject": "Invitation to Meet - Leslie Dan Faculty of Pharmacy"
     },
     {
-      "sender": "Nathaniel Hinrichs (via Google Docs)",
-      "subject": "Share request for \"NOLS_Packing_Checklist.md\""
+      "sender": "COS",
+      "subject": "Summer signatures: T-shirts & tanks"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "BOGO 60% Off Over World Cup Weekend"
+      "sender": "Schoolhouse",
+      "subject": "Meet the Millers"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 7/17 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "How to Generate 3D Models from Images with Python | Florent Poux, Ph.D. in Data Science Collective"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 17 Jul 2026"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "The World Cup Sale Is Here: BOGO 60% Off"
+      "sender": "Etsy",
+      "subject": "Rare finds from real people \ud83d\udc40"
     }
   ],
   "items": [
