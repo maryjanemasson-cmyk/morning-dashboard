@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Priya's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-07-16",
-    "endTime": "",
-    "endDate": "2026-07-17",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "CP Reformer Flow 2 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f13de3e5ee42e0",
-    "startTime": "2026-07-16T16:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-16T16:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577a242893857",
-    "startTime": "2026-07-16T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-16T17:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Appointment of Nathaniel Hinrichs",
     "location": "",
     "description": "Appointment of Nathaniel Hinrichs",
@@ -488,8 +455,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Shifa Aamir",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Mathnasium of Princeton",
+      "subject": "Payment Receipt from Mathnasium of Princeton"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $11,780.91 deposit was credited to your account."
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \"Large Capacity Travel...\" and \u20661\u2069 more item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "LinkedIn Research",
+      "subject": "Your expertise is requested"
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "The World Cup Sale Is Here: BOGO 60% Off"
@@ -505,30 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "American Express",
       "subject": "Reminder: Christian, you've been selected to earn 200,000 Membership Rewards\u00ae points with the Business Gold Card."
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
-    },
-    {
-      "sender": "Enterprise Plus",
-      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus July eStatement"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Seafarer Cardigan is Back"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Our student of the month \ud83c\udf1f\""
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Extra 15% off all sale starts now!"
     }
   ],
   "items": [
@@ -540,22 +507,11 @@ window.EMAIL_DATA = {
       "sender": "return@amazon.com"
     },
     {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 5:00 PM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-07-16",
-      "time": "17:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f577a242893857",
-      "sender": "FORM BY TWO"
-    },
-    {
       "type": "delivery",
-      "title": "FedEx arriving tomorrow #382516960012",
-      "date": "2026-07-16",
-      "id": "19f686a09b234a49",
-      "sender": "FedEx Delivery Manager"
+      "title": "Shipped: \"Large Capacity Travel...\" and \u20661\u2069 more item",
+      "date": "2026-07-17",
+      "id": "19f6dc67b3ffe033",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
