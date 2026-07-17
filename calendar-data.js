@@ -13,7 +13,7 @@ window.CALENDAR_EVENTS = [
   {
     "summary": "Reservation at Roots Ocean Prime",
     "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMNlRkaI31pDNVmKS56tmmpTUEVx0j2org\n",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar",
     "startTime": "2026-07-17T18:00:00-04:00",
     "startDate": "",
     "endTime": "2026-07-17T19:00:00-04:00",
@@ -466,19 +466,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "OpenAI",
-      "subject": "OpenAI Dev News: OpenAI Build Week, GPT-5.6, ChatGPT Work"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 532782672770"
-    },
-    {
-      "sender": "GreenDrop Information",
-      "subject": "Last chance to schedule for next week\u2019s pickup!"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Get To The Green"
     },
     {
       "sender": "MySchoolBucks",
@@ -501,12 +493,20 @@ window.EMAIL_DATA = {
       "subject": "Your ride with Giorgi on July 17"
     },
     {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at Roots Ocean Prime is confirmed"
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "See you soon for your family's dental appointment at Montgomery Pediatric Dentistry"
     },
     {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "Your cancelled appointment at Montgomery Pediatric Dentistry"
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Don't miss this Closeout Event \ud83d\udc49"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Room for What's Coming \u2014 30% Off Starts Now"
     }
   ],
   "items": [
@@ -516,13 +516,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #532782672770",
-      "date": "2026-07-17",
-      "id": "19f71d3ce56d174a",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "class",
