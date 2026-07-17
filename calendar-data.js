@@ -488,8 +488,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "The World Cup Sale Is Here: BOGO 60% Off"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, Congratulations! See how you can earn 75,000 Membership Rewards\u00ae points. Learn More"
+    },
+    {
+      "sender": "Printemps New York",
+      "subject": "Escape to the Riviera\u2014Printemps New York"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Reminder: Christian, you've been selected to earn 200,000 Membership Rewards\u00ae points with the Business Gold Card."
+    },
     {
       "sender": "IHG One Rewards",
       "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
@@ -513,22 +529,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Extra 15% off all sale starts now!"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Game On: BOGO 60% Off Sitewide"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "The Basics of Becoming Wise | Darius Foroux"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 16 Jul 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Tide 4-in-1 Ultra Oxi PODS...\""
     }
   ],
   "items": [
