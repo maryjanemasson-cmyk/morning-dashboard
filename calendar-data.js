@@ -455,31 +455,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Shifa Aamir",
-      "subject": "You have an invitation"
-    },
-    {
-      "sender": "Mathnasium of Princeton",
-      "subject": "Payment Receipt from Mathnasium of Princeton"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 17 Jul 2026"
     },
     {
       "sender": "PNC Alerts",
-      "subject": "A $11,780.91 deposit was credited to your account."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \"Large Capacity Travel...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "LinkedIn Research",
-      "subject": "Your expertise is requested"
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
       "sender": "LOOK OPTIC",
@@ -496,6 +480,22 @@ window.EMAIL_DATA = {
     {
       "sender": "American Express",
       "subject": "Reminder: Christian, you've been selected to earn 200,000 Membership Rewards\u00ae points with the Business Gold Card."
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "See offers of up to 140K bonus points for our IHG Credit Cards \ud83d\udcb3"
+    },
+    {
+      "sender": "Enterprise Plus",
+      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus July eStatement"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "STARTS TODAY: 20% Off the Roller Shade Collection"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Seafarer Cardigan is Back"
     }
   ],
   "items": [
@@ -505,13 +505,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \"Large Capacity Travel...\" and \u20661\u2069 more item",
-      "date": "2026-07-17",
-      "id": "19f6dc67b3ffe033",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
