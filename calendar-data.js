@@ -444,8 +444,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "BOSS",
+      "subject": "Up to 50% Off + Extra 15% Off"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Building a Personal AI Agent in a couple of Hours | Ivo Bernardo"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 18 Jul 2026"
@@ -473,18 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "MySchoolBucks",
       "subject": "Upcoming Change to the MySchoolBucks Program Fee"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Your Silver Prices are waiting"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
-    },
-    {
-      "sender": "New York Jets",
-      "subject": "Be There For Back Together Weekend!"
     }
   ],
   "items": [
