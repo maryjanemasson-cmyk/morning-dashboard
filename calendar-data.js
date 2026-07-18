@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Stay at Kimpton Marlowe Hotel",
+    "location": "25 Edwin H Land Boulevard, Cambridge, Massachusetts 02141, United States",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DN_j3tG1lyoxPmXBBz-H_4iT_pdiBYBJng\n",
+    "startTime": "",
+    "startDate": "2026-07-21",
+    "endTime": "",
+    "endDate": "2026-07-24",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "AACR Drug Discovery in Boston",
     "location": "Microsoft Teams Meeting",
     "description": "\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/323636501049723?p=41T9dS7oS5oqnbnjek\nMeeting ID: 323 636 501 049 723\nPasscode: j95Yp3GR\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2Q3YTIwNTgtZDQxYi00YjU1LWFhMzktMWQ0MTI2MDJiM2U3%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,827395510#<tel:+12134588494,,827395510> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=827395510>\nPhone conference ID: 827 395 510#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 125 039 305 4\nMore info<https://www.webex.com/msteams?confid=1250393054&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Y2Q3YTIwNTgtZDQxYi00YjU1LWFhMzktMWQ0MTI2MDJiM2U3@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
@@ -447,20 +458,32 @@ window.EMAIL_DATA = {
   "unreadCount": 18,
   "threads": [
     {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Ends tomorrow: Big can't-miss appliance deals\u203c\ufe0f"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "Hello, mango lime loaf cake"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "JUST DROPPED: Air Jordan 3 'True Blue' 2026"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Your summer, curated to a tee \ud83d\ude0e"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Big Oxford"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "BOGO 60% Off During Our World Cup Sale"
+    },
+    {
       "sender": "BOSS",
       "subject": "Up to 50% Off + Extra 15% Off"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Building a Personal AI Agent in a couple of Hours | Ivo Bernardo"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 18 Jul 2026"
     },
     {
       "sender": "Tiffany & Co. | Luxury Jewellery, Gifts & Accessories Since 1837 via Updox",
@@ -473,18 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Trip.com",
       "subject": "\ud83c\udf1f Your Weekly Deals Roundup"
-    },
-    {
-      "sender": "Tuti from LOOK OPTIC",
-      "subject": "We Can All Root For BOGO 60% Off"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Get To The Green"
-    },
-    {
-      "sender": "MySchoolBucks",
-      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
     }
   ],
   "items": [
