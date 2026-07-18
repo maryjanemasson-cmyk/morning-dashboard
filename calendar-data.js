@@ -444,28 +444,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Your Go-To Summer Dress \u2600\ufe0f"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 532782672770"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Credit Karma",
-      "subject": "Terms of Service update"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
-    },
     {
       "sender": "Tiffany & Co. | Luxury Jewellery, Gifts & Accessories Since 1837 via Updox",
       "subject": "Just for you"
@@ -483,8 +463,28 @@ window.EMAIL_DATA = {
       "subject": "We Can All Root For BOGO 60% Off"
     },
     {
-      "sender": "Aritzia",
-      "subject": "En route: Order D4758233"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Get To The Green"
+    },
+    {
+      "sender": "MySchoolBucks",
+      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Your Silver Prices are waiting"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
+    },
+    {
+      "sender": "New York Jets",
+      "subject": "Be There For Back Together Weekend!"
+    },
+    {
+      "sender": "Lyft Receipts",
+      "subject": "Your ride with Giorgi on July 17"
     }
   ],
   "items": [
