@@ -444,8 +444,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 18 Jul 2026"
+    },
     {
       "sender": "Tiffany & Co. | Luxury Jewellery, Gifts & Accessories Since 1837 via Updox",
       "subject": "Just for you"
@@ -481,10 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "New York Jets",
       "subject": "Be There For Back Together Weekend!"
-    },
-    {
-      "sender": "Lyft Receipts",
-      "subject": "Your ride with Giorgi on July 17"
     }
   ],
   "items": [
