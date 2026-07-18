@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Appointment of Nathaniel Hinrichs",
-    "location": "",
-    "description": "Appointment of Nathaniel Hinrichs",
-    "startTime": "2026-07-17T13:10:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-17T13:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at Roots Ocean Prime",
-    "location": "Roots Ocean Prime, 98 University Place, (Between Pyne Dr and Alexander St), Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar",
-    "startTime": "2026-07-17T18:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-17T19:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -466,8 +444,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your Go-To Summer Dress \u2600\ufe0f"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 532782672770"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Credit Karma",
+      "subject": "Terms of Service update"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
+    {
+      "sender": "Tiffany & Co. | Luxury Jewellery, Gifts & Accessories Since 1837 via Updox",
+      "subject": "Just for you"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 1 new invitation"
@@ -483,30 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Aritzia",
       "subject": "En route: Order D4758233"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \"Large Capacity Travel...\" and \u20661\u2069 more item"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Get To The Green"
-    },
-    {
-      "sender": "MySchoolBucks",
-      "subject": "Upcoming Change to the MySchoolBucks Program Fee"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Your Silver Prices are waiting"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
-    },
-    {
-      "sender": "New York Jets",
-      "subject": "Be There For Back Together Weekend!"
     }
   ],
   "items": [
@@ -527,6 +505,20 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "id": "19f577b77f9eb4b6",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Your package will be delivered soon D4758233",
+      "date": "2026-07-18",
+      "id": "19f741dc3657b301",
+      "sender": "Aritzia"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #532782672770",
+      "date": "2026-07-18",
+      "id": "19f73932e5a9ef89",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
