@@ -455,7 +455,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 15,
   "threads": [
     {
       "sender": "FORM BY TWO",
