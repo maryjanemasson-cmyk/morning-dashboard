@@ -455,19 +455,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, your trip to Cambridge, MA is starting soon!"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Skincare item"
     },
     {
-      "sender": "Reformation",
-      "subject": "BASICALLY EVERYTHING"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Toy item"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Cutout Sequin Chiffon Tunic"
+      "sender": "FreshDirect",
+      "subject": "New Sign-in Alert, Please Verify Your Account"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
     },
     {
       "sender": "Abby Arad from Your Stylist Says...",
@@ -476,10 +480,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Laurent Chapuis",
       "subject": "Private Sale: One of the Smartest Wine Purchases You'll Make"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "Let us reschedule your canceled dental appointment"
     },
     {
       "sender": "us.bape.com",
