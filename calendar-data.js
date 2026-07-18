@@ -455,8 +455,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, your trip to Cambridge, MA is starting soon!"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "BASICALLY EVERYTHING"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Cutout Sequin Chiffon Tunic"
+    },
+    {
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "The trends we\u2019ll be wearing this fall\u2026"
+    },
+    {
+      "sender": "Laurent Chapuis",
+      "subject": "Private Sale: One of the Smartest Wine Purchases You'll Make"
+    },
+    {
+      "sender": "Montgomery Pediatric Dentistry",
+      "subject": "Let us reschedule your canceled dental appointment"
+    },
+    {
+      "sender": "us.bape.com",
+      "subject": "VANS x BAPE\u00ae"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Ends tomorrow: Big can't-miss appliance deals\u203c\ufe0f"
@@ -468,34 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "GOAT",
       "subject": "JUST DROPPED: Air Jordan 3 'True Blue' 2026"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Your summer, curated to a tee \ud83d\ude0e"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Big Oxford"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "BOGO 60% Off During Our World Cup Sale"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Up to 50% Off + Extra 15% Off"
-    },
-    {
-      "sender": "Tiffany & Co. | Luxury Jewellery, Gifts & Accessories Since 1837 via Updox",
-      "subject": "Just for you"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 1 new invitation"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83c\udf1f Your Weekly Deals Roundup"
     }
   ],
   "items": [
