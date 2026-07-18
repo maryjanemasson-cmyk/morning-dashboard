@@ -455,20 +455,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 16,
   "threads": [
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Skincare item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Toy item"
-    },
-    {
-      "sender": "FreshDirect",
-      "subject": "New Sign-in Alert, Please Verify Your Account"
-    },
     {
       "sender": "FORM BY TWO",
       "subject": "FORM BY TWO Class Confirmation"
@@ -496,6 +484,18 @@ window.EMAIL_DATA = {
     {
       "sender": "GOAT",
       "subject": "JUST DROPPED: Air Jordan 3 'True Blue' 2026"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Your summer, curated to a tee \ud83d\ude0e"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Big Oxford"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "BOGO 60% Off During Our World Cup Sale"
     }
   ],
   "items": [
