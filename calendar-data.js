@@ -466,8 +466,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 1 new invitation"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\ud83c\udf1f Your Weekly Deals Roundup"
+    },
+    {
+      "sender": "Tuti from LOOK OPTIC",
+      "subject": "We Can All Root For BOGO 60% Off"
+    },
+    {
+      "sender": "Aritzia",
+      "subject": "En route: Order D4758233"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \"Large Capacity Travel...\" and \u20661\u2069 more item"
+    },
     {
       "sender": "The Weather Channel",
       "subject": "On Your Radar: Get To The Green"
@@ -487,26 +507,6 @@ window.EMAIL_DATA = {
     {
       "sender": "New York Jets",
       "subject": "Be There For Back Together Weekend!"
-    },
-    {
-      "sender": "Lyft Receipts",
-      "subject": "Your ride with Giorgi on July 17"
-    },
-    {
-      "sender": "Montgomery Pediatric Dentistry",
-      "subject": "See you soon for your family's dental appointment at Montgomery Pediatric Dentistry"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Don't miss this Closeout Event \ud83d\udc49"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Room for What's Coming \u2014 30% Off Starts Now"
     }
   ],
   "items": [
