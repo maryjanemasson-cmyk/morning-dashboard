@@ -444,47 +444,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 532782672770"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 19 Jul 2026"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Final Day: Up to 50% Off + Extra 15%"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sun, 7/19 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #150"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Should You Still Learn to Code in 2026? | Marina Wyss in Data Science Collective"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week in Ideas | \u2018Throw it all out\u2019: Parents\u2019 stuff is more than clutter"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Notes from India"
+    },
     {
       "sender": "Grok xAI",
       "subject": "Your receipt from Grok xAI #2693-0958"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with xAI"
-    },
-    {
-      "sender": "SpaceXAI",
-      "subject": "New login to your SpaceXAI account"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "5 Pieces You Need This Summer.."
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Home Accessories"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "What I'd pack for a 5-day holiday in just a carry-on"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "UPDATE: Trip to Columbia"
-    },
-    {
-      "sender": "IDnotify",
-      "subject": "Your Monthly Update From IDnotify"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Score Big And BOGO 60% Off"
     }
   ],
   "items": [
