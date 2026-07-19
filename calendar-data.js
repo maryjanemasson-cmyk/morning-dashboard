@@ -444,8 +444,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 31,
+  "unreadCount": 30,
   "threads": [
+    {
+      "sender": "Diana @ Shameless Snacks",
+      "subject": "Okay, I can finally tell you this"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Ends soon: Extra 20% off sale"
+    },
     {
       "sender": "COS",
       "subject": "Sale: extra 15% off continues"
@@ -477,14 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "Avalon Daybreak Knits"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 532782672770"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 19 Jul 2026"
     }
   ],
   "items": [
