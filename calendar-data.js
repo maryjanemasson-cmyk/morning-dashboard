@@ -455,8 +455,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 532782672770"
+    },
+    {
+      "sender": "Aritzia",
+      "subject": "Your package has arrived #D4758233"
+    },
     {
       "sender": "Etsy",
       "subject": "Oh hi, accent pillow covers \ud83d\udc4b"
@@ -488,14 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Washington Post",
       "subject": "The Week in Ideas | \u2018Throw it all out\u2019: Parents\u2019 stuff is more than clutter"
-    },
-    {
-      "sender": "Grok xAI",
-      "subject": "Your receipt from Grok xAI #2693-0958"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with xAI"
     }
   ],
   "items": []
