@@ -444,8 +444,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Grok xAI",
+      "subject": "Your receipt from Grok xAI #2693-0958"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with xAI"
+    },
+    {
+      "sender": "SpaceXAI",
+      "subject": "New login to your SpaceXAI account"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "5 Pieces You Need This Summer.."
+    },
     {
       "sender": "Pini Parma",
       "subject": "Home Accessories"
@@ -469,22 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Score Big And BOGO 60% Off"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
-    },
-    {
-      "sender": "Abby Arad from Your Stylist Says...",
-      "subject": "The trends we\u2019ll be wearing this fall\u2026"
-    },
-    {
-      "sender": "Laurent Chapuis",
-      "subject": "Private Sale: One of the Smartest Wine Purchases You'll Make"
-    },
-    {
-      "sender": "us.bape.com",
-      "subject": "VANS x BAPE\u00ae"
     }
   ],
   "items": [
