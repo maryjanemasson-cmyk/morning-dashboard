@@ -447,6 +447,10 @@ window.EMAIL_DATA = {
   "unreadCount": 30,
   "threads": [
     {
+      "sender": "Etsy",
+      "subject": "Oh hi, accent pillow covers \ud83d\udc4b"
+    },
+    {
       "sender": "Diana @ Shameless Snacks",
       "subject": "Okay, I can finally tell you this"
     },
@@ -481,10 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Game On!"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "Avalon Daybreak Knits"
     }
   ],
   "items": [
