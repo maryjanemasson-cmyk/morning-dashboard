@@ -444,8 +444,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 31,
   "threads": [
+    {
+      "sender": "COS",
+      "subject": "Sale: extra 15% off continues"
+    },
+    {
+      "sender": "Julia Marcum",
+      "subject": "9 things I ordered from our new collection"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO | Write a review"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Your shot at EPIC Messi prizes starts today"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "30% off Select Containers for Everyday Elegance"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "How To Lighten Your Bedding for Summer"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Game On!"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "Avalon Daybreak Knits"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 532782672770"
@@ -453,38 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 19 Jul 2026"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Final Day: Up to 50% Off + Extra 15%"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sun, 7/19 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #150"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Should You Still Learn to Code in 2026? | Marina Wyss in Data Science Collective"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week in Ideas | \u2018Throw it all out\u2019: Parents\u2019 stuff is more than clutter"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Notes from India"
-    },
-    {
-      "sender": "Grok xAI",
-      "subject": "Your receipt from Grok xAI #2693-0958"
     }
   ],
   "items": [
