@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-18T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-18T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Lagree - Foundations - 45 minutes",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19f577b77f9eb4b6",
-    "startTime": "2026-07-18T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-18T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -138,6 +116,17 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-07-27T09:59:00-04:00",
     "startDate": "",
     "endTime": "2026-07-27T15:02:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-08-01T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-01T11:00:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -455,8 +444,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Pini Parma",
+      "subject": "Home Accessories"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "What I'd pack for a 5-day holiday in just a carry-on"
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "UPDATE: Trip to Columbia"
+    },
+    {
+      "sender": "IDnotify",
+      "subject": "Your Monthly Update From IDnotify"
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "Score Big And BOGO 60% Off"
@@ -476,26 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "us.bape.com",
       "subject": "VANS x BAPE\u00ae"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Ends tomorrow: Big can't-miss appliance deals\u203c\ufe0f"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Hello, mango lime loaf cake"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "JUST DROPPED: Air Jordan 3 'True Blue' 2026"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Your summer, curated to a tee \ud83d\ude0e"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Big Oxford"
     }
   ],
   "items": [
@@ -505,31 +494,6 @@ window.EMAIL_DATA = {
       "date": "2026-07-05",
       "id": "19f33b9dcc843d23",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "class",
-      "title": "Lagree - Foundations - 45 minutes \u00b7 10:00 AM",
-      "name": "Lagree - Foundations - 45 minutes",
-      "date": "2026-07-18",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "id": "19f577b77f9eb4b6",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Your package will be delivered soon D4758233",
-      "date": "2026-07-18",
-      "id": "19f741dc3657b301",
-      "sender": "Aritzia"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #532782672770",
-      "date": "2026-07-18",
-      "id": "19f73932e5a9ef89",
-      "sender": "FedEx Delivery Manager"
     }
   ]
 };
