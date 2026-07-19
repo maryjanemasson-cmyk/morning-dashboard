@@ -88,6 +88,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "7"
   },
   {
+    "summary": "The Odyssey",
+    "location": "AMC New Brunswick 18, 17 Us-1, New Brunswick, NJ 08901",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPUPF3rDSjoivCJDf1x3Z0O-qljZRJEJ6g\n",
+    "startTime": "2026-07-24T18:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-24T19:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -444,56 +455,48 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 15,
   "threads": [
     {
       "sender": "Etsy",
       "subject": "Oh hi, accent pillow covers \ud83d\udc4b"
     },
     {
-      "sender": "Diana @ Shameless Snacks",
-      "subject": "Okay, I can finally tell you this"
-    },
-    {
       "sender": "& Other Stories",
       "subject": "Ends soon: Extra 20% off sale"
-    },
-    {
-      "sender": "COS",
-      "subject": "Sale: extra 15% off continues"
-    },
-    {
-      "sender": "Julia Marcum",
-      "subject": "9 things I ordered from our new collection"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO | Write a review"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Your shot at EPIC Messi prizes starts today"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "30% off Select Containers for Everyday Elegance"
     },
     {
       "sender": "Schoolhouse",
       "subject": "How To Lighten Your Bedding for Summer"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Game On!"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 19 Jul 2026"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #150"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Should You Still Learn to Code in 2026? | Marina Wyss in Data Science Collective"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week in Ideas | \u2018Throw it all out\u2019: Parents\u2019 stuff is more than clutter"
+    },
+    {
+      "sender": "Grok xAI",
+      "subject": "Your receipt from Grok xAI #2693-0958"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with xAI"
     }
   ],
-  "items": [
-    {
-      "type": "return",
-      "title": "Mail Amazon return: Refund update for Levi's Womens Flynn Western",
-      "date": "2026-07-05",
-      "id": "19f33b9dcc843d23",
-      "sender": "return@amazon.com"
-    }
-  ]
+  "items": []
 };
