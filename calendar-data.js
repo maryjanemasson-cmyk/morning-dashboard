@@ -455,8 +455,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Score Big And BOGO 60% Off"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "FORM BY TWO Class Confirmation"
@@ -492,10 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "The Big Oxford"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "BOGO 60% Off During Our World Cup Sale"
     }
   ],
   "items": [
