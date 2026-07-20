@@ -458,6 +458,18 @@ window.EMAIL_DATA = {
   "unreadCount": 15,
   "threads": [
     {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Essentials item"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (4ab5821)"
+    },
+    {
       "sender": "American Express",
       "subject": "Enroll in American Express\u00ae CreditSecure\u00ae"
     },
@@ -484,19 +496,15 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #150"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Should You Still Learn to Code in 2026? | Marina Wyss in Data Science Collective"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week in Ideas | \u2018Throw it all out\u2019: Parents\u2019 stuff is more than clutter"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Essentials item",
+      "date": "2026-07-20",
+      "id": "19f7e423f9c2d2b4",
+      "sender": "Amazon.com"
+    }
+  ]
 };
