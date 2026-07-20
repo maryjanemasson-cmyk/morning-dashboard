@@ -455,19 +455,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Ling Xu",
-      "subject": "You have an invitation"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20664\u2069 Kitchen and Toy items"
     },
     {
       "sender": "LOOK OPTIC",
       "subject": "Restock Alert: Cosmo"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "pt. 8 - Ultimate chocolate lover's ice cream"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -499,6 +495,13 @@ window.EMAIL_DATA = {
     }
   ],
   "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20664\u2069 Kitchen and Toy items",
+      "date": "2026-07-20",
+      "id": "19f7fdf938bab2e6",
+      "sender": "Amazon.com"
+    },
     {
       "type": "delivery",
       "title": "Shipped: \u20661\u2069 Essentials item",
