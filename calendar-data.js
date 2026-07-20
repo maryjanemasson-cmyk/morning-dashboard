@@ -455,19 +455,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Want to win $3,000 in concert gift cards?"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Sara Haberman $4,400.00"
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Newark"
     },
     {
       "sender": "Reformation",
-      "subject": "THANK US LATER"
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Optery"
     },
     {
       "sender": "Amazon.com",
