@@ -455,12 +455,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 8,
   "threads": [
-    {
-      "sender": "Kensington",
-      "subject": "Enjoy the private-guided trip of your dreams"
-    },
     {
       "sender": "Google",
       "subject": "You shared some Google Account data with Optery"
