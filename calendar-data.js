@@ -455,8 +455,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Want to win $3,000 in concert gift cards?"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "You paid Sara Haberman $4,400.00"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "THANK US LATER"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20664\u2069 Kitchen and Toy items"
@@ -484,14 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20661\u2069 Kitchen item"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Oh hi, accent pillow covers \ud83d\udc4b"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Ends soon: Extra 20% off sale"
     }
   ],
   "items": [
