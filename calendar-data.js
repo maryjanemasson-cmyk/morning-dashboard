@@ -455,15 +455,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Newark"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
+      "sender": "Kensington",
+      "subject": "Enjoy the private-guided trip of your dreams"
     },
     {
       "sender": "Google",
