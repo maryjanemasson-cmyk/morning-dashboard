@@ -455,15 +455,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 532782672770"
+      "sender": "American Express",
+      "subject": "Enroll in American Express\u00ae CreditSecure\u00ae"
     },
     {
-      "sender": "Aritzia",
-      "subject": "Your package has arrived #D4758233"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Kitchen item"
     },
     {
       "sender": "Etsy",
