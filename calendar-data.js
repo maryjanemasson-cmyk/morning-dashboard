@@ -455,11 +455,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 20 Jul 2026"
+      "sender": "Ling Xu",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Restock Alert: Cosmo"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "pt. 8 - Ultimate chocolate lover's ice cream"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -488,14 +496,6 @@ window.EMAIL_DATA = {
     {
       "sender": "& Other Stories",
       "subject": "Ends soon: Extra 20% off sale"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "How To Lighten Your Bedding for Summer"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 19 Jul 2026"
     }
   ],
   "items": [
