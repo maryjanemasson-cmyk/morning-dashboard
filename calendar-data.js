@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-07-20T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-20T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "Decide: cancel or renew gym membership",
-    "location": "",
-    "description": "3-month membership expires around July 27, 2026. Decide this week whether to renew or cancel.",
-    "startTime": "2026-07-20T09:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-20T09:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Stay at Kimpton Marlowe Hotel",
     "location": "25 Edwin H Land Boulevard, Cambridge, Massachusetts 02141, United States",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DN_j3tG1lyoxPmXBBz-H_4iT_pdiBYBJng\n",
@@ -141,6 +119,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-08-03T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-03T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -455,11 +444,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "LinkedIn",
-      "subject": "You have 1 new invitation"
+      "sender": "Emily from Holafly",
+      "subject": "Mary, Miami is still up for grabs"
+    },
+    {
+      "sender": "Emmanuel LEDUC",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Claude Team",
+      "subject": "Fable 5 is now part of your plan"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Further Reductions Now Up To 60% Off"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "",
+      "subject": "Kearny Bank Loan payment sent as a check"
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "QUOTE: Family Trip to Columbia"
     },
     {
       "sender": "Google",
@@ -472,38 +485,7 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20664\u2069 Kitchen and Toy items"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Restock Alert: Cosmo"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (4ab5821)"
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20664\u2069 Kitchen and Toy items",
-      "date": "2026-07-20",
-      "id": "19f7fdf938bab2e6",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Essentials item",
-      "date": "2026-07-20",
-      "id": "19f7e423f9c2d2b4",
-      "sender": "Amazon.com"
-    }
-  ]
+  "items": []
 };
