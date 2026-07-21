@@ -204,46 +204,6 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Cambridge, MA",
-    "start": "2026-07-21",
-    "end": "2026-07-23",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA375 EWR to BOS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-07-21T14:00:00+00:00",
-        "end": "2026-07-21T15:16:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: Kimpton Marlowe by IHG",
-        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-        "description": "",
-        "start": "2026-07-21T19:00:00+00:00",
-        "end": "2026-07-21T20:00:00+00:00",
-        "type": "hotel"
-      },
-      {
-        "summary": "Check-out: Kimpton Marlowe by IHG",
-        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-        "description": "",
-        "start": "2026-07-23T15:00:00+00:00",
-        "end": "2026-07-23T16:00:00+00:00",
-        "type": "hotel"
-      },
-      {
-        "summary": "UA1076 BOS to EWR",
-        "location": "Boston (BOS)",
-        "description": "",
-        "start": "2026-07-23T18:30:00+00:00",
-        "end": "2026-07-23T20:02:00+00:00",
-        "type": "flight"
-      }
-    ]
-  },
-  {
     "destination": "Bogot\u00e1 \u2192 Cartagena \u2192 Medell\u00edn",
     "start": "2026-08-21",
     "end": "2026-08-30",
@@ -376,91 +336,31 @@ window.TRAVEL_DATA = [
         "type": "flight"
       }
     ]
-  },
-  {
-    "destination": "Paris, France",
-    "start": "2026-09-20",
-    "end": "2026-09-25",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "Check-in: Le Bellune Paris",
-        "location": "35 Boulevard Victor, Paris, 75015, France",
-        "description": "",
-        "start": "2026-09-20T13:00:00+00:00",
-        "end": "2026-09-20T14:00:00+00:00",
-        "type": "hotel"
-      },
-      {
-        "summary": "UA54 EWR to CDG",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-09-21T01:15:00+00:00",
-        "end": "2026-09-21T08:55:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "UA56 CDG to EWR",
-        "location": "Paris (CDG)",
-        "description": "",
-        "start": "2026-09-25T07:45:00+00:00",
-        "end": "2026-09-25T15:55:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: Le Bellune Paris",
-        "location": "35 Boulevard Victor, Paris, 75015, France",
-        "description": "",
-        "start": "2026-09-25T09:00:00+00:00",
-        "end": "2026-09-25T10:00:00+00:00",
-        "type": "hotel"
-      }
-    ]
-  },
-  {
-    "destination": "Paris, France",
-    "start": "2026-10-25",
-    "end": "2026-10-30",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA54 EWR to CDG",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-10-26T02:45:00+00:00",
-        "end": "2026-10-26T10:25:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "UA56 CDG to EWR",
-        "location": "Paris (CDG)",
-        "description": "",
-        "start": "2026-10-30T08:25:00+00:00",
-        "end": "2026-10-30T16:50:00+00:00",
-        "type": "flight"
-      }
-    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 50% OFF select smart home upgrades\ud83d\udca1"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Discover the Gary Sneaker"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
     {
       "sender": "Hildi at PURE Insurance",
       "subject": "How are we doing?"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 21 Jul 2026"
-    },
-    {
-      "sender": "Rat & Boa",
-      "subject": "The style you spotted is waiting..."
-    },
-    {
-      "sender": "Emily from Holafly",
-      "subject": "Mary, Miami is still up for grabs"
     },
     {
       "sender": "Susan Hill",
@@ -471,20 +371,16 @@ window.EMAIL_DATA = {
       "subject": "Fable 5 is now part of your plan"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Further Reductions Now Up To 60% Off"
-    },
-    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "",
-      "subject": "Kearny Bank Loan payment sent as a check"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with ratandboa.com"
     },
     {
-      "sender": "Eleanor Dath",
-      "subject": "QUOTE: Family Trip to Columbia"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Optery"
     }
   ],
   "items": []
