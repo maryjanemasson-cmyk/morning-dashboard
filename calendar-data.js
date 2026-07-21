@@ -458,6 +458,14 @@ window.EMAIL_DATA = {
   "unreadCount": 8,
   "threads": [
     {
+      "sender": "LinkedIn",
+      "subject": "You have 1 new invitation"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with ratandboa.com"
+    },
+    {
       "sender": "Google",
       "subject": "You shared some Google Account data with Optery"
     },
@@ -480,14 +488,6 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson-cmyk",
       "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (4ab5821)"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Enroll in American Express\u00ae CreditSecure\u00ae"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Kitchen item"
     }
   ],
   "items": [
