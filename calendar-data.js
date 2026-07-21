@@ -444,14 +444,26 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Hildi at PURE Insurance",
+      "subject": "How are we doing?"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 21 Jul 2026"
+    },
+    {
+      "sender": "Rat & Boa",
+      "subject": "The style you spotted is waiting..."
+    },
     {
       "sender": "Emily from Holafly",
       "subject": "Mary, Miami is still up for grabs"
     },
     {
-      "sender": "Emmanuel LEDUC",
+      "sender": "Susan Hill",
       "subject": "You have an invitation"
     },
     {
@@ -473,18 +485,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Eleanor Dath",
       "subject": "QUOTE: Family Trip to Columbia"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with ratandboa.com"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Optery"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20664\u2069 Kitchen and Toy items"
     }
   ],
   "items": []
