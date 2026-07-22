@@ -22,28 +22,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "\u2708\ufe0f UA375 EWR \u2192 BOS",
-    "location": "Newark (EWR)",
-    "description": "Tue, Jul 21\n10:00 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 375, Terminal TERMINAL A, Gate\n11:16 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
-    "startTime": "2026-07-21T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-21T11:16:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: Kimpton Marlowe by IHG",
-    "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-    "description": "3:00 PM EDT\n[Lodging] Arrive Kimpton Marlowe by IHG\nCheck-In: 3:00pm\n25 Edwin H. Land Blvd, Cambridge, MA, 02141\n+1 617 8688000",
-    "startTime": "2026-07-21T15:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-21T16:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "\ud83c\udfe8 Check-out: Kimpton Marlowe by IHG",
     "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
     "description": "Thu, Jul 23\n11:00 AM EDT\n[Lodging] Depart Kimpton Marlowe by IHG\nCheck-Out: 11:00am\n25 Edwin H. Land Blvd, Cambridge, MA, 02141\n+1 617 8688000",
@@ -204,6 +182,46 @@ window.TRAVEL_DATA = [
     ]
   },
   {
+    "destination": "Cambridge, MA",
+    "start": "2026-07-21",
+    "end": "2026-07-23",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA375 EWR to BOS",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-07-21T14:00:00+00:00",
+        "end": "2026-07-21T15:16:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-in: Kimpton Marlowe by IHG",
+        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
+        "description": "",
+        "start": "2026-07-21T19:00:00+00:00",
+        "end": "2026-07-21T20:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "Check-out: Kimpton Marlowe by IHG",
+        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
+        "description": "",
+        "start": "2026-07-23T15:00:00+00:00",
+        "end": "2026-07-23T16:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA1076 BOS to EWR",
+        "location": "Boston (BOS)",
+        "description": "",
+        "start": "2026-07-23T18:30:00+00:00",
+        "end": "2026-07-23T20:02:00+00:00",
+        "type": "flight"
+      }
+    ]
+  },
+  {
     "destination": "Bogot\u00e1 \u2192 Cartagena \u2192 Medell\u00edn",
     "start": "2026-08-21",
     "end": "2026-08-30",
@@ -336,51 +354,115 @@ window.TRAVEL_DATA = [
         "type": "flight"
       }
     ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-09-20",
+    "end": "2026-09-25",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "Check-in: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-09-20T13:00:00+00:00",
+        "end": "2026-09-20T14:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-09-21T01:15:00+00:00",
+        "end": "2026-09-21T08:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-09-25T07:45:00+00:00",
+        "end": "2026-09-25T15:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-out: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-09-25T09:00:00+00:00",
+        "end": "2026-09-25T10:00:00+00:00",
+        "type": "hotel"
+      }
+    ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-10-25",
+    "end": "2026-10-30",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-10-26T02:45:00+00:00",
+        "end": "2026-10-26T10:25:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-10-30T08:25:00+00:00",
+        "end": "2026-10-30T16:50:00+00:00",
+        "type": "flight"
+      }
+    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 23,
   "threads": [
     {
+      "sender": "Programs",
+      "subject": "LOCATION CHANGE - Invitation to private reception at AACR D3 conference in Boston (July 21-24)"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Tell us how we did"
+    },
+    {
       "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
+      "subject": "Stay on top of every package delivery \ud83d\udce6"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 50% OFF select smart home upgrades\ud83d\udca1"
+      "sender": "Maryland Comptroller",
+      "subject": "Reminder: Friday, July 24, is the Last Day to Pay by Paper Check at Branch Offices"
     },
     {
-      "sender": "BOSS",
-      "subject": "Discover the Gary Sneaker"
+      "sender": "Reformation",
+      "subject": "FREE TIME"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
+      "sender": "Pini Parma",
+      "subject": "Bags built for work and travel"
     },
     {
-      "sender": "Hildi at PURE Insurance",
-      "subject": "How are we doing?"
+      "sender": "AT&T Online Services",
+      "subject": "Your AT&T wireless bill is ready to view"
     },
     {
-      "sender": "Susan Hill",
-      "subject": "You have an invitation"
+      "sender": "MyLowe's Rewards",
+      "subject": "Don't miss your shot at Messi prizes"
     },
     {
-      "sender": "Claude Team",
-      "subject": "Fable 5 is now part of your plan"
+      "sender": "Rat & Boa",
+      "subject": ", Mary Jane, An Edit For You"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with ratandboa.com"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Optery"
+      "sender": "us.bape.com",
+      "subject": "BAPE\u00ae FLIP STA #1 NOW LIVE"
     }
   ],
   "items": []
