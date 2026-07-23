@@ -406,47 +406,43 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Cisco Meraki - No Reply",
-      "subject": "Access approved for Ipsen-Guest"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
     },
     {
-      "sender": "& Other Stories",
-      "subject": "Sale ends soon: Get extra 20% off"
+      "sender": "JETSET Pilates SOFI",
+      "subject": "YOUR NEXT FIVE CLASSES ARE ON US"
     },
     {
-      "sender": "chrislovesjulia",
-      "subject": "Everyone forgets about this part of the renovation"
+      "sender": "Etsy",
+      "subject": "Olivia Rodrigo x Etsy \ud83c\udf3c"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Important Notice: Your July 2026 Statement"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Everyday In The Ribbed Set"
     },
     {
       "sender": "French Language Accelerator (Skool)",
       "subject": "Weekly digest for Thu, Jul 16 2026"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Get summer deals up to 50% OFF\ud83d\ude0d"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Sunset Rayon Gab Jacket"
-    },
-    {
-      "sender": "Optery",
-      "subject": "July Sale (20% off), Optery Wins CNET Editors' Choice Award, Winner's Circle Podcast, Faces of Optery, and more"
-    },
-    {
       "sender": "Optery",
       "subject": "Protect your data with 20% off Optery"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "Now Live: SALE Early Access"
+      "sender": "Medium Daily Digest",
+      "subject": "My Dad and I. | Marc Dauphin"
     },
     {
-      "sender": "Christina Marsigliese",
-      "subject": "pt. 9 - Raspberry Lemonade, but make it cake and no bake!"
+      "sender": "Almina Concept",
+      "subject": "Additional 20% off ends Friday"
     }
   ],
   "items": []
