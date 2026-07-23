@@ -188,22 +188,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA375 EWR to BOS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-07-21T14:00:00+00:00",
-        "end": "2026-07-21T15:16:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: Kimpton Marlowe by IHG",
-        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-        "description": "",
-        "start": "2026-07-21T19:00:00+00:00",
-        "end": "2026-07-21T20:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "Check-out: Kimpton Marlowe by IHG",
         "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
         "description": "",
@@ -422,47 +406,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Programs",
-      "subject": "LOCATION CHANGE - Invitation to private reception at AACR D3 conference in Boston (July 21-24)"
+      "sender": "Cisco Meraki - No Reply",
+      "subject": "Access approved for Ipsen-Guest"
     },
     {
-      "sender": "United Airlines",
-      "subject": "Tell us how we did"
+      "sender": "& Other Stories",
+      "subject": "Sale ends soon: Get extra 20% off"
     },
     {
-      "sender": "PayPal",
-      "subject": "Stay on top of every package delivery \ud83d\udce6"
+      "sender": "chrislovesjulia",
+      "subject": "Everyone forgets about this part of the renovation"
     },
     {
-      "sender": "Maryland Comptroller",
-      "subject": "Reminder: Friday, July 24, is the Last Day to Pay by Paper Check at Branch Offices"
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Jul 16 2026"
     },
     {
-      "sender": "Reformation",
-      "subject": "FREE TIME"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Get summer deals up to 50% OFF\ud83d\ude0d"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "Bags built for work and travel"
+      "sender": "Buck Mason",
+      "subject": "The Sunset Rayon Gab Jacket"
     },
     {
-      "sender": "AT&T Online Services",
-      "subject": "Your AT&T wireless bill is ready to view"
+      "sender": "Optery",
+      "subject": "July Sale (20% off), Optery Wins CNET Editors' Choice Award, Winner's Circle Podcast, Faces of Optery, and more"
     },
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Don't miss your shot at Messi prizes"
+      "sender": "Optery",
+      "subject": "Protect your data with 20% off Optery"
     },
     {
-      "sender": "Rat & Boa",
-      "subject": ", Mary Jane, An Edit For You"
+      "sender": "Enza Costa",
+      "subject": "Now Live: SALE Early Access"
     },
     {
-      "sender": "us.bape.com",
-      "subject": "BAPE\u00ae FLIP STA #1 NOW LIVE"
+      "sender": "Christina Marsigliese",
+      "subject": "pt. 9 - Raspberry Lemonade, but make it cake and no bake!"
     }
   ],
   "items": []
