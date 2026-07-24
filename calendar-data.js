@@ -182,30 +182,6 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Cambridge, MA",
-    "start": "2026-07-21",
-    "end": "2026-07-23",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "Check-out: Kimpton Marlowe by IHG",
-        "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-        "description": "",
-        "start": "2026-07-23T15:00:00+00:00",
-        "end": "2026-07-23T16:00:00+00:00",
-        "type": "hotel"
-      },
-      {
-        "summary": "UA1076 BOS to EWR",
-        "location": "Boston (BOS)",
-        "description": "",
-        "start": "2026-07-23T18:30:00+00:00",
-        "end": "2026-07-23T20:02:00+00:00",
-        "type": "flight"
-      }
-    ]
-  },
-  {
     "destination": "Bogot\u00e1 \u2192 Cartagena \u2192 Medell\u00edn",
     "start": "2026-08-21",
     "end": "2026-08-30",
@@ -406,8 +382,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Grok xAI",
+      "subject": "Your receipt from Grok xAI #2960-9701"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Meet the New Summer Collection"
+    },
+    {
+      "sender": "SimpleFIN Bridge",
+      "subject": "Transaction data accessed from new IP: 72.251.219.66"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Offer expiring: Apply for Gold"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
@@ -431,18 +423,6 @@ window.EMAIL_DATA = {
     {
       "sender": "French Language Accelerator (Skool)",
       "subject": "Weekly digest for Thu, Jul 16 2026"
-    },
-    {
-      "sender": "Optery",
-      "subject": "Protect your data with 20% off Optery"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "My Dad and I. | Marc Dauphin"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Additional 20% off ends Friday"
     }
   ],
   "items": []
