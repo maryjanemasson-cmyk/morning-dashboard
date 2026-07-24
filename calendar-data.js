@@ -55,6 +55,28 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Buddakan - Philadelphia",
+    "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
+    "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
+    "startTime": "2026-07-31T18:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-31T20:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Reservation: Buddakan - Philadelphia",
+    "location": "Buddakan - Philadelphia\n325 Chestnut Street Philadelphia, PA",
+    "description": "Reservation Number: 2110959435\n\nTelephone: (215) 574-9440",
+    "startTime": "2026-07-31T18:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-31T20:00:00-04:00",
+    "endDate": "",
+    "calendar": "iCloud",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -349,11 +371,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Wildfires Still Burning"
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
+    },
+    {
+      "sender": "The State of New Jersey",
+      "subject": "NJ Updates: Claim Your Child Tax Credit, Get Help with Elder Care, & More"
     },
     {
       "sender": "Viski",
@@ -386,10 +412,6 @@ window.EMAIL_DATA = {
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Les mots difficiles \u00e0 prononcer \ud83e\udd2f\""
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": []
