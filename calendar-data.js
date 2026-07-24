@@ -349,8 +349,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Wildfires Still Burning"
+    },
+    {
+      "sender": "Viski",
+      "subject": "Mary jane, Get a $10 gift card when you write a review"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Summer Blues."
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Everyday BOSS Polos"
+    },
     {
       "sender": "Reformation",
       "subject": "So this is goodbye"
@@ -374,22 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 24 Jul 2026"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Amazon.com order of Camino Winds."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
     }
   ],
   "items": []
