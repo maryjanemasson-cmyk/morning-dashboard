@@ -371,11 +371,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
+      "sender": "Life360",
+      "subject": "New school year loading...deep breaths loading, too."
+    },
+    {
+      "sender": "NOLS Admissions",
+      "subject": "Re: A few Last Details For Your NOLS Course"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udf9f\ufe0f Two legendary voyages take over Friday night"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
     },
     {
       "sender": "The State of New Jersey",
@@ -400,18 +412,6 @@ window.EMAIL_DATA = {
     {
       "sender": "MICHELIN Guide",
       "subject": "Last-Minute Getaways in Early August"
-    },
-    {
-      "sender": "SportsEngine",
-      "subject": "Support Athletes Beyond the Game"
-    },
-    {
-      "sender": "IHG Hotels & Resorts",
-      "subject": "Tell Us What You Think for a Chance to Win 25,000 IHG One Rewards Points"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Les mots difficiles \u00e0 prononcer \ud83e\udd2f\""
     }
   ],
   "items": []
