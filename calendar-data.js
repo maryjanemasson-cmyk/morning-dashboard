@@ -349,8 +349,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "MICHELIN Guide",
+      "subject": "Last-Minute Getaways in Early August"
+    },
+    {
+      "sender": "SportsEngine",
+      "subject": "Support Athletes Beyond the Game"
+    },
     {
       "sender": "IHG Hotels & Resorts",
       "subject": "Tell Us What You Think for a Chance to Win 25,000 IHG One Rewards Points"
@@ -378,18 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
-    },
-    {
-      "sender": "JETSET Pilates SOFI",
-      "subject": "YOUR NEXT FIVE CLASSES ARE ON US"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Olivia Rodrigo x Etsy \ud83c\udf3c"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Important Notice: Your July 2026 Statement"
     }
   ],
   "items": []
