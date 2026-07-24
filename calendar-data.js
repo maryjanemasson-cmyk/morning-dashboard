@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Stay at Kimpton Marlowe Hotel",
-    "location": "25 Edwin H Land Boulevard, Cambridge, Massachusetts 02141, United States",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DN_j3tG1lyoxPmXBBz-H_4iT_pdiBYBJng\n",
-    "startTime": "",
-    "startDate": "2026-07-21",
-    "endTime": "",
-    "endDate": "2026-07-24",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "AACR Drug Discovery in Boston",
     "location": "Microsoft Teams Meeting",
     "description": "\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/323636501049723?p=41T9dS7oS5oqnbnjek\nMeeting ID: 323 636 501 049 723\nPasscode: j95Yp3GR\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2Q3YTIwNTgtZDQxYi00YjU1LWFhMzktMWQ0MTI2MDJiM2U3%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,827395510#<tel:+12134588494,,827395510> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=827395510>\nPhone conference ID: 827 395 510#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 125 039 305 4\nMore info<https://www.webex.com/msteams?confid=1250393054&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Y2Q3YTIwNTgtZDQxYi00YjU1LWFhMzktMWQ0MTI2MDJiM2U3@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
@@ -20,28 +9,6 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: Kimpton Marlowe by IHG",
-    "location": "25 Edwin H. Land Blvd, Cambridge, MA, 02141",
-    "description": "Thu, Jul 23\n11:00 AM EDT\n[Lodging] Depart Kimpton Marlowe by IHG\nCheck-Out: 11:00am\n25 Edwin H. Land Blvd, Cambridge, MA, 02141\n+1 617 8688000",
-    "startTime": "2026-07-23T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-23T12:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "\u2708\ufe0f UA1076 BOS \u2192 EWR",
-    "location": "Boston (BOS)",
-    "description": "2:30 PM EDT\n[Flight] BOS to EWR\nUnited Airlines 1076, Terminal TERMINAL B, Gate\n4:02 PM EDT\nArrive Newark (EWR)\nTerminal TERMINAL A, Gate",
-    "startTime": "2026-07-23T14:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-23T16:02:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
   },
   {
     "summary": "The Odyssey",
@@ -382,8 +349,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Amazon.com order of Camino Winds."
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $7,708.73 deposit was credited to your account."
+    },
+    {
+      "sender": "Dane Knecht, CTO at Cloudflare",
+      "subject": "The AI stack we run Cloudflare on is now yours"
+    },
+    {
+      "sender": "Valeria from Holafly",
+      "subject": "Pssst\u2026 your eSIM is 15% off (but only for 72 hrs)"
+    },
     {
       "sender": "Grok xAI",
       "subject": "Your receipt from Grok xAI #2960-9701"
@@ -403,26 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
-    },
-    {
-      "sender": "JETSET Pilates SOFI",
-      "subject": "YOUR NEXT FIVE CLASSES ARE ON US"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Olivia Rodrigo x Etsy \ud83c\udf3c"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Important Notice: Your July 2026 Statement"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Everyday In The Ribbed Set"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Jul 16 2026"
     }
   ],
   "items": []
