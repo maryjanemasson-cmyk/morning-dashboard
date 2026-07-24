@@ -349,11 +349,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 7/24 is ready to view"
+      "sender": "IHG Hotels & Resorts",
+      "subject": "Tell Us What You Think for a Chance to Win 25,000 IHG One Rewards Points"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Les mots difficiles \u00e0 prononcer \ud83e\udd2f\""
     },
     {
       "sender": "Unroll.Me",
@@ -366,14 +370,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 24 Jul 2026"
-    },
-    {
-      "sender": "Aloriam",
-      "subject": "A shipment from Aloriam order #12644 is out for delivery"
-    },
-    {
-      "sender": "John Gregory-Smith",
-      "subject": "JohnGS recipe drop - Tiramisu Ice Cream"
     },
     {
       "sender": "Amazon.com",
@@ -390,6 +386,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Olivia Rodrigo x Etsy \ud83c\udf3c"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Important Notice: Your July 2026 Statement"
     }
   ],
   "items": []
