@@ -281,76 +281,24 @@ window.TRAVEL_DATA = [
         "type": "flight"
       }
     ]
-  },
-  {
-    "destination": "Paris, France",
-    "start": "2026-09-20",
-    "end": "2026-09-25",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "Check-in: Le Bellune Paris",
-        "location": "35 Boulevard Victor, Paris, 75015, France",
-        "description": "",
-        "start": "2026-09-20T13:00:00+00:00",
-        "end": "2026-09-20T14:00:00+00:00",
-        "type": "hotel"
-      },
-      {
-        "summary": "UA54 EWR to CDG",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-09-21T01:15:00+00:00",
-        "end": "2026-09-21T08:55:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "UA56 CDG to EWR",
-        "location": "Paris (CDG)",
-        "description": "",
-        "start": "2026-09-25T07:45:00+00:00",
-        "end": "2026-09-25T15:55:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-out: Le Bellune Paris",
-        "location": "35 Boulevard Victor, Paris, 75015, France",
-        "description": "",
-        "start": "2026-09-25T09:00:00+00:00",
-        "end": "2026-09-25T10:00:00+00:00",
-        "type": "hotel"
-      }
-    ]
-  },
-  {
-    "destination": "Paris, France",
-    "start": "2026-10-25",
-    "end": "2026-10-30",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "UA54 EWR to CDG",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-10-26T02:45:00+00:00",
-        "end": "2026-10-26T10:25:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "UA56 CDG to EWR",
-        "location": "Paris (CDG)",
-        "description": "",
-        "start": "2026-10-30T08:25:00+00:00",
-        "end": "2026-10-30T16:50:00+00:00",
-        "type": "flight"
-      }
-    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 24 Jul 2026"
+    },
+    {
+      "sender": "Aloriam",
+      "subject": "A shipment from Aloriam order #12644 is out for delivery"
+    },
+    {
+      "sender": "John Gregory-Smith",
+      "subject": "JohnGS recipe drop - Tiramisu Ice Cream"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -378,18 +326,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Meet the New Summer Collection"
-    },
-    {
-      "sender": "SimpleFIN Bridge",
-      "subject": "Transaction data accessed from new IP: 72.251.219.66"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Offer expiring: Apply for Gold"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
     }
   ],
   "items": []
