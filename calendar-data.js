@@ -281,12 +281,88 @@ window.TRAVEL_DATA = [
         "type": "flight"
       }
     ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-09-20",
+    "end": "2026-09-25",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "Check-in: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-09-20T13:00:00+00:00",
+        "end": "2026-09-20T14:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-09-21T01:15:00+00:00",
+        "end": "2026-09-21T08:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-09-25T07:45:00+00:00",
+        "end": "2026-09-25T15:55:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-out: Le Bellune Paris",
+        "location": "35 Boulevard Victor, Paris, 75015, France",
+        "description": "",
+        "start": "2026-09-25T09:00:00+00:00",
+        "end": "2026-09-25T10:00:00+00:00",
+        "type": "hotel"
+      }
+    ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-10-25",
+    "end": "2026-10-30",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-10-26T02:45:00+00:00",
+        "end": "2026-10-26T10:25:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA56 CDG to EWR",
+        "location": "Paris (CDG)",
+        "description": "",
+        "start": "2026-10-30T08:25:00+00:00",
+        "end": "2026-10-30T16:50:00+00:00",
+        "type": "flight"
+      }
+    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 7/24 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 24 Jul 2026"
@@ -300,32 +376,20 @@ window.EMAIL_DATA = {
       "subject": "JohnGS recipe drop - Tiramisu Ice Cream"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Amazon.com order of Camino Winds."
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $7,708.73 deposit was credited to your account."
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 Pantry and Drugstore items"
     },
     {
-      "sender": "Dane Knecht, CTO at Cloudflare",
-      "subject": "The AI stack we run Cloudflare on is now yours"
+      "sender": "JETSET Pilates SOFI",
+      "subject": "YOUR NEXT FIVE CLASSES ARE ON US"
     },
     {
-      "sender": "Valeria from Holafly",
-      "subject": "Pssst\u2026 your eSIM is 15% off (but only for 72 hrs)"
-    },
-    {
-      "sender": "Grok xAI",
-      "subject": "Your receipt from Grok xAI #2960-9701"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Meet the New Summer Collection"
+      "sender": "Etsy",
+      "subject": "Olivia Rodrigo x Etsy \ud83c\udf3c"
     }
   ],
   "items": []
