@@ -349,15 +349,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Eleanor Dath",
-      "subject": "Re: QUOTE: Family Trip to Columbia"
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "Concurrency, Parallelism, and Async: Three Ideas That Sound the Same But Aren\u2019t | Alina Kovtun\u2728 in Code Like A Girl"
+      "sender": "Hertz",
+      "subject": "Hertz Security Notification: Unrecognized Login Device or Location"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Your Personalized Summer Sale Edit"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Fall, but Polished..."
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Grab these Closeout Event deals FAST \u26a1\ufe0f"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "These layer cakes are celebration worthy"
     },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
@@ -374,22 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Zara",
       "subject": "Your order is on its way"
-    },
-    {
-      "sender": "The State of New Jersey",
-      "subject": "NJ Updates: Claim Your Child Tax Credit, Get Help with Elder Care, & More"
-    },
-    {
-      "sender": "Viski",
-      "subject": "Mary jane, Get a $10 gift card when you write a review"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Summer Blues."
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Everyday BOSS Polos"
     }
   ],
   "items": []
