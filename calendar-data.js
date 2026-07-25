@@ -349,31 +349,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
+      "sender": "Etsy",
+      "subject": "Made with heart \ud83e\udde1"
     },
     {
-      "sender": "Hertz",
-      "subject": "Hertz Security Notification: Unrecognized Login Device or Location"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Your Personalized Summer Sale Edit"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Fall, but Polished..."
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Grab these Closeout Event deals FAST \u26a1\ufe0f"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "These layer cakes are celebration worthy"
+      "sender": "AT&T Account Management",
+      "subject": "AT&T payment processed for account ending in 5982"
     },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
@@ -390,6 +374,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Zara",
       "subject": "Your order is on its way"
+    },
+    {
+      "sender": "The State of New Jersey",
+      "subject": "NJ Updates: Claim Your Child Tax Credit, Get Help with Elder Care, & More"
+    },
+    {
+      "sender": "Viski",
+      "subject": "Mary jane, Get a $10 gift card when you write a review"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Summer Blues."
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Everyday BOSS Polos"
     }
   ],
   "items": []
