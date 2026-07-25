@@ -349,12 +349,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 13,
   "threads": [
-    {
-      "sender": "Eleanor Dath",
-      "subject": "Automatic reply: QUOTE: Family Trip to Columbia"
-    },
     {
       "sender": "Valeria from Holafly",
       "subject": "24 hours left!"
@@ -362,10 +358,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Zara",
       "subject": "Your order is on its way"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
     },
     {
       "sender": "The State of New Jersey",
@@ -390,6 +382,14 @@ window.EMAIL_DATA = {
     {
       "sender": "MICHELIN Guide",
       "subject": "Last-Minute Getaways in Early August"
+    },
+    {
+      "sender": "SportsEngine",
+      "subject": "Support Athletes Beyond the Game"
+    },
+    {
+      "sender": "IHG Hotels & Resorts",
+      "subject": "Tell Us What You Think for a Chance to Win 25,000 IHG One Rewards Points"
     }
   ],
   "items": []
