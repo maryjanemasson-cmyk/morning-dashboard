@@ -349,19 +349,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "AMC Theatres",
-      "subject": "Mary, Thank you for seeing THE ODYSSEY at AMC"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Further Reductions | Pieces Selling Fast"
+      "sender": "Eleanor Dath",
+      "subject": "Automatic reply: QUOTE: Family Trip to Columbia"
     },
     {
       "sender": "Valeria from Holafly",
@@ -370,10 +362,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Zara",
       "subject": "Your order is on its way"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udf9f\ufe0f Two legendary voyages take over Friday night"
     },
     {
       "sender": "FORM BY TWO",
@@ -390,6 +378,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Almina Concept",
       "subject": "Summer Blues."
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Everyday BOSS Polos"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
+    },
+    {
+      "sender": "MICHELIN Guide",
+      "subject": "Last-Minute Getaways in Early August"
     }
   ],
   "items": []
