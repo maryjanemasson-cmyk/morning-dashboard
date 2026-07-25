@@ -349,8 +349,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Eleanor Dath",
+      "subject": "Re: QUOTE: Family Trip to Columbia"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Concurrency, Parallelism, and Async: Three Ideas That Sound the Same But Aren\u2019t | Alina Kovtun\u2728 in Code Like A Girl"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 25 Jul 2026"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Techno Taffeta Shorts"
+    },
     {
       "sender": "Valeria from Holafly",
       "subject": "24 hours left!"
@@ -374,22 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "Everyday BOSS Polos"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
-    },
-    {
-      "sender": "MICHELIN Guide",
-      "subject": "Last-Minute Getaways in Early August"
-    },
-    {
-      "sender": "SportsEngine",
-      "subject": "Support Athletes Beyond the Game"
-    },
-    {
-      "sender": "IHG Hotels & Resorts",
-      "subject": "Tell Us What You Think for a Chance to Win 25,000 IHG One Rewards Points"
     }
   ],
   "items": []
