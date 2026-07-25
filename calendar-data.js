@@ -352,8 +352,20 @@ window.EMAIL_DATA = {
   "unreadCount": 10,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Made with heart \ud83e\udde1"
+      "sender": "Reformation",
+      "subject": "ORDER CONFIRMATION"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "YOUR RETURN CONFIRMATION"
+    },
+    {
+      "sender": "Zoom",
+      "subject": "Limited-time savings on Zoom Workplace Pro"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "The Calista Slingback Heel awaits."
     },
     {
       "sender": "AT&T Account Management",
@@ -378,18 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The State of New Jersey",
       "subject": "NJ Updates: Claim Your Child Tax Credit, Get Help with Elder Care, & More"
-    },
-    {
-      "sender": "Viski",
-      "subject": "Mary jane, Get a $10 gift card when you write a review"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "Summer Blues."
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Everyday BOSS Polos"
     }
   ],
   "items": []
