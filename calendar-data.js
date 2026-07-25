@@ -349,8 +349,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Kensington",
+      "subject": "Want to know what our clients say about their dream trips?"
+    },
+    {
+      "sender": "CARFAX Car Care",
+      "subject": "Your PORSCHE CAYENNE Vehicle Care Report \u2010 July"
+    },
+    {
+      "sender": "Zara",
+      "subject": "Your order was delivered"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "MyLowe\u2019s Money Days end tomorrow\u203c\ufe0f"
+    },
     {
       "sender": "Reformation",
       "subject": "ORDER CONFIRMATION"
@@ -374,22 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 25 Jul 2026"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Techno Taffeta Shorts"
-    },
-    {
-      "sender": "Valeria from Holafly",
-      "subject": "24 hours left!"
-    },
-    {
-      "sender": "Zara",
-      "subject": "Your order is on its way"
-    },
-    {
-      "sender": "The State of New Jersey",
-      "subject": "NJ Updates: Claim Your Child Tax Credit, Get Help with Elder Care, & More"
     }
   ],
   "items": []
