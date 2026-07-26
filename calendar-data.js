@@ -349,8 +349,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "Front lines armed robots - Power Field Notes",
+      "subject": "Armed robots on the front lines now"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 25 Jul 2026"
