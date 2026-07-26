@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-07-25T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-25T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -75,6 +64,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-08-08T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-08T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -349,8 +349,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Pini Parma",
+      "subject": "Last chance for 20% off"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "20 pieces no one would guess are high street (all under \u20ac200)"
+    },
+    {
+      "sender": "Anthropic",
+      "subject": "Security alert: new passkey added to your Claude account"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
+    },
     {
       "sender": "Front lines armed robots - Power Field Notes",
       "subject": "Armed robots on the front lines now"
@@ -366,14 +382,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chan Luu",
       "subject": "Techno Taffeta Shorts"
-    },
-    {
-      "sender": "Valeria from Holafly",
-      "subject": "24 hours left!"
-    },
-    {
-      "sender": "Zara",
-      "subject": "Your order is on its way"
     }
   ],
   "items": []
