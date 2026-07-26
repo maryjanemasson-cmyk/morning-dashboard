@@ -349,32 +349,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 2,
   "threads": [
-    {
-      "sender": "Pini Parma",
-      "subject": "Last chance for 20% off"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "20 pieces no one would guess are high street (all under \u20ac200)"
-    },
-    {
-      "sender": "Anthropic",
-      "subject": "Security alert: new passkey added to your Claude account"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
-    },
-    {
-      "sender": "Front lines armed robots - Power Field Notes",
-      "subject": "Armed robots on the front lines now"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
-    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 25 Jul 2026"
