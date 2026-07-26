@@ -349,8 +349,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "HPDirector@nassautennis.net",
+      "subject": "Camp Registration Request Received"
+    },
+    {
+      "sender": "American Airlines",
+      "subject": "It's time to check in - CXEQYB"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO | Write a review"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Final sale: Extra 20% off"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "LAST DAY to shop MyLowe's Money Days\ud83d\udcb0"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Exclusive & Limited - New Fall Bows & Decor"
+    },
+    {
+      "sender": "COS",
+      "subject": "New arrivals: refined ease"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "California Cashmere"
+    },
     {
       "sender": "Enza Costa",
       "subject": "New styles added to sale"
@@ -358,14 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 26 Jul 2026"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": ""
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": ""
     }
   ],
   "items": []
