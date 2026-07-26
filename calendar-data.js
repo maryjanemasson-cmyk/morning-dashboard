@@ -360,7 +360,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 0,
-  "threads": [],
+  "unreadCount": 1,
+  "threads": [
+    {
+      "sender": "DoorDash Order",
+      "subject": "Final receipt for Mary Jane from Walgreens"
+    }
+  ],
   "items": []
 };
