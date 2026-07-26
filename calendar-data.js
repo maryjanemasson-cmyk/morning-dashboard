@@ -349,15 +349,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 2,
+  "unreadCount": 4,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 25 Jul 2026"
+      "sender": "Enza Costa",
+      "subject": "New styles added to sale"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "Techno Taffeta Shorts"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 26 Jul 2026"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": ""
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": ""
     }
   ],
   "items": []
