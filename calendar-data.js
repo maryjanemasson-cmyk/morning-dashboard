@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reservation: 1134851*1 for Nathaniel Hinrichs",
+    "location": "JAC AA #3246",
+    "description": "Passenger: Nathaniel Hinrichs\nReservation#: 1134851*1\n\nPickup: JAC AA #3246\nDropoff: NOLs, 1690 East 2000 South, Driggs, ID 83422, US\n",
+    "startTime": "2026-07-27T18:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-27T19:03:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Buddakan - Philadelphia",
     "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
     "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
@@ -349,28 +360,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
-  "threads": [
-    {
-      "sender": "chrislovesjulia",
-      "subject": "31 picks from a drop we've been counting down to"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Your Monthly Style Report"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Big Ideas for Small Spaces"
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": ""
-    },
-    {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": ""
-    }
-  ],
+  "unreadCount": 0,
+  "threads": [],
   "items": []
 };
