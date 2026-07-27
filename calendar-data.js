@@ -360,8 +360,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Zoom",
+      "subject": "Enhance your experience with Zoom Workplace Pro plus save 15%"
+    },
     {
       "sender": "UPS",
       "subject": "\ud83c\udf92 A+ Shipping for Back-to-School"
