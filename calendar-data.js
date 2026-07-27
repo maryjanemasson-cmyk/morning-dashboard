@@ -360,47 +360,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 8,
   "threads": [
     {
-      "sender": "Simplified by Emily Ley",
-      "subject": "Structure is so back & it\u2019s 25% off!\u00a0\ud83d\udc4f"
+      "sender": "UPS",
+      "subject": "\ud83c\udf92 A+ Shipping for Back-to-School"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"La question du jour ! \ud83e\udd14\""
+    },
+    {
+      "sender": "Grok",
+      "subject": "No workspace files found"
     },
     {
       "sender": "Kimpton Hotels & Restaurants",
       "subject": "Thank you for staying at Kimpton Marlowe Hotel"
     },
     {
-      "sender": "The Shade Store",
-      "subject": "For You: 20% Off the Roller Shade Collection"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Flightview from OAG"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Mon, 7/27 is ready to view"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "Blueberry cake meets glazed donut."
-    },
-    {
       "sender": "Iran War TRUTH - Reid Calloway from PFN",
       "subject": "Iran War TRUTH: What Two Congressmen Led Me To"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
       "sender": "Medium Daily Digest",
       "subject": "Skilled Incompetence | Frank"
+    },
+    {
+      "sender": "TurboTax Monthly",
+      "subject": "\u23f8\ufe0f Does your tax strategy need a reset?"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": []
