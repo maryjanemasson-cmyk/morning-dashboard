@@ -360,15 +360,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 2,
+  "unreadCount": 3,
   "threads": [
     {
-      "sender": "Christina Marsigliese",
-      "subject": "10 No-Bake Summer Desserts"
+      "sender": "TurboTax Monthly",
+      "subject": "\u23f8\ufe0f Does your tax strategy need a reset?"
     },
     {
-      "sender": "JFK Airport",
-      "subject": "JFK Airport Parking Confirmation"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
     }
   ],
   "items": []
