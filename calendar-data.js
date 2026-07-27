@@ -360,8 +360,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Simplified by Emily Ley",
+      "subject": "Structure is so back & it\u2019s 25% off!\u00a0\ud83d\udc4f"
+    },
+    {
+      "sender": "Kimpton Hotels & Restaurants",
+      "subject": "Thank you for staying at Kimpton Marlowe Hotel"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "For You: 20% Off the Roller Shade Collection"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Flightview from OAG"
+    },
     {
       "sender": "classmanager@nassautennis.net",
       "subject": "Transaction Receipt"
@@ -385,22 +401,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Skilled Incompetence | Frank"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 27 Jul 2026"
-    },
-    {
-      "sender": "American Airlines",
-      "subject": "Your flight to Jackson Hole - Departure Gate Change"
-    },
-    {
-      "sender": "American Airlines",
-      "subject": "Your flight to Jackson Hole - CXEQYB"
-    },
-    {
-      "sender": "TurboTax Monthly",
-      "subject": "\u23f8\ufe0f Does your tax strategy need a reset?"
     }
   ],
   "items": []
