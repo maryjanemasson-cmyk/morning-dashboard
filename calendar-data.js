@@ -360,8 +360,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 6,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 27 Jul 2026"
+    },
+    {
+      "sender": "American Airlines",
+      "subject": "Your flight to Jackson Hole - Departure Gate Change"
+    },
+    {
+      "sender": "American Airlines",
+      "subject": "Your flight to Jackson Hole - CXEQYB"
+    },
     {
       "sender": "TurboTax Monthly",
       "subject": "\u23f8\ufe0f Does your tax strategy need a reset?"
