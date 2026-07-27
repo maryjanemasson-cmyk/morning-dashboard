@@ -360,8 +360,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Mon, 7/27 is ready to view"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "Blueberry cake meets glazed donut."
+    },
+    {
+      "sender": "Iran War TRUTH - Reid Calloway from PFN",
+      "subject": "Iran War TRUTH: What Two Congressmen Led Me To"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Skilled Incompetence | Frank"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 27 Jul 2026"
@@ -377,14 +401,6 @@ window.EMAIL_DATA = {
     {
       "sender": "TurboTax Monthly",
       "subject": "\u23f8\ufe0f Does your tax strategy need a reset?"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
     }
   ],
   "items": []
