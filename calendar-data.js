@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reservation at Blue Point Grill - Princeton",
+    "location": "Blue Point Grill - Princeton, 258 Nassau St, (Between Nassau St and Pine St), Princeton, NJ 08542",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPHd5yLTTiuGEQVOOd0lTAt7favMRgOQGI\n",
+    "startTime": "2026-07-27T19:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-27T20:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Buddakan - Philadelphia",
     "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
     "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
@@ -360,11 +371,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Zoom",
-      "subject": "Enhance your experience with Zoom Workplace Pro plus save 15%"
+      "sender": "ChatGPT",
+      "subject": "New personal finance tools in ChatGPT Pro"
+    },
+    {
+      "sender": "Claude Team",
+      "subject": "New: in-app browsing, artifacts, and iOS simulator support"
     },
     {
       "sender": "UPS",
