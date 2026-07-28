@@ -338,47 +338,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Inspired by your aura \u2728"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Tue, 7/28 is ready to view"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "Last chance \u2014 sale ends tonight"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access: Up to 60% Off!"
+    },
+    {
+      "sender": "Princeton Racquet Club",
+      "subject": "Summer Update/Fall Preview"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Software Requirements Change Management 101 | Karl Wiegers in Analyst\u2019s corner"
+    },
+    {
+      "sender": "Tesla video shocked internet - Reid Calloway from PFN",
+      "subject": "One Tesla video shocked the internet"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 28 Jul 2026"
+    },
     {
       "sender": "Bank of America Commercial Card",
       "subject": "You have a new statement available"
-    },
-    {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
-      "sender": "Emily from Holafly",
-      "subject": "Mary, craving the best sunsets?"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "10% Off Your Favourite Co-Ords*"
-    },
-    {
-      "sender": "",
-      "subject": "PSEG Co payment sent as a check"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Amazon Family Notification"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "Upcoming changes to Venmo"
-    },
-    {
-      "sender": "House of Jade Home",
-      "subject": "Stock Up on Dusty Plum Stems Now!"
-    },
-    {
-      "sender": "ChatGPT",
-      "subject": "New personal finance tools in ChatGPT Pro"
     }
   ],
   "items": []
