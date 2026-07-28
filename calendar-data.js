@@ -321,8 +321,8 @@ window.TRAVEL_DATA = [
         "summary": "UA54 EWR to CDG",
         "location": "Newark (EWR)",
         "description": "",
-        "start": "2026-10-26T02:45:00+00:00",
-        "end": "2026-10-26T10:25:00+00:00",
+        "start": "2026-10-26T03:05:00+00:00",
+        "end": "2026-10-26T10:35:00+00:00",
         "type": "flight"
       },
       {
@@ -338,7 +338,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 17,
   "threads": [
     {
       "sender": "Bowdens Fireside Hearth and Home",
