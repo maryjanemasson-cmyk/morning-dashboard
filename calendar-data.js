@@ -338,8 +338,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Bowdens Fireside Hearth and Home",
+      "subject": "MaryJane A Special Offer for Princeton Residents"
+    },
     {
       "sender": "BOSS",
       "subject": "BOSS Womenswear"
@@ -349,36 +353,32 @@ window.EMAIL_DATA = {
       "subject": "The Paperback Twill Chino"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "Preorder: The Wrap Cardigan"
-    },
-    {
-      "sender": "COS",
-      "subject": "Summer 2026: best sellers"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Inspired by your aura \u2728"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Tue, 7/28 is ready to view"
-    },
-    {
-      "sender": "Enza Costa",
-      "subject": "Last chance \u2014 sale ends tonight"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access: Up to 60% Off!"
-    },
-    {
       "sender": "Princeton Racquet Club",
       "subject": "Summer Update/Fall Preview"
     },
     {
       "sender": "Unroll.Me",
       "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Software Requirements Change Management 101 | Karl Wiegers in Analyst\u2019s corner"
+    },
+    {
+      "sender": "Tesla video shocked internet - Reid Calloway from PFN",
+      "subject": "One Tesla video shocked the internet"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 28 Jul 2026"
+    },
+    {
+      "sender": "Bank of America Commercial Card",
+      "subject": "You have a new statement available"
+    },
+    {
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
     }
   ],
   "items": []
