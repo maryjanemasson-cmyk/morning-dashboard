@@ -1,49 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-07-27T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-27T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "Flight to Jackson (AA 3246)",
-    "location": "New York JFK",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DO5rRTmMlQUMvdmF_awFbwEVeMwoVPp2c0\n",
-    "startTime": "2026-07-27T09:59:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-27T15:02:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation: 1134851*1 for Nathaniel Hinrichs",
-    "location": "JAC AA #3246",
-    "description": "Passenger: Nathaniel Hinrichs\nReservation#: 1134851*1\n\nPickup: JAC AA #3246\nDropoff: NOLs, 1690 East 2000 South, Driggs, ID 83422, US\n",
-    "startTime": "2026-07-27T18:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-27T19:03:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at Blue Point Grill - Princeton",
-    "location": "Blue Point Grill - Princeton, 258 Nassau St, (Between Nassau St and Pine St), Princeton, NJ 08542",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPHd5yLTTiuGEQVOOd0lTAt7favMRgOQGI\n",
-    "startTime": "2026-07-27T19:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-27T20:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Buddakan - Philadelphia",
     "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
     "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
@@ -97,6 +53,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-08-10T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-10T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -371,8 +338,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
+    },
+    {
+      "sender": "Emily from Holafly",
+      "subject": "Mary, craving the best sunsets?"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "10% Off Your Favourite Co-Ords*"
+    },
+    {
+      "sender": "",
+      "subject": "PSEG Co payment sent as a check"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Amazon Family Notification"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Venmo",
       "subject": "Upcoming changes to Venmo"
@@ -388,30 +379,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Claude Team",
       "subject": "New: in-app browsing, artifacts, and iOS simulator support"
-    },
-    {
-      "sender": "UPS",
-      "subject": "\ud83c\udf92 A+ Shipping for Back-to-School"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"La question du jour ! \ud83e\udd14\""
-    },
-    {
-      "sender": "Grok",
-      "subject": "No workspace files found"
-    },
-    {
-      "sender": "Kimpton Hotels & Restaurants",
-      "subject": "Thank you for staying at Kimpton Marlowe Hotel"
-    },
-    {
-      "sender": "Iran War TRUTH - Reid Calloway from PFN",
-      "subject": "Iran War TRUTH: What Two Congressmen Led Me To"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Skilled Incompetence | Frank"
     }
   ],
   "items": []
