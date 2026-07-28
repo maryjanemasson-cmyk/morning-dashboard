@@ -338,8 +338,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "BOSS",
+      "subject": "BOSS Womenswear"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Paperback Twill Chino"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "Preorder: The Wrap Cardigan"
+    },
+    {
+      "sender": "COS",
+      "subject": "Summer 2026: best sellers"
+    },
     {
       "sender": "Etsy",
       "subject": "Inspired by your aura \u2728"
@@ -363,22 +379,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Software Requirements Change Management 101 | Karl Wiegers in Analyst\u2019s corner"
-    },
-    {
-      "sender": "Tesla video shocked internet - Reid Calloway from PFN",
-      "subject": "One Tesla video shocked the internet"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 28 Jul 2026"
-    },
-    {
-      "sender": "Bank of America Commercial Card",
-      "subject": "You have a new statement available"
     }
   ],
   "items": []
