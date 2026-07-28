@@ -338,8 +338,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Bank of America Commercial Card",
+      "subject": "You have a new statement available"
+    },
     {
       "sender": "E-ZPass New Jersey Customer Service",
       "subject": "E-ZPass Successful Auto-Replenishment"
@@ -375,10 +379,6 @@ window.EMAIL_DATA = {
     {
       "sender": "ChatGPT",
       "subject": "New personal finance tools in ChatGPT Pro"
-    },
-    {
-      "sender": "Claude Team",
-      "subject": "New: in-app browsing, artifacts, and iOS simulator support"
     }
   ],
   "items": []
