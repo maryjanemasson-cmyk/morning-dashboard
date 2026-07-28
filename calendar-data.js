@@ -371,8 +371,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Venmo",
+      "subject": "Upcoming changes to Venmo"
+    },
+    {
+      "sender": "House of Jade Home",
+      "subject": "Stock Up on Dusty Plum Stems Now!"
+    },
     {
       "sender": "ChatGPT",
       "subject": "New personal finance tools in ChatGPT Pro"
@@ -404,14 +412,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Skilled Incompetence | Frank"
-    },
-    {
-      "sender": "TurboTax Monthly",
-      "subject": "\u23f8\ufe0f Does your tax strategy need a reset?"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": []
