@@ -338,8 +338,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "The Ultimate Evening Dress Edit"
+    },
     {
       "sender": "Bowdens Fireside Hearth and Home",
       "subject": "MaryJane A Special Offer for Princeton Residents"
@@ -375,10 +379,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bank of America Commercial Card",
       "subject": "You have a new statement available"
-    },
-    {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
     }
   ],
   "items": []
