@@ -360,23 +360,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Closet full of clothes and nothing to wear"
+      "sender": "Pini Parma",
+      "subject": "Wear it with everything"
     },
     {
-      "sender": "Etsy",
-      "subject": "Summer\u2019s biggest hits on Etsy \u2600\ufe0f"
+      "sender": "Reformation",
+      "subject": "GOT YOU A SCARF"
     },
     {
-      "sender": "IHG Hotels & Resorts",
-      "subject": "One more chance to tell us what you think and enter to win 25,000 IHG One Rewards Points"
+      "sender": "Joe's Stone Crab",
+      "subject": "Miami Spice Is Here, Count Us In"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Summer Storage Event starts NOW\ud83e\udd29"
+      "sender": "COS",
+      "subject": "The next chapter"
+    },
+    {
+      "sender": "JETSET Pilates SOFI",
+      "subject": "\u26a0\ufe0f Final Reminder: Flash Sale Ends July 31"
     },
     {
       "sender": "Optery",
@@ -389,10 +393,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Starts Now: Up to 60% Off Select Styles"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 7/29 is ready to view"
     },
     {
       "sender": "Anthropic",
