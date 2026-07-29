@@ -349,8 +349,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Anthropic",
+      "subject": "Security alert: new trusted device added to your Claude account"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Synchrony Offers",
+      "subject": "Introducing Synchrony\u2019s newest benefit\u2014Synchrony Travel"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "5 Books That Made Me Smarter than 99% of People. | Sean Veaux in Books Are Our Superpower"
+    },
+    {
+      "sender": "Trump broke 50 year old rule - Reid Calloway from PFN",
+      "subject": "Breaking: Trump signed a law that changes everything."
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 29 Jul 2026"
@@ -366,30 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Cloudflare",
-      "subject": "Architecting AI for Production | Connect 2026"
-    },
-    {
-      "sender": "Empower Online Delivery",
-      "subject": "Your Retirement Plan Regulatory Documents"
-    },
-    {
-      "sender": "Rat & Boa USA",
-      "subject": "The Ultimate Evening Dress Edit"
-    },
-    {
-      "sender": "Bowdens Fireside Hearth and Home",
-      "subject": "MaryJane A Special Offer for Princeton Residents"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "BOSS Womenswear"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Paperback Twill Chino"
     }
   ],
   "items": []
