@@ -349,19 +349,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 29 Jul 2026"
+    },
+    {
+      "sender": "DHL EXPRESS",
+      "subject": "DHL On Demand Delivery"
     },
     {
       "sender": "D\u00e9 Rococo WORLD",
       "subject": "A shipment from order #46478 is on the way"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL",
-      "subject": "Your vote counts: One or more shareholder documents require your action"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -376,10 +376,6 @@ window.EMAIL_DATA = {
       "subject": "Your Retirement Plan Regulatory Documents"
     },
     {
-      "sender": "Eleanor Dath",
-      "subject": "Re: QUOTE: Family Trip to Columbia"
-    },
-    {
       "sender": "Rat & Boa USA",
       "subject": "The Ultimate Evening Dress Edit"
     },
@@ -390,6 +386,10 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "BOSS Womenswear"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Paperback Twill Chino"
     }
   ],
   "items": []
