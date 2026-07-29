@@ -64,6 +64,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Flight to Newark (UA 1548)",
+    "location": "Jackson Hole JAC",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPwiupDmB9Z_Vgq6Ud8l89U4qxhurFmW4c\n",
+    "startTime": "2026-08-11T09:05:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-11T13:22:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -341,6 +352,30 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
+    },
+    {
+      "sender": "D\u00e9 Rococo WORLD",
+      "subject": "A shipment from order #46478 is on the way"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL",
+      "subject": "Your vote counts: One or more shareholder documents require your action"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Cloudflare",
+      "subject": "Architecting AI for Production | Connect 2026"
+    },
+    {
+      "sender": "Empower Online Delivery",
+      "subject": "Your Retirement Plan Regulatory Documents"
+    },
+    {
       "sender": "Eleanor Dath",
       "subject": "Re: QUOTE: Family Trip to Columbia"
     },
@@ -355,30 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BOSS",
       "subject": "BOSS Womenswear"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Paperback Twill Chino"
-    },
-    {
-      "sender": "Princeton Racquet Club",
-      "subject": "Summer Update/Fall Preview"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Software Requirements Change Management 101 | Karl Wiegers in Analyst\u2019s corner"
-    },
-    {
-      "sender": "Tesla video shocked internet - Reid Calloway from PFN",
-      "subject": "One Tesla video shocked the internet"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 28 Jul 2026"
     }
   ],
   "items": []
