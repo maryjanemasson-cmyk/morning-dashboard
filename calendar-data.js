@@ -360,19 +360,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "Eleanor Dath",
-      "subject": "RE: QUOTE: Family Trip to Columbia"
+      "sender": "MyLowe's Rewards",
+      "subject": "More reasons to get a MyLowe\u2019s Rewards Credit Card"
+    },
+    {
+      "sender": "Medium Events",
+      "subject": "Who\u2019s on the Medium Day 2026 schedule?"
     },
     {
       "sender": "PayPal",
       "subject": "Package tracking made simple with PayPal \ud83d\udccd"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, earn a $400 cash bonus \u2013 here\u2019s how:"
     },
     {
       "sender": "Croissant",
@@ -381,10 +381,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pini Parma",
       "subject": "Wear it with everything"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "GOT YOU A SCARF"
     },
     {
       "sender": "Joe's Stone Crab",
@@ -401,6 +397,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Optery",
       "subject": "[Alert] Your Info Was Found on InstantCheckmate, USA People Search, FreeBackgroundChecks.com and 49 other sites"
+    },
+    {
+      "sender": "America\u2019s Breaking Point- Reid Calloway from PFN",
+      "subject": "You are the counterparty now"
     }
   ],
   "items": [
