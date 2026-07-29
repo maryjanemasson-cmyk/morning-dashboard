@@ -338,8 +338,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Eleanor Dath",
+      "subject": "Re: QUOTE: Family Trip to Columbia"
+    },
     {
       "sender": "Rat & Boa USA",
       "subject": "The Ultimate Evening Dress Edit"
@@ -375,10 +379,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 28 Jul 2026"
-    },
-    {
-      "sender": "Bank of America Commercial Card",
-      "subject": "You have a new statement available"
     }
   ],
   "items": []
