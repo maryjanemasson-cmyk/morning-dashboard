@@ -349,8 +349,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "America\u2019s Breaking Point- Reid Calloway from PFN",
+      "subject": "You are the counterparty now"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Starts Now: Up to 60% Off Select Styles"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 7/29 is ready to view"
+    },
     {
       "sender": "Anthropic",
       "subject": "Security alert: new trusted device added to your Claude account"
@@ -378,18 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 29 Jul 2026"
-    },
-    {
-      "sender": "DHL EXPRESS",
-      "subject": "DHL On Demand Delivery"
-    },
-    {
-      "sender": "D\u00e9 Rococo WORLD",
-      "subject": "A shipment from order #46478 is on the way"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": []
