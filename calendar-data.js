@@ -363,6 +363,10 @@ window.EMAIL_DATA = {
   "unreadCount": 21,
   "threads": [
     {
+      "sender": "Microsoft Rewards",
+      "subject": "Final chance to win: Harry Styles tix or an XBOX Series X"
+    },
+    {
       "sender": "MyLowe's Rewards",
       "subject": "More reasons to get a MyLowe\u2019s Rewards Credit Card"
     },
@@ -397,10 +401,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Optery",
       "subject": "[Alert] Your Info Was Found on InstantCheckmate, USA People Search, FreeBackgroundChecks.com and 49 other sites"
-    },
-    {
-      "sender": "America\u2019s Breaking Point- Reid Calloway from PFN",
-      "subject": "You are the counterparty now"
     }
   ],
   "items": [
