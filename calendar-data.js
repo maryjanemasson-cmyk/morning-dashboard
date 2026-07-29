@@ -360,8 +360,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Eleanor Dath",
+      "subject": "RE: QUOTE: Family Trip to Columbia"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Package tracking made simple with PayPal \ud83d\udccd"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, earn a $400 cash bonus \u2013 here\u2019s how:"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "This week in Feed: real shoppers, real purchases"
+    },
     {
       "sender": "Pini Parma",
       "subject": "Wear it with everything"
@@ -385,22 +401,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Optery",
       "subject": "[Alert] Your Info Was Found on InstantCheckmate, USA People Search, FreeBackgroundChecks.com and 49 other sites"
-    },
-    {
-      "sender": "America\u2019s Breaking Point- Reid Calloway from PFN",
-      "subject": "You are the counterparty now"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Starts Now: Up to 60% Off Select Styles"
-    },
-    {
-      "sender": "Anthropic",
-      "subject": "Security alert: new trusted device added to your Claude account"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
     }
   ],
   "items": [
