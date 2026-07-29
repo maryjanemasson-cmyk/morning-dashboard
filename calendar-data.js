@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "CP Reformer Flow 1.5 (50 Mins) class",
+    "location": "Club Pilates Princeton",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fadf9ab8abc487",
+    "startTime": "2026-07-29T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-07-29T17:50:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Buddakan - Philadelphia",
     "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
     "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
@@ -349,8 +360,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Closet full of clothes and nothing to wear"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Summer\u2019s biggest hits on Etsy \u2600\ufe0f"
+    },
+    {
+      "sender": "IHG Hotels & Resorts",
+      "subject": "One more chance to tell us what you think and enter to win 25,000 IHG One Rewards Points"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Summer Storage Event starts NOW\ud83e\udd29"
+    },
+    {
+      "sender": "Optery",
+      "subject": "[Alert] Your Info Was Found on InstantCheckmate, USA People Search, FreeBackgroundChecks.com and 49 other sites"
+    },
     {
       "sender": "America\u2019s Breaking Point- Reid Calloway from PFN",
       "subject": "You are the counterparty now"
@@ -370,27 +401,19 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "You shared some Google Account data with Claude"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Synchrony Offers",
-      "subject": "Introducing Synchrony\u2019s newest benefit\u2014Synchrony Travel"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "5 Books That Made Me Smarter than 99% of People. | Sean Veaux in Books Are Our Superpower"
-    },
-    {
-      "sender": "Trump broke 50 year old rule - Reid Calloway from PFN",
-      "subject": "Breaking: Trump signed a law that changes everything."
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 29 Jul 2026"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "class",
+      "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 5:00 PM",
+      "name": "CP Reformer Flow 1.5 (50 Mins) class",
+      "date": "2026-07-29",
+      "time": "17:00",
+      "duration_min": 50,
+      "location": "Club Pilates Princeton",
+      "id": "19fadf9ab8abc487",
+      "sender": "Club Pilates Princeton"
+    }
+  ]
 };
