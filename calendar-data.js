@@ -349,15 +349,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "New arms race- Reid Calloway from PFN",
-      "subject": "The new arms race is financial"
+      "sender": "Eleanor Dath",
+      "subject": "Re: QUOTE: Family Trip to Columbia"
     },
     {
-      "sender": "Princeton Academy of Art",
-      "subject": "Register now! Starting soon at Princeton Academy of Art"
+      "sender": "Docusign via Docusign",
+      "subject": "B5 Booking Forms- GP X 4"
+    },
+    {
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Jul 23 2026"
     },
     {
       "sender": "Microsoft Rewards",
@@ -386,10 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Joe's Stone Crab",
       "subject": "Miami Spice Is Here, Count Us In"
-    },
-    {
-      "sender": "COS",
-      "subject": "The next chapter"
     }
   ],
   "items": []
