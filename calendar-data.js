@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "CP Reformer Flow 1.5 (50 Mins) class",
-    "location": "Club Pilates Princeton",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fadf9ab8abc487",
-    "startTime": "2026-07-29T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-29T17:50:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Buddakan - Philadelphia",
     "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
     "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
@@ -360,15 +349,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "Washington University in St. Louis",
-      "subject": "It's time to Discover WashU!"
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
     },
     {
-      "sender": "D\u00e9 Rococo",
-      "subject": "THE CLASSICS"
+      "sender": "Valerie from Holafly",
+      "subject": "Traveling soon? Your future self will thank you for this."
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Summer Sale Staples"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Build Your Footwear Collection with BOSS"
     },
     {
       "sender": "Microsoft Rewards",
@@ -393,27 +390,7 @@ window.EMAIL_DATA = {
     {
       "sender": "Pini Parma",
       "subject": "Wear it with everything"
-    },
-    {
-      "sender": "Joe's Stone Crab",
-      "subject": "Miami Spice Is Here, Count Us In"
-    },
-    {
-      "sender": "COS",
-      "subject": "The next chapter"
     }
   ],
-  "items": [
-    {
-      "type": "class",
-      "title": "CP Reformer Flow 1.5 (50 Mins) class \u00b7 5:00 PM",
-      "name": "CP Reformer Flow 1.5 (50 Mins) class",
-      "date": "2026-07-29",
-      "time": "17:00",
-      "duration_min": 50,
-      "location": "Club Pilates Princeton",
-      "id": "19fadf9ab8abc487",
-      "sender": "Club Pilates Princeton"
-    }
-  ]
+  "items": []
 };
