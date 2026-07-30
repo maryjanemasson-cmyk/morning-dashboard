@@ -352,20 +352,28 @@ window.EMAIL_DATA = {
   "unreadCount": 10,
   "threads": [
     {
-      "sender": "Adam Liptak",
-      "subject": "The Docket: A \u2018zombie court\u2019 for terror cases awakens"
+      "sender": "BOSS",
+      "subject": "BOSS Formalwear for Your Next Event"
     },
     {
-      "sender": "Reformation",
-      "subject": "RING MY BELL"
+      "sender": "Musk New Invention - Power Field Notes",
+      "subject": "Elon Musk on His New Invention: \u201cAn Infinite Money Glitch.\u201d"
     },
     {
-      "sender": "Zoom",
-      "subject": "Last chance to save! Don't miss 15% off"
+      "sender": "National Building Museum",
+      "subject": "August at the Museum: THE PLAYGROUND, Hard Hat Tour, Late Night, & More"
     },
     {
-      "sender": "Shelby at Reformation",
-      "subject": "A note from the FWB styledesk"
+      "sender": "Maryland College Investment Plan",
+      "subject": "Celebrating 25 Years of Saving for Brighter Futures"
+    },
+    {
+      "sender": "Chloe at Sur La Table",
+      "subject": "Mary, A Trip Around the World, One Class at a Time"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Electronics item"
     },
     {
       "sender": "French Language Accelerator (Skool)",
@@ -382,15 +390,15 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Events",
       "subject": "Who\u2019s on the Medium Day 2026 schedule?"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Package tracking made simple with PayPal \ud83d\udccd"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "This week in Feed: real shoppers, real purchases"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Electronics item",
+      "date": "2026-07-30",
+      "id": "19fb42280a9b5058",
+      "sender": "Amazon.com"
+    }
+  ]
 };
