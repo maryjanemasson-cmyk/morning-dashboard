@@ -360,8 +360,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "It's time to Discover WashU!"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "THE CLASSICS"
+    },
     {
       "sender": "Microsoft Rewards",
       "subject": "Final chance to win: Harry Styles tix or an XBOX Series X"
@@ -393,14 +401,6 @@ window.EMAIL_DATA = {
     {
       "sender": "COS",
       "subject": "The next chapter"
-    },
-    {
-      "sender": "JETSET Pilates SOFI",
-      "subject": "\u26a0\ufe0f Final Reminder: Flash Sale Ends July 31"
-    },
-    {
-      "sender": "Optery",
-      "subject": "[Alert] Your Info Was Found on InstantCheckmate, USA People Search, FreeBackgroundChecks.com and 49 other sites"
     }
   ],
   "items": [
