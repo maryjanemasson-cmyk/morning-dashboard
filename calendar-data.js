@@ -349,31 +349,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "BOSS",
-      "subject": "BOSS Formalwear for Your Next Event"
+      "sender": "Eleanor Dath",
+      "subject": "Re: QUOTE: Family Trip to Columbia"
     },
     {
-      "sender": "Musk New Invention - Power Field Notes",
-      "subject": "Elon Musk on His New Invention: \u201cAn Infinite Money Glitch.\u201d"
+      "sender": "FORM BY TWO",
+      "subject": "Membership Update: Simpler Pricing & Membership Terms"
     },
     {
-      "sender": "National Building Museum",
-      "subject": "August at the Museum: THE PLAYGROUND, Hard Hat Tour, Late Night, & More"
-    },
-    {
-      "sender": "Maryland College Investment Plan",
-      "subject": "Celebrating 25 Years of Saving for Brighter Futures"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Mary, A Trip Around the World, One Class at a Time"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Electronics item"
+      "sender": "Etsy",
+      "subject": "Four shops worth knowing this summer \ud83e\udde1"
     },
     {
       "sender": "French Language Accelerator (Skool)",
@@ -382,23 +370,7 @@ window.EMAIL_DATA = {
     {
       "sender": "Microsoft Rewards",
       "subject": "Final chance to win: Harry Styles tix or an XBOX Series X"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "More reasons to get a MyLowe\u2019s Rewards Credit Card"
-    },
-    {
-      "sender": "Medium Events",
-      "subject": "Who\u2019s on the Medium Day 2026 schedule?"
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Electronics item",
-      "date": "2026-07-30",
-      "id": "19fb42280a9b5058",
-      "sender": "Amazon.com"
-    }
-  ]
+  "items": []
 };
