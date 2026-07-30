@@ -349,11 +349,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 30 Jul 2026"
+      "sender": "New arms race- Reid Calloway from PFN",
+      "subject": "The new arms race is financial"
+    },
+    {
+      "sender": "Princeton Academy of Art",
+      "subject": "Register now! Starting soon at Princeton Academy of Art"
     },
     {
       "sender": "Microsoft Rewards",
@@ -386,10 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "COS",
       "subject": "The next chapter"
-    },
-    {
-      "sender": "JETSET Pilates SOFI",
-      "subject": "\u26a0\ufe0f Final Reminder: Flash Sale Ends July 31"
     }
   ],
   "items": []
