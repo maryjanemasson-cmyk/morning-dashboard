@@ -13,7 +13,7 @@ window.CALENDAR_EVENTS = [
   {
     "summary": "Reservation: Buddakan - Philadelphia",
     "location": "Buddakan - Philadelphia\n325 Chestnut Street Philadelphia, PA",
-    "description": "Reservation Number: 2110959435\n\nTelephone: (215) 574-9440",
+    "description": "Provider: Buddakan - Philadelphia\n\nParty size: 2",
     "startTime": "2026-07-31T18:30:00-04:00",
     "startDate": "",
     "endTime": "2026-07-31T20:00:00-04:00",
@@ -349,15 +349,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Eleanor Dath",
-      "subject": "Re: QUOTE: Family Trip to Columbia"
+      "sender": "Adam Liptak",
+      "subject": "The Docket: A \u2018zombie court\u2019 for terror cases awakens"
     },
     {
-      "sender": "Docusign via Docusign",
-      "subject": "B5 Booking Forms- GP X 4"
+      "sender": "Reformation",
+      "subject": "RING MY BELL"
+    },
+    {
+      "sender": "Zoom",
+      "subject": "Last chance to save! Don't miss 15% off"
+    },
+    {
+      "sender": "Shelby at Reformation",
+      "subject": "A note from the FWB styledesk"
     },
     {
       "sender": "French Language Accelerator (Skool)",
@@ -382,14 +390,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Croissant",
       "subject": "This week in Feed: real shoppers, real purchases"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Wear it with everything"
-    },
-    {
-      "sender": "Joe's Stone Crab",
-      "subject": "Miami Spice Is Here, Count Us In"
     }
   ],
   "items": []
