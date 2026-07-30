@@ -349,27 +349,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 4,
   "threads": [
     {
-      "sender": "Eleanor Dath",
-      "subject": "Re: QUOTE: Family Trip to Columbia"
+      "sender": "McGee & Co.",
+      "subject": "Good news \u2014 30\" Faux Golden Fern Wreath is back in stock!"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Membership Update: Simpler Pricing & Membership Terms"
+      "sender": "NBC",
+      "subject": "Just Dropped on Peacock!"
     },
     {
-      "sender": "Etsy",
-      "subject": "Four shops worth knowing this summer \ud83e\udde1"
+      "sender": "Life360",
+      "subject": "Back-to-school with a teen?"
     },
     {
       "sender": "French Language Accelerator (Skool)",
       "subject": "Weekly digest for Thu, Jul 23 2026"
-    },
-    {
-      "sender": "Microsoft Rewards",
-      "subject": "Final chance to win: Harry Styles tix or an XBOX Series X"
     }
   ],
   "items": []
