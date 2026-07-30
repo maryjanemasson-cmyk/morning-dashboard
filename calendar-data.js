@@ -349,23 +349,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Valerie from Holafly",
-      "subject": "Traveling soon? Your future self will thank you for this."
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Summer Sale Staples"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Build Your Footwear Collection with BOSS"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 30 Jul 2026"
     },
     {
       "sender": "Microsoft Rewards",
@@ -390,6 +378,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Pini Parma",
       "subject": "Wear it with everything"
+    },
+    {
+      "sender": "Joe's Stone Crab",
+      "subject": "Miami Spice Is Here, Count Us In"
+    },
+    {
+      "sender": "COS",
+      "subject": "The next chapter"
+    },
+    {
+      "sender": "JETSET Pilates SOFI",
+      "subject": "\u26a0\ufe0f Final Reminder: Flash Sale Ends July 31"
     }
   ],
   "items": []
