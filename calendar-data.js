@@ -75,6 +75,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Your Appointment at Suite Blend Color Bar",
+    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
+    "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
+    "startTime": "2026-08-13T12:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-13T16:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Your Appointment at Suite Blend Color Bar",
+    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
+    "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
+    "startTime": "2026-08-13T16:15:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-13T22:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Your Appointment at Suite Blend Color Bar",
+    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
+    "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
+    "startTime": "2026-08-13T16:15:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-13T22:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -349,39 +382,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "LOOK OPTIC",
-      "subject": "New Styles Added: Up to 60% Off"
+      "sender": "Horizon BCBSNJ Member Services",
+      "subject": "Christian, your claim has been processed"
     },
     {
-      "sender": "Federal Reserve changed hands -  Power Field Notes",
-      "subject": "Breaking: Trump just made his biggest move yet"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Forecasting glow-up"
     },
     {
-      "sender": "OpenAI",
-      "subject": "New: Lower GPT-5.6 pricing and Fast mode for Sol"
+      "sender": "amazon.com",
+      "subject": "Delivery update: \"CyberPower CP1500PFCLCD PFC...\""
     },
     {
-      "sender": "Chan Luu",
-      "subject": "Bandana Season"
+      "sender": "Chris Loves Julia",
+      "subject": "9 things for a spa-like bathroom"
     },
     {
-      "sender": "McGee & Co.",
-      "subject": "Good news \u2014 30\" Faux Golden Fern Wreath is back in stock!"
+      "sender": "WAT THE BRAND",
+      "subject": "The Pieces You Need This Payday.."
     },
     {
-      "sender": "NBC",
-      "subject": "Just Dropped on Peacock!"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Last chance to save BIG on appliances!"
     },
     {
-      "sender": "Life360",
-      "subject": "Back-to-school with a teen?"
+      "sender": "Rat & Boa",
+      "subject": "Zaz\u00e1 Pecego\u2019s Guide To Paris"
     },
     {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Jul 23 2026"
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Make every day delightful"
+    },
+    {
+      "sender": "COS",
+      "subject": "Denim: the new classics"
     }
   ],
   "items": []
