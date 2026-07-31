@@ -349,8 +349,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "New Styles Added: Up to 60% Off"
+    },
+    {
+      "sender": "Federal Reserve changed hands -  Power Field Notes",
+      "subject": "Breaking: Trump just made his biggest move yet"
+    },
+    {
+      "sender": "OpenAI",
+      "subject": "New: Lower GPT-5.6 pricing and Fast mode for Sol"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Bandana Season"
+    },
     {
       "sender": "McGee & Co.",
       "subject": "Good news \u2014 30\" Faux Golden Fern Wreath is back in stock!"
