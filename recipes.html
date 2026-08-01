@@ -748,6 +748,7 @@
         title = title.toLowerCase().replace(/\b[\p{L}\p{N}][\p{L}\p{N}'’-]*\b/gu, (word, offset) =>
           offset > 0 && smallWords.has(word) ? word : word.charAt(0).toUpperCase() + word.slice(1));
       }
+      title = title.replace(/\b[A-Z]{4,}\b/g, word => word.charAt(0) + word.slice(1).toLowerCase());
       return title;
     }
 
@@ -967,7 +968,7 @@
         openAddModal();
 
         // Pre-fill the form
-        document.getElementById('f-name').value = cleanRecipeText(recipe.name) || '';
+        document.getElementById('f-name').value = normalizeImportedRecipeTitle(recipe.name) || '';
         document.getElementById('f-source').value = url;
 
         // Image
@@ -1009,12 +1010,18 @@
           document.getElementById('f-servings').value = servings;
         }
 
-        // Category / cuisine
+        // Category / cuisine. Sites often use free-form values such as
+        // “Cookies” rather than our fixed category list, so infer a sensible
+        // dashboard category instead of falling back to Dinner.
+        const inferredCategory = inferRecipeCategory(
+          document.getElementById('f-name').value,
+          document.getElementById('f-ingredients').value.split('\n').filter(Boolean)
+        );
         if (recipe.recipeCategory) {
           const cat = Array.isArray(recipe.recipeCategory) ? recipe.recipeCategory[0] : recipe.recipeCategory;
           const catMap = {'main course':'Dinner','dinner':'Dinner','lunch':'Lunch','breakfast':'Breakfast','dessert':'Dessert','appetizer':'Appetizer','snack':'Snack','drink':'Drink','side dish':'Side','soup':'Soup','salad':'Salad'};
-          document.getElementById('f-category').value = catMap[cat.toLowerCase()] || 'Dinner';
-        }
+          document.getElementById('f-category').value = catMap[cat.toLowerCase()] || inferredCategory;
+        } else document.getElementById('f-category').value = inferredCategory;
         if (recipe.recipeCuisine) {
           const cuisine = Array.isArray(recipe.recipeCuisine) ? recipe.recipeCuisine[0] : recipe.recipeCuisine;
           document.getElementById('f-cuisine').value = cuisine;
@@ -1092,15 +1099,43 @@
     }
 
     // Heuristic parser tuned for Instagram Reel captions.
-    function parseIgCaption() {
+    async function parseIgCaption() {
       const pastedRaw = document.getElementById('ig-caption-input').value.trim();
       const url = document.getElementById('ig-url-input').value.trim();
       if (!pastedRaw) { alert('Paste the caption first.'); return; }
 
       // Instagram's metadata sometimes wraps the caption in
-      // “123 likes — account on Instagram: \"caption\"”. Remove that shell.
-      const wrappedCaption = pastedRaw.match(/\bon Instagram\s*:\s*["“]([\s\S]*)/i);
+      // “123 likes — account on April 24, 2025: \"caption\"”. Remove that shell.
+      const wrappedCaption = pastedRaw.match(/\bon\s+(?:Instagram|(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4})\s*:\s*["“]([\s\S]*)/i);
       const raw = wrappedCaption ? wrappedCaption[1].replace(/["”]\s*$/, '').trim() : pastedRaw;
+
+      // If the post links to a complete recipe page, its recipe card is more
+      // reliable than the promotional Instagram caption.
+      const linkedRecipeUrl = (raw.match(/https?:\/\/[^\s"”]+/gi) || [])
+        .map(link => link.replace(/[),.;!?]+$/, ''))
+        .find(link => !/instagram\.com/i.test(link));
+      if (linkedRecipeUrl) {
+        const linkedHashtags = [...raw.matchAll(/#([A-Za-z0-9_]+)/g)].map(m => m[1]);
+        closeModal('ig-modal');
+        document.getElementById('url-input').value = linkedRecipeUrl;
+        document.getElementById('url-status').style.display = 'none';
+        document.getElementById('url-fallback').style.display = 'none';
+        document.getElementById('url-paste-btn').style.display = 'none';
+        document.getElementById('url-modal').classList.add('open');
+        await fetchRecipeFromUrl();
+        if (document.getElementById('edit-modal').classList.contains('open')) {
+          document.getElementById('modal-title').textContent = 'Review Instagram Recipe';
+          const reviewNote = document.getElementById('import-review-note');
+          reviewNote.textContent = 'A complete recipe page was linked in the Instagram caption, so its title, ingredients, timing, category, and photo were used. Give them a quick confirmation before saving.';
+          reviewNote.style.display = '';
+          if (linkedHashtags.length) document.getElementById('f-tags').value = linkedHashtags.slice(0, 8).join(', ');
+          if (!document.getElementById('f-image').value && igFetchedMeta.image) {
+            document.getElementById('f-image').value = igFetchedMeta.image;
+            updateImagePreview();
+          }
+        }
+        return;
+      }
 
       // Strip leading "engagement" lines that aren't part of the recipe
       const noiseRe = /^(save this|comment|tag a friend|follow|follow @|recipe below|recipe in (the )?comments|full recipe|written recipe)/i;
@@ -1139,6 +1174,7 @@
         const line = lines[i];
         if (noiseRe.test(line)) continue;
         if (isMeta(line)) continue;
+        if (/^https?:\/\//i.test(line) || /^["”'.]+$/.test(line)) continue;
         if (isIngHeader(line) && !isInsHeader(line)) { mode = 'ing'; continue; }
         if (isInsHeader(line)) { mode = 'ins'; continue; }
 
