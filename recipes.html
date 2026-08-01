@@ -1151,13 +1151,83 @@
       return 'Dinner';
     }
 
+    function parseExplicitRecipeSections(lines, raw) {
+      const isIngredientsHeader = line => /^(?:ingredients?|what you need|you(?:'|’)ll need)\s*:?$/i.test(line);
+      const isInstructionsHeader = line => /^(?:instructions?|directions?|method|preparation|steps?|how to make(?: it)?)\s*:?$/i.test(line);
+      const ingredientsIndex = lines.findIndex(isIngredientsHeader);
+      const instructionsIndex = lines.findIndex((line, i) => i > ingredientsIndex && isInstructionsHeader(line));
+      if (ingredientsIndex < 0 || instructionsIndex < 0) return null;
+
+      const titleNoise = /^(?:video|print recipe|pin recipe|jump to recipe|save recipe|recipe|prep(?:aration)? time|cook(?:ing)? time|total time|servings?|yield|makes|mins?|minutes?|hrs?|hours?|ingredients?|instructions?|directions?|method|steps?)$/i;
+      let title = '';
+      for (let i = ingredientsIndex - 1; i >= Math.max(0, ingredientsIndex - 45); i--) {
+        const candidate = stripLooseBullet(lines[i]).replace(/^(?:recipe\s*[:\-]\s*)/i, '').trim();
+        if (!candidate || titleNoise.test(candidate)) continue;
+        if (/^(?:prep(?:aration)?(?:\s*time)?|cook(?:ing)?\s*time|total\s*time|serves|servings|yield|makes)\b/i.test(candidate)) continue;
+        if (/^\d|\b(?:votes?|reviews?|stars?)\b/i.test(candidate)) continue;
+        if (/\b(?:food scientist|chef|author)\b/i.test(candidate)) continue;
+        if (candidate.length > 100 || /[.!?]$/.test(candidate)) continue;
+        if (candidate === candidate.toUpperCase() && candidate.length > 3) continue;
+        title = candidate;
+        break;
+      }
+
+      const ingredients = [];
+      const instructions = [];
+      const notes = [];
+      for (let i = ingredientsIndex + 1; i < instructionsIndex; i++) {
+        const original = lines[i];
+        if (!original) continue;
+        if (/^\*+\s*\S/.test(original)) notes.push(original.replace(/^\*+\s*/, '').trim());
+        else ingredients.push(stripLooseBullet(original));
+      }
+
+      const stopAfterRecipe = /^(?:more\s+(?:recipes?|cakes?|desserts?|ideas?)|you may also like|related recipes?|leave a comment(?: and rating)?|rate this recipe|recipe rating|nutrition(?: information)?|share this recipe|comments?)$/i;
+      let mode = 'instructions';
+      for (let i = instructionsIndex + 1; i < lines.length; i++) {
+        const original = lines[i];
+        if (!original) continue;
+        if (stopAfterRecipe.test(original)) break;
+        if (/^(?:notes?|tips?|storage|variations?)\s*:?$/i.test(original)) { mode = 'notes'; continue; }
+        if (/^(?:course|cuisine|keyword|author)\s*:?/i.test(original)) break;
+        const cleaned = stripLooseBullet(original);
+        if (!cleaned) continue;
+        if (mode === 'notes') notes.push(cleaned);
+        else instructions.push(cleaned);
+      }
+
+      const metadata = raw.replace(/\u00a0/g, ' ');
+      const prep = metadata.match(/prep(?:aration)?\s*time\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?\s*(?:hours?|hrs?|hr|minutes?|mins?|min))/i);
+      const cook = metadata.match(/cook(?:ing)?\s*time\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?\s*(?:hours?|hrs?|hr|minutes?|mins?|min))/i);
+      const servings = metadata.match(/(?:serves|servings?|yield|makes)\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?)/i);
+      const url = metadata.match(/https?:\/\/[^\s)]+/i);
+
+      if (!ingredients.length || !instructions.length) return null;
+      return {
+        name: title || 'Untitled Recipe',
+        ingredients: ingredients.filter(Boolean),
+        instructions,
+        prep: prep ? prep[1].replace(/\s+/g, ' ').trim() : '',
+        cook: cook ? cook[1].replace(/\s+/g, ' ').trim() : '',
+        servings: servings ? servings[1].trim() : '',
+        notes,
+        source: url ? url[0] : '',
+        category: inferRecipeCategory(title, ingredients),
+      };
+    }
+
     function parseLooseRecipeText(raw) {
       const normalized = raw
         .replace(/\r/g, '')
         .replace(/[ \t]*[•▪◦][ \t]*/g, '\n')
-        .replace(/[ \t]+(?=(?:step\s*)?\d+[.)]\s+[A-Z])/g, '\n')
+        .replace(/[ \t]+(?=step\s*\d+[.)\-:]\s+[A-Z])/gi, '\n')
         .replace(/\u00a0/g, ' ');
       const lines = normalized.split('\n').map(line => line.trim()).filter(Boolean);
+
+      // Copied recipe cards and full web pages normally retain these headings.
+      // Use them as hard boundaries so surrounding article text cannot leak in.
+      const explicitRecipe = parseExplicitRecipeSections(lines, raw);
+      if (explicitRecipe) return explicitRecipe;
 
       const ingredientHeader = /^(ingredients?|what you need|you(?:'|’)ll need|for the (?:batter|dough|filling|sauce|topping|frosting))\s*:?[\s—-]*$/i;
       const instructionHeader = /^(instructions?|directions?|method|preparation|steps?|how to make(?: it)?)\s*:?[\s—-]*$/i;
