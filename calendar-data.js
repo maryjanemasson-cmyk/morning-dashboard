@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Buddakan - Philadelphia",
-    "location": "325 Chestnut Street  Philadelphia, PA United States 19106",
-    "description": "(215) 574-9440\nStephen Starr\u2019s Buddakan is a spectacular restaurant featuring exotic flavors of modern Asian cuisine with creativity and drama.  Bon Appetit notes, \"The mostly white space is striking, with a lit-from-within communal table in the middle of the room, a waterfall & a ten-foot, candle-bedecked Buddha. The religious icon watches over hip customers indulging in pan-Asian cuisine that far surpasses the fare usually found at hot spots like this.\"  Newsweek reports, \"Design also serves as a signifier for cuisine. You walk into Buddakan, one of the hottest new restaurants in Philadelphia, past a shimmering waterfall & Japanese river stones & you say to yourself, 'ginger-miso everything' even before you see the magnificent 10-foot Buddha dominating the dining room.\"   Named one of \u201cAmerica's Top 50 Restaurants\" by Travel & Leisure and 'Top Restaurant for Fun' by Gourmet, Buddakan has become one of the country's most talked about restaurants.",
-    "startTime": "2026-07-31T18:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-31T20:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation: Buddakan - Philadelphia",
-    "location": "Buddakan - Philadelphia\n325 Chestnut Street Philadelphia, PA",
-    "description": "Provider: Buddakan - Philadelphia\n\nParty size: 2",
-    "startTime": "2026-07-31T18:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-07-31T20:00:00-04:00",
-    "endDate": "",
-    "calendar": "iCloud",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -382,47 +360,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Horizon BCBSNJ Member Services",
-      "subject": "Christian, your claim has been processed"
+      "sender": "PayPal",
+      "subject": "Apple Services: $26.97\u00a0USD"
     },
     {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Forecasting glow-up"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "amazon.com",
-      "subject": "Delivery update: \"CyberPower CP1500PFCLCD PFC...\""
+      "sender": "Trump's New Dollar - Power Field Notes",
+      "subject": "Trump\u2019s dollar reset exposed"
     },
     {
-      "sender": "Chris Loves Julia",
-      "subject": "9 things for a spa-like bathroom"
+      "sender": "AI industry dirty secret - Reid Calloway from PFN",
+      "subject": "The AI industry has a dirty secret"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "The Pieces You Need This Payday.."
+      "sender": "Lesley Madsen at Pediatric Brain Tumor Foundation",
+      "subject": "FWD: Surviving glioblastoma shouldn't be this rare"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Last chance to save BIG on appliances!"
+      "sender": "McGee & Co.",
+      "subject": "Still thinking about it? 30\" Faux Golden Fern Wreath is now available!"
     },
     {
-      "sender": "Rat & Boa",
-      "subject": "Zaz\u00e1 Pecego\u2019s Guide To Paris"
+      "sender": "Cineplex",
+      "subject": "\ud83d\udd25 Peter Parker starts again and Odysseus fights his way home"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations"
+      "sender": "Shameless Snacks",
+      "subject": "This is a really big deal \ud83c\udf6c"
     },
     {
-      "sender": "Etsy",
-      "subject": "Make every day delightful"
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
     },
     {
-      "sender": "COS",
-      "subject": "Denim: the new classics"
+      "sender": "Power Field Notes",
+      "subject": "Why are people flying spy planes over this AI facility?"
     }
   ],
   "items": []
