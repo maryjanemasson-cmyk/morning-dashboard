@@ -363,6 +363,10 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "Microsoft Family Safety",
+      "subject": "Christian joined your Microsoft 365 Family Subscription and family group"
+    },
+    {
       "sender": "PayPal",
       "subject": "Apple Services: $26.97\u00a0USD"
     },
@@ -373,10 +377,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Trump's New Dollar - Power Field Notes",
       "subject": "Trump\u2019s dollar reset exposed"
-    },
-    {
-      "sender": "AI industry dirty secret - Reid Calloway from PFN",
-      "subject": "The AI industry has a dirty secret"
     },
     {
       "sender": "Lesley Madsen at Pediatric Brain Tumor Foundation",
