@@ -322,7 +322,12 @@
           <input class="form-input" id="ig-url-input" placeholder="https://www.instagram.com/reel/..." style="flex:1;" />
           <button onclick="igFetchCaption()" id="ig-fetch-btn" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:linear-gradient(45deg,#e1306c,#fd8d32);color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">Fetch caption</button>
         </div>
-        <div style="font-size:0.65rem;color:#9c8b76;margin-top:0.3rem;">Requires the local ig-server (set up once via ~/tripit-sync/setup-ig-server.sh). Falls back to manual paste below.</div>
+        <div style="font-size:0.65rem;color:#9c8b76;margin-top:0.3rem;">Fetch caption also imports the post's cover image when Instagram provides one. Manual paste cannot retrieve the image.</div>
+      </div>
+
+      <div id="ig-cover-preview" style="display:none;margin:0 0 1rem;padding:0.65rem;border:1px solid #ebe5dc;border-radius:10px;background:#faf8f5;align-items:center;gap:0.75rem;">
+        <img id="ig-cover-image" alt="Instagram cover preview" style="width:76px;height:76px;object-fit:cover;border-radius:8px;background:#eee;" />
+        <div style="font-size:0.75rem;color:#6b5d4d;"><strong style="display:block;color:#3d3529;margin-bottom:0.2rem;">Cover image found</strong>This still image will be added to the recipe. You can confirm or replace it on the next screen.</div>
       </div>
 
       <div class="form-group">
@@ -371,6 +376,7 @@
     <div class="modal">
       <button class="modal-close" onclick="closeModal('edit-modal')">&times;</button>
       <div class="modal-title" id="modal-title">Add Recipe</div>
+      <div id="import-review-note" style="display:none;margin:-0.35rem 0 1rem;padding:0.7rem 0.85rem;border-left:4px solid #7b648c;background:#f7f2fa;color:#5f4d69;font-size:0.78rem;line-height:1.45;"></div>
 
       <div class="form-group">
         <label class="form-label">Recipe Name</label>
@@ -431,7 +437,11 @@
 
       <div class="form-group">
         <label class="form-label">Photo URL</label>
-        <input class="form-input" id="f-image" placeholder="Paste an image URL (right-click image > Copy Image Address)" />
+        <input class="form-input" id="f-image" oninput="updateImagePreview()" placeholder="Paste an image URL (right-click image > Copy Image Address)" />
+        <div id="f-image-preview-wrap" style="display:none;margin-top:0.65rem;padding:0.55rem;border:1px solid #ebe5dc;border-radius:10px;background:#faf8f5;">
+          <img id="f-image-preview" alt="Recipe photo preview" onerror="showImagePreviewError()" style="display:block;width:100%;max-height:240px;object-fit:cover;border-radius:7px;" />
+          <div id="f-image-preview-error" style="display:none;color:#c2553a;font-size:0.75rem;padding:0.35rem;">This image could not be previewed. Replace the URL or leave it blank.</div>
+        </div>
       </div>
 
       <div class="form-group">
@@ -486,6 +496,7 @@
     const db = firebase.database();
 
     let recipes = {};
+    let igFetchedMeta = {};
 
     // Normalize a recipe.image value to a URL string.
     // Imported recipes (JSON-LD) sometimes arrive with image as {url,width,height}
@@ -500,6 +511,25 @@
       if (Array.isArray(v)) return imageUrlOf(v[0]);
       if (typeof v === 'object') return imageUrlOf(v.url || v.src || v.contentUrl || '');
       return '';
+    }
+
+    function updateImagePreview() {
+      const input = document.getElementById('f-image');
+      const wrap = document.getElementById('f-image-preview-wrap');
+      const image = document.getElementById('f-image-preview');
+      const error = document.getElementById('f-image-preview-error');
+      if (!input || !wrap || !image || !error) return;
+      const url = imageUrlOf(input.value.trim());
+      wrap.style.display = url ? '' : 'none';
+      image.style.display = url ? 'block' : 'none';
+      error.style.display = 'none';
+      if (url) image.src = url;
+      else image.removeAttribute('src');
+    }
+
+    function showImagePreviewError() {
+      document.getElementById('f-image-preview').style.display = 'none';
+      document.getElementById('f-image-preview-error').style.display = '';
     }
 
     function escapeAttr(s) {
@@ -706,6 +736,19 @@
       if (value === null || value === undefined) return '';
       const doc = new DOMParser().parseFromString(String(value), 'text/html');
       return (doc.body.textContent || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeImportedRecipeTitle(value) {
+      let title = cleanRecipeText(value)
+        .replace(/^[*_-]+|[*_-]+$/g, '')
+        .replace(/^(?:recipe|title)\s*[:\-]\s*/i, '')
+        .trim();
+      if (title.length > 3 && title === title.toUpperCase()) {
+        const smallWords = new Set(['and', 'or', 'of', 'the', 'with', 'in', 'on', 'for', 'to', 'a', 'an']);
+        title = title.toLowerCase().replace(/\b[\p{L}\p{N}][\p{L}\p{N}'’-]*\b/gu, (word, offset) =>
+          offset > 0 && smallWords.has(word) ? word : word.charAt(0).toUpperCase() + word.slice(1));
+      }
+      return title;
     }
 
     function flattenRecipeInstructions(value, steps = []) {
@@ -930,7 +973,10 @@
         // Image
         if (recipe.image) {
           const imgUrl = firstRecipeImage(recipe.image);
-          if (imgUrl) document.getElementById('f-image').value = imgUrl;
+          if (imgUrl) {
+            document.getElementById('f-image').value = imgUrl;
+            updateImagePreview();
+          }
         }
 
         // Ingredients
@@ -985,9 +1031,12 @@
     }
 
     function openIgModal() {
+      igFetchedMeta = {};
       document.getElementById('ig-url-input').value = '';
       document.getElementById('ig-caption-input').value = '';
       document.getElementById('ig-status').style.display = 'none';
+      document.getElementById('ig-cover-preview').style.display = 'none';
+      document.getElementById('ig-cover-image').removeAttribute('src');
       document.getElementById('ig-modal').classList.add('open');
     }
 
@@ -1015,9 +1064,17 @@
           throw new Error(`server returned ${res.status}: ${errBody}`);
         }
         const data = await res.json();
+        igFetchedMeta = {
+          title: cleanRecipeText(data.title || ''),
+          image: imageUrlOf(data.image_url || ''),
+        };
+        if (igFetchedMeta.image) {
+          document.getElementById('ig-cover-image').src = igFetchedMeta.image;
+          document.getElementById('ig-cover-preview').style.display = 'flex';
+        }
         if (data.caption && data.caption.trim()) {
           document.getElementById('ig-caption-input').value = data.caption;
-          status.textContent = `✓ Caption fetched (${data.caption.length} chars${data.cached ? ', cached' : ''}). Click Parse below.`;
+          status.textContent = `✓ Caption fetched${igFetchedMeta.image ? ' with cover image' : ''} (${data.caption.length} chars${data.cached ? ', cached' : ''}). Click Parse below.`;
           status.style.color = '#4a8c6f';
         } else {
           status.textContent = 'Server returned no caption — paste manually below.';
@@ -1036,9 +1093,14 @@
 
     // Heuristic parser tuned for Instagram Reel captions.
     function parseIgCaption() {
-      const raw = document.getElementById('ig-caption-input').value.trim();
+      const pastedRaw = document.getElementById('ig-caption-input').value.trim();
       const url = document.getElementById('ig-url-input').value.trim();
-      if (!raw) { alert('Paste the caption first.'); return; }
+      if (!pastedRaw) { alert('Paste the caption first.'); return; }
+
+      // Instagram's metadata sometimes wraps the caption in
+      // “123 likes — account on Instagram: \"caption\"”. Remove that shell.
+      const wrappedCaption = pastedRaw.match(/\bon Instagram\s*:\s*["“]([\s\S]*)/i);
+      const raw = wrappedCaption ? wrappedCaption[1].replace(/["”]\s*$/, '').trim() : pastedRaw;
 
       // Strip leading "engagement" lines that aren't part of the recipe
       const noiseRe = /^(save this|comment|tag a friend|follow|follow @|recipe below|recipe in (the )?comments|full recipe|written recipe)/i;
@@ -1061,7 +1123,7 @@
       let titleIdx = 0;
       while (titleIdx < lines.length && (noiseRe.test(lines[titleIdx]) || /^[\s\p{Emoji}✀-➿]+$/u.test(lines[titleIdx]))) titleIdx++;
       const titleLine = (lines[titleIdx] || '').replace(/[✀-➿\u{1F300}-\u{1FAFF}\u{2600}-\u{26FF}]/gu, '').trim();
-      const title = titleLine.replace(/^[*_-]+|[*_-]+$/g, '').trim();
+      let title = normalizeImportedRecipeTitle(titleLine);
 
       // Walk through remaining lines, assign to ingredients / instructions
       const measure = /\b(\d+[\d./\s]*)?\s*(cups?|tbsp|tablespoons?|tsp|teaspoons?|oz|ounces?|lb|lbs|pounds?|g|grams?|kg|ml|l|liters?|pinch|dash|cloves?|sticks?|cans?|jars?|bunch|handful)\b/i;
@@ -1102,14 +1164,39 @@
       const prepM = raw.match(/prep(?:\s*time)?[:\s]+(\d+\s*(?:min|hr|hour|hours|minutes))/i);
       const cookM = raw.match(/cook(?:\s*time)?[:\s]+(\d+\s*(?:min|hr|hour|hours|minutes))/i);
 
+      // If the opening line was a promotional sentence, prefer a short line
+      // immediately before the Ingredients heading.
+      if (!title || title.length > 90 || /[.!?]$/.test(title)) {
+        const ingredientsAt = lines.findIndex(isIngHeader);
+        if (ingredientsAt > 0) {
+          for (let i = ingredientsAt - 1; i >= Math.max(0, ingredientsAt - 8); i--) {
+            const candidate = normalizeImportedRecipeTitle(stripBullet(lines[i]));
+            if (candidate && candidate.length <= 80 && !noiseRe.test(candidate) && !isMeta(candidate) && !/[.!?]$/.test(candidate)) {
+              title = candidate;
+              break;
+            }
+          }
+        }
+      }
+      if (!title) title = 'Instagram Recipe';
+
       // Open the existing edit modal and pre-fill it
       closeModal('ig-modal');
       openAddModal();
+      document.getElementById('modal-title').textContent = 'Review Instagram Recipe';
+      const reviewNote = document.getElementById('import-review-note');
+      reviewNote.textContent = 'Check the title, category, and cover image below. Instagram captions vary, so these three fields always need a quick confirmation before saving.';
+      reviewNote.style.display = '';
       document.getElementById('f-name').value = title;
+      document.getElementById('f-category').value = inferRecipeCategory(title, ingredients);
       document.getElementById('f-source').value = url;
       document.getElementById('f-ingredients').value = ingredients.join('\n');
       document.getElementById('f-instructions').value = instructions
         .map((s, i) => `${i+1}. ${s}`).join('\n\n');
+      if (igFetchedMeta.image) {
+        document.getElementById('f-image').value = igFetchedMeta.image;
+        updateImagePreview();
+      }
       if (servingsM) document.getElementById('f-servings').value = servingsM[1].trim();
       if (prepM) document.getElementById('f-prep').value = prepM[1].trim();
       if (cookM) document.getElementById('f-cook').value = cookM[1].trim();
@@ -1349,6 +1436,7 @@
       editingId = null;
       currentRating = 0;
       document.getElementById('modal-title').textContent = 'Add Recipe';
+      document.getElementById('import-review-note').style.display = 'none';
       document.getElementById('btn-delete').style.display = 'none';
       clearForm();
       updateStarPicker();
@@ -1374,6 +1462,8 @@
       document.getElementById('f-image').value = imageUrlOf(r.image);
       document.getElementById('f-source').value = r.source || '';
       document.getElementById('f-notes').value = r.notes || '';
+      document.getElementById('import-review-note').style.display = 'none';
+      updateImagePreview();
       updateStarPicker();
       document.getElementById('edit-modal').classList.add('open');
     }
@@ -1383,6 +1473,7 @@
         document.getElementById(id).value = '';
       });
       document.getElementById('f-category').value = 'Dinner';
+      updateImagePreview();
     }
 
     function setRating(n) { currentRating = n; updateStarPicker(); }
