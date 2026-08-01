@@ -11,6 +11,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "LAGREE - FOUNDATIONS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fb87ba8b46fa1f",
+    "startTime": "2026-08-01T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-01T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -360,11 +371,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Microsoft Family Safety",
-      "subject": "Christian joined your Microsoft 365 Family Subscription and family group"
+      "sender": "Kohl's Rewards",
+      "subject": "Mary, your $5 Kohl's Cash is here!"
     },
     {
       "sender": "PayPal",
@@ -403,5 +414,18 @@ window.EMAIL_DATA = {
       "subject": "Why are people flying spy planes over this AI facility?"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "class",
+      "title": "LAGREE - FOUNDATIONS \u00b7 10:00 AM",
+      "name": "LAGREE - FOUNDATIONS",
+      "date": "2026-08-01",
+      "time": "10:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-01|10:00|lagree - foundations",
+      "id": "19fb87ba8b46fa1f",
+      "sender": "FORM BY TWO"
+    }
+  ]
 };
