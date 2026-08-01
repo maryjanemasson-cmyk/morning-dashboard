@@ -270,6 +270,7 @@
       <input type="text" class="search-input" id="search" placeholder="Search recipes..." oninput="renderRecipes()" />
       <div id="filter-buttons"></div>
       <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+      <button class="add-btn" onclick="openPasteModal()" style="background:#7b648c;">+ Paste Recipe</button>
       <button class="add-btn" onclick="openUrlModal()" style="background:#4a8c6f;">+ Add by URL</button>
       <button class="add-btn" onclick="openIgModal()" style="background:linear-gradient(45deg,#e1306c,#fd8d32);">+ From Instagram</button>
     </div>
@@ -279,6 +280,32 @@
       <div class="emoji">&#x1F373;</div>
       <p>No recipes yet. Add your first one!</p>
       <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+    </div>
+  </div>
+
+  <!-- Paste Recipe Modal -->
+  <div class="modal-overlay" id="paste-modal">
+    <div class="modal" style="max-width:600px;">
+      <button class="modal-close" onclick="closeModal('paste-modal')">&times;</button>
+      <div class="modal-title">Paste Any Recipe</div>
+      <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Copy an entire recipe from a website, email, note, or message. The dashboard will sort it into the normal recipe fields for you to review before saving.</p>
+
+      <div class="form-group">
+        <label class="form-label">Recipe text</label>
+        <textarea class="form-textarea" id="paste-recipe-text" placeholder="Paste everything here — title, timing, servings, ingredients, instructions, and notes..." style="min-height:280px;"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Source <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#b8a48e;">(optional)</span></label>
+        <input class="form-input" id="paste-recipe-source" placeholder="Website URL, cookbook, email, or person" />
+      </div>
+
+      <div id="paste-status" style="font-size:0.78rem;color:#c2553a;margin-bottom:0.8rem;display:none;"></div>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeModal('paste-modal')">Cancel</button>
+        <button class="btn-save" onclick="parsePastedRecipe()" style="background:#7b648c;">Organize Recipe</button>
+      </div>
     </div>
   </div>
 
@@ -652,6 +679,162 @@
       setTimeout(() => document.getElementById('url-input').focus(), 100);
     }
 
+    function hasSchemaType(value, expectedType) {
+      const types = value && value['@type'];
+      return Array.isArray(types) ? types.includes(expectedType) : types === expectedType;
+    }
+
+    function findSchemaNode(value, expectedType, seen = new Set()) {
+      if (!value || typeof value !== 'object' || seen.has(value)) return null;
+      seen.add(value);
+      if (hasSchemaType(value, expectedType)) return value;
+      if (Array.isArray(value)) {
+        for (const item of value) {
+          const found = findSchemaNode(item, expectedType, seen);
+          if (found) return found;
+        }
+        return null;
+      }
+      for (const child of Object.values(value)) {
+        const found = findSchemaNode(child, expectedType, seen);
+        if (found) return found;
+      }
+      return null;
+    }
+
+    function cleanRecipeText(value) {
+      if (value === null || value === undefined) return '';
+      const doc = new DOMParser().parseFromString(String(value), 'text/html');
+      return (doc.body.textContent || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function flattenRecipeInstructions(value, steps = []) {
+      if (!value) return steps;
+      if (Array.isArray(value)) {
+        value.forEach(item => flattenRecipeInstructions(item, steps));
+      } else if (typeof value === 'string') {
+        const text = cleanRecipeText(value);
+        if (text) steps.push(text);
+      } else if (typeof value === 'object') {
+        if (value.text) {
+          const text = cleanRecipeText(value.text);
+          if (text) steps.push(text);
+        } else if (value.itemListElement) {
+          flattenRecipeInstructions(value.itemListElement, steps);
+        } else if (value.name && hasSchemaType(value, 'HowToStep')) {
+          const text = cleanRecipeText(value.name);
+          if (text) steps.push(text);
+        }
+      }
+      return steps;
+    }
+
+    function firstRecipeImage(value) {
+      if (!value) return '';
+      if (typeof value === 'string') return value;
+      if (Array.isArray(value)) {
+        for (const item of value) {
+          const image = firstRecipeImage(item);
+          if (image) return image;
+        }
+        return '';
+      }
+      if (typeof value === 'object') {
+        return firstRecipeImage(value.url || value.contentUrl || value['@id']);
+      }
+      return '';
+    }
+
+    function extractRecipeData(html) {
+      const scripts = html.match(/<script[^>]*type\s*=\s*["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi) || [];
+      for (const script of scripts) {
+        try {
+          const json = script.replace(/^[\s\S]*?<script[^>]*>/i, '').replace(/<\/script>[\s\S]*$/i, '').trim();
+          const recipe = findSchemaNode(JSON.parse(json), 'Recipe');
+          if (recipe) return recipe;
+        } catch (e) {}
+      }
+
+      // Older sites sometimes expose recipe microdata without JSON-LD.
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const ingredients = [...doc.querySelectorAll('[itemprop="recipeIngredient"]')]
+        .map(node => cleanRecipeText(node.textContent)).filter(Boolean);
+      const instructions = [...doc.querySelectorAll('[itemprop="recipeInstructions"]')]
+        .map(node => cleanRecipeText(node.textContent)).filter(Boolean);
+      if (!ingredients.length || !instructions.length) return null;
+      const nameNode = doc.querySelector('[itemprop="name"]') || doc.querySelector('h1');
+      const imageNode = doc.querySelector('[itemprop="image"]');
+      return {
+        name: nameNode ? cleanRecipeText(nameNode.textContent || nameNode.getAttribute('content')) : '',
+        image: imageNode ? (imageNode.getAttribute('content') || imageNode.getAttribute('src')) : '',
+        recipeIngredient: ingredients,
+        recipeInstructions: instructions,
+      };
+    }
+
+    function cleanReaderMarkdown(value) {
+      return cleanRecipeText(String(value || '')
+        .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+        .replace(/[*_~`]+/g, '')
+        .replace(/^#+\s*/, ''));
+    }
+
+    // Jina Reader supplies a clean text version when a live HTTPS dashboard
+    // cannot contact the local helper. Extract only the compact recipe card,
+    // not the surrounding article.
+    function extractRecipeFromReaderText(text) {
+      const lines = text.replace(/\r/g, '').split('\n').map(line => line.trim());
+      const titleLine = lines.find(line => /^Title:\s*\S/i.test(line));
+      const name = titleLine ? cleanReaderMarkdown(titleLine.replace(/^Title:\s*/i, '')) : '';
+      const prepIndex = lines.findIndex(line => /^Prep(?:aration)?\s+Time\b/i.test(cleanReaderMarkdown(line)));
+      const ingredientHeaderIndex = lines.findIndex(line => /^(?:#{1,5}\s*)?Ingredients?\s*:?$/i.test(line));
+      const startIndex = prepIndex >= 0 ? prepIndex : ingredientHeaderIndex;
+      if (!name || startIndex < 0) return null;
+
+      const nearby = lines.slice(startIndex, startIndex + 14).map(cleanReaderMarkdown).join('\n');
+      const prep = nearby.match(/Prep(?:aration)?\s+Time\s*[:\-]?\s*([^\n]+)/i);
+      const cook = nearby.match(/Cook(?:ing)?\s+Time\s*[:\-]?\s*([^\n]+)/i);
+      const servings = nearby.match(/(?:Servings?|Yield|Makes)\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?)/i);
+      const imperative = /^(?:preheat|prepare|grease|line|combine|mix|whisk|beat|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest|place|divide|allow|set|arrange|bring|blend|pulse|proof|knead|roll|cut)\b/i;
+      const ingredients = [];
+      const instructions = [];
+      let mode = ingredientHeaderIndex === startIndex ? 'ingredients' : 'scan';
+
+      for (let i = startIndex + 1; i < lines.length; i++) {
+        const rawLine = lines[i];
+        if (!rawLine) continue;
+        if (/^#{1,3}\s+/.test(rawLine) && instructions.length) break;
+        if (/^(?:#{1,5}\s*)?Ingredients?\s*:?$/i.test(rawLine)) { mode = 'ingredients'; continue; }
+        if (/^(?:#{1,5}\s*)?(?:Instructions?|Directions?|Method|Steps?)\s*:?$/i.test(rawLine)) { mode = 'instructions'; continue; }
+        if (/^#{4,6}\s+/.test(rawLine)) continue;
+
+        const bullet = rawLine.match(/^(?:[*+\-]\s+|\d+[.)]\s+)(.+)$/);
+        if (!bullet) continue;
+        const item = cleanReaderMarkdown(bullet[1]);
+        if (!item) continue;
+        if (mode !== 'instructions' && imperative.test(item) && ingredients.length >= 2) mode = 'instructions';
+        if (mode === 'instructions') instructions.push(item);
+        else {
+          mode = 'ingredients';
+          ingredients.push(item);
+        }
+      }
+
+      if (!ingredients.length || !instructions.length) return null;
+      const imageMatch = text.match(/!\[[^\]]*\]\((https?:\/\/[^)\s]+)\)/i);
+      return {
+        name,
+        image: imageMatch ? imageMatch[1] : '',
+        recipeIngredient: ingredients,
+        recipeInstructions: instructions,
+        prepTime: prep ? prep[1].trim() : '',
+        cookTime: cook ? cook[1].trim() : '',
+        recipeYield: servings ? servings[1].trim() : '',
+        recipeCategory: inferRecipeCategory(name, ingredients),
+      };
+    }
+
     async function fetchRecipeFromUrl() {
       const url = document.getElementById('url-input').value.trim();
       if (!url) { alert('Please enter a URL'); return; }
@@ -665,15 +848,42 @@
       btn.textContent = 'Fetching...';
 
       try {
-        // Try multiple CORS proxies
+        // Prefer the local helper. Public CORS proxies are retained as fallbacks.
         let html = null;
+        try {
+          if (location.protocol !== 'https:') {
+            const localRes = await fetch('http://127.0.0.1:8768/recipe-page', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ url }),
+              signal: AbortSignal.timeout(30000),
+            });
+            if (localRes.ok) {
+              const localData = await localRes.json();
+              if (localData.html && localData.html.length > 1000) html = localData.html;
+            }
+          }
+        } catch (e) {}
+
+        let readerRecipe = null;
+        if (!html) {
+          try {
+            status.textContent = 'Reading recipe...';
+            const cleanUrl = url.replace(/^https?:\/\//i, '').replace(/#.*$/, '');
+            const readerRes = await fetch('https://r.jina.ai/http://' + cleanUrl, {
+              signal: AbortSignal.timeout(30000),
+            });
+            if (readerRes.ok) readerRecipe = extractRecipeFromReaderText(await readerRes.text());
+          } catch (e) {}
+        }
+
         const proxies = [
           'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
           'https://corsproxy.io/?' + encodeURIComponent(url),
           'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
         ];
 
-        for (const proxyUrl of proxies) {
+        for (const proxyUrl of (html || readerRecipe) ? [] : proxies) {
           try {
             const res = await fetch(proxyUrl, {signal: AbortSignal.timeout(10000)});
             if (res.ok) {
@@ -686,7 +896,7 @@
           } catch(e) {}
         }
 
-        if (!html) {
+        if (!html && !readerRecipe) {
           // Show paste fallback
           status.textContent = 'This site blocked auto-fetch. Copy the recipe from the website and paste below:';
           status.style.color = '#b8860b';
@@ -697,42 +907,15 @@
           return;
         }
 
-        // Parse JSON-LD recipe data
-        let recipe = null;
-        const ldMatches = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi);
-        if (ldMatches) {
-          for (const match of ldMatches) {
-            try {
-              const jsonStr = match.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '').trim();
-              let data = JSON.parse(jsonStr);
-              // Handle arrays
-              if (Array.isArray(data)) data = data.find(d => d['@type'] === 'Recipe') || data[0];
-              // Handle @graph
-              if (data['@graph']) data = data['@graph'].find(d => d['@type'] === 'Recipe');
-              if (data && data['@type'] === 'Recipe') {
-                recipe = data;
-                break;
-              }
-            } catch(e) {}
-          }
-        }
+        const recipe = readerRecipe || extractRecipeData(html);
 
-        // Also try microdata/meta tags as fallback
-        if (!recipe) {
-          recipe = {};
-          const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-          recipe.name = titleMatch ? titleMatch[1].replace(/ [-|–].*/,'').trim() : '';
-
-          // Try og:image
-          const ogImg = html.match(/<meta[^>]*property="og:image"[^>]*content="([^"]+)"/i);
-          if (ogImg) recipe.image = ogImg[1];
-        }
-
-        if (!recipe || !recipe.name) {
-          status.textContent = 'Could not find recipe data on this page. Try adding manually.';
+        if (!recipe || !recipe.name || !recipe.recipeIngredient || !recipe.recipeInstructions) {
+          status.textContent = 'The page opened, but no complete recipe card was found. Copy the recipe from the website and paste it below.';
           status.style.color = '#c2553a';
+          document.getElementById('url-fallback').style.display = '';
+          document.getElementById('url-paste-btn').style.display = '';
           btn.disabled = false;
-          btn.textContent = 'Fetch Recipe';
+          btn.textContent = 'Try Again';
           return;
         }
 
@@ -741,32 +924,25 @@
         openAddModal();
 
         // Pre-fill the form
-        document.getElementById('f-name').value = recipe.name || '';
+        document.getElementById('f-name').value = cleanRecipeText(recipe.name) || '';
         document.getElementById('f-source').value = url;
 
         // Image
         if (recipe.image) {
-          const imgUrl = Array.isArray(recipe.image) ? recipe.image[0] : (typeof recipe.image === 'object' ? recipe.image.url : recipe.image);
+          const imgUrl = firstRecipeImage(recipe.image);
           if (imgUrl) document.getElementById('f-image').value = imgUrl;
         }
 
         // Ingredients
         if (recipe.recipeIngredient) {
-          document.getElementById('f-ingredients').value = (Array.isArray(recipe.recipeIngredient) ? recipe.recipeIngredient : [recipe.recipeIngredient]).join('\n');
+          document.getElementById('f-ingredients').value = (Array.isArray(recipe.recipeIngredient) ? recipe.recipeIngredient : [recipe.recipeIngredient])
+            .map(cleanRecipeText).filter(Boolean).join('\n');
         }
 
         // Instructions
         if (recipe.recipeInstructions) {
-          let instructions = recipe.recipeInstructions;
-          if (Array.isArray(instructions)) {
-            instructions = instructions.map((step, i) => {
-              if (typeof step === 'string') return (i+1) + '. ' + step;
-              if (step.text) return (i+1) + '. ' + step.text;
-              if (step.itemListElement) return step.itemListElement.map((s,j) => (j+1) + '. ' + (s.text||s)).join('\n');
-              return '';
-            }).join('\n\n');
-          }
-          document.getElementById('f-instructions').value = instructions;
+          const instructions = flattenRecipeInstructions(recipe.recipeInstructions);
+          document.getElementById('f-instructions').value = instructions.map((step, i) => `${i + 1}. ${step}`).join('\n\n');
         }
 
         // Times
@@ -944,43 +1120,159 @@
       const text = document.getElementById('url-paste-text').value.trim();
       const url = document.getElementById('url-input').value.trim();
       if (!text) { alert('Please paste the recipe text'); return; }
-
+      const parsed = parseLooseRecipeText(text);
       closeModal('url-modal');
-      openAddModal();
+      populateRecipeForm(parsed, url);
+    }
 
-      // Try to parse the pasted text
-      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+    function openPasteModal() {
+      document.getElementById('paste-recipe-text').value = '';
+      document.getElementById('paste-recipe-source').value = '';
+      document.getElementById('paste-status').style.display = 'none';
+      document.getElementById('paste-modal').classList.add('open');
+      setTimeout(() => document.getElementById('paste-recipe-text').focus(), 100);
+    }
 
-      // First non-empty line is likely the title
-      document.getElementById('f-name').value = lines[0] || '';
-      document.getElementById('f-source').value = url;
+    function stripLooseBullet(line) {
+      return line.replace(/^[•‣◦⁃∙\-*▫◾▢○·→☛✓☐]+\s*/, '')
+        .replace(/^\s*(?:step\s*)?\d+[.)\-:]\s*/i, '')
+        .trim();
+    }
 
-      // Find ingredients section (lines with quantities/measurements)
-      const ingPattern = /^\d|^½|^¼|^¾|^⅓|^⅔|^a |^one |^two |^three /i;
-      const instrPattern = /^\d+\.|^step |^first |^then |^next |^preheat|^combine|^mix |^add |^stir |^bake |^cook |^heat /i;
+    function inferRecipeCategory(title, ingredients) {
+      const text = `${title} ${ingredients.join(' ')}`.toLowerCase();
+      if (/cake|cookie|brownie|pie|tart|pudding|ice cream|frosting|dessert|muffin|cupcake|chocolate|cobbler/.test(text)) return 'Dessert';
+      if (/smoothie|cocktail|mocktail|lemonade|latte|drink/.test(text)) return 'Drink';
+      if (/pancake|waffle|omelet|omelette|breakfast|granola|french toast/.test(text)) return 'Breakfast';
+      if (/soup|stew|chowder|bisque/.test(text)) return 'Soup';
+      if (/salad/.test(text)) return 'Salad';
+      if (/dip|appetizer|starter|crosti|bruschetta/.test(text)) return 'Appetizer';
+      if (/side dish|roasted vegetables|mashed potato|slaw/.test(text)) return 'Side';
+      return 'Dinner';
+    }
 
-      let ingredients = [];
-      let instructions = [];
+    function parseLooseRecipeText(raw) {
+      const normalized = raw
+        .replace(/\r/g, '')
+        .replace(/[ \t]*[•▪◦][ \t]*/g, '\n')
+        .replace(/[ \t]+(?=(?:step\s*)?\d+[.)]\s+[A-Z])/g, '\n')
+        .replace(/\u00a0/g, ' ');
+      const lines = normalized.split('\n').map(line => line.trim()).filter(Boolean);
+
+      const ingredientHeader = /^(ingredients?|what you need|you(?:'|’)ll need|for the (?:batter|dough|filling|sauce|topping|frosting))\s*:?[\s—-]*$/i;
+      const instructionHeader = /^(instructions?|directions?|method|preparation|steps?|how to make(?: it)?)\s*:?[\s—-]*$/i;
+      const notesHeader = /^(notes?|tips?|variations?|storage)\s*:?[\s—-]*$/i;
+      const metadataLine = /^(?:prep(?:aration)?(?:\s*time)?|cook(?:ing)?\s*time|total\s*time|serves|servings|yield|makes)\b\s*[:\-]?/i;
+      const measurement = /^(?:about\s+|approximately\s+|approx\.?\s+|a\s+|an\s+)?(?:\d+[\d\s./-]*|[¼½¾⅓⅔⅛⅜⅝⅞]|one|two|three|four|five|six|seven|eight|nine|ten)?\s*(?:cups?|c\b|tbsp\b|tablespoons?|tsp\b|teaspoons?|oz\b|ounces?|lb\b|lbs\b|pounds?|g\b|grams?|kg\b|ml\b|l\b|liters?|pinch(?:es)?|dash(?:es)?|cloves?|sticks?|cans?|jars?|packages?|pkg\b|bunch(?:es)?|handfuls?|slices?|large\b|medium\b|small\b)/i;
+      const ingredientStart = /^(?:\d+[\d\s./-]*|[¼½¾⅓⅔⅛⅜⅝⅞]|one|two|three|four|five|six|seven|eight|nine|ten|a|an)\b/i;
+      const imperative = /^(?:preheat|prepare|grease|line|combine|mix|whisk|beat|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest|place|divide|allow|set|arrange|bring|blend|pulse|proof|knead|roll|cut)\b/i;
+      const noise = /^(?:jump to recipe|print recipe|pin recipe|rate this recipe|nutrition(?: information)?|calories?\b|advertisement|subscribe|save recipe|share|reviews?\b|comments?\b)/i;
+
+      const metadata = raw.replace(/\u00a0/g, ' ');
+      const servingsMatch = metadata.match(/(?:serves?|servings?|yield|makes)\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?)/i);
+      const prepMatch = metadata.match(/prep(?:aration)?(?:\s*time)?\s*[:\-]?\s*((?:\d+\s*(?:hours?|hrs?|hr|minutes?|mins?|min)\s*)+)/i);
+      const cookMatch = metadata.match(/cook(?:ing)?(?:\s*time)?\s*[:\-]?\s*((?:\d+\s*(?:hours?|hrs?|hr|minutes?|mins?|min)\s*)+)/i);
+      const urlMatch = metadata.match(/https?:\/\/[^\s)]+/i);
+
+      let title = '';
       let mode = 'scan';
+      const ingredients = [];
+      const instructions = [];
+      const notes = [];
 
-      for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        const lower = line.toLowerCase();
+      for (const originalLine of lines) {
+        if (noise.test(originalLine)) continue;
+        if (ingredientHeader.test(originalLine)) { mode = 'ingredients'; continue; }
+        if (instructionHeader.test(originalLine)) { mode = 'instructions'; continue; }
+        if (notesHeader.test(originalLine)) { mode = 'notes'; continue; }
+        if (metadataLine.test(originalLine)) continue;
+        if (/^https?:\/\//i.test(originalLine)) continue;
 
-        if (lower.includes('ingredient')) { mode = 'ingredients'; continue; }
-        if (lower.includes('instruction') || lower.includes('direction') || lower.includes('method') || lower.includes('steps')) { mode = 'instructions'; continue; }
+        const hadStepNumber = /^\s*(?:step\s*)?\d+[.)\-:]\s+/i.test(originalLine);
+        const line = stripLooseBullet(originalLine);
+        if (!line) continue;
+        const looksInstruction = imperative.test(line) || hadStepNumber || (line.length > 100 && /[.!?]$/.test(line));
+        const looksIngredient = measurement.test(line) || ingredientStart.test(line);
 
-        if (mode === 'ingredients' || (mode === 'scan' && ingPattern.test(line))) {
-          ingredients.push(line);
-          if (mode === 'scan') mode = 'ingredients';
-        } else if (mode === 'instructions' || instrPattern.test(line)) {
+        if (!title && mode === 'scan' && !looksIngredient && !looksInstruction && line.length < 120) {
+          title = line.replace(/^(?:recipe\s*[:\-]\s*)/i, '').trim();
+          continue;
+        }
+
+        if (mode === 'notes') {
+          notes.push(line);
+        } else if (mode === 'instructions') {
           instructions.push(line);
+        } else if (mode === 'ingredients') {
+          if (looksInstruction && !looksIngredient) {
+            mode = 'instructions';
+            instructions.push(line);
+          } else {
+            ingredients.push(line);
+          }
+        } else if (looksInstruction && !looksIngredient) {
           mode = 'instructions';
+          instructions.push(line);
+        } else if (looksIngredient) {
+          mode = 'ingredients';
+          ingredients.push(line);
+        } else if (instructions.length) {
+          instructions.push(line);
+        } else if (ingredients.length) {
+          ingredients.push(line);
         }
       }
 
-      document.getElementById('f-ingredients').value = ingredients.join('\n');
-      document.getElementById('f-instructions').value = instructions.join('\n\n');
+      // A long instructions paragraph may contain several clearly marked actions.
+      if (instructions.length === 1 && instructions[0].length > 260) {
+        const split = instructions[0].split(/(?<=[.!?])\s+(?=(?:Preheat|Prepare|Combine|Mix|Whisk|Beat|Add|Stir|Bake|Cook|Heat|Place|Divide|Allow|Serve)\b)/);
+        if (split.length > 1) instructions.splice(0, 1, ...split);
+      }
+
+      return {
+        name: title || 'Untitled Recipe',
+        ingredients,
+        instructions,
+        prep: prepMatch ? prepMatch[1].trim() : '',
+        cook: cookMatch ? cookMatch[1].trim() : '',
+        servings: servingsMatch ? servingsMatch[1].trim() : '',
+        notes,
+        source: urlMatch ? urlMatch[0] : '',
+        category: inferRecipeCategory(title, ingredients),
+      };
+    }
+
+    function populateRecipeForm(parsed, source = '') {
+      openAddModal();
+      document.getElementById('f-name').value = parsed.name || '';
+      document.getElementById('f-category').value = parsed.category || 'Dinner';
+      document.getElementById('f-prep').value = parsed.prep || '';
+      document.getElementById('f-cook').value = parsed.cook || '';
+      document.getElementById('f-servings').value = parsed.servings || '';
+      document.getElementById('f-ingredients').value = (parsed.ingredients || []).join('\n');
+      document.getElementById('f-instructions').value = (parsed.instructions || [])
+        .map((step, i) => `${i + 1}. ${step}`).join('\n\n');
+      document.getElementById('f-notes').value = (parsed.notes || []).join('\n');
+      document.getElementById('f-source').value = source || parsed.source || '';
+    }
+
+    function parsePastedRecipe() {
+      const raw = document.getElementById('paste-recipe-text').value.trim();
+      const source = document.getElementById('paste-recipe-source').value.trim();
+      const status = document.getElementById('paste-status');
+      if (!raw) {
+        status.textContent = 'Paste the recipe text first.';
+        status.style.display = '';
+        return;
+      }
+      const parsed = parseLooseRecipeText(raw);
+      if (!parsed.ingredients.length && !parsed.instructions.length) {
+        status.textContent = 'I could not identify ingredients or instructions. Include those headings if possible, then try again.';
+        status.style.display = '';
+        return;
+      }
+      closeModal('paste-modal');
+      populateRecipeForm(parsed, source);
     }
 
     function openAddModal() {
