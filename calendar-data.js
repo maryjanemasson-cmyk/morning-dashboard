@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-08-01T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-01T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "LAGREE - FOUNDATIONS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fb87ba8b46fa1f",
-    "startTime": "2026-08-01T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-01T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -94,6 +72,17 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-08-13T16:15:00-04:00",
     "startDate": "",
     "endTime": "2026-08-13T22:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-08-15T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-15T11:00:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -371,61 +360,56 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 24,
   "threads": [
     {
-      "sender": "Kohl's Rewards",
-      "subject": "Mary, your $5 Kohl's Cash is here!"
+      "sender": "Pini Parma",
+      "subject": "Our favorites from our pre-Fall/Winter collection"
     },
     {
-      "sender": "PayPal",
-      "subject": "Apple Services: $26.97\u00a0USD"
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "July, In Outfits"
+    },
+    {
+      "sender": "Discord",
+      "subject": "Verify Email Address for Discord"
+    },
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "Your latest account statement is available online"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Cosmetics item"
+    },
+    {
+      "sender": "AMC Theatres",
+      "subject": "It's Official, Mary: You're a Premiere Member \ud83c\udf89"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Trump's New Dollar - Power Field Notes",
-      "subject": "Trump\u2019s dollar reset exposed"
-    },
-    {
-      "sender": "Lesley Madsen at Pediatric Brain Tumor Foundation",
-      "subject": "FWD: Surviving glioblastoma shouldn't be this rare"
-    },
-    {
-      "sender": "McGee & Co.",
-      "subject": "Still thinking about it? 30\" Faux Golden Fern Wreath is now available!"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83d\udd25 Peter Parker starts again and Odysseus fights his way home"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "This is a really big deal \ud83c\udf6c"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+      "sender": "AI supremacy race via Power Field Notes",
+      "subject": "Is AI coming for your job?"
     },
     {
       "sender": "Power Field Notes",
-      "subject": "Why are people flying spy planes over this AI facility?"
+      "subject": "Could you make an extra $50,000 using this unusual trading technique?"
+    },
+    {
+      "sender": "service@paypal.com",
+      "subject": "Time to pick a monthly PayPal Debit category"
     }
   ],
   "items": [
     {
-      "type": "class",
-      "title": "LAGREE - FOUNDATIONS \u00b7 10:00 AM",
-      "name": "LAGREE - FOUNDATIONS",
-      "date": "2026-08-01",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-01|10:00|lagree - foundations",
-      "id": "19fb87ba8b46fa1f",
-      "sender": "FORM BY TWO"
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Cosmetics item",
+      "date": "2026-08-02",
+      "id": "19fc0967b87bdf00",
+      "sender": "Amazon.com"
     }
   ]
 };
