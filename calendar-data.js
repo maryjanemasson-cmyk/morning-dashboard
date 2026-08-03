@@ -360,32 +360,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 11,
   "threads": [
-    {
-      "sender": "Pini Parma",
-      "subject": "Our favorites from our pre-Fall/Winter collection"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "July, In Outfits"
-    },
-    {
-      "sender": "Discord",
-      "subject": "Verify Email Address for Discord"
-    },
-    {
-      "sender": "Ameriprise Financial",
-      "subject": "Your latest account statement is available online"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Cosmetics item"
-    },
-    {
-      "sender": "AMC Theatres",
-      "subject": "It's Official, Mary: You're a Premiere Member \ud83c\udf89"
-    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -395,21 +371,37 @@ window.EMAIL_DATA = {
       "subject": "Is AI coming for your job?"
     },
     {
-      "sender": "Power Field Notes",
-      "subject": "Could you make an extra $50,000 using this unusual trading technique?"
+      "sender": "Bigger than oil? via Power Field Notes",
+      "subject": "The Next Commodity Crunch (bigger than oil?)"
     },
     {
-      "sender": "service@paypal.com",
-      "subject": "Time to pick a monthly PayPal Debit category"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for Jul"
+    },
+    {
+      "sender": "COS",
+      "subject": "The new-season refresh"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Your Sunday scroll just got better \ud83d\ude03"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "The Frames You Love Up to 60% Off"
+    },
+    {
+      "sender": "Part-time gig via Power Field Notes",
+      "subject": "Work From Home (part-time)"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "What If You Chose 100% Made in Italy Quality?"
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Cosmetics item",
-      "date": "2026-08-02",
-      "id": "19fc0967b87bdf00",
-      "sender": "Amazon.com"
-    }
-  ]
+  "items": []
 };
