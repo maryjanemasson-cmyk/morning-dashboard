@@ -360,47 +360,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
     },
     {
-      "sender": "AI supremacy race via Power Field Notes",
-      "subject": "Is AI coming for your job?"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Essentials item"
     },
     {
-      "sender": "Bigger than oil? via Power Field Notes",
-      "subject": "The Next Commodity Crunch (bigger than oil?)"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with cos.com"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for Jul"
+      "sender": "Quantum Stocks via Evan Brooks from TRC",
+      "subject": "Quantum Stocks Just Popped 30% In One Day"
     },
     {
-      "sender": "COS",
-      "subject": "The new-season refresh"
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "New Back to School Savings!"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Your Sunday scroll just got better \ud83d\ude03"
+      "sender": "Apple secret agreement via Power Field Notes",
+      "subject": "Apple\u2019s paying until 2040. Now you know why."
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "The Frames You Love Up to 60% Off"
+      "sender": "Evan Brooks from TRC",
+      "subject": "I Just Flew Over Elon Musk's Next Big Venture'"
     },
     {
-      "sender": "Part-time gig via Power Field Notes",
-      "subject": "Work From Home (part-time)"
+      "sender": "American home robot via Power Field Notes",
+      "subject": "\ud83e\udd16 The $25,000 robot is almost here"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Gentle Monster USA",
+      "subject": "Receipt for order #376541"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "What If You Chose 100% Made in Italy Quality?"
+      "sender": "Reformation",
+      "subject": "WE HAVE THEORIES"
     }
   ],
   "items": []
