@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-08-03T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-03T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -86,6 +75,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-08-17T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-17T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -360,48 +360,56 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
+      "sender": "Walgreens Pharmacy",
+      "subject": "We're Processing Your Auto Refill Order"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Essentials item"
+      "subject": "Shipped: \u20661\u2069 Essentials item"
     },
     {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with cos.com"
+      "sender": "WAT THE BRAND",
+      "subject": "The WAT Denim + Tee Collection.."
     },
     {
-      "sender": "Quantum Stocks via Evan Brooks from TRC",
-      "subject": "Quantum Stocks Just Popped 30% In One Day"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "College Hunks Hauling Junk and Moving",
-      "subject": "New Back to School Savings!"
+      "sender": "Cloudflare",
+      "subject": "It's Agents Week."
     },
     {
-      "sender": "Apple secret agreement via Power Field Notes",
-      "subject": "Apple\u2019s paying until 2040. Now you know why."
+      "sender": "AI growth wave via Evan Brooks from TRC",
+      "subject": "This tiny piece of glass could be bigger than GPUs"
     },
     {
-      "sender": "Evan Brooks from TRC",
-      "subject": "I Just Flew Over Elon Musk's Next Big Venture'"
+      "sender": "Power Field Notes",
+      "subject": "Every time Musk needs a company, he buys it. He needs this one."
     },
     {
-      "sender": "American home robot via Power Field Notes",
-      "subject": "\ud83e\udd16 The $25,000 robot is almost here"
+      "sender": "Trip.com",
+      "subject": "\u2600\ufe0fMeet TripTuesday: $99 roundtrip starts now"
     },
     {
-      "sender": "Gentle Monster USA",
-      "subject": "Receipt for order #376541"
+      "sender": "Executive Order 14179 via Power Field Notes",
+      "subject": "Trump\u2019s One Rule exposed: Executive Order 14179"
     },
     {
-      "sender": "Reformation",
-      "subject": "WE HAVE THEORIES"
+      "sender": "LOOK OPTIC",
+      "subject": "Don't Miss Our Warehouse Sale!"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Essentials item",
+      "date": "2026-08-04",
+      "id": "19fcb5ec72528dce",
+      "sender": "Amazon.com"
+    }
+  ]
 };
