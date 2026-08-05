@@ -360,56 +360,48 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 31,
   "threads": [
-    {
-      "sender": "Walgreens Pharmacy",
-      "subject": "We're Processing Your Auto Refill Order"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "The WAT Denim + Tee Collection.."
-    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Cloudflare",
-      "subject": "It's Agents Week."
+      "sender": "Amtrak Guest Rewards",
+      "subject": "Updates to our Terms & Conditions"
     },
     {
-      "sender": "AI growth wave via Evan Brooks from TRC",
-      "subject": "This tiny piece of glass could be bigger than GPUs"
+      "sender": "Link",
+      "subject": "Mary, your July transaction summary is ready"
     },
     {
-      "sender": "Power Field Notes",
-      "subject": "Every time Musk needs a company, he buys it. He needs this one."
+      "sender": "Micheal Gordon",
+      "subject": "You have an invitation"
     },
     {
-      "sender": "Trip.com",
-      "subject": "\u2600\ufe0fMeet TripTuesday: $99 roundtrip starts now"
+      "sender": "Valerie from Holafly",
+      "subject": "What if your next destination is here?"
     },
     {
-      "sender": "Executive Order 14179 via Power Field Notes",
-      "subject": "Trump\u2019s One Rule exposed: Executive Order 14179"
+      "sender": "American Energy Endgame via Evan Brooks from TRC",
+      "subject": "Get ready for \u201cThe American Energy Endgame\u201d \u2013 coming August 15"
     },
     {
       "sender": "LOOK OPTIC",
-      "subject": "Don't Miss Our Warehouse Sale!"
+      "subject": "Only 4 Hours Left: Up to 60% Off"
+    },
+    {
+      "sender": "SpaceX-linked asset via Evan Brooks from TRC",
+      "subject": "6X in 6 months off this little-known SpaceX asset"
+    },
+    {
+      "sender": "Stephen from Bartender",
+      "subject": "See how people are using Top Shelf"
+    },
+    {
+      "sender": "America money reset via Power Field Notes",
+      "subject": "Porter Stansberry's Critical New Warning"
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Essentials item",
-      "date": "2026-08-04",
-      "id": "19fcb5ec72528dce",
-      "sender": "Amazon.com"
-    }
-  ]
+  "items": []
 };
