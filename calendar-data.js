@@ -360,47 +360,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 31,
+  "unreadCount": 25,
   "threads": [
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Amtrak Guest Rewards",
-      "subject": "Updates to our Terms & Conditions"
+      "sender": "SpotHero Support",
+      "subject": "Rate Your Recent Experience"
     },
     {
-      "sender": "Link",
-      "subject": "Mary, your July transaction summary is ready"
+      "sender": "WAT THE BRAND",
+      "subject": "Core Tees, Restocked."
     },
     {
-      "sender": "Micheal Gordon",
-      "subject": "You have an invitation"
+      "sender": "D\u00e9 Rococo",
+      "subject": "FLASH SALE IS LIVE! 20% OFF SITEWIDE"
+    },
+    {
+      "sender": "Cloudflare",
+      "subject": "You're invited to Cloudflare Connect 2026"
     },
     {
       "sender": "Valerie from Holafly",
-      "subject": "What if your next destination is here?"
+      "subject": "Your trip doesn't have to be complicated."
     },
     {
-      "sender": "American Energy Endgame via Evan Brooks from TRC",
-      "subject": "Get ready for \u201cThe American Energy Endgame\u201d \u2013 coming August 15"
+      "sender": "Trump\u2019s great betrayal via Power Field Notes",
+      "subject": "The lie at the heart of America"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Only 4 Hours Left: Up to 60% Off"
+      "sender": "Evan Brooks from TRC",
+      "subject": "Trump: \u2018You can\u2019t fight it.\u2019"
     },
     {
-      "sender": "SpaceX-linked asset via Evan Brooks from TRC",
-      "subject": "6X in 6 months off this little-known SpaceX asset"
+      "sender": "Iran war strategy via Evan Brooks from TRC",
+      "subject": "The Iran War Evidence I Verified"
     },
     {
-      "sender": "Stephen from Bartender",
-      "subject": "See how people are using Top Shelf"
-    },
-    {
-      "sender": "America money reset via Power Field Notes",
-      "subject": "Porter Stansberry's Critical New Warning"
+      "sender": "Willow Wellness",
+      "subject": "Your GLP-1 glow starts with skincare"
     }
   ],
   "items": []
