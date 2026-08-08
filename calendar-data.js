@@ -11,6 +11,28 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "LAGREE - ALL LEVELS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fd94e2009a8d70",
+    "startTime": "2026-08-08T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-08T11:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
+    "summary": "LAGREE - ALL LEVELS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fd94eed30c4845",
+    "startTime": "2026-08-09T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-09T11:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -86,6 +108,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Stay at Grand Hyatt Bogot\u00e1",
+    "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
+    "startTime": "",
+    "startDate": "2026-08-21",
+    "endTime": "",
+    "endDate": "2026-08-23",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Flight to Bogot\u00e1 (UA 268)",
+    "location": "Newark EWR",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
+    "startTime": "2026-08-21T17:10:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-21T23:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -360,48 +404,73 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your Search For The Perfect Jeans Ends Here"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "SpotHero Support",
-      "subject": "Rate Your Recent Experience"
+      "sender": "Trip.com",
+      "subject": "\ud83d\udd25 This Week's Best Deals, All in One Place"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Core Tees, Restocked."
+      "sender": "Tayla Russell",
+      "subject": "Hope you're doing well!"
     },
     {
-      "sender": "D\u00e9 Rococo",
-      "subject": "FLASH SALE IS LIVE! 20% OFF SITEWIDE"
+      "sender": "Microsoft",
+      "subject": "Updates to our terms of use"
     },
     {
-      "sender": "Cloudflare",
-      "subject": "You're invited to Cloudflare Connect 2026"
+      "sender": "Trump\u2019s New Money via Power Field Notes",
+      "subject": "Breaking: Trump\u2019s New Currency Reset"
     },
     {
-      "sender": "Valerie from Holafly",
-      "subject": "Your trip doesn't have to be complicated."
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
     },
     {
-      "sender": "Trump\u2019s great betrayal via Power Field Notes",
-      "subject": "The lie at the heart of America"
+      "sender": "Walpole Outdoors",
+      "subject": "Light the Way & Save 20% for a Limited Time"
     },
     {
-      "sender": "Evan Brooks from TRC",
-      "subject": "Trump: \u2018You can\u2019t fight it.\u2019"
+      "sender": "hpdirector nassautennis.net",
+      "subject": "Nassau HPTA: Fall Registration Info"
     },
     {
-      "sender": "Iran war strategy via Evan Brooks from TRC",
-      "subject": "The Iran War Evidence I Verified"
-    },
-    {
-      "sender": "Willow Wellness",
-      "subject": "Your GLP-1 glow starts with skincare"
+      "sender": "Iran War TRUTH - Power Field Notes",
+      "subject": "Iran War TRUTH: What Two Congressmen Led Me To"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-08",
+      "time": "11:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-08|11:00|lagree - all levels",
+      "id": "19fd94e2009a8d70",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-09",
+      "time": "11:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-09|11:00|lagree - all levels",
+      "id": "19fd94eed30c4845",
+      "sender": "FORM BY TWO"
+    }
+  ]
 };
