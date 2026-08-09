@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-08-08T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-08T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "LAGREE - ALL LEVELS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fd94e2009a8d70",
-    "startTime": "2026-08-08T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-08T11:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "LAGREE - ALL LEVELS",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fd94eed30c4845",
@@ -127,6 +105,28 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-08-21T17:10:00-04:00",
     "startDate": "",
     "endTime": "2026-08-21T23:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Stay at Sofitel Bar\u00fa Cartagena Beach Resort",
+    "location": "Sector Porto Nao km 7 Isla de Bar\u00fa Cartagena de Indias 00 130017 CO",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPqGjlEBDejZb-cgUxKjeu_WAA2LdZ5RgY\n",
+    "startTime": "",
+    "startDate": "2026-08-22",
+    "endTime": "",
+    "endDate": "2026-08-27",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-08-22T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-22T11:00:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -404,62 +404,18 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 2,
   "threads": [
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Your Search For The Perfect Jeans Ends Here"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Electronics item"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udd25 This Week's Best Deals, All in One Place"
-    },
-    {
-      "sender": "Tayla Russell",
-      "subject": "Hope you're doing well!"
-    },
-    {
-      "sender": "Microsoft",
-      "subject": "Updates to our terms of use"
-    },
-    {
-      "sender": "Trump\u2019s New Money via Power Field Notes",
-      "subject": "Breaking: Trump\u2019s New Currency Reset"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Light the Way & Save 20% for a Limited Time"
-    },
-    {
-      "sender": "hpdirector nassautennis.net",
-      "subject": "Nassau HPTA: Fall Registration Info"
-    },
-    {
-      "sender": "Iran War TRUTH - Power Field Notes",
-      "subject": "Iran War TRUTH: What Two Congressmen Led Me To"
+      "sender": "BOSS",
+      "subject": "Everyday Sneakers, Elevated by BOSS"
     }
   ],
   "items": [
-    {
-      "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-08",
-      "time": "11:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-08|11:00|lagree - all levels",
-      "id": "19fd94e2009a8d70",
-      "sender": "FORM BY TWO"
-    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
@@ -469,7 +425,7 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-09|11:00|lagree - all levels",
-      "id": "19fd94eed30c4845",
+      "id": "19fe1e4ced636e60",
       "sender": "FORM BY TWO"
     }
   ]
