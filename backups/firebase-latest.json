@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-09T17:00:11",
+    "captured_at": "2026-08-09T19:00:13",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -60923,6 +60923,9 @@
       },
       "2026-07-03": {
         "weight": 152
+      },
+      "2026-08-09": {
+        "weight": 150
       }
     },
     "favorites": {

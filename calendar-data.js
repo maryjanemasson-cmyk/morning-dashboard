@@ -404,11 +404,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 2,
+  "unreadCount": 6,
   "threads": [
     {
+      "sender": "MileagePlus Program",
+      "subject": "Your Paris trip: Earn extra miles with Vrbo"
+    },
+    {
+      "sender": "House of Jade Home",
+      "subject": "Too Cute for Just the Kitchen! \ud83c\udf74"
+    },
+    {
       "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Electronics item"
+      "subject": "Delivered: \u20664\u2069 Home and Essentials items"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Essentials item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 Personal Care items"
     },
     {
       "sender": "BOSS",
