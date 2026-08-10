@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "LAGREE - ALL LEVELS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fe9233063ef877",
+    "startTime": "2026-08-12T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-12T17:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Your Appointment at Suite Blend Color Bar",
     "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
     "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
@@ -404,8 +415,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
+    },
+    {
+      "sender": "Rizzi\u2019s Power Washing",
+      "subject": "\ud83d\udcac Rizzi\u2019s Power Washing sent you a message"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20662\u2069 Hair Care and Book items"
+    },
     {
       "sender": "MileagePlus Program",
       "subject": "Your Paris trip: Earn extra miles with Vrbo"
@@ -442,6 +465,18 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-09|11:00|lagree - all levels",
       "id": "19fe1e4ced636e60",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-12",
+      "time": "17:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-12|17:00|lagree - all levels",
+      "id": "19fe9233063ef877",
       "sender": "FORM BY TWO"
     }
   ]
