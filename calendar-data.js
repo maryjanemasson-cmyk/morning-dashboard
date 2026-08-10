@@ -402,7 +402,7 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Paris, France",
+    "destination": "Paris \u2192 Cologne",
     "start": "2026-11-01",
     "end": "2026-11-11",
     "icon": "\u2708\ufe0f",
@@ -482,7 +482,7 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "London, United Kingdom",
+    "destination": "Newark \u2192 London",
     "start": "2026-11-15",
     "end": "2026-11-18",
     "icon": "\u2708\ufe0f",
