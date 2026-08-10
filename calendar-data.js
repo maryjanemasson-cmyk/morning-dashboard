@@ -508,8 +508,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Etsy"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 40% OFF! More reasons to reset your backyard"
+    },
+    {
+      "sender": "Simple oil quiz - Power Field Notes",
+      "subject": "You invested $5,000 in oil. How much did you make?"
+    },
+    {
+      "sender": "Iran War TRUTH via Evan Brooks from TRC",
+      "subject": "Two Congressmen Pointed Me to This"
+    },
+    {
+      "sender": "Steven Chen",
+      "subject": "2026\u20132027 Student Schedules, School Calendar, and Booklist"
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "RE: QUOTE: Family Trip to Columbia"
+    },
     {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Mon, 8/10 is ready to view"
@@ -521,34 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20661\u2069 Hair Care item"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Something New is Brewing in Bond"
-    },
-    {
-      "sender": "Trump's New Dollar via Evan Brooks from TRC",
-      "subject": "Trump\u2019s dollar reset exposed"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "On the bright side of brownies."
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Understanding Transformers (Part 1): Why RNNs are nearly impossible to train | Jose Parre\u00f1o in Data Science Collective"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 10 Aug 2026"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (67385be)"
     }
   ],
   "items": [
