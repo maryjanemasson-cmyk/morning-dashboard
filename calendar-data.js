@@ -508,47 +508,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (67385be)"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Mon, 8/10 is ready to view"
     },
     {
-      "sender": "Etsy Transactions",
-      "subject": "Download Your Etsy Purchase from AtlasHandmadeClub (4141045281)"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "",
-      "subject": "Huntington Bank Loans payment sent as a check"
-    },
-    {
-      "sender": "Apple powerful signal - Power Field Notes",
-      "subject": "Apple reaches historic highs, here's what investors should know."
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
-    },
-    {
-      "sender": "Rizzi\u2019s Power Washing",
-      "subject": "\ud83d\udcac Rizzi\u2019s Power Washing sent you a message"
+      "sender": "Hidden secret deal via Power Field Notes",
+      "subject": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f A secret deal hid for 41 years"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \u20662\u2069 Hair Care and Book items"
+      "subject": "Ordered: \u20661\u2069 Hair Care item"
     },
     {
-      "sender": "MileagePlus Program",
-      "subject": "Your Paris trip: Earn extra miles with Vrbo"
+      "sender": "LOOK OPTIC",
+      "subject": "Something New is Brewing in Bond"
     },
     {
-      "sender": "House of Jade Home",
-      "subject": "Too Cute for Just the Kitchen! \ud83c\udf74"
+      "sender": "Trump's New Dollar via Evan Brooks from TRC",
+      "subject": "Trump\u2019s dollar reset exposed"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "On the bright side of brownies."
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Understanding Transformers (Part 1): Why RNNs are nearly impossible to train | Jose Parre\u00f1o in Data Science Collective"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 10 Aug 2026"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (67385be)"
     }
   ],
   "items": [
