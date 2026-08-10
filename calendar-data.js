@@ -497,8 +497,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "Trip.com",
+      "subject": "\ud83d\udcb8TripTuesday: $99 RT Flights + $20 Off"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles and save on your car rental for your Bogota trip"
+    },
+    {
+      "sender": "JR Power Wash",
+      "subject": "\ud83d\udcac JR Power Wash sent you a message"
+    },
+    {
+      "sender": "Firms quietly buying via Evan Brooks from TRC",
+      "subject": "Wall Street quietly buying these stocks before November 3?"
+    },
     {
       "sender": "Microsoft Store",
       "subject": "Save up to $1,000 on select Surface\u200b"
@@ -522,22 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "We made a quiz for our NEW flavors \ud83c\udfaf"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Three Weeks Left to Experience THE PLAYGROUND"
-    },
-    {
-      "sender": "Google",
-      "subject": "Mary Jane, review your Google Account settings"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "172 NEW PIECES INSIDE"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Etsy"
     }
   ],
   "items": [
