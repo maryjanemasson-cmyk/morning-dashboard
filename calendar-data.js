@@ -437,7 +437,7 @@ window.TRAVEL_DATA = [
         "description": "",
         "start": "2026-11-08T10:55:00+00:00",
         "end": "2026-11-08T12:17:00+00:00",
-        "type": "other"
+        "type": "train"
       },
       {
         "summary": "Eurostar - ZYR to XHN",
@@ -445,7 +445,7 @@ window.TRAVEL_DATA = [
         "description": "",
         "start": "2026-11-08T12:25:00+00:00",
         "end": "2026-11-08T13:09:00+00:00",
-        "type": "other"
+        "type": "train"
       },
       {
         "summary": "Eurostar - XHN to XHJ",
@@ -453,7 +453,7 @@ window.TRAVEL_DATA = [
         "description": "",
         "start": "2026-11-08T13:12:00+00:00",
         "end": "2026-11-08T13:33:00+00:00",
-        "type": "other"
+        "type": "train"
       },
       {
         "summary": "Eurostar - XHJ to QKL",
@@ -461,7 +461,7 @@ window.TRAVEL_DATA = [
         "description": "",
         "start": "2026-11-08T13:36:00+00:00",
         "end": "2026-11-08T14:14:00+00:00",
-        "type": "other"
+        "type": "train"
       },
       {
         "summary": "LH4051 CGN to MUC",
@@ -508,8 +508,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (67385be)"
+    },
     {
       "sender": "Etsy Transactions",
       "subject": "Download Your Etsy Purchase from AtlasHandmadeClub (4141045281)"
@@ -545,10 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "House of Jade Home",
       "subject": "Too Cute for Just the Kitchen! \ud83c\udf74"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20664\u2069 Home and Essentials items"
     }
   ],
   "items": [
