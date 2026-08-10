@@ -497,7 +497,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 33,
+  "unreadCount": 29,
   "threads": [
     {
       "sender": "Microsoft Store",
@@ -524,20 +524,20 @@ window.EMAIL_DATA = {
       "subject": "We made a quiz for our NEW flavors \ud83c\udfaf"
     },
     {
-      "sender": "D\u00e9 Rococo",
-      "subject": "as seen on lovisa"
+      "sender": "National Building Museum",
+      "subject": "Three Weeks Left to Experience THE PLAYGROUND"
     },
     {
-      "sender": "Eleanor Dath",
-      "subject": "IMPORTANT UPDATE: Regarding Your Trip to Columbia"
+      "sender": "Google",
+      "subject": "Mary Jane, review your Google Account settings"
     },
     {
-      "sender": "On Behalf of Acxiom LLC",
-      "subject": "(Request ID: VZF25N4ARL) Request logged successfully"
+      "sender": "Moda Operandi",
+      "subject": "172 NEW PIECES INSIDE"
     },
     {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "(No subject)"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Etsy"
     }
   ],
   "items": [
