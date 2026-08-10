@@ -497,8 +497,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 33,
   "threads": [
+    {
+      "sender": "Microsoft Store",
+      "subject": "Save up to $1,000 on select Surface\u200b"
+    },
+    {
+      "sender": "Trump's New Dollar - Power Field Notes",
+      "subject": "Trump\u2019s dollar reset exposed"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "NEW Summer Fridays!!!"
+    },
+    {
+      "sender": "Medium",
+      "subject": "Write for humans, not algorithms"
+    },
+    {
+      "sender": "Trump BIG secret via Evan Brooks from TRC",
+      "subject": "Trump \"Redacted\u201d 750 White House Files... Then Left a $300 Million Money Trail"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "We made a quiz for our NEW flavors \ud83c\udfaf"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "as seen on lovisa"
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "IMPORTANT UPDATE: Regarding Your Trip to Columbia"
+    },
     {
       "sender": "On Behalf of Acxiom LLC",
       "subject": "(Request ID: VZF25N4ARL) Request logged successfully"
@@ -506,38 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "maryjanemasson@icloud.com",
       "subject": "(No subject)"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Three Weeks Left to Experience THE PLAYGROUND"
-    },
-    {
-      "sender": "Google",
-      "subject": "Mary Jane, review your Google Account settings"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "172 NEW PIECES INSIDE"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Etsy"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 40% OFF! More reasons to reset your backyard"
-    },
-    {
-      "sender": "Simple oil quiz - Power Field Notes",
-      "subject": "You invested $5,000 in oil. How much did you make?"
-    },
-    {
-      "sender": "Iran War TRUTH via Evan Brooks from TRC",
-      "subject": "Two Congressmen Pointed Me to This"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Mon, 8/10 is ready to view"
     }
   ],
   "items": [
