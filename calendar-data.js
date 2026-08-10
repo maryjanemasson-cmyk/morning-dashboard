@@ -400,12 +400,120 @@ window.TRAVEL_DATA = [
         "type": "flight"
       }
     ]
+  },
+  {
+    "destination": "Paris, France",
+    "start": "2026-11-01",
+    "end": "2026-11-11",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "Check-in: Mercure Paris Plaza Pont Mirabeau",
+        "location": "10, avenue Emile Zola, Paris, 75015, France",
+        "description": "",
+        "start": "2026-11-01T14:00:00+00:00",
+        "end": "2026-11-01T15:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA54 EWR to CDG",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-11-02T02:55:00+00:00",
+        "end": "2026-11-02T10:35:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-out: Mercure Paris Plaza Pont Mirabeau",
+        "location": "10, avenue Emile Zola, Paris, 75015, France",
+        "description": "",
+        "start": "2026-11-08T10:00:00+00:00",
+        "end": "2026-11-08T11:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "Eurostar - XPG to ZYR",
+        "location": "XPG; XPG, XPG",
+        "description": "",
+        "start": "2026-11-08T10:55:00+00:00",
+        "end": "2026-11-08T12:17:00+00:00",
+        "type": "other"
+      },
+      {
+        "summary": "Eurostar - ZYR to XHN",
+        "location": "ZYR; ZYR, ZYR",
+        "description": "",
+        "start": "2026-11-08T12:25:00+00:00",
+        "end": "2026-11-08T13:09:00+00:00",
+        "type": "other"
+      },
+      {
+        "summary": "Eurostar - XHN to XHJ",
+        "location": "XHN; XHN, XHN",
+        "description": "",
+        "start": "2026-11-08T13:12:00+00:00",
+        "end": "2026-11-08T13:33:00+00:00",
+        "type": "other"
+      },
+      {
+        "summary": "Eurostar - XHJ to QKL",
+        "location": "XHJ; XHJ, XHJ",
+        "description": "",
+        "start": "2026-11-08T13:36:00+00:00",
+        "end": "2026-11-08T14:14:00+00:00",
+        "type": "other"
+      },
+      {
+        "summary": "LH4051 CGN to MUC",
+        "location": "Cologne (CGN)",
+        "description": "",
+        "start": "2026-11-11T12:10:00+00:00",
+        "end": "2026-11-11T13:10:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA9255 MUC to EWR",
+        "location": "Munich (MUC)",
+        "description": "",
+        "start": "2026-11-11T15:10:00+00:00",
+        "end": "2026-11-12T00:05:00+00:00",
+        "type": "flight"
+      }
+    ]
+  },
+  {
+    "destination": "London, United Kingdom",
+    "start": "2026-11-15",
+    "end": "2026-11-18",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA934 EWR to LHR",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-11-15T13:20:00+00:00",
+        "end": "2026-11-15T20:35:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "UA147 LHR to EWR",
+        "location": "London (LHR)",
+        "description": "",
+        "start": "2026-11-18T12:50:00+00:00",
+        "end": "2026-11-18T21:20:00+00:00",
+        "type": "flight"
+      }
+    ]
   }
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Etsy Transactions",
+      "subject": "Download Your Etsy Purchase from AtlasHandmadeClub (4141045281)"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -441,10 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20664\u2069 Home and Essentials items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Essentials item"
     }
   ],
   "items": [
