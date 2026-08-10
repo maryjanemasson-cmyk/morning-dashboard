@@ -55,17 +55,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Your Appointment at Suite Blend Color Bar",
-    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
-    "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
-    "startTime": "2026-08-13T16:15:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-13T22:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -508,11 +497,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 25,
   "threads": [
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+      "sender": "On Behalf of Acxiom LLC",
+      "subject": "(Request ID: VZF25N4ARL) Request logged successfully"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "(No subject)"
+    },
+    {
+      "sender": "National Building Museum",
+      "subject": "Three Weeks Left to Experience THE PLAYGROUND"
+    },
+    {
+      "sender": "Google",
+      "subject": "Mary Jane, review your Google Account settings"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "172 NEW PIECES INSIDE"
     },
     {
       "sender": "Google",
@@ -531,24 +536,8 @@ window.EMAIL_DATA = {
       "subject": "Two Congressmen Pointed Me to This"
     },
     {
-      "sender": "Steven Chen",
-      "subject": "2026\u20132027 Student Schedules, School Calendar, and Booklist"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "RE: QUOTE: Family Trip to Columbia"
-    },
-    {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Mon, 8/10 is ready to view"
-    },
-    {
-      "sender": "Hidden secret deal via Power Field Notes",
-      "subject": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f A secret deal hid for 41 years"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Hair Care item"
     }
   ],
   "items": [

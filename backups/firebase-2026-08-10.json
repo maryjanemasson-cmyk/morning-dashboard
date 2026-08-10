@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-10T11:00:15",
+    "captured_at": "2026-08-10T13:00:09",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -59908,7 +59908,7 @@
   "chores": {
     "book-pilates": "2026-07-05",
     "call-mom": "2026-08-08",
-    "dog-poop": "2026-07-26",
+    "dog-poop": "2026-08-10",
     "dry-cleaning": "2026-08-08",
     "eyebrows": "2026-06-28",
     "pedicure": "2026-08-10",
@@ -60925,6 +60925,9 @@
         "weight": 152
       },
       "2026-08-09": {
+        "weight": 150
+      },
+      "2026-08-10": {
         "weight": 150
       }
     },
