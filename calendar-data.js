@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "LAGREE - ALL LEVELS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fd94eed30c4845",
-    "startTime": "2026-08-09T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-09T11:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -415,8 +404,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "",
+      "subject": "Huntington Bank Loans payment sent as a check"
+    },
+    {
+      "sender": "Apple powerful signal - Power Field Notes",
+      "subject": "Apple reaches historic highs, here's what investors should know."
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "FORM BY TWO Class Confirmation"
@@ -444,29 +445,9 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Personal Care items"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "Everyday Sneakers, Elevated by BOSS"
     }
   ],
   "items": [
-    {
-      "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-09",
-      "time": "11:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-09|11:00|lagree - all levels",
-      "id": "19fe1e4ced636e60",
-      "sender": "FORM BY TWO"
-    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
