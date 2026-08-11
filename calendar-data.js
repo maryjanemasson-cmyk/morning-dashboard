@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-08-10T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-10T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
     "summary": "Flight to Newark (UA 1548)",
     "location": "Jackson Hole JAC",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPwiupDmB9Z_Vgq6Ud8l89U4qxhurFmW4c\n",
@@ -119,6 +108,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-08-24T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-24T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -497,50 +497,71 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 32,
   "threads": [
     {
-      "sender": "hpdirector nassautennis.net",
-      "subject": "Nassau HPTA: Fall Placement - VPS"
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Plat de l'\u00e9t\u00e9 \u2600\ufe0f\""
     },
     {
-      "sender": "The warnings getting louder - Power Field Notes",
-      "subject": "JPMorgan CEO joins the chorus"
+      "sender": "Chewy",
+      "subject": "Time to review your Autoship order"
     },
     {
-      "sender": "Daniel Kim",
-      "subject": "Invitation: C-Suite Dinner NYC / Sep 10"
+      "sender": "A BATHING APE\u00ae",
+      "subject": "SHOP THE LATEST FROM FW26"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Bag for Everything"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Meet Your New Favourites.."
+    },
+    {
+      "sender": "Disney D23",
+      "subject": "REMINDER: Your Chance to WIN with D23 FANtastic Prizes!"
+    },
+    {
+      "sender": "Valerie from Holafly",
+      "subject": "Last chance: Don't forget your summer gift."
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS: Get Ready for Your Package!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Hair Care item"
     },
     {
       "sender": "Trip.com",
       "subject": "\ud83d\udcb8TripTuesday: $99 RT Flights + $20 Off"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Bogota trip"
-    },
-    {
-      "sender": "JR Power Wash",
-      "subject": "\ud83d\udcac JR Power Wash sent you a message"
-    },
-    {
-      "sender": "Firms quietly buying via Evan Brooks from TRC",
-      "subject": "Wall Street quietly buying these stocks before November 3?"
-    },
-    {
-      "sender": "Microsoft Store",
-      "subject": "Save up to $1,000 on select Surface\u200b"
-    },
-    {
-      "sender": "Trump's New Dollar - Power Field Notes",
-      "subject": "Trump\u2019s dollar reset exposed"
     }
   ],
   "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Hair Care item",
+      "date": "2026-08-11",
+      "id": "19fef55dfd10c757",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Hair Care item",
+      "date": "2026-08-11",
+      "id": "19fee6d1ec682a4f",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Hair Care item",
+      "date": "2026-08-11",
+      "id": "19fee5c5b33ec937",
+      "sender": "Amazon.com"
+    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
