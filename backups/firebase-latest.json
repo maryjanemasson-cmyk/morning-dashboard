@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-11T15:00:13",
+    "captured_at": "2026-08-11T17:00:15",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -58743,11 +58743,11 @@
       "text": "1/4 cup Thai red curry paste"
     },
     {
-      "done": false,
+      "done": true,
       "text": "1 tablespoon fresh grated ginger"
     },
     {
-      "done": false,
+      "done": true,
       "text": "1 1/2 cups chopped broccoli"
     },
     {
