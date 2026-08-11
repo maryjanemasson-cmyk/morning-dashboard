@@ -497,8 +497,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 30,
   "threads": [
+    {
+      "sender": "hpdirector nassautennis.net",
+      "subject": "Nassau HPTA: Fall Placement - VPS"
+    },
+    {
+      "sender": "The warnings getting louder - Power Field Notes",
+      "subject": "JPMorgan CEO joins the chorus"
+    },
+    {
+      "sender": "Daniel Kim",
+      "subject": "Invitation: C-Suite Dinner NYC / Sep 10"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Bag for Everything"
+    },
     {
       "sender": "Trip.com",
       "subject": "\ud83d\udcb8TripTuesday: $99 RT Flights + $20 Off"
@@ -522,22 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Trump's New Dollar - Power Field Notes",
       "subject": "Trump\u2019s dollar reset exposed"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "NEW Summer Fridays!!!"
-    },
-    {
-      "sender": "Medium",
-      "subject": "Write for humans, not algorithms"
-    },
-    {
-      "sender": "Trump BIG secret via Evan Brooks from TRC",
-      "subject": "Trump \"Redacted\u201d 750 White House Files... Then Left a $300 Million Money Trail"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "We made a quiz for our NEW flavors \ud83c\udfaf"
     }
   ],
   "items": [
