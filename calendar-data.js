@@ -497,27 +497,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to Henry Rishel"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SALE STARTS NOW"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "Meet Cricket, our newest floor tile"
+    },
+    {
+      "sender": "Life360",
+      "subject": "NEW: Circles that come and go, just like your plans"
+    },
+    {
+      "sender": "Lauren Santo Domingo, Moda Operandi",
+      "subject": "Five things worth the money"
+    },
     {
       "sender": "Hotels.com",
       "subject": "Hotels that offer more for less"
     },
     {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane Masson, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
-    },
-    {
       "sender": "Next major evolution - Power Field Notes",
       "subject": "BlackRock's CEO is calling this \"the next major evolution\""
-    },
-    {
-      "sender": "Pittsburgh secretive facility via Evan Brooks from TRC",
-      "subject": "What's inside this Pittsburgh lab"
-    },
-    {
-      "sender": "On Behalf of Acxiom LLC",
-      "subject": "(Request ID: 2RTHF6TKKA) Request logged successfully"
     },
     {
       "sender": "Whatnot",
@@ -530,14 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Iran War Truth via Power Field Notes",
       "subject": "\ud83d\udeaa Behind Closed Doors: The Iran War Truth"
-    },
-    {
-      "sender": "JR Power Wash",
-      "subject": "\ud83d\udcac JR Power Wash sent you a message"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Tue, 8/11 is ready to view"
     }
   ],
   "items": [
