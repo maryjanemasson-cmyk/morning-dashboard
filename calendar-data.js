@@ -497,15 +497,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "$10 billion acquisition via Power Field Notes",
-      "subject": "Twitter. SolarCity. Grohmann. This company is next."
+      "sender": "E-ZPass Customer Service",
+      "subject": "E-ZPass Statement"
     },
     {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
+      "sender": "Elon's Next Breakthrough via Evan Brooks from TRC",
+      "subject": "Elon Musk on His New Invention: \u201cAn Infinite Money Glitch.\u201d"
     },
     {
       "sender": "Elon empire question - Power Field Notes",
@@ -514,14 +514,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Trump\u2019s latest move via Evan Brooks from TRC",
       "subject": "Trump\u2019s One Rule exposed: Executive Order 14179"
-    },
-    {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (60b82a3)"
-    },
-    {
-      "sender": "Mary Jane HINRICHS",
-      "subject": "Accepted: [EXTERNAL] Invitation: Appointment of Nathaniel Hinrichs @ Mon Oct 19, 2026 2:30pm - 3:10pm (EDT) (mary.jane.hinrichs@ipsen.com)"
     },
     {
       "sender": "Google",
@@ -538,6 +530,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "SALE STARTS NOW"
+    },
+    {
+      "sender": "chrislovesjulia",
+      "subject": "Meet Cricket, our newest floor tile"
+    },
+    {
+      "sender": "Life360",
+      "subject": "NEW: Circles that come and go, just like your plans"
     }
   ],
   "items": [
@@ -571,7 +571,7 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-12|17:00|lagree - all levels",
-      "id": "19fe9233063ef877",
+      "id": "19ff2a16fdc2fb8a",
       "sender": "FORM BY TWO"
     }
   ]
