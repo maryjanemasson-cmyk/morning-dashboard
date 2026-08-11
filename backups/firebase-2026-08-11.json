@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-11T09:00:16",
+    "captured_at": "2026-08-11T11:00:16",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -58735,64 +58735,24 @@
   },
   "mealGroceries": [
     {
-      "done": true,
-      "text": "200g feta cheese, cubed"
-    },
-    {
-      "done": true,
-      "text": "4-5 cups blackberries, rinsed and drained ((two 6-ounce containers))"
-    },
-    {
-      "done": true,
-      "text": "9 regular lasagna noodles ((or no-boil noodles))"
-    },
-    {
-      "done": true,
-      "text": "1 pound shredded mozzarella cheese*"
-    },
-    {
-      "done": true,
-      "text": "1/2 pound ground Italian sausage"
+      "done": false,
+      "text": "4 (4-6 ounce)  salmon filets"
     },
     {
       "done": false,
-      "text": "8 ounces freshly grated parmesan cheese"
+      "text": "1/4 cup Thai red curry paste"
     },
     {
-      "done": true,
-      "text": "1/2 large onion (, chopped)"
+      "done": false,
+      "text": "1 tablespoon fresh grated ginger"
     },
     {
-      "done": true,
-      "text": "1 1/2 cups fresh spinach leaves"
+      "done": false,
+      "text": "1 1/2 cups chopped broccoli"
     },
     {
-      "done": true,
-      "text": "1/2 bell pepper ((red or green), chopped)"
-    },
-    {
-      "done": true,
-      "text": "28 oz can whole peeled San Marzano tomatoes* (, undrained)"
-    },
-    {
-      "done": true,
-      "text": "8 oz can tomato sauce"
-    },
-    {
-      "done": true,
-      "text": "1 container fresh basil leaves (, finely chopped (about 10-15 leaves))"
-    },
-    {
-      "done": true,
-      "text": "4 cloves garlic (, minced)"
-    },
-    {
-      "done": true,
-      "text": "1/2 pound lean ground beef"
-    },
-    {
-      "done": true,
-      "text": "1/2 pound ground Italian sausage"
+      "done": false,
+      "text": "2 cups canned full-fat coconut milk"
     }
   ],
   "groceries": null,

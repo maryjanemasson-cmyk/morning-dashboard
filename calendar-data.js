@@ -497,8 +497,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Hotels.com",
+      "subject": "Hotels that offer more for less"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane Masson, you have very good chances of approval for the PayPal Cashback Mastercard\u00ae"
+    },
+    {
+      "sender": "Next major evolution - Power Field Notes",
+      "subject": "BlackRock's CEO is calling this \"the next major evolution\""
+    },
+    {
+      "sender": "Pittsburgh secretive facility via Evan Brooks from TRC",
+      "subject": "What's inside this Pittsburgh lab"
+    },
+    {
+      "sender": "On Behalf of Acxiom LLC",
+      "subject": "(Request ID: 2RTHF6TKKA) Request logged successfully"
+    },
+    {
+      "sender": "Whatnot",
+      "subject": "Mary, your top shows in Bags & Accessories - August 11 \ud83d\udc5c"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "As Seen On"
+    },
+    {
+      "sender": "Iran War Truth via Power Field Notes",
+      "subject": "\ud83d\udeaa Behind Closed Doors: The Iran War Truth"
+    },
     {
       "sender": "JR Power Wash",
       "subject": "\ud83d\udcac JR Power Wash sent you a message"
@@ -506,38 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "USPS Informed Delivery",
       "subject": "Your Daily Digest for Tue, 8/11 is ready to view"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 11 Aug 2026"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "RMS Beauty",
-      "subject": "Stop Sleeping On This One \ud83d\udc40"
-    },
-    {
-      "sender": "Chewy",
-      "subject": "Time to review your Autoship order"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "SHOP THE LATEST FROM FW26"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Meet Your New Favourites.."
-    },
-    {
-      "sender": "Disney D23",
-      "subject": "REMINDER: Your Chance to WIN with D23 FANtastic Prizes!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Hair Care item"
     }
   ],
   "items": [
