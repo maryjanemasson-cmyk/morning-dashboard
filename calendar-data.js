@@ -497,12 +497,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 26,
   "threads": [
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Plat de l'\u00e9t\u00e9 \u2600\ufe0f\""
-    },
     {
       "sender": "Chewy",
       "subject": "Time to review your Autoship order"
@@ -510,10 +506,6 @@ window.EMAIL_DATA = {
     {
       "sender": "A BATHING APE\u00ae",
       "subject": "SHOP THE LATEST FROM FW26"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "WAT THE BRAND",
@@ -524,10 +516,6 @@ window.EMAIL_DATA = {
       "subject": "REMINDER: Your Chance to WIN with D23 FANtastic Prizes!"
     },
     {
-      "sender": "Valerie from Holafly",
-      "subject": "Last chance: Don't forget your summer gift."
-    },
-    {
       "sender": "UPS",
       "subject": "UPS: Get Ready for Your Package!"
     },
@@ -536,8 +524,20 @@ window.EMAIL_DATA = {
       "subject": "Shipped: \u20661\u2069 Hair Care item"
     },
     {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udcb8TripTuesday: $99 RT Flights + $20 Off"
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles and save on your car rental for your Bogota trip"
+    },
+    {
+      "sender": "Microsoft Store",
+      "subject": "Save up to $1,000 on select Surface\u200b"
+    },
+    {
+      "sender": "Trump's New Dollar - Power Field Notes",
+      "subject": "Trump\u2019s dollar reset exposed"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "NEW Summer Fridays!!!"
     }
   ],
   "items": [
