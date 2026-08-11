@@ -497,8 +497,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "JR Power Wash",
+      "subject": "\ud83d\udcac JR Power Wash sent you a message"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Tue, 8/11 is ready to view"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 11 Aug 2026"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "RMS Beauty",
+      "subject": "Stop Sleeping On This One \ud83d\udc40"
+    },
     {
       "sender": "Chewy",
       "subject": "Time to review your Autoship order"
@@ -516,28 +536,8 @@ window.EMAIL_DATA = {
       "subject": "REMINDER: Your Chance to WIN with D23 FANtastic Prizes!"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS: Get Ready for Your Package!"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20661\u2069 Hair Care item"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Bogota trip"
-    },
-    {
-      "sender": "Microsoft Store",
-      "subject": "Save up to $1,000 on select Surface\u200b"
-    },
-    {
-      "sender": "Trump's New Dollar - Power Field Notes",
-      "subject": "Trump\u2019s dollar reset exposed"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "NEW Summer Fridays!!!"
     }
   ],
   "items": [
