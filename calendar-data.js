@@ -497,8 +497,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Mary Jane HINRICHS",
+      "subject": "Accepted: [EXTERNAL] Invitation: Appointment of Nathaniel Hinrichs @ Mon Oct 19, 2026 2:30pm - 3:10pm (EDT) (mary.jane.hinrichs@ipsen.com)"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with thumbtack.com"
+    },
+    {
+      "sender": "Thumbtack",
+      "subject": "Action needed: Review your pro"
+    },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to Henry Rishel"
@@ -526,18 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Next major evolution - Power Field Notes",
       "subject": "BlackRock's CEO is calling this \"the next major evolution\""
-    },
-    {
-      "sender": "Whatnot",
-      "subject": "Mary, your top shows in Bags & Accessories - August 11 \ud83d\udc5c"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "As Seen On"
-    },
-    {
-      "sender": "Iran War Truth via Power Field Notes",
-      "subject": "\ud83d\udeaa Behind Closed Doors: The Iran War Truth"
     }
   ],
   "items": [
