@@ -497,12 +497,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 20,
   "threads": [
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Everything But The House"
-    },
     {
       "sender": "Chase",
       "subject": "Your credit card payment is scheduled"
@@ -538,6 +534,10 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Early Access: 25% Off Progressives"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
     }
   ],
   "items": [
