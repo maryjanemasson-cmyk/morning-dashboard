@@ -486,15 +486,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 24,
   "threads": [
     {
-      "sender": "Utah footage via Power Field Notes",
-      "subject": "\ud83c\udfa5 Caught On Camera: The video from Beaver County that almost never got published"
-    },
-    {
-      "sender": "Iran was hit via Evan Brooks from TRC",
-      "subject": "What the Iran raids may have exposed"
+      "sender": "Design Decor",
+      "subject": "The essentials that transform Christmas decorating"
     },
     {
       "sender": "LOOK OPTIC",
@@ -527,6 +523,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Generational wealth - Power Field Notes",
       "subject": "Old money just lost its grip"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
     }
   ],
   "items": [
