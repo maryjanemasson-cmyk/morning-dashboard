@@ -489,24 +489,36 @@ window.EMAIL_DATA = {
   "unreadCount": 25,
   "threads": [
     {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Payday up to 2 days early? Only with Direct Deposit."
+    },
+    {
+      "sender": "Evan Brooks from TRC",
+      "subject": "MAJOR BUY ALERT: Elon/AI/China/Trillions of Dollars..."
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Flash deals on now: 40% off select hotels \u23f0"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "a study in raffia"
+    },
+    {
+      "sender": "Lyft",
+      "subject": "Back-to-school help from Lyft Teen"
+    },
+    {
       "sender": "Suite Blend Color Bar",
       "subject": "Reminder: Your appointment is on August 13, 2026 at 12:00 PM"
     },
     {
-      "sender": "Deer Guys",
-      "subject": "Receipt for payment to Deer Guys"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Last Days: Don\u2019t Miss Our Spring/Summer Sale"
-    },
-    {
       "sender": "COS",
       "subject": "Take another look"
-    },
-    {
-      "sender": "LinkedIn Sales Navigator",
-      "subject": "Close the Impact Gap with B2B Network Intelligence"
     },
     {
       "sender": "maryjanemasson@icloud.com",
@@ -515,18 +527,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Design Decor",
       "subject": "The essentials that transform Christmas decorating"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access: 25% Off Progressives"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "I Tried Logo Design with Claude Design and It\u2019s Amazing | Nick Babich in UX Planet"
     }
   ],
   "items": [

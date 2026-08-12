@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-12T13:00:18",
+    "captured_at": "2026-08-12T15:00:16",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -58736,23 +58736,27 @@
   "mealGroceries": [
     {
       "done": false,
-      "text": "4 (4-6 ounce)  salmon filets"
+      "text": "Scallions"
     },
     {
       "done": false,
-      "text": "1/4 cup Thai red curry paste"
-    },
-    {
-      "done": true,
-      "text": "1 tablespoon fresh grated ginger"
-    },
-    {
-      "done": true,
-      "text": "1 1/2 cups chopped broccoli"
+      "text": "Jalapeno"
     },
     {
       "done": false,
-      "text": "2 cups canned full-fat coconut milk"
+      "text": "Corn"
+    },
+    {
+      "done": false,
+      "text": "Basil"
+    },
+    {
+      "done": false,
+      "text": "Chicken thighs"
+    },
+    {
+      "done": false,
+      "text": "Pickled jalopenos"
     }
   ],
   "groceries": null,
