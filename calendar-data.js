@@ -497,11 +497,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "E-ZPass Customer Service",
-      "subject": "E-ZPass Statement"
+      "sender": "Generational wealth - Power Field Notes",
+      "subject": "Old money just lost its grip"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, it\u2019s time to confirm your income"
+    },
+    {
+      "sender": "Mary Jane HINRICHS",
+      "subject": "Accepted: [EXTERNAL] Invitation: Appointment of Nathaniel Hinrichs @ Mon Oct 19, 2026 2:30pm - 3:10pm (EDT) (mary.jane.hinrichs@ipsen.com)"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Leather Layers"
     },
     {
       "sender": "Elon's Next Breakthrough via Evan Brooks from TRC",
@@ -522,22 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Thumbtack",
       "subject": "Action needed: Review your pro"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to Henry Rishel"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SALE STARTS NOW"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "Meet Cricket, our newest floor tile"
-    },
-    {
-      "sender": "Life360",
-      "subject": "NEW: Circles that come and go, just like your plans"
     }
   ],
   "items": [
