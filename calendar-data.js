@@ -486,19 +486,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 30,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 12 Aug 2026"
+      "sender": "Utah footage via Power Field Notes",
+      "subject": "\ud83c\udfa5 Caught On Camera: The video from Beaver County that almost never got published"
     },
     {
-      "sender": "World of Hyatt",
-      "subject": "Your Summer Offers Are Here"
+      "sender": "Iran was hit via Evan Brooks from TRC",
+      "subject": "What the Iran raids may have exposed"
     },
     {
-      "sender": "Walgreens Pharmacy",
-      "subject": "We're Processing Your Auto Refill Order"
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access: 25% Off Progressives"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "I Tried Logo Design with Claude Design and It\u2019s Amazing | Nick Babich in UX Planet"
     },
     {
       "sender": "E-ZPass New Jersey Customer Service",
@@ -519,14 +527,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Generational wealth - Power Field Notes",
       "subject": "Old money just lost its grip"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, it\u2019s time to confirm your income"
     }
   ],
   "items": [
