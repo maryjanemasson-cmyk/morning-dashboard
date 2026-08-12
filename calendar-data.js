@@ -486,8 +486,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "Suite Blend Color Bar",
+      "subject": "Reminder: Your appointment is on August 13, 2026 at 12:00 PM"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Receipt for payment to Deer Guys"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Last Days: Don\u2019t Miss Our Spring/Summer Sale"
+    },
+    {
+      "sender": "COS",
+      "subject": "Take another look"
+    },
+    {
+      "sender": "LinkedIn Sales Navigator",
+      "subject": "Close the Impact Gap with B2B Network Intelligence"
+    },
+    {
+      "sender": "maryjanemasson@icloud.com",
+      "subject": "Att"
+    },
     {
       "sender": "Design Decor",
       "subject": "The essentials that transform Christmas decorating"
@@ -503,30 +527,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "I Tried Logo Design with Claude Design and It\u2019s Amazing | Nick Babich in UX Planet"
-    },
-    {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20663\u2069 Book and Pet items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Here's your promotional credit from your recent Amazon order"
-    },
-    {
-      "sender": "Generational wealth - Power Field Notes",
-      "subject": "Old money just lost its grip"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
     }
   ],
   "items": [
