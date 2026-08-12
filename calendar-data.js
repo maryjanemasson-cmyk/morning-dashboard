@@ -486,8 +486,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 12 Aug 2026"
+    },
     {
       "sender": "World of Hyatt",
       "subject": "Your Summer Offers Are Here"
@@ -523,10 +527,6 @@ window.EMAIL_DATA = {
     {
       "sender": "American Express",
       "subject": "Christian, it\u2019s time to confirm your income"
-    },
-    {
-      "sender": "Mary Jane HINRICHS",
-      "subject": "Accepted: [EXTERNAL] Invitation: Appointment of Nathaniel Hinrichs @ Mon Oct 19, 2026 2:30pm - 3:10pm (EDT) (mary.jane.hinrichs@ipsen.com)"
     }
   ],
   "items": [
