@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Flight to Newark (UA 1548)",
-    "location": "Jackson Hole JAC",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPwiupDmB9Z_Vgq6Ud8l89U4qxhurFmW4c\n",
-    "startTime": "2026-08-11T09:05:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-11T13:22:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "LAGREE - ALL LEVELS",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fe9233063ef877",
@@ -497,8 +486,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "World of Hyatt",
+      "subject": "Your Summer Offers Are Here"
+    },
+    {
+      "sender": "Walgreens Pharmacy",
+      "subject": "We're Processing Your Auto Refill Order"
+    },
+    {
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20663\u2069 Book and Pet items"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Here's your promotional credit from your recent Amazon order"
+    },
     {
       "sender": "Generational wealth - Power Field Notes",
       "subject": "Old money just lost its grip"
@@ -514,54 +527,9 @@ window.EMAIL_DATA = {
     {
       "sender": "Mary Jane HINRICHS",
       "subject": "Accepted: [EXTERNAL] Invitation: Appointment of Nathaniel Hinrichs @ Mon Oct 19, 2026 2:30pm - 3:10pm (EDT) (mary.jane.hinrichs@ipsen.com)"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Leather Layers"
-    },
-    {
-      "sender": "Elon's Next Breakthrough via Evan Brooks from TRC",
-      "subject": "Elon Musk on His New Invention: \u201cAn Infinite Money Glitch.\u201d"
-    },
-    {
-      "sender": "Elon empire question - Power Field Notes",
-      "subject": "Guess the most important stock in Musk's empire"
-    },
-    {
-      "sender": "Trump\u2019s latest move via Evan Brooks from TRC",
-      "subject": "Trump\u2019s One Rule exposed: Executive Order 14179"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with thumbtack.com"
-    },
-    {
-      "sender": "Thumbtack",
-      "subject": "Action needed: Review your pro"
     }
   ],
   "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Hair Care item",
-      "date": "2026-08-11",
-      "id": "19fef55dfd10c757",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Hair Care item",
-      "date": "2026-08-11",
-      "id": "19fee6d1ec682a4f",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Hair Care item",
-      "date": "2026-08-11",
-      "id": "19fee5c5b33ec937",
-      "sender": "Amazon.com"
-    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
@@ -573,6 +541,13 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-12|17:00|lagree - all levels",
       "id": "19ff2a16fdc2fb8a",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20663\u2069 Book and Pet items",
+      "date": "2026-08-12",
+      "id": "19ff38e2611741f1",
+      "sender": "Amazon.com"
     }
   ]
 };
