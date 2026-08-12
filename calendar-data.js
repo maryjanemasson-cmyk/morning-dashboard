@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Spider-Man: Brand New Day",
+    "location": "Picture Show at East Windsor, 319 US Hwy 130 East Windsor, NJ 08520",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsGMZAe5QWHEr6n_kJ22bYCQvik0-_4qQ\n",
+    "startTime": "2026-08-13T19:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-13T20:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -486,8 +497,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Everything But The House"
+    },
     {
       "sender": "Chase",
       "subject": "Your credit card payment is scheduled"
@@ -513,20 +528,16 @@ window.EMAIL_DATA = {
       "subject": "Back-to-school help from Lyft Teen"
     },
     {
-      "sender": "Suite Blend Color Bar",
-      "subject": "Reminder: Your appointment is on August 13, 2026 at 12:00 PM"
-    },
-    {
       "sender": "COS",
       "subject": "Take another look"
     },
     {
-      "sender": "maryjanemasson@icloud.com",
-      "subject": "Att"
-    },
-    {
       "sender": "Design Decor",
       "subject": "The essentials that transform Christmas decorating"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Early Access: 25% Off Progressives"
     }
   ],
   "items": [
