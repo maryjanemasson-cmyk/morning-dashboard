@@ -519,16 +519,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 13,
   "threads": [
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "The Perfect Pairing Is Here.."
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "Invitation from an unknown sender: Pre-Departure Meeting @ Mon Aug 17, 2026 2pm - 2:45pm (EDT) (maryjanemasson@gmail.com)"
-    },
     {
       "sender": "Alex from Holafly",
       "subject": "Refer a friend for special rewards, and make summer travel more fun"
@@ -536,14 +528,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "FORM BY TWO Class Confirmation"
-    },
-    {
-      "sender": "BOSS",
-      "subject": "The Modern Commuter"
-    },
-    {
-      "sender": "$0.52 entry point - Power Field Notes",
-      "subject": "[URGENT] Mode Mobile terms changing Aug 14"
     },
     {
       "sender": "Chase",
@@ -560,6 +544,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Hotels.com",
       "subject": "Flash deals on now: 40% off select hotels \u23f0"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "a study in raffia"
+    },
+    {
+      "sender": "Lyft",
+      "subject": "Back-to-school help from Lyft Teen"
+    },
+    {
+      "sender": "COS",
+      "subject": "Take another look"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "The essentials that transform Christmas decorating"
     }
   ],
   "items": [
