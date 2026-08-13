@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "LAGREE - ALL LEVELS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19fe9233063ef877",
-    "startTime": "2026-08-12T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-12T17:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Your Appointment at Suite Blend Color Bar",
     "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
     "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
@@ -53,6 +42,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "LAGREE - FOUNDATIONS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ff8b8419df284b",
+    "startTime": "2026-08-15T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-15T10:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
+    "summary": "LAGREE - ALL LEVELS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ff8b8737a381f0",
+    "startTime": "2026-08-16T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-16T11:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
   },
   {
     "summary": "Weekly planning \u2014 update task tracker",
@@ -119,6 +130,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Stay at York Medellin, Curio Collection by Hilton",
+    "location": "Carrera 43a 17sur 63 Medell\u00edn 251250 CO",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM8imptMOe1MjVCPqTslLEPF5ePWU1FR6Q\n",
+    "startTime": "",
+    "startDate": "2026-08-26",
+    "endTime": "",
+    "endDate": "2026-08-30",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -497,8 +519,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The Perfect Pairing Is Here.."
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "Invitation from an unknown sender: Pre-Departure Meeting @ Mon Aug 17, 2026 2pm - 2:45pm (EDT) (maryjanemasson@gmail.com)"
+    },
+    {
+      "sender": "Alex from Holafly",
+      "subject": "Refer a friend for special rewards, and make summer travel more fun"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
+    },
+    {
+      "sender": "BOSS",
+      "subject": "The Modern Commuter"
+    },
     {
       "sender": "$0.52 entry point - Power Field Notes",
       "subject": "[URGENT] Mode Mobile terms changing Aug 14"
@@ -518,47 +560,32 @@ window.EMAIL_DATA = {
     {
       "sender": "Hotels.com",
       "subject": "Flash deals on now: 40% off select hotels \u23f0"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "a study in raffia"
-    },
-    {
-      "sender": "Lyft",
-      "subject": "Back-to-school help from Lyft Teen"
-    },
-    {
-      "sender": "COS",
-      "subject": "Take another look"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "The essentials that transform Christmas decorating"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "Early Access: 25% Off Progressives"
     }
   ],
   "items": [
     {
       "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-12",
-      "time": "17:00",
+      "title": "LAGREE - FOUNDATIONS \u00b7 10:00 AM",
+      "name": "LAGREE - FOUNDATIONS",
+      "date": "2026-08-15",
+      "time": "10:00",
       "duration_min": 45,
       "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-12|17:00|lagree - all levels",
-      "id": "19ff2a16fdc2fb8a",
+      "event_key": "form-by-two|2026-08-15|10:00|lagree - foundations",
+      "id": "19ff8b8419df284b",
       "sender": "FORM BY TWO"
     },
     {
-      "type": "delivery",
-      "title": "Shipped: \u20663\u2069 Book and Pet items",
-      "date": "2026-08-12",
-      "id": "19ff38e2611741f1",
-      "sender": "Amazon.com"
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-16",
+      "time": "11:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
+      "id": "19ff8b8737a381f0",
+      "sender": "FORM BY TWO"
     }
   ]
 };
