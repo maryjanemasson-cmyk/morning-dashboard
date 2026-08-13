@@ -497,8 +497,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "$0.52 entry point - Power Field Notes",
+      "subject": "[URGENT] Mode Mobile terms changing Aug 14"
+    },
     {
       "sender": "Chase",
       "subject": "Your credit card payment is scheduled"
@@ -534,10 +538,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "Early Access: 25% Off Progressives"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
     }
   ],
   "items": [
