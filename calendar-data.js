@@ -519,15 +519,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Iran raids revealed via Power Field Notes",
+      "subject": "\ud83d\udd0d The Iran raids revealed something bigger"
+    },
+    {
+      "sender": "Palm Beach Shocked via Evan Brooks from TRC",
+      "subject": "Caught on Camera: What Happened in Palm Beach Changes Everything"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "New Soft Rib"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "WAT\u2019s The Story?"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "A new chocolate cake with butterless frosting."
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Aug 6 2026"
+    },
     {
       "sender": "Alex from Holafly",
       "subject": "Refer a friend for special rewards, and make summer travel more fun"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
     },
     {
       "sender": "Chase",
@@ -536,30 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Payday up to 2 days early? Only with Direct Deposit."
-    },
-    {
-      "sender": "Evan Brooks from TRC",
-      "subject": "MAJOR BUY ALERT: Elon/AI/China/Trillions of Dollars..."
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Flash deals on now: 40% off select hotels \u23f0"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "a study in raffia"
-    },
-    {
-      "sender": "Lyft",
-      "subject": "Back-to-school help from Lyft Teen"
-    },
-    {
-      "sender": "COS",
-      "subject": "Take another look"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "The essentials that transform Christmas decorating"
     }
   ],
   "items": [
