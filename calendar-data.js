@@ -519,47 +519,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 39,
   "threads": [
     {
-      "sender": "IHG One Rewards",
-      "subject": "Your points balance could be 214,986, Mary Jane"
+      "sender": "Evan Brooks from TRC",
+      "subject": "This photo will make you furious"
     },
     {
-      "sender": "Schoolhouse",
-      "subject": "Say Hello to Dolores"
+      "sender": "Hotels.com",
+      "subject": "Spend less on great hotels"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "Can't pick a flavor? Pick ALL of them with 17% off \ud83d\ude0f"
+      "sender": "Zoom",
+      "subject": "Your school year, upgraded"
     },
     {
-      "sender": "Princeton Academy of Art",
-      "subject": "Coming up soon at Princeton Academy of Art"
+      "sender": "Reformation",
+      "subject": "THE SWEATER SHOP"
     },
     {
-      "sender": "Verizon Notification",
-      "subject": "Your bill is now available online"
+      "sender": "& Other Stories",
+      "subject": "Pre-Fall, curated by Diana Louise Bartlett"
     },
     {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Grammarly"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
     },
     {
-      "sender": "Whatnot",
-      "subject": "Mary, your top shows in Bags & Accessories - August 13 \ud83d\udc5c"
+      "sender": "MyLowe's Rewards",
+      "subject": "We found your next tote obsession \ud83d\udecd\ufe0f"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "The High Neck Jacket"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 35% OFF select appliances is just the start \ud83e\udd29"
     },
     {
-      "sender": "On Behalf of Interpublic",
-      "subject": "Acxiom LLC \u2013 Right to Delete - Confirmation"
+      "sender": "Sephora",
+      "subject": "Pro tips for your recent purchase inside, Mary jane \u27a1\ufe0f"
     },
     {
-      "sender": "On Behalf of Acxiom LLC",
-      "subject": "(Request ID: AFBYZ95VYC) Request logged successfully"
+      "sender": "Moda Operandi",
+      "subject": "Your weekly refresh is here"
     }
   ],
   "items": [
