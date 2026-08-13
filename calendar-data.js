@@ -519,31 +519,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 39,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Suite Blend Color Bar",
+      "subject": "Your appointment with Suite Blend Color Bar has been scheduled"
+    },
+    {
+      "sender": "Suite Blend Color Bar via GlossGenius",
+      "subject": "Your receipt from Suite Blend Color Bar"
+    },
+    {
+      "sender": "Trump\u2019s great betrayal - Power Field Notes",
+      "subject": "The lie at the heart of America"
+    },
+    {
+      "sender": "Pre-IPO shares via Evan Brooks from TRC",
+      "subject": "[URGENT] Mode Mobile terms changing Aug 14"
+    },
     {
       "sender": "Evan Brooks from TRC",
       "subject": "This photo will make you furious"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Spend less on great hotels"
     },
     {
       "sender": "Zoom",
       "subject": "Your school year, upgraded"
     },
     {
-      "sender": "Reformation",
-      "subject": "THE SWEATER SHOP"
-    },
-    {
       "sender": "& Other Stories",
       "subject": "Pre-Fall, curated by Diana Louise Bartlett"
-    },
-    {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
     },
     {
       "sender": "MyLowe's Rewards",
@@ -552,10 +556,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Up to 35% OFF select appliances is just the start \ud83e\udd29"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "Pro tips for your recent purchase inside, Mary jane \u27a1\ufe0f"
     },
     {
       "sender": "Moda Operandi",

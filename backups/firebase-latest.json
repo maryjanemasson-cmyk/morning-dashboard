@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-13T13:00:16",
+    "captured_at": "2026-08-13T15:00:18",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -59856,6 +59856,15 @@
       "score": 77,
       "title": "Widow's Bay",
       "where": "Apple TV"
+    },
+    {
+      "_custom": true,
+      "genre": "Drama / Thriller / Espionage",
+      "id": "custom_1786642714833",
+      "rating": "7.6/10",
+      "score": 76,
+      "title": "Lioness",
+      "where": "Paramount+"
     }
   ],
   "watchlist": {
