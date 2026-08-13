@@ -519,47 +519,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 28,
   "threads": [
     {
-      "sender": "Iran raids revealed via Power Field Notes",
-      "subject": "\ud83d\udd0d The Iran raids revealed something bigger"
+      "sender": "IHG One Rewards",
+      "subject": "Your points balance could be 214,986, Mary Jane"
     },
     {
-      "sender": "Palm Beach Shocked via Evan Brooks from TRC",
-      "subject": "Caught on Camera: What Happened in Palm Beach Changes Everything"
+      "sender": "Schoolhouse",
+      "subject": "Say Hello to Dolores"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "New Soft Rib"
+      "sender": "Shameless Snacks",
+      "subject": "Can't pick a flavor? Pick ALL of them with 17% off \ud83d\ude0f"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "WAT\u2019s The Story?"
+      "sender": "Princeton Academy of Art",
+      "subject": "Coming up soon at Princeton Academy of Art"
     },
     {
-      "sender": "Christina Marsigliese",
-      "subject": "A new chocolate cake with butterless frosting."
+      "sender": "Verizon Notification",
+      "subject": "Your bill is now available online"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Grammarly"
     },
     {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Aug 6 2026"
+      "sender": "Whatnot",
+      "subject": "Mary, your top shows in Bags & Accessories - August 13 \ud83d\udc5c"
     },
     {
-      "sender": "Alex from Holafly",
-      "subject": "Refer a friend for special rewards, and make summer travel more fun"
+      "sender": "Almina Concept",
+      "subject": "The High Neck Jacket"
     },
     {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
+      "sender": "On Behalf of Interpublic",
+      "subject": "Acxiom LLC \u2013 Right to Delete - Confirmation"
     },
     {
-      "sender": "PayPal",
-      "subject": "Payday up to 2 days early? Only with Direct Deposit."
+      "sender": "On Behalf of Acxiom LLC",
+      "subject": "(Request ID: AFBYZ95VYC) Request logged successfully"
     }
   ],
   "items": [
