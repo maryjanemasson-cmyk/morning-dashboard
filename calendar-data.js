@@ -519,19 +519,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 25,
   "threads": [
     {
-      "sender": "Suite Blend Color Bar",
-      "subject": "Your appointment with Suite Blend Color Bar has been scheduled"
+      "sender": "Deuxmoi",
+      "subject": "SUBSCRIBER LIVE SUNDAY 7PM ET"
     },
     {
-      "sender": "Suite Blend Color Bar via GlossGenius",
-      "subject": "Your receipt from Suite Blend Color Bar"
+      "sender": "Axia Women's Health",
+      "subject": "What's Up, Down There: Breast Changes and What's Normal + More"
     },
     {
-      "sender": "Trump\u2019s great betrayal - Power Field Notes",
-      "subject": "The lie at the heart of America"
+      "sender": "$5 \u201cShadow SpaceX\u201d via Power Field Notes",
+      "subject": "One mile from Elon, and almost nobody owns it."
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Aloriam",
+      "subject": "Aloriam order #12715 has been delivered"
     },
     {
       "sender": "Pre-IPO shares via Evan Brooks from TRC",
@@ -552,14 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "MyLowe's Rewards",
       "subject": "We found your next tote obsession \ud83d\udecd\ufe0f"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 35% OFF select appliances is just the start \ud83e\udd29"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "Your weekly refresh is here"
     }
   ],
   "items": [
