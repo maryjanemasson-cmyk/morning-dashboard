@@ -519,11 +519,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "Deuxmoi",
-      "subject": "SUBSCRIBER LIVE SUNDAY 7PM ET"
+      "sender": "$90 per share via Evan Brooks from TRC",
+      "subject": "This stock mailed shareholders $90,000 checks"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Pet item"
     },
     {
       "sender": "Axia Women's Health",
@@ -556,10 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "& Other Stories",
       "subject": "Pre-Fall, curated by Diana Louise Bartlett"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "We found your next tote obsession \ud83d\udecd\ufe0f"
     }
   ],
   "items": [
