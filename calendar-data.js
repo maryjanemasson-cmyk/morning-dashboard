@@ -519,15 +519,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 29,
   "threads": [
     {
-      "sender": "$90 per share via Evan Brooks from TRC",
-      "subject": "This stock mailed shareholders $90,000 checks"
+      "sender": "Secret China deal - Power Field Notes",
+      "subject": "What really happened in Beijing?"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Pet item"
+      "sender": "Emily Ley",
+      "subject": "Our Back-to-School Family Meeting, Explained"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "25% Off Your Pair For Everywhere"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Don't Wait, Christian: You can still earn 75,000 Membership Rewards\u00ae points. Learn More"
+    },
+    {
+      "sender": "Nest Home Report",
+      "subject": "Nest July Home Report for Home"
     },
     {
       "sender": "Axia Women's Health",
@@ -548,18 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pre-IPO shares via Evan Brooks from TRC",
       "subject": "[URGENT] Mode Mobile terms changing Aug 14"
-    },
-    {
-      "sender": "Evan Brooks from TRC",
-      "subject": "This photo will make you furious"
-    },
-    {
-      "sender": "Zoom",
-      "subject": "Your school year, upgraded"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Pre-Fall, curated by Diana Louise Bartlett"
     }
   ],
   "items": [
