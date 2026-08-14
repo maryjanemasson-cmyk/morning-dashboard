@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Your Appointment at Suite Blend Color Bar",
-    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
-    "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
-    "startTime": "2026-08-13T12:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-13T16:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Your Appointment at Suite Blend Color Bar",
-    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
-    "description": "SERVICES\nHaircut, Single Color Root Touch Up, Refresh Highlight\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/a2fc0b3b34c4831b20b91775312255545d4c",
-    "startTime": "2026-08-13T16:15:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-13T22:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Spider-Man: Brand New Day",
-    "location": "Picture Show at East Windsor, 319 US Hwy 130 East Windsor, NJ 08520",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsGMZAe5QWHEr6n_kJ22bYCQvik0-_4qQ\n",
-    "startTime": "2026-08-13T19:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-13T20:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -519,15 +486,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 32,
   "threads": [
     {
-      "sender": "Secret China deal - Power Field Notes",
-      "subject": "What really happened in Beijing?"
+      "sender": "Grand Hyatt",
+      "subject": "Reminder of Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
     },
     {
-      "sender": "Emily Ley",
-      "subject": "Our Back-to-School Family Meeting, Explained"
+      "sender": "Holafly",
+      "subject": "Mary, earn up to EUR \u20ac100"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $12,209.95 deposit was credited to your account."
+    },
+    {
+      "sender": "Synchrony Offers",
+      "subject": "Mary, travel savings are knocking on your door"
+    },
+    {
+      "sender": "Christian Hinrichs",
+      "subject": "Clarity Gate skill"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "LOOK OPTIC",
@@ -544,22 +527,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Axia Women's Health",
       "subject": "What's Up, Down There: Breast Changes and What's Normal + More"
-    },
-    {
-      "sender": "$5 \u201cShadow SpaceX\u201d via Power Field Notes",
-      "subject": "One mile from Elon, and almost nobody owns it."
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Aloriam",
-      "subject": "Aloriam order #12715 has been delivered"
-    },
-    {
-      "sender": "Pre-IPO shares via Evan Brooks from TRC",
-      "subject": "[URGENT] Mode Mobile terms changing Aug 14"
     }
   ],
   "items": [
