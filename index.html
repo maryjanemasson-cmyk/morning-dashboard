@@ -369,6 +369,45 @@
     }
     .todo-del:hover { color: #c2553a; }
 
+    /* Shopping wishlist (bottom of home) */
+    .shop-wish-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr auto;
+      gap: 0.4rem;
+      margin-bottom: 0.65rem;
+    }
+    @media (max-width: 640px) {
+      .shop-wish-grid { grid-template-columns: 1fr; }
+    }
+    .shop-wish-list { list-style: none; }
+    .shop-wish-list li {
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      padding: 0.45rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.8rem; color: #3d3529;
+    }
+    .shop-wish-list li:last-child { border-bottom: none; }
+    .shop-wish-main { flex: 1; min-width: 0; }
+    .shop-wish-note {
+      display: block; font-size: 0.68rem; color: #9c8b76; margin-top: 0.12rem;
+    }
+    .shop-wish-empty {
+      font-size: 0.78rem; color: #b8a48e; padding: 0.35rem 0;
+    }
+    .shop-wish-actions {
+      display: flex; gap: 0.5rem; align-items: center; margin-top: 0.55rem;
+      flex-wrap: wrap;
+    }
+    .shop-wish-actions button {
+      border: 1px solid #ebe5dc; background: #faf8f5; border-radius: 5px;
+      padding: 0.3rem 0.55rem; font-size: 0.68rem; color: #6b5d4d;
+      cursor: pointer; font-family: inherit;
+    }
+    .shop-wish-actions button:hover { background: #ebe5dc; }
+    .shop-wish-hint {
+      font-size: 0.68rem; color: #b8a48e; margin: -0.35rem 0 0.65rem;
+    }
+    .shop-wish-hint a { color: #9c8b76; }
+
     /* Upcoming Events */
     .upcoming-event {
       display: flex; gap: 0.6rem; padding: 0.45rem 0;
@@ -696,6 +735,23 @@
       <div id="watchlist-count" class="wl-count"></div>
     </div>
 
+    <div class="card" style="padding:1.5rem;margin-top:1.25rem;">
+      <div class="card-title" style="font-size:1.05rem;">
+        <span class="icon">$</span> Shopping Wishlist
+      </div>
+      <p class="shop-wish-hint">Things you want to buy (not weekly food). Groceries stay on <a href="grocery.html">Grocery</a>.</p>
+      <div class="shop-wish-grid">
+        <input type="text" class="todo-input" id="shop-wish-item" placeholder="Item (e.g. new desk lamp)" onkeydown="if(event.key==='Enter')addShopWish()" />
+        <input type="text" class="todo-input" id="shop-wish-note" placeholder="Note / store / link (optional)" onkeydown="if(event.key==='Enter')addShopWish()" />
+        <button class="todo-add-btn" type="button" onclick="addShopWish()">Add</button>
+      </div>
+      <div id="shop-wishlist"></div>
+      <div class="shop-wish-actions">
+        <button type="button" onclick="clearBoughtShopWishes()" title="Remove checked items">Clear bought</button>
+        <span id="shop-wish-count" style="font-size:0.68rem;color:#b8a48e;"></span>
+      </div>
+    </div>
+
     <div class="last-updated" id="last-updated"></div>
   </div>
 
@@ -773,16 +829,14 @@
       const active = trips.find(t => t.start && t.end && t.start <= todayIso && todayIso <= t.end);
       if (active) {
         // Multi-city: find the segment that contains today
-        if (Array.isArray(active.segments)) {
-          const seg = active.segments.find(s => s.start <= todayIso && todayIso <= s.end);
+        if (Array.isArray(active.segments) && active.segments.length) {
+          const seg = active.segments.find(s => s.start <= todayIso && todayIso <= s.end)
+            || active.segments[0];
           if (seg && seg.city) return seg.city;
         }
-        // Single-city (or fallback): destination, stripped of the "→ X" tail
+        // Single-city (or multi-city title without segments): one geocodable city
         const dest = active.destination || '';
-        if (dest.includes('→')) {
-          return dest.split('→')[0].trim();
-        }
-        if (dest) return dest;
+        if (dest) return weatherCityFromInput(dest);
       }
 
       // (2) Calendar event fallback, with junk-location filter
@@ -850,16 +904,32 @@
 
     // Geocode → cache in localStorage so we only geocode each city once.
     // Handles "City", "City, ST" (US state code), and "City, Country" inputs.
+    // Multi-city trip titles ("Paris → Cologne", "Bogotá → Cartagena → Medellín")
+    // must be reduced to one city — Open-Meteo returns nothing for the full string.
+    function weatherCityFromInput(input) {
+      let s = String(input || '').trim();
+      if (!s) return s;
+      // Prefer the destination side of home → dest (e.g. Newark → London)
+      const arrowParts = s.split(/\s*→\s*|\s+to\s+/i).map(p => p.trim()).filter(Boolean);
+      if (arrowParts.length > 1) {
+        const homeRe = /^(newark|ewr|princeton|home)\b/i;
+        const first = arrowParts[0].split(',')[0].trim();
+        const last = arrowParts[arrowParts.length - 1].split(',')[0].trim();
+        s = (homeRe.test(first) && !homeRe.test(last)) ? last : first;
+      }
+      return s;
+    }
+
     async function geocode(input) {
-      // Cache key is versioned (v2) so older, mis-resolved entries (e.g. a
-      // "Princeton, NJ" that cached to Indiana) are flushed automatically.
-      const key = 'wx-geo2-' + input.toLowerCase();
+      // Cache key is versioned (v3) so older multi-city failures flush.
+      const normalized = weatherCityFromInput(input);
+      const key = 'wx-geo3-' + normalized.toLowerCase();
       const cached = localStorage.getItem(key);
       if (cached) return JSON.parse(cached);
 
       // Parse "City, suffix" — suffix might be a US state code or a country.
-      let city = input.trim(), suffix = '';
-      const parts = input.split(',').map(s => s.trim());
+      let city = normalized.trim(), suffix = '';
+      const parts = normalized.split(',').map(s => s.trim());
       if (parts.length >= 2) {
         city = parts[0];
         suffix = parts.slice(1).join(', ');
@@ -878,7 +948,7 @@
       const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10&language=en&format=json`;
       const res = await fetchWithTimeout(url, 8000);
       const json = await res.json();
-      if (!json.results || !json.results.length) throw new Error(`Location not found: ${input}`);
+      if (!json.results || !json.results.length) throw new Error(`Location not found: ${normalized}`);
 
       const byPopulation = (a, b) => (b.population || 0) - (a.population || 0);
       let pick = null;
@@ -1292,6 +1362,102 @@
       renderTodos();
     });
 
+    // ── Shopping Wishlist (Firebase) — non-grocery wants ──
+    let _shopWishes = [];
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+    function linkifyNote(note) {
+      const raw = String(note || '').trim();
+      if (!raw) return '';
+      // Plain URL → clickable; otherwise escaped text
+      if (/^https?:\/\/\S+$/i.test(raw)) {
+        const safe = escapeHtml(raw);
+        return `<a href="${safe}" target="_blank" rel="noopener" style="color:#6b7a9c;word-break:break-all;">${safe}</a>`;
+      }
+      return escapeHtml(raw);
+    }
+    function renderShopWishlist() {
+      const el = document.getElementById('shop-wishlist');
+      const countEl = document.getElementById('shop-wish-count');
+      if (!el) return;
+      if (!_shopWishes.length) {
+        el.innerHTML = '<div class="shop-wish-empty">Nothing on the list yet — add something you want to buy.</div>';
+        if (countEl) countEl.textContent = '';
+        return;
+      }
+      const open = _shopWishes.filter(w => !w.done).length;
+      const bought = _shopWishes.length - open;
+      // Open items first, then bought
+      const order = _shopWishes
+        .map((w, i) => ({ w, i }))
+        .sort((a, b) => (a.w.done === b.w.done ? 0 : a.w.done ? 1 : -1));
+      let html = '<ul class="shop-wish-list">';
+      order.forEach(({ w, i }) => {
+        const noteHtml = w.note
+          ? `<span class="shop-wish-note">${linkifyNote(w.note)}</span>`
+          : '';
+        html += `<li>
+          <div class="todo-cb ${w.done ? 'checked' : ''}" onclick="toggleShopWish(${i})" title="Mark bought">${w.done ? '\u2713' : ''}</div>
+          <div class="shop-wish-main">
+            <span class="todo-text ${w.done ? 'done' : ''}">${escapeHtml(w.text)}</span>
+            ${noteHtml}
+          </div>
+          <span class="todo-del" onclick="deleteShopWish(${i})" title="Remove">\u2715</span>
+        </li>`;
+      });
+      html += '</ul>';
+      el.innerHTML = html;
+      if (countEl) {
+        countEl.textContent = bought
+          ? `${open} open · ${bought} bought`
+          : `${open} item${open === 1 ? '' : 's'}`;
+      }
+    }
+    function addShopWish() {
+      const itemEl = document.getElementById('shop-wish-item');
+      const noteEl = document.getElementById('shop-wish-note');
+      const text = (itemEl && itemEl.value || '').trim();
+      if (!text) return;
+      const note = (noteEl && noteEl.value || '').trim();
+      _shopWishes.push({ text, note, done: false, added: new Date().toISOString().slice(0, 10) });
+      if (itemEl) itemEl.value = '';
+      if (noteEl) noteEl.value = '';
+      fbSet('shoppingWishlist', _shopWishes);
+      if (itemEl) itemEl.focus();
+    }
+    function toggleShopWish(i) {
+      if (!_shopWishes[i]) return;
+      _shopWishes[i].done = !_shopWishes[i].done;
+      fbSet('shoppingWishlist', _shopWishes);
+    }
+    function deleteShopWish(i) {
+      const w = _shopWishes[i];
+      if (!w) return;
+      if (!confirm(`Remove "${w.text}" from wishlist?`)) return;
+      _shopWishes.splice(i, 1);
+      fbSet('shoppingWishlist', _shopWishes);
+    }
+    function clearBoughtShopWishes() {
+      const n = _shopWishes.filter(w => w.done).length;
+      if (!n) return;
+      if (!confirm(`Remove ${n} bought item${n === 1 ? '' : 's'}?`)) return;
+      _shopWishes = _shopWishes.filter(w => !w.done);
+      fbSet('shoppingWishlist', _shopWishes);
+    }
+    fbGet('shoppingWishlist', data => {
+      if (data === null) {
+        _shopWishes = [];
+        // Do not seed placeholder items — empty is fine
+      } else {
+        _shopWishes = Array.isArray(data) ? data : Object.values(data || {});
+        _shopWishes = _shopWishes.filter(w => w && typeof w.text === 'string');
+      }
+      renderShopWishlist();
+    });
+
     // ── Upcoming Events (holidays, etc.) ──
     function renderUpcoming() {
       const events = window.UPCOMING_EVENTS || [];
@@ -1696,30 +1862,39 @@
       } catch(e) { document.getElementById('news-sections').innerHTML = '<p style="color:#b8a48e">Unable to load news.</p>'; }
     }
 
-    // ── TV Watchlist (Firebase) ──
+    // ── TV Watchlist (built-in suggestions; watched state + custom adds live in Firebase) ──
+    // Refreshed 2026-08-14 — critic/buzz picks still worth a look if not already on your custom list.
     const WATCHLIST = [
-      {id:'love-story',title:'Love Story: JFK Jr. & Carolyn Bessette',where:'FX / Hulu',genre:'Biographical Drama',rating:'RT 81%',score:81},
-      {id:'hunting-wives',title:'The Hunting Wives',where:'Netflix',genre:'Drama / Thriller',rating:'RT 80%',score:80},
-      {id:'tokyo-vice',title:'Tokyo Vice',where:'Max (HBO)',genre:'Crime Drama',rating:'RT 90%',score:90},
-      {id:'degrassi',title:'Degrassi',where:'Paramount+ / Prime',genre:'Teen Drama',rating:'IMDb 7.6',score:76},
-      {id:'reggie-dinkins',title:'The Fall and Rise of Reggie Dinkins',where:'NBC / Peacock',genre:'Sports Sitcom',rating:'RT 100%',score:100},
-      {id:'f1-movie',title:'F1: The Movie',where:'Apple TV+',genre:'Sports Drama',rating:'RT 82%',score:82},
+      {id:'dept-q',title:'Dept. Q',where:'Netflix',genre:'Crime / Mystery',rating:'TVMaze 8.1',score:81},
+      {id:'slow-horses',title:'Slow Horses',where:'Apple TV+',genre:'Spy Thriller',rating:'TVMaze 8.1',score:81},
+      {id:'severance',title:'Severance',where:'Apple TV+',genre:'Sci-Fi / Mystery',rating:'TVMaze 7.7',score:77},
+      {id:'murderbot',title:'Murderbot',where:'Apple TV+',genre:'Sci-Fi Comedy',rating:'TVMaze 7.4',score:74},
+      {id:'widows-bay',title:'Widow\'s Bay',where:'Apple TV+',genre:'Comedy / Horror',rating:'TVMaze 7.7',score:77},
+      {id:'your-friends-neighbors',title:'Your Friends & Neighbors',where:'Apple TV+',genre:'Drama',rating:'TVMaze 7.1',score:71},
+      {id:'presumed-innocent',title:'Presumed Innocent',where:'Apple TV+',genre:'Legal Thriller',rating:'TVMaze 7.5',score:75},
+      {id:'day-of-jackal',title:'The Day of the Jackal',where:'Peacock / Sky',genre:'Thriller',rating:'TVMaze 8.0',score:80},
+      {id:'mobland',title:'MobLand',where:'Paramount+',genre:'Crime Drama',rating:'TVMaze 8.1',score:81},
+      {id:'reacher',title:'Reacher',where:'Prime Video',genre:'Action Thriller',rating:'TVMaze 8.1',score:81},
+      {id:'fallout',title:'Fallout',where:'Prime Video',genre:'Sci-Fi / Adventure',rating:'TVMaze 7.9',score:79},
+      {id:'sterling-point',title:'Sterling Point',where:'Prime Video',genre:'Drama',rating:'TVMaze 8.1',score:81},
+      {id:'bait',title:'Bait',where:'Prime Video',genre:'Comedy Drama',rating:'Critics\' pick 2026',score:85},
+      {id:'task',title:'Task',where:'HBO / Max',genre:'Crime Drama',rating:'TVMaze 7.4',score:74},
+      {id:'knight-seven',title:'A Knight of the Seven Kingdoms',where:'HBO / Max',genre:'Fantasy',rating:'TVMaze 8.2',score:82},
+      {id:'industry',title:'Industry',where:'HBO / Max',genre:'Drama',rating:'TVMaze 6.4',score:64},
+      {id:'black-doves',title:'Black Doves',where:'Netflix',genre:'Spy Thriller',rating:'TVMaze 7.1',score:71},
+      {id:'adolescence',title:'Adolescence',where:'Netflix',genre:'Crime Drama',rating:'TVMaze 7.7',score:77},
+      {id:'residence',title:'The Residence',where:'Netflix',genre:'Comedy Mystery',rating:'TVMaze 7.2',score:72},
+      {id:'paradise',title:'Paradise',where:'Hulu / Disney+',genre:'Sci-Fi Thriller',rating:'TVMaze 7.4',score:74},
+      {id:'shogun',title:'Shōgun',where:'Hulu / Disney+',genre:'Historical Drama',rating:'TVMaze 8.5',score:85},
+      {id:'andor',title:'Andor',where:'Disney+',genre:'Sci-Fi / Espionage',rating:'TVMaze 8.0',score:80},
+      {id:'dark-winds',title:'Dark Winds',where:'AMC+ / Netflix',genre:'Crime Drama',rating:'TVMaze 7.5',score:75},
       {id:'karen-pirie',title:'Karen Pirie',where:'BritBox',genre:'Crime / Mystery',rating:'RT 91%',score:91},
       {id:'ludwig',title:'Ludwig',where:'BritBox',genre:'Comedy / Mystery',rating:'RT 97%',score:97},
-      {id:'the-burbs',title:"The 'Burbs",where:'Rent/buy',genre:'Comedy (Film)',rating:'IMDb 7.0',score:70},
-      {id:'dark-winds',title:'Dark Winds',where:'AMC+ / Netflix',genre:'Crime Drama',rating:'RT 100%',score:100},
-      {id:'stranger-things',title:'Stranger Things',where:'Netflix',genre:'Sci-Fi / Horror',rating:'IMDb 8.7',score:87},
-      {id:'the-madison',title:'The Madison',where:'Paramount+',genre:'Family Drama',rating:'IMDb 8.0',score:80},
-      {id:'ladies-london',title:'Ladies of London',where:'Peacock',genre:'Reality',rating:'IMDb 7.4',score:74},
-      {id:'scarpetta',title:'Scarpetta',where:'Prime Video',genre:'Crime Drama',rating:'RT 58%',score:58},
-      {id:'paradise',title:'Paradise',where:'Hulu / Disney+',genre:'Sci-Fi Thriller',rating:'RT 90%',score:90},
-      {id:'scrubs',title:'Scrubs',where:'Hulu / Disney+',genre:'Medical Comedy',rating:'IMDb 8.3',score:83},
-      {id:'jury-duty',title:'Jury Duty',where:'Prime Video',genre:'Mockumentary Comedy',rating:'RT 94%',score:94},
-      {id:'other-bennet',title:'The Other Bennet Sister',where:'BritBox (May 6)',genre:'Period Drama',rating:'RT 92%',score:92},
-      {id:'lord-flies',title:'Lord of the Flies',where:'Netflix (May 4)',genre:'Drama / Thriller',rating:'RT 91%',score:91},
-      {id:'his-hers',title:'His & Hers',where:'Netflix',genre:'Psychological Thriller',rating:'IMDb 7.2',score:72},
-      {id:'copenhagen',title:'The Copenhagen Test',where:'Peacock',genre:'Sci-Fi Spy Thriller',rating:'RT 71%',score:71},
+      {id:'riot-women',title:'Riot Women',where:'BritBox / BBC',genre:'Drama',rating:'TVMaze 6.9',score:69},
+      {id:'tokyo-vice',title:'Tokyo Vice',where:'Max (HBO)',genre:'Crime Drama',rating:'RT 90%',score:90},
       {id:'criminal-record',title:'Criminal Record',where:'Apple TV+',genre:'Crime Drama',rating:'RT 86%',score:86},
+      {id:'jury-duty',title:'Jury Duty',where:'Prime Video',genre:'Mockumentary Comedy',rating:'RT 94%',score:94},
+      {id:'dying-for-sex',title:'Dying for Sex',where:'Hulu',genre:'Drama / Comedy',rating:'TVMaze 7.2',score:72},
     ];
 
     let _watchedShows = {};

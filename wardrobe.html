@@ -419,11 +419,16 @@
 
     let outfitMap = {};
     let _itemOverrides = {}; // Firebase overrides for category/subcategory
+    // Must be declared before rebuildOutfitMap() / renderCatalogue() run — otherwise
+    // temporal-dead-zone on `let` crashes the whole script and the grid stays blank.
+    let _itemOrder = {};
+    let _hiddenItems = {};
 
-    // Build outfit map from THREE reliable Firebase sources only:
-    // 1. outfitEdits (wardrobe items added via editor)
+    // Build outfit map from three sources:
+    // 0. wardrobe-outfits.js baked map (slide piece → outfit IDs) — primary
+    // 1. outfitEdits (pieces added via outfit editor)
     // 2. wardrobeOutfitLinks (manual links typed by user)
-    // No more unreliable fingerprinting
+    // Firebase overlays the baked map; it does not replace it.
 
     let _outfitMapReady = false;
     function rebuildOutfitMap() {
@@ -431,12 +436,50 @@
       _outfitMapReady = true;
 
       function addLink(file, slide) {
-        // Add both jpg and png variants
-        const variants = [file, file.replace('.jpg','.png'), file.replace('.png','.jpg')];
+        if (!file || typeof file !== 'string' || file.startsWith('data:')) return;
+        // Strip path prefixes so keys match wardrobe item .file names
+        let name = file
+          .replace(/^\.\.\//, '')
+          .replace(/^wardrobe-thumbs\//, '')
+          .replace(/^wardrobe-images\//, '')
+          .replace(/^outfit-images\//, '');
+        if (!name || name.includes('/')) {
+          const parts = name.split('/');
+          name = parts[parts.length - 1] || name;
+        }
+        if (!name) return;
+        // piece_*.png hashes are display-only crops — real inventory id is _origFile
+        if (name.startsWith('piece_')) return;
+        const slideNum = parseInt(slide, 10);
+        if (isNaN(slideNum)) return;
+        // Register jpg/png/webp + extensionless id (manual links use C027 / s07_007_png)
+        const variants = new Set([name]);
+        variants.add(name.replace(/\.jpg$/i, '.png'));
+        variants.add(name.replace(/\.png$/i, '.jpg'));
+        variants.add(name.replace(/\.webp$/i, '.png'));
+        variants.add(name.replace(/\.jpeg$/i, '.jpg'));
+        const bare = name.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+        if (bare && bare !== name) variants.add(bare);
+        // Firebase keys sometimes use s07_007_png
+        variants.add(bare + '_png');
+        variants.add(bare + '_jpg');
+        if (name.startsWith('outfit_')) {
+          const stripped = name.slice(7);
+          variants.add(stripped);
+          variants.add(stripped.replace(/\.jpg$/i, '.png'));
+          variants.add(stripped.replace(/\.png$/i, '.jpg'));
+        }
         variants.forEach(v => {
+          if (!v) return;
           if (!outfitMap[v]) outfitMap[v] = [];
-          if (!outfitMap[v].includes(slide)) outfitMap[v].push(slide);
+          if (!outfitMap[v].includes(slideNum)) outfitMap[v].push(slideNum);
         });
+      }
+
+      // Source 0: baked map from wardrobe-outfits.js (loaded as window.WARDROBE_OUTFIT_MAP)
+      const baked = window.WARDROBE_OUTFIT_MAP || {};
+      for (const [file, slides] of Object.entries(baked)) {
+        if (Array.isArray(slides)) slides.forEach(s => addLink(file, s));
       }
 
       // Source 1: wardrobe items added to outfits via editor
@@ -444,21 +487,10 @@
         const entries = Array.isArray(_outfitEditsData) ? _outfitEditsData.map((v,i) => [i,v]) : Object.entries(_outfitEditsData);
         for (const [slideKey, edit] of entries) {
           if (!edit || !edit.layout) continue;
-          const slide = parseInt(slideKey);
+          const slide = parseInt(slideKey, 10);
           for (const item of edit.layout) {
-            const f = item.file || '';
-            if (f.includes('wardrobe-thumbs/')) {
-              const wFile = f.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
-              addLink(wFile, slide);
-            }
-            // Also check _origFile for cropped items (data URLs)
-            if (item._origFile) {
-              let orig = item._origFile;
-              if (orig.includes('wardrobe-thumbs/')) {
-                orig = orig.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', '');
-              }
-              addLink(orig, slide);
-            }
+            if (item.file) addLink(item.file, slide);
+            if (item._origFile) addLink(item._origFile, slide);
           }
         }
       }
@@ -479,6 +511,9 @@
 
     let _outfitEditsData = null;
     let _manualOutfitLinks = null;
+
+    // Seed from baked wardrobe-outfits.js immediately so badges work before Firebase responds
+    rebuildOutfitMap();
 
     db.ref('outfitEdits').on('value', snap => {
       _outfitEditsData = snap.val() || {};
@@ -525,6 +560,35 @@
       return list;
     }
 
+    // Resolve outfit slides for a wardrobe item across filename variants
+    // (png/jpg, extensionless C027, Firebase s07_007_png keys).
+    function slidesForItem(item) {
+      if (!item) return [];
+      const file = item.file || '';
+      const id = item.id || '';
+      const bare = file.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+      const keys = [
+        file,
+        file.replace(/\.png$/i, '.jpg'),
+        file.replace(/\.jpg$/i, '.png'),
+        bare,
+        bare + '_png',
+        bare + '_jpg',
+        id,
+        id.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg'),
+      ];
+      const seen = new Set();
+      const out = [];
+      keys.forEach(k => {
+        const slides = outfitMap[k];
+        if (!Array.isArray(slides)) return;
+        slides.forEach(s => {
+          if (!seen.has(s)) { seen.add(s); out.push(s); }
+        });
+      });
+      return out;
+    }
+
     function renderCatalogue() {
       const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
       const hiddenKey = (id) => id.replace(/[.#$/\[\]]/g, '_');
@@ -567,7 +631,7 @@
           gridHtml += `<div class="cat-subheader">${i.subcategory}</div>`;
         }
 
-        const outfitSlides = outfitMap[i.file] || [];
+        const outfitSlides = slidesForItem(i);
         const outfitBadge = outfitSlides.length > 0
           ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>
              <div style="font-size:0.55rem;color:#b8a48e;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">edit links</div>`
@@ -699,7 +763,6 @@
 
     // Drag to reorder
     let _dragItemId = null;
-    let _itemOrder = {};
 
     db.ref('wardrobeOrder').on('value', snap => {
       _itemOrder = snap.val() || {};
@@ -707,7 +770,6 @@
     });
 
     // Hidden items (soft-delete for non-custom items)
-    let _hiddenItems = {};
     let _showHidden = false;
     db.ref('wardrobeHidden').on('value', snap => {
       _hiddenItems = snap.val() || {};
@@ -813,7 +875,8 @@
     }
 
     function viewOutfitsForItem(file) {
-      const slides = outfitMap[file] || [];
+      const item = items.find(it => it.file === file) || { file };
+      const slides = slidesForItem(item);
       if (!slides.length) return;
       // Navigate to outfit gallery filtered by these slides
       const param = encodeURIComponent(slides.join(','));
@@ -1691,31 +1754,45 @@
       renderCatalogue();
     }
 
-    // Load custom items from Firebase. Idempotent so finishSave's local splice
-    // (which positions a new item near matching siblings) isn't duplicated when
-    // Firebase fires this listener synchronously after the same set().
+    // Load custom items from Firebase. Images live on disk (wardrobe-thumbs/)
+    // under data.file — do NOT pull multi‑MB base64 from Firebase (that used
+    // to freeze the page at ~40 MB). Optional data.image is only for brand-new
+    // items that have not been written to disk yet.
     db.ref('wardrobeCustomItems').on('value', snap => {
       const custom = snap.val() || {};
-      // Drop local custom items that no longer exist in Firebase
       for (let i = items.length - 1; i >= 0; i--) {
         const id = items[i].id;
         if (id && (id.startsWith('custom_') || /^C\d+$/.test(id)) && !(id in custom)) {
           items.splice(i, 1);
         }
       }
-      // Add Firebase items not already present locally
       const existingIds = new Set(items.map(it => it && it.id).filter(Boolean));
       for (const [id, data] of Object.entries(custom)) {
-        if (existingIds.has(id)) continue;
-        items.push({
+        if (existingIds.has(id)) {
+          // Keep metadata fresh; prefer disk file over stale in-memory base64
+          const it = items.find(x => x.id === id);
+          if (it && data) {
+            if (data.file) it.file = data.file;
+            if (data.category) it.category = data.category;
+            if (data.subcategory) it.subcategory = data.subcategory;
+            if (data.file && !String(data.image || '').startsWith('data:')) delete it._customImage;
+          }
+          continue;
+        }
+        const file = data.file || id;
+        const entry = {
           id: id,
-          file: data.file || id,
-          category: data.category,
-          subcategory: data.subcategory,
+          file: file,
+          category: data.category || 'Accessories',
+          subcategory: data.subcategory || '',
           labels: data.labels || [],
           colors: data.colors || [],
-          _customImage: data.image
-        });
+        };
+        // Only keep inline base64 if there is no on-disk file name yet
+        if (data.image && String(data.image).startsWith('data:') && (!data.file || data.file === id)) {
+          entry._customImage = data.image;
+        }
+        items.push(entry);
       }
       renderCatFilters();
       renderCatalogue();

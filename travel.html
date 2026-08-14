@@ -626,6 +626,34 @@
       return best || results[0];
     }
 
+    // TripIt multi-city titles look like "Paris → Cologne" or
+    // "Bogotá → Cartagena → Medellín". Open-Meteo geocoding returns zero
+    // results for the full string — always pass a single city name.
+    const HOME_CITY_RE = /^(newark|ewr|princeton|home)\b/i;
+    function splitDestinationCities(dest) {
+      return String(dest || '')
+        .split(/\s*→\s*|\s+to\s+/i)
+        .map(s => s.split(',')[0].trim())
+        .filter(Boolean);
+    }
+    function primaryWeatherCity(dest) {
+      const parts = splitDestinationCities(dest);
+      if (!parts.length) return String(dest || '').split(',')[0].trim();
+      if (parts.length === 1) return parts[0];
+      const first = parts[0], last = parts[parts.length - 1];
+      // "Newark → London" → London; "Paris → Cologne" → Paris (first stay)
+      if (HOME_CITY_RE.test(first) && !HOME_CITY_RE.test(last)) return last;
+      if (HOME_CITY_RE.test(last) && !HOME_CITY_RE.test(first)) return first;
+      return first;
+    }
+    function weatherLabelFor(dest) {
+      // Keep full multi-city label for display when we only geocode one city
+      const city = primaryWeatherCity(dest);
+      const full = String(dest || '').trim();
+      if (full.includes('→') && city && full !== city) return `${city} (of ${full})`;
+      return full || city;
+    }
+
     async function fetchWeather(trip) {
       const container = document.getElementById('weatherContainer');
       container.innerHTML = '<div class="weather-loading">Loading weather...</div>';
@@ -637,12 +665,17 @@
       }
 
       try {
-        const city = trip.destination.split(',')[0].trim();
+        const geoQuery = primaryWeatherCity(trip.destination);
+        const geoLabel = weatherLabelFor(trip.destination);
         // 1. Geocode — fetch up to 10 matches, then pick the one that best
         //    matches the destination's state/country qualifier.
-        const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10`).then(r => r.json());
-        if (!geo.results || !geo.results.length) throw new Error('city not found');
-        const match = pickBestGeoMatch(geo.results, trip.destination);
+        const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(geoQuery)}&count=10`).then(r => r.json());
+        if (!geo.results || !geo.results.length) throw new Error('city not found: ' + geoQuery);
+        // Prefer qualifier from original destination when it looks like "City, Country"
+        const matchDest = (trip.destination.includes(',') && !trip.destination.includes('→'))
+          ? trip.destination
+          : geoQuery;
+        const match = pickBestGeoMatch(geo.results, matchDest);
         if (!match) throw new Error('city not matched');
         const { latitude, longitude } = match;
 
@@ -704,9 +737,13 @@
           });
         }
 
-        renderWeather(tripDays, dailyMap, farOut.length > 0);
+        // Label which city we geocoded when the trip title is multi-city
+        const label = (trip.destination && trip.destination.includes('→')) ? geoLabel : null;
+        renderWeather(tripDays, dailyMap, farOut.length > 0, label);
       } catch (e) {
-        container.innerHTML = '<div class="weather-loading">Weather unavailable</div>';
+        container.innerHTML = '<div class="weather-loading">Weather unavailable' +
+          (e && e.message ? ` <span style="font-weight:400;color:#b8a48e;">(${e.message})</span>` : '') +
+          '</div>';
       }
     }
 
@@ -716,10 +753,10 @@
       let combinedHtml = '';
       let anyTypical = false;
       for (const seg of segments) {
-        const city = (seg.city || '').split(',')[0].trim();
+        const city = primaryWeatherCity(seg.city || '');
         try {
           const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10`).then(r => r.json());
-          if (!geo.results || !geo.results.length) throw new Error('city not found');
+          if (!geo.results || !geo.results.length) throw new Error('city not found: ' + city);
           const match = pickBestGeoMatch(geo.results, seg.city);
           if (!match) throw new Error('city not matched');
           const { latitude, longitude } = match;
@@ -794,7 +831,7 @@
       container.innerHTML = combinedHtml + note;
     }
 
-    function renderWeather(tripDays, dailyMap, hasTypical) {
+    function renderWeather(tripDays, dailyMap, hasTypical, cityLabel) {
       const container = document.getElementById('weatherContainer');
       const html = tripDays.map(s => {
         const d = dailyMap[s];
@@ -813,10 +850,13 @@
           ${subline}
         </div>`;
       }).join('');
+      const cityNote = cityLabel
+        ? `<div style="font-size:0.7rem;color:#6b5d4d;margin:0 0 0.35rem 0;">Forecast for <strong>${cityLabel}</strong></div>`
+        : '';
       const note = hasTypical
         ? `<div style="font-size:0.7rem;color:#9c8b76;margin-top:0.5rem;">Days marked <em>typical</em> show last year's actual weather for the same dates \u2014 useful as a rough estimate until the trip is closer.</div>`
         : '';
-      container.innerHTML = html ? `<div class="weather-grid">${html}</div>${note}` : '<div class="weather-loading">No forecast available for these dates</div>';
+      container.innerHTML = html ? `${cityNote}<div class="weather-grid">${html}</div>${note}` : '<div class="weather-loading">No forecast available for these dates</div>';
     }
 
     // --- Trip Notes ---
