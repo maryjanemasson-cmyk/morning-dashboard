@@ -486,47 +486,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 35,
+  "unreadCount": 34,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 14 Aug 2026"
+      "sender": "Etsy",
+      "subject": "Four shops worth knowing this summer \ud83e\udde1"
     },
     {
-      "sender": "$0.52 per share via Evan Brooks from TRC",
-      "subject": "Apple just sent a powerful signal to investors"
+      "sender": "Musk's home robot - Power Field Notes",
+      "subject": "\ud83e\udd16 The $25,000 robot is almost here"
+    },
+    {
+      "sender": "Jose Rodriguez",
+      "subject": "Fall Registrations are open."
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "25% Off Styles To See Near And Far"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 8/14 is ready to view"
+    },
+    {
+      "sender": "maryjanemasson-cmyk",
+      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (58513ca)"
+    },
+    {
+      "sender": "Christian Hinrichs",
+      "subject": "Re: Clarity Gate 2.0 skill"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Apple Services: $9.99\u00a0USD"
     },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "Grand Hyatt",
-      "subject": "Reminder of Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
-    },
-    {
-      "sender": "Holafly",
-      "subject": "Mary, earn up to EUR \u20ac100"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $12,209.95 deposit was credited to your account."
-    },
-    {
-      "sender": "Synchrony Offers",
-      "subject": "Mary, travel savings are knocking on your door"
-    },
-    {
-      "sender": "Christian Hinrichs",
-      "subject": "Clarity Gate skill"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "25% Off Your Pair For Everywhere"
     }
   ],
   "items": [
