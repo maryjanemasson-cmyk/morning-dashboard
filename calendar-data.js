@@ -540,6 +540,22 @@ window.EMAIL_DATA = {
   "unreadCount": 24,
   "threads": [
     {
+      "sender": "Amazon.com",
+      "subject": "Important Updates to Our Terms & Conditions"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Not Your Average Fall Wreath"
+    },
+    {
+      "sender": "Dani B",
+      "subject": "Cancel Confirmation"
+    },
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Transaction Receipt"
+    },
+    {
       "sender": "MyLowe's Rewards",
       "subject": "Last chance to enter the sweepstakes\u2757"
     },
@@ -562,22 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "D\u00e9 Rococo",
       "subject": "Your Refined Paradise Wardrobe"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations"
-    },
-    {
-      "sender": "On Behalf of Acxiom LLC",
-      "subject": "(Request ID: XF3GVDVYG4) Request logged successfully"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "Just in: Balenciaga, Jacquemus & more"
-    },
-    {
-      "sender": "Optery",
-      "subject": "Last chance to protect your data with 20% off Optery"
     }
   ],
   "items": [
