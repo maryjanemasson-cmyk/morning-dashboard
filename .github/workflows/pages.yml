@@ -15,6 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # GitHub Pages artifacts hard-cap at 1 GB. outfit-images (~0.5–1 GB) is only
+      # needed for the local outfit editor/gallery, not the morning PWA. Drop it
+      # (and local junk) so wardrobe thumbs + full catalogue images still publish.
+      - name: Trim deploy tree under 1 GB
+        run: |
+          rm -rf outfit-images backups old-versions .git
+          du -sh . wardrobe-images wardrobe-thumbs 2>/dev/null || true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
