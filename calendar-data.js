@@ -316,6 +316,46 @@ window.TRAVEL_DATA = [
     ]
   },
   {
+    "destination": "Newark \u2192 Boston",
+    "start": "2026-09-14",
+    "end": "2026-09-16",
+    "icon": "\u2708\ufe0f",
+    "items": [
+      {
+        "summary": "UA593 EWR to BOS",
+        "location": "Newark (EWR)",
+        "description": "",
+        "start": "2026-09-14T11:00:00+00:00",
+        "end": "2026-09-14T12:17:00+00:00",
+        "type": "flight"
+      },
+      {
+        "summary": "Check-in: Courtyard by Marriott Boston Cambridge",
+        "location": "777 Memorial Dr, Cambridge, MA, 02139",
+        "description": "",
+        "start": "2026-09-14T19:00:00+00:00",
+        "end": "2026-09-14T20:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "Check-out: Courtyard by Marriott Boston Cambridge",
+        "location": "777 Memorial Dr, Cambridge, MA, 02139",
+        "description": "",
+        "start": "2026-09-16T15:00:00+00:00",
+        "end": "2026-09-16T16:00:00+00:00",
+        "type": "hotel"
+      },
+      {
+        "summary": "UA2104 BOS to EWR",
+        "location": "Boston (BOS)",
+        "description": "",
+        "start": "2026-09-16T16:41:00+00:00",
+        "end": "2026-09-16T18:08:00+00:00",
+        "type": "flight"
+      }
+    ]
+  },
+  {
     "destination": "Paris, France",
     "start": "2026-09-20",
     "end": "2026-09-25",
@@ -489,44 +529,44 @@ window.EMAIL_DATA = {
   "unreadCount": 34,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Four shops worth knowing this summer \ud83e\udde1"
+      "sender": "Mission & Data on behalf of E3n",
+      "subject": "Final chance to share about your Private / Independent School Admission Experience - Tell us all about it!"
     },
     {
-      "sender": "Musk's home robot - Power Field Notes",
-      "subject": "\ud83e\udd16 The $25,000 robot is almost here"
+      "sender": "Eleanor Dath",
+      "subject": "RECEIPT: Family Trip to Columbia"
     },
     {
-      "sender": "Jose Rodriguez",
-      "subject": "Fall Registrations are open."
+      "sender": "Eleanor Dath",
+      "subject": "Family Trip to Columbia"
     },
     {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "50% OFF to make the most of summer at home \ud83d\ude0d"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "25% Off Styles To See Near And Far"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 8/14 is ready to view"
+      "sender": "D\u00e9 Rococo",
+      "subject": "Your Refined Paradise Wardrobe"
     },
     {
-      "sender": "maryjanemasson-cmyk",
-      "subject": "[maryjanemasson-cmyk/morning-dashboard] Run failed: Deploy to GitHub Pages - main (58513ca)"
+      "sender": "On Behalf of Interpublic",
+      "subject": "Acxiom LLC \u2013 Right to Delete - Confirmation"
     },
     {
-      "sender": "Christian Hinrichs",
-      "subject": "Re: Clarity Gate 2.0 skill"
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations"
     },
     {
-      "sender": "PayPal",
-      "subject": "Apple Services: $9.99\u00a0USD"
+      "sender": "COS",
+      "subject": "What to wear next"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+      "sender": "On Behalf of Acxiom LLC",
+      "subject": "(Request ID: XF3GVDVYG4) Request logged successfully"
     }
   ],
   "items": [
@@ -539,7 +579,7 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-15|10:00|lagree - foundations",
-      "id": "19ff8b8419df284b",
+      "id": "1a00094168033481",
       "sender": "FORM BY TWO"
     },
     {
