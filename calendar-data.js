@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "5"
   },
   {
+    "summary": "LAGREE - ALL LEVELS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/1a0017e2d1213e67",
+    "startTime": "2026-08-19T17:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-19T17:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Stay at Grand Hyatt Bogot\u00e1",
     "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
@@ -529,28 +540,32 @@ window.EMAIL_DATA = {
   "unreadCount": 24,
   "threads": [
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "50% OFF to make the most of summer at home \ud83d\ude0d"
+      "sender": "MyLowe's Rewards",
+      "subject": "Last chance to enter the sweepstakes\u2757"
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Things are heating up"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
+    },
+    {
+      "sender": "Orangetheory",
+      "subject": "We have received your response for Membership Cancellation Request"
+    },
+    {
+      "sender": "Optum Rx",
+      "subject": "\ud83d\udc8a We have found savings for you"
     },
     {
       "sender": "D\u00e9 Rococo",
       "subject": "Your Refined Paradise Wardrobe"
     },
     {
-      "sender": "On Behalf of Interpublic",
-      "subject": "Acxiom LLC \u2013 Right to Delete - Confirmation"
-    },
-    {
       "sender": "FORM BY TWO",
       "subject": "Class Reminder for Lagree - Foundations"
-    },
-    {
-      "sender": "COS",
-      "subject": "What to wear next"
     },
     {
       "sender": "On Behalf of Acxiom LLC",
@@ -563,10 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Optery",
       "subject": "Last chance to protect your data with 20% off Optery"
-    },
-    {
-      "sender": "Musk's home robot - Power Field Notes",
-      "subject": "\ud83e\udd16 The $25,000 robot is almost here"
     }
   ],
   "items": [
@@ -592,6 +603,18 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
       "id": "19ff8b8737a381f0",
+      "sender": "FORM BY TWO"
+    },
+    {
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-19",
+      "time": "17:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
+      "id": "1a0017e2d1213e67",
       "sender": "FORM BY TWO"
     }
   ]
