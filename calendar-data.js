@@ -540,16 +540,16 @@ window.EMAIL_DATA = {
   "unreadCount": 24,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Important Updates to Our Terms & Conditions"
+      "sender": "MyLowe's Rewards",
+      "subject": "The upcoming MrBeast Kids Workshop is on us \ud83d\udc99"
     },
     {
-      "sender": "Design Decor",
-      "subject": "Not Your Average Fall Wreath"
+      "sender": "Trump\u2019s Final Gambit via Evan Brooks from TRC",
+      "subject": "Trump\u2019s secret China deal"
     },
     {
-      "sender": "Dani B",
-      "subject": "Cancel Confirmation"
+      "sender": "Cineplex",
+      "subject": "\ud83d\udc3e Dino-sized fun and an unexpected mystery take the screen"
     },
     {
       "sender": "classmanager@nassautennis.net",
