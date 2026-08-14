@@ -486,8 +486,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 35,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 14 Aug 2026"
+    },
+    {
+      "sender": "$0.52 per share via Evan Brooks from TRC",
+      "subject": "Apple just sent a powerful signal to investors"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+    },
     {
       "sender": "Grand Hyatt",
       "subject": "Reminder of Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
@@ -515,18 +527,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LOOK OPTIC",
       "subject": "25% Off Your Pair For Everywhere"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Don't Wait, Christian: You can still earn 75,000 Membership Rewards\u00ae points. Learn More"
-    },
-    {
-      "sender": "Nest Home Report",
-      "subject": "Nest July Home Report for Home"
-    },
-    {
-      "sender": "Axia Women's Health",
-      "subject": "What's Up, Down There: Breast Changes and What's Normal + More"
     }
   ],
   "items": [
