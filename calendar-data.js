@@ -526,20 +526,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 34,
+  "unreadCount": 24,
   "threads": [
-    {
-      "sender": "Mission & Data on behalf of E3n",
-      "subject": "Final chance to share about your Private / Independent School Admission Experience - Tell us all about it!"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "RECEIPT: Family Trip to Columbia"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "Family Trip to Columbia"
-    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "50% OFF to make the most of summer at home \ud83d\ude0d"
@@ -567,6 +555,18 @@ window.EMAIL_DATA = {
     {
       "sender": "On Behalf of Acxiom LLC",
       "subject": "(Request ID: XF3GVDVYG4) Request logged successfully"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "Just in: Balenciaga, Jacquemus & more"
+    },
+    {
+      "sender": "Optery",
+      "subject": "Last chance to protect your data with 20% off Optery"
+    },
+    {
+      "sender": "Musk's home robot - Power Field Notes",
+      "subject": "\ud83e\udd16 The $25,000 robot is almost here"
     }
   ],
   "items": [
