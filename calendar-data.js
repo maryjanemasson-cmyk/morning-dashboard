@@ -559,12 +559,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 20,
   "threads": [
-    {
-      "sender": "MICHELIN Guide",
-      "subject": "Restaurants in the World's Most Unexpected Places"
-    },
     {
       "sender": "WAT THE BRAND",
       "subject": "The Blake Jeans, Styled Four Ways."
@@ -600,6 +596,10 @@ window.EMAIL_DATA = {
     {
       "sender": "MyLowe's Rewards",
       "subject": "Last chance to enter the sweepstakes\u2757"
+    },
+    {
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Things are heating up"
     }
   ],
   "items": [
