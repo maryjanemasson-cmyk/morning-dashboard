@@ -559,47 +559,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Power Field Notes",
-      "subject": "Musk promises \"universal high income.\" He's not wrong."
+      "sender": "Supply chain strike - Power Field Notes",
+      "subject": "Breaking: Ukraine Hits Russia's Amazon \u2014 Eight Regions Burning"
     },
     {
-      "sender": "Design Decor",
-      "subject": "Autumn decor, elevated."
+      "sender": "Bake Time",
+      "subject": "Plum torte, peach pie and more stone fruit bakes"
     },
     {
-      "sender": "BOSS",
-      "subject": "Rediscover working style"
+      "sender": "Elon\u2019s next big move via Evan Brooks from TRC",
+      "subject": "Tesla\u2019s most dangerous bet goes live soon"
+    },
+    {
+      "sender": "On Behalf of Acxiom LLC",
+      "subject": "(Request ID: N8MYF6GB6V) Request logged successfully"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Big Bulkhead Dungaree"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "Leave the Switching Behind"
     },
     {
       "sender": "A BATHING APE\u00ae",
       "subject": "PICKED FOR YOU"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 8/15 is ready to view"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 15 Aug 2026"
-    },
-    {
       "sender": "Unroll.Me",
       "subject": "\u2709\ufe0f Today's Rollup"
     },
     {
-      "sender": "Etsy Conversations",
-      "subject": "You have unread messages! \ud83d\udc8c"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Planning Your Dashboard Design: How to Select Visuals That Drive Decisions, Not Just Discussions | Pierre DeBois"
-    },
-    {
       "sender": "WAT THE BRAND",
       "subject": "The Blake Jeans, Styled Four Ways."
+    },
+    {
+      "sender": "Verizon-Notification@ecrm-mail.verizon.com",
+      "subject": "Protecting your privacy is important to us."
     }
   ],
   "items": [
