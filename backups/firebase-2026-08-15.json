@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-15T07:00:13",
+    "captured_at": "2026-08-15T09:00:16",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -59874,6 +59874,18 @@
       "score": 76,
       "title": "The Victim",
       "where": "BBC One"
+    },
+    {
+      "_custom": true,
+      "genre": "Movie",
+      "id": "custom_1786794520011",
+      "imdbID": "tt10375624",
+      "kind": "movie",
+      "rating": "",
+      "score": 0,
+      "title": "Voicemails for Isabelle",
+      "where": "Movie",
+      "year": "2026"
     }
   ],
   "watchlist": {
@@ -59891,11 +59903,11 @@
     "book-pilates": "2026-07-05",
     "call-mom": "2026-08-08",
     "dog-poop": "2026-08-10",
-    "dry-cleaning": "2026-08-08",
+    "dry-cleaning": "2026-08-15",
     "eyebrows": "2026-06-28",
     "pedicure": "2026-08-10",
     "water-plants": "2026-08-01",
-    "weeding": "2026-08-01"
+    "weeding": "2026-08-15"
   },
   "todos": [
     {

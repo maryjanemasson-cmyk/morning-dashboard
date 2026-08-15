@@ -559,47 +559,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "Power Field Notes",
+      "subject": "Musk promises \"universal high income.\" He's not wrong."
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Autumn decor, elevated."
+    },
+    {
+      "sender": "BOSS",
+      "subject": "Rediscover working style"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "PICKED FOR YOU"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 8/15 is ready to view"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 15 Aug 2026"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Etsy Conversations",
+      "subject": "You have unread messages! \ud83d\udc8c"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Planning Your Dashboard Design: How to Select Visuals That Drive Decisions, Not Just Discussions | Pierre DeBois"
+    },
     {
       "sender": "WAT THE BRAND",
       "subject": "The Blake Jeans, Styled Four Ways."
-    },
-    {
-      "sender": "Verizon-Notification@ecrm-mail.verizon.com",
-      "subject": "Protecting your privacy is important to us."
-    },
-    {
-      "sender": "Chewy.com",
-      "subject": "We're getting your Autoship order ready"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83c\udf1f This Week's Featured Deals"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Trump\u2019s Final Gambit via Evan Brooks from TRC",
-      "subject": "Trump\u2019s secret China deal"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83d\udc3e Dino-sized fun and an unexpected mystery take the screen"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Transaction Receipt"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "Last chance to enter the sweepstakes\u2757"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Things are heating up"
     }
   ],
   "items": [
