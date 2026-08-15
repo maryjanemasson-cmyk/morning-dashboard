@@ -559,8 +559,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 31,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "\\\"Redacted\u201d 750 Files - Power Field Notes",
+      "subject": "Why did Trump \u201cRedact\u201d 750 White House Files?"
+    },
+    {
+      "sender": "Patriot Income Plan via Evan Brooks from TRC",
+      "subject": "Musk says UBI is coming. I say it's already here."
+    },
     {
       "sender": "Reformation",
       "subject": "YOUR FAVORITES ARE ON SALE"
@@ -572,14 +580,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "It's National Relaxation Day. Act accordingly."
-    },
-    {
-      "sender": "Thomson Reuters",
-      "subject": "(Request ID: D9L2R863X3) Request logged successfully"
-    },
-    {
-      "sender": "Accelerated AI via Evan Brooks from TRC",
-      "subject": "Do NOT buy any AI stocks until you see this!"
     },
     {
       "sender": "Laurent Chapuis",
@@ -595,11 +595,11 @@ window.EMAIL_DATA = {
     },
     {
       "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - All Levels"
+      "subject": "FORM BY TWO | Write a review"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO | Write a review"
+      "sender": "Moda Operandi",
+      "subject": "NEW & READY TO SHIP: Secure your favorite pieces now"
     }
   ],
   "items": [
