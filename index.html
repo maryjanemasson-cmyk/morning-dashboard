@@ -722,11 +722,16 @@
 
     <div class="card" style="padding:1.5rem;margin-top:1.25rem;">
       <div class="card-title" style="font-size:1.05rem;display:flex;align-items:center;justify-content:space-between;">
-        <span><span class="icon">&bull;</span> TV Watchlist</span>
+        <span><span class="icon">&bull;</span> Movies &amp; TV</span>
         <span id="wl-key-status" onclick="setOmdbKey()" style="font-size:0.65rem;color:#9c8b76;cursor:pointer;font-weight:400;" title="Click to set or change your OMDb API key"></span>
       </div>
+      <div style="display:flex;gap:0.25rem;margin-bottom:0.35rem;flex-wrap:wrap;">
+        <button type="button" id="wl-type-all" class="wl-filter-btn active" onclick="setWlSearchType('all')" style="background:#f3efe8;border-color:#c9b99a;color:#3d3529;font-weight:600;">All</button>
+        <button type="button" id="wl-type-movie" class="wl-filter-btn" onclick="setWlSearchType('movie')">Movies</button>
+        <button type="button" id="wl-type-tv" class="wl-filter-btn" onclick="setWlSearchType('tv')">TV</button>
+      </div>
       <div style="display:flex;gap:0.3rem;margin-bottom:0.4rem;">
-        <input type="text" id="wl-add-title" placeholder="Search show to add..." onkeydown="if(event.key==='Enter')searchAndAddShow()" style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.25rem 0.5rem;font-size:0.72rem;font-family:inherit;color:#3d3529;outline:none;" />
+        <input type="text" id="wl-add-title" placeholder="Search movie or show…" onkeydown="if(event.key==='Enter')searchAndAddShow()" style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.25rem 0.5rem;font-size:0.72rem;font-family:inherit;color:#3d3529;outline:none;" />
         <button onclick="searchAndAddShow()" style="padding:0.25rem 0.5rem;border-radius:6px;border:none;background:#c9b99a;color:#fff;font-size:0.7rem;cursor:pointer;font-family:inherit;">+</button>
       </div>
       <div id="wl-search-results" style="margin-bottom:0.3rem;"></div>
@@ -1862,8 +1867,25 @@
       } catch(e) { document.getElementById('news-sections').innerHTML = '<p style="color:#b8a48e">Unable to load news.</p>'; }
     }
 
-    // ── TV Watchlist (built-in suggestions; watched state + custom adds live in Firebase) ──
-    // Refreshed 2026-08-14 — critic/buzz picks still worth a look if not already on your custom list.
+    // ── Movies & TV watchlist (built-in TV suggestions; watched state + custom adds in Firebase) ──
+    // Search: TVMaze (TV) + Cinemeta (movies, free/no key) + optional OMDb (ratings + extra hits when key set).
+    // Refreshed 2026-08-15 — movies were failing because iTunes search no longer returns theatrical titles.
+    let _wlSearchType = 'all'; // all | movie | tv
+    window.setWlSearchType = function(t) {
+      _wlSearchType = t;
+      ['all','movie','tv'].forEach(k => {
+        const el = document.getElementById('wl-type-' + k);
+        if (!el) return;
+        const on = k === t;
+        el.classList.toggle('active', on);
+        el.style.background = on ? '#f3efe8' : '#fff';
+        el.style.borderColor = on ? '#c9b99a' : '#ebe5dc';
+        el.style.color = on ? '#3d3529' : '#6b5d4d';
+        el.style.fontWeight = on ? '600' : '400';
+      });
+      const q = document.getElementById('wl-add-title')?.value?.trim();
+      if (q) searchAndAddShow();
+    };
     const WATCHLIST = [
       {id:'dept-q',title:'Dept. Q',where:'Netflix',genre:'Crime / Mystery',rating:'TVMaze 8.1',score:81},
       {id:'slow-horses',title:'Slow Horses',where:'Apple TV+',genre:'Spy Thriller',rating:'TVMaze 8.1',score:81},
@@ -1920,7 +1942,10 @@
     function updateKeyStatus() {
       const el = document.getElementById('wl-key-status');
       if (!el) return;
-      el.textContent = getOmdbKey() ? '✓ live ratings' : '⚠ set ratings key';
+      el.textContent = getOmdbKey() ? '✓ live ratings' : 'set free ratings key';
+      el.title = getOmdbKey()
+        ? 'OMDb key set — live RT/IMDb scores. Click to change.'
+        : 'Optional free OMDb key (omdbapi.com) for RT/IMDb scores. Movies & TV search works without it.';
     }
 
     function loadRatingsCache() {
@@ -1931,10 +1956,18 @@
       try { localStorage.setItem(OMDB_CACHE_KEY, JSON.stringify(c)); } catch (_) {}
     }
 
-    async function fetchOmdbRating(title) {
+    async function fetchOmdbRating(title, year, kind, imdbID) {
       const key = getOmdbKey();
       if (!key) return null;
-      const url = `https://www.omdbapi.com/?apikey=${encodeURIComponent(key)}&t=${encodeURIComponent(title)}`;
+      let url = `https://www.omdbapi.com/?apikey=${encodeURIComponent(key)}`;
+      if (imdbID) {
+        url += `&i=${encodeURIComponent(imdbID)}`;
+      } else {
+        url += `&t=${encodeURIComponent(title)}`;
+        if (year) url += `&y=${encodeURIComponent(String(year).slice(0, 4))}`;
+        if (kind === 'movie') url += '&type=movie';
+        if (kind === 'tv') url += '&type=series';
+      }
       try {
         const res = await fetch(url);
         const data = await res.json();
@@ -1945,8 +1978,115 @@
           else if (r.Source === 'Rotten Tomatoes') rt = r.Value;
           else if (r.Source === 'Metacritic') meta = r.Value;
         });
-        return { rt, imdb, meta };
+        return { rt, imdb, meta, year: data.Year || '', type: data.Type || '' };
       } catch (_) { return null; }
+    }
+
+    async function searchOmdbMulti(query) {
+      const key = getOmdbKey();
+      if (!key) return [];
+      const types = _wlSearchType === 'movie' ? ['movie'] : _wlSearchType === 'tv' ? ['series'] : ['movie', 'series'];
+      const out = [];
+      await Promise.all(types.map(async (type) => {
+        try {
+          const url = `https://www.omdbapi.com/?apikey=${encodeURIComponent(key)}&s=${encodeURIComponent(query)}&type=${type}`;
+          const res = await fetch(url);
+          const data = await res.json();
+          if (!data || data.Response === 'False' || !Array.isArray(data.Search)) return;
+          data.Search.slice(0, 6).forEach(r => {
+            out.push({
+              kind: r.Type === 'movie' ? 'movie' : 'tv',
+              title: r.Title || '',
+              year: (r.Year || '').slice(0, 4),
+              where: r.Type === 'movie' ? 'Movie' : 'TV',
+              genre: r.Type === 'movie' ? 'Movie' : 'TV',
+              rating: '',
+              score: 0,
+              poster: r.Poster && r.Poster !== 'N/A' ? r.Poster : '',
+              source: 'omdb',
+              imdbID: r.imdbID || ''
+            });
+          });
+        } catch (_) {}
+      }));
+      return out;
+    }
+
+    async function searchTvMaze(query) {
+      if (_wlSearchType === 'movie') return [];
+      try {
+        const res = await fetch('https://api.tvmaze.com/search/shows?q=' + encodeURIComponent(query));
+        const data = await res.json();
+        if (!Array.isArray(data)) return [];
+        return data.slice(0, 8).map(r => {
+          const show = r.show || {};
+          const network = show.webChannel ? show.webChannel.name : (show.network ? show.network.name : '');
+          const genres = (show.genres || []).join(' / ') || 'TV';
+          const ratingNum = show.rating && show.rating.average ? show.rating.average : 0;
+          const year = (show.premiered || '').slice(0, 4);
+          return {
+            kind: 'tv',
+            title: show.name || '',
+            year,
+            where: network || 'TV',
+            genre: genres,
+            rating: ratingNum ? String(ratingNum) : '',
+            score: ratingNum ? Math.round(ratingNum * 10) : 0,
+            poster: (show.image && (show.image.medium || show.image.original)) || '',
+            source: 'tvmaze'
+          };
+        });
+      } catch (_) { return []; }
+    }
+
+    async function searchCinemeta(query, type) {
+      // Free Stremio Cinemeta catalog — no API key, CORS open. type: 'movie' | 'series'
+      try {
+        const url = 'https://v3-cinemeta.strem.io/catalog/' + type + '/top/search=' +
+          encodeURIComponent(query) + '.json';
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!data || !Array.isArray(data.metas)) return [];
+        return data.metas.slice(0, 8).map(m => {
+          const year = String(m.releaseInfo || m.year || '').slice(0, 4);
+          const kind = (m.type === 'series' || type === 'series') ? 'tv' : 'movie';
+          return {
+            kind,
+            title: m.name || '',
+            year,
+            where: kind === 'movie' ? 'Movie' : 'TV',
+            genre: kind === 'movie' ? ('Movie' + (year ? ' · ' + year : '')) : ('TV' + (year ? ' · ' + year : '')),
+            rating: '',
+            score: 0,
+            poster: m.poster || m.background || '',
+            source: 'cinemeta',
+            imdbID: m.imdb_id || ''
+          };
+        }).filter(x => x.title);
+      } catch (_) { return []; }
+    }
+
+    async function searchCinemetaMovies(query) {
+      if (_wlSearchType === 'tv') return [];
+      return searchCinemeta(query, 'movie');
+    }
+
+    async function searchCinemetaSeries(query) {
+      // Extra TV hits when TVMaze is thin; de-duped later against TVMaze.
+      if (_wlSearchType === 'movie') return [];
+      return searchCinemeta(query, 'series');
+    }
+
+    function dedupeWatchResults(list) {
+      const seen = new Set();
+      const out = [];
+      for (const item of list) {
+        const key = ((item.kind || '') + '|' + (item.title || '').toLowerCase() + '|' + (item.year || '')).trim();
+        if (!item.title || seen.has(key)) continue;
+        seen.add(key);
+        out.push(item);
+      }
+      return out;
     }
 
     function applyRatingToShow(show, r) {
@@ -1995,45 +2135,103 @@
       const query = document.getElementById('wl-add-title').value.trim();
       if (!query) return;
       const resultsDiv = document.getElementById('wl-search-results');
-      resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#9c8b76;">Searching...</div>';
+      resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#9c8b76;">Searching movies &amp; TV…</div>';
 
       try {
-        const res = await fetch('https://api.tvmaze.com/search/shows?q=' + encodeURIComponent(query));
-        const data = await res.json();
-        if (!data.length) {
-          resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#c2553a;">No results. Try a different title.</div>';
+        const [tv, movies, seriesExtra, omdb] = await Promise.all([
+          searchTvMaze(query),
+          searchCinemetaMovies(query),
+          searchCinemetaSeries(query),
+          searchOmdbMulti(query)
+        ]);
+        // Prefer TVMaze (network names) + Cinemeta (movies); fill gaps with OMDb; de-dupe.
+        let merged = dedupeWatchResults([...tv, ...movies, ...seriesExtra, ...omdb]);
+        // Movies first when browsing All (films were the common miss before)
+        if (_wlSearchType === 'all') {
+          merged.sort((a, b) => {
+            if (a.kind !== b.kind) return a.kind === 'movie' ? -1 : 1;
+            return (a.title || '').localeCompare(b.title || '');
+          });
+        }
+        if (!merged.length) {
+          resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#c2553a;">No results. Try a different title' +
+            (getOmdbKey() ? '.' : ' — optional: click “set ratings key” (free OMDb) for more hits + RT/IMDb scores.') + '</div>';
           return;
         }
         let html = '';
-        data.slice(0, 5).forEach(r => {
-          const show = r.show;
-          const network = show.webChannel ? show.webChannel.name : (show.network ? show.network.name : '');
-          const genres = (show.genres || []).join(' / ');
-          const rating = show.rating && show.rating.average ? show.rating.average : '';
-          html += `<div onclick="pickShow(this)" data-name="${(show.name||'').replace(/"/g,'&quot;')}" data-where="${network.replace(/"/g,'&quot;')}" data-genre="${genres.replace(/"/g,'&quot;')}" data-rating="${rating}"
-            style="padding:0.3rem 0.4rem;font-size:0.68rem;cursor:pointer;border-bottom:1px solid #f0ebe4;display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <div style="font-weight:500;color:#3d3529;">${show.name}</div>
-              <div style="font-size:0.6rem;color:#9c8b76;">${genres}${network ? ' &middot; ' + network : ''}</div>
+        merged.slice(0, 10).forEach((r, i) => {
+          const kindLabel = r.kind === 'movie' ? 'Movie' : 'TV';
+          const kindColor = r.kind === 'movie' ? '#8a6a3d' : '#3d6b8a';
+          const meta = [r.where, r.year, r.genre].filter(Boolean).join(' · ');
+          const esc = (s) => String(s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+          html += `<div onclick="pickShow(this)" data-idx="${i}"
+            data-kind="${esc(r.kind)}" data-name="${esc(r.title)}" data-where="${esc(r.where)}"
+            data-genre="${esc(r.genre)}" data-rating="${esc(r.rating)}" data-score="${r.score||0}" data-year="${esc(r.year)}" data-imdb="${esc(r.imdbID || '')}"
+            style="padding:0.3rem 0.4rem;font-size:0.68rem;cursor:pointer;border-bottom:1px solid #f0ebe4;display:flex;justify-content:space-between;align-items:center;gap:0.4rem;">
+            <div style="min-width:0;">
+              <div style="font-weight:500;color:#3d3529;display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap;">
+                <span style="font-size:0.55rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:${kindColor};border:1px solid ${kindColor}44;border-radius:3px;padding:0.05rem 0.28rem;">${kindLabel}</span>
+                <span>${esc(r.title)}${r.year ? ' <span style="color:#9c8b76;font-weight:400;font-size:0.62rem;">(' + esc(r.year) + ')</span>' : ''}</span>
+              </div>
+              <div style="font-size:0.6rem;color:#9c8b76;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(meta)}</div>
             </div>
-            ${rating ? '<span style="font-size:0.6rem;color:#4a8c6f;font-weight:600;">'+rating+'</span>' : ''}
+            ${r.rating ? '<span style="font-size:0.6rem;color:#4a8c6f;font-weight:600;flex-shrink:0;">'+esc(r.rating)+'</span>' : ''}
           </div>`;
         });
         resultsDiv.innerHTML = '<div style="border:1px solid #ebe5dc;border-radius:6px;overflow:hidden;background:#fff;">' + html + '</div>';
-      } catch(e) {
-        resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#c2553a;">Search failed.</div>';
+      } catch (e) {
+        resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#c2553a;">Search failed. Check connection and try again.</div>';
       }
     }
 
-    function pickShow(el) {
+    async function pickShow(el) {
       const title = el.dataset.name;
-      const where = el.dataset.where;
-      const genre = el.dataset.genre;
-      const ratingNum = parseFloat(el.dataset.rating) || 0;
-      const ratingStr = ratingNum ? ratingNum + '/10' : '';
-      const score = ratingNum ? Math.round(ratingNum * 10) : 0;
+      const where = el.dataset.where || '';
+      const genre = el.dataset.genre || '';
+      const kind = el.dataset.kind || 'tv';
+      const year = el.dataset.year || '';
+      const imdbID = el.dataset.imdb || '';
+      let ratingStr = el.dataset.rating || '';
+      let score = parseInt(el.dataset.score, 10) || 0;
+      if (!score && ratingStr) {
+        const n = parseFloat(ratingStr);
+        if (!isNaN(n)) score = n <= 10 ? Math.round(n * 10) : Math.round(n);
+        if (n && n <= 10 && !ratingStr.includes('/')) ratingStr = n + '/10';
+      }
 
-      const item = { id: 'custom_' + Date.now(), title, where, genre, rating: ratingStr, score, _custom: true };
+      // Upgrade ratings from OMDb when key is set (especially helpful for movies)
+      if (getOmdbKey() && (imdbID || title)) {
+        const r = await fetchOmdbRating(title, year, kind, imdbID);
+        if (r) {
+          const tmp = { rating: ratingStr, score };
+          applyRatingToShow(tmp, r);
+          ratingStr = tmp.rating || ratingStr;
+          score = tmp.score || score;
+        }
+      }
+
+      // Clean genre for movies: "Movie · 2025" → "Movie" so list groups cleanly
+      let cleanGenre = genre || (kind === 'movie' ? 'Movie' : 'TV');
+      if (kind === 'movie' && /^Movie\b/i.test(cleanGenre)) cleanGenre = 'Movie';
+
+      const item = {
+        id: 'custom_' + Date.now(),
+        title,
+        where: kind === 'movie' ? (where && where !== 'Movie' ? where : 'Movie') : where,
+        genre: cleanGenre,
+        rating: ratingStr,
+        score,
+        kind,
+        year,
+        imdbID: imdbID || undefined,
+        _custom: true
+      };
+      // Avoid exact duplicate titles already on the custom list
+      if (_customWatchlist.some(w => (w.title || '').toLowerCase() === title.toLowerCase() && (w.kind || 'tv') === kind)) {
+        document.getElementById('wl-search-results').innerHTML =
+          '<div style="font-size:0.65rem;color:#9c8b76;">Already on your list.</div>';
+        return;
+      }
       _customWatchlist.push(item);
       fbSet('customWatchlist', _customWatchlist);
       document.getElementById('wl-add-title').value = '';
@@ -2077,15 +2275,20 @@
         }
         const watched = _watchedShows[w.id] || false;
         const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
+        const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+        const kindTag = kind === 'movie'
+          ? '<span style="font-size:0.52rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:#8a6a3d;margin-right:0.25rem;">Film</span>'
+          : '';
+        const yearBit = w.year ? ` · ${w.year}` : '';
         html += `<div class="wl-item ${watched?'watched':''}">
           <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'\u2713':''}</div>
           <div class="wl-info">
-            <div class="wl-title ${watched?'done':''}">${w.title}</div>
+            <div class="wl-title ${watched?'done':''}">${kindTag}${w.title}${w.year && kind==='movie' ? ' <span style="font-weight:400;color:#9c8b76;font-size:0.72em;">('+w.year+')</span>' : ''}</div>
             <div class="wl-meta">
-              ${w.where}
+              ${w.where || ''}${yearBit && kind!=='movie' ? yearBit : ''}
             </div>
           </div>
-          <span class="wl-rating ${ratingClass}">${w.rating}</span>
+          <span class="wl-rating ${ratingClass}">${w.rating || ''}</span>
           ${w._custom ? '<span onclick="removeFromWatchlist(\''+w.id+'\')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>' : ''}
         </div>`;
       });
