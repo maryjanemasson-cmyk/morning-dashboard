@@ -559,7 +559,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 24,
   "threads": [
     {
       "sender": "The oil secret - Power Field Notes",
@@ -612,7 +612,7 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-15|10:00|lagree - foundations",
-      "id": "1a00094168033481",
+      "id": "19ff8b8419df284b",
       "sender": "FORM BY TWO"
     },
     {
@@ -625,18 +625,6 @@ window.EMAIL_DATA = {
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
       "id": "1a005f2092b645aa",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-19",
-      "time": "17:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
-      "id": "1a0017e2d1213e67",
       "sender": "FORM BY TWO"
     }
   ]
