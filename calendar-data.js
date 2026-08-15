@@ -559,15 +559,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "The oil secret - Power Field Notes",
+      "subject": "The biggest scam in American history is at every gas station."
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "Your package is on the way!"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Inspired by your vibes \u26a1"
+    },
     {
       "sender": "\\\"Redacted\u201d 750 Files - Power Field Notes",
       "subject": "Why did Trump \u201cRedact\u201d 750 White House Files?"
-    },
-    {
-      "sender": "Patriot Income Plan via Evan Brooks from TRC",
-      "subject": "Musk says UBI is coming. I say it's already here."
     },
     {
       "sender": "Reformation",
@@ -592,14 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Back in a new color"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO | Write a review"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "NEW & READY TO SHIP: Secure your favorite pieces now"
     }
   ],
   "items": [
