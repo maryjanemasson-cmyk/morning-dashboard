@@ -119,6 +119,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "2026-08-30",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "MJ at theatre with Sharon",
+    "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
+    "description": "Show: All The Devils Are Here\nTheatre: Berlind Theatre, McCarter Theatre Center\nSeats: Orchestra B, A-2 & A-4\nCurtain: 7:30 PM\n\nSubscription: FRIDAY NIGHT A \u2014 Berlind FE1 M1\nOrder #7841009 (2026-2027 season)\nDigital tickets: mytickets.mccarter.org\nBox office: 609-258-2787",
+    "startTime": "2026-08-28T19:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T22:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "MJ at theatre with Sharon",
+    "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
+    "description": "Show: All The Devils Are Here\nTheatre: Berlind Theatre, McCarter Theatre Center\nSeats: Orchestra B, A-2 & A-4\nCurtain: 7:30 PM\n\nSubscription: FRIDAY NIGHT A \u2014 Berlind FE1 M1\nOrder #7841009 (2026-2027 season)\nDigital tickets: mytickets.mccarter.org\nBox office: 609-258-2787",
+    "startTime": "2026-08-28T19:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T22:30:00-04:00",
+    "endDate": "",
+    "calendar": "Chris",
+    "colorId": ""
   }
 ];
 
@@ -537,8 +559,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "MICHELIN Guide",
+      "subject": "Restaurants in the World's Most Unexpected Places"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The Blake Jeans, Styled Four Ways."
+    },
+    {
+      "sender": "Verizon-Notification@ecrm-mail.verizon.com",
+      "subject": "Protecting your privacy is important to us."
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "We're getting your Autoship order ready"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\ud83c\udf1f This Week's Featured Deals"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Trump\u2019s Final Gambit via Evan Brooks from TRC",
       "subject": "Trump\u2019s secret China deal"
@@ -554,30 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "MyLowe's Rewards",
       "subject": "Last chance to enter the sweepstakes\u2757"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Things are heating up"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
-    },
-    {
-      "sender": "Orangetheory",
-      "subject": "We have received your response for Membership Cancellation Request"
-    },
-    {
-      "sender": "Optum Rx",
-      "subject": "\ud83d\udc8a We have found savings for you"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "Your Refined Paradise Wardrobe"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - Foundations"
     }
   ],
   "items": [
