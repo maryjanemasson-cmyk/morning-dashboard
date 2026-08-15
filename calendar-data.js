@@ -537,12 +537,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 20,
   "threads": [
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "The upcoming MrBeast Kids Workshop is on us \ud83d\udc99"
-    },
     {
       "sender": "Trump\u2019s Final Gambit via Evan Brooks from TRC",
       "subject": "Trump\u2019s secret China deal"
@@ -578,6 +574,10 @@ window.EMAIL_DATA = {
     {
       "sender": "D\u00e9 Rococo",
       "subject": "Your Refined Paradise Wardrobe"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - Foundations"
     }
   ],
   "items": [
