@@ -559,47 +559,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 31,
   "threads": [
     {
-      "sender": "Supply chain strike - Power Field Notes",
-      "subject": "Breaking: Ukraine Hits Russia's Amazon \u2014 Eight Regions Burning"
+      "sender": "Reformation",
+      "subject": "YOUR FAVORITES ARE ON SALE"
     },
     {
-      "sender": "Bake Time",
-      "subject": "Plum torte, peach pie and more stone fruit bakes"
+      "sender": "Topgolf",
+      "subject": "NEW: Extra Month + Lowest Price of Season \ud83d\udc40"
     },
     {
-      "sender": "Elon\u2019s next big move via Evan Brooks from TRC",
-      "subject": "Tesla\u2019s most dangerous bet goes live soon"
+      "sender": "Shameless Snacks",
+      "subject": "It's National Relaxation Day. Act accordingly."
     },
     {
-      "sender": "On Behalf of Acxiom LLC",
-      "subject": "(Request ID: N8MYF6GB6V) Request logged successfully"
+      "sender": "Thomson Reuters",
+      "subject": "(Request ID: D9L2R863X3) Request logged successfully"
     },
     {
-      "sender": "Buck Mason",
-      "subject": "The Big Bulkhead Dungaree"
+      "sender": "Accelerated AI via Evan Brooks from TRC",
+      "subject": "Do NOT buy any AI stocks until you see this!"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "Leave the Switching Behind"
+      "sender": "Laurent Chapuis",
+      "subject": "Private Sale: An Exceptional Red Burgundy for Any and Every Occasion"
     },
     {
       "sender": "A BATHING APE\u00ae",
-      "subject": "PICKED FOR YOU"
+      "subject": "BAPE\u00ae NEW ARRIVALS: mastermind JAPAN, BAPE STAs, ACCESSORIES, GRAPHIC TEES, HEADWEAR, & MORE"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "Reformation",
+      "subject": "Back in a new color"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "The Blake Jeans, Styled Four Ways."
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - All Levels"
     },
     {
-      "sender": "Verizon-Notification@ecrm-mail.verizon.com",
-      "subject": "Protecting your privacy is important to us."
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO | Write a review"
     }
   ],
   "items": [
@@ -624,7 +624,7 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
-      "id": "19ff8b8737a381f0",
+      "id": "1a005f2092b645aa",
       "sender": "FORM BY TWO"
     },
     {
