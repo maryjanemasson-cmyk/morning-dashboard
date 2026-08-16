@@ -99,6 +99,28 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reservation at Restaurante Carmen Cartagena",
+    "location": "",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOsZdyMRVlvXn2kOV4n3We3Th_v_Ufox0Y\n",
+    "startTime": "2026-08-27T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-27T21:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "All The Devils Are Here \u2014 McCarter (Berlind Theatre)",
+    "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
+    "description": "McCarter 2026\u201327 subscription (Friday Night A). Seats: Orchestra B, A-2 & A-4. Order #7841009. Digital tickets at mytickets.mccarter.org. Box office 609-258-2787.",
+    "startTime": "2026-08-28T19:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T21:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "MJ at theatre with Sharon",
     "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
     "description": "Show: All The Devils Are Here\nTheatre: Berlind Theatre, McCarter Theatre Center\nSeats: Orchestra B, A-2 & A-4\nCurtain: 7:30 PM\n\nSubscription: FRIDAY NIGHT A \u2014 Berlind FE1 M1\nOrder #7841009 (2026-2027 season)\nDigital tickets: mytickets.mccarter.org\nBox office: 609-258-2787",
@@ -118,6 +140,17 @@ window.CALENDAR_EVENTS = [
     "endTime": "2026-08-28T22:30:00-04:00",
     "endDate": "",
     "calendar": "Chris",
+    "colorId": ""
+  },
+  {
+    "summary": "Reservation at ALMA Restaurante - Bar",
+    "location": "",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMX-1GJQhxXalnMTJo7wQ99Xu0FhtYx1kc\n",
+    "startTime": "2026-08-28T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T21:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
     "colorId": ""
   },
   {
@@ -559,47 +592,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 36,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Essentials item"
+      "sender": "Reserve with Google",
+      "subject": "Your reservation at ALMA Restaurante - Bar is confirmed"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "ALMA",
+      "subject": "\u00a1Tu reserva se ha realizado exitosamente!"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Kitchen item"
+      "sender": "94% guess wrong via Evan Brooks from TRC",
+      "subject": "Guess What They\u2019re Drilling?"
     },
     {
-      "sender": "LOOK OPTIC",
-      "subject": "24 Hours Left: 25% Off Progressives"
+      "sender": "Reserve with Google",
+      "subject": "Your reservation at Restaurante Carmen Cartagena is confirmed"
     },
     {
-      "sender": "The oil secret - Power Field Notes",
-      "subject": "The biggest scam in American history is at every gas station."
+      "sender": "Carmen Cartagena",
+      "subject": "Su reserva en Carmen Cartagena requiere una garant\u00eda"
+    },
+    {
+      "sender": "Carmen Cartagena",
+      "subject": "Validar direcci\u00f3n de correo electr\u00f3nico"
+    },
+    {
+      "sender": "EL CHATO",
+      "subject": "La reserva ha sido realizada"
+    },
+    {
+      "sender": "Elon BIG move - Power Field Notes",
+      "subject": "September 25th Elon Move to Send These 3 Tiny Stocks Soaring?"
     },
     {
       "sender": "Chewy.com",
-      "subject": "Your package is on the way!"
+      "subject": "Your Autoship package will arrive today between 11 am and 3 pm"
     },
     {
-      "sender": "Etsy",
-      "subject": "Inspired by your vibes \u26a1"
-    },
-    {
-      "sender": "\\\"Redacted\u201d 750 Files - Power Field Notes",
-      "subject": "Why did Trump \u201cRedact\u201d 750 White House Files?"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "YOUR FAVORITES ARE ON SALE"
-    },
-    {
-      "sender": "Topgolf",
-      "subject": "NEW: Extra Month + Lowest Price of Season \ud83d\udc40"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 539071620910"
     }
   ],
   "items": [
