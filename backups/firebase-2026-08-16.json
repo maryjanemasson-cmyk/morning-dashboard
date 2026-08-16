@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-16T11:00:13",
+    "captured_at": "2026-08-16T13:00:14",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -58707,6 +58707,22 @@
       "source": "https://tastesbetterfromscratch.com/classic-italian-lasagna/",
       "tags": "",
       "updated": "2026-08-09T14:17:00.825Z"
+    },
+    "-P-AT4uANYPLKxlOWDSs": {
+      "category": "Dinner",
+      "cook": "",
+      "cuisine": "",
+      "image": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/551618475_17936474304086709_6982356732587819306_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=XTanCuLLuN8Q7kNvwHfB-RG&_nc_oc=Adrc0KjhaGwgfPZgcNFWSsf-WqAPqntYmSDDGfE62S_QZoQSh8_eJoKWTuBQqu9-TY8&_nc_zt=23&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=3sdLoEzQTEiqTErF3c1plw&_nc_ss=7b689&oh=00_AQGHtu8_W4D2otZpzeNAUq8w71RjpJ_H9hQ77APbSb6wDA&oe=6A87AA8B",
+      "ingredients": "Marinade\n2 lbs skirt, flank or top sirloin steak\n2 garlic cloves, grated\nJuice of 1 lime\n2 tbsp oil\n1 tsp cumin\n1 tsp coriander\n1 tsp oregano\n1 tsp salt\n1/2 tsp black pepper\nDry Seasoning Blend\n1 tsp cumin\n1 tsp coriander\n1 tsp garlic powder\n1 tsp oregano\n1 tsp paprika\n1/2 tsp chili powder\n1/2 tsp salt\n1/4 tsp black pepper",
+      "instructions": "",
+      "name": "Chipotle Carne Asada Bowls recipe ⬇",
+      "notes": "",
+      "prep": "",
+      "rating": 0,
+      "servings": "",
+      "source": "https://www.instagram.com/reel/DOwWp3hksw3/",
+      "tags": "chipotle, mealprep, mealprepping, carneasada, steak, ricebowl",
+      "updated": "2026-08-16T16:47:13.057Z"
     }
   },
   "mealPlan": {
@@ -58752,11 +58768,59 @@
     },
     {
       "done": false,
-      "text": "Chicken thighs"
+      "text": "2 lbs skirt, flank or top sirloin steak"
     },
     {
       "done": false,
-      "text": "Pickled jalopenos"
+      "text": "Juice of 1 lime"
+    },
+    {
+      "done": false,
+      "text": "1 tsp coriander"
+    },
+    {
+      "done": false,
+      "text": "black beans"
+    },
+    {
+      "done": false,
+      "text": "olive oil"
+    },
+    {
+      "done": false,
+      "text": "canola oil"
+    },
+    {
+      "done": false,
+      "text": "chipotle in adobo"
+    },
+    {
+      "done": false,
+      "text": "onion"
+    },
+    {
+      "done": false,
+      "text": "shrimp"
+    },
+    {
+      "done": false,
+      "text": "squid"
+    },
+    {
+      "done": false,
+      "text": "lemon"
+    },
+    {
+      "done": false,
+      "text": "milk"
+    },
+    {
+      "done": false,
+      "text": "half and half"
+    },
+    {
+      "done": false,
+      "text": "cream cheese"
     }
   ],
   "groceries": null,
@@ -59901,13 +59965,13 @@
     "widows-bay": true
   },
   "chores": {
-    "book-pilates": "2026-07-05",
+    "book-pilates": "2026-08-16",
     "call-mom": "2026-08-08",
-    "dog-poop": "2026-08-10",
+    "dog-poop": "2026-08-16",
     "dry-cleaning": "2026-08-15",
     "eyebrows": "2026-06-28",
     "pedicure": "2026-08-10",
-    "water-plants": "2026-08-01",
+    "water-plants": "2026-08-16",
     "weeding": "2026-08-15"
   },
   "todos": [

@@ -658,28 +658,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Arts & Crafts item"
-    },
-    {
-      "sender": "Mob",
-      "subject": "Let's plan your week"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Apparel item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20662\u2069 Apparel and Shoes items"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "About WashU's application rounds"
-    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Enjoy up to 50% OFF! Sunday Deals are here \ud83d\ude0d"
@@ -699,6 +679,26 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "The Magic of Traveling with a Camera | Matthew David in Globetrotters"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: When America\u2019s budget will break, disastrously"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Essentials item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Kitchen item"
+    },
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "24 Hours Left: 25% Off Progressives"
     }
   ],
   "items": [
