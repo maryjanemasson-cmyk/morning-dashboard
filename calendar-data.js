@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-08-15T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-15T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "LAGREE - FOUNDATIONS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ff8b8419df284b",
-    "startTime": "2026-08-15T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-15T10:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "LAGREE - ALL LEVELS",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ff8b8737a381f0",
@@ -140,6 +118,28 @@ window.CALENDAR_EVENTS = [
     "endTime": "2026-08-28T22:30:00-04:00",
     "endDate": "",
     "calendar": "Chris",
+    "colorId": ""
+  },
+  {
+    "summary": "Stay at Grand Hyatt Bogot\u00e1",
+    "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
+    "startTime": "",
+    "startDate": "2026-08-29",
+    "endTime": "",
+    "endDate": "2026-08-31",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-08-29T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-29T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
     "colorId": ""
   }
 ];
@@ -559,8 +559,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "Pini Parma",
+      "subject": "Our new Fall/Winter collection has arrived"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Autumn Trends I'm Jumping On"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Kitchen item"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 539071620910"
+    },
+    {
+      "sender": "Ticketmaster",
+      "subject": "US Open Day Session (Arthur Ashe) tickets are still on sale \u2014 don\u2019t miss out"
+    },
+    {
+      "sender": "Bliss Crystals",
+      "subject": "It's been a while"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Your Boston trip: Have you booked your hotel?"
+    },
     {
       "sender": "LOOK OPTIC",
       "subject": "24 Hours Left: 25% Off Progressives"
@@ -568,53 +600,9 @@ window.EMAIL_DATA = {
     {
       "sender": "The oil secret - Power Field Notes",
       "subject": "The biggest scam in American history is at every gas station."
-    },
-    {
-      "sender": "Chewy.com",
-      "subject": "Your package is on the way!"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Inspired by your vibes \u26a1"
-    },
-    {
-      "sender": "\\\"Redacted\u201d 750 Files - Power Field Notes",
-      "subject": "Why did Trump \u201cRedact\u201d 750 White House Files?"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "YOUR FAVORITES ARE ON SALE"
-    },
-    {
-      "sender": "Topgolf",
-      "subject": "NEW: Extra Month + Lowest Price of Season \ud83d\udc40"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "It's National Relaxation Day. Act accordingly."
-    },
-    {
-      "sender": "Laurent Chapuis",
-      "subject": "Private Sale: An Exceptional Red Burgundy for Any and Every Occasion"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "BAPE\u00ae NEW ARRIVALS: mastermind JAPAN, BAPE STAs, ACCESSORIES, GRAPHIC TEES, HEADWEAR, & MORE"
     }
   ],
   "items": [
-    {
-      "type": "class",
-      "title": "LAGREE - FOUNDATIONS \u00b7 10:00 AM",
-      "name": "LAGREE - FOUNDATIONS",
-      "date": "2026-08-15",
-      "time": "10:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-15|10:00|lagree - foundations",
-      "id": "19ff8b8419df284b",
-      "sender": "FORM BY TWO"
-    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
@@ -626,6 +614,13 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
       "id": "1a005f2092b645aa",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Kitchen item",
+      "date": "2026-08-16",
+      "id": "1a0098053f66a6f6",
+      "sender": "Amazon.com"
     }
   ]
 };
