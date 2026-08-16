@@ -669,19 +669,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Power Field Notes",
-      "subject": "Positions Available"
+      "sender": "Chewy.com",
+      "subject": "Your Autoship order was delivered"
     },
     {
-      "sender": "Reagan\u2019s \u201csecret weapon\u201d via Evan Brooks from TRC",
-      "subject": "A new drone defense signal from Hormuz"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 539071620910"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Meet Your New Off-Duty Uniform"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Beauty item"
+    },
+    {
+      "sender": "The midterm election via Evan Brooks from TRC",
+      "subject": "Do this before November 3"
     },
     {
       "sender": "FORM BY TWO",
@@ -690,10 +694,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FORM BY TWO",
       "subject": "FORM BY TWO Class Confirmation"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Purchase confirmed!"
     },
     {
       "sender": "Iran raids exposed - Power Field Notes",
@@ -708,8 +708,8 @@ window.EMAIL_DATA = {
       "subject": "Nassau Tennis Cart Payment Confirmation"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Enjoy up to 50% OFF! Sunday Deals are here \ud83d\ude0d"
+      "sender": "Medium Daily Digest",
+      "subject": "The Magic of Traveling with a Camera | Matthew David in Globetrotters"
     }
   ],
   "items": [
