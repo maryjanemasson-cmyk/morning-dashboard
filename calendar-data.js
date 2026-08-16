@@ -77,6 +77,28 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reserva El Chato para 4 persona/s",
+    "location": "Calle 65 # 4-76 ",
+    "description": "Reserva El Chato",
+    "startTime": "2026-08-22T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-22T22:59:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Reserva El Chato para 4 persona/s",
+    "location": "Calle 65 # 4-76 ",
+    "description": "Reserva El Chato",
+    "startTime": "2026-08-22T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-22T22:59:00-04:00",
+    "endDate": "",
+    "calendar": "Chris",
+    "colorId": ""
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -99,6 +121,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Restaurante Carmen Cartagena",
+    "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
+    "description": "",
+    "startTime": "2026-08-27T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-27T23:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Reservation at Restaurante Carmen Cartagena",
     "location": "",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOsZdyMRVlvXn2kOV4n3We3Th_v_Ufox0Y\n",
@@ -107,6 +140,17 @@ window.CALENDAR_EVENTS = [
     "endTime": "2026-08-27T21:30:00-04:00",
     "endDate": "",
     "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Restaurante Carmen Cartagena",
+    "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
+    "description": "",
+    "startTime": "2026-08-27T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-27T23:30:00-04:00",
+    "endDate": "",
+    "calendar": "Chris",
     "colorId": ""
   },
   {
@@ -151,6 +195,28 @@ window.CALENDAR_EVENTS = [
     "endTime": "2026-08-28T21:30:00-04:00",
     "endDate": "",
     "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "ALMA Restaurante - Bar",
+    "location": "Cl. 36, centro historico, Cartagena de Indias, Bol\u00edvar, Colombia",
+    "description": "",
+    "startTime": "2026-08-28T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T21:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "ALMA Restaurante - Bar",
+    "location": "Cl. 36, centro historico, Cartagena de Indias, Bol\u00edvar, Colombia",
+    "description": "",
+    "startTime": "2026-08-28T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T21:00:00-04:00",
+    "endDate": "",
+    "calendar": "Chris",
     "colorId": ""
   },
   {
@@ -592,47 +658,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 36,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "Reserve with Google",
-      "subject": "Your reservation at ALMA Restaurante - Bar is confirmed"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Arts & Crafts item"
     },
     {
-      "sender": "ALMA",
-      "subject": "\u00a1Tu reserva se ha realizado exitosamente!"
+      "sender": "Mob",
+      "subject": "Let's plan your week"
     },
     {
-      "sender": "94% guess wrong via Evan Brooks from TRC",
-      "subject": "Guess What They\u2019re Drilling?"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Apparel item"
     },
     {
-      "sender": "Reserve with Google",
-      "subject": "Your reservation at Restaurante Carmen Cartagena is confirmed"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20662\u2069 Apparel and Shoes items"
     },
     {
-      "sender": "Carmen Cartagena",
-      "subject": "Su reserva en Carmen Cartagena requiere una garant\u00eda"
+      "sender": "Washington University in St. Louis",
+      "subject": "About WashU's application rounds"
     },
     {
-      "sender": "Carmen Cartagena",
-      "subject": "Validar direcci\u00f3n de correo electr\u00f3nico"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Enjoy up to 50% OFF! Sunday Deals are here \ud83d\ude0d"
     },
     {
-      "sender": "EL CHATO",
-      "subject": "La reserva ha sido realizada"
+      "sender": "Design Decor",
+      "subject": "Complete your fall decor with a designer finish"
     },
     {
-      "sender": "Elon BIG move - Power Field Notes",
-      "subject": "September 25th Elon Move to Send These 3 Tiny Stocks Soaring?"
+      "sender": "D\u00e9 Rococo",
+      "subject": "Last Chance To Get Your 20% Off"
     },
     {
-      "sender": "Chewy.com",
-      "subject": "Your Autoship package will arrive today between 11 am and 3 pm"
+      "sender": "Almina Concept",
+      "subject": "The Classic Crew Wool Cardigan"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 539071620910"
+      "sender": "Medium Daily Digest",
+      "subject": "The Magic of Traveling with a Camera | Matthew David in Globetrotters"
     }
   ],
   "items": [
