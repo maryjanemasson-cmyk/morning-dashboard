@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "LAGREE - ALL LEVELS",
+    "location": "FORM BY TWO",
+    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/1a00ba58b8d073cc",
+    "startTime": "2026-08-21T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-21T08:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "10"
+  },
+  {
     "summary": "Flight to Bogot\u00e1 (UA 268)",
     "location": "Newark EWR",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
@@ -658,47 +669,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Power Field Notes",
+      "subject": "Positions Available"
+    },
+    {
+      "sender": "Reagan\u2019s \u201csecret weapon\u201d via Evan Brooks from TRC",
+      "subject": "A new drone defense signal from Hormuz"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Meet Your New Off-Duty Uniform"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Your FORM BY TWO receipt [#1046-8174]"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO Class Confirmation"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Purchase confirmed!"
+    },
+    {
+      "sender": "Iran raids exposed - Power Field Notes",
+      "subject": "The system behind the Iran strike \ud83d\udd0d "
+    },
+    {
+      "sender": "HPDirector@nassautennis.net",
+      "subject": "Clinic Registration Request Received"
+    },
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Nassau Tennis Cart Payment Confirmation"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Enjoy up to 50% OFF! Sunday Deals are here \ud83d\ude0d"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Complete your fall decor with a designer finish"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "Last Chance To Get Your 20% Off"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "The Classic Crew Wool Cardigan"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "The Magic of Traveling with a Camera | Matthew David in Globetrotters"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: When America\u2019s budget will break, disastrously"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Kitchen item"
-    },
-    {
-      "sender": "LOOK OPTIC",
-      "subject": "24 Hours Left: 25% Off Progressives"
     }
   ],
   "items": [
@@ -727,6 +738,18 @@ window.EMAIL_DATA = {
       "date": "2026-08-16",
       "id": "1a0098053f66a6f6",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 8:00 AM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-21",
+      "time": "08:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-21|08:00|lagree - all levels",
+      "id": "1a00ba58b8d073cc",
+      "sender": "FORM BY TWO"
     }
   ]
 };

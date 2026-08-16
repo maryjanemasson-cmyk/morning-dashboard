@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-16T13:00:14",
+    "captured_at": "2026-08-16T15:00:15",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -58751,11 +58751,7 @@
   },
   "mealGroceries": [
     {
-      "done": false,
-      "text": "Scallions"
-    },
-    {
-      "done": false,
+      "done": true,
       "text": "Jalapeno"
     },
     {
@@ -58763,19 +58759,15 @@
       "text": "Corn"
     },
     {
-      "done": false,
-      "text": "Basil"
-    },
-    {
-      "done": false,
+      "done": true,
       "text": "2 lbs skirt, flank or top sirloin steak"
     },
     {
-      "done": false,
+      "done": true,
       "text": "Juice of 1 lime"
     },
     {
-      "done": false,
+      "done": true,
       "text": "1 tsp coriander"
     },
     {
@@ -58795,31 +58787,27 @@
       "text": "chipotle in adobo"
     },
     {
-      "done": false,
+      "done": true,
       "text": "onion"
     },
     {
-      "done": false,
+      "done": true,
       "text": "shrimp"
     },
     {
-      "done": false,
+      "done": true,
       "text": "squid"
     },
     {
-      "done": false,
-      "text": "lemon"
-    },
-    {
-      "done": false,
+      "done": true,
       "text": "milk"
     },
     {
-      "done": false,
+      "done": true,
       "text": "half and half"
     },
     {
-      "done": false,
+      "done": true,
       "text": "cream cheese"
     }
   ],
