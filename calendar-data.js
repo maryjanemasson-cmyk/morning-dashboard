@@ -669,19 +669,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Chewy.com",
-      "subject": "Your Autoship order was delivered"
+      "sender": "Evan Brooks from TRC",
+      "subject": "Trading tools don\u2019t need to be complicated."
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 539071620910"
+      "sender": "United Airlines",
+      "subject": "We\u2019ve saved your preorder meal selection"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\u2600\ufe0f TripTuesday is almost here! $99 roundtrip flights"
     },
     {
       "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Beauty item"
+      "subject": "Shipped: \u20661\u2069 Apparel item"
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "Your Autoship order was delivered"
     },
     {
       "sender": "The midterm election via Evan Brooks from TRC",
@@ -702,14 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "HPDirector@nassautennis.net",
       "subject": "Clinic Registration Request Received"
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Nassau Tennis Cart Payment Confirmation"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "The Magic of Traveling with a Camera | Matthew David in Globetrotters"
     }
   ],
   "items": [
@@ -724,6 +724,13 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
       "id": "1a005f2092b645aa",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Apparel item",
+      "date": "2026-08-16",
+      "id": "1a00c610888eef7e",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
