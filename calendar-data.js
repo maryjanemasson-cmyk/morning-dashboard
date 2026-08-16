@@ -559,8 +559,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "LOOK OPTIC",
+      "subject": "24 Hours Left: 25% Off Progressives"
+    },
     {
       "sender": "The oil secret - Power Field Notes",
       "subject": "The biggest scam in American history is at every gas station."
@@ -596,10 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "A BATHING APE\u00ae",
       "subject": "BAPE\u00ae NEW ARRIVALS: mastermind JAPAN, BAPE STAs, ACCESSORIES, GRAPHIC TEES, HEADWEAR, & MORE"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Back in a new color"
     }
   ],
   "items": [
