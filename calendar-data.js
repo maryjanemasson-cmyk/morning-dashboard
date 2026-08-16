@@ -559,39 +559,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 24,
   "threads": [
     {
-      "sender": "Pini Parma",
-      "subject": "Our new Fall/Winter collection has arrived"
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Essentials item"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Autumn Trends I'm Jumping On"
-    },
-    {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20661\u2069 Kitchen item"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 539071620910"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "US Open Day Session (Arthur Ashe) tickets are still on sale \u2014 don\u2019t miss out"
-    },
-    {
-      "sender": "Bliss Crystals",
-      "subject": "It's been a while"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Your Boston trip: Have you booked your hotel?"
     },
     {
       "sender": "LOOK OPTIC",
@@ -600,6 +580,26 @@ window.EMAIL_DATA = {
     {
       "sender": "The oil secret - Power Field Notes",
       "subject": "The biggest scam in American history is at every gas station."
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "Your package is on the way!"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Inspired by your vibes \u26a1"
+    },
+    {
+      "sender": "\\\"Redacted\u201d 750 Files - Power Field Notes",
+      "subject": "Why did Trump \u201cRedact\u201d 750 White House Files?"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "YOUR FAVORITES ARE ON SALE"
+    },
+    {
+      "sender": "Topgolf",
+      "subject": "NEW: Extra Month + Lowest Price of Season \ud83d\udc40"
     }
   ],
   "items": [
@@ -614,6 +614,13 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
       "id": "1a005f2092b645aa",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Essentials item",
+      "date": "2026-08-16",
+      "id": "1a00a0ccf93bfdcf",
+      "sender": "Amazon.com"
     },
     {
       "type": "delivery",
