@@ -669,12 +669,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Mon, 8/17 is ready to view"
-    },
     {
       "sender": "LinkedIn",
       "subject": "You have 3 new invitations"
@@ -710,6 +706,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Iran raids exposed - Power Field Notes",
       "subject": "The system behind the Iran strike \ud83d\udd0d "
+    },
+    {
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Nassau Tennis Cart Payment Confirmation"
     }
   ],
   "items": [
