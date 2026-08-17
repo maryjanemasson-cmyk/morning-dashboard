@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "LAGREE - ALL LEVELS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/19ff8b8737a381f0",
-    "startTime": "2026-08-16T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-16T11:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -248,6 +237,17 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-08-29T10:00:00-04:00",
     "startDate": "",
     "endTime": "2026-08-29T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Flight to Newark (UA 269)",
+    "location": "Bogot\u00e1 BOG",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
+    "startTime": "2026-08-30T08:20:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-30T14:25:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -669,8 +669,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 Apparel and Arts & Crafts items"
+    },
+    {
+      "sender": "Mathnasium of Princeton",
+      "subject": "Payment Receipt from Mathnasium of Princeton"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20662\u2069 Coffee and Essentials items"
+    },
+    {
+      "sender": "IDnotify",
+      "subject": "Your Monthly Update From IDnotify"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Beauty item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 3 new invitations"
@@ -686,64 +710,28 @@ window.EMAIL_DATA = {
     {
       "sender": "Trip.com",
       "subject": "\u2600\ufe0f TripTuesday is almost here! $99 roundtrip flights"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Apparel item"
-    },
-    {
-      "sender": "Chewy.com",
-      "subject": "Your Autoship order was delivered"
-    },
-    {
-      "sender": "The midterm election via Evan Brooks from TRC",
-      "subject": "Do this before November 3"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Your FORM BY TWO receipt [#1046-8174]"
-    },
-    {
-      "sender": "Iran raids exposed - Power Field Notes",
-      "subject": "The system behind the Iran strike \ud83d\udd0d "
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Nassau Tennis Cart Payment Confirmation"
     }
   ],
   "items": [
     {
-      "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 11:00 AM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-16",
-      "time": "11:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-16|11:00|lagree - all levels",
-      "id": "1a005f2092b645aa",
-      "sender": "FORM BY TWO"
-    },
-    {
       "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Apparel item",
-      "date": "2026-08-16",
-      "id": "1a00c610888eef7e",
+      "title": "Shipped: \u20662\u2069 Apparel and Arts & Crafts items",
+      "date": "2026-08-17",
+      "id": "1a00eb1329fb910d",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Essentials item",
-      "date": "2026-08-16",
-      "id": "1a00a0ccf93bfdcf",
+      "title": "Shipped: \u20662\u2069 Coffee and Essentials items",
+      "date": "2026-08-17",
+      "id": "1a00e4934e0bbad4",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Kitchen item",
-      "date": "2026-08-16",
-      "id": "1a0098053f66a6f6",
+      "title": "Shipped: \u20661\u2069 Beauty item",
+      "date": "2026-08-17",
+      "id": "1a00dc6f22d95857",
       "sender": "Amazon.com"
     },
     {
