@@ -669,8 +669,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "GOAT",
+      "subject": "TOP RELEASE ROUNDUP"
+    },
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "September Weddings, Sorted"
+    },
+    {
+      "sender": "Ticketmaster",
+      "subject": "US Open Day Session (Arthur Ashe) tickets are still available \u2014 make them yours"
+    },
+    {
+      "sender": "Grok",
+      "subject": "Watchlist files missing again"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 3 new invitations"
@@ -694,22 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chewy.com",
       "subject": "Your Autoship order was delivered"
-    },
-    {
-      "sender": "The midterm election via Evan Brooks from TRC",
-      "subject": "Do this before November 3"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Your FORM BY TWO receipt [#1046-8174]"
-    },
-    {
-      "sender": "Iran raids exposed - Power Field Notes",
-      "subject": "The system behind the Iran strike \ud83d\udd0d "
-    },
-    {
-      "sender": "classmanager@nassautennis.net",
-      "subject": "Nassau Tennis Cart Payment Confirmation"
     }
   ],
   "items": [
