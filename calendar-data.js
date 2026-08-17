@@ -669,7 +669,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 10,
   "threads": [
     {
       "sender": "Disney Gift Card",
@@ -680,16 +680,8 @@ window.EMAIL_DATA = {
       "subject": "Shipped: \u20661\u2069 Shoes item"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Apparel item"
-    },
-    {
       "sender": "Sol de Janeiro",
       "subject": "Congrats! \ud83c\udf89 You've got 10% off"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "TOP RELEASE ROUNDUP"
     },
     {
       "sender": "Rat & Boa USA",
@@ -700,16 +692,24 @@ window.EMAIL_DATA = {
       "subject": "US Open Day Session (Arthur Ashe) tickets are still available \u2014 make them yours"
     },
     {
-      "sender": "Grok",
-      "subject": "Watchlist files missing again"
-    },
-    {
       "sender": "LinkedIn",
       "subject": "You have 3 new invitations"
     },
     {
       "sender": "MileagePlus Program",
       "subject": "Try Award Accelerator on your upcoming trip to Bogota"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "We\u2019ve saved your preorder meal selection"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\u2600\ufe0f TripTuesday is almost here! $99 roundtrip flights"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Apparel item"
     }
   ],
   "items": [
