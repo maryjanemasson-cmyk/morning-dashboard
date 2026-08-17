@@ -669,8 +669,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Disney Gift Card",
+      "subject": "Give the Gift of Disney magic!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Shoes item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Apparel item"
+    },
+    {
+      "sender": "Sol de Janeiro",
+      "subject": "Congrats! \ud83c\udf89 You've got 10% off"
+    },
     {
       "sender": "GOAT",
       "subject": "TOP RELEASE ROUNDUP"
@@ -694,25 +710,23 @@ window.EMAIL_DATA = {
     {
       "sender": "MileagePlus Program",
       "subject": "Try Award Accelerator on your upcoming trip to Bogota"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "We\u2019ve saved your preorder meal selection"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\u2600\ufe0f TripTuesday is almost here! $99 roundtrip flights"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Apparel item"
-    },
-    {
-      "sender": "Chewy.com",
-      "subject": "Your Autoship order was delivered"
     }
   ],
   "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Shoes item",
+      "date": "2026-08-17",
+      "id": "1a010d91a0412290",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Apparel item",
+      "date": "2026-08-17",
+      "id": "1a010cea300340e4",
+      "sender": "Amazon.com"
+    },
     {
       "type": "delivery",
       "title": "Shipped: \u20662\u2069 Apparel and Arts & Crafts items",
