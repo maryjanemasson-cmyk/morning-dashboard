@@ -669,11 +669,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 17 Aug 2026"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Mon, 8/17 is ready to view"
     },
     {
       "sender": "LinkedIn",
