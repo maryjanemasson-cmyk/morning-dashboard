@@ -669,31 +669,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 Apparel and Arts & Crafts items"
-    },
-    {
-      "sender": "Mathnasium of Princeton",
-      "subject": "Payment Receipt from Mathnasium of Princeton"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20662\u2069 Coffee and Essentials items"
-    },
-    {
-      "sender": "IDnotify",
-      "subject": "Your Monthly Update From IDnotify"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Beauty item"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 17 Aug 2026"
     },
     {
       "sender": "LinkedIn",
@@ -710,6 +690,26 @@ window.EMAIL_DATA = {
     {
       "sender": "Trip.com",
       "subject": "\u2600\ufe0f TripTuesday is almost here! $99 roundtrip flights"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Apparel item"
+    },
+    {
+      "sender": "Chewy.com",
+      "subject": "Your Autoship order was delivered"
+    },
+    {
+      "sender": "The midterm election via Evan Brooks from TRC",
+      "subject": "Do this before November 3"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Your FORM BY TWO receipt [#1046-8174]"
+    },
+    {
+      "sender": "Iran raids exposed - Power Field Notes",
+      "subject": "The system behind the Iran strike \ud83d\udd0d "
     }
   ],
   "items": [
