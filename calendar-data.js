@@ -669,8 +669,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 Coffee and Essentials items"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 Apparel and Arts & Crafts items"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Apparel item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Essentials item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Beauty item"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "You're invited: Experience our new A321XLR with CEO Scott Kirby"
+    },
     {
       "sender": "Disney Gift Card",
       "subject": "Give the Gift of Disney magic!"
@@ -686,30 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Rat & Boa USA",
       "subject": "September Weddings, Sorted"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "US Open Day Session (Arthur Ashe) tickets are still available \u2014 make them yours"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Try Award Accelerator on your upcoming trip to Bogota"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "We\u2019ve saved your preorder meal selection"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\u2600\ufe0f TripTuesday is almost here! $99 roundtrip flights"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Apparel item"
     }
   ],
   "items": [
