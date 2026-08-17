@@ -669,11 +669,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Evan Brooks from TRC",
-      "subject": "Trading tools don\u2019t need to be complicated."
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Try Award Accelerator on your upcoming trip to Bogota"
     },
     {
       "sender": "United Airlines",
@@ -700,16 +704,12 @@ window.EMAIL_DATA = {
       "subject": "Your FORM BY TWO receipt [#1046-8174]"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO Class Confirmation"
-    },
-    {
       "sender": "Iran raids exposed - Power Field Notes",
       "subject": "The system behind the Iran strike \ud83d\udd0d "
     },
     {
-      "sender": "HPDirector@nassautennis.net",
-      "subject": "Clinic Registration Request Received"
+      "sender": "classmanager@nassautennis.net",
+      "subject": "Nassau Tennis Cart Payment Confirmation"
     }
   ],
   "items": [
