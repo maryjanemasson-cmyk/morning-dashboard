@@ -669,23 +669,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Hear the ocean calling? \ud83c\udf0a"
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Shanghai Dumpling House"
     },
     {
-      "sender": "& Other Stories",
-      "subject": "The new trenches"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Shoes item"
     },
     {
-      "sender": "Shop",
-      "subject": "Archies Footwear | USA & Alice Lane Home Collection just stocked up \u2014 here's what to grab \ud83e\udd29"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Apparel item"
     },
     {
-      "sender": "PURE Insurance",
-      "subject": "There may be a gap in your home's flood protection"
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20661\u2069 Essentials item"
     },
     {
       "sender": "Mary Jane HINRICHS",
@@ -726,6 +726,18 @@ window.EMAIL_DATA = {
       "date": "2026-08-18",
       "id": "1a012a7dae44f2d3",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "class",
+      "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
+      "name": "LAGREE - ALL LEVELS",
+      "date": "2026-08-19",
+      "time": "17:00",
+      "duration_min": 45,
+      "location": "FORM BY TWO",
+      "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
+      "id": "1a016aeadbea07a8",
+      "sender": "FORM BY TWO"
     },
     {
       "type": "class",
