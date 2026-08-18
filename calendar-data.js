@@ -669,8 +669,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Hear the ocean calling? \ud83c\udf0a"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "The new trenches"
+    },
+    {
+      "sender": "Shop",
+      "subject": "Archies Footwear | USA & Alice Lane Home Collection just stocked up \u2014 here's what to grab \ud83e\udd29"
+    },
+    {
+      "sender": "PURE Insurance",
+      "subject": "There may be a gap in your home's flood protection"
+    },
     {
       "sender": "Mary Jane HINRICHS",
       "subject": "Accepted: [EXTERNAL] Invitation: MJ at theatre with Sharon @ Fri Oct 9, 2026 7:30pm - 10:30pm (EDT) (mary.jane.hinrichs@ipsen.com)"
@@ -694,22 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Re: Etsy Conversation with JUN YANG from AtlasHandmadeClub about Order #4141045281"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Coffee and Essentials items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Apparel and Arts & Crafts items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Apparel item"
     }
   ],
   "items": [
