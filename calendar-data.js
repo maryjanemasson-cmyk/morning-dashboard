@@ -669,8 +669,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 18 Aug 2026"
+    },
     {
       "sender": "Etsy",
       "subject": "Re: Etsy Conversation with JUN YANG from AtlasHandmadeClub about Order #4141045281"
@@ -706,10 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20661\u2069 Shoes item"
-    },
-    {
-      "sender": "Sol de Janeiro",
-      "subject": "Congrats! \ud83c\udf89 You've got 10% off"
     }
   ],
   "items": [
