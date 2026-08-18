@@ -669,8 +669,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Christian Hinrichs",
+      "subject": "Re: wifi"
+    },
+    {
+      "sender": "Julia from Travefy",
+      "subject": "Welcome to Travefy \u2014 here's where to start"
+    },
+    {
+      "sender": "Thomson Reuters",
+      "subject": "Request LNAZCZEBZZ Completed"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "The Lightweight Wool Polo"
+    },
     {
       "sender": "Etsy",
       "subject": "Re: Etsy Conversation with JUN YANG from AtlasHandmadeClub about Order #4141045281"
@@ -694,22 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Beauty item"
-    },
-    {
-      "sender": "Disney Gift Card",
-      "subject": "Give the Gift of Disney magic!"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Shoes item"
-    },
-    {
-      "sender": "Sol de Janeiro",
-      "subject": "Congrats! \ud83c\udf89 You've got 10% off"
     }
   ],
   "items": [
