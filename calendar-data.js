@@ -669,8 +669,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "Agarwal, Shailesh,MD",
+      "subject": "Pioglitazone for FOP"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 Coffee and Essentials items"
@@ -690,10 +694,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20661\u2069 Beauty item"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "You're invited: Experience our new A321XLR with CEO Scott Kirby"
     },
     {
       "sender": "Disney Gift Card",
