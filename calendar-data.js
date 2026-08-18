@@ -669,19 +669,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Christian Hinrichs",
-      "subject": "Re: wifi"
+      "sender": "Lifemiles",
+      "subject": "New login"
     },
     {
-      "sender": "Julia from Travefy",
-      "subject": "Welcome to Travefy \u2014 here's where to start"
+      "sender": "Lifemiles",
+      "subject": "You have configured 2-Step Verification"
     },
     {
-      "sender": "Thomson Reuters",
-      "subject": "Request LNAZCZEBZZ Completed"
+      "sender": "Lifemiles",
+      "subject": "Welcome to Lifemiles!"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "NOW 50% OFF"
+    },
+    {
+      "sender": "Mary Jane HINRICHS",
+      "subject": "Accepted: [EXTERNAL] Invitation: MJ at theatre with Sharon @ Fri Oct 9, 2026 7:30pm - 10:30pm (EDT) (mary.jane.hinrichs@ipsen.com)"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "Check off your packing list"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "It\u2019s Back\u2014 The Iconic Raffia Crochet Clutch Is Here"
+    },
+    {
+      "sender": "Waze",
+      "subject": "What\u2019s New in Waze"
     },
     {
       "sender": "Almina Concept",
@@ -690,26 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Re: Etsy Conversation with JUN YANG from AtlasHandmadeClub about Order #4141045281"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Essentials item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Coffee and Essentials items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Apparel and Arts & Crafts items"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Apparel item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Essentials item"
     }
   ],
   "items": [
