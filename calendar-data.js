@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-08-17T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-17T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
     "summary": "LAGREE - ALL LEVELS",
     "location": "FORM BY TWO",
     "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/1a0017e2d1213e67",
@@ -251,6 +240,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-08-31T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-31T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -672,8 +672,12 @@ window.EMAIL_DATA = {
   "unreadCount": 11,
   "threads": [
     {
-      "sender": "Agarwal, Shailesh,MD",
-      "subject": "Pioglitazone for FOP"
+      "sender": "Etsy",
+      "subject": "Re: Etsy Conversation with JUN YANG from AtlasHandmadeClub about Order #4141045281"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Essentials item"
     },
     {
       "sender": "Amazon.com",
@@ -706,46 +710,28 @@ window.EMAIL_DATA = {
     {
       "sender": "Sol de Janeiro",
       "subject": "Congrats! \ud83c\udf89 You've got 10% off"
-    },
-    {
-      "sender": "Rat & Boa USA",
-      "subject": "September Weddings, Sorted"
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Shoes item",
-      "date": "2026-08-17",
-      "id": "1a010d91a0412290",
+      "title": "Shipped: \u20661\u2069 Essentials item",
+      "date": "2026-08-18",
+      "id": "1a01367bd503d544",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
       "title": "Shipped: \u20661\u2069 Apparel item",
-      "date": "2026-08-17",
-      "id": "1a010cea300340e4",
+      "date": "2026-08-18",
+      "id": "1a012f2eb44f6fbd",
       "sender": "Amazon.com"
     },
     {
       "type": "delivery",
-      "title": "Shipped: \u20662\u2069 Apparel and Arts & Crafts items",
-      "date": "2026-08-17",
-      "id": "1a00eb1329fb910d",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20662\u2069 Coffee and Essentials items",
-      "date": "2026-08-17",
-      "id": "1a00e4934e0bbad4",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Beauty item",
-      "date": "2026-08-17",
-      "id": "1a00dc6f22d95857",
+      "title": "Shipped: \u20662\u2069 Cosmetics items",
+      "date": "2026-08-18",
+      "id": "1a012a7dae44f2d3",
       "sender": "Amazon.com"
     },
     {
