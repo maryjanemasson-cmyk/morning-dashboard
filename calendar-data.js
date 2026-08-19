@@ -669,11 +669,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "DoorDash",
-      "subject": "Details of your no-contact delivery from Shanghai Dumpling House"
+      "sender": "Amazon.com",
+      "subject": "Ordered: \u20661\u2069 Health Care item"
+    },
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Pinterest"
     },
     {
       "sender": "Amazon.com",
@@ -706,10 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Almina Concept",
       "subject": "The Lightweight Wool Polo"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Re: Etsy Conversation with JUN YANG from AtlasHandmadeClub about Order #4141045281"
     }
   ],
   "items": [
