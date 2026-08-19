@@ -669,39 +669,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20663\u2069 Personal Care items"
+      "sender": "Shameless Snacks",
+      "subject": "\ud83d\udc40 Don't read this (unless you like free gifts)"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20661\u2069 Health Care item"
+      "sender": "British Airways",
+      "subject": "We're updating our Privacy Policy"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Grok xAI",
+      "subject": "Your receipt from Grok xAI #2574-7375"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: \u20661\u2069 Health Care item"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 8/19 is ready to view"
     },
     {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Pinterest"
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Shoes item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Apparel item"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20661\u2069 Essentials item"
+      "sender": "Medium Daily Digest",
+      "subject": "How did YouTube engineers build CI/CD for data pipelines? | Vu Trinh in Data Engineer Things"
     },
     {
       "sender": "Mary Jane HINRICHS",
@@ -710,6 +702,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Moda Operandi",
       "subject": "Check off your packing list"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "It\u2019s Back\u2014 The Iconic Raffia Crochet Clutch Is Here"
+    },
+    {
+      "sender": "Waze",
+      "subject": "What\u2019s New in Waze"
     }
   ],
   "items": [
@@ -724,13 +724,6 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
       "id": "1a016aeadbea07a8",
       "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Health Care item",
-      "date": "2026-08-19",
-      "id": "1a0188c50ce8e99b",
-      "sender": "Amazon.com"
     },
     {
       "type": "class",
