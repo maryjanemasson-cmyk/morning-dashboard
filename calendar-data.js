@@ -669,23 +669,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Shameless Snacks",
-      "subject": "\ud83d\udc40 Don't read this (unless you like free gifts)"
+      "sender": "Julia from Travefy",
+      "subject": "The experience starts before they even pack"
     },
     {
-      "sender": "British Airways",
-      "subject": "We're updating our Privacy Policy"
+      "sender": "Schoolhouse",
+      "subject": "This bestseller is back in stock"
     },
     {
-      "sender": "Grok xAI",
-      "subject": "Your receipt from Grok xAI #2574-7375"
+      "sender": "Optery",
+      "subject": "[Alert] Your Info Was Found on CyberBackgroundChecks, PeopleFinders, National Public Data and 49 other sites"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 8/19 is ready to view"
+      "sender": "Moda Operandi",
+      "subject": "Change of seasons \ud83c\udf43"
     },
     {
       "sender": "Unroll.Me",
