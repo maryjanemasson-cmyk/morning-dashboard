@@ -669,47 +669,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Sephora",
-      "subject": "You have to act fast to grab this rhode pick"
+      "sender": "FORM BY TWO",
+      "subject": "Congratulations! 25 classes at FORM BYTWO - that deserves a celebration!!"
+    },
+    {
+      "sender": "Tiger Gao",
+      "subject": "Health Forms Required \u2013 Returning Students"
+    },
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "A new financial confirmation is available online"
     },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20663\u2069 Personal Care items"
     },
     {
-      "sender": "GreenDrop Information",
-      "subject": "GreenDrop home pickup will be in your area"
-    },
-    {
-      "sender": "Danielle on Facebook",
-      "subject": "For you: Your friend Danielle Townsley shared Bill Burnett's post"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "4 job search filters that give you an edge."
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "A grand, magical adventure awaits on the big screen!"
-    },
-    {
       "sender": "D\u00e9 Rococo",
       "subject": "a new york minute"
     },
     {
-      "sender": "DONNI.",
-      "subject": "Discover: The Best-Selling Bottoms"
+      "sender": "Reformation",
+      "subject": "THE ENYA WEDGE"
     },
     {
-      "sender": "avianca",
-      "subject": "AUK9PS | \u2714\ufe0f Tips for your next flight to Cartagena"
+      "sender": "Design Decor",
+      "subject": "Mary jane, Bring Effortless Joy Back Into Your Space"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "New Collection Highlights"
+      "sender": "Etsy",
+      "subject": "This one\u2019s for you \ud83e\udd29"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "SHOP UPDATE: BACK TO SCHOOL"
+    },
+    {
+      "sender": "Mayra Monsalve",
+      "subject": "Ends Tomorrow: Your KHAITE F/W 2026 Early Access"
     }
   ],
   "items": [

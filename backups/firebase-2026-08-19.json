@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-19T15:00:14",
+    "captured_at": "2026-08-19T17:00:16",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -58809,6 +58809,26 @@
     {
       "done": true,
       "text": "cream cheese"
+    },
+    {
+      "done": false,
+      "text": "4 (4-6 ounce)  salmon filets"
+    },
+    {
+      "done": false,
+      "text": "2-3 tablespoons spicy curry powder  ((homemade in notes) )"
+    },
+    {
+      "done": false,
+      "text": "1 tablespoon fresh grated ginger"
+    },
+    {
+      "done": false,
+      "text": "1 1/2 cups chopped broccoli"
+    },
+    {
+      "done": false,
+      "text": "2 cups canned full-fat coconut milk"
     }
   ],
   "groceries": null,
