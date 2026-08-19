@@ -673,15 +673,15 @@ window.EMAIL_DATA = {
   "threads": [
     {
       "sender": "Amazon.com",
+      "subject": "Ordered: \u20663\u2069 Personal Care items"
+    },
+    {
+      "sender": "Amazon.com",
       "subject": "Shipped: \u20661\u2069 Health Care item"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Alex from Holafly",
-      "subject": "Are you winging your trip... or your connection?"
     },
     {
       "sender": "Amazon.com",
