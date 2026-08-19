@@ -669,8 +669,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20661\u2069 Health Care item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Alex from Holafly",
+      "subject": "Are you winging your trip... or your connection?"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered: \u20661\u2069 Health Care item"
@@ -698,35 +710,9 @@ window.EMAIL_DATA = {
     {
       "sender": "Moda Operandi",
       "subject": "Check off your packing list"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "It\u2019s Back\u2014 The Iconic Raffia Crochet Clutch Is Here"
-    },
-    {
-      "sender": "Waze",
-      "subject": "What\u2019s New in Waze"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "The Lightweight Wool Polo"
     }
   ],
   "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20661\u2069 Essentials item",
-      "date": "2026-08-18",
-      "id": "1a01367bd503d544",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20662\u2069 Cosmetics items",
-      "date": "2026-08-18",
-      "id": "1a012a7dae44f2d3",
-      "sender": "Amazon.com"
-    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
@@ -738,6 +724,13 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
       "id": "1a016aeadbea07a8",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20661\u2069 Health Care item",
+      "date": "2026-08-19",
+      "id": "1a0188c50ce8e99b",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
