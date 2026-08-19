@@ -669,8 +669,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Sephora",
+      "subject": "You have to act fast to grab this rhode pick"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: \u20663\u2069 Personal Care items"
+    },
+    {
+      "sender": "GreenDrop Information",
+      "subject": "GreenDrop home pickup will be in your area"
+    },
+    {
+      "sender": "Danielle on Facebook",
+      "subject": "For you: Your friend Danielle Townsley shared Bill Burnett's post"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "4 job search filters that give you an edge."
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "A grand, magical adventure awaits on the big screen!"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "a new york minute"
+    },
+    {
+      "sender": "DONNI.",
+      "subject": "Discover: The Best-Selling Bottoms"
+    },
     {
       "sender": "avianca",
       "subject": "AUK9PS | \u2714\ufe0f Tips for your next flight to Cartagena"
@@ -678,38 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pini Parma",
       "subject": "New Collection Highlights"
-    },
-    {
-      "sender": "Tiger Gao",
-      "subject": "Health Forms Required \u2013 New Students"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "THE ENYA WEDGE"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Mary jane, Bring Effortless Joy Back Into Your Space"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "This one\u2019s for you \ud83e\udd29"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "SHOP UPDATE: BACK TO SCHOOL"
-    },
-    {
-      "sender": "Mayra Monsalve",
-      "subject": "Ends Tomorrow: Your KHAITE F/W 2026 Early Access"
-    },
-    {
-      "sender": "Julia from Travefy",
-      "subject": "The experience starts before they even pack"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "This bestseller is back in stock"
     }
   ],
   "items": [
@@ -724,6 +724,13 @@ window.EMAIL_DATA = {
       "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
       "id": "1a016aeadbea07a8",
       "sender": "FORM BY TWO"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: \u20663\u2069 Personal Care items",
+      "date": "2026-08-19",
+      "id": "1a01b318497081f8",
+      "sender": "Amazon.com"
     },
     {
       "type": "class",
