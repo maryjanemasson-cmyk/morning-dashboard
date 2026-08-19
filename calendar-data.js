@@ -669,8 +669,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "avianca",
+      "subject": "AUK9PS | \u2714\ufe0f Tips for your next flight to Cartagena"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "New Collection Highlights"
+    },
+    {
+      "sender": "Tiger Gao",
+      "subject": "Health Forms Required \u2013 New Students"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "THE ENYA WEDGE"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Mary jane, Bring Effortless Joy Back Into Your Space"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "This one\u2019s for you \ud83e\udd29"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "SHOP UPDATE: BACK TO SCHOOL"
+    },
+    {
+      "sender": "Mayra Monsalve",
+      "subject": "Ends Tomorrow: Your KHAITE F/W 2026 Early Access"
+    },
     {
       "sender": "Julia from Travefy",
       "subject": "The experience starts before they even pack"
@@ -678,38 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Schoolhouse",
       "subject": "This bestseller is back in stock"
-    },
-    {
-      "sender": "Optery",
-      "subject": "[Alert] Your Info Was Found on CyberBackgroundChecks, PeopleFinders, National Public Data and 49 other sites"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "Change of seasons \ud83c\udf43"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "How did YouTube engineers build CI/CD for data pipelines? | Vu Trinh in Data Engineer Things"
-    },
-    {
-      "sender": "Mary Jane HINRICHS",
-      "subject": "Accepted: [EXTERNAL] Invitation: MJ at theatre with Sharon @ Fri Oct 9, 2026 7:30pm - 10:30pm (EDT) (mary.jane.hinrichs@ipsen.com)"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "Check off your packing list"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "It\u2019s Back\u2014 The Iconic Raffia Crochet Clutch Is Here"
-    },
-    {
-      "sender": "Waze",
-      "subject": "What\u2019s New in Waze"
     }
   ],
   "items": [
