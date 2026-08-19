@@ -669,8 +669,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20662\u2069 Cosmetics items"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "FORM BY TWO | Write a review"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: \u20663\u2069 Personal Care items"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Reminder: Preorder your meal for your flight to Bogot\u00e1 (BOG) on August 21"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Congratulations! 25 classes at FORM BYTWO - that deserves a celebration!!"
@@ -694,22 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "THE ENYA WEDGE"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Mary jane, Bring Effortless Joy Back Into Your Space"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "This one\u2019s for you \ud83e\udd29"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "SHOP UPDATE: BACK TO SCHOOL"
-    },
-    {
-      "sender": "Mayra Monsalve",
-      "subject": "Ends Tomorrow: Your KHAITE F/W 2026 Early Access"
     }
   ],
   "items": [
