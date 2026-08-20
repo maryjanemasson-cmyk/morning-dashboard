@@ -55,6 +55,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Flight to Cartagena Remember that routes with Business Class are operated on narrow body (A320) or wide body (B787) aircraft. (AV 9786)",
+    "location": "Bogota BOG",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNHxATtufG6gtUvPiT2wBea4BLyai1Aay8\n",
+    "startTime": "2026-08-22T13:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-22T14:35:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Reserva El Chato para 4 persona/s",
     "location": "Calle 65 # 4-76 ",
     "description": "Reserva El Chato",
@@ -658,8 +669,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "American Express",
+      "subject": "Merchant credit/refund was issued to your account"
+    },
     {
       "sender": "Shameless Snacks",
       "subject": "Hi. It's your gut. We need to talk \ud83e\udec3"
@@ -695,10 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "D\u00e9 Rococo",
       "subject": "late summer romance"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "Mary Jane, earn 160K points and up to $100 in Food & Beverage Rewards"
     }
   ],
   "items": [
