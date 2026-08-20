@@ -658,47 +658,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "Enza Costa",
-      "subject": "Soft Layering"
+      "sender": "New York Jets",
+      "subject": "Enter For A Chance To Win A Nike Gift Card + Autographed Helmet!"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "Class Reminder for Lagree - All Levels"
+      "sender": "Julia from Travefy",
+      "subject": "Your clients are going to love this"
     },
     {
-      "sender": "Christina Marsigliese",
-      "subject": "1 cup of Greek yogurt \u2192 12 healthy berry muffins."
+      "sender": "Hotels.com",
+      "subject": "Drop everything\u2014these cities are calling"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Thu, 8/20 is ready to view"
+      "sender": "Tiger Gao",
+      "subject": "Re: Photo for Key Card"
     },
     {
-      "sender": "Team Cloaked",
-      "subject": "Take the next step to protect your phone"
+      "sender": "Christian Hinrichs",
+      "subject": "United Airlines flight 790 to San Diego (NH24GW)"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "Walpole Outdoors",
+      "subject": "Shop the Look: Timeless Curb Appeal"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "Stop Mixing CDM, Ontology, and Knowledge Graphs | Thilo Hermann"
+      "sender": "Enterprise Plus",
+      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus August eStatement"
     },
     {
-      "sender": "Dropbox",
-      "subject": "Mary Jane, your storage is almost full."
+      "sender": "Uber One",
+      "subject": "Save 10% on your next hotel stay"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 20 Aug 2026"
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Aug 13 2026"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Long Short"
+      "sender": "Design Decor",
+      "subject": "Designer favorites for your next project"
     }
   ],
   "items": [
