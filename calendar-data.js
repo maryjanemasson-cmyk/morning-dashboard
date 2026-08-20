@@ -658,23 +658,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Walgreens Pharmacy",
-      "subject": "We're Processing Your Auto Refill Order"
-    },
-    {
-      "sender": "Microsoft Rewards",
-      "subject": "The perks just keep coming"
+      "sender": "Google Store",
+      "subject": "Your Google Home Premium Standard (Home) subscription renewal"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "NOW LIVE: The Technical Funnel Neck Bomber.."
     },
     {
       "sender": "Amazon.com",
@@ -699,6 +691,14 @@ window.EMAIL_DATA = {
     {
       "sender": "A BATHING APE\u00ae",
       "subject": "SHOP UPDATE: BACK TO SCHOOL"
+    },
+    {
+      "sender": "Mayra Monsalve",
+      "subject": "Ends Tomorrow: Your KHAITE F/W 2026 Early Access"
+    },
+    {
+      "sender": "Julia from Travefy",
+      "subject": "The experience starts before they even pack"
     }
   ],
   "items": [
