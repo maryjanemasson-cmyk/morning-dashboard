@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "LAGREE - ALL LEVELS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/1a0017e2d1213e67",
-    "startTime": "2026-08-19T17:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-19T17:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
     "summary": "Stay at Grand Hyatt Bogot\u00e1",
     "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
@@ -669,69 +658,50 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Claude"
+      "sender": "Walgreens Pharmacy",
+      "subject": "We're Processing Your Auto Refill Order"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 2 new invitations"
+      "sender": "Microsoft Rewards",
+      "subject": "The perks just keep coming"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20662\u2069 Cosmetics items"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "FORM BY TWO | Write a review"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: \u20663\u2069 Personal Care items"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Reminder: Preorder your meal for your flight to Bogot\u00e1 (BOG) on August 21"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Congratulations! 25 classes at FORM BYTWO - that deserves a celebration!!"
-    },
-    {
-      "sender": "Tiger Gao",
-      "subject": "Health Forms Required \u2013 Returning Students"
-    },
-    {
-      "sender": "Ameriprise Financial",
-      "subject": "A new financial confirmation is available online"
+      "sender": "WAT THE BRAND",
+      "subject": "NOW LIVE: The Technical Funnel Neck Bomber.."
     },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20663\u2069 Personal Care items"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "a new york minute"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "THE ENYA WEDGE"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Mary jane, Bring Effortless Joy Back Into Your Space"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "This one\u2019s for you \ud83e\udd29"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "SHOP UPDATE: BACK TO SCHOOL"
     }
   ],
   "items": [
-    {
-      "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 5:00 PM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-19",
-      "time": "17:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-19|17:00|lagree - all levels",
-      "id": "1a016aeadbea07a8",
-      "sender": "FORM BY TWO"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: \u20663\u2069 Personal Care items",
-      "date": "2026-08-19",
-      "id": "1a01b318497081f8",
-      "sender": "Amazon.com"
-    },
     {
       "type": "class",
       "title": "LAGREE - ALL LEVELS \u00b7 8:00 AM",
