@@ -669,11 +669,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 32,
   "threads": [
     {
-      "sender": "American Express",
-      "subject": "Merchant credit/refund was issued to your account"
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your August 21 flight"
+    },
+    {
+      "sender": "Christian Hinrichs",
+      "subject": "Sponsor & Vintner Reception \u2014 V Foundation Boo-Yah"
+    },
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "Back In Stock"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "NOW LIVE: DL1961 x Olympia of Greece"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Shape the future of MileagePlus"
     },
     {
       "sender": "Shameless Snacks",
@@ -694,22 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Schoolhouse",
       "subject": "The Art of Organization"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "A FREE gift and a fun collectible for members"
-    },
-    {
-      "sender": "Expedia.com",
-      "subject": "Your hotel. Your flight. One great price."
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, don\u2019t miss out on a $400 bonus with an American Express\u00ae High Yield Savings Account."
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "late summer romance"
     }
   ],
   "items": [
