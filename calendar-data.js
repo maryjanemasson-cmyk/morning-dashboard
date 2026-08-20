@@ -658,8 +658,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Hi. It's your gut. We need to talk \ud83e\udec3"
+    },
+    {
+      "sender": "Zoom",
+      "subject": "Zoom back to school and save!"
+    },
     {
       "sender": "& Other Stories",
       "subject": "Meet the new arrivals"
@@ -685,20 +693,12 @@ window.EMAIL_DATA = {
       "subject": "Christian, don\u2019t miss out on a $400 bonus with an American Express\u00ae High Yield Savings Account."
     },
     {
-      "sender": "Eleanor Dath",
-      "subject": "RE: RECEIPT: Family Trip to Columbia"
-    },
-    {
       "sender": "D\u00e9 Rococo",
       "subject": "late summer romance"
     },
     {
       "sender": "IHG One Rewards",
       "subject": "Mary Jane, earn 160K points and up to $100 in Food & Beverage Rewards"
-    },
-    {
-      "sender": "New York Jets",
-      "subject": "Enter For A Chance To Win A Nike Gift Card + Autographed Helmet!"
     }
   ],
   "items": [
