@@ -658,47 +658,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 30,
   "threads": [
+    {
+      "sender": "& Other Stories",
+      "subject": "Meet the new arrivals"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "GREAT JEANS"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "The Art of Organization"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "A FREE gift and a fun collectible for members"
+    },
+    {
+      "sender": "Expedia.com",
+      "subject": "Your hotel. Your flight. One great price."
+    },
+    {
+      "sender": "American Express",
+      "subject": "Christian, don\u2019t miss out on a $400 bonus with an American Express\u00ae High Yield Savings Account."
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "RE: RECEIPT: Family Trip to Columbia"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "late summer romance"
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "Mary Jane, earn 160K points and up to $100 in Food & Beverage Rewards"
+    },
     {
       "sender": "New York Jets",
       "subject": "Enter For A Chance To Win A Nike Gift Card + Autographed Helmet!"
-    },
-    {
-      "sender": "Julia from Travefy",
-      "subject": "Your clients are going to love this"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Drop everything\u2014these cities are calling"
-    },
-    {
-      "sender": "Tiger Gao",
-      "subject": "Re: Photo for Key Card"
-    },
-    {
-      "sender": "Christian Hinrichs",
-      "subject": "United Airlines flight 790 to San Diego (NH24GW)"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Shop the Look: Timeless Curb Appeal"
-    },
-    {
-      "sender": "Enterprise Plus",
-      "subject": "Account Update: Mary Jane, Here's Your Enterprise Plus August eStatement"
-    },
-    {
-      "sender": "Uber One",
-      "subject": "Save 10% on your next hotel stay"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Aug 13 2026"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Designer favorites for your next project"
     }
   ],
   "items": [
