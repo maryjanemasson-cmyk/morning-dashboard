@@ -658,47 +658,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "Google Store",
-      "subject": "Your Google Home Premium Standard (Home) subscription renewal"
+      "sender": "Enza Costa",
+      "subject": "Soft Layering"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "FORM BY TWO",
+      "subject": "Class Reminder for Lagree - All Levels"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: \u20663\u2069 Personal Care items"
+      "sender": "Christina Marsigliese",
+      "subject": "1 cup of Greek yogurt \u2192 12 healthy berry muffins."
     },
     {
-      "sender": "D\u00e9 Rococo",
-      "subject": "a new york minute"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Thu, 8/20 is ready to view"
     },
     {
-      "sender": "Reformation",
-      "subject": "THE ENYA WEDGE"
+      "sender": "Team Cloaked",
+      "subject": "Take the next step to protect your phone"
     },
     {
-      "sender": "Design Decor",
-      "subject": "Mary jane, Bring Effortless Joy Back Into Your Space"
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     },
     {
-      "sender": "Etsy",
-      "subject": "This one\u2019s for you \ud83e\udd29"
+      "sender": "Medium Daily Digest",
+      "subject": "Stop Mixing CDM, Ontology, and Knowledge Graphs | Thilo Hermann"
     },
     {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "SHOP UPDATE: BACK TO SCHOOL"
+      "sender": "Dropbox",
+      "subject": "Mary Jane, your storage is almost full."
     },
     {
-      "sender": "Mayra Monsalve",
-      "subject": "Ends Tomorrow: Your KHAITE F/W 2026 Early Access"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 20 Aug 2026"
     },
     {
-      "sender": "Julia from Travefy",
-      "subject": "The experience starts before they even pack"
+      "sender": "Chan Luu",
+      "subject": "The Long Short"
     }
   ],
   "items": [
@@ -711,7 +711,7 @@ window.EMAIL_DATA = {
       "duration_min": 45,
       "location": "FORM BY TWO",
       "event_key": "form-by-two|2026-08-21|08:00|lagree - all levels",
-      "id": "1a00ba58b8d073cc",
+      "id": "1a01f0c8fe5d1cdc",
       "sender": "FORM BY TWO"
     }
   ]
