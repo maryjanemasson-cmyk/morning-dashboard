@@ -669,8 +669,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Claude"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 2 new invitations"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: \u20662\u2069 Cosmetics items"
@@ -702,14 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped: \u20663\u2069 Personal Care items"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "a new york minute"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "THE ENYA WEDGE"
     }
   ],
   "items": [
