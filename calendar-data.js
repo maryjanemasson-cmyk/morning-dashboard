@@ -22,6 +22,17 @@ window.CALENDAR_EVENTS = [
     "colorId": "10"
   },
   {
+    "summary": "Newark Airport Parking",
+    "location": "Newark Liberty International Airport, Terminal C Parking",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOtIcmACWps1bKdNB41q_4-WZBURWLA7bc\n",
+    "startTime": "2026-08-21T16:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-21T17:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Flight to Bogot\u00e1 (UA 268)",
     "location": "Newark EWR",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
@@ -672,24 +683,24 @@ window.EMAIL_DATA = {
   "unreadCount": 31,
   "threads": [
     {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Un lieu \u00e0 visiter \ud83c\udf1f\""
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 21 Aug 2026"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Booking Cancellation Confirmation"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $7,708.73 deposit was credited to your account."
-    },
-    {
-      "sender": "",
-      "subject": "Kearny Bank Loan payment sent as a check"
-    },
-    {
-      "sender": "Alex from Holafly",
-      "subject": "Mary, you're halfway to Miami"
     },
     {
       "sender": "Shameless Snacks",
