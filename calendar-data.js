@@ -713,43 +713,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "Turning Christopher\u2019s Legacy Into Progress for Children"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Your flight to Bogot\u00e1 is departing soon"
+    },
+    {
+      "sender": "Daniel Kim",
+      "subject": "Re: Invitation: C-Suite Dinner NYC / Sep 10"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Fall, easily elevated."
+    },
+    {
+      "sender": "GreenDrop Information",
+      "subject": "Last chance to schedule for next week\u2019s pickup!"
+    },
+    {
+      "sender": "DONNI.",
+      "subject": "Introducing: The Pique Short"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "A Note to Burned Out Moms at the End of Summer"
+    },
+    {
+      "sender": "Stephen from Bartender",
+      "subject": "\u201cI\u2019m back, and it\u2019s better than ever.\u201d"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Some things you'd like"
+    },
     {
       "sender": "chrislovesjulia",
       "subject": "9 things I'm NOT buying this fall"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
-    {
-      "sender": "Travefy Notification",
-      "subject": "You have unread chat messages on Family Trip to Colombia"
-    },
-    {
-      "sender": "IDnotify",
-      "subject": "Important: your Email Address was found on the Dark Web"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Hi. It's your gut. We need to talk \ud83e\udec3"
-    },
-    {
-      "sender": "Zoom",
-      "subject": "Zoom back to school and save!"
     }
   ],
   "items": [
