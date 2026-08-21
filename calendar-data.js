@@ -88,6 +88,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Dinner \u2014 El Chato (party of 4)",
+    "location": "Calle 65 # 4-76, Bogot\u00e1, Colombia",
+    "description": "Confirmed & prepaid reservation (Apparta) \u2014 party of 4, 7:30 PM.\nRestaurant: +57 321 971 8676 \u00b7 reservas@elchato.co",
+    "startTime": "2026-08-22T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-22T22:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Reserva El Chato para 4 persona/s",
     "location": "Calle 65 # 4-76 ",
     "description": "Reserva El Chato",
@@ -127,6 +138,17 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-08-27T20:30:00-04:00",
     "startDate": "",
     "endTime": "2026-08-27T23:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Dinner \u2014 Restaurante Carmen (party of 4)",
+    "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
+    "description": "Confirmed reservation (Google Reserve) \u2014 \u00c0 la Carte Menu, party of 4, 7:30 PM.\nRestaurant: +57 310 3949344\nCancellation: must cancel 24 hours prior for a refund.",
+    "startTime": "2026-08-27T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-27T22:30:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -193,6 +215,17 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-08-28T20:30:00-04:00",
     "startDate": "",
     "endTime": "2026-08-28T21:30:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Dinner \u2014 ALMA Restaurante \u00b7 Bar (party of 4)",
+    "location": "Cl. 36, Centro Hist\u00f3rico, Cartagena de Indias, Bol\u00edvar, Colombia",
+    "description": "Confirmed reservation (Google Reserve) \u2014 party of 4, 7:30 PM.\nRestaurant: +57 605 6810052",
+    "startTime": "2026-08-28T20:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-28T22:30:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -680,11 +713,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Four shops with that something special \ud83c\udf1f"
+      "sender": "chrislovesjulia",
+      "subject": "9 things I'm NOT buying this fall"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "Travefy Notification",
+      "subject": "You have unread chat messages on Family Trip to Colombia"
+    },
+    {
+      "sender": "IDnotify",
+      "subject": "Important: your Email Address was found on the Dark Web"
     },
     {
       "sender": "Chase",
@@ -705,22 +750,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Zoom",
       "subject": "Zoom back to school and save!"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Meet the new arrivals"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "GREAT JEANS"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "The Art of Organization"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "A FREE gift and a fun collectible for members"
     }
   ],
   "items": [
