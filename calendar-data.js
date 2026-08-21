@@ -680,27 +680,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 8/21 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Stop Designing for Delight, Start Designing for Anxiety Reduction | Rishi sharma in Bootcamp"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 21 Aug 2026"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Booking Cancellation Confirmation"
+      "sender": "Etsy",
+      "subject": "Four shops with that something special \ud83c\udf1f"
     },
     {
       "sender": "Chase",
@@ -721,6 +705,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Zoom",
       "subject": "Zoom back to school and save!"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Meet the new arrivals"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "GREAT JEANS"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "The Art of Organization"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "A FREE gift and a fun collectible for members"
     }
   ],
   "items": [
