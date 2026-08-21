@@ -724,8 +724,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "SportsEngine",
+      "subject": "Back-to-School Prep for Stronger, Healthier Athletes"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "What does your strongest week look like?"
+    },
+    {
+      "sender": "Life360",
+      "subject": "Keep track of the things you love"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83d\ude31 Insidious chills meet PAW Patrol dino adventure"
+    },
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
@@ -749,22 +765,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pediatric Brain Tumor Foundation",
       "subject": "Turning Christopher\u2019s Legacy Into Progress for Children"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Your flight to Bogot\u00e1 is departing soon"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Fall, easily elevated."
-    },
-    {
-      "sender": "GreenDrop Information",
-      "subject": "Last chance to schedule for next week\u2019s pickup!"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "Introducing: The Pique Short"
     }
   ],
   "items": [
