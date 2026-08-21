@@ -110,6 +110,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Flight to Armenia (LA 4292)",
+    "location": "Bogot\u00e1 BOG",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMv27QkFIhKzHef66_uTeQqfa5qDJ52dVI\n",
+    "startTime": "2026-08-23T14:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-23T15:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -713,8 +724,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Now boarding your flight to Bogot\u00e1 at Gate C86"
+    },
+    {
+      "sender": "Team Cloaked",
+      "subject": "Cloaked VPN just got a major upgrade"
+    },
+    {
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Your scroll upgrade"
+    },
+    {
+      "sender": "LATAM Airlines",
+      "subject": "Aqu\u00ed est\u00e1 la tarjeta de embarque para Armenia"
+    },
     {
       "sender": "Pediatric Brain Tumor Foundation",
       "subject": "Turning Christopher\u2019s Legacy Into Progress for Children"
@@ -722,10 +753,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "Your flight to Bogot\u00e1 is departing soon"
-    },
-    {
-      "sender": "Daniel Kim",
-      "subject": "Re: Invitation: C-Suite Dinner NYC / Sep 10"
     },
     {
       "sender": "Design Decor",
@@ -738,22 +765,6 @@ window.EMAIL_DATA = {
     {
       "sender": "DONNI.",
       "subject": "Introducing: The Pique Short"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "A Note to Burned Out Moms at the End of Summer"
-    },
-    {
-      "sender": "Stephen from Bartender",
-      "subject": "\u201cI\u2019m back, and it\u2019s better than ever.\u201d"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Some things you'd like"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "9 things I'm NOT buying this fall"
     }
   ],
   "items": [
