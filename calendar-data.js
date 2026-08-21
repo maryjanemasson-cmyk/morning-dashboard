@@ -669,8 +669,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 31,
   "threads": [
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Un lieu \u00e0 visiter \ud83c\udf1f\""
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $7,708.73 deposit was credited to your account."
+    },
+    {
+      "sender": "",
+      "subject": "Kearny Bank Loan payment sent as a check"
+    },
+    {
+      "sender": "Alex from Holafly",
+      "subject": "Mary, you're halfway to Miami"
+    },
     {
       "sender": "Shameless Snacks",
       "subject": "Hi. It's your gut. We need to talk \ud83e\udec3"
@@ -690,26 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Schoolhouse",
       "subject": "The Art of Organization"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "A FREE gift and a fun collectible for members"
-    },
-    {
-      "sender": "Expedia.com",
-      "subject": "Your hotel. Your flight. One great price."
-    },
-    {
-      "sender": "American Express",
-      "subject": "Christian, don\u2019t miss out on a $400 bonus with an American Express\u00ae High Yield Savings Account."
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "late summer romance"
-    },
-    {
-      "sender": "IHG One Rewards",
-      "subject": "Mary Jane, earn 160K points and up to $100 in Food & Beverage Rewards"
     }
   ],
   "items": [
