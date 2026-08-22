@@ -691,8 +691,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "Horizon BCBSNJ Member Services",
+      "subject": "Christian, your claim has been processed"
+    },
     {
       "sender": "Grand Hyatt",
       "subject": "Reminder of Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
@@ -728,10 +732,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Now boarding your flight to Bogot\u00e1 at Gate C86"
     }
   ],
   "items": []
