@@ -691,12 +691,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 33,
+  "unreadCount": 23,
   "threads": [
-    {
-      "sender": "Etsy",
-      "subject": "On-the-rise summer trends \ud83d\udcc8"
-    },
     {
       "sender": "Schoolhouse",
       "subject": "The Schoolhouse Shortlist"
@@ -710,16 +706,8 @@ window.EMAIL_DATA = {
       "subject": "BAPE\u00ae x MICKEY & FRIENDS COLLECTION NOW LIVE"
     },
     {
-      "sender": "E-ZPass New Jersey Customer Service",
-      "subject": "E-ZPass Successful Auto-Replenishment"
-    },
-    {
       "sender": "PayPal",
       "subject": "Spotify USA Inc: $23.45\u00a0USD"
-    },
-    {
-      "sender": "GOAT",
-      "subject": "Air Jordan 3 Retro 'Laser Palomino' Out Now"
     },
     {
       "sender": "Washington University in St. Louis",
@@ -732,6 +720,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Eleanor Dath",
       "subject": "RE: RECEIPT: Family Trip to Columbia"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Felted Wool Field Shirt and Chore Coat"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Studio McGee turns on the charm"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": []
