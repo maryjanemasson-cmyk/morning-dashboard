@@ -11,39 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "LAGREE - ALL LEVELS",
-    "location": "FORM BY TWO",
-    "description": "Auto-added from email by morning-dashboard.\nGmail message: https://mail.google.com/mail/u/0/#all/1a00ba58b8d073cc",
-    "startTime": "2026-08-21T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-21T08:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "10"
-  },
-  {
-    "summary": "Newark Airport Parking",
-    "location": "Newark Liberty International Airport, Terminal C Parking",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOtIcmACWps1bKdNB41q_4-WZBURWLA7bc\n",
-    "startTime": "2026-08-21T16:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-21T17:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Flight to Bogot\u00e1 (UA 268)",
-    "location": "Newark EWR",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
-    "startTime": "2026-08-21T17:10:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-21T23:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Stay at Sofitel Bar\u00fa Cartagena Beach Resort",
     "location": "Sector Porto Nao km 7 Isla de Bar\u00fa Cartagena de Indias 00 130017 CO",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPqGjlEBDejZb-cgUxKjeu_WAA2LdZ5RgY\n",
@@ -724,8 +691,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "Grand Hyatt",
+      "subject": "Reminder of Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Lydia from Claude Code",
+      "subject": "This week in Claude Code: /design, Concise output style, and more"
+    },
     {
       "sender": "NBC",
       "subject": "The Latest from NBC"
@@ -753,32 +732,7 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "Now boarding your flight to Bogot\u00e1 at Gate C86"
-    },
-    {
-      "sender": "Team Cloaked",
-      "subject": "Cloaked VPN just got a major upgrade"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Your scroll upgrade"
-    },
-    {
-      "sender": "LATAM Airlines",
-      "subject": "Aqu\u00ed est\u00e1 la tarjeta de embarque para Armenia"
     }
   ],
-  "items": [
-    {
-      "type": "class",
-      "title": "LAGREE - ALL LEVELS \u00b7 8:00 AM",
-      "name": "LAGREE - ALL LEVELS",
-      "date": "2026-08-21",
-      "time": "08:00",
-      "duration_min": 45,
-      "location": "FORM BY TWO",
-      "event_key": "form-by-two|2026-08-21|08:00|lagree - all levels",
-      "id": "1a01f0c8fe5d1cdc",
-      "sender": "FORM BY TWO"
-    }
-  ]
+  "items": []
 };
