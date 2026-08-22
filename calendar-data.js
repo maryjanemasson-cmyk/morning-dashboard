@@ -691,35 +691,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "D\u00e9 Rococo",
-      "subject": "a visual diary"
+      "sender": "Chloe at Sur La Table",
+      "subject": "Mary, your kitchen upgrade starts here\u2014up to 60% off"
     },
     {
       "sender": "United Airlines",
       "subject": "Tell us how we did"
     },
     {
-      "sender": "PNCBank_Statements@pnc.com",
-      "subject": "View your PNC Bank online statement"
-    },
-    {
       "sender": "Schoolhouse",
       "subject": "The Schoolhouse Shortlist"
     },
     {
-      "sender": "",
-      "subject": "Payment date for Kearny Bank Loan changed"
-    },
-    {
       "sender": "A BATHING APE\u00ae",
       "subject": "BAPE\u00ae x MICKEY & FRIENDS COLLECTION NOW LIVE"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Spotify USA Inc: $23.45\u00a0USD"
     },
     {
       "sender": "Washington University in St. Louis",
@@ -732,6 +720,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Eleanor Dath",
       "subject": "RE: RECEIPT: Family Trip to Columbia"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Felted Wool Field Shirt and Chore Coat"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Studio McGee turns on the charm"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": []
