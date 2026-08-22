@@ -691,47 +691,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 33,
   "threads": [
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sat, 8/22 is ready to view"
+      "sender": "E-ZPass New Jersey Customer Service",
+      "subject": "E-ZPass Successful Auto-Replenishment"
+    },
+    {
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "I stopped dressing like an airport slob"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Spotify USA Inc: $23.45\u00a0USD"
+    },
+    {
+      "sender": "GOAT",
+      "subject": "Air Jordan 3 Retro 'Laser Palomino' Out Now"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "At WashU, we pursue the big questions"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "These tennis-themed bakes are grand slams"
+    },
+    {
+      "sender": "Eleanor Dath",
+      "subject": "RE: RECEIPT: Family Trip to Columbia"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Felted Wool Field Shirt and Chore Coat"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Studio McGee turns on the charm"
     },
     {
       "sender": "Unroll.Me",
       "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Quantum entanglement is far stranger than you\u2019ve been told | Chris Ferrie"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Farewell to Summer Sale"
-    },
-    {
-      "sender": "Horizon BCBSNJ Member Services",
-      "subject": "Christian, your claim has been processed"
-    },
-    {
-      "sender": "Grand Hyatt",
-      "subject": "Reminder of Your Upcoming Stay at Grand Hyatt Bogot\u00e1"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Lydia from Claude Code",
-      "subject": "This week in Claude Code: /design, Concise output style, and more"
-    },
-    {
-      "sender": "NBC",
-      "subject": "The Latest from NBC"
-    },
-    {
-      "sender": "SportsEngine",
-      "subject": "Back-to-School Prep for Stronger, Healthier Athletes"
     }
   ],
   "items": []
