@@ -724,8 +724,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "NBC",
+      "subject": "The Latest from NBC"
+    },
     {
       "sender": "SportsEngine",
       "subject": "Back-to-School Prep for Stronger, Healthier Athletes"
@@ -761,10 +765,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LATAM Airlines",
       "subject": "Aqu\u00ed est\u00e1 la tarjeta de embarque para Armenia"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "Turning Christopher\u2019s Legacy Into Progress for Children"
     }
   ],
   "items": [
