@@ -691,8 +691,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "a visual diary"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Tell us how we did"
+    },
+    {
+      "sender": "PNCBank_Statements@pnc.com",
+      "subject": "View your PNC Bank online statement"
+    },
     {
       "sender": "Schoolhouse",
       "subject": "The Schoolhouse Shortlist"
@@ -720,18 +732,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Eleanor Dath",
       "subject": "RE: RECEIPT: Family Trip to Columbia"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Felted Wool Field Shirt and Chore Coat"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Studio McGee turns on the charm"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": []
