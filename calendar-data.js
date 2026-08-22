@@ -691,8 +691,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 28,
   "threads": [
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 8/22 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Quantum entanglement is far stranger than you\u2019ve been told | Chris Ferrie"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Farewell to Summer Sale"
+    },
     {
       "sender": "Horizon BCBSNJ Member Services",
       "subject": "Christian, your claim has been processed"
@@ -716,22 +732,6 @@ window.EMAIL_DATA = {
     {
       "sender": "SportsEngine",
       "subject": "Back-to-School Prep for Stronger, Healthier Athletes"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "What does your strongest week look like?"
-    },
-    {
-      "sender": "Life360",
-      "subject": "Keep track of the things you love"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83d\ude31 Insidious chills meet PAW Patrol dino adventure"
-    },
-    {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater Subscription"
     }
   ],
   "items": []
