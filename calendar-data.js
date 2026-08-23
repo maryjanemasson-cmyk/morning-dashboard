@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Stay at Grand Hyatt Bogot\u00e1",
-    "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
-    "startTime": "",
-    "startDate": "2026-08-21",
-    "endTime": "",
-    "endDate": "2026-08-23",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Stay at Sofitel Bar\u00fa Cartagena Beach Resort",
     "location": "Sector Porto Nao km 7 Isla de Bar\u00fa Cartagena de Indias 00 130017 CO",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPqGjlEBDejZb-cgUxKjeu_WAA2LdZ5RgY\n",
@@ -19,61 +8,6 @@ window.CALENDAR_EVENTS = [
     "endTime": "",
     "endDate": "2026-08-27",
     "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-08-22T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-22T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Flight to Cartagena Remember that routes with Business Class are operated on narrow body (A320) or wide body (B787) aircraft. (AV 9786)",
-    "location": "Bogota BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DNHxATtufG6gtUvPiT2wBea4BLyai1Aay8\n",
-    "startTime": "2026-08-22T13:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-22T14:35:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reserva El Chato para 4 persona/s",
-    "location": "Calle 65 # 4-76 ",
-    "description": "Reserva El Chato",
-    "startTime": "2026-08-22T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-22T22:59:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Dinner \u2014 El Chato (party of 4)",
-    "location": "Calle 65 # 4-76, Bogot\u00e1, Colombia",
-    "description": "Confirmed & prepaid reservation (Apparta) \u2014 party of 4, 7:30 PM.\nRestaurant: +57 321 971 8676 \u00b7 reservas@elchato.co",
-    "startTime": "2026-08-22T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-22T22:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reserva El Chato para 4 persona/s",
-    "location": "Calle 65 # 4-76 ",
-    "description": "Reserva El Chato",
-    "startTime": "2026-08-22T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-22T22:59:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
     "colorId": ""
   },
   {
@@ -273,6 +207,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-09-05T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-05T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -694,6 +639,14 @@ window.EMAIL_DATA = {
   "unreadCount": 14,
   "threads": [
     {
+      "sender": "Pini Parma",
+      "subject": "Transitional Fall Pieces"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Why My Style Changed from Milan to Monaco"
+    },
+    {
       "sender": "Chloe at Sur La Table",
       "subject": "Mary, your kitchen upgrade starts here\u2014up to 60% off"
     },
@@ -724,14 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "The Felted Wool Field Shirt and Chore Coat"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Studio McGee turns on the charm"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
     }
   ],
   "items": []
