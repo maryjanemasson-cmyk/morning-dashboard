@@ -636,8 +636,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Grand Hyatt Bogot\u00e1",
+      "subject": "Your recent stay at Grand Hyatt Bogot\u00e1 - a brief survey"
+    },
+    {
+      "sender": "Element Brooklyn",
+      "subject": "Shop our new bundles at 15 to 20% off"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The One You\u2019ll Wear On Repeat"
+    },
     {
       "sender": "United Airlines",
       "subject": "eTicket Itinerary and Receipt for Confirmation BRETPD"
@@ -665,18 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Design Decor",
       "subject": "Football Season, Elevated."
-    },
-    {
-      "sender": "Reformation",
-      "subject": "BESTSELLERS ON SALE"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sun, 8/23 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
     }
   ],
   "items": []
