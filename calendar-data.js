@@ -636,8 +636,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Mob",
+      "subject": "If you make one thing this week..."
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sun, 8/23 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "I Hardly Open Excel Anymore | Joe Riad in Level Up Coding"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: Another spectacularly dubious Trump golf triumph"
+    },
     {
       "sender": "Thomson Reuters",
       "subject": "Request D9L2R863X3 Completed"
@@ -657,26 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Tamara Kalinic from Material Witness",
       "subject": "Why My Style Changed from Milan to Monaco"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Mary, your kitchen upgrade starts here\u2014up to 60% off"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Tell us how we did"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "The Schoolhouse Shortlist"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "BAPE\u00ae x MICKEY & FRIENDS COLLECTION NOW LIVE"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "At WashU, we pursue the big questions"
     }
   ],
   "items": []
