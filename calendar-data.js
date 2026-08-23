@@ -636,8 +636,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Thomson Reuters",
+      "subject": "Request D9L2R863X3 Completed"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #155"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Pini Parma",
       "subject": "Transitional Fall Pieces"
@@ -665,18 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Washington University in St. Louis",
       "subject": "At WashU, we pursue the big questions"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "These tennis-themed bakes are grand slams"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "RE: RECEIPT: Family Trip to Columbia"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Felted Wool Field Shirt and Chore Coat"
     }
   ],
   "items": []
