@@ -636,8 +636,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 13,
   "threads": [
+    {
+      "sender": "& Other Stories",
+      "subject": "The next chapter: layering"
+    },
     {
       "sender": "Element Brooklyn",
       "subject": "Shop our new bundles at 15 to 20% off"
@@ -673,10 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "I Hardly Open Excel Anymore | Joe Riad in Level Up Coding"
     }
   ],
   "items": []
