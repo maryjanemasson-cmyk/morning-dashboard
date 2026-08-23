@@ -44,6 +44,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Flight to Newark (UA 269)",
+    "location": "Bogot\u00e1 BOG",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
+    "startTime": "2026-08-26T08:20:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-26T14:25:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Restaurante Carmen Cartagena",
     "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
     "description": "",
@@ -182,17 +193,6 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-08-29T10:00:00-04:00",
     "startDate": "",
     "endTime": "2026-08-29T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Flight to Newark (UA 269)",
-    "location": "Bogot\u00e1 BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
-    "startTime": "2026-08-30T08:20:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-30T14:25:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
@@ -636,15 +636,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Dogshood.com",
-      "subject": "Your DogsHood order is confirmed! \ud83d\udc3e"
+      "sender": "United Airlines",
+      "subject": "eTicket Itinerary and Receipt for Confirmation BRETPD"
     },
     {
-      "sender": "Julia from Travefy",
-      "subject": "Stop chasing clients for information"
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Newark"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "BAPE\u00ae X \u00a9SAINT Mxxxxxx COLLECTION NOW LIVE"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "eTicket Itinerary and Receipt for Confirmation NDK4D4"
+    },
+    {
+      "sender": "Lauren Santo Domingo, Moda Operandi",
+      "subject": "Mind your manners"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -665,18 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Unroll.Me",
       "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "I Hardly Open Excel Anymore | Joe Riad in Level Up Coding"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: Another spectacularly dubious Trump golf triumph"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": []
