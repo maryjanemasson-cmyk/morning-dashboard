@@ -691,7 +691,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 14,
   "threads": [
     {
       "sender": "Chloe at Sur La Table",
