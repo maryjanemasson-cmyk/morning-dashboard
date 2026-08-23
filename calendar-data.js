@@ -636,11 +636,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Mob",
-      "subject": "If you make one thing this week..."
+      "sender": "Dogshood.com",
+      "subject": "Your DogsHood order is confirmed! \ud83d\udc3e"
+    },
+    {
+      "sender": "Julia from Travefy",
+      "subject": "Stop chasing clients for information"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 50% OFF! Sunday Deals are back"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Football Season, Elevated."
+    },
+    {
+      "sender": "Reformation",
+      "subject": "BESTSELLERS ON SALE"
     },
     {
       "sender": "USPS Informed Delivery",
@@ -659,24 +675,8 @@ window.EMAIL_DATA = {
       "subject": "The Week In Ideas: Another spectacularly dubious Trump golf triumph"
     },
     {
-      "sender": "Thomson Reuters",
-      "subject": "Request D9L2R863X3 Completed"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #155"
-    },
-    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Transitional Fall Pieces"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Why My Style Changed from Milan to Monaco"
     }
   ],
   "items": []
