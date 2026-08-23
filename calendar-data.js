@@ -636,12 +636,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "Grand Hyatt Bogot\u00e1",
-      "subject": "Your recent stay at Grand Hyatt Bogot\u00e1 - a brief survey"
-    },
     {
       "sender": "Element Brooklyn",
       "subject": "Shop our new bundles at 15 to 20% off"
@@ -651,20 +647,8 @@ window.EMAIL_DATA = {
       "subject": "The One You\u2019ll Wear On Repeat"
     },
     {
-      "sender": "United Airlines",
-      "subject": "eTicket Itinerary and Receipt for Confirmation BRETPD"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Newark"
-    },
-    {
       "sender": "A BATHING APE\u00ae",
       "subject": "BAPE\u00ae X \u00a9SAINT Mxxxxxx COLLECTION NOW LIVE"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "eTicket Itinerary and Receipt for Confirmation NDK4D4"
     },
     {
       "sender": "Lauren Santo Domingo, Moda Operandi",
@@ -677,6 +661,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Design Decor",
       "subject": "Football Season, Elevated."
+    },
+    {
+      "sender": "Reformation",
+      "subject": "BESTSELLERS ON SALE"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sun, 8/23 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "I Hardly Open Excel Anymore | Joe Riad in Level Up Coding"
     }
   ],
   "items": []
