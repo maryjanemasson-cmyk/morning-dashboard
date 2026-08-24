@@ -625,19 +625,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 383318888406"
+      "sender": "Okta",
+      "subject": "Security method enrolled"
     },
     {
       "sender": "Amex Offers from American Express",
       "subject": "Christian, your new Amex Offers are inside!"
-    },
-    {
-      "sender": "Elizabeth Rodriguez",
-      "subject": "The Miami Open Is Back"
     },
     {
       "sender": "Shameless Snacks",
@@ -666,6 +662,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Productivity in the AI Era = Human Layer \u00d7 AI Layer | Ztrader Dorian"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Our Student of the Month \ud83c\udfc6\""
     }
   ],
   "items": [
