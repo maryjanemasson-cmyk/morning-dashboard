@@ -625,8 +625,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Shameless Snacks",
+      "subject": "\ud83d\udd14\ufeff\ufeff (1) Notification: Message From Shameless"
+    },
+    {
+      "sender": "Brother USA",
+      "subject": "Share Your Feedback with Brother \ud83d\udcad"
+    },
+    {
+      "sender": "Simplified by Emily Ley",
+      "subject": "Meet the Fall Collection \ud83d\ude0d\ud83c\udf42"
+    },
     {
       "sender": "Trip.com",
       "subject": "\ud83d\udd25Last Chance in August - TripTuesday's here"
@@ -654,18 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "ALMA",
       "subject": "Tu reserva ha sido cancelada"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "What If You Chose 100% Made in Italy Quality?"
-    },
-    {
-      "sender": "Chris Loves Julia",
-      "subject": "The one backyard thing we've done at every house"
-    },
-    {
-      "sender": "Rat & Boa USA",
-      "subject": "As Worn By You: The Best Of Summer"
     }
   ],
   "items": []
