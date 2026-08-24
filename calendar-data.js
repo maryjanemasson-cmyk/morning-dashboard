@@ -636,47 +636,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 5 new invitations"
+    },
+    {
+      "sender": "Wayfair",
+      "subject": "Confirm your email"
+    },
+    {
+      "sender": "Reserve with Google",
+      "subject": "Your reservation at ALMA Restaurante - Bar is canceled"
+    },
+    {
+      "sender": "ALMA",
+      "subject": "Tu reserva ha sido cancelada"
+    },
+    {
+      "sender": "Reserve with Google",
+      "subject": "Your reservation at Restaurante Carmen Cartagena is canceled"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "What If You Chose 100% Made in Italy Quality?"
+    },
+    {
+      "sender": "Chris Loves Julia",
+      "subject": "The one backyard thing we've done at every house"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Important Notice: Your August 2026 Statement"
+    },
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "As Worn By You: The Best Of Summer"
+    },
     {
       "sender": "& Other Stories",
       "subject": "The next chapter: layering"
-    },
-    {
-      "sender": "Element Brooklyn",
-      "subject": "Shop our new bundles at 15 to 20% off"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "The One You\u2019ll Wear On Repeat"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "BAPE\u00ae X \u00a9SAINT Mxxxxxx COLLECTION NOW LIVE"
-    },
-    {
-      "sender": "Lauren Santo Domingo, Moda Operandi",
-      "subject": "Mind your manners"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 50% OFF! Sunday Deals are back"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Football Season, Elevated."
-    },
-    {
-      "sender": "Reformation",
-      "subject": "BESTSELLERS ON SALE"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Sun, 8/23 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
     }
   ],
   "items": []
