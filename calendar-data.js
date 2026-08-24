@@ -625,8 +625,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 383318888406"
+    },
+    {
+      "sender": "Amex Offers from American Express",
+      "subject": "Christian, your new Amex Offers are inside!"
+    },
+    {
+      "sender": "Elizabeth Rodriguez",
+      "subject": "The Miami Open Is Back"
+    },
     {
       "sender": "Shameless Snacks",
       "subject": "\ud83d\udd14\ufeff\ufeff (1) Notification: Message From Shameless"
@@ -654,19 +666,15 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Productivity in the AI Era = Human Layer \u00d7 AI Layer | Ztrader Dorian"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Our Student of the Month \ud83c\udfc6\""
-    },
-    {
-      "sender": "Alex from Holafly",
-      "subject": "The easiest international trips from home"
-    },
-    {
-      "sender": "ALMA",
-      "subject": "Tu reserva ha sido cancelada"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #383318888406",
+      "date": "2026-08-24",
+      "id": "1a03572acc63c517",
+      "sender": "FedEx Delivery Manager"
+    }
+  ]
 };
