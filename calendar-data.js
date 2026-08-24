@@ -625,11 +625,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Princeton Orthopaedic Associates",
-      "subject": "An Appointment Has Been Scheduled"
+      "sender": "Trip.com",
+      "subject": "\ud83d\udd25Last Chance in August - TripTuesday's here"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "The latest arrivals, all in one place"
     },
     {
       "sender": "Christina Marsigliese",
@@ -662,10 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Rat & Boa USA",
       "subject": "As Worn By You: The Best Of Summer"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "The next chapter: layering"
     }
   ],
   "items": []
