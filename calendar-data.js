@@ -625,47 +625,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Schoolhouse",
+      "subject": "Extra Credit for Campus Plaid"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "Revolutionary American Buttercream, a life-changing recipe!"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Productivity in the AI Era = Human Layer \u00d7 AI Layer | Ztrader Dorian"
+    },
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Our Student of the Month \ud83c\udfc6\""
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "Alex from Holafly",
       "subject": "The easiest international trips from home"
     },
     {
-      "sender": "Wayfair",
-      "subject": "Confirm your email"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 5 new invitations"
-    },
-    {
-      "sender": "Wayfair",
-      "subject": "Confirm your email"
-    },
-    {
-      "sender": "Reserve with Google",
-      "subject": "Your reservation at ALMA Restaurante - Bar is canceled"
-    },
-    {
       "sender": "ALMA",
       "subject": "Tu reserva ha sido cancelada"
     },
     {
-      "sender": "Reserve with Google",
-      "subject": "Your reservation at Restaurante Carmen Cartagena is canceled"
-    },
-    {
       "sender": "Pini Parma",
       "subject": "What If You Chose 100% Made in Italy Quality?"
+    },
+    {
+      "sender": "Chris Loves Julia",
+      "subject": "The one backyard thing we've done at every house"
+    },
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "As Worn By You: The Best Of Summer"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "The next chapter: layering"
     }
   ],
   "items": []
