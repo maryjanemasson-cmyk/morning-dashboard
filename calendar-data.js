@@ -628,6 +628,10 @@ window.EMAIL_DATA = {
   "unreadCount": 25,
   "threads": [
     {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Our Student of the Month \ud83c\udfc6\""
+    },
+    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
@@ -662,10 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pini Parma",
       "subject": "What If You Chose 100% Made in Italy Quality?"
-    },
-    {
-      "sender": "Chris Loves Julia",
-      "subject": "The one backyard thing we've done at every house"
     }
   ],
   "items": []
