@@ -11,17 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Flight to Armenia (LA 4292)",
-    "location": "Bogot\u00e1 BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMv27QkFIhKzHef66_uTeQqfa5qDJ52dVI\n",
-    "startTime": "2026-08-23T14:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-23T15:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -636,8 +625,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Alex from Holafly",
+      "subject": "The easiest international trips from home"
+    },
+    {
+      "sender": "Wayfair",
+      "subject": "Confirm your email"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 5 new invitations"
@@ -665,18 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chris Loves Julia",
       "subject": "The one backyard thing we've done at every house"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Important Notice: Your August 2026 Statement"
-    },
-    {
-      "sender": "Rat & Boa USA",
-      "subject": "As Worn By You: The Best Of Summer"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "The next chapter: layering"
     }
   ],
   "items": []
