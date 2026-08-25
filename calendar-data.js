@@ -625,7 +625,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 11,
   "threads": [
     {
       "sender": "Okta",
