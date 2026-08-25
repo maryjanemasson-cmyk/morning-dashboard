@@ -24,7 +24,7 @@ window.CALENDAR_EVENTS = [
   {
     "summary": "Flight to Newark, NJ/New York, NY, US (UA 269)",
     "location": "Bogot\u00e1 BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOe-sun40sMAB5Z5ThlgfohRrGGvTcb0DE\n",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOU2C2F1boX0wzc2f28XajlfQRIxyxHTzg\n",
     "startTime": "2026-08-26T08:20:00-04:00",
     "startDate": "",
     "endTime": "2026-08-26T14:25:00-04:00",
@@ -625,47 +625,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "United Airlines",
-      "subject": "Your United purchase is being refunded"
+      "sender": "NORDSTROM CARD SERVICES",
+      "subject": "Maryjane, ends soon: Get a $10 Bonus Note when you add a user."
     },
     {
-      "sender": "Julia from Travefy",
-      "subject": "Hey MJH, want a guided walkthrough?"
+      "sender": "AT&T Account Management",
+      "subject": "AT&T payment processed for account ending in 5982"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Pale pink, deep burgundy"
     },
     {
       "sender": "Deer Guys",
       "subject": "Hi Mary Jane And Christian, how was your experience with us?"
     },
     {
-      "sender": "Almina Concept",
-      "subject": "The High V-Neck Tank"
-    },
-    {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Get up to 35% OFF select appliances \ud83e\udd29"
-    },
-    {
-      "sender": "World of Hyatt",
-      "subject": "Earn up to 60,000 Bonus Points to Use on Future Stays"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SALE\u2019S UP TO 70% OFF"
     },
     {
       "sender": "COS",
       "subject": "Introducing featherweight cable cashmere"
     },
     {
-      "sender": "Buck Mason",
-      "subject": "The Rambler Suede Sportsman Jacket"
-    },
-    {
       "sender": "Moda Operandi",
       "subject": "Mood BOOST"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your AW26 Vol. 01 Preview.."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 383318888406"
     }
   ],
   "items": [
