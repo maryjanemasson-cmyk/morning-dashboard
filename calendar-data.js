@@ -628,6 +628,10 @@ window.EMAIL_DATA = {
   "unreadCount": 15,
   "threads": [
     {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The Editor, The Bike Boots and a BIG Surprise"
+    },
+    {
       "sender": "WAT THE BRAND",
       "subject": "Your AW26 Vol. 01 Preview.."
     },
@@ -662,10 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Brother USA",
       "subject": "Share Your Feedback with Brother \ud83d\udcad"
-    },
-    {
-      "sender": "Simplified by Emily Ley",
-      "subject": "Meet the Fall Collection \ud83d\ude0d\ud83c\udf42"
     }
   ],
   "items": [
