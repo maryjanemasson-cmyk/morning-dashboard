@@ -11,17 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-08-24T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-24T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
     "summary": "Stay at York Medellin, Curio Collection by Hilton",
     "location": "Carrera 43a 17sur 63 Medell\u00edn 251250 CO",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM8imptMOe1MjVCPqTslLEPF5ePWU1FR6Q\n",
@@ -207,6 +196,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-09-07T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-07T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -625,8 +625,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your AW26 Vol. 01 Preview.."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 383318888406"
+    },
+    {
+      "sender": "Disney D23",
+      "subject": "LIMITED TIME OFFER: 30% OFF a D23 Gold Membership!"
+    },
+    {
+      "sender": "Christian Hinrichs",
+      "subject": "Need a photo of your passport"
+    },
+    {
+      "sender": "Princeton Racquet Club",
+      "subject": "It's Almost September!"
+    },
     {
       "sender": "Okta",
       "subject": "Security method enrolled"
@@ -646,34 +666,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Simplified by Emily Ley",
       "subject": "Meet the Fall Collection \ud83d\ude0d\ud83c\udf42"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udd25Last Chance in August - TripTuesday's here"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "The latest arrivals, all in one place"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "Revolutionary American Buttercream, a life-changing recipe!"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Productivity in the AI Era = Human Layer \u00d7 AI Layer | Ztrader Dorian"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Our Student of the Month \ud83c\udfc6\""
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "FedEx shipped #383318888406",
-      "date": "2026-08-24",
-      "id": "1a03572acc63c517",
+      "title": "FedEx arriving tomorrow #383318888406",
+      "date": "2026-08-26",
+      "id": "1a03759538ec0060",
       "sender": "FedEx Delivery Manager"
     }
   ]
