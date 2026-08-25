@@ -628,8 +628,12 @@ window.EMAIL_DATA = {
   "unreadCount": 13,
   "threads": [
     {
-      "sender": "Germain H\u00f4tels",
-      "subject": "Summer, just a little longer"
+      "sender": "Max from Dogshood",
+      "subject": "A little bit of help?."
+    },
+    {
+      "sender": "Topgolf",
+      "subject": "World Series of Golf | Join Before 9/1"
     },
     {
       "sender": "Hotels.com",
@@ -662,10 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "Your AW26 Vol. 01 Preview.."
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 383318888406"
     }
   ],
   "items": [
