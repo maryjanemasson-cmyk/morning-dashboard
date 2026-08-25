@@ -625,19 +625,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Steve Madden",
-      "subject": "Your Steve Madden Order Confirmation SMUS#11658788"
+      "sender": "Germain H\u00f4tels",
+      "subject": "Summer, just a little longer"
     },
     {
-      "sender": "Tony Bianco USA",
-      "subject": "Tony Bianco Invoice W245509 from Tony Bianco USA"
-    },
-    {
-      "sender": "Tony Bianco USA",
-      "subject": "Order W245509 received"
+      "sender": "Hotels.com",
+      "subject": "Save Your Way lets you choose"
     },
     {
       "sender": "NORDSTROM CARD SERVICES",
@@ -666,6 +662,10 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "Your AW26 Vol. 01 Preview.."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 383318888406"
     }
   ],
   "items": [
