@@ -22,9 +22,9 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Flight to Newark (UA 269)",
+    "summary": "Flight to Newark, NJ/New York, NY, US (UA 269)",
     "location": "Bogot\u00e1 BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DObq0LXaL8R92fNg3gTFEPpHXZfV3IOtXA\n",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOe-sun40sMAB5Z5ThlgfohRrGGvTcb0DE\n",
     "startTime": "2026-08-26T08:20:00-04:00",
     "startDate": "",
     "endTime": "2026-08-26T14:25:00-04:00",
@@ -625,47 +625,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
+      "sender": "United Airlines",
+      "subject": "Your United purchase is being refunded"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Your AW26 Vol. 01 Preview.."
+      "sender": "Julia from Travefy",
+      "subject": "Hey MJH, want a guided walkthrough?"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 383318888406"
+      "sender": "Deer Guys",
+      "subject": "Hi Mary Jane And Christian, how was your experience with us?"
     },
     {
-      "sender": "Disney D23",
-      "subject": "LIMITED TIME OFFER: 30% OFF a D23 Gold Membership!"
+      "sender": "Almina Concept",
+      "subject": "The High V-Neck Tank"
     },
     {
-      "sender": "Christian Hinrichs",
-      "subject": "Need a photo of your passport"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Get up to 35% OFF select appliances \ud83e\udd29"
     },
     {
-      "sender": "Princeton Racquet Club",
-      "subject": "It's Almost September!"
+      "sender": "World of Hyatt",
+      "subject": "Earn up to 60,000 Bonus Points to Use on Future Stays"
     },
     {
-      "sender": "Okta",
-      "subject": "Security method enrolled"
+      "sender": "Reformation",
+      "subject": "SALE\u2019S UP TO 70% OFF"
     },
     {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
+      "sender": "COS",
+      "subject": "Introducing featherweight cable cashmere"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "\ud83d\udd14\ufeff\ufeff (1) Notification: Message From Shameless"
+      "sender": "Buck Mason",
+      "subject": "The Rambler Suede Sportsman Jacket"
     },
     {
-      "sender": "Brother USA",
-      "subject": "Share Your Feedback with Brother \ud83d\udcad"
+      "sender": "Moda Operandi",
+      "subject": "Mood BOOST"
     }
   ],
   "items": [
