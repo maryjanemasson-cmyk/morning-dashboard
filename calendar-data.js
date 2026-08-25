@@ -625,19 +625,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Steve Madden",
+      "subject": "Your Steve Madden Order Confirmation SMUS#11658788"
+    },
+    {
+      "sender": "Tony Bianco USA",
+      "subject": "Tony Bianco Invoice W245509 from Tony Bianco USA"
+    },
+    {
+      "sender": "Tony Bianco USA",
+      "subject": "Order W245509 received"
+    },
     {
       "sender": "NORDSTROM CARD SERVICES",
       "subject": "Maryjane, ends soon: Get a $10 Bonus Note when you add a user."
-    },
-    {
-      "sender": "AT&T Account Management",
-      "subject": "AT&T payment processed for account ending in 5982"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Pale pink, deep burgundy"
     },
     {
       "sender": "Deer Guys",
@@ -662,10 +666,6 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "Your AW26 Vol. 01 Preview.."
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 383318888406"
     }
   ],
   "items": [
