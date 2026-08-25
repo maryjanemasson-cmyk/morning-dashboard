@@ -24,7 +24,7 @@ window.CALENDAR_EVENTS = [
   {
     "summary": "Flight to Newark (UA 269)",
     "location": "Bogot\u00e1 BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMLPJFme7E1YPx-54Zc2zc8QlHcrtIbRfs\n",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DObq0LXaL8R92fNg3gTFEPpHXZfV3IOtXA\n",
     "startTime": "2026-08-26T08:20:00-04:00",
     "startDate": "",
     "endTime": "2026-08-26T14:25:00-04:00",
@@ -625,11 +625,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // The Editor, The Bike Boots and a BIG Surprise"
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
     },
     {
       "sender": "WAT THE BRAND",
