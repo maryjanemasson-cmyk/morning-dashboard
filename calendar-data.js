@@ -669,8 +669,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "Venmo",
+      "subject": "Sharon Litvinsky paid $56.00 to your Venmo account. Leave it in Venmo or transfer it to your bank account."
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Just call us chef \ud83e\udd0c"
+    },
+    {
+      "sender": "BODYROK Princeton Newtown",
+      "subject": "Become Our Next Instructor"
+    },
+    {
+      "sender": "United News & Deals",
+      "subject": "Upgrade to premium cabin on your upcoming flight"
+    },
+    {
+      "sender": "Tiger Gao",
+      "subject": "Lunch During College Boot Camp"
+    },
     {
       "sender": "FORM BY TWO",
       "subject": "Your receipt from FORM BY TWO #2911-0111"
@@ -690,26 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn Sales Navigator",
       "subject": "New research: why revenue growth feels harder than it should"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Back to business, the sartorial way"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHOP SALE ALREADY"
-    },
-    {
-      "sender": "Dogshood",
-      "subject": "Perfect Additions To Your Order"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "SHOP NEW FOOTWEAR"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "Be first to hear about new openings"
     }
   ],
   "items": [
