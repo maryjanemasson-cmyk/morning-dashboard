@@ -658,35 +658,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Valeria from Holafly",
-      "subject": "Save 15% on your next adventure!"
-    },
-    {
-      "sender": "Francene Aleli Ca\u00f1ares",
+      "sender": "Catherine Sharpe, Ph.D.",
       "subject": "You have an invitation"
     },
     {
-      "sender": "Tony Bianco",
-      "subject": "Your package is on its way from Tony Bianco"
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Introducing the Edit Trouser"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "DHL EXPRESS",
-      "subject": "DHL On Demand Delivery"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "JUST ADD BLUE"
-    },
-    {
-      "sender": "Tony Bianco USA",
-      "subject": "A shipment from order W245509 is on the way"
+      "sender": "CheckMig Realizado",
+      "subject": "CheckMig-Realizado"
     },
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
@@ -699,6 +683,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Topgolf",
       "subject": "World Series of Golf | Join Before 9/1"
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Save Your Way lets you choose"
+    },
+    {
+      "sender": "NORDSTROM CARD SERVICES",
+      "subject": "Maryjane, ends soon: Get a $10 Bonus Note when you add a user."
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Hi Mary Jane And Christian, how was your experience with us?"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Get up to 35% OFF select appliances \ud83e\udd29"
     }
   ],
   "items": [
