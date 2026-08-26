@@ -628,8 +628,8 @@ window.EMAIL_DATA = {
   "unreadCount": 13,
   "threads": [
     {
-      "sender": "Max from Dogshood",
-      "subject": "A little bit of help?."
+      "sender": "Shop",
+      "subject": "It\u2019s selling fast on Shop \ud83d\udd25"
     },
     {
       "sender": "Topgolf",
