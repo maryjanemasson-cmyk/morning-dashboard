@@ -669,8 +669,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 35,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "FORM BY TWO",
+      "subject": "Your receipt from FORM BY TWO #2911-0111"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 383318888406"
@@ -696,20 +700,16 @@ window.EMAIL_DATA = {
       "subject": "SHOP SALE ALREADY"
     },
     {
-      "sender": "Schoolhouse",
-      "subject": "The Story Behind Stillwater"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "Your flight departs soon - track flight status"
-    },
-    {
       "sender": "Dogshood",
       "subject": "Perfect Additions To Your Order"
     },
     {
-      "sender": "Medium",
-      "subject": "30% off. This week only."
+      "sender": "A BATHING APE\u00ae",
+      "subject": "SHOP NEW FOOTWEAR"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "Be first to hear about new openings"
     }
   ],
   "items": [
