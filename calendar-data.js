@@ -207,6 +207,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "OMS Visit",
+    "location": "Cambridge, MA",
+    "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 8 to 10, 2026",
+    "startTime": "",
+    "startDate": "2026-09-08",
+    "endTime": "",
+    "endDate": "2026-09-11",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "\u2708\ufe0f UA1110 EWR \u2192 BOS",
+    "location": "Newark (EWR)",
+    "description": "Tue, Sep 8\n8:30 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 1110, Terminal TERMINAL A, Gate\n9:48 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-09-08T08:30:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-08T09:48:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: The Royal Sonesta Boston",
+    "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
+    "description": "3:00 PM EDT\n[Lodging] Arrive The Royal Sonesta Boston\nCheck-In: 3:00pm\n40 Edwin H. Land Boulevard, Cambridge, MA, 02142\n1-617-806-4200",
+    "startTime": "2026-09-08T15:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-08T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -625,8 +658,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "Valeria from Holafly",
+      "subject": "Save 15% on your next adventure!"
+    },
+    {
+      "sender": "Francene Aleli Ca\u00f1ares",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Tony Bianco",
+      "subject": "Your package is on its way from Tony Bianco"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "DHL EXPRESS",
+      "subject": "DHL On Demand Delivery"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "JUST ADD BLUE"
+    },
+    {
+      "sender": "Tony Bianco USA",
+      "subject": "A shipment from order W245509 is on the way"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
+    },
     {
       "sender": "Shop",
       "subject": "It\u2019s selling fast on Shop \ud83d\udd25"
@@ -634,38 +699,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Topgolf",
       "subject": "World Series of Golf | Join Before 9/1"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Save Your Way lets you choose"
-    },
-    {
-      "sender": "NORDSTROM CARD SERVICES",
-      "subject": "Maryjane, ends soon: Get a $10 Bonus Note when you add a user."
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Hi Mary Jane And Christian, how was your experience with us?"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Get up to 35% OFF select appliances \ud83e\udd29"
-    },
-    {
-      "sender": "COS",
-      "subject": "Introducing featherweight cable cashmere"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "Mood BOOST"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Your AW26 Vol. 01 Preview.."
     }
   ],
   "items": [
