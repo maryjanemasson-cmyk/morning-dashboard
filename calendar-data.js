@@ -669,39 +669,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Venmo",
-      "subject": "Sharon Litvinsky paid $56.00 to your Venmo account. Leave it in Venmo or transfer it to your bank account."
+      "sender": "BCBS Global Solutions",
+      "subject": "Only a few days left to give your feedback"
     },
     {
-      "sender": "Etsy",
-      "subject": "Just call us chef \ud83e\udd0c"
+      "sender": "Amazon.com",
+      "subject": "Ordered: 1 Personal Care item"
     },
     {
-      "sender": "BODYROK Princeton Newtown",
-      "subject": "Become Our Next Instructor"
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Whatnot"
     },
     {
-      "sender": "United News & Deals",
-      "subject": "Upgrade to premium cabin on your upcoming flight"
-    },
-    {
-      "sender": "Tiger Gao",
-      "subject": "Lunch During College Boot Camp"
-    },
-    {
-      "sender": "FORM BY TWO",
-      "subject": "Your receipt from FORM BY TWO #2911-0111"
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to Braulio Lopez"
     },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 383318888406"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "A shipment from order 20479381 has been delivered"
     },
     {
       "sender": "Shameless Snacks",
@@ -710,6 +698,18 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn Sales Navigator",
       "subject": "New research: why revenue growth feels harder than it should"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Back to business, the sartorial way"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHOP SALE ALREADY"
+    },
+    {
+      "sender": "Dogshood",
+      "subject": "Perfect Additions To Your Order"
     }
   ],
   "items": [
