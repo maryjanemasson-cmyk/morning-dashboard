@@ -33,6 +33,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Flight to Medellin (AV 9791)",
+    "location": "Cartagena CTG",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOeZnGGiqEcHaMuzNio7bRWz-QKS0wq7wk\n",
+    "startTime": "2026-08-26T15:35:00-04:00",
+    "startDate": "",
+    "endTime": "2026-08-26T16:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Restaurante Carmen Cartagena",
     "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
     "description": "",
@@ -658,47 +669,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 35,
   "threads": [
     {
-      "sender": "Julia from Travefy",
-      "subject": "Your trial ends in 2 days. Here's what happens next."
-    },
-    {
-      "sender": "Cloudflare",
-      "subject": "Build for the agentic Internet - the Connect 2026 lineup and agenda are live"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "Be first to hear about new openings"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Everything I've Bought For Fall, None Of Which I've Shown Anywhere Else"
-    },
-    {
-      "sender": "Simplified by Emily Ley",
-      "subject": "Happy Launch Day! \ud83c\udf89"
-    },
-    {
-      "sender": "COS",
-      "subject": "In focus: the COS shirt"
-    },
-    {
-      "sender": "TurboTax",
-      "subject": "Appt Booked - file next year for $399"
-    },
-    {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 383318888406"
+      "subject": "Your shipment was delivered 383318888406"
     },
     {
-      "sender": "The Shade Store",
-      "subject": "LAST DAY: Up to 25% Off Sitewide"
+      "sender": "Chan Luu",
+      "subject": "A shipment from order 20479381 has been delivered"
     },
     {
-      "sender": "Optery",
-      "subject": "[Alert] Your Info Was Found on Addresses.com, 411.com, MyLife and 49 other sites"
+      "sender": "Shameless Snacks",
+      "subject": "Think you can solve this? \ud83d\udd75\ufe0f"
+    },
+    {
+      "sender": "LinkedIn Sales Navigator",
+      "subject": "New research: why revenue growth feels harder than it should"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Back to business, the sartorial way"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHOP SALE ALREADY"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "The Story Behind Stillwater"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "Your flight departs soon - track flight status"
+    },
+    {
+      "sender": "Dogshood",
+      "subject": "Perfect Additions To Your Order"
+    },
+    {
+      "sender": "Medium",
+      "subject": "30% off. This week only."
     }
   ],
   "items": [
