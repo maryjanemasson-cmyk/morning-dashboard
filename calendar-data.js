@@ -658,47 +658,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 24,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "A shipment from order 20479381 is out for delivery"
+      "sender": "Julia from Travefy",
+      "subject": "Your trial ends in 2 days. Here's what happens next."
     },
     {
-      "sender": "United Airlines",
-      "subject": "Now boarding your flight to Newark at Gate A13"
+      "sender": "Cloudflare",
+      "subject": "Build for the agentic Internet - the Connect 2026 lineup and agenda are live"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
+      "sender": "LinkedIn",
+      "subject": "Be first to hear about new openings"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 8/26 is ready to view"
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Everything I've Bought For Fall, None Of Which I've Shown Anywhere Else"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "Rethinking Team Performance: Why Over-Optimized Teams Fail to Deliver Real Performance | Erik de Bos"
+      "sender": "Simplified by Emily Ley",
+      "subject": "Happy Launch Day! \ud83c\udf89"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Summer Sale Continues"
+      "sender": "COS",
+      "subject": "In focus: the COS shirt"
     },
     {
-      "sender": "Catherine Sharpe, Ph.D.",
-      "subject": "You have an invitation"
+      "sender": "TurboTax",
+      "subject": "Appt Booked - file next year for $399"
     },
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // Introducing the Edit Trouser"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 383318888406"
     },
     {
-      "sender": "CheckMig Realizado",
-      "subject": "CheckMig-Realizado"
+      "sender": "The Shade Store",
+      "subject": "LAST DAY: Up to 25% Off Sitewide"
     },
     {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
+      "sender": "Optery",
+      "subject": "[Alert] Your Info Was Found on Addresses.com, 411.com, MyLife and 49 other sites"
     }
   ],
   "items": [
