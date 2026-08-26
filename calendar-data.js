@@ -658,8 +658,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Chan Luu",
+      "subject": "A shipment from order 20479381 is out for delivery"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "Now boarding your flight to Newark at Gate A13"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 8/26 is ready to view"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Rethinking Team Performance: Why Over-Optimized Teams Fail to Deliver Real Performance | Erik de Bos"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "The Summer Sale Continues"
+    },
     {
       "sender": "Catherine Sharpe, Ph.D.",
       "subject": "You have an invitation"
@@ -675,30 +699,6 @@ window.EMAIL_DATA = {
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
       "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Shop",
-      "subject": "It\u2019s selling fast on Shop \ud83d\udd25"
-    },
-    {
-      "sender": "Topgolf",
-      "subject": "World Series of Golf | Join Before 9/1"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Save Your Way lets you choose"
-    },
-    {
-      "sender": "NORDSTROM CARD SERVICES",
-      "subject": "Maryjane, ends soon: Get a $10 Bonus Note when you add a user."
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Hi Mary Jane And Christian, how was your experience with us?"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Get up to 35% OFF select appliances \ud83e\udd29"
     }
   ],
   "items": [
