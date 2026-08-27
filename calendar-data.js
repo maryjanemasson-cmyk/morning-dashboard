@@ -636,47 +636,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 24,
   "threads": [
     {
-      "sender": "Princeton Academy of Art",
-      "subject": "Coming up soon at Princeton Academy of Art"
+      "sender": "Gem + Jewel",
+      "subject": "\ud83d\udc8e Dolly Parton\u2019s Style: Bold, Beautiful, and Self-Aware"
     },
     {
-      "sender": "IHG One Rewards",
-      "subject": "Exclusive offer: earn 160K bonus points and up to $100 in Food & Beverage Rewards \ud83c\udf7d\ufe0f"
+      "sender": "Art Caplan",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Tap for tennis necklaces \ud83e\ude84"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "We know we're cute"
+    },
+    {
+      "sender": "Ticketmaster",
+      "subject": "US Open Matches Are Set: Ace Great Tickets at Ticketmaster"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "Thought You\u2019d Like These"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "BYE SUMMER"
+    },
+    {
+      "sender": "Kohl\u2019s",
+      "subject": "It's not too late ... your Kohl's Cash is waiting for you!"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "So this is goodbye"
     },
     {
       "sender": "Julia from Travefy",
       "subject": "Your trial ends tomorrow"
-    },
-    {
-      "sender": "Princeton Orthopaedic Associates",
-      "subject": "An Appointment Has Been Scheduled"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Plan Your Dream Garden Today"
-    },
-    {
-      "sender": "Optery",
-      "subject": "August Sale (20% off), Separating \"Removed\" and \"Not Found\" Statuses, Optery Ranked No. 177 on Inc. 5000, and more"
-    },
-    {
-      "sender": "SIMONMILLER",
-      "subject": "WELCOME TO OUR PLAYFUL WORLD OF LUXURY !"
-    },
-    {
-      "sender": "Joe's Stone Crab",
-      "subject": "Get Ready for Labor Day Weekend"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "The Oversized Cotton Shirt in Blue Stripe"
-    },
-    {
-      "sender": "RMS Beauty",
-      "subject": "A Look So Good It\u2019s Almost Gone"
     }
   ],
   "items": [
