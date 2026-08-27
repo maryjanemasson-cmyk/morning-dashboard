@@ -636,8 +636,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 32,
   "threads": [
+    {
+      "sender": "Medium Events",
+      "subject": "Introducing the State of Writing Report at Medium Day"
+    },
+    {
+      "sender": "Steve Madden",
+      "subject": "It's Ready To Go \u2714\ufe0f"
+    },
+    {
+      "sender": "Grok",
+      "subject": "Grok Bot is now included with SuperGrok Heavy"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Our Family's Operating System: Finances"
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "The numbers driving our research"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The Next Chapter Starts Tomorrow"
+    },
+    {
+      "sender": "Dogshood.com",
+      "subject": "Your DogsHood gear is on the way! \ud83d\udc3e  #U62059"
+    },
+    {
+      "sender": "DONNI.",
+      "subject": "Introducing: Fall Part I"
+    },
     {
       "sender": "Gem + Jewel",
       "subject": "\ud83d\udc8e Dolly Parton\u2019s Style: Bold, Beautiful, and Self-Aware"
@@ -645,38 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Art Caplan",
       "subject": "You have an invitation"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Tap for tennis necklaces \ud83e\ude84"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "We know we're cute"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "US Open Matches Are Set: Ace Great Tickets at Ticketmaster"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Thought You\u2019d Like These"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "BYE SUMMER"
-    },
-    {
-      "sender": "Kohl\u2019s",
-      "subject": "It's not too late ... your Kohl's Cash is waiting for you!"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "So this is goodbye"
-    },
-    {
-      "sender": "Julia from Travefy",
-      "subject": "Your trial ends tomorrow"
     }
   ],
   "items": [
