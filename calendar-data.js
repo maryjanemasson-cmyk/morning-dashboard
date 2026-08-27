@@ -636,23 +636,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "John Swift",
-      "subject": "You have an invitation"
+      "sender": "Enza Costa",
+      "subject": "Airy Layers"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "You paid Joshua Niu $30.00"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "You\u2019re Already Living Your Dream Life | Matt Fujimoto in Philosophy Today"
     },
     {
       "sender": "French Language Accelerator",
       "subject": "Sabrina Bery posted \"Challenge du jour !\""
-    },
-    {
-      "sender": "Joseph Li",
-      "subject": "Welcome Back! PRISMS Updates (Aug 27, 2026)"
-    },
-    {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs Exclusive // THEY'RE BACK The Men's Penny Loafer"
     },
     {
       "sender": "Amazon.com",
@@ -673,10 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BCBS Global Solutions",
       "subject": "Only a few days left to give your feedback"
-    },
-    {
-      "sender": "Google",
-      "subject": "You shared some Google Account data with Whatnot"
     }
   ],
   "items": [
