@@ -636,47 +636,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 30,
   "threads": [
     {
-      "sender": "Enza Costa",
-      "subject": "Airy Layers"
+      "sender": "Princeton Academy of Art",
+      "subject": "Coming up soon at Princeton Academy of Art"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
+      "sender": "IHG One Rewards",
+      "subject": "Exclusive offer: earn 160K bonus points and up to $100 in Food & Beverage Rewards \ud83c\udf7d\ufe0f"
     },
     {
-      "sender": "Venmo",
-      "subject": "You paid Joshua Niu $30.00"
+      "sender": "Julia from Travefy",
+      "subject": "Your trial ends tomorrow"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "You\u2019re Already Living Your Dream Life | Matt Fujimoto in Philosophy Today"
+      "sender": "Princeton Orthopaedic Associates",
+      "subject": "An Appointment Has Been Scheduled"
     },
     {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Challenge du jour !\""
+      "sender": "Walpole Outdoors",
+      "subject": "Plan Your Dream Garden Today"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Personal Care item"
+      "sender": "Optery",
+      "subject": "August Sale (20% off), Separating \"Removed\" and \"Not Found\" Statuses, Optery Ranked No. 177 on Inc. 5000, and more"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "SIMONMILLER",
+      "subject": "WELCOME TO OUR PLAYFUL WORLD OF LUXURY !"
     },
     {
-      "sender": "Club Pilates Princeton",
-      "subject": "Payment Receipt"
+      "sender": "Joe's Stone Crab",
+      "subject": "Get Ready for Labor Day Weekend"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 8 new invitations"
+      "sender": "Almina Concept",
+      "subject": "The Oversized Cotton Shirt in Blue Stripe"
     },
     {
-      "sender": "BCBS Global Solutions",
-      "subject": "Only a few days left to give your feedback"
+      "sender": "RMS Beauty",
+      "subject": "A Look So Good It\u2019s Almost Gone"
     }
   ],
   "items": [
