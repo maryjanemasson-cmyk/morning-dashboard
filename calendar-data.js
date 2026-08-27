@@ -636,47 +636,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 35,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "Samsung",
-      "subject": "See what Galaxy fans are raving about"
+      "sender": "Reformation",
+      "subject": "YOU\u2019RE ON THE LIST"
+    },
+    {
+      "sender": "Steve Madden",
+      "subject": "Good news! Your Steve Madden order is on the way! \ud83d\udce6"
+    },
+    {
+      "sender": "Shop",
+      "subject": "New Shop sign-in alert"
+    },
+    {
+      "sender": "hpdirector nassautennis.net",
+      "subject": "Re: Nassau HPTA: Fall Registration Info"
     },
     {
       "sender": "MileagePlus Program",
       "subject": "Earn miles and save on your car rental for your Boston trip"
     },
     {
-      "sender": "Montgomery County Board of Elections",
-      "subject": "Please Update Your Voter Registration Residential Address / Por Favor Actualice su Direcci\u00f3n Residencial en su Registro de Votante"
-    },
-    {
       "sender": "Medium Events",
       "subject": "Introducing the State of Writing Report at Medium Day"
-    },
-    {
-      "sender": "Steve Madden",
-      "subject": "It's Ready To Go \u2714\ufe0f"
-    },
-    {
-      "sender": "Grok",
-      "subject": "Grok Bot is now included with SuperGrok Heavy"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Our Family's Operating System: Finances"
     },
     {
       "sender": "Pediatric Brain Tumor Foundation",
       "subject": "The numbers driving our research"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "The Next Chapter Starts Tomorrow"
+      "sender": "Nannan Lin",
+      "subject": "You have an invitation"
     },
     {
-      "sender": "Dogshood.com",
-      "subject": "Your DogsHood gear is on the way! \ud83d\udc3e  #U62059"
+      "sender": "Reformation",
+      "subject": "We know we're cute"
+    },
+    {
+      "sender": "Ticketmaster",
+      "subject": "US Open Matches Are Set: Ace Great Tickets at Ticketmaster"
     }
   ],
   "items": [
