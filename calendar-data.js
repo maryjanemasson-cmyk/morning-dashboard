@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Stay at Sofitel Bar\u00fa Cartagena Beach Resort",
-    "location": "Sector Porto Nao km 7 Isla de Bar\u00fa Cartagena de Indias 00 130017 CO",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPqGjlEBDejZb-cgUxKjeu_WAA2LdZ5RgY\n",
-    "startTime": "",
-    "startDate": "2026-08-22",
-    "endTime": "",
-    "endDate": "2026-08-27",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Stay at York Medellin, Curio Collection by Hilton",
     "location": "Carrera 43a 17sur 63 Medell\u00edn 251250 CO",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM8imptMOe1MjVCPqTslLEPF5ePWU1FR6Q\n",
@@ -18,28 +7,6 @@ window.CALENDAR_EVENTS = [
     "startDate": "2026-08-26",
     "endTime": "",
     "endDate": "2026-08-30",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Flight to Newark, NJ/New York, NY, US (UA 269)",
-    "location": "Bogot\u00e1 BOG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOU2C2F1boX0wzc2f28XajlfQRIxyxHTzg\n",
-    "startTime": "2026-08-26T08:20:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-26T14:25:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Flight to Medellin (AV 9791)",
-    "location": "Cartagena CTG",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOeZnGGiqEcHaMuzNio7bRWz-QKS0wq7wk\n",
-    "startTime": "2026-08-26T15:35:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-26T16:45:00-04:00",
-    "endDate": "",
     "calendar": "Personal",
     "colorId": ""
   },
@@ -669,15 +636,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Personal Care item"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Club Pilates Princeton",
+      "subject": "Payment Receipt"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 8 new invitations"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "There's still time to Discover WashU!"
     },
     {
       "sender": "BCBS Global Solutions",
@@ -702,23 +677,15 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn Sales Navigator",
       "subject": "New research: why revenue growth feels harder than it should"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Back to business, the sartorial way"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHOP SALE ALREADY"
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "FedEx arriving tomorrow #383318888406",
-      "date": "2026-08-26",
-      "id": "1a03759538ec0060",
-      "sender": "FedEx Delivery Manager"
+      "title": "Shipped: 1 Personal Care item",
+      "date": "2026-08-27",
+      "id": "1a04204e369c6dc8",
+      "sender": "Amazon.com"
     }
   ]
 };
