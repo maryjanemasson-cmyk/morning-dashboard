@@ -636,8 +636,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 35,
   "threads": [
+    {
+      "sender": "Samsung",
+      "subject": "See what Galaxy fans are raving about"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles and save on your car rental for your Boston trip"
+    },
+    {
+      "sender": "Montgomery County Board of Elections",
+      "subject": "Please Update Your Voter Registration Residential Address / Por Favor Actualice su Direcci\u00f3n Residencial en su Registro de Votante"
+    },
     {
       "sender": "Medium Events",
       "subject": "Introducing the State of Writing Report at Medium Day"
@@ -665,18 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Dogshood.com",
       "subject": "Your DogsHood gear is on the way! \ud83d\udc3e  #U62059"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "Introducing: Fall Part I"
-    },
-    {
-      "sender": "Gem + Jewel",
-      "subject": "\ud83d\udc8e Dolly Parton\u2019s Style: Bold, Beautiful, and Self-Aware"
-    },
-    {
-      "sender": "Art Caplan",
-      "subject": "You have an invitation"
     }
   ],
   "items": [
