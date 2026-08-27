@@ -672,12 +672,16 @@ window.EMAIL_DATA = {
   "unreadCount": 20,
   "threads": [
     {
-      "sender": "BCBS Global Solutions",
-      "subject": "Only a few days left to give your feedback"
+      "sender": "LinkedIn",
+      "subject": "You have 8 new invitations"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered: 1 Personal Care item"
+      "sender": "Washington University in St. Louis",
+      "subject": "There's still time to Discover WashU!"
+    },
+    {
+      "sender": "BCBS Global Solutions",
+      "subject": "Only a few days left to give your feedback"
     },
     {
       "sender": "Google",
@@ -706,10 +710,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "SHOP SALE ALREADY"
-    },
-    {
-      "sender": "Dogshood",
-      "subject": "Perfect Additions To Your Order"
     }
   ],
   "items": [
