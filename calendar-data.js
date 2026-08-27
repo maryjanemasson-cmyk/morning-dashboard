@@ -636,8 +636,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "John Swift",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Challenge du jour !\""
+    },
+    {
+      "sender": "Joseph Li",
+      "subject": "Welcome Back! PRISMS Updates (Aug 27, 2026)"
+    },
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs Exclusive // THEY'RE BACK The Men's Penny Loafer"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: 1 Personal Care item"
@@ -661,22 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Google",
       "subject": "You shared some Google Account data with Whatnot"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to Braulio Lopez"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 383318888406"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Think you can solve this? \ud83d\udd75\ufe0f"
-    },
-    {
-      "sender": "LinkedIn Sales Navigator",
-      "subject": "New research: why revenue growth feels harder than it should"
     }
   ],
   "items": [
