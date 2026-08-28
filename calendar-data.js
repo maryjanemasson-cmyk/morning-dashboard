@@ -614,19 +614,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "KICKS CREW",
-      "subject": "Hi there, Don't leave empty-handed!"
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Wegmans"
     },
     {
-      "sender": "Moda Operandi",
-      "subject": "Chic\u2019s not dead\u2026"
+      "sender": "Shameless Snacks",
+      "subject": "Black Friday in August PRICES... LAST DAY"
     },
     {
-      "sender": "KICKS CREW",
-      "subject": "Forgot something? Complete checking out now!"
+      "sender": "DoorDash Order",
+      "subject": "Order Confirmation for Mary Jane from Wegmans"
     },
     {
       "sender": "Tiger Gao",
