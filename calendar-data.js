@@ -614,8 +614,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Bradford Carpenter",
+      "subject": "Orientation 2026!"
+    },
+    {
+      "sender": "RMS Beauty",
+      "subject": "Rose-Marie's Treat To You"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Meet four remarkable sellers \ud83e\udde1"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Why AI LovesEm Dashes and Why Almost Every Explanation Is Wrong? | Vivedha Elango in Level Up Coding"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: 1 Essentials item"
@@ -627,34 +655,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is on the way 539788064664"
-    },
-    {
-      "sender": "Shop",
-      "subject": "New Shop sign-in alert"
-    },
-    {
-      "sender": "hpdirector nassautennis.net",
-      "subject": "Re: Nassau HPTA: Fall Registration Info"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Boston trip"
-    },
-    {
-      "sender": "Medium Events",
-      "subject": "Introducing the State of Writing Report at Medium Day"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "The numbers driving our research"
-    },
-    {
-      "sender": "Nannan Lin",
-      "subject": "You have an invitation"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "We know we're cute"
     }
   ],
   "items": [
