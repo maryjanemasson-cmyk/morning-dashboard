@@ -614,8 +614,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: 1 Essentials item"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 383416835207"
+    },
+    {
+      "sender": "Instacart Food Safety",
+      "subject": "Important Product Safety Information from Instacart"
+    },
+    {
+      "sender": "Christian Hinrichs",
+      "subject": "Colombia trip interruption claim 50891628 - complete upload package"
+    },
     {
       "sender": "Tiger Gao",
       "subject": "Re: Health Forms Required \u2013 New Students"
@@ -639,22 +655,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "Back in stock: The Hannah Shoulder Bag."
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "New Halloween Arrivals Are Here"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Meet four remarkable sellers \ud83e\udde1"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
     }
   ],
   "items": [
@@ -664,6 +664,13 @@ window.EMAIL_DATA = {
       "date": "2026-08-28",
       "id": "1a0471108fa4048d",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #383416835207",
+      "date": "2026-08-28",
+      "id": "1a04a6fd2ca8d6f0",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
