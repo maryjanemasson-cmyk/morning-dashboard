@@ -11,50 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "Restaurante Carmen Cartagena",
-    "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
-    "description": "",
-    "startTime": "2026-08-27T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-27T23:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Dinner \u2014 Restaurante Carmen (party of 4)",
-    "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
-    "description": "Confirmed reservation (Google Reserve) \u2014 \u00c0 la Carte Menu, party of 4, 7:30 PM.\nRestaurant: +57 310 3949344\nCancellation: must cancel 24 hours prior for a refund.",
-    "startTime": "2026-08-27T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-27T22:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at Restaurante Carmen Cartagena",
-    "location": "",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOsZdyMRVlvXn2kOV4n3We3Th_v_Ufox0Y\n",
-    "startTime": "2026-08-27T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-27T21:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Restaurante Carmen Cartagena",
-    "location": "Calle del Sant\u00edsimo, Cl. 38 #8-19, San Diego, Cartagena de Indias, Bol\u00edvar, Colombia",
-    "description": "",
-    "startTime": "2026-08-27T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-27T23:30:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
     "summary": "All The Devils Are Here \u2014 McCarter (Berlind Theatre)",
     "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
     "description": "McCarter 2026\u201327 subscription (Friday Night A). Seats: Orchestra B, A-2 & A-4. Order #7841009. Digital tickets at mytickets.mccarter.org. Box office 609-258-2787.",
@@ -218,6 +174,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
+    "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
+    "description": "Thu, Sep 10\n11:00 AM EDT\n[Lodging] Depart The Royal Sonesta Boston\nCheck-Out: 11:00am\n40 Edwin H. Land Boulevard, Cambridge, MA, 02142\n1-617-806-4200",
+    "startTime": "2026-09-10T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-10T12:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\u2708\ufe0f UA2104 BOS \u2192 EWR",
+    "location": "Boston (BOS)",
+    "description": "12:41 PM EDT\n[Flight] BOS to EWR\nUnited Airlines 2104, Terminal TERMINAL B, Gate\n2:08 PM EDT\nArrive Newark (EWR)\nTerminal TERMINAL A, Gate",
+    "startTime": "2026-09-10T12:41:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-10T14:08:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -636,15 +614,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 28,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "PARTIAL SHIPMENT"
+      "sender": "Walgreens Pharmacy",
+      "subject": "We're Processing Your Auto Refill Order"
     },
     {
-      "sender": "Instacart",
-      "subject": "Tell us how we did"
+      "sender": "TurboTax Monthly",
+      "subject": "\ud83d\udd3a Could high rates actually help you?"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Essentials item"
+    },
+    {
+      "sender": "Simon Miller",
+      "subject": "A shipment from order #104352 is on the way"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "THE AW26 COLLECTION IS HERE!"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $12,209.95 deposit was credited to your account."
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "MADDI & COMMA"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -657,49 +655,15 @@ window.EMAIL_DATA = {
     {
       "sender": "hpdirector nassautennis.net",
       "subject": "Re: Nassau HPTA: Fall Registration Info"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles and save on your car rental for your Boston trip"
-    },
-    {
-      "sender": "Medium Events",
-      "subject": "Introducing the State of Writing Report at Medium Day"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "The numbers driving our research"
-    },
-    {
-      "sender": "Nannan Lin",
-      "subject": "You have an invitation"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "We know we're cute"
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "Shipped: 1 Personal Care item",
-      "date": "2026-08-27",
-      "id": "1a04204e369c6dc8",
+      "title": "Shipped: 1 Essentials item",
+      "date": "2026-08-28",
+      "id": "1a0471108fa4048d",
       "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #539788064664",
-      "date": "2026-08-27",
-      "id": "1a045ac2dc76a3c5",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #539788064653",
-      "date": "2026-08-27",
-      "id": "1a04576a8ffd6775",
-      "sender": "FedEx Delivery Manager"
     }
   ]
 };
