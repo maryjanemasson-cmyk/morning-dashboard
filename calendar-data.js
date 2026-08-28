@@ -614,8 +614,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "KICKS CREW",
+      "subject": "Hi there, Don't leave empty-handed!"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "Chic\u2019s not dead\u2026"
+    },
+    {
+      "sender": "KICKS CREW",
+      "subject": "Forgot something? Complete checking out now!"
+    },
     {
       "sender": "Tiger Gao",
       "subject": "Re: Health Forms Required \u2013 New Students"
@@ -643,18 +655,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Design Decor",
       "subject": "New Halloween Arrivals Are Here"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Meet four remarkable sellers \ud83e\udde1"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
     }
   ],
   "items": [
