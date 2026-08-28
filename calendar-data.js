@@ -614,20 +614,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 15,
   "threads": [
-    {
-      "sender": "DoorDash",
-      "subject": "Details of your no-contact delivery from Wegmans"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Black Friday in August PRICES... LAST DAY"
-    },
-    {
-      "sender": "DoorDash Order",
-      "subject": "Order Confirmation for Mary Jane from Wegmans"
-    },
     {
       "sender": "Tiger Gao",
       "subject": "Re: Health Forms Required \u2013 New Students"
@@ -655,6 +643,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Design Decor",
       "subject": "New Halloween Arrivals Are Here"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Meet four remarkable sellers \ud83e\udde1"
+    },
+    {
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
     }
   ],
   "items": [
