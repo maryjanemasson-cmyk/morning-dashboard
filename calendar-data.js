@@ -640,11 +640,15 @@ window.EMAIL_DATA = {
   "threads": [
     {
       "sender": "Reformation",
-      "subject": "YOU\u2019RE ON THE LIST"
+      "subject": "PARTIAL SHIPMENT"
     },
     {
-      "sender": "Steve Madden",
-      "subject": "Good news! Your Steve Madden order is on the way! \ud83d\udce6"
+      "sender": "Instacart",
+      "subject": "Tell us how we did"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 539788064664"
     },
     {
       "sender": "Shop",
@@ -673,10 +677,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "We know we're cute"
-    },
-    {
-      "sender": "Ticketmaster",
-      "subject": "US Open Matches Are Set: Ace Great Tickets at Ticketmaster"
     }
   ],
   "items": [
@@ -686,6 +686,20 @@ window.EMAIL_DATA = {
       "date": "2026-08-27",
       "id": "1a04204e369c6dc8",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #539788064664",
+      "date": "2026-08-27",
+      "id": "1a045ac2dc76a3c5",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #539788064653",
+      "date": "2026-08-27",
+      "id": "1a04576a8ffd6775",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
