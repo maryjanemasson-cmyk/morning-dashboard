@@ -614,15 +614,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 27,
   "threads": [
     {
-      "sender": "Bradford Carpenter",
-      "subject": "Orientation 2026!"
+      "sender": "Tiger Gao",
+      "subject": "Re: Health Forms Required \u2013 New Students"
     },
     {
-      "sender": "RMS Beauty",
-      "subject": "Rose-Marie's Treat To You"
+      "sender": "Tiger Gao",
+      "subject": "Re: Health Forms Required \u2013 Returning Students"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Global-e: $260.00\u00a0USD"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "50% OFF select patio furniture and accessories \ud83d\ude0d"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Reminder: Follow up"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Back in stock: The Hannah Shoulder Bag."
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "New Halloween Arrivals Are Here"
     },
     {
       "sender": "Etsy",
@@ -635,26 +655,6 @@ window.EMAIL_DATA = {
     {
       "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
       "subject": "New shareholder documents are available online"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\u2709\ufe0f Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Why AI LovesEm Dashes and Why Almost Every Explanation Is Wrong? | Vivedha Elango in Level Up Coding"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Essentials item"
-    },
-    {
-      "sender": "Simon Miller",
-      "subject": "A shipment from order #104352 is on the way"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 539788064664"
     }
   ],
   "items": [
