@@ -614,16 +614,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 22,
   "threads": [
-    {
-      "sender": "Walgreens Pharmacy",
-      "subject": "We're Processing Your Auto Refill Order"
-    },
-    {
-      "sender": "TurboTax Monthly",
-      "subject": "\ud83d\udd3a Could high rates actually help you?"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: 1 Essentials item"
@@ -631,18 +623,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Simon Miller",
       "subject": "A shipment from order #104352 is on the way"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "THE AW26 COLLECTION IS HERE!"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $12,209.95 deposit was credited to your account."
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "MADDI & COMMA"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -655,6 +635,26 @@ window.EMAIL_DATA = {
     {
       "sender": "hpdirector nassautennis.net",
       "subject": "Re: Nassau HPTA: Fall Registration Info"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles and save on your car rental for your Boston trip"
+    },
+    {
+      "sender": "Medium Events",
+      "subject": "Introducing the State of Writing Report at Medium Day"
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "The numbers driving our research"
+    },
+    {
+      "sender": "Nannan Lin",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "We know we're cute"
     }
   ],
   "items": [
