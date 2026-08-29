@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-29T13:30:38",
+    "captured_at": "2026-08-29T15:00:15",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -59175,6 +59175,10 @@
     {
       "done": false,
       "text": "2 cups canned full-fat coconut milk"
+    },
+    {
+      "done": false,
+      "text": "8 ounces dried udon noodles"
     }
   ],
   "groceries": null,
@@ -59997,6 +60001,48 @@
         "text": "🧘 Book Pilates & OTF classes"
       }
     ],
+    "2026-08-29": [
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧘 Book Pilates & OTF classes"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌻 Weed the garden"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "clean basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      }
+    ],
     "_seeded": {
       "2026-05-16": true,
       "2026-05-17": true,
@@ -60015,7 +60061,9 @@
       "2026-07-18": true,
       "2026-07-19": true,
       "2026-08-01": true,
-      "2026-08-02": true
+      "2026-08-02": true,
+      "2026-08-29": true,
+      "2026-08-30": true
     },
     "_suppress": {
       "2026-05-23": [
@@ -60329,7 +60377,7 @@
   },
   "chores": {
     "book-pilates": "2026-08-16",
-    "call-mom": "2026-08-08",
+    "call-mom": "2026-08-29",
     "dog-poop": "2026-08-16",
     "dry-cleaning": "2026-08-15",
     "eyebrows": "2026-08-16",

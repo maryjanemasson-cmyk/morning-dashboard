@@ -537,8 +537,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 4,
   "threads": [
+    {
+      "sender": "Trip.com Rewards",
+      "subject": "You're a Gold Member Now!"
+    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Up to 45% OFF select major appliances + FREE delivery"
