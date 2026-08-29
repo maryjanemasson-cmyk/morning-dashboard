@@ -11,83 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "All The Devils Are Here \u2014 McCarter (Berlind Theatre)",
-    "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
-    "description": "McCarter 2026\u201327 subscription (Friday Night A). Seats: Orchestra B, A-2 & A-4. Order #7841009. Digital tickets at mytickets.mccarter.org. Box office 609-258-2787.",
-    "startTime": "2026-08-28T19:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T21:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "MJ at theatre with Sharon",
-    "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
-    "description": "Show: All The Devils Are Here\nTheatre: Berlind Theatre, McCarter Theatre Center\nSeats: Orchestra B, A-2 & A-4\nCurtain: 7:30 PM\n\nSubscription: FRIDAY NIGHT A \u2014 Berlind FE1 M1\nOrder #7841009 (2026-2027 season)\nDigital tickets: mytickets.mccarter.org\nBox office: 609-258-2787",
-    "startTime": "2026-08-28T19:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T22:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "MJ at theatre with Sharon",
-    "location": "Berlind Theatre, McCarter Theatre Center, 91 University Place, Princeton, NJ 08540",
-    "description": "Show: All The Devils Are Here\nTheatre: Berlind Theatre, McCarter Theatre Center\nSeats: Orchestra B, A-2 & A-4\nCurtain: 7:30 PM\n\nSubscription: FRIDAY NIGHT A \u2014 Berlind FE1 M1\nOrder #7841009 (2026-2027 season)\nDigital tickets: mytickets.mccarter.org\nBox office: 609-258-2787",
-    "startTime": "2026-08-28T19:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T22:30:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at ALMA Restaurante - Bar",
-    "location": "",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DMX-1GJQhxXalnMTJo7wQ99Xu0FhtYx1kc\n",
-    "startTime": "2026-08-28T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T21:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Dinner \u2014 ALMA Restaurante \u00b7 Bar (party of 4)",
-    "location": "Cl. 36, Centro Hist\u00f3rico, Cartagena de Indias, Bol\u00edvar, Colombia",
-    "description": "Confirmed reservation (Google Reserve) \u2014 party of 4, 7:30 PM.\nRestaurant: +57 605 6810052",
-    "startTime": "2026-08-28T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T22:30:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "ALMA Restaurante - Bar",
-    "location": "Cl. 36, centro historico, Cartagena de Indias, Bol\u00edvar, Colombia",
-    "description": "",
-    "startTime": "2026-08-28T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T21:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "ALMA Restaurante - Bar",
-    "location": "Cl. 36, centro historico, Cartagena de Indias, Bol\u00edvar, Colombia",
-    "description": "",
-    "startTime": "2026-08-28T20:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-28T21:00:00-04:00",
-    "endDate": "",
-    "calendar": "Chris",
-    "colorId": ""
-  },
-  {
     "summary": "Stay at Grand Hyatt Bogot\u00e1",
     "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
@@ -614,39 +537,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "LinkedIn",
-      "subject": "You have 9 new invitations"
-    },
-    {
-      "sender": "lululemon",
-      "subject": "Updates to our Terms of Use and Privacy Policy"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 383428495547"
+      "subject": "Your shipment is on the way 876422043450"
     },
     {
-      "sender": "FORM BY TWO",
-      "subject": "We\u2019re Moving | New Studio, New Classes and Pre-Sale Memberships"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 876429491208"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: 1 Essentials item"
+      "sender": "Tony Bianco US",
+      "subject": "HEEL OF THE SEASON"
     },
     {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 383416835207"
-    },
-    {
-      "sender": "Instacart Food Safety",
-      "subject": "Important Product Safety Information from Instacart"
+      "subject": "Your shipment is on the way 383434228973"
     },
     {
       "sender": "Tiger Gao",
@@ -655,35 +562,30 @@ window.EMAIL_DATA = {
     {
       "sender": "Tiger Gao",
       "subject": "Re: Health Forms Required \u2013 Returning Students"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Global-e: $260.00\u00a0USD"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "50% OFF select patio furniture and accessories \ud83d\ude0d"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Reminder: Follow up"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Back in stock: The Hannah Shoulder Bag."
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "Shipped: 1 Essentials item",
-      "date": "2026-08-28",
-      "id": "1a0471108fa4048d",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #383428495547",
-      "date": "2026-08-28",
-      "id": "1a04ac66c7e72fe7",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #876429491208",
-      "date": "2026-08-28",
-      "id": "1a04aadf168a669f",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #383416835207",
-      "date": "2026-08-28",
-      "id": "1a04a6fd2ca8d6f0",
+      "title": "FedEx shipped #876422043450",
+      "date": "2026-08-29",
+      "id": "1a04c03c99e86198",
       "sender": "FedEx Delivery Manager"
     }
   ]
