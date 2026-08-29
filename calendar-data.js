@@ -537,27 +537,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 11,
   "threads": [
     {
-      "sender": "Team @ WAT THE BRAND",
-      "subject": "Hey Mary, it's the WAT Team checking in!"
+      "sender": "Etsy",
+      "subject": "ICYMI: Fresh new faves \ud83d\udc40"
     },
     {
-      "sender": "Empower Online Delivery",
-      "subject": "Your Retirement Plan Regulatory Documents"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Medium Daily Digest",
+      "subject": "Claude Design for UX: How to Design Complete User Flows, Not Just UI Screens | Nick Babich in UX Planet"
     },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is on the way 876422043450"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "HEEL OF THE SEASON"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -578,6 +570,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "50% OFF select patio furniture and accessories \ud83d\ude0d"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Reminder: Follow up"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Back in stock: The Hannah Shoulder Bag."
     }
   ],
   "items": [
