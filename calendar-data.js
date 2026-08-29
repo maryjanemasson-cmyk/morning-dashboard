@@ -614,8 +614,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 9 new invitations"
+    },
+    {
+      "sender": "lululemon",
+      "subject": "Updates to our Terms of Use and Privacy Policy"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 383428495547"
+    },
+    {
+      "sender": "FORM BY TWO",
+      "subject": "We\u2019re Moving | New Studio, New Classes and Pre-Sale Memberships"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 876429491208"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered: 1 Essentials item"
@@ -629,32 +649,12 @@ window.EMAIL_DATA = {
       "subject": "Important Product Safety Information from Instacart"
     },
     {
-      "sender": "Christian Hinrichs",
-      "subject": "Colombia trip interruption claim 50891628 - complete upload package"
-    },
-    {
       "sender": "Tiger Gao",
       "subject": "Re: Health Forms Required \u2013 New Students"
     },
     {
       "sender": "Tiger Gao",
       "subject": "Re: Health Forms Required \u2013 Returning Students"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Global-e: $260.00\u00a0USD"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "50% OFF select patio furniture and accessories \ud83d\ude0d"
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Reminder: Follow up"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Back in stock: The Hannah Shoulder Bag."
     }
   ],
   "items": [
@@ -664,6 +664,20 @@ window.EMAIL_DATA = {
       "date": "2026-08-28",
       "id": "1a0471108fa4048d",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #383428495547",
+      "date": "2026-08-28",
+      "id": "1a04ac66c7e72fe7",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #876429491208",
+      "date": "2026-08-28",
+      "id": "1a04aadf168a669f",
+      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "delivery",
