@@ -537,8 +537,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 4,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 45% OFF select major appliances + FREE delivery"
+    },
     {
       "sender": "Etsy",
       "subject": "ICYMI: Fresh new faves \ud83d\udc40"
@@ -546,38 +554,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Claude Design for UX: How to Design Complete User Flows, Not Just UI Screens | Nick Babich in UX Planet"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 876422043450"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 383434228973"
-    },
-    {
-      "sender": "Tiger Gao",
-      "subject": "Re: Health Forms Required \u2013 New Students"
-    },
-    {
-      "sender": "Tiger Gao",
-      "subject": "Re: Health Forms Required \u2013 Returning Students"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Global-e: $260.00\u00a0USD"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "50% OFF select patio furniture and accessories \ud83d\ude0d"
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Reminder: Follow up"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Back in stock: The Hannah Shoulder Bag."
     }
   ],
   "items": [
