@@ -537,12 +537,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 3,
   "threads": [
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Up to 45% OFF select major appliances + FREE delivery"
