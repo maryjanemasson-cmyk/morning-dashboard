@@ -537,8 +537,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Team @ WAT THE BRAND",
+      "subject": "Hey Mary, it's the WAT Team checking in!"
+    },
+    {
+      "sender": "Empower Online Delivery",
+      "subject": "Your Retirement Plan Regulatory Documents"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -570,14 +578,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "50% OFF select patio furniture and accessories \ud83d\ude0d"
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Reminder: Follow up"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "Back in stock: The Hannah Shoulder Bag."
     }
   ],
   "items": [
