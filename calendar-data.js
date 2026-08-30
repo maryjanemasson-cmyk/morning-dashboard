@@ -526,12 +526,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 4,
   "threads": [
-    {
-      "sender": "DoorDash",
-      "subject": "Details of your no-contact delivery from Bagel Barn"
-    },
     {
       "sender": "Medium Daily Digest",
       "subject": "I Was Asked to Rewrite the Ten Commandments. Two Had to Go. | Dan Foster in Backyard Church"

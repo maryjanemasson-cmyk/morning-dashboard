@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-08-30T13:00:15",
+    "captured_at": "2026-08-30T14:12:58",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -60376,14 +60376,14 @@
     "widows-bay": true
   },
   "chores": {
-    "book-pilates": "2026-08-16",
+    "book-pilates": "2026-08-30",
     "call-mom": "2026-08-29",
     "dog-poop": "2026-08-16",
-    "dry-cleaning": "2026-08-15",
+    "dry-cleaning": "2026-08-30",
     "eyebrows": "2026-08-16",
     "pedicure": "2026-08-10",
     "water-plants": "2026-08-16",
-    "weeding": "2026-08-15"
+    "weeding": "2026-08-30"
   },
   "todos": [
     {
