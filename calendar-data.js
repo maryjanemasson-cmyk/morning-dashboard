@@ -526,31 +526,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "Moda Operandi",
-      "subject": "Summer isn\u2019t over yet\u2026"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Brown, redefined"
-    },
-    {
-      "sender": "SIMONMILLER",
-      "subject": "MEET THE ARROW BOOT"
-    },
-    {
-      "sender": "COS",
-      "subject": "Take another look"
-    },
-    {
-      "sender": "KICKS CREW",
-      "subject": "Get started on the KICKS CREW App with a $10 welcome gift!"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Discover the Newest Halloween Details"
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Bagel Barn"
     },
     {
       "sender": "Medium Daily Digest",
