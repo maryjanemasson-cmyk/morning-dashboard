@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Stay at York Medellin, Curio Collection by Hilton",
-    "location": "Carrera 43a 17sur 63 Medell\u00edn 251250 CO",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM8imptMOe1MjVCPqTslLEPF5ePWU1FR6Q\n",
-    "startTime": "",
-    "startDate": "2026-08-26",
-    "endTime": "",
-    "endDate": "2026-08-30",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Stay at Grand Hyatt Bogot\u00e1",
     "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
     "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
@@ -18,17 +7,6 @@ window.CALENDAR_EVENTS = [
     "startDate": "2026-08-29",
     "endTime": "",
     "endDate": "2026-08-31",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-08-29T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-29T11:00:00-04:00",
-    "endDate": "",
     "calendar": "Personal",
     "colorId": ""
   },
@@ -119,6 +97,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-09-12T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-12T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -537,32 +526,56 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 10,
   "threads": [
     {
-      "sender": "Trip.com Rewards",
-      "subject": "You're a Gold Member Now!"
+      "sender": "Moda Operandi",
+      "subject": "Summer isn\u2019t over yet\u2026"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 45% OFF select major appliances + FREE delivery"
+      "sender": "& Other Stories",
+      "subject": "Brown, redefined"
     },
     {
-      "sender": "Etsy",
-      "subject": "ICYMI: Fresh new faves \ud83d\udc40"
+      "sender": "SIMONMILLER",
+      "subject": "MEET THE ARROW BOOT"
+    },
+    {
+      "sender": "COS",
+      "subject": "Take another look"
+    },
+    {
+      "sender": "KICKS CREW",
+      "subject": "Get started on the KICKS CREW App with a $10 welcome gift!"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Discover the Newest Halloween Details"
     },
     {
       "sender": "Medium Daily Digest",
-      "subject": "Claude Design for UX: How to Design Complete User Flows, Not Just UI Screens | Nick Babich in UX Planet"
+      "subject": "I Was Asked to Rewrite the Ten Commandments. Two Had to Go. | Dan Foster in Backyard Church"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: To get the national debt under control, start with the retirement state"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #156"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Gran Sasso X Pini Parma"
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "FedEx shipped #876422043450",
-      "date": "2026-08-29",
-      "id": "1a04c03c99e86198",
-      "sender": "FedEx Delivery Manager"
+      "title": "Shipped: 1 Pet item",
+      "date": "2026-08-30",
+      "id": "1a052a51119fc787",
+      "sender": "Amazon.com"
     }
   ]
 };
