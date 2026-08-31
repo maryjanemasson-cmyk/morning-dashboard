@@ -526,8 +526,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Team @ WAT THE BRAND",
+      "subject": "HURRY! Your voucher expires in 24 hours! \u23f3"
+    },
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The BIG Loafer Email."
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped: 2 Arts & Crafts and Beauty items"
@@ -543,10 +551,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Onitsuka Tiger",
       "subject": "Your order has been shipped! - Onitsuka Tiger by Global-e - order number GE13400239213JP"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "ROXIE TURQUOISE IS BACK \ud83e\ude75"
     },
     {
       "sender": "Medium Daily Digest",
