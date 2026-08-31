@@ -526,16 +526,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 10,
   "threads": [
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Save up to $800! Labor Day lawn deals are here"
-    },
-    {
-      "sender": "Medium",
-      "subject": "50% off, final chance"
-    },
     {
       "sender": "Reformation",
       "subject": "NEW BEGINNINGS"
@@ -567,6 +559,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Schoolhouse",
       "subject": "Stillwater: Now Available in Auburn & Black"
+    },
+    {
+      "sender": "Honeydew",
+      "subject": "It\u2019s go time! Your journey starts NOW"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "This is why I never buy granola."
     }
   ],
   "items": []
