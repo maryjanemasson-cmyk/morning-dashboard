@@ -526,19 +526,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 3,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Save up to $800! Labor Day lawn deals are here"
+    },
+    {
+      "sender": "Medium",
+      "subject": "50% off, final chance"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "NEW BEGINNINGS"
+    },
+    {
+      "sender": "Brunswick Hills OB/GYN",
+      "subject": "Important Update for Brunswick Hills patients"
+    },
+    {
+      "sender": "Grok",
+      "subject": "Watchlist files missing again"
+    },
+    {
+      "sender": "OpenAI",
+      "subject": "New sign-in to your OpenAI account"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "NEW this week"
+    },
+    {
+      "sender": "RMS Beauty",
+      "subject": "Still Hot. Still Blushing."
+    },
+    {
+      "sender": "Leslie Dan Faculty of Pharmacy, University of Toronto via LinkedIn",
+      "subject": "RNA breakthrough provides hope for thousands of untreatable diseases"
+    },
     {
       "sender": "Schoolhouse",
       "subject": "Stillwater: Now Available in Auburn & Black"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "It\u2019s go time! Your journey starts NOW"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "This is why I never buy granola."
     }
   ],
   "items": []
