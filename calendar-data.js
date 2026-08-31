@@ -526,8 +526,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "Look out for Christian's letter from WashU"
+    },
+    {
+      "sender": "National Building Museum",
+      "subject": "September at the Museum: Sharing Cities, Film Screening, Little Builders, & More"
+    },
+    {
+      "sender": "IHG One Rewards",
+      "subject": "Enjoy a look at your August IHG One Rewards eStatement"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "How I get this look in Photoshop"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "brazilian bossa nova"
+    },
     {
       "sender": "Reformation",
       "subject": "NEW BEGINNINGS"
@@ -543,30 +567,6 @@ window.EMAIL_DATA = {
     {
       "sender": "OpenAI",
       "subject": "New sign-in to your OpenAI account"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "NEW this week"
-    },
-    {
-      "sender": "RMS Beauty",
-      "subject": "Still Hot. Still Blushing."
-    },
-    {
-      "sender": "Leslie Dan Faculty of Pharmacy, University of Toronto via LinkedIn",
-      "subject": "RNA breakthrough provides hope for thousands of untreatable diseases"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Stillwater: Now Available in Auburn & Black"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "It\u2019s go time! Your journey starts NOW"
-    },
-    {
-      "sender": "Christina Marsigliese",
-      "subject": "This is why I never buy granola."
     }
   ],
   "items": []
