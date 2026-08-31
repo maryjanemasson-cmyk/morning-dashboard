@@ -526,63 +526,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 3,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered: 1 Hair Care item"
+      "sender": "Schoolhouse",
+      "subject": "Stillwater: Now Available in Auburn & Black"
     },
     {
       "sender": "Honeydew",
       "subject": "It\u2019s go time! Your journey starts NOW"
     },
     {
-      "sender": "OpenAI",
-      "subject": "New sign-in to your OpenAI account"
-    },
-    {
-      "sender": "Google",
-      "subject": "Security alert"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
       "sender": "Christina Marsigliese",
       "subject": "This is why I never buy granola."
-    },
-    {
-      "sender": "Chase Customer Satisfaction",
-      "subject": "Reminder: Please let us know how we're doing"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Mon, 8/31 is ready to view"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "The Two Stupidest Ideas in Philosophy | Douglas Giles, PhD w/o BS in Original Philosophy"
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: 2 Arts & Crafts and Beauty items",
-      "date": "2026-08-31",
-      "id": "1a056f7b19d89fd8",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: 1 Hair Care item",
-      "date": "2026-08-31",
-      "id": "1a0568dd0d4b0d46",
-      "sender": "Amazon.com"
-    }
-  ]
+  "items": []
 };
