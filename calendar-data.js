@@ -526,19 +526,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "Look out for Christian's letter from WashU"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "September at the Museum: Sharing Cities, Film Screening, Little Builders, & More"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 383427230310"
     },
     {
       "sender": "IHG One Rewards",
@@ -567,7 +559,23 @@ window.EMAIL_DATA = {
     {
       "sender": "OpenAI",
       "subject": "New sign-in to your OpenAI account"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "NEW this week"
+    },
+    {
+      "sender": "RMS Beauty",
+      "subject": "Still Hot. Still Blushing."
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #383427230310",
+      "date": "2026-08-31",
+      "id": "1a05a06caa799b0f",
+      "sender": "FedEx Delivery Manager"
+    }
+  ]
 };
