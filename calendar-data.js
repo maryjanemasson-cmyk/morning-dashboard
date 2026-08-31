@@ -526,7 +526,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 8,
   "threads": [
     {
       "sender": "Team @ WAT THE BRAND",
@@ -559,10 +559,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Washington Post",
       "subject": "The Week In Ideas: To get the national debt under control, start with the retirement state"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #156"
     }
   ],
   "items": [
