@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Stay at Grand Hyatt Bogot\u00e1",
-    "location": "Calle 24 A # 57 \u2013 60, Bogot\u00e1, CO 111321",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPsQ6dNY0Rt6H86KIUb_nUXkATVEW_i5oU\n",
-    "startTime": "",
-    "startDate": "2026-08-29",
-    "endTime": "",
-    "endDate": "2026-08-31",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -106,6 +95,17 @@ window.CALENDAR_EVENTS = [
     "startDate": "",
     "endTime": "2026-09-12T11:00:00-04:00",
     "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Anne's birthday",
+    "location": "",
+    "description": "",
+    "startTime": "",
+    "startDate": "2026-09-13",
+    "endTime": "",
+    "endDate": "2026-09-14",
     "calendar": "Personal",
     "colorId": ""
   }
@@ -526,8 +526,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 2 Arts & Crafts and Beauty items"
+    },
+    {
+      "sender": "DHL EXPRESS",
+      "subject": "DHL On Demand Delivery"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Hair Care item"
+    },
+    {
+      "sender": "Onitsuka Tiger",
+      "subject": "Your order has been shipped! - Onitsuka Tiger by Global-e - order number GE13400239213JP"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "ROXIE TURQUOISE IS BACK \ud83e\ude75"
+    },
     {
       "sender": "Medium Daily Digest",
       "subject": "I Was Asked to Rewrite the Ten Commandments. Two Had to Go. | Dan Foster in Backyard Church"
@@ -539,18 +559,21 @@ window.EMAIL_DATA = {
     {
       "sender": "Emily Ley",
       "subject": "Sunday Scroll #156"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Gran Sasso X Pini Parma"
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "Shipped: 1 Pet item",
-      "date": "2026-08-30",
-      "id": "1a052a51119fc787",
+      "title": "Shipped: 2 Arts & Crafts and Beauty items",
+      "date": "2026-08-31",
+      "id": "1a056f7b19d89fd8",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped: 1 Hair Care item",
+      "date": "2026-08-31",
+      "id": "1a0568dd0d4b0d46",
       "sender": "Amazon.com"
     }
   ]
