@@ -526,39 +526,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Team @ WAT THE BRAND",
-      "subject": "HURRY! Your voucher expires in 24 hours! \u23f3"
-    },
-    {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // The BIG Loafer Email."
-    },
-    {
       "sender": "Amazon.com",
-      "subject": "Shipped: 2 Arts & Crafts and Beauty items"
+      "subject": "Delivered: 1 Hair Care item"
     },
     {
-      "sender": "DHL EXPRESS",
-      "subject": "DHL On Demand Delivery"
+      "sender": "Honeydew",
+      "subject": "It\u2019s go time! Your journey starts NOW"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Hair Care item"
+      "sender": "OpenAI",
+      "subject": "New sign-in to your OpenAI account"
     },
     {
-      "sender": "Onitsuka Tiger",
-      "subject": "Your order has been shipped! - Onitsuka Tiger by Global-e - order number GE13400239213JP"
+      "sender": "Google",
+      "subject": "Security alert"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Christina Marsigliese",
+      "subject": "This is why I never buy granola."
+    },
+    {
+      "sender": "Chase Customer Satisfaction",
+      "subject": "Reminder: Please let us know how we're doing"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Mon, 8/31 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
       "sender": "Medium Daily Digest",
-      "subject": "I Was Asked to Rewrite the Ten Commandments. Two Had to Go. | Dan Foster in Backyard Church"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: To get the national debt under control, start with the retirement state"
+      "subject": "The Two Stupidest Ideas in Philosophy | Douglas Giles, PhD w/o BS in Original Philosophy"
     }
   ],
   "items": [
