@@ -559,39 +559,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // The New Daily Hoody"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "Rule Breakers"
-    },
-    {
-      "sender": "G7",
-      "subject": "Pour la rentr\u00e9e, prenez un bon d\u00e9part avec G7 !"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Apple Services: $26.97\u00a0USD"
+      "sender": "Honeydew",
+      "subject": "Hi, it's Dr. Spitz and David"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Alex from Holafly",
-      "subject": "Mary, 3 days can take you far."
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "New Season, Styled."
-    },
-    {
-      "sender": "Steve Madden",
-      "subject": "Heads up! Your Steve Madden package will arrive tomorrow"
     },
     {
       "sender": "IHG One Rewards",
@@ -600,6 +576,30 @@ window.EMAIL_DATA = {
     {
       "sender": "Joel Grimes",
       "subject": "How I get this look in Photoshop"
+    },
+    {
+      "sender": "D\u00e9 Rococo",
+      "subject": "brazilian bossa nova"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "NEW BEGINNINGS"
+    },
+    {
+      "sender": "Brunswick Hills OB/GYN",
+      "subject": "Important Update for Brunswick Hills patients"
+    },
+    {
+      "sender": "Grok",
+      "subject": "Watchlist files missing again"
+    },
+    {
+      "sender": "OpenAI",
+      "subject": "New sign-in to your OpenAI account"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "NEW this week"
     }
   ],
   "items": []
