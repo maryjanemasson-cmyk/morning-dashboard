@@ -559,47 +559,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "Ameriprise Financial",
-      "subject": "A new administrative document is available online"
+      "sender": "Big Mamma",
+      "subject": "Laissez-nous vous pr\u00e9senter ces supers stars...  \ud83d\udc95"
     },
     {
-      "sender": "United News & Deals",
-      "subject": "Upgrade to premium cabin on your upcoming flight"
+      "sender": "Blue Cross Blue Shield Global Solutions\u2120",
+      "subject": "Did BCBS Global Solutions\u2120 Travel Insurance meet your expectations?"
     },
     {
-      "sender": "hpdirector nassautennis.net",
-      "subject": "Re: Nassau HPTA: Fall Registration Info"
+      "sender": "DoorDash Order",
+      "subject": "Final receipt for Mary Jane from Dick's Sporting Goods"
     },
     {
-      "sender": "Joel Grimes",
-      "subject": "Light a bottle, then light a face"
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "Labor Less This Labor Day: Save $25"
     },
     {
-      "sender": "Porsche Princeton",
-      "subject": "You\u2019re Invited - Porsche Princeton Cayenne Electric Launch"
+      "sender": "Studio",
+      "subject": "Casey Neistat's Coaching App is back!"
     },
     {
-      "sender": "M.Gemi's Cliente Rewards",
-      "subject": "Mary Jane, Your Cliente Rewards Status"
+      "sender": "COS",
+      "subject": "Trending for fall"
     },
     {
-      "sender": "Design Decor",
-      "subject": "New! Tree Design Masterclass ONLINE"
-    },
-    {
-      "sender": "CleanShot",
-      "subject": "Introducing CleanShot 5.0 with Studio Mode"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Labor Day's coming. Snack prep starts now."
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": []
