@@ -559,47 +559,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "College Hunks Hauling Junk and Moving",
-      "subject": "Labor Less This Labor Day: Save $25"
+      "sender": "SIMONMILLER",
+      "subject": "Going Somewhere..."
+    },
+    {
+      "sender": "Mob",
+      "subject": "Your chance to win $10,000 with Mob"
+    },
+    {
+      "sender": "World of Hyatt",
+      "subject": "Your Account Summary\u2014New Hotels, New Places to Explore"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "The Fall 26 collection is here"
     },
     {
       "sender": "Studio",
-      "subject": "Casey Neistat's Coaching App is back!"
+      "subject": "Claire Saffitz's Coaching App is back!"
     },
     {
-      "sender": "COS",
-      "subject": "Trending for fall"
+      "sender": "Shop",
+      "subject": "A few things you\u2019ll like from MEILLEUR MOMENT OFFICIAL STORE NEW YORK & DONNI. \ud83d\udc40"
     },
     {
-      "sender": "DoorDash",
-      "subject": "Details of your no-contact delivery from Dick's Sporting Goods"
+      "sender": "Travefy Newsletter",
+      "subject": "Meet the new Travefy \ud83d\udeeb"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Blue Cross Blue Shield Global Solutions\u2120",
+      "subject": "Did BCBS Global Solutions\u2120 Travel Insurance meet your expectations?"
     },
     {
-      "sender": "IHG One Rewards",
-      "subject": "Enjoy a look at your August IHG One Rewards eStatement"
+      "sender": "DoorDash Order",
+      "subject": "Final receipt for Mary Jane from Dick's Sporting Goods"
     },
     {
-      "sender": "Joel Grimes",
-      "subject": "How I get this look in Photoshop"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "brazilian bossa nova"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "NEW BEGINNINGS"
-    },
-    {
-      "sender": "Brunswick Hills OB/GYN",
-      "subject": "Important Update for Brunswick Hills patients"
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "Labor Less This Labor Day: Save $25"
     }
   ],
   "items": []
