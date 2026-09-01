@@ -529,8 +529,8 @@ window.EMAIL_DATA = {
   "unreadCount": 14,
   "threads": [
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 383427230310"
+      "sender": "Topgolf",
+      "subject": "Be the MVP of This Year's Holiday Party!"
     },
     {
       "sender": "IHG One Rewards",
@@ -569,13 +569,5 @@ window.EMAIL_DATA = {
       "subject": "Still Hot. Still Blushing."
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #383427230310",
-      "date": "2026-08-31",
-      "id": "1a05a06caa799b0f",
-      "sender": "FedEx Delivery Manager"
-    }
-  ]
+  "items": []
 };
