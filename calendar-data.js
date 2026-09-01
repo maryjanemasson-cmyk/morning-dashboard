@@ -559,8 +559,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 20,
   "threads": [
+    {
+      "sender": "Design Decor",
+      "subject": "New! Tree Design Masterclass ONLINE"
+    },
+    {
+      "sender": "CleanShot",
+      "subject": "Introducing CleanShot 5.0 with Studio Mode"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Confirmed: Mary Jane, you\u2019ve been selected to apply for a PayPal Credit account based on your PayPal history"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Labor Day's coming. Snack prep starts now."
+    },
     {
       "sender": "SIMONMILLER",
       "subject": "Going Somewhere..."
@@ -584,22 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shop",
       "subject": "A few things you\u2019ll like from MEILLEUR MOMENT OFFICIAL STORE NEW YORK & DONNI. \ud83d\udc40"
-    },
-    {
-      "sender": "Travefy Newsletter",
-      "subject": "Meet the new Travefy \ud83d\udeeb"
-    },
-    {
-      "sender": "Blue Cross Blue Shield Global Solutions\u2120",
-      "subject": "Did BCBS Global Solutions\u2120 Travel Insurance meet your expectations?"
-    },
-    {
-      "sender": "DoorDash Order",
-      "subject": "Final receipt for Mary Jane from Dick's Sporting Goods"
-    },
-    {
-      "sender": "College Hunks Hauling Junk and Moving",
-      "subject": "Labor Less This Labor Day: Save $25"
     }
   ],
   "items": []
