@@ -559,8 +559,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "A new administrative document is available online"
+    },
+    {
+      "sender": "United News & Deals",
+      "subject": "Upgrade to premium cabin on your upcoming flight"
+    },
+    {
+      "sender": "hpdirector nassautennis.net",
+      "subject": "Re: Nassau HPTA: Fall Registration Info"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Light a bottle, then light a face"
+    },
+    {
+      "sender": "Porsche Princeton",
+      "subject": "You\u2019re Invited - Porsche Princeton Cayenne Electric Launch"
+    },
+    {
+      "sender": "M.Gemi's Cliente Rewards",
+      "subject": "Mary Jane, Your Cliente Rewards Status"
+    },
     {
       "sender": "Design Decor",
       "subject": "New! Tree Design Masterclass ONLINE"
@@ -576,30 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "Labor Day's coming. Snack prep starts now."
-    },
-    {
-      "sender": "SIMONMILLER",
-      "subject": "Going Somewhere..."
-    },
-    {
-      "sender": "Mob",
-      "subject": "Your chance to win $10,000 with Mob"
-    },
-    {
-      "sender": "World of Hyatt",
-      "subject": "Your Account Summary\u2014New Hotels, New Places to Explore"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "The Fall 26 collection is here"
-    },
-    {
-      "sender": "Studio",
-      "subject": "Claire Saffitz's Coaching App is back!"
-    },
-    {
-      "sender": "Shop",
-      "subject": "A few things you\u2019ll like from MEILLEUR MOMENT OFFICIAL STORE NEW YORK & DONNI. \ud83d\udc40"
     }
   ],
   "items": []
