@@ -559,8 +559,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The New Daily Hoody"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "Rule Breakers"
+    },
+    {
+      "sender": "G7",
+      "subject": "Pour la rentr\u00e9e, prenez un bon d\u00e9part avec G7 !"
+    },
     {
       "sender": "PayPal",
       "subject": "Apple Services: $26.97\u00a0USD"
@@ -588,18 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Joel Grimes",
       "subject": "How I get this look in Photoshop"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "brazilian bossa nova"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "NEW BEGINNINGS"
-    },
-    {
-      "sender": "Brunswick Hills OB/GYN",
-      "subject": "Important Update for Brunswick Hills patients"
     }
   ],
   "items": []
