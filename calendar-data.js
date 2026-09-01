@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-08-31T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-08-31T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -108,6 +97,50 @@ window.CALENDAR_EVENTS = [
     "endDate": "2026-09-14",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "\u2708\ufe0f Trip from Newark \u2192 Boston",
+    "location": "Cambridge, MA",
+    "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 14 to 16, 2026",
+    "startTime": "",
+    "startDate": "2026-09-14",
+    "endTime": "",
+    "endDate": "2026-09-17",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\u2708\ufe0f UA593 EWR \u2192 BOS",
+    "location": "Newark (EWR)",
+    "description": "Mon, Sep 14\n7:00 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 593, Terminal C, Gate\n8:17 AM EDT\nArrive Boston (BOS)\nTerminal B, Gate",
+    "startTime": "2026-09-14T07:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-14T08:17:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-09-14T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-14T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Courtyard by Marriott Boston Cambridge",
+    "location": "777 Memorial Dr, Cambridge, MA, 02139",
+    "description": "3:00 PM EDT\n[Lodging] Arrive Courtyard by Marriott Boston Cambridge\nCheck-In: 3:00pm\n777 Memorial Dr, Cambridge, MA, 02139\n617-492-7777",
+    "startTime": "2026-09-14T15:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-14T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -526,11 +559,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Topgolf",
-      "subject": "Be the MVP of This Year's Holiday Party!"
+      "sender": "PayPal",
+      "subject": "Apple Services: $26.97\u00a0USD"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Alex from Holafly",
+      "subject": "Mary, 3 days can take you far."
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "New Season, Styled."
+    },
+    {
+      "sender": "Steve Madden",
+      "subject": "Heads up! Your Steve Madden package will arrive tomorrow"
     },
     {
       "sender": "IHG One Rewards",
@@ -551,22 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Brunswick Hills OB/GYN",
       "subject": "Important Update for Brunswick Hills patients"
-    },
-    {
-      "sender": "Grok",
-      "subject": "Watchlist files missing again"
-    },
-    {
-      "sender": "OpenAI",
-      "subject": "New sign-in to your OpenAI account"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "NEW this week"
-    },
-    {
-      "sender": "RMS Beauty",
-      "subject": "Still Hot. Still Blushing."
     }
   ],
   "items": []
