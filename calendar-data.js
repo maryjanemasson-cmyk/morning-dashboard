@@ -559,11 +559,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Honeydew",
-      "subject": "Hi, it's Dr. Spitz and David"
+      "sender": "College Hunks Hauling Junk and Moving",
+      "subject": "Labor Less This Labor Day: Save $25"
+    },
+    {
+      "sender": "Studio",
+      "subject": "Casey Neistat's Coaching App is back!"
+    },
+    {
+      "sender": "COS",
+      "subject": "Trending for fall"
+    },
+    {
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Dick's Sporting Goods"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -588,18 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Brunswick Hills OB/GYN",
       "subject": "Important Update for Brunswick Hills patients"
-    },
-    {
-      "sender": "Grok",
-      "subject": "Watchlist files missing again"
-    },
-    {
-      "sender": "OpenAI",
-      "subject": "New sign-in to your OpenAI account"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "NEW this week"
     }
   ],
   "items": []
