@@ -559,15 +559,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 28,
+  "unreadCount": 32,
   "threads": [
+    {
+      "sender": "Medium Events",
+      "subject": "Medium Day 2026 is back! Save your spot"
+    },
+    {
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Exercise & Fitness item"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Simon Miller",
+      "subject": "A shipment from order #104352 has been delivered"
+    },
     {
       "sender": "Pini Parma",
       "subject": "Mix & Match: New Season Looks"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "IT\u2019S AN HEIRLOOM"
     },
     {
       "sender": "KICKS CREW",
@@ -584,25 +600,16 @@ window.EMAIL_DATA = {
     {
       "sender": "Tamara Kalinic from Material Witness",
       "subject": "The Only Autumn Fashion Guide You\u2019ll Need This Season"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 876422043450"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 539788064653"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Magic made for you \u2728"
-    },
-    {
-      "sender": "Optery",
-      "subject": "[Alert] Your Info Was Found on AllPeople, FastBackgroundCheck, PROPERTYCHECKER and 49 other sites"
     }
   ],
   "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: 1 Exercise & Fitness item",
+      "date": "2026-09-02",
+      "id": "1a0634f220e72f06",
+      "sender": "Amazon.com"
+    },
     {
       "type": "delivery",
       "title": "Shipped: 1 Electronics item",
