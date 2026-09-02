@@ -559,47 +559,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 30,
   "threads": [
     {
+      "sender": "Joe's Stone Crab",
+      "subject": "IT'S HERE: 20% Off Large Claws"
+    },
+    {
+      "sender": "TB INSIDER",
+      "subject": "LEVEL TWO UNLOCKED, ENJOY $20 OFF"
+    },
+    {
+      "sender": "Tony Bianco USA",
+      "subject": "A shipment from order W245509 is on the way"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Save up to $800! Explore these Labor Day deals"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: Package Scheduled for Delivery Today"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "The Only Autumn Fashion Guide You\u2019ll Need This Season"
+    },
+    {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 383416835207"
-    },
-    {
-      "sender": "William Camper (NRTC)",
-      "subject": "Thank you for your participation in our Summer Camp"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "Hi, it\u2019s David \ud83d\udc4b"
+      "subject": "Your shipment is out for delivery today 876422043450"
     },
     {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 539788064664"
+      "subject": "Your shipment is out for delivery today 539788064653"
     },
     {
-      "sender": "Simon Miller",
-      "subject": "A shipment from order #104352 is out for delivery"
+      "sender": "Etsy",
+      "subject": "Magic made for you \u2728"
     },
     {
-      "sender": "Verizon Notification",
-      "subject": "Thanks for submitting your payment"
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Wed, 9/2 is ready to view"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: 1 Exercise & Fitness item"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "COS",
-      "subject": "VIP access: 30% off selected pieces"
+      "sender": "Optery",
+      "subject": "[Alert] Your Info Was Found on AllPeople, FastBackgroundCheck, PROPERTYCHECKER and 49 other sites"
     }
   ],
   "items": [
