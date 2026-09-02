@@ -559,12 +559,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 6,
   "threads": [
-    {
-      "sender": "Big Mamma",
-      "subject": "Laissez-nous vous pr\u00e9senter ces supers stars...  \ud83d\udc95"
-    },
     {
       "sender": "Blue Cross Blue Shield Global Solutions\u2120",
       "subject": "Did BCBS Global Solutions\u2120 Travel Insurance meet your expectations?"
