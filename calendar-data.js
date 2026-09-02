@@ -559,47 +559,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // The Beatnik, The New Heeled Penny Loafer & the Draper Oxford"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 383416835207"
     },
     {
-      "sender": "Rat & Boa",
-      "subject": "The AW26 Lookbook Has Landed"
+      "sender": "William Camper (NRTC)",
+      "subject": "Thank you for your participation in our Summer Camp"
     },
     {
-      "sender": "Walgreens Pharmacy",
-      "subject": "We're Processing Your Auto Refill Order"
+      "sender": "Honeydew",
+      "subject": "Hi, it\u2019s David \ud83d\udc4b"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 539788064664"
     },
     {
-      "sender": "service@paypal.com",
-      "subject": "Time to pick a monthly PayPal Debit category"
+      "sender": "Simon Miller",
+      "subject": "A shipment from order #104352 is out for delivery"
     },
     {
-      "sender": "Blue Cross Blue Shield Global Solutions\u2120",
-      "subject": "Did BCBS Global Solutions\u2120 Travel Insurance meet your expectations?"
+      "sender": "Verizon Notification",
+      "subject": "Thanks for submitting your payment"
     },
     {
-      "sender": "DoorDash Order",
-      "subject": "Final receipt for Mary Jane from Dick's Sporting Goods"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Wed, 9/2 is ready to view"
     },
     {
-      "sender": "College Hunks Hauling Junk and Moving",
-      "subject": "Labor Less This Labor Day: Save $25"
+      "sender": "Amazon.com",
+      "subject": "Ordered: 1 Exercise & Fitness item"
     },
     {
-      "sender": "Studio",
-      "subject": "Casey Neistat's Coaching App is back!"
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
     },
     {
       "sender": "COS",
-      "subject": "Trending for fall"
+      "subject": "VIP access: 30% off selected pieces"
     }
   ],
   "items": [
