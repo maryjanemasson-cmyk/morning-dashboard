@@ -559,19 +559,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 28,
   "threads": [
     {
-      "sender": "Joe's Stone Crab",
-      "subject": "IT'S HERE: 20% Off Large Claws"
+      "sender": "Pini Parma",
+      "subject": "Mix & Match: New Season Looks"
     },
     {
-      "sender": "TB INSIDER",
-      "subject": "LEVEL TWO UNLOCKED, ENJOY $20 OFF"
+      "sender": "Reformation",
+      "subject": "IT\u2019S AN HEIRLOOM"
     },
     {
-      "sender": "Tony Bianco USA",
-      "subject": "A shipment from order W245509 is on the way"
+      "sender": "KICKS CREW",
+      "subject": "Where did you go? Come back and finish shopping!"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
