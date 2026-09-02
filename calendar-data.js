@@ -559,8 +559,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "Walgreens Pharmacy",
+      "subject": "We're Processing Your Auto Refill Order"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "service@paypal.com",
+      "subject": "Time to pick a monthly PayPal Debit category"
+    },
     {
       "sender": "Blue Cross Blue Shield Global Solutions\u2120",
       "subject": "Did BCBS Global Solutions\u2120 Travel Insurance meet your expectations?"
@@ -580,11 +592,15 @@ window.EMAIL_DATA = {
     {
       "sender": "COS",
       "subject": "Trending for fall"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: 1 Electronics item",
+      "date": "2026-09-02",
+      "id": "1a060af29e5a98eb",
+      "sender": "Amazon.com"
+    }
+  ]
 };
