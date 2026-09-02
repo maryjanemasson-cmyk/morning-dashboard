@@ -559,15 +559,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 32,
+  "unreadCount": 31,
   "threads": [
     {
-      "sender": "Medium Events",
-      "subject": "Medium Day 2026 is back! Save your spot"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 383416835207"
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 876422043450"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
+    {
+      "sender": "Steve Madden",
+      "subject": "Your Steve Madden package has arrived! \ud83c\udf89"
     },
     {
       "sender": "Amazon.com",
@@ -576,10 +584,6 @@ window.EMAIL_DATA = {
     {
       "sender": "UPS",
       "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Simon Miller",
-      "subject": "A shipment from order #104352 has been delivered"
     },
     {
       "sender": "Pini Parma",
@@ -592,10 +596,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Save up to $800! Explore these Labor Day deals"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: Package Scheduled for Delivery Today"
     },
     {
       "sender": "Tamara Kalinic from Material Witness",
