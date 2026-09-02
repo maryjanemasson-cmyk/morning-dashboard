@@ -559,8 +559,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The Beatnik, The New Heeled Penny Loafer & the Draper Oxford"
+    },
+    {
+      "sender": "Rat & Boa",
+      "subject": "The AW26 Lookbook Has Landed"
+    },
     {
       "sender": "Walgreens Pharmacy",
       "subject": "We're Processing Your Auto Refill Order"
