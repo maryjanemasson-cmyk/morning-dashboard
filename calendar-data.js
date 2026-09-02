@@ -559,8 +559,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 31,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "A neighbor near Snowden",
+      "subject": "unreliable and non responsive."
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 876659204381"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Try Award Accelerator on your upcoming trip to Boston"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 876629972933"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 383416835207"
@@ -568,10 +584,6 @@ window.EMAIL_DATA = {
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 876422043450"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
     },
     {
       "sender": "Steve Madden",
@@ -588,18 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pini Parma",
       "subject": "Mix & Match: New Season Looks"
-    },
-    {
-      "sender": "KICKS CREW",
-      "subject": "Where did you go? Come back and finish shopping!"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Save up to $800! Explore these Labor Day deals"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "The Only Autumn Fashion Guide You\u2019ll Need This Season"
     }
   ],
   "items": [
@@ -616,6 +616,34 @@ window.EMAIL_DATA = {
       "date": "2026-09-02",
       "id": "1a060af29e5a98eb",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #876659204381",
+      "date": "2026-09-02",
+      "id": "1a064554d2e64c80",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #876629972933",
+      "date": "2026-09-02",
+      "id": "1a0643d39e0965ad",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #383428495547",
+      "date": "2026-09-03",
+      "id": "1a06432d98d35911",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #383434228973",
+      "date": "2026-09-03",
+      "id": "1a0641a3080c5dc3",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
