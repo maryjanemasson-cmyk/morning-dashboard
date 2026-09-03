@@ -141,6 +141,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Courtyard by Marriott Boston Cambridge",
+    "location": "777 Memorial Dr, Cambridge, MA, 02139",
+    "description": "Wed, Sep 16\n11:00 AM EDT\n[Lodging] Depart Courtyard by Marriott Boston Cambridge\nCheck-Out: 11:00am\n777 Memorial Dr, Cambridge, MA, 02139\n617-492-7777",
+    "startTime": "2026-09-16T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-16T12:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\u2708\ufe0f UA2104 BOS \u2192 EWR",
+    "location": "Boston (BOS)",
+    "description": "12:41 PM EDT\n[Flight] BOS to EWR\nUnited Airlines 2104, Terminal B, Gate\n2:08 PM EDT\nArrive Newark (EWR)\nTerminal A, Gate",
+    "startTime": "2026-09-16T12:41:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-16T14:08:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -559,23 +581,35 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 30,
   "threads": [
     {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
+      "sender": "Oksana from Galbraith Florists",
+      "subject": "A Beautiful Start to a New School Year"
     },
     {
-      "sender": "Hotels.com",
-      "subject": "Introducing our new business travel experience"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Washington University in St. Louis",
-      "subject": "Reminder: Join Cornell, Emory, Pomona, Rice, and WashU virtually"
+      "sender": "Valeria from Holafly",
+      "subject": "Your Labor Day eSIM is 7% off"
     },
     {
-      "sender": "BrandsMart Deals",
-      "subject": "Win a Marlins VIP Suite + $1,000 Gift Card!"
+      "sender": "WAT THE BRAND",
+      "subject": "The Next Chapter.."
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Apparel item"
+    },
+    {
+      "sender": "Ameriprise Financial",
+      "subject": "Your latest account statement is available online"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "TRENDING: VINO"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -588,48 +622,15 @@ window.EMAIL_DATA = {
     {
       "sender": "Steve Madden",
       "subject": "Your Steve Madden package has arrived! \ud83c\udf89"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Exercise & Fitness item"
-    },
-    {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Mix & Match: New Season Looks"
     }
   ],
   "items": [
     {
       "type": "delivery",
-      "title": "Shipped: 1 Exercise & Fitness item",
-      "date": "2026-09-02",
-      "id": "1a0634f220e72f06",
+      "title": "Shipped: 1 Apparel item",
+      "date": "2026-09-03",
+      "id": "1a065c1a41399432",
       "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped: 1 Electronics item",
-      "date": "2026-09-02",
-      "id": "1a060af29e5a98eb",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #876659204381",
-      "date": "2026-09-02",
-      "id": "1a064554d2e64c80",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #876629972933",
-      "date": "2026-09-02",
-      "id": "1a0643d39e0965ad",
-      "sender": "FedEx Delivery Manager"
     },
     {
       "type": "delivery",
