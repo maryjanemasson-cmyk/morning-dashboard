@@ -581,15 +581,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Abercrombie & Fitch",
-      "subject": "WIN A TRIP TO SUPER BOWL LXI\u207a"
+      "sender": "Topgolf",
+      "subject": "50% OFF | Save on Labor Day Play"
     },
     {
-      "sender": "BrandsMart Deals",
-      "subject": "Unlock 60 Months Financing with 0% Interest on Select Brands"
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Pantry item"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered: 1 Pantry item"
+    },
+    {
+      "sender": "PNC Bank",
+      "subject": "Protect yourself from impersonation fraud"
+    },
+    {
+      "sender": "Chloe at Sur La Table",
+      "subject": "Mary, celebrate 54 years with us\u2014savings inside"
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Save up to 30% in the fall sale"
     },
     {
       "sender": "Reformation",
@@ -600,31 +616,22 @@ window.EMAIL_DATA = {
       "subject": "The Zoomtopia 2026 agenda is live!"
     },
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Snap up floral linen pillows \u26a1"
-    },
-    {
       "sender": "Pediatric Brain Tumor Foundation",
       "subject": "\ud83d\udc9b Every gift doubled for Childhood Cancer Awareness Month."
     },
     {
       "sender": "Tip Top Cocktails",
       "subject": "Effortless Cocktails for Your Labor Day \ud83d\ude0e"
-    },
-    {
-      "sender": "Studio",
-      "subject": "Casey Neistat's AI-Powered App: How It Works"
-    },
-    {
-      "sender": "DoorDash Order",
-      "subject": "Order Confirmation for Mary Jane from Chopt Creative Salad Co."
     }
   ],
   "items": [
+    {
+      "type": "delivery",
+      "title": "Shipped: 1 Pantry item",
+      "date": "2026-09-03",
+      "id": "1a0689835028a905",
+      "sender": "Amazon.com"
+    },
     {
       "type": "delivery",
       "title": "FedEx arriving tomorrow #383428495547",
