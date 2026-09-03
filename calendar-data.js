@@ -581,47 +581,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 23,
   "threads": [
     {
       "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 383416835207"
+      "subject": "Your shipment is out for delivery today 383428495547"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 876422043450"
+      "sender": "Enza Costa",
+      "subject": "Early Fall Arrives \u2013 Fall 2026 Delivery II"
     },
     {
-      "sender": "Steve Madden",
-      "subject": "Your Steve Madden package has arrived! \ud83c\udf89"
+      "sender": "Suzie Kondi",
+      "subject": "Petal Layers"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Exercise & Fitness item"
+      "sender": "Christina Marsigliese",
+      "subject": "PART 1: Your new favorite apple recipe!"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "RMS Beauty",
+      "subject": "We're Playing Favorites \u2764\ufe0f"
     },
     {
-      "sender": "Pini Parma",
-      "subject": "Mix & Match: New Season Looks"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Thu, 9/3 is ready to view"
     },
     {
-      "sender": "KICKS CREW",
-      "subject": "Where did you go? Come back and finish shopping!"
+      "sender": "Team Cloaked",
+      "subject": "Your Privacy Impact This Month"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Save up to $800! Explore these Labor Day deals"
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 876422043450"
+      "sender": "Joel Grimes",
+      "subject": "Auto was never the problem"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 539788064653"
+      "sender": "COS",
+      "subject": "30% off: Labor Day weekend"
     }
   ],
   "items": [
