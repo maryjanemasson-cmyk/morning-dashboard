@@ -581,36 +581,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 22,
   "threads": [
-    {
-      "sender": "Oksana from Galbraith Florists",
-      "subject": "A Beautiful Start to a New School Year"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Valeria from Holafly",
-      "subject": "Your Labor Day eSIM is 7% off"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "The Next Chapter.."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Apparel item"
-    },
-    {
-      "sender": "Ameriprise Financial",
-      "subject": "Your latest account statement is available online"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "TRENDING: VINO"
-    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment was delivered 383416835207"
@@ -622,16 +594,37 @@ window.EMAIL_DATA = {
     {
       "sender": "Steve Madden",
       "subject": "Your Steve Madden package has arrived! \ud83c\udf89"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Exercise & Fitness item"
+    },
+    {
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Mix & Match: New Season Looks"
+    },
+    {
+      "sender": "KICKS CREW",
+      "subject": "Where did you go? Come back and finish shopping!"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Save up to $800! Explore these Labor Day deals"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 876422043450"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 539788064653"
     }
   ],
   "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: 1 Apparel item",
-      "date": "2026-09-03",
-      "id": "1a065c1a41399432",
-      "sender": "Amazon.com"
-    },
     {
       "type": "delivery",
       "title": "FedEx arriving tomorrow #383428495547",
