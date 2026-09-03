@@ -581,47 +581,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "chrislovesjulia",
-      "subject": "Under $25 | We're Floored"
+      "sender": "Abercrombie & Fitch",
+      "subject": "WIN A TRIP TO SUPER BOWL LXI\u207a"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Labor Day Extra Big Deals have arrived\ud83d\udc49"
+      "sender": "BrandsMart Deals",
+      "subject": "Unlock 60 Months Financing with 0% Interest on Select Brands"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 876659204381"
+      "sender": "Reformation",
+      "subject": "THAT\u2019S TEMPTING "
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 383434228973"
+      "sender": "Zoom",
+      "subject": "The Zoomtopia 2026 agenda is live!"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 383428495547"
+      "sender": "MyLowe's Rewards",
+      "subject": "DON'T stop now \ud83d\ude80 Silver status is calling \ud83d\udcde"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 383416835207"
+      "sender": "Etsy",
+      "subject": "Snap up floral linen pillows \u26a1"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 876422043450"
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "\ud83d\udc9b Every gift doubled for Childhood Cancer Awareness Month."
     },
     {
-      "sender": "Steve Madden",
-      "subject": "Your Steve Madden package has arrived! \ud83c\udf89"
+      "sender": "Tip Top Cocktails",
+      "subject": "Effortless Cocktails for Your Labor Day \ud83d\ude0e"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped: 1 Exercise & Fitness item"
+      "sender": "Studio",
+      "subject": "Casey Neistat's AI-Powered App: How It Works"
     },
     {
-      "sender": "UPS",
-      "subject": "Your UPS Package was delivered"
+      "sender": "DoorDash Order",
+      "subject": "Order Confirmation for Mary Jane from Chopt Creative Salad Co."
     }
   ],
   "items": [
