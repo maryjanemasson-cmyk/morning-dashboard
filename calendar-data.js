@@ -581,47 +581,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "chrislovesjulia",
+      "subject": "Under $25 | We're Floored"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Labor Day Extra Big Deals have arrived\ud83d\udc49"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 876659204381"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 383434228973"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is out for delivery today 383428495547"
     },
     {
-      "sender": "Enza Costa",
-      "subject": "Early Fall Arrives \u2013 Fall 2026 Delivery II"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 383416835207"
     },
     {
-      "sender": "Suzie Kondi",
-      "subject": "Petal Layers"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 876422043450"
     },
     {
-      "sender": "Christina Marsigliese",
-      "subject": "PART 1: Your new favorite apple recipe!"
+      "sender": "Steve Madden",
+      "subject": "Your Steve Madden package has arrived! \ud83c\udf89"
     },
     {
-      "sender": "RMS Beauty",
-      "subject": "We're Playing Favorites \u2764\ufe0f"
+      "sender": "Amazon.com",
+      "subject": "Shipped: 1 Exercise & Fitness item"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Thu, 9/3 is ready to view"
-    },
-    {
-      "sender": "Team Cloaked",
-      "subject": "Your Privacy Impact This Month"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Auto was never the problem"
-    },
-    {
-      "sender": "COS",
-      "subject": "30% off: Labor Day weekend"
+      "sender": "UPS",
+      "subject": "Your UPS Package was delivered"
     }
   ],
   "items": [
