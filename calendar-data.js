@@ -562,20 +562,20 @@ window.EMAIL_DATA = {
   "unreadCount": 29,
   "threads": [
     {
-      "sender": "A neighbor near Snowden",
-      "subject": "unreliable and non responsive."
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 876659204381"
+      "sender": "Hotels.com",
+      "subject": "Introducing our new business travel experience"
     },
     {
-      "sender": "MileagePlus Program",
-      "subject": "Try Award Accelerator on your upcoming trip to Boston"
+      "sender": "Washington University in St. Louis",
+      "subject": "Reminder: Join Cornell, Emory, Pomona, Rice, and WashU virtually"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 876629972933"
+      "sender": "BrandsMart Deals",
+      "subject": "Win a Marlins VIP Suite + $1,000 Gift Card!"
     },
     {
       "sender": "FedEx Delivery Manager",
