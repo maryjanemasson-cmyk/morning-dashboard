@@ -581,8 +581,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Reformation",
+      "subject": "TELL US EVERYTHING"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered: 1 Pantry item"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "The DENIM Guide"
+    },
+    {
+      "sender": "Gem + Jewel",
+      "subject": "\ud83d\udc8e Bid On Jewelry From \u2018The Devil Wears Prada 2\u2019"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "My Unofficial Guide to Fashion in Your 40s"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "Christian can find global solutions at WashU"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "You already own the hard part"
+    },
     {
       "sender": "Topgolf",
       "subject": "50% OFF | Save on Labor Day Play"
@@ -594,34 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: 1 Pantry item"
-    },
-    {
-      "sender": "PNC Bank",
-      "subject": "Protect yourself from impersonation fraud"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Mary, celebrate 54 years with us\u2014savings inside"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Save up to 30% in the fall sale"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "THAT\u2019S TEMPTING "
-    },
-    {
-      "sender": "Zoom",
-      "subject": "The Zoomtopia 2026 agenda is live!"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "\ud83d\udc9b Every gift doubled for Childhood Cancer Awareness Month."
-    },
-    {
-      "sender": "Tip Top Cocktails",
-      "subject": "Effortless Cocktails for Your Labor Day \ud83d\ude0e"
     }
   ],
   "items": [
