@@ -581,47 +581,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 26,
   "threads": [
     {
-      "sender": "Walpole Outdoors",
-      "subject": "Put Summer Away in Style"
-    },
-    {
-      "sender": "Cloudflare",
-      "subject": "See Fei-Fei Li and Adam Grant live at Cloudflare Connect"
-    },
-    {
-      "sender": "COS",
-      "subject": "30% off: the best of"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 876629972933"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Faux greenery has a reputation problem"
-    },
-    {
-      "sender": "Tony Bianco USA",
-      "subject": "A shipment from order W245509 is out for delivery"
-    },
-    {
-      "sender": "John Gregory-Smith",
-      "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
+      "sender": "Horizon BCBSNJ Member Services",
+      "subject": "Christian, your claim has been processed"
     },
     {
       "sender": "PNC Alerts",
-      "subject": "A $7,708.74 deposit was credited to your account."
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
     },
     {
-      "sender": "Tony Bianco US",
-      "subject": "PUMPS + SLINGBACKS"
+      "sender": "Tony Bianco USA",
+      "subject": "A shipment from order W245509 has been delivered"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 876629972933"
+    },
+    {
+      "sender": "Samsung",
+      "subject": "Galaxy Z Fold8, the world's lightest fold, is waiting to be opened"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "Back in a new color"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Standout sellers, curated for you \ud83d\udcab"
+    },
+    {
+      "sender": "Viski",
+      "subject": "Upgrade your home bar: 20% off sitewide for Labor Day"
+    },
+    {
+      "sender": "Bissinger's Handcrafted Chocolatier",
+      "subject": "20% OFF LABOR DAY SALE! In Store & ONLINE!"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "Cashmere HEAVEN"
     }
   ],
   "items": [
