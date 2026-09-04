@@ -581,47 +581,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Walpole Outdoors",
+      "subject": "Put Summer Away in Style"
+    },
+    {
+      "sender": "Cloudflare",
+      "subject": "See Fei-Fei Li and Adam Grant live at Cloudflare Connect"
+    },
+    {
+      "sender": "COS",
+      "subject": "30% off: the best of"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 876629972933"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Faux greenery has a reputation problem"
+    },
     {
       "sender": "Tony Bianco USA",
       "subject": "A shipment from order W245509 is out for delivery"
     },
     {
-      "sender": "Honeydew",
-      "subject": "Don\u2019t take it from us\u2026"
-    },
-    {
-      "sender": "Diana Miller",
-      "subject": "Summer's almost over. My honest flavor picks."
-    },
-    {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 9/4 is ready to view"
-    },
-    {
-      "sender": "BrandsMart Deals",
-      "subject": "0% Interest for 60 Months on Select KitchenAid & JennAir Appliances"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83d\udcec Today's Rollup"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Keep this between us"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Your Addiction Reveals What You\u2019re Running From | Constantin Patrascu in Read or Die\u200a\u2014\u200aHQ"
+      "sender": "John Gregory-Smith",
+      "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
     },
     {
       "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+      "subject": "A $7,708.74 deposit was credited to your account."
     },
     {
-      "sender": "John Gregory-Smith",
-      "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
+      "sender": "Tony Bianco US",
+      "subject": "PUMPS + SLINGBACKS"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
