@@ -581,11 +581,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Rat & Boa USA",
-      "subject": "Your Exclusive First Look: The Aftersun Collection"
+      "sender": "PNC Alerts",
+      "subject": "A $7,708.74 deposit was credited to your account."
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "PUMPS + SLINGBACKS"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "GLO30",
+      "subject": "Your skin called. It wants the September SmartGLO. Facial"
     },
     {
       "sender": "Amazon.com",
@@ -610,42 +622,9 @@ window.EMAIL_DATA = {
     {
       "sender": "Hotels.com",
       "subject": "Save up to 30% in the fall sale"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "THAT\u2019S TEMPTING "
-    },
-    {
-      "sender": "Zoom",
-      "subject": "The Zoomtopia 2026 agenda is live!"
-    },
-    {
-      "sender": "Pediatric Brain Tumor Foundation",
-      "subject": "\ud83d\udc9b Every gift doubled for Childhood Cancer Awareness Month."
     }
   ],
   "items": [
-    {
-      "type": "delivery",
-      "title": "Shipped: 1 Pantry item",
-      "date": "2026-09-03",
-      "id": "1a0689835028a905",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #383428495547",
-      "date": "2026-09-03",
-      "id": "1a06432d98d35911",
-      "sender": "FedEx Delivery Manager"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #383434228973",
-      "date": "2026-09-03",
-      "id": "1a0641a3080c5dc3",
-      "sender": "FedEx Delivery Manager"
-    },
     {
       "type": "delivery",
       "title": "FedEx arriving tomorrow #876629972933",
