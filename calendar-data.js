@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "Reservation at Kristine's",
+    "location": "Kristine's, 51 Witherspoon St, (Between Witherspoon St and Spring St), Princeton, NJ 08542",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DN4hzUZu-OHVXFlDbYG8AvOqgYeyFzrJ84\n",
+    "startTime": "2026-09-04T18:15:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-04T19:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -581,47 +592,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Get MORE out of your concert experience \ud83e\udd29"
+      "sender": "Steve Madden",
+      "subject": "Tell us what you think! We\u2019re All Ears And Shoes.\u00a0"
     },
     {
-      "sender": "Samsung",
-      "subject": "Galaxy Z Fold8, the world's lightest fold, is waiting to be opened"
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at Kristine's is confirmed"
     },
     {
-      "sender": "Reformation",
-      "subject": "Back in a new color"
+      "sender": "John Gregory-Smith",
+      "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
     },
     {
-      "sender": "Etsy",
-      "subject": "Standout sellers, curated for you \ud83d\udcab"
+      "sender": "PNC Alerts",
+      "subject": "A $7,708.74 deposit was credited to your account."
     },
     {
-      "sender": "Viski",
-      "subject": "Upgrade your home bar: 20% off sitewide for Labor Day"
+      "sender": "Tony Bianco US",
+      "subject": "PUMPS + SLINGBACKS"
     },
     {
-      "sender": "Bissinger's Handcrafted Chocolatier",
-      "subject": "20% OFF LABOR DAY SALE! In Store & ONLINE!"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "Cashmere HEAVEN"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Put Summer Away in Style"
-    },
-    {
-      "sender": "Cloudflare",
-      "subject": "See Fei-Fei Li and Adam Grant live at Cloudflare Connect"
-    },
-    {
-      "sender": "COS",
-      "subject": "30% off: the best of"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
