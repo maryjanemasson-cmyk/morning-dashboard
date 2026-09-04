@@ -592,15 +592,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Grill and bear it"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is scheduled for delivery tomorrow 383427230310"
+    },
+    {
+      "sender": "Cineplex",
+      "subject": "\ud83c\udfac Crime, conspiracy, and super-soldier chaos takes the screen"
+    },
+    {
+      "sender": "Brother USA",
+      "subject": "Your Labor Day Deal Is Here - Take 20% off $150+"
+    },
     {
       "sender": "Steve Madden",
       "subject": "Tell us what you think! We\u2019re All Ears And Shoes.\u00a0"
-    },
-    {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at Kristine's is confirmed"
     },
     {
       "sender": "John Gregory-Smith",
@@ -625,6 +637,13 @@ window.EMAIL_DATA = {
       "title": "FedEx arriving tomorrow #876629972933",
       "date": "2026-09-04",
       "id": "1a0692f240b3081a",
+      "sender": "FedEx Delivery Manager"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx arriving tomorrow #383427230310",
+      "date": "2026-09-05",
+      "id": "1a06e6f32fd56b44",
       "sender": "FedEx Delivery Manager"
     }
   ]
