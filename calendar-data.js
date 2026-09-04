@@ -581,8 +581,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "Tony Bianco USA",
+      "subject": "A shipment from order W245509 is out for delivery"
+    },
+    {
+      "sender": "Honeydew",
+      "subject": "Don\u2019t take it from us\u2026"
+    },
+    {
+      "sender": "Diana Miller",
+      "subject": "Summer's almost over. My honest flavor picks."
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 9/4 is ready to view"
+    },
+    {
+      "sender": "BrandsMart Deals",
+      "subject": "0% Interest for 60 Months on Select KitchenAid & JennAir Appliances"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83d\udcec Today's Rollup"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Keep this between us"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Your Addiction Reveals What You\u2019re Running From | Constantin Patrascu in Read or Die\u200a\u2014\u200aHQ"
+    },
     {
       "sender": "PNC Alerts",
       "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
@@ -590,38 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "John Gregory-Smith",
       "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $7,708.74 deposit was credited to your account."
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "PUMPS + SLINGBACKS"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "GLO30",
-      "subject": "Your skin called. It wants the September SmartGLO. Facial"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered: 1 Pantry item"
-    },
-    {
-      "sender": "Gem + Jewel",
-      "subject": "\ud83d\udc8e Bid On Jewelry From \u2018The Devil Wears Prada 2\u2019"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "You already own the hard part"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered: 1 Pantry item"
     }
   ],
   "items": [
