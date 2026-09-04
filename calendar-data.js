@@ -581,23 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "Horizon BCBSNJ Member Services",
-      "subject": "Christian, your claim has been processed"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
-    },
-    {
-      "sender": "Tony Bianco USA",
-      "subject": "A shipment from order W245509 has been delivered"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 876629972933"
+      "sender": "MyLowe's Rewards",
+      "subject": "Get MORE out of your concert experience \ud83e\udd29"
     },
     {
       "sender": "Samsung",
@@ -622,6 +610,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Moda Operandi",
       "subject": "Cashmere HEAVEN"
+    },
+    {
+      "sender": "Walpole Outdoors",
+      "subject": "Put Summer Away in Style"
+    },
+    {
+      "sender": "Cloudflare",
+      "subject": "See Fei-Fei Li and Adam Grant live at Cloudflare Connect"
+    },
+    {
+      "sender": "COS",
+      "subject": "30% off: the best of"
     }
   ],
   "items": [
