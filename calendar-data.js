@@ -581,23 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Walgreens Pharmacy",
-      "subject": "Mary Jane, your Rx is ready for pickup"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 383428495547"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 383434228973"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 876659204381"
+      "sender": "Rat & Boa USA",
+      "subject": "Your Exclusive First Look: The Aftersun Collection"
     },
     {
       "sender": "Amazon.com",
@@ -622,6 +610,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Hotels.com",
       "subject": "Save up to 30% in the fall sale"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "THAT\u2019S TEMPTING "
+    },
+    {
+      "sender": "Zoom",
+      "subject": "The Zoomtopia 2026 agenda is live!"
+    },
+    {
+      "sender": "Pediatric Brain Tumor Foundation",
+      "subject": "\ud83d\udc9b Every gift doubled for Childhood Cancer Awareness Month."
     }
   ],
   "items": [
