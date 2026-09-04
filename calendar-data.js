@@ -581,8 +581,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
+    },
+    {
+      "sender": "John Gregory-Smith",
+      "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
+    },
     {
       "sender": "PNC Alerts",
       "subject": "A $7,708.74 deposit was credited to your account."
@@ -614,14 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered: 1 Pantry item"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Mary, celebrate 54 years with us\u2014savings inside"
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Save up to 30% in the fall sale"
     }
   ],
   "items": [
