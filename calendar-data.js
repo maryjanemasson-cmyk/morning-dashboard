@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Reservation at Kristine's",
-    "location": "Kristine's, 51 Witherspoon St, (Between Witherspoon St and Spring St), Princeton, NJ 08542",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DN4hzUZu-OHVXFlDbYG8AvOqgYeyFzrJ84\n",
-    "startTime": "2026-09-04T18:15:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-04T19:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -592,8 +581,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 11,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your Go-To Denim"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "THE LOAFERS YOU LOVE"
+    },
+    {
+      "sender": "Lisa Ullmann",
+      "subject": "Re: Block Party Approved by Township -"
+    },
     {
       "sender": "LinkedIn",
       "subject": "You have 10+ new invitations"
@@ -613,32 +622,9 @@ window.EMAIL_DATA = {
     {
       "sender": "Steve Madden",
       "subject": "Tell us what you think! We\u2019re All Ears And Shoes.\u00a0"
-    },
-    {
-      "sender": "John Gregory-Smith",
-      "subject": "JohnGS recipe drop - Late Summer BBQ Recipes"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $7,708.74 deposit was credited to your account."
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "PUMPS + SLINGBACKS"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #876629972933",
-      "date": "2026-09-04",
-      "id": "1a0692f240b3081a",
-      "sender": "FedEx Delivery Manager"
-    },
     {
       "type": "delivery",
       "title": "FedEx arriving tomorrow #383427230310",
