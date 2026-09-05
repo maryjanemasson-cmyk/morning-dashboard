@@ -592,8 +592,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "The Blue Bears Special Meals",
+      "subject": "Second annual Charity Dinner on September 23rd"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Did you grab this yet? \u2026"
+    },
     {
       "sender": "Chloe at Sur La Table",
       "subject": "Mary, celebrate the long weekend with savings"
@@ -625,14 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "BrandsMart Deals",
       "subject": "Final Days to Save on Top Appliances"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "How Stress Moves From the Mind to the Immune System | Stephanie Jyet Quan Loo in The Microscope"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "The tools behind my images \u2026"
     }
   ],
   "items": [
