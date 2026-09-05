@@ -581,8 +581,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "BrandsMart Deals",
+      "subject": "Final Days to Save on Top Appliances"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Sat, 9/5 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\u2709\ufe0f Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "How Stress Moves From the Mind to the Immune System | Stephanie Jyet Quan Loo in The Microscope"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "What we\u2019d pick for your home"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "The tools behind my images \u2026"
+    },
     {
       "sender": "Shop Jamie Haller",
       "subject": "1st Dibs // Leopard Loafers and Kitties"
@@ -598,30 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "WAT THE BRAND",
       "subject": "Your Go-To Denim"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "THE LOAFERS YOU LOVE"
-    },
-    {
-      "sender": "Lisa Ullmann",
-      "subject": "Re: Block Party Approved by Township -"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Grill and bear it"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udfac Crime, conspiracy, and super-soldier chaos takes the screen"
-    },
-    {
-      "sender": "Brother USA",
-      "subject": "Your Labor Day Deal Is Here - Take 20% off $150+"
     }
   ],
   "items": [
