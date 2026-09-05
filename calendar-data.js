@@ -595,6 +595,18 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "Amazon.com",
+      "subject": "Delivered 1 item: Clothing"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "The new CHLO\u00c9 collection is here"
+    },
+    {
+      "sender": "Jeanne Katen",
+      "subject": "Re: Block Party Approved by Township -"
+    },
+    {
       "sender": "The Blue Bears Special Meals",
       "subject": "Second annual Charity Dinner on September 23rd"
     },
@@ -621,18 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Lowe\u2019s Home Improvement",
       "subject": "Up to 45% OFF and FREE delivery on appliances \ud83d\ude0d"
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "Bake with your late-summer garden harvest"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Thank you for scheduling your payment"
-    },
-    {
-      "sender": "BrandsMart Deals",
-      "subject": "Final Days to Save on Top Appliances"
     }
   ],
   "items": [
