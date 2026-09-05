@@ -595,12 +595,12 @@ window.EMAIL_DATA = {
   "unreadCount": 9,
   "threads": [
     {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Grill and bear it"
+      "sender": "LinkedIn",
+      "subject": "You have 10+ new invitations"
     },
     {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is scheduled for delivery tomorrow 383427230310"
+      "sender": "The Weather Channel",
+      "subject": "On Your Radar: Grill and bear it"
     },
     {
       "sender": "Cineplex",
