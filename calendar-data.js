@@ -592,12 +592,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 16,
   "threads": [
-    {
-      "sender": "American Express",
-      "subject": "Your renewal Card is on its way"
-    },
     {
       "sender": "Chloe at Sur La Table",
       "subject": "Mary, celebrate the long weekend with savings"
@@ -633,6 +629,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "How Stress Moves From the Mind to the Immune System | Stephanie Jyet Quan Loo in The Microscope"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "The tools behind my images \u2026"
     }
   ],
   "items": [
