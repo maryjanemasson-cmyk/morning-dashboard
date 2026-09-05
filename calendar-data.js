@@ -581,11 +581,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Ruby Masson",
-      "subject": "Kayla cancer"
+      "sender": "Chase",
+      "subject": "Your credit card statement is available"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 45% OFF and FREE delivery on appliances \ud83d\ude0d"
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "Bake with your late-summer garden harvest"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Thank you for scheduling your payment"
     },
     {
       "sender": "BrandsMart Deals",
@@ -610,18 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The Weather Channel",
       "subject": "On Your Radar: Grill and bear it"
-    },
-    {
-      "sender": "Cineplex",
-      "subject": "\ud83c\udfac Crime, conspiracy, and super-soldier chaos takes the screen"
-    },
-    {
-      "sender": "Brother USA",
-      "subject": "Your Labor Day Deal Is Here - Take 20% off $150+"
-    },
-    {
-      "sender": "Steve Madden",
-      "subject": "Tell us what you think! We\u2019re All Ears And Shoes.\u00a0"
     }
   ],
   "items": [
