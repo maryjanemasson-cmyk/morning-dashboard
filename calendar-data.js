@@ -584,6 +584,10 @@ window.EMAIL_DATA = {
   "unreadCount": 11,
   "threads": [
     {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Leopard Loafers and Kitties"
+    },
+    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
@@ -618,10 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Brother USA",
       "subject": "Your Labor Day Deal Is Here - Take 20% off $150+"
-    },
-    {
-      "sender": "Steve Madden",
-      "subject": "Tell us what you think! We\u2019re All Ears And Shoes.\u00a0"
     }
   ],
   "items": [
