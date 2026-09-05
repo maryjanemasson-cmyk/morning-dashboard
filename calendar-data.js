@@ -11,6 +11,17 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
+    "summary": "Reservation at Witherspoon Grill",
+    "location": "Witherspoon Grill, 57 Witherspoon St, Princeton, NJ 08542",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPOXmIR9gV0BzZrFHXoph9BVdGCZSnIB0k\n",
+    "startTime": "2026-09-05T17:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-05T18:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -581,11 +592,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Chase",
-      "subject": "Your credit card statement is available"
+      "sender": "American Express",
+      "subject": "Your renewal Card is on its way"
+    },
+    {
+      "sender": "Chloe at Sur La Table",
+      "subject": "Mary, celebrate the long weekend with savings"
+    },
+    {
+      "sender": "Resy Reservations",
+      "subject": "Your reservation at Witherspoon Grill is confirmed"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "August\u2019s chart-toppers were\u2026 \ud83e\udd41"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "Today's your lucky day \ud83c\udf40"
     },
     {
       "sender": "Lowe\u2019s Home Improvement",
@@ -606,22 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "How Stress Moves From the Mind to the Immune System | Stephanie Jyet Quan Loo in The Microscope"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "The tools behind my images \u2026"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Your Go-To Denim"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 10+ new invitations"
-    },
-    {
-      "sender": "The Weather Channel",
-      "subject": "On Your Radar: Grill and bear it"
     }
   ],
   "items": [
