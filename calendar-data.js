@@ -581,7 +581,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 9,
   "threads": [
     {
       "sender": "Etsy",
@@ -618,10 +618,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "The new CHLO\u00c9 collection is here"
     }
   ],
   "items": [
