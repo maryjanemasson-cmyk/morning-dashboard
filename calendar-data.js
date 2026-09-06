@@ -581,8 +581,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 11,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Etsy",
+      "subject": "Floral linen pillows, here\ud83d\udccd"
+    },
     {
       "sender": "hello@roucha.com",
       "subject": "Account Activation \u2014\u00a0Start Collecting Points"
@@ -618,11 +622,15 @@ window.EMAIL_DATA = {
     {
       "sender": "Moda Operandi",
       "subject": "The new CHLO\u00c9 collection is here"
-    },
-    {
-      "sender": "The Blue Bears Special Meals",
-      "subject": "Second annual Charity Dinner on September 23rd"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "type": "return",
+      "title": "Mail Amazon return: Vanity Fair Women's Beauty",
+      "date": "2026-09-06",
+      "id": "1a0783eac2b1ba87",
+      "sender": "return@amazon.com"
+    }
+  ]
 };
