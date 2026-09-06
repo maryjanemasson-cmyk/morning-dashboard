@@ -581,8 +581,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 25,
   "threads": [
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The Traditional Trench"
+    },
+    {
+      "sender": "Good Nick Squash",
+      "subject": "Thank You for an Incredible 2026 Summer Squash Camp Season"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #157"
+    },
     {
       "sender": "Mob",
       "subject": "If you make one thing this week..."
@@ -610,18 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "American Express",
       "subject": "Christian, your exclusive offer is waiting! Earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered 1 item: Clothing"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "The new CHLO\u00c9 collection is here"
-    },
-    {
-      "sender": "Jeanne Katen",
-      "subject": "Re: Block Party Approved by Township -"
     }
   ],
   "items": []
