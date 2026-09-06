@@ -581,43 +581,43 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Almina Concept",
-      "subject": "It's Back: The Wool Hoodie Zip Up"
+      "sender": "clientservices@vince.com",
+      "subject": "Confirmation of Your Order"
     },
     {
-      "sender": "& Other Stories",
-      "subject": "Last chance: 20% off everything"
+      "sender": "Reformation",
+      "subject": "ORDER CONFIRMATION"
     },
     {
-      "sender": "DoorDash",
-      "subject": "Details of your no-contact delivery from Bagel Barn"
+      "sender": "Roucha",
+      "subject": "Welcome to Roucha"
     },
     {
-      "sender": "Hers",
-      "subject": "Your profile was just updated"
+      "sender": "hello@roucha.com",
+      "subject": "Account Activation \u2014\u00a0Start Collecting Points"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 50% OFF on a Sunday? Doesn\u2019t get any better"
+      "sender": "ROUCHA",
+      "subject": "Order 11012881 Confirmed"
     },
     {
-      "sender": "DoorDash Order",
-      "subject": "Order Confirmation for Mary Jane from Bagel Barn"
+      "sender": "ME+EM",
+      "subject": "ME+EM Confirmation for Order 5810962"
     },
     {
-      "sender": "Steven Chen",
-      "subject": "Re: 2026\u20132027 Student Schedules, School Calendar, and Booklist"
+      "sender": "ME+EM",
+      "subject": "Reset your ME+EM password"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Skin Care"
     },
     {
       "sender": "Buck Mason",
       "subject": "The Bruiser Moto Jacket"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 06 Sep 2026"
     },
     {
       "sender": "Honeydew",
