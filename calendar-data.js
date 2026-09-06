@@ -595,6 +595,10 @@ window.EMAIL_DATA = {
   "unreadCount": 17,
   "threads": [
     {
+      "sender": "American Express",
+      "subject": "Christian, your exclusive offer is waiting! Earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
+    },
+    {
       "sender": "Amazon.com",
       "subject": "Delivered 1 item: Clothing"
     },
@@ -629,10 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shameless Snacks",
       "subject": "Today's your lucky day \ud83c\udf40"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 45% OFF and FREE delivery on appliances \ud83d\ude0d"
     }
   ],
   "items": [
