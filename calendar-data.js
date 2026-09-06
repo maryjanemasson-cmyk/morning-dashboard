@@ -1,27 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-09-05T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-05T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "Reservation at Witherspoon Grill",
-    "location": "Witherspoon Grill, 57 Witherspoon St, Princeton, NJ 08542",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPOXmIR9gV0BzZrFHXoph9BVdGCZSnIB0k\n",
-    "startTime": "2026-09-05T17:45:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-05T18:45:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Weekly planning \u2014 update task tracker",
     "location": "",
     "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
@@ -174,6 +152,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-09-19T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-19T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -592,8 +581,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Mob",
+      "subject": "If you make one thing this week..."
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Elegantly tailored jackets, made in Italy"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "September Is The Real New Year"
+    },
+    {
+      "sender": "Rat & Boa",
+      "subject": "The Aftersun Collection"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "THE THONG HEEL EDIT"
+    },
     {
       "sender": "American Express",
       "subject": "Christian, your exclusive offer is waiting! Earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
@@ -609,39 +622,7 @@ window.EMAIL_DATA = {
     {
       "sender": "Jeanne Katen",
       "subject": "Re: Block Party Approved by Township -"
-    },
-    {
-      "sender": "The Blue Bears Special Meals",
-      "subject": "Second annual Charity Dinner on September 23rd"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Did you grab this yet? \u2026"
-    },
-    {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Mary, celebrate the long weekend with savings"
-    },
-    {
-      "sender": "Resy Reservations",
-      "subject": "Your reservation at Witherspoon Grill is confirmed"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "August\u2019s chart-toppers were\u2026 \ud83e\udd41"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Today's your lucky day \ud83c\udf40"
     }
   ],
-  "items": [
-    {
-      "type": "delivery",
-      "title": "FedEx arriving tomorrow #383427230310",
-      "date": "2026-09-05",
-      "id": "1a06e6f32fd56b44",
-      "sender": "FedEx Delivery Manager"
-    }
-  ]
+  "items": []
 };
