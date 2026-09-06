@@ -581,47 +581,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // The Traditional Trench"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 06 Sep 2026"
     },
     {
-      "sender": "Good Nick Squash",
-      "subject": "Thank You for an Incredible 2026 Summer Squash Camp Season"
+      "sender": "Honeydew",
+      "subject": "Honeydew, to the rescue"
     },
     {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #157"
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Skin Care"
     },
     {
-      "sender": "Mob",
-      "subject": "If you make one thing this week..."
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 383427230310"
+    },
+    {
+      "sender": "Google Play",
+      "subject": "Your Google Play Order Receipt from Sep 6, 2026"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: \u2018Black boxes\u2019 on lobster boats set a dangerous precedent for America"
     },
     {
       "sender": "Pini Parma",
       "subject": "Elegantly tailored jackets, made in Italy"
     },
     {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "September Is The Real New Year"
-    },
-    {
-      "sender": "Rat & Boa",
-      "subject": "The Aftersun Collection"
-    },
-    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Tony Bianco US",
-      "subject": "THE THONG HEEL EDIT"
+      "sender": "Moda Operandi",
+      "subject": "The new CHLO\u00c9 collection is here"
     },
     {
-      "sender": "American Express",
-      "subject": "Christian, your exclusive offer is waiting! Earn 300,000 Membership Rewards\u00ae points with the Business Platinum Card."
+      "sender": "The Blue Bears Special Meals",
+      "subject": "Second annual Charity Dinner on September 23rd"
     }
   ],
   "items": []
