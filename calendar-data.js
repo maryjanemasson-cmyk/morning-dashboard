@@ -581,31 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 11,
   "threads": [
-    {
-      "sender": "clientservices@vince.com",
-      "subject": "Confirmation of Your Order"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "ORDER CONFIRMATION"
-    },
-    {
-      "sender": "Roucha",
-      "subject": "Welcome to Roucha"
-    },
     {
       "sender": "hello@roucha.com",
       "subject": "Account Activation \u2014\u00a0Start Collecting Points"
-    },
-    {
-      "sender": "ROUCHA",
-      "subject": "Order 11012881 Confirmed"
-    },
-    {
-      "sender": "ME+EM",
-      "subject": "ME+EM Confirmation for Order 5810962"
     },
     {
       "sender": "ME+EM",
@@ -622,6 +602,26 @@ window.EMAIL_DATA = {
     {
       "sender": "Honeydew",
       "subject": "Honeydew, to the rescue"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: \u2018Black boxes\u2019 on lobster boats set a dangerous precedent for America"
+    },
+    {
+      "sender": "Pini Parma",
+      "subject": "Elegantly tailored jackets, made in Italy"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "The new CHLO\u00c9 collection is here"
+    },
+    {
+      "sender": "The Blue Bears Special Meals",
+      "subject": "Second annual Charity Dinner on September 23rd"
     }
   ],
   "items": []
