@@ -581,8 +581,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Almina Concept",
+      "subject": "It's Back: The Wool Hoodie Zip Up"
+    },
+    {
+      "sender": "& Other Stories",
+      "subject": "Last chance: 20% off everything"
+    },
+    {
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Bagel Barn"
+    },
+    {
+      "sender": "Hers",
+      "subject": "Your profile was just updated"
+    },
+    {
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 50% OFF on a Sunday? Doesn\u2019t get any better"
+    },
+    {
+      "sender": "DoorDash Order",
+      "subject": "Order Confirmation for Mary Jane from Bagel Barn"
+    },
+    {
+      "sender": "Steven Chen",
+      "subject": "Re: 2026\u20132027 Student Schedules, School Calendar, and Booklist"
+    },
+    {
+      "sender": "Buck Mason",
+      "subject": "The Bruiser Moto Jacket"
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 06 Sep 2026"
@@ -590,38 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Honeydew",
       "subject": "Honeydew, to the rescue"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Skin Care"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is out for delivery today 383427230310"
-    },
-    {
-      "sender": "Google Play",
-      "subject": "Your Google Play Order Receipt from Sep 6, 2026"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: \u2018Black boxes\u2019 on lobster boats set a dangerous precedent for America"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Elegantly tailored jackets, made in Italy"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "The new CHLO\u00c9 collection is here"
-    },
-    {
-      "sender": "The Blue Bears Special Meals",
-      "subject": "Second annual Charity Dinner on September 23rd"
     }
   ],
   "items": []
