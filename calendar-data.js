@@ -163,6 +163,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Le Bellune Paris",
+    "location": "35 Boulevard Victor, Paris, 75015, France",
+    "description": "Sun, Sep 20\n3:00 PM CEST\n[Lodging] Arrive Le Bellune Paris\nCheck-In: 3:00pm\n35 Boulevard Victor, Paris, 75015, France\n+33 1 85 72 62 62",
+    "startTime": "2026-09-20T09:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-20T10:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\u2708\ufe0f UA54 EWR \u2192 CDG",
+    "location": "Newark (EWR)",
+    "description": "9:15 PM EDT\n[Flight] EWR to CDG\nUnited Airlines 54, Terminal TERMINAL C, Gate\nMon, Sep 21\n10:55 AM CEST\nArrive Paris (CDG)\nTerminal AEROGARE 1, Gate",
+    "startTime": "2026-09-20T21:15:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-21T04:55:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
   }
 ];
 
@@ -581,8 +603,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Tony Bianco US",
+      "subject": "THE BESTSELLERS"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped 1 item: Skin Care"
+    },
+    {
+      "sender": "Venmo",
+      "subject": "Sharon Litvinsky commented on a payment between you and Sharon Litvinsky"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "SHIPMENT DELIVERED"
+    },
     {
       "sender": "Venmo",
       "subject": "You paid Sharon Litvinsky $275.00"
@@ -606,22 +644,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "The Bruiser Moto Jacket"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "Honeydew, to the rescue"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: \u2018Black boxes\u2019 on lobster boats set a dangerous precedent for America"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Elegantly tailored jackets, made in Italy"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
@@ -631,6 +653,20 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 1 item: Skin Care",
+      "date": "2026-09-07",
+      "id": "1a07a5fe3dce476c",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 1 item: Skin Care",
+      "date": "2026-09-07",
+      "id": "1a079f7c1a616865",
+      "sender": "Amazon.com"
     }
   ]
 };
