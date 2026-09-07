@@ -1922,6 +1922,7 @@
     let _watchedShows = {};
     let _wlFilter = 'all';
     let _customWatchlist = [];
+    let _hiddenShows = {}; // built-in shows the user has removed (id -> true)
 
     // ── OMDb live ratings (replaces the hardcoded RT/IMDb strings above) ──
     const OMDB_CACHE_KEY = 'omdbRatingsCache_v1';
@@ -2243,14 +2244,26 @@
     }
 
     function removeFromWatchlist(id) {
-      _customWatchlist = _customWatchlist.filter(w => w.id !== id);
-      db.ref('customWatchlist/' + id).remove();
+      const isCustom = _customWatchlist.some(w => w.id === id);
+      if (isCustom) {
+        _customWatchlist = _customWatchlist.filter(w => w.id !== id);
+        db.ref('customWatchlist/' + id).remove();
+      } else {
+        // Built-in show: can't delete the hardcoded entry, so hide it.
+        _hiddenShows[id] = true;
+        db.ref('hiddenWatchlist/' + id).set(true);
+      }
       renderWatchlist();
     }
 
     // Stored as an object keyed by item id; tolerate legacy array shape too.
     fbGet('customWatchlist', data => {
       _customWatchlist = data ? Object.values(data).filter(Boolean) : [];
+      renderWatchlist();
+    });
+
+    fbGet('hiddenWatchlist', data => {
+      _hiddenShows = data || {};
       renderWatchlist();
     });
 
@@ -2261,8 +2274,8 @@
       filterHtml += `<button class="wl-filter-btn ${_wlFilter==='unwatched'?'active':''}" onclick="setWlFilter('unwatched')">Unwatched</button>`;
       document.getElementById('watchlist-filters').innerHTML = filterHtml;
 
-      // Merge built-in + custom items
-      let items = [...WATCHLIST, ..._customWatchlist];
+      // Merge built-in + custom items, dropping any built-ins the user removed
+      let items = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
       if (_wlFilter === 'unwatched') items = items.filter(w => !_watchedShows[w.id]);
 
       // Sort by genre, then by title within each genre
@@ -2296,12 +2309,12 @@
             </div>
           </div>
           <span class="wl-rating ${ratingClass}">${w.rating || ''}</span>
-          ${w._custom ? '<span onclick="removeFromWatchlist(\''+w.id+'\')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>' : ''}
+          <span onclick="removeFromWatchlist('${w.id}')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>
         </div>`;
       });
       document.getElementById('watchlist').innerHTML = html || '<div class="cal-empty">All caught up!</div>';
 
-      const allItems = [...WATCHLIST, ..._customWatchlist];
+      const allItems = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
       const watchedCount = allItems.filter(w => _watchedShows[w.id]).length;
       document.getElementById('watchlist-count').textContent = `${watchedCount} of ${allItems.length} watched`;
     }
