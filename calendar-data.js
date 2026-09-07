@@ -603,8 +603,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "How to Use AI to Get Smarter (Not Just Work Faster) | The PyCoach in Artificial Corner"
+    },
     {
       "sender": "Etsy",
       "subject": "Floral linen pillows, here\ud83d\udccd"
@@ -624,14 +636,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "The Bruiser Moto Jacket"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "Honeydew, to the rescue"
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: \u2018Black boxes\u2019 on lobster boats set a dangerous precedent for America"
     }
   ],
   "items": [

@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-09-07T07:00:17",
+    "captured_at": "2026-09-07T09:00:17",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -60088,8 +60088,8 @@
       ]
     }
   },
-  "customWatchlist": [
-    {
+  "customWatchlist": {
+    "custom_1777773142486": {
       "_custom": true,
       "genre": "",
       "id": "custom_1777773142486",
@@ -60098,7 +60098,7 @@
       "title": "rogue heros",
       "where": ""
     },
-    {
+    "custom_1777773603426": {
       "_custom": true,
       "genre": "Drama / War / History",
       "id": "custom_1777773603426",
@@ -60107,7 +60107,7 @@
       "title": "SAS: Rogue Heroes",
       "where": "BBC iPlayer"
     },
-    {
+    "custom_1778178381398": {
       "_custom": true,
       "genre": "Comedy",
       "id": "custom_1778178381398",
@@ -60116,7 +60116,7 @@
       "title": "The Four Seasons",
       "where": "Netflix"
     },
-    {
+    "custom_1778178468742": {
       "_custom": true,
       "genre": "Comedy",
       "id": "custom_1778178468742",
@@ -60125,7 +60125,7 @@
       "title": "Shrinking",
       "where": "Apple TV"
     },
-    {
+    "custom_1778503143703": {
       "_custom": true,
       "genre": "Drama / Crime",
       "id": "custom_1778503143703",
@@ -60134,7 +60134,7 @@
       "title": "CSI: Miami",
       "where": "CBS"
     },
-    {
+    "custom_1778526028095": {
       "_custom": true,
       "genre": "Comedy",
       "id": "custom_1778526028095",
@@ -60143,7 +60143,7 @@
       "title": "The Studio",
       "where": "Apple TV"
     },
-    {
+    "custom_1778692783445": {
       "_custom": true,
       "genre": "Drama / Thriller / Espionage",
       "id": "custom_1778692783445",
@@ -60152,7 +60152,7 @@
       "title": "Homeland",
       "where": "Paramount+ with Showtime"
     },
-    {
+    "custom_1778892202082": {
       "_custom": true,
       "genre": "Drama / Romance / History",
       "id": "custom_1778892202082",
@@ -60161,7 +60161,7 @@
       "title": "The Other Bennet Sister",
       "where": "BBC iPlayer"
     },
-    {
+    "custom_1778967226955": {
       "_custom": true,
       "genre": "Crime / Thriller",
       "id": "custom_1778967226955",
@@ -60170,7 +60170,7 @@
       "title": "Legends",
       "where": "Netflix"
     },
-    {
+    "custom_1779722860284": {
       "_custom": true,
       "genre": "Drama / Crime / Mystery",
       "id": "custom_1779722860284",
@@ -60179,7 +60179,7 @@
       "title": "Broadchurch",
       "where": "ITV1"
     },
-    {
+    "custom_1779912115290": {
       "_custom": true,
       "genre": "Drama / Romance",
       "id": "custom_1779912115290",
@@ -60188,7 +60188,7 @@
       "title": "Off Campus",
       "where": "Prime Video"
     },
-    {
+    "custom_1781088923661": {
       "_custom": true,
       "genre": "Drama / Thriller",
       "id": "custom_1781088923661",
@@ -60197,7 +60197,7 @@
       "title": "Designated Survivor",
       "where": "Netflix"
     },
-    {
+    "custom_1781121901077": {
       "_custom": true,
       "genre": "Drama / Crime / Mystery",
       "id": "custom_1781121901077",
@@ -60206,7 +60206,7 @@
       "title": "The Closer",
       "where": "TNT"
     },
-    {
+    "custom_1781523617911": {
       "_custom": true,
       "genre": "Comedy",
       "id": "custom_1781523617911",
@@ -60215,7 +60215,7 @@
       "title": "The Comeback",
       "where": "HBO"
     },
-    {
+    "custom_1781523651096": {
       "_custom": true,
       "genre": "Drama / Comedy",
       "id": "custom_1781523651096",
@@ -60224,7 +60224,7 @@
       "title": "DTF St. Louis",
       "where": "HBO"
     },
-    {
+    "custom_1781523684477": {
       "_custom": true,
       "genre": "Drama / Comedy",
       "id": "custom_1781523684477",
@@ -60233,7 +60233,7 @@
       "title": "Margo's Got Money Troubles",
       "where": "Apple TV"
     },
-    {
+    "custom_1781523702666": {
       "_custom": true,
       "genre": "Drama / Medical",
       "id": "custom_1781523702666",
@@ -60242,7 +60242,7 @@
       "title": "The Pitt",
       "where": "HBO Max"
     },
-    {
+    "custom_1781523712614": {
       "_custom": true,
       "genre": "Drama / Crime / Legal",
       "id": "custom_1781523712614",
@@ -60251,7 +60251,7 @@
       "title": "Portobello",
       "where": "HBO Max"
     },
-    {
+    "custom_1781984921123": {
       "_custom": true,
       "genre": "Drama / Crime / Thriller",
       "id": "custom_1781984921123",
@@ -60260,7 +60260,7 @@
       "title": "Harlan Coben's I Will Find You",
       "where": "Netflix"
     },
-    {
+    "custom_1782005453755": {
       "_custom": true,
       "genre": "Drama / Comedy / Thriller",
       "id": "custom_1782005453755",
@@ -60269,7 +60269,7 @@
       "title": "Bodkin",
       "where": "Netflix"
     },
-    {
+    "custom_1783897303663": {
       "_custom": true,
       "genre": "Drama / History",
       "id": "custom_1783897303663",
@@ -60278,7 +60278,7 @@
       "title": "Wolf Hall",
       "where": "BBC One"
     },
-    {
+    "custom_1784054757939": {
       "_custom": true,
       "genre": "Comedy",
       "id": "custom_1784054757939",
@@ -60287,7 +60287,7 @@
       "title": "Big Mistakes",
       "where": "Netflix"
     },
-    {
+    "custom_1784065354958": {
       "_custom": true,
       "genre": "Drama",
       "id": "custom_1784065354958",
@@ -60296,7 +60296,7 @@
       "title": "The Five Star Weekend",
       "where": "Peacock"
     },
-    {
+    "custom_1784065493558": {
       "_custom": true,
       "genre": "Drama / Family / Western",
       "id": "custom_1784065493558",
@@ -60305,7 +60305,7 @@
       "title": "Little House on the Prairie",
       "where": "Netflix"
     },
-    {
+    "custom_1785511481906": {
       "_custom": true,
       "genre": "Drama / Crime / Thriller",
       "id": "custom_1785511481906",
@@ -60314,7 +60314,7 @@
       "title": "Line of Duty",
       "where": "BBC One"
     },
-    {
+    "custom_1786583750543": {
       "_custom": true,
       "genre": "Comedy / Horror",
       "id": "custom_1786583750543",
@@ -60323,7 +60323,7 @@
       "title": "Widow's Bay",
       "where": "Apple TV"
     },
-    {
+    "custom_1786642714833": {
       "_custom": true,
       "genre": "Drama / Thriller / Espionage",
       "id": "custom_1786642714833",
@@ -60332,7 +60332,7 @@
       "title": "Lioness",
       "where": "Paramount+"
     },
-    {
+    "custom_1786703646056": {
       "_custom": true,
       "genre": "Drama / Thriller / Legal",
       "id": "custom_1786703646056",
@@ -60341,7 +60341,7 @@
       "title": "The Victim",
       "where": "BBC One"
     },
-    {
+    "custom_1786794520011": {
       "_custom": true,
       "genre": "Movie",
       "id": "custom_1786794520011",
@@ -60353,7 +60353,7 @@
       "where": "Movie",
       "year": "2026"
     }
-  ],
+  },
   "watchlist": {
     "custom_1777773142486": true,
     "custom_1778178459068": true,
@@ -61398,6 +61398,9 @@
       },
       "2026-08-12": {
         "weight": 148.6
+      },
+      "2026-09-07": {
+        "weight": 148
       }
     },
     "favorites": {
