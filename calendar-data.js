@@ -606,6 +606,14 @@ window.EMAIL_DATA = {
   "unreadCount": 8,
   "threads": [
     {
+      "sender": "Diana @ Shameless Snacks",
+      "subject": "Diana here. Today's for you."
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Labor Day: Last day for 20% off fall and Halloween decor"
+    },
+    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
@@ -628,14 +636,6 @@ window.EMAIL_DATA = {
     {
       "sender": "ME+EM",
       "subject": "Reset your ME+EM password"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Skin Care"
-    },
-    {
-      "sender": "Buck Mason",
-      "subject": "The Bruiser Moto Jacket"
     }
   ],
   "items": [

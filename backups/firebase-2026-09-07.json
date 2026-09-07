@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-09-07T09:00:17",
+    "captured_at": "2026-09-07T11:00:13",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -60314,15 +60314,6 @@
       "title": "Line of Duty",
       "where": "BBC One"
     },
-    "custom_1786583750543": {
-      "_custom": true,
-      "genre": "Comedy / Horror",
-      "id": "custom_1786583750543",
-      "rating": "7.7/10",
-      "score": 77,
-      "title": "Widow's Bay",
-      "where": "Apple TV"
-    },
     "custom_1786642714833": {
       "_custom": true,
       "genre": "Drama / Thriller / Espionage",
@@ -60341,25 +60332,265 @@
       "title": "The Victim",
       "where": "BBC One"
     },
-    "custom_1786794520011": {
+    "custom_1788789467061": {
+      "_custom": true,
+      "genre": "Action / Adventure / Science-Fiction",
+      "id": "custom_1788789467061",
+      "kind": "tv",
+      "rating": "7.5/10",
+      "score": 75,
+      "title": "Lanterns",
+      "where": "HBO",
+      "year": "2026"
+    },
+    "custom_1788789467062": {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1788789467062",
+      "kind": "tv",
+      "rating": "4.6/10",
+      "score": 46,
+      "title": "Somebody Somewhere",
+      "where": "HBO",
+      "year": "2022"
+    },
+    "custom_1788789467063": {
       "_custom": true,
       "genre": "Movie",
-      "id": "custom_1786794520011",
-      "imdbID": "tt10375624",
+      "id": "custom_1788789467063",
       "kind": "movie",
       "rating": "",
       "score": 0,
-      "title": "Voicemails for Isabelle",
+      "title": "The Legend of Juan Jose Mundo",
+      "where": "Movie",
+      "year": "2025"
+    },
+    "custom_1788789467064": {
+      "_custom": true,
+      "genre": "Drama / Romance / History",
+      "id": "custom_1788789467064",
+      "kind": "tv",
+      "rating": "6.1/10",
+      "score": 61,
+      "title": "My Brilliant Career",
+      "where": "Netflix",
+      "year": "2026"
+    },
+    "custom_1788789467065": {
+      "_custom": true,
+      "genre": "Drama / Romance",
+      "id": "custom_1788789467065",
+      "kind": "tv",
+      "rating": "5.8/10",
+      "score": 58,
+      "title": "Forever",
+      "where": "Netflix",
+      "year": "2025"
+    },
+    "custom_1788789467066": {
+      "_custom": true,
+      "genre": "Drama / Music",
+      "id": "custom_1788789467066",
+      "kind": "tv",
+      "rating": "5.8/10",
+      "score": 58,
+      "title": "The Runarounds",
+      "where": "Prime Video",
+      "year": "2025"
+    },
+    "custom_1788789467067": {
+      "_custom": true,
+      "genre": "Drama / Crime / Thriller",
+      "id": "custom_1788789467067",
+      "kind": "tv",
+      "rating": "5/10",
+      "score": 50,
+      "title": "The Shards",
+      "where": "Hulu",
+      "year": "2026"
+    },
+    "custom_1788789467068": {
+      "_custom": true,
+      "genre": "Drama / Crime / Thriller",
+      "id": "custom_1788789467068",
+      "kind": "tv",
+      "rating": "7.3/10",
+      "score": 73,
+      "title": "Furious",
+      "where": "Hulu",
+      "year": "2026"
+    },
+    "custom_1788789467069": {
+      "_custom": true,
+      "genre": "Drama / Crime / Thriller",
+      "id": "custom_1788789467069",
+      "kind": "tv",
+      "rating": "7.5/10",
+      "score": 75,
+      "title": "Ms. X",
+      "where": "Disney+",
+      "year": "2026"
+    },
+    "custom_1788789467070": {
+      "_custom": true,
+      "genre": "Comedy / Crime / Thriller",
+      "id": "custom_1788789467070",
+      "kind": "tv",
+      "rating": "6.3/10",
+      "score": 63,
+      "title": "Maximum Pleasure Guaranteed",
+      "where": "Apple TV",
+      "year": "2026"
+    },
+    "custom_1788789467071": {
+      "_custom": true,
+      "genre": "",
+      "id": "custom_1788789467071",
+      "kind": "tv",
+      "rating": "",
+      "score": 0,
+      "title": "Galaxy Brain",
+      "where": "",
+      "year": ""
+    },
+    "custom_1788789467072": {
+      "_custom": true,
+      "genre": "Drama / Romance",
+      "id": "custom_1788789467072",
+      "kind": "tv",
+      "rating": "5.7/10",
+      "score": 57,
+      "title": "Love Story",
+      "where": "FX",
+      "year": "2026"
+    },
+    "custom_1788789467073": {
+      "_custom": true,
+      "genre": "Crime / Thriller",
+      "id": "custom_1788789467073",
+      "kind": "tv",
+      "rating": "7.6/10",
+      "score": 76,
+      "title": "Code of Silence",
+      "where": "ITVX",
+      "year": "2025"
+    },
+    "custom_1788789467075": {
+      "_custom": true,
+      "genre": "Crime / Science-Fiction / Mystery",
+      "id": "custom_1788789467075",
+      "kind": "tv",
+      "rating": "7.4/10",
+      "score": 74,
+      "title": "Sugar",
+      "where": "Apple TV",
+      "year": "2024"
+    },
+    "custom_1788789467076": {
+      "_custom": true,
+      "genre": "Drama / Crime",
+      "id": "custom_1788789467076",
+      "kind": "tv",
+      "rating": "8.1/10",
+      "score": 81,
+      "title": "Happy Valley",
+      "where": "BBC One",
+      "year": "2014"
+    },
+    "custom_1788789467077": {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1788789467077",
+      "kind": "tv",
+      "rating": "5.8/10",
+      "score": 58,
+      "title": "The Paper",
+      "where": "Peacock",
+      "year": "2025"
+    },
+    "custom_1788789467078": {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1788789467078",
+      "kind": "tv",
+      "rating": "",
+      "score": 0,
+      "title": "Brothers",
+      "where": "Apple TV",
+      "year": "2026"
+    },
+    "custom_1788789467079": {
+      "_custom": true,
+      "genre": "Comedy / Sports",
+      "id": "custom_1788789467079",
+      "kind": "tv",
+      "rating": "6.6/10",
+      "score": 66,
+      "title": "Chad Powers",
+      "where": "Hulu",
+      "year": "2025"
+    },
+    "custom_1788789467080": {
+      "_custom": true,
+      "genre": "Comedy / Action / Crime",
+      "id": "custom_1788789467080",
+      "kind": "tv",
+      "rating": "7.6/10",
+      "score": 76,
+      "title": "The Gentlemen",
+      "where": "Netflix",
+      "year": "2024"
+    },
+    "custom_1788789467081": {
+      "_custom": true,
+      "genre": "Movie",
+      "id": "custom_1788789467081",
+      "kind": "movie",
+      "rating": "",
+      "score": 0,
+      "title": "Death of a Pastor's Wife",
+      "where": "Movie",
+      "year": ""
+    },
+    "custom_1788789467082": {
+      "_custom": true,
+      "genre": "Comedy",
+      "id": "custom_1788789467082",
+      "kind": "tv",
+      "rating": "5.4/10",
+      "score": 54,
+      "title": "Adults",
+      "where": "Hulu",
+      "year": "2025"
+    },
+    "custom_1788789467083": {
+      "_custom": true,
+      "genre": "Movie",
+      "id": "custom_1788789467083",
+      "kind": "movie",
+      "rating": "",
+      "score": 0,
+      "title": "Don't Say Good Luck",
       "where": "Movie",
       "year": "2026"
+    },
+    "custom_1788789467084": {
+      "_custom": true,
+      "genre": "Drama / Crime / Thriller",
+      "id": "custom_1788789467084",
+      "kind": "tv",
+      "rating": "7.3/10",
+      "score": 73,
+      "title": "The Sinner",
+      "where": "USA Network",
+      "year": "2017"
     }
   },
   "watchlist": {
-    "custom_1777773142486": true,
+    "custom_1778178381398": true,
     "custom_1778178459068": true,
     "custom_1778503143703": true,
     "custom_1778692783445": true,
-    "custom_1779912115290": true,
     "custom_1781523730323": true,
     "custom_1786794520011": true,
     "dark-winds": true,
@@ -60371,9 +60602,7 @@
     "reacher": true,
     "severance": true,
     "shogun": true,
-    "slow-horses": true,
-    "sterling-point": true,
-    "widows-bay": true
+    "slow-horses": true
   },
   "chores": {
     "book-pilates": "2026-09-06",
