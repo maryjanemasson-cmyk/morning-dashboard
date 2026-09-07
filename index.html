@@ -2267,9 +2267,21 @@
       renderWatchlist();
     });
 
+    // Collapse the many raw genre strings into a few main buckets.
+    // For multi-genre strings the most distinctive genre wins (first match).
+    const WL_GENRE_ORDER = ['Action','Comedy','Drama','Mystery/Crime','Thriller','Other'];
+    function mainGenre(w) {
+      const g = String((w && w.genre) || '').toLowerCase();
+      if (/crime|mystery|murder|detective|police|heist/.test(g)) return 'Mystery/Crime';
+      if (/thriller|spy|espionage|suspense/.test(g)) return 'Thriller';
+      if (/action|adventure/.test(g)) return 'Action';
+      if (/comedy|sitcom|mockumentary/.test(g)) return 'Comedy';
+      if (/drama|legal|medical|romance|historical|history|war|western|family/.test(g)) return 'Drama';
+      return 'Other';
+    }
+
     function renderWatchlist() {
       // Filters
-      const genres = [...new Set(WATCHLIST.map(w => w.genre))].sort();
       let filterHtml = `<button class="wl-filter-btn ${_wlFilter==='all'?'active':''}" onclick="setWlFilter('all')">All</button>`;
       filterHtml += `<button class="wl-filter-btn ${_wlFilter==='unwatched'?'active':''}" onclick="setWlFilter('unwatched')">Unwatched</button>`;
       document.getElementById('watchlist-filters').innerHTML = filterHtml;
@@ -2278,20 +2290,20 @@
       let items = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
       if (_wlFilter === 'unwatched') items = items.filter(w => !_watchedShows[w.id]);
 
-      // Sort by genre, then by title within each genre
+      // Group by main genre bucket, then by title within each bucket
       items.sort((a, b) => {
-        const ga = (a.genre || '').toLowerCase();
-        const gb = (b.genre || '').toLowerCase();
-        if (ga !== gb) return ga.localeCompare(gb);
+        const ga = mainGenre(a), gb = mainGenre(b);
+        if (ga !== gb) return WL_GENRE_ORDER.indexOf(ga) - WL_GENRE_ORDER.indexOf(gb);
         return (a.title || '').localeCompare(b.title || '');
       });
 
       let html = '';
       let lastGenre = '';
       items.forEach(w => {
-        if (w.genre !== lastGenre) {
-          lastGenre = w.genre;
-          html += `<div class="wl-genre-header">${w.genre || 'Other'}</div>`;
+        const bucket = mainGenre(w);
+        if (bucket !== lastGenre) {
+          lastGenre = bucket;
+          html += `<div class="wl-genre-header">${bucket}</div>`;
         }
         const watched = _watchedShows[w.id] || false;
         const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
