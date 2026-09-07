@@ -581,8 +581,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "Venmo",
+      "subject": "You paid Sharon Litvinsky $275.00"
+    },
     {
       "sender": "Etsy",
       "subject": "Floral linen pillows, here\ud83d\udccd"
