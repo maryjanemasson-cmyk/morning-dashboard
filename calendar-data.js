@@ -603,8 +603,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Roucha",
+      "subject": "Why Versatility Matters"
+    },
+    {
+      "sender": "Spotify",
+      "subject": "Update to the Spotify Terms of Use"
+    },
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Leeroy Verot posted \"F\u00eatons nos progr\u00e8s ! \u2728\""
+    },
     {
       "sender": "Diana @ Shameless Snacks",
       "subject": "Diana here. Today's for you."
@@ -628,14 +640,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Etsy",
       "subject": "Floral linen pillows, here\ud83d\udccd"
-    },
-    {
-      "sender": "hello@roucha.com",
-      "subject": "Account Activation \u2014\u00a0Start Collecting Points"
-    },
-    {
-      "sender": "ME+EM",
-      "subject": "Reset your ME+EM password"
     }
   ],
   "items": [
