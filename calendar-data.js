@@ -603,8 +603,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 15,
   "threads": [
+    {
+      "sender": "Instacart",
+      "subject": "Your McCaffrey's order is confirmed for September 7"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered 1 item: Skin Care"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Hair Care"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Hair Accessories"
+    },
+    {
+      "sender": "Hers",
+      "subject": "mary jane, your order has shipped"
+    },
+    {
+      "sender": "DONNI.",
+      "subject": "Discover: The Best-Sellers"
+    },
     {
       "sender": "Roucha",
       "subject": "Why Versatility Matters"
@@ -620,26 +644,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Diana @ Shameless Snacks",
       "subject": "Diana here. Today's for you."
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Labor Day: Last day for 20% off fall and Halloween decor"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "How to Use AI to Get Smarter (Not Just Work Faster) | The PyCoach in Artificial Corner"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Floral linen pillows, here\ud83d\udccd"
     }
   ],
   "items": [
