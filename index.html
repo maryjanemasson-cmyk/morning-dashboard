@@ -2232,8 +2232,11 @@
           '<div style="font-size:0.65rem;color:#9c8b76;">Already on your list.</div>';
         return;
       }
+      // Write this item under its own key so concurrent syncs / other devices
+      // can never clobber the whole list (the old whole-array write caused adds
+      // to appear then vanish on the next sync).
       _customWatchlist.push(item);
-      fbSet('customWatchlist', _customWatchlist);
+      db.ref('customWatchlist/' + item.id).set(item);
       document.getElementById('wl-add-title').value = '';
       document.getElementById('wl-search-results').innerHTML = '';
       renderWatchlist();
@@ -2241,11 +2244,15 @@
 
     function removeFromWatchlist(id) {
       _customWatchlist = _customWatchlist.filter(w => w.id !== id);
-      fbSet('customWatchlist', _customWatchlist);
+      db.ref('customWatchlist/' + id).remove();
       renderWatchlist();
     }
 
-    fbGet('customWatchlist', data => { _customWatchlist = data || []; renderWatchlist(); });
+    // Stored as an object keyed by item id; tolerate legacy array shape too.
+    fbGet('customWatchlist', data => {
+      _customWatchlist = data ? Object.values(data).filter(Boolean) : [];
+      renderWatchlist();
+    });
 
     function renderWatchlist() {
       // Filters
@@ -2301,8 +2308,14 @@
 
     function toggleWatched(id) {
       _watchedShows[id] = !_watchedShows[id];
-      if (!_watchedShows[id]) delete _watchedShows[id];
-      fbSet('watchlist', _watchedShows);
+      // Write just this show's key so a concurrent sync can't wipe other toggles.
+      if (_watchedShows[id]) {
+        db.ref('watchlist/' + id).set(true);
+      } else {
+        delete _watchedShows[id];
+        db.ref('watchlist/' + id).remove();
+      }
+      renderWatchlist();
     }
 
     function setWlFilter(f) {
