@@ -591,6 +591,13 @@
     .wl-title { font-size: 0.82rem; color: #3d3529; font-weight: 500; }
     .wl-title.done { text-decoration: line-through; color: #b8a48e; }
     .wl-meta { font-size: 0.65rem; color: #9c8b76; margin-top: 0.1rem; }
+    .wl-track {
+      flex-shrink: 0; cursor: pointer; font-size: 0.56rem; font-weight: 700;
+      letter-spacing: 0.02em; text-transform: uppercase; padding: 0.12rem 0.36rem;
+      border-radius: 999px; border: 1px solid #d8c9b0; color: #8a6a3d;
+      background: #faf6ef; white-space: nowrap; margin-top: 1px;
+    }
+    .wl-track.on { background: #8a6a3d; color: #fff; border-color: #8a6a3d; }
     .wl-genre {
       font-size: 0.55rem; color: #9c8b76; background: #f5f0e8;
       padding: 0.1rem 0.35rem; border-radius: 3px;
@@ -2355,7 +2362,7 @@
       let meta = `${w.where || ''}${yearBit && kind!=='movie' ? yearBit : ''}`;
       if (isCaught) meta = nextEpText(w, kind);
       const bell = kind === 'movie' ? '' :
-        `<span onclick="toggleCaughtUp('${w.id}')" title="${isCaught?'Watching for new episodes — click to move back':'Caught up on available episodes — watch for new'}" style="cursor:pointer;font-size:0.72rem;margin-left:0.3rem;opacity:${isCaught?'1':'0.35'};">${isCaught?'\U0001f514':'\U0001f515'}</span>`;
+        `<span class="wl-track${isCaught?' on':''}" onclick="toggleCaughtUp('${w.id}')" title="${isCaught?'Watching for new episodes \u2014 click to move back':'Caught up on available episodes \u2014 watch for new'}">${isCaught?'\U0001f514 Tracking':'\U0001f514 New?'}</span>`;
       return `<div class="wl-item ${watched && !isCaught?'watched':''}">
           <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'✓':''}</div>
           <div class="wl-info">
