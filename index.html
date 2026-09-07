@@ -790,6 +790,14 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
 
+    // Keep the installed (home-screen) app up to date: register a network-first
+    // service worker so it always loads the latest version when online.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+
     // Helper: sync a key between Firebase and render
     function fbSet(key, data) {
       db.ref(key).set(data);
