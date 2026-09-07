@@ -2338,7 +2338,7 @@
           if (pa !== pb) return pb.localeCompare(pa); // most recently aired first
           return (a.title || '').localeCompare(b.title || '');
         });
-        html += `<div class="wl-genre-header" style="color:#c2553a;">\U0001f534 New episodes available</div>`;
+        html += `<div class="wl-genre-header" style="color:#c2553a;">🔴 New episodes available</div>`;
         newItems.forEach(w => { html += wlRowHtml(w, 'new'); });
       }
 
@@ -2415,8 +2415,8 @@
       let pill = '';
       if (kind !== 'movie') {
         if (mode === 'new') pill = `<span class="wl-track new" onclick="markCaughtUpNow('${w.id}')" title="Mark caught up on the new episodes">✓ Caught up</span>`;
-        else if (mode === 'waiting') pill = `<span class="wl-track on" onclick="toggleCaughtUp('${w.id}')" title="Watching for new episodes — click to stop">\U0001f514 Tracking</span>`;
-        else pill = `<span class="wl-track" onclick="toggleCaughtUp('${w.id}')" title="Caught up on available episodes — watch for new">\U0001f514 New?</span>`;
+        else if (mode === 'waiting') pill = `<span class="wl-track on" onclick="toggleCaughtUp('${w.id}')" title="Watching for new episodes — click to stop">🔔 Tracking</span>`;
+        else pill = `<span class="wl-track" onclick="toggleCaughtUp('${w.id}')" title="Caught up on available episodes — watch for new">🔔 New?</span>`;
       }
       const dim = watched && mode === 'active';
       return `<div class="wl-item ${dim?'watched':''}">
