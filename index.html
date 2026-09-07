@@ -1890,6 +1890,7 @@
         el.style.color = on ? '#3d3529' : '#6b5d4d';
         el.style.fontWeight = on ? '600' : '400';
       });
+      if (typeof renderWatchlist === 'function') renderWatchlist();
       const q = document.getElementById('wl-add-title')?.value?.trim();
       if (q) searchAndAddShow();
     };
@@ -2303,6 +2304,14 @@
 
       // Merge built-in + custom items, dropping any built-ins the user removed
       let items = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
+
+      // Movies / TV tab filters the visible list (not just the search box)
+      if (_wlSearchType !== 'all') {
+        items = items.filter(w => {
+          const t = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+          return t === _wlSearchType;
+        });
+      }
 
       // Split: active list (grouped by genre) vs "watching for new episodes" (pinned bottom)
       const caughtUpItems = items.filter(w => _caughtUp[w.id]);
