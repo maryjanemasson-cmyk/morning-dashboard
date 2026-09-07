@@ -1923,6 +1923,9 @@
     let _wlFilter = 'all';
     let _customWatchlist = [];
     let _hiddenShows = {}; // built-in shows the user has removed (id -> true)
+    let _caughtUp = {};    // shows the user is caught up on, watching for new eps (id -> true)
+    let _nextEp = {};      // cache of TVMaze next-episode lookups (id -> {status,airdate,code})
+    const _nextEpLoading = new Set();
 
     // ── OMDb live ratings (replaces the hardcoded RT/IMDb strings above) ──
     const OMDB_CACHE_KEY = 'omdbRatingsCache_v1';
@@ -2267,6 +2270,11 @@
       renderWatchlist();
     });
 
+    fbGet('caughtUp', data => {
+      _caughtUp = data || {};
+      renderWatchlist();
+    });
+
     // Collapse the many raw genre strings into a few main buckets.
     // For multi-genre strings the most distinctive genre wins (first match).
     const WL_GENRE_ORDER = ['Action','Comedy','Drama','Mystery/Crime','Thriller','Other'];
@@ -2288,10 +2296,14 @@
 
       // Merge built-in + custom items, dropping any built-ins the user removed
       let items = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
-      if (_wlFilter === 'unwatched') items = items.filter(w => !_watchedShows[w.id]);
 
-      // Group by main genre bucket, then by title within each bucket
-      items.sort((a, b) => {
+      // Split: active list (grouped by genre) vs "watching for new episodes" (pinned bottom)
+      const caughtUpItems = items.filter(w => _caughtUp[w.id]);
+      let activeItems = items.filter(w => !_caughtUp[w.id]);
+      if (_wlFilter === 'unwatched') activeItems = activeItems.filter(w => !_watchedShows[w.id]);
+
+      // Group active by main genre bucket, then by title within each bucket
+      activeItems.sort((a, b) => {
         const ga = mainGenre(a), gb = mainGenre(b);
         if (ga !== gb) return WL_GENRE_ORDER.indexOf(ga) - WL_GENRE_ORDER.indexOf(gb);
         return (a.title || '').localeCompare(b.title || '');
@@ -2299,36 +2311,129 @@
 
       let html = '';
       let lastGenre = '';
-      items.forEach(w => {
+      activeItems.forEach(w => {
         const bucket = mainGenre(w);
         if (bucket !== lastGenre) {
           lastGenre = bucket;
           html += `<div class="wl-genre-header">${bucket}</div>`;
         }
-        const watched = _watchedShows[w.id] || false;
-        const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
-        const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
-        const kindTag = kind === 'movie'
-          ? '<span style="font-size:0.52rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:#8a6a3d;margin-right:0.25rem;">Film</span>'
-          : '';
-        const yearBit = w.year ? ` · ${w.year}` : '';
-        html += `<div class="wl-item ${watched?'watched':''}">
-          <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'\u2713':''}</div>
-          <div class="wl-info">
-            <div class="wl-title ${watched?'done':''}">${kindTag}${w.title}${w.year && kind==='movie' ? ' <span style="font-weight:400;color:#9c8b76;font-size:0.72em;">('+w.year+')</span>' : ''}</div>
-            <div class="wl-meta">
-              ${w.where || ''}${yearBit && kind!=='movie' ? yearBit : ''}
-            </div>
-          </div>
-          <span class="wl-rating ${ratingClass}">${w.rating || ''}</span>
-          <span onclick="removeFromWatchlist('${w.id}')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>
-        </div>`;
+        html += wlRowHtml(w, false);
       });
+
+      // Caught-up section, sorted so shows with a known air date come first (by date)
+      if (caughtUpItems.length) {
+        caughtUpItems.sort((a, b) => {
+          const da = (_nextEp[a.id] && _nextEp[a.id].airdate) || '';
+          const db2 = (_nextEp[b.id] && _nextEp[b.id].airdate) || '';
+          if (!!da !== !!db2) return da ? -1 : 1;
+          if (da && db2 && da !== db2) return da.localeCompare(db2);
+          return (a.title || '').localeCompare(b.title || '');
+        });
+        html += `<div class="wl-genre-header" style="margin-top:0.5rem;color:#8a6a3d;border-top:1px solid #ece4d8;padding-top:0.5rem;">⏳ Watching for new episodes</div>`;
+        caughtUpItems.forEach(w => { html += wlRowHtml(w, true); });
+      }
       document.getElementById('watchlist').innerHTML = html || '<div class="cal-empty">All caught up!</div>';
 
       const allItems = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
       const watchedCount = allItems.filter(w => _watchedShows[w.id]).length;
-      document.getElementById('watchlist-count').textContent = `${watchedCount} of ${allItems.length} watched`;
+      const newBit = caughtUpItems.length ? ` · ${caughtUpItems.length} watching for new` : '';
+      document.getElementById('watchlist-count').textContent = `${watchedCount} of ${allItems.length} watched${newBit}`;
+
+      // Look up next-episode dates for caught-up TV shows (cached, background)
+      enrichNextEpisodes(caughtUpItems);
+    }
+
+    // Build one watchlist row. isCaught = show is in the "watching for new" section.
+    function wlRowHtml(w, isCaught) {
+      const watched = _watchedShows[w.id] || false;
+      const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
+      const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+      const kindTag = kind === 'movie'
+        ? '<span style="font-size:0.52rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:#8a6a3d;margin-right:0.25rem;">Film</span>'
+        : '';
+      const yearBit = w.year ? ` · ${w.year}` : '';
+      let meta = `${w.where || ''}${yearBit && kind!=='movie' ? yearBit : ''}`;
+      if (isCaught) meta = nextEpText(w, kind);
+      const bell = kind === 'movie' ? '' :
+        `<span onclick="toggleCaughtUp('${w.id}')" title="${isCaught?'Watching for new episodes — click to move back':'Caught up on available episodes — watch for new'}" style="cursor:pointer;font-size:0.72rem;margin-left:0.3rem;opacity:${isCaught?'1':'0.35'};">${isCaught?'\U0001f514':'\U0001f515'}</span>`;
+      return `<div class="wl-item ${watched && !isCaught?'watched':''}">
+          <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'✓':''}</div>
+          <div class="wl-info">
+            <div class="wl-title ${watched && !isCaught?'done':''}">${kindTag}${w.title}${w.year && kind==='movie' ? ' <span style="font-weight:400;color:#9c8b76;font-size:0.72em;">('+w.year+')</span>' : ''}</div>
+            <div class="wl-meta"${isCaught?' style="color:#8a6a3d;"':''}>${meta}</div>
+          </div>
+          <span class="wl-rating ${ratingClass}">${w.rating || ''}</span>
+          ${bell}
+          <span onclick="removeFromWatchlist('${w.id}')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>
+        </div>`;
+    }
+
+    function nextEpText(w, kind) {
+      if (kind === 'movie') return w.where || '';
+      const ne = _nextEp[w.id];
+      if (!ne) return 'checking for new episodes…';
+      if (ne.airdate) {
+        const when = fmtAirDate(ne.airdate);
+        const days = daysUntil(ne.airdate);
+        const rel = days === 0 ? 'today' : days === 1 ? 'tomorrow' : (days > 1 && days <= 60 ? `in ${days} days` : '');
+        return `New episode: ${when}${rel ? ' · ' + rel : ''}${ne.code ? ' · ' + ne.code : ''}`;
+      }
+      if (ne.status === 'Ended') return 'Series ended — nothing new coming';
+      if (ne.status === 'Running' || ne.status === 'To Be Determined' || ne.status === 'In Development') return 'Returning — no date announced yet';
+      return ne.status || 'No date announced yet';
+    }
+
+    function fmtAirDate(d) {
+      const p = String(d).split('-'); if (p.length < 3) return d;
+      const mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][(+p[1]) - 1] || '';
+      return `${mo} ${+p[2]}, ${p[0]}`;
+    }
+    function daysUntil(d) {
+      const p = String(d).split('-').map(Number);
+      const target = new Date(p[0], p[1] - 1, p[2]);
+      const now = new Date(); now.setHours(0, 0, 0, 0);
+      return Math.round((target - now) / 86400000);
+    }
+
+    function toggleCaughtUp(id) {
+      if (_caughtUp[id]) {
+        delete _caughtUp[id];
+        db.ref('caughtUp/' + id).remove();
+      } else {
+        _caughtUp[id] = true;
+        db.ref('caughtUp/' + id).set(true);
+      }
+      renderWatchlist();
+    }
+
+    async function enrichNextEpisodes(list) {
+      let changed = false;
+      for (const w of list) {
+        const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+        if (kind === 'movie') continue;
+        if ((w.id in _nextEp) || _nextEpLoading.has(w.id)) continue;
+        _nextEpLoading.add(w.id);
+        try {
+          const r = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' +
+            encodeURIComponent(w.title) + '&embed=nextepisode');
+          if (r.ok) {
+            const s = await r.json();
+            const ne = s._embedded && s._embedded.nextepisode;
+            _nextEp[w.id] = {
+              status: s.status || '',
+              airdate: (ne && ne.airdate) || '',
+              code: (ne && ne.season) ? ('S' + ne.season + 'E' + (ne.number || '')) : ''
+            };
+          } else {
+            _nextEp[w.id] = { status: '', airdate: '', code: '' };
+          }
+        } catch (_) {
+          _nextEp[w.id] = { status: '', airdate: '', code: '' };
+        }
+        _nextEpLoading.delete(w.id);
+        changed = true;
+      }
+      if (changed) renderWatchlist();
     }
 
     function toggleWatched(id) {
