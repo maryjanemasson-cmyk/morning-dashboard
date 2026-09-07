@@ -603,28 +603,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 7,
   "threads": [
-    {
-      "sender": "Tony Bianco US",
-      "subject": "THE BESTSELLERS"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped 1 item: Skin Care"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "Sharon Litvinsky commented on a payment between you and Sharon Litvinsky"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "SHIPMENT DELIVERED"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "You paid Sharon Litvinsky $275.00"
-    },
     {
       "sender": "Etsy",
       "subject": "Floral linen pillows, here\ud83d\udccd"
@@ -644,6 +624,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Buck Mason",
       "subject": "The Bruiser Moto Jacket"
+    },
+    {
+      "sender": "Honeydew",
+      "subject": "Honeydew, to the rescue"
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: \u2018Black boxes\u2019 on lobster boats set a dangerous precedent for America"
     }
   ],
   "items": [
@@ -653,20 +641,6 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 1 item: Skin Care",
-      "date": "2026-09-07",
-      "id": "1a07a5fe3dce476c",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 1 item: Skin Care",
-      "date": "2026-09-07",
-      "id": "1a079f7c1a616865",
-      "sender": "Amazon.com"
     }
   ]
 };
