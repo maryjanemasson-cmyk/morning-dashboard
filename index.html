@@ -598,6 +598,12 @@
       background: #faf6ef; white-space: nowrap; margin-top: 1px;
     }
     .wl-track.on { background: #8a6a3d; color: #fff; border-color: #8a6a3d; }
+    .wl-track.new { background: #c2553a; color: #fff; border-color: #c2553a; }
+    .wl-new {
+      display: inline-block; font-size: 0.5rem; font-weight: 800; letter-spacing: 0.04em;
+      color: #fff; background: #c2553a; border-radius: 999px; padding: 0.06rem 0.32rem;
+      vertical-align: middle; margin-right: 0.2rem;
+    }
     .wl-genre {
       font-size: 0.55rem; color: #9c8b76; background: #f5f0e8;
       padding: 0.1rem 0.35rem; border-radius: 3px;
@@ -2313,32 +2319,48 @@
         });
       }
 
-      // Split: active list (grouped by genre) vs "watching for new episodes" (pinned bottom)
-      const caughtUpItems = items.filter(w => _caughtUp[w.id]);
-      let activeItems = items.filter(w => !_caughtUp[w.id]);
-      if (_wlFilter === 'unwatched') activeItems = activeItems.filter(w => !_watchedShows[w.id]);
+      // Tracked shows (watching for new eps) vs untracked.
+      const tracked = items.filter(w => _caughtUp[w.id]);
+      let untracked = items.filter(w => !_caughtUp[w.id]);
+      if (_wlFilter === 'unwatched') untracked = untracked.filter(w => !_watchedShows[w.id]);
+      // Tracked shows split: a newer episode aired since you caught up -> "new" (top);
+      // otherwise still waiting -> bottom.
+      const newItems = tracked.filter(w => hasNewEp(w));
+      const waitingItems = tracked.filter(w => !hasNewEp(w));
 
-      // Group active by main genre bucket, then by title within each bucket
-      activeItems.sort((a, b) => {
+      let html = '';
+
+      // TOP: new episodes available
+      if (newItems.length) {
+        newItems.sort((a, b) => {
+          const pa = (_nextEp[a.id] && _nextEp[a.id].prevStamp) || '';
+          const pb = (_nextEp[b.id] && _nextEp[b.id].prevStamp) || '';
+          if (pa !== pb) return pb.localeCompare(pa); // most recently aired first
+          return (a.title || '').localeCompare(b.title || '');
+        });
+        html += `<div class="wl-genre-header" style="color:#c2553a;">\U0001f534 New episodes available</div>`;
+        newItems.forEach(w => { html += wlRowHtml(w, 'new'); });
+      }
+
+      // MIDDLE: untracked shows, grouped by genre
+      untracked.sort((a, b) => {
         const ga = mainGenre(a), gb = mainGenre(b);
         if (ga !== gb) return WL_GENRE_ORDER.indexOf(ga) - WL_GENRE_ORDER.indexOf(gb);
         return (a.title || '').localeCompare(b.title || '');
       });
-
-      let html = '';
       let lastGenre = '';
-      activeItems.forEach(w => {
+      untracked.forEach(w => {
         const bucket = mainGenre(w);
         if (bucket !== lastGenre) {
           lastGenre = bucket;
           html += `<div class="wl-genre-header">${bucket}</div>`;
         }
-        html += wlRowHtml(w, false);
+        html += wlRowHtml(w, 'active');
       });
 
-      // Caught-up section, sorted so shows with a known air date come first (by date)
-      if (caughtUpItems.length) {
-        caughtUpItems.sort((a, b) => {
+      // BOTTOM: caught up, waiting for new episodes
+      if (waitingItems.length) {
+        waitingItems.sort((a, b) => {
           const da = (_nextEp[a.id] && _nextEp[a.id].airdate) || '';
           const db2 = (_nextEp[b.id] && _nextEp[b.id].airdate) || '';
           if (!!da !== !!db2) return da ? -1 : 1;
@@ -2346,21 +2368,39 @@
           return (a.title || '').localeCompare(b.title || '');
         });
         html += `<div class="wl-genre-header" style="margin-top:0.5rem;color:#8a6a3d;border-top:1px solid #ece4d8;padding-top:0.5rem;">⏳ Watching for new episodes</div>`;
-        caughtUpItems.forEach(w => { html += wlRowHtml(w, true); });
+        waitingItems.forEach(w => { html += wlRowHtml(w, 'waiting'); });
       }
+
       document.getElementById('watchlist').innerHTML = html || '<div class="cal-empty">All caught up!</div>';
 
       const allItems = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
       const watchedCount = allItems.filter(w => _watchedShows[w.id]).length;
-      const newBit = caughtUpItems.length ? ` · ${caughtUpItems.length} watching for new` : '';
-      document.getElementById('watchlist-count').textContent = `${watchedCount} of ${allItems.length} watched${newBit}`;
+      const bits = [];
+      if (newItems.length) bits.push(`${newItems.length} with new`);
+      if (waitingItems.length) bits.push(`${waitingItems.length} waiting`);
+      const suffix = bits.length ? ` · ${bits.join(' · ')}` : '';
+      document.getElementById('watchlist-count').textContent = `${watchedCount} of ${allItems.length} watched${suffix}`;
 
-      // Look up next-episode dates for caught-up TV shows (cached, background)
-      enrichNextEpisodes(caughtUpItems);
+      // Look up next/previous episodes for tracked TV shows (cached, background)
+      enrichNextEpisodes(tracked);
     }
 
-    // Build one watchlist row. isCaught = show is in the "watching for new" section.
-    function wlRowHtml(w, isCaught) {
+    // Baseline (last-aired episode airstamp) captured when the show was marked caught up.
+    function trackBase(w) {
+      const c = _caughtUp[w.id];
+      return (c && typeof c === 'object') ? (c.base || '') : '';
+    }
+    // A newer episode has aired than the one you were caught up to.
+    function hasNewEp(w) {
+      const ne = _nextEp[w.id];
+      const base = trackBase(w);
+      return !!(base && ne && ne.prevStamp && ne.prevStamp > base);
+    }
+
+    // Build one watchlist row. mode: 'active' | 'waiting' | 'new'.
+    function wlRowHtml(w, mode) {
+      const isNew = mode === 'new';
+      const isTracked = mode === 'waiting' || mode === 'new';
       const watched = _watchedShows[w.id] || false;
       const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
       const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
@@ -2369,19 +2409,36 @@
         : '';
       const yearBit = w.year ? ` · ${w.year}` : '';
       let meta = `${w.where || ''}${yearBit && kind!=='movie' ? yearBit : ''}`;
-      if (isCaught) meta = nextEpText(w, kind);
-      const bell = kind === 'movie' ? '' :
-        `<span class="wl-track${isCaught?' on':''}" onclick="toggleCaughtUp('${w.id}')" title="${isCaught?'Watching for new episodes \u2014 click to move back':'Caught up on available episodes \u2014 watch for new'}">${isCaught?'\U0001f514 Tracking':'\U0001f514 New?'}</span>`;
-      return `<div class="wl-item ${watched && !isCaught?'watched':''}">
+      if (mode === 'waiting') meta = nextEpText(w, kind);
+      else if (mode === 'new') meta = newEpText(w);
+      const newBadge = isNew ? '<span class="wl-new">NEW</span>' : '';
+      let pill = '';
+      if (kind !== 'movie') {
+        if (mode === 'new') pill = `<span class="wl-track new" onclick="markCaughtUpNow('${w.id}')" title="Mark caught up on the new episodes">✓ Caught up</span>`;
+        else if (mode === 'waiting') pill = `<span class="wl-track on" onclick="toggleCaughtUp('${w.id}')" title="Watching for new episodes — click to stop">\U0001f514 Tracking</span>`;
+        else pill = `<span class="wl-track" onclick="toggleCaughtUp('${w.id}')" title="Caught up on available episodes — watch for new">\U0001f514 New?</span>`;
+      }
+      const dim = watched && mode === 'active';
+      return `<div class="wl-item ${dim?'watched':''}">
           <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'✓':''}</div>
           <div class="wl-info">
-            <div class="wl-title ${watched && !isCaught?'done':''}">${kindTag}${w.title}${w.year && kind==='movie' ? ' <span style="font-weight:400;color:#9c8b76;font-size:0.72em;">('+w.year+')</span>' : ''}</div>
-            <div class="wl-meta"${isCaught?' style="color:#8a6a3d;"':''}>${meta}</div>
+            <div class="wl-title ${dim?'done':''}">${newBadge}${kindTag}${w.title}${w.year && kind==='movie' ? ' <span style="font-weight:400;color:#9c8b76;font-size:0.72em;">('+w.year+')</span>' : ''}</div>
+            <div class="wl-meta"${isTracked?` style="color:${isNew?'#c2553a':'#8a6a3d'};"`:''}>${meta}</div>
           </div>
           <span class="wl-rating ${ratingClass}">${w.rating || ''}</span>
-          ${bell}
+          ${pill}
           <span onclick="removeFromWatchlist('${w.id}')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>
         </div>`;
+    }
+
+    function newEpText(w) {
+      const ne = _nextEp[w.id];
+      if (!ne) return 'new episode available';
+      let s = 'New episode';
+      if (ne.prevCode) s += ` ${ne.prevCode}`;
+      if (ne.prevDate) s += ` · aired ${fmtAirDate(ne.prevDate)}`;
+      if (ne.airdate) s += ` · next ${fmtAirDate(ne.airdate)}`;
+      return s;
     }
 
     function nextEpText(w, kind) {
@@ -2392,7 +2449,7 @@
         const when = fmtAirDate(ne.airdate);
         const days = daysUntil(ne.airdate);
         const rel = days === 0 ? 'today' : days === 1 ? 'tomorrow' : (days > 1 && days <= 60 ? `in ${days} days` : '');
-        return `New episode: ${when}${rel ? ' · ' + rel : ''}${ne.code ? ' · ' + ne.code : ''}`;
+        return `Next episode: ${when}${rel ? ' · ' + rel : ''}${ne.code ? ' · ' + ne.code : ''}`;
       }
       if (ne.status === 'Ended') return 'Series ended — nothing new coming';
       if (ne.status === 'Running' || ne.status === 'To Be Determined' || ne.status === 'In Development') return 'Returning — no date announced yet';
@@ -2416,9 +2473,19 @@
         delete _caughtUp[id];
         db.ref('caughtUp/' + id).remove();
       } else {
-        _caughtUp[id] = true;
-        db.ref('caughtUp/' + id).set(true);
+        // base (last-aired baseline) gets filled in by enrichNextEpisodes once TVMaze responds
+        _caughtUp[id] = { base: '' };
+        db.ref('caughtUp/' + id).set({ base: '' });
       }
+      renderWatchlist();
+    }
+
+    // Re-baseline a show to the current last-aired episode (used from the "new" section).
+    function markCaughtUpNow(id) {
+      const ne = _nextEp[id];
+      const base = (ne && ne.prevStamp) || new Date().toISOString();
+      _caughtUp[id] = { base };
+      db.ref('caughtUp/' + id).set({ base });
       renderWatchlist();
     }
 
@@ -2427,27 +2494,46 @@
       for (const w of list) {
         const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
         if (kind === 'movie') continue;
-        if ((w.id in _nextEp) || _nextEpLoading.has(w.id)) continue;
-        _nextEpLoading.add(w.id);
-        try {
-          const r = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' +
-            encodeURIComponent(w.title) + '&embed=nextepisode');
-          if (r.ok) {
-            const s = await r.json();
-            const ne = s._embedded && s._embedded.nextepisode;
-            _nextEp[w.id] = {
-              status: s.status || '',
-              airdate: (ne && ne.airdate) || '',
-              code: (ne && ne.season) ? ('S' + ne.season + 'E' + (ne.number || '')) : ''
-            };
-          } else {
-            _nextEp[w.id] = { status: '', airdate: '', code: '' };
+        if (!(w.id in _nextEp) && !_nextEpLoading.has(w.id)) {
+          _nextEpLoading.add(w.id);
+          try {
+            const r = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' +
+              encodeURIComponent(w.title) + '&embed[]=nextepisode&embed[]=previousepisode');
+            if (r.ok) {
+              const s = await r.json();
+              const emb = s._embedded || {};
+              const ne = emb.nextepisode, pe = emb.previousepisode;
+              _nextEp[w.id] = {
+                status: s.status || '',
+                airdate: (ne && ne.airdate) || '',
+                code: (ne && ne.season) ? ('S' + ne.season + 'E' + (ne.number || '')) : '',
+                prevStamp: (pe && pe.airstamp) || '',
+                prevDate: (pe && pe.airdate) || '',
+                prevCode: (pe && pe.season) ? ('S' + pe.season + 'E' + (pe.number || '')) : ''
+              };
+            } else {
+              _nextEp[w.id] = { status: '', airdate: '', code: '', prevStamp: '', prevDate: '', prevCode: '' };
+            }
+          } catch (_) {
+            _nextEp[w.id] = { status: '', airdate: '', code: '', prevStamp: '', prevDate: '', prevCode: '' };
           }
-        } catch (_) {
-          _nextEp[w.id] = { status: '', airdate: '', code: '' };
+          _nextEpLoading.delete(w.id);
+          changed = true;
         }
-        _nextEpLoading.delete(w.id);
-        changed = true;
+        // Backfill the caught-up baseline the first time we learn the last-aired episode
+        // (covers legacy `true` values and freshly-tracked shows with an empty base).
+        const cu = _caughtUp[w.id];
+        if (cu && (w.id in _nextEp)) {
+          const base = (typeof cu === 'object') ? (cu.base || '') : '';
+          if (!base) {
+            const nb = _nextEp[w.id].prevStamp || '';
+            if (nb) {
+              _caughtUp[w.id] = { base: nb };
+              db.ref('caughtUp/' + w.id).set({ base: nb });
+              changed = true;
+            }
+          }
+        }
       }
       if (changed) renderWatchlist();
     }
