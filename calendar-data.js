@@ -603,19 +603,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 12,
   "threads": [
-    {
-      "sender": "Instacart",
-      "subject": "Your McCaffrey's order is confirmed for September 7"
-    },
     {
       "sender": "Amazon.com",
       "subject": "Delivered 1 item: Skin Care"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Hair Care"
     },
     {
       "sender": "Amazon.com",
@@ -644,6 +636,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Diana @ Shameless Snacks",
       "subject": "Diana here. Today's for you."
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "Labor Day: Last day for 20% off fall and Halloween decor"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
