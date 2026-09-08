@@ -614,16 +614,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 4,
   "threads": [
-    {
-      "sender": "ChaseCardBenefits",
-      "subject": "Important Information Regarding Your Chase Card Benefits Request 50891628"
-    },
-    {
-      "sender": "hpdirector nassautennis.net",
-      "subject": "Nassau HPTA: Player & Parent Packet (IMPORTANT)"
-    },
     {
       "sender": "Deer Guys",
       "subject": "Receipt for payment to Deer Guys"
@@ -631,10 +623,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The 101: Fund",
       "subject": "\u2705 \u2b50\ufe0f \ud83d\udc9a 101: Fund 2025-2026 Transcript"
-    },
-    {
-      "sender": "Walgreens Pharmacy",
-      "subject": "Remember: Mary Jane, your Rx is ready for pickup"
     },
     {
       "sender": "Shop Jamie Haller",
