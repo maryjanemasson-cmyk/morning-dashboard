@@ -614,15 +614,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 08 Sep 2026"
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Tue, 9/8 is ready to view"
     },
     {
-      "sender": "Bissinger's Handcrafted Chocolatier",
-      "subject": "A shipment from order #210448 is on the way"
+      "sender": "Design Decor",
+      "subject": "Last chance for our FREE Tree Masterclass"
     },
     {
       "sender": "Shop Jamie Haller",
