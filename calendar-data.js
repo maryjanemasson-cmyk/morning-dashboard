@@ -614,27 +614,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "SIMONMILLER",
-      "subject": "Up To 75% Off: Ends TONIGHT"
+      "sender": "ChaseCardBenefits",
+      "subject": "Important Information Regarding Your Chase Card Benefits Request 50891628"
     },
     {
-      "sender": "hello@roucha.com",
-      "subject": "Account Activation \u2014\u00a0Start Collecting Points"
+      "sender": "hpdirector nassautennis.net",
+      "subject": "Nassau HPTA: Player & Parent Packet (IMPORTANT)"
+    },
+    {
+      "sender": "Deer Guys",
+      "subject": "Receipt for payment to Deer Guys"
     },
     {
       "sender": "The 101: Fund",
       "subject": "\u2705 \u2b50\ufe0f \ud83d\udc9a 101: Fund 2025-2026 Transcript"
-    },
-    {
-      "sender": "Shop",
-      "subject": "Your deals from Element Brooklyn & Cadence are expiring soon \u231b"
-    },
-    {
-      "sender": "Dropbox Sign",
-      "subject": "Everyone has signed NJ0378 Cancel Form Orangetheory Fitness"
     },
     {
       "sender": "Walgreens Pharmacy",
@@ -647,14 +643,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Kristen @ LoserBites",
       "subject": "Free brownies! \ud83e\udd0e"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered 1 item: Skin Care"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Hair Accessories"
     }
   ],
   "items": [
