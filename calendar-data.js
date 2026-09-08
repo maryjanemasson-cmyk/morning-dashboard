@@ -614,8 +614,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 5,
   "threads": [
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Your Paris trip: Eliminate jet lag with Timeshifter"
+    },
     {
       "sender": "Deer Guys",
       "subject": "Receipt for payment to Deer Guys"
