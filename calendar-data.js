@@ -606,8 +606,8 @@ window.EMAIL_DATA = {
   "unreadCount": 13,
   "threads": [
     {
-      "sender": "Instacart",
-      "subject": "Your Instacart order receipt"
+      "sender": "Kristen @ LoserBites",
+      "subject": "Free brownies! \ud83e\udd0e"
     },
     {
       "sender": "Amazon.com",
