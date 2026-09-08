@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-09-07T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-07T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
     "summary": "OMS Visit",
     "location": "Cambridge, MA",
     "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 8 to 10, 2026",
@@ -185,6 +174,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "7"
+  },
+  {
+    "summary": "MJ in Paris",
+    "location": "Microsoft Teams Meeting",
+    "description": "\n________________________________________________________________________________\nMicrosoft Teams meeting\nJoin: https://teams.microsoft.com/meet/391389083842030?p=erbotOWtsBnt6GfQLK\nMeeting ID: 391 389 083 842 030\nPasscode: DB2dN3ES\n________________________________\nNeed help?<https://aka.ms/JoinTeamsMeeting?omkt=en-US> | System reference<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Mzk0NzE4NjMtN2EzNy00ZDc0LTkzZGMtYzI2NDk5MjYyMGFj%40thread.v2/0?context=%7b%22Tid%22%3a%229e776b6a-a6cc-4faf-a054-a502153beb01%22%2c%22Oid%22%3a%22918a0679-880d-4eda-a163-93d2692b39c7%22%7d>\nDial in by phone\n+1 213-458-8494,,23093164#<tel:+12134588494,,23093164> United States, Los Angeles\nFind a local number<https://dialin.teams.microsoft.com/731bd465-bd70-44e4-a280-444d1fdbc9fe?id=23093164>\nPhone conference ID: 230 931 64#\nJoin on a video conferencing device\nTenant key: ipsen@m.webex.com\nVideo ID: 129 420 124 5\nMore info<https://www.webex.com/msteams?confid=1294201245&tenantkey=ipsen&domain=m.webex.com>\nFor organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=918a0679-880d-4eda-a163-93d2692b39c7&tenantId=9e776b6a-a6cc-4faf-a054-a502153beb01&threadId=19_meeting_Mzk0NzE4NjMtN2EzNy00ZDc0LTkzZGMtYzI2NDk5MjYyMGFj@thread.v2&messageId=0&language=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing>\n________________________________________________________________________________\n\n",
+    "startTime": "",
+    "startDate": "2026-09-21",
+    "endTime": "",
+    "endDate": "2026-09-26",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-09-21T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-21T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
   }
 ];
 
@@ -603,8 +614,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Chewy",
+      "subject": "Time to review your Autoship order"
+    },
+    {
+      "sender": "Alex from Holafly",
+      "subject": "Mary, have you invited your friends to the Race to Rewards yet?"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Layer, Style, Repeat."
+    },
+    {
+      "sender": "PNCBank_Statements@pnc.com",
+      "subject": "View your PNC Bank online statement"
+    },
     {
       "sender": "Kristen @ LoserBites",
       "subject": "Free brownies! \ud83e\udd0e"
@@ -624,26 +655,6 @@ window.EMAIL_DATA = {
     {
       "sender": "DONNI.",
       "subject": "Discover: The Best-Sellers"
-    },
-    {
-      "sender": "Roucha",
-      "subject": "Why Versatility Matters"
-    },
-    {
-      "sender": "Spotify",
-      "subject": "Update to the Spotify Terms of Use"
-    },
-    {
-      "sender": "French Language Accelerator",
-      "subject": "Leeroy Verot posted \"F\u00eatons nos progr\u00e8s ! \u2728\""
-    },
-    {
-      "sender": "Diana @ Shameless Snacks",
-      "subject": "Diana here. Today's for you."
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "Labor Day: Last day for 20% off fall and Halloween decor"
     }
   ],
   "items": [
@@ -653,6 +664,13 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 2 items: Hair Care, Hair Accessories",
+      "date": "2026-09-08",
+      "id": "1a07f3175f1781b7",
+      "sender": "Amazon.com"
     }
   ]
 };
