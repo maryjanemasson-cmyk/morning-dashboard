@@ -614,15 +614,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Tue, 9/8 is ready to view"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Hurry, Labor Day deals end tomorrow\u231b"
     },
     {
-      "sender": "Design Decor",
-      "subject": "Last chance for our FREE Tree Masterclass"
+      "sender": "IHG One Rewards",
+      "subject": "Book a 3-night getaway from $199 and earn 40K IHG One Rewards points"
+    },
+    {
+      "sender": "Sammy Benes",
+      "subject": "NJ0378 Cancel Form Orangetheory Fitness \u2013 signature requested by Sammy Benes"
+    },
+    {
+      "sender": "Sammy Benes",
+      "subject": "Signature process for NJ0378 Cancel Form Orangetheory Fitness has started"
+    },
+    {
+      "sender": "School Nurse",
+      "subject": "Re: Nathaniel Hinrichs"
+    },
+    {
+      "sender": "BrandsMart Deals",
+      "subject": "The Labor Day Sale Has Been Extended!"
+    },
+    {
+      "sender": "Walgreens Pharmacy",
+      "subject": "Remember: Mary Jane, your Rx is ready for pickup"
+    },
+    {
+      "sender": "Almina Concept",
+      "subject": "The Long Sleeve T-Shirt"
     },
     {
       "sender": "Shop Jamie Haller",
@@ -631,30 +655,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Kristen @ LoserBites",
       "subject": "Free brownies! \ud83e\udd0e"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered 1 item: Skin Care"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Hair Accessories"
-    },
-    {
-      "sender": "Hers",
-      "subject": "mary jane, your order has shipped"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "Discover: The Best-Sellers"
-    },
-    {
-      "sender": "Roucha",
-      "subject": "Why Versatility Matters"
-    },
-    {
-      "sender": "Spotify",
-      "subject": "Update to the Spotify Terms of Use"
     }
   ],
   "items": [
