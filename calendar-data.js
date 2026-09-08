@@ -614,27 +614,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 08 Sep 2026"
     },
     {
-      "sender": "Chewy",
-      "subject": "Time to review your Autoship order"
+      "sender": "Bissinger's Handcrafted Chocolatier",
+      "subject": "A shipment from order #210448 is on the way"
     },
     {
-      "sender": "Alex from Holafly",
-      "subject": "Mary, have you invited your friends to the Race to Rewards yet?"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Layer, Style, Repeat."
-    },
-    {
-      "sender": "PNCBank_Statements@pnc.com",
-      "subject": "View your PNC Bank online statement"
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Introducing Rib Classics"
     },
     {
       "sender": "Kristen @ LoserBites",
@@ -655,6 +647,14 @@ window.EMAIL_DATA = {
     {
       "sender": "DONNI.",
       "subject": "Discover: The Best-Sellers"
+    },
+    {
+      "sender": "Roucha",
+      "subject": "Why Versatility Matters"
+    },
+    {
+      "sender": "Spotify",
+      "subject": "Update to the Spotify Terms of Use"
     }
   ],
   "items": [
