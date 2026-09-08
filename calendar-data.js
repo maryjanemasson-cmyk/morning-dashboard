@@ -614,39 +614,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Hurry, Labor Day deals end tomorrow\u231b"
+      "sender": "SIMONMILLER",
+      "subject": "Up To 75% Off: Ends TONIGHT"
     },
     {
-      "sender": "IHG One Rewards",
-      "subject": "Book a 3-night getaway from $199 and earn 40K IHG One Rewards points"
+      "sender": "hello@roucha.com",
+      "subject": "Account Activation \u2014\u00a0Start Collecting Points"
     },
     {
-      "sender": "Sammy Benes",
-      "subject": "NJ0378 Cancel Form Orangetheory Fitness \u2013 signature requested by Sammy Benes"
+      "sender": "The 101: Fund",
+      "subject": "\u2705 \u2b50\ufe0f \ud83d\udc9a 101: Fund 2025-2026 Transcript"
     },
     {
-      "sender": "Sammy Benes",
-      "subject": "Signature process for NJ0378 Cancel Form Orangetheory Fitness has started"
+      "sender": "Shop",
+      "subject": "Your deals from Element Brooklyn & Cadence are expiring soon \u231b"
     },
     {
-      "sender": "School Nurse",
-      "subject": "Re: Nathaniel Hinrichs"
-    },
-    {
-      "sender": "BrandsMart Deals",
-      "subject": "The Labor Day Sale Has Been Extended!"
+      "sender": "Dropbox Sign",
+      "subject": "Everyone has signed NJ0378 Cancel Form Orangetheory Fitness"
     },
     {
       "sender": "Walgreens Pharmacy",
       "subject": "Remember: Mary Jane, your Rx is ready for pickup"
-    },
-    {
-      "sender": "Almina Concept",
-      "subject": "The Long Sleeve T-Shirt"
     },
     {
       "sender": "Shop Jamie Haller",
@@ -655,6 +647,14 @@ window.EMAIL_DATA = {
     {
       "sender": "Kristen @ LoserBites",
       "subject": "Free brownies! \ud83e\udd0e"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered 1 item: Skin Care"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Hair Accessories"
     }
   ],
   "items": [
