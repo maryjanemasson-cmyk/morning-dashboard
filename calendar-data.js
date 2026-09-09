@@ -592,47 +592,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 27,
   "threads": [
+    {
+      "sender": "Grok",
+      "subject": "The Grok Bot marketplace is live"
+    },
+    {
+      "sender": "Washington University in St. Louis",
+      "subject": "Key info about applying to WashU"
+    },
+    {
+      "sender": "The State of New Jersey",
+      "subject": "NJ Updates: Property Tax Relief Info, Finding the State Services You Need, and More"
+    },
+    {
+      "sender": "Bradford Carpenter",
+      "subject": "Tomorrow Afternoon's Schedule (9/10)"
+    },
+    {
+      "sender": "Axia Women's Health",
+      "subject": "Mary Jane, your mammogram just got easier. Book at Axia."
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Pre-Arrival: Your Driver is Arriving Soon!"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered 2 items: Hair Care, Hair Accessories"
+    },
+    {
+      "sender": "The RealReal Service",
+      "subject": "Your free shipping label is inside"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Midnight takes this back >"
+    },
     {
       "sender": "Fullscript",
       "subject": "Last day to save on high-quality supplements"
-    },
-    {
-      "sender": "Keeper Security",
-      "subject": "Keeper: Do This Before You Switch Phones"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "This one\u2019s for you \ud83e\udd29"
-    },
-    {
-      "sender": "Sephora",
-      "subject": "NEW Summer Fridays!!!"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Building Belonging Through Place"
-    },
-    {
-      "sender": "GreenDrop Information",
-      "subject": "GreenDrop home pickup will be in your area"
-    },
-    {
-      "sender": "DAZN",
-      "subject": "NFL is back TONIGHT \ud83c\udfc8\ud83d\ude4c"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "Archives collection, 30% off"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Disney Plus: $38.37\u00a0USD"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "COLOR ANALYSIS"
     }
   ],
   "items": [
