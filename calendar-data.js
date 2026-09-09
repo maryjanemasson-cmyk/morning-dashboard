@@ -614,11 +614,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 4,
   "threads": [
     {
-      "sender": "MileagePlus Program",
-      "subject": "Your Paris trip: Eliminate jet lag with Timeshifter"
+      "sender": "Tiger Gao",
+      "subject": "PRISMS Parent Signal Group"
     },
     {
       "sender": "Deer Guys",
@@ -631,10 +631,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shop Jamie Haller",
       "subject": "1st Dibs // Introducing Rib Classics"
-    },
-    {
-      "sender": "Kristen @ LoserBites",
-      "subject": "Free brownies! \ud83e\udd0e"
     }
   ],
   "items": [
