@@ -592,8 +592,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Fullscript",
+      "subject": "Last day to save on high-quality supplements"
+    },
+    {
+      "sender": "Keeper Security",
+      "subject": "Keeper: Do This Before You Switch Phones"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "This one\u2019s for you \ud83e\udd29"
+    },
+    {
+      "sender": "Sephora",
+      "subject": "NEW Summer Fridays!!!"
+    },
+    {
+      "sender": "National Building Museum",
+      "subject": "Building Belonging Through Place"
+    },
+    {
+      "sender": "GreenDrop Information",
+      "subject": "GreenDrop home pickup will be in your area"
+    },
+    {
+      "sender": "DAZN",
+      "subject": "NFL is back TONIGHT \ud83c\udfc8\ud83d\ude4c"
+    },
     {
       "sender": "Pini Parma",
       "subject": "Archives collection, 30% off"
@@ -605,34 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "COLOR ANALYSIS"
-    },
-    {
-      "sender": "William Ennist",
-      "subject": "Welcome to PRISMS!"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "FALL / WINTER 2026 ACCESSORIES"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udea8 Flights from $5 + China from $399 RT"
-    },
-    {
-      "sender": "New York Jets",
-      "subject": "Green & White Day Is Here!"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Design questions? We're here to help"
-    },
-    {
-      "sender": "Optery",
-      "subject": "[Alert] Your Info Was Found on FamilyTreeNow, Nuwber, CourtRecords.us and 49 other sites"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
