@@ -592,8 +592,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "Earn 3x points + Your member lineup's looking good"
+    },
+    {
+      "sender": "Trip.com",
+      "subject": "\ud83d\udea8 Flights from $5 + China from $399 RT"
+    },
+    {
+      "sender": "Schoolhouse",
+      "subject": "A refresh worth reaching for"
+    },
+    {
+      "sender": "New York Jets",
+      "subject": "Green & White Day Is Here!"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "Design questions? We're here to help"
+    },
+    {
+      "sender": "Optery",
+      "subject": "[Alert] Your Info Was Found on FamilyTreeNow, Nuwber, CourtRecords.us and 49 other sites"
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
