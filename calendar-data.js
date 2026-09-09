@@ -592,19 +592,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "MyLowe's Rewards",
-      "subject": "Earn 3x points + Your member lineup's looking good"
+      "sender": "Pini Parma",
+      "subject": "Archives collection, 30% off"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Disney Plus: $38.37\u00a0USD"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "COLOR ANALYSIS"
+    },
+    {
+      "sender": "William Ennist",
+      "subject": "Welcome to PRISMS!"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "FALL / WINTER 2026 ACCESSORIES"
     },
     {
       "sender": "Trip.com",
       "subject": "\ud83d\udea8 Flights from $5 + China from $399 RT"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "A refresh worth reaching for"
     },
     {
       "sender": "New York Jets",
@@ -621,18 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "",
-      "subject": "Huntington Bank Loans payment sent as a check"
-    },
-    {
-      "sender": "Deer Guys",
-      "subject": "Receipt for payment to Deer Guys"
-    },
-    {
-      "sender": "The 101: Fund",
-      "subject": "\u2705 \u2b50\ufe0f \ud83d\udc9a 101: Fund 2025-2026 Transcript"
     }
   ],
   "items": [
