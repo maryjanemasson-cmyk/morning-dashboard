@@ -11,28 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": ""
   },
   {
-    "summary": "\u2708\ufe0f UA1110 EWR \u2192 BOS",
-    "location": "Newark (EWR)",
-    "description": "Tue, Sep 8\n8:30 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 1110, Terminal TERMINAL A, Gate\n9:48 AM EDT\nArrive Boston (BOS)\nTerminal TERMINAL B, Gate",
-    "startTime": "2026-09-08T08:30:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-08T09:48:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: The Royal Sonesta Boston",
-    "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
-    "description": "3:00 PM EDT\n[Lodging] Arrive The Royal Sonesta Boston\nCheck-In: 3:00pm\n40 Edwin H. Land Boulevard, Cambridge, MA, 02142\n1-617-806-4200",
-    "startTime": "2026-09-08T15:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-08T16:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
     "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
     "description": "Thu, Sep 10\n11:00 AM EDT\n[Lodging] Depart The Royal Sonesta Boston\nCheck-Out: 11:00am\n40 Edwin H. Land Boulevard, Cambridge, MA, 02142\n1-617-806-4200",
@@ -614,11 +592,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 5,
   "threads": [
     {
-      "sender": "Tiger Gao",
-      "subject": "PRISMS Parent Signal Group"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "",
+      "subject": "Huntington Bank Loans payment sent as a check"
     },
     {
       "sender": "Deer Guys",
@@ -640,13 +622,6 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 2 items: Hair Care, Hair Accessories",
-      "date": "2026-09-08",
-      "id": "1a07f3175f1781b7",
-      "sender": "Amazon.com"
     }
   ]
 };
