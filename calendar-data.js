@@ -592,8 +592,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 7,
   "threads": [
+    {
+      "sender": "Rapha\u00ebl Giami",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 09 Sep 2026"
+    },
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Introducing Stretch, Unlined, Naked, Italian Leather."
+    },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
@@ -609,10 +621,6 @@ window.EMAIL_DATA = {
     {
       "sender": "The 101: Fund",
       "subject": "\u2705 \u2b50\ufe0f \ud83d\udc9a 101: Fund 2025-2026 Transcript"
-    },
-    {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // Introducing Rib Classics"
     }
   ],
   "items": [
