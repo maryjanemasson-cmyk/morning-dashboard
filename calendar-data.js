@@ -592,47 +592,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 27,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "PayPal",
+      "subject": "Send and receive crypto just like that"
+    },
     {
       "sender": "Grok",
       "subject": "The Grok Bot marketplace is live"
     },
     {
-      "sender": "Washington University in St. Louis",
-      "subject": "Key info about applying to WashU"
+      "sender": "National Building Museum",
+      "subject": "Building Belonging Through Place"
     },
     {
-      "sender": "The State of New Jersey",
-      "subject": "NJ Updates: Property Tax Relief Info, Finding the State Services You Need, and More"
+      "sender": "GreenDrop Information",
+      "subject": "GreenDrop home pickup will be in your area"
     },
     {
-      "sender": "Bradford Carpenter",
-      "subject": "Tomorrow Afternoon's Schedule (9/10)"
+      "sender": "Reformation",
+      "subject": "COLOR ANALYSIS"
     },
     {
-      "sender": "Axia Women's Health",
-      "subject": "Mary Jane, your mammogram just got easier. Book at Axia."
+      "sender": "A BATHING APE\u00ae",
+      "subject": "FALL / WINTER 2026 ACCESSORIES"
     },
     {
-      "sender": "UPS",
-      "subject": "UPS Pre-Arrival: Your Driver is Arriving Soon!"
+      "sender": "Trip.com",
+      "subject": "\ud83d\udea8 Flights from $5 + China from $399 RT"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Delivered 2 items: Hair Care, Hair Accessories"
+      "sender": "New York Jets",
+      "subject": "Green & White Day Is Here!"
     },
     {
-      "sender": "The RealReal Service",
-      "subject": "Your free shipping label is inside"
+      "sender": "The Shade Store",
+      "subject": "Design questions? We're here to help"
     },
     {
-      "sender": "Joel Grimes",
-      "subject": "Midnight takes this back >"
-    },
-    {
-      "sender": "Fullscript",
-      "subject": "Last day to save on high-quality supplements"
+      "sender": "Optery",
+      "subject": "[Alert] Your Info Was Found on FamilyTreeNow, Nuwber, CourtRecords.us and 49 other sites"
     }
   ],
   "items": [
