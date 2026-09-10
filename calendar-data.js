@@ -592,47 +592,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 29,
   "threads": [
+    {
+      "sender": "French Language Accelerator",
+      "subject": "Leeroy Verot posted \"Challenge du jour... le mot de ta journ\u00e9e !\""
+    },
+    {
+      "sender": "Mayra Monsalve",
+      "subject": "Back in Stock: KHAITE x Oliver Peoples 1967C Sunglasses"
+    },
+    {
+      "sender": "Viski",
+      "subject": "Escape to the tropics (free garnish with every Tiki set) \ud83c\udf79"
+    },
+    {
+      "sender": "Customer Care",
+      "subject": "ORDER 45480"
+    },
+    {
+      "sender": "GLO30",
+      "subject": "Smooth Forehead Lines, 11s & Crow's Feet \u2014 $425"
+    },
+    {
+      "sender": "Zoom",
+      "subject": "Real reviews. Real results. Meet My Notes."
+    },
+    {
+      "sender": "Hotels.com",
+      "subject": "Your Silver Prices are waiting"
+    },
+    {
+      "sender": "DONNI.",
+      "subject": "Introducing: Fall Part II"
+    },
+    {
+      "sender": "Matt Harris",
+      "subject": "healthtech distribution intake - Mary"
+    },
     {
       "sender": "Honeydew",
       "subject": "Clear skin by the holidays?"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "YOU CAN SEE EVERYTHING"
-    },
-    {
-      "sender": "& Other Stories",
-      "subject": "Jackets today, coats tomorrow"
-    },
-    {
-      "sender": "Studio",
-      "subject": "Casey Neistat's app is waiting for you"
-    },
-    {
-      "sender": "Horizon BCBSNJ Member Services",
-      "subject": "Christian, your claim has been processed"
-    },
-    {
-      "sender": "Emily Ley",
-      "subject": "My Unofficial Menu for a Better Nightcap"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "Catch it if you can \ud83c\udf6c"
-    },
-    {
-      "sender": "Studio",
-      "subject": "Claire Saffitz's app is waiting for you"
-    },
-    {
-      "sender": "SIMONMILLER",
-      "subject": "Cool Tones For Fall"
-    },
-    {
-      "sender": "D\u00e9 Rococo",
-      "subject": "ma m\u00e8re et moi"
     }
   ],
   "items": [
