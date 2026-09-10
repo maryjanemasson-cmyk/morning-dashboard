@@ -595,8 +595,16 @@ window.EMAIL_DATA = {
   "unreadCount": 15,
   "threads": [
     {
-      "sender": "Oded Kalev",
-      "subject": "You have an invitation"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 10 Sep 2026"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "MS NOW Account",
+      "subject": "Welcome to your free MS NOW account"
     },
     {
       "sender": "Emily from Holafly",
@@ -605,14 +613,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PNC Alerts",
       "subject": "A $20,000.00 deposit was credited to your account."
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "MADDI & CHELSEA"
-    },
-    {
-      "sender": "LATAM Airlines",
-      "subject": "\ud83c\udfbe Take your game to South America!"
     },
     {
       "sender": "PayPal",
