@@ -592,47 +592,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 22,
   "threads": [
     {
-      "sender": "Unroll.Me",
-      "subject": "Today's Rollup"
+      "sender": "Honeydew",
+      "subject": "Clear skin by the holidays?"
     },
     {
-      "sender": "BrandsMart Deals",
-      "subject": "Buy More. Save More. Up to $1,200 Back."
+      "sender": "Reformation",
+      "subject": "YOU CAN SEE EVERYTHING"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 10 Sep 2026"
+      "sender": "& Other Stories",
+      "subject": "Jackets today, coats tomorrow"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Studio",
+      "subject": "Casey Neistat's app is waiting for you"
     },
     {
-      "sender": "MS NOW Account",
-      "subject": "Welcome to your free MS NOW account"
+      "sender": "Horizon BCBSNJ Member Services",
+      "subject": "Christian, your claim has been processed"
     },
     {
-      "sender": "Emily from Holafly",
-      "subject": "Mary, are you keeping all the good stuff to yourself?"
+      "sender": "Emily Ley",
+      "subject": "My Unofficial Menu for a Better Nightcap"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $20,000.00 deposit was credited to your account."
+      "sender": "Shameless Snacks",
+      "subject": "Catch it if you can \ud83c\udf6c"
     },
     {
-      "sender": "PayPal",
-      "subject": "Send and receive crypto just like that"
+      "sender": "Studio",
+      "subject": "Claire Saffitz's app is waiting for you"
     },
     {
-      "sender": "Grok",
-      "subject": "The Grok Bot marketplace is live"
+      "sender": "SIMONMILLER",
+      "subject": "Cool Tones For Fall"
     },
     {
-      "sender": "National Building Museum",
-      "subject": "Building Belonging Through Place"
+      "sender": "D\u00e9 Rococo",
+      "subject": "ma m\u00e8re et moi"
     }
   ],
   "items": [
