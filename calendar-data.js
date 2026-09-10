@@ -592,8 +592,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 16,
   "threads": [
+    {
+      "sender": "Andrea Tuttle Meyers",
+      "subject": "You have an invitation"
+    },
+    {
+      "sender": "Fullscript",
+      "subject": "Your 15% savings end tonight"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
+    },
+    {
+      "sender": "Enza Costa",
+      "subject": "Steel Blue"
+    },
     {
       "sender": "PayPal",
       "subject": "Send and receive crypto just like that"
@@ -617,22 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "A BATHING APE\u00ae",
       "subject": "FALL / WINTER 2026 ACCESSORIES"
-    },
-    {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udea8 Flights from $5 + China from $399 RT"
-    },
-    {
-      "sender": "New York Jets",
-      "subject": "Green & White Day Is Here!"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "Design questions? We're here to help"
-    },
-    {
-      "sender": "Optery",
-      "subject": "[Alert] Your Info Was Found on FamilyTreeNow, Nuwber, CourtRecords.us and 49 other sites"
     }
   ],
   "items": [
