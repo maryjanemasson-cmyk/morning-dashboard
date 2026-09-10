@@ -592,23 +592,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Andrea Tuttle Meyers",
+      "sender": "Oded Kalev",
       "subject": "You have an invitation"
     },
     {
-      "sender": "Fullscript",
-      "subject": "Your 15% savings end tonight"
+      "sender": "Emily from Holafly",
+      "subject": "Mary, are you keeping all the good stuff to yourself?"
     },
     {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
+      "sender": "PNC Alerts",
+      "subject": "A $20,000.00 deposit was credited to your account."
     },
     {
-      "sender": "Enza Costa",
-      "subject": "Steel Blue"
+      "sender": "Tony Bianco US",
+      "subject": "MADDI & CHELSEA"
+    },
+    {
+      "sender": "LATAM Airlines",
+      "subject": "\ud83c\udfbe Take your game to South America!"
     },
     {
       "sender": "PayPal",
@@ -629,10 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Reformation",
       "subject": "COLOR ANALYSIS"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "FALL / WINTER 2026 ACCESSORIES"
     }
   ],
   "items": [
