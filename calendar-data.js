@@ -592,8 +592,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The Penny Loafer in High Black is BACK"
+    },
+    {
+      "sender": "Elizabeth Rodriguez",
+      "subject": "Is this it?"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is out for delivery today 538345591970"
+    },
+    {
+      "sender": "Dr. Spitz, Honeydew Co-Founder",
+      "subject": "What is Accutane?"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "Today's Rollup"
+    },
+    {
+      "sender": "BrandsMart Deals",
+      "subject": "Buy More. Save More. Up to $1,200 Back."
+    },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
       "subject": "Sleeptracker-AI\u00ae Insights for 10 Sep 2026"
@@ -609,30 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Emily from Holafly",
       "subject": "Mary, are you keeping all the good stuff to yourself?"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "A $20,000.00 deposit was credited to your account."
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Send and receive crypto just like that"
-    },
-    {
-      "sender": "Grok",
-      "subject": "The Grok Bot marketplace is live"
-    },
-    {
-      "sender": "National Building Museum",
-      "subject": "Building Belonging Through Place"
-    },
-    {
-      "sender": "GreenDrop Information",
-      "subject": "GreenDrop home pickup will be in your area"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "COLOR ANALYSIS"
     }
   ],
   "items": [
