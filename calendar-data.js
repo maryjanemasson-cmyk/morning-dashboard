@@ -592,15 +592,39 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 29,
+  "unreadCount": 33,
   "threads": [
+    {
+      "sender": "Grok",
+      "subject": "Register for Grok Bot Galaxy: Sept. 15-17"
+    },
+    {
+      "sender": "Resy",
+      "subject": "A Look at New Openings Across the U.S."
+    },
+    {
+      "sender": "Roucha",
+      "subject": "Just Launched \u2014 Ingmar Jacket"
+    },
+    {
+      "sender": "Vince",
+      "subject": "Your Order Is On The Way"
+    },
+    {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment was delivered 538345591970"
+    },
+    {
+      "sender": "The Container Store",
+      "subject": "Your package has arrived!"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "The part that makes composites believable"
+    },
     {
       "sender": "French Language Accelerator",
       "subject": "Leeroy Verot posted \"Challenge du jour... le mot de ta journ\u00e9e !\""
-    },
-    {
-      "sender": "Mayra Monsalve",
-      "subject": "Back in Stock: KHAITE x Oliver Peoples 1967C Sunglasses"
     },
     {
       "sender": "Viski",
@@ -609,30 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Customer Care",
       "subject": "ORDER 45480"
-    },
-    {
-      "sender": "GLO30",
-      "subject": "Smooth Forehead Lines, 11s & Crow's Feet \u2014 $425"
-    },
-    {
-      "sender": "Zoom",
-      "subject": "Real reviews. Real results. Meet My Notes."
-    },
-    {
-      "sender": "Hotels.com",
-      "subject": "Your Silver Prices are waiting"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "Introducing: Fall Part II"
-    },
-    {
-      "sender": "Matt Harris",
-      "subject": "healthtech distribution intake - Mary"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "Clear skin by the holidays?"
     }
   ],
   "items": [
