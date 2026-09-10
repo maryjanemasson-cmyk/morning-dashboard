@@ -592,23 +592,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 33,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Grok",
-      "subject": "Register for Grok Bot Galaxy: Sept. 15-17"
+      "sender": "Google",
+      "subject": "Security alert for nathanielhinrichs1@gmail.com"
+    },
+    {
+      "sender": "Life360",
+      "subject": "Wait, you drove how many times? \ud83d\ude32"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "The latest from KALLMEYER"
+    },
+    {
+      "sender": "Topgolf",
+      "subject": "Topgolf \ud83e\udd1d Taco Bell | Live M\u00e1s Open Qualifiers"
     },
     {
       "sender": "Resy",
       "subject": "A Look at New Openings Across the U.S."
-    },
-    {
-      "sender": "Roucha",
-      "subject": "Just Launched \u2014 Ingmar Jacket"
-    },
-    {
-      "sender": "Vince",
-      "subject": "Your Order Is On The Way"
     },
     {
       "sender": "FedEx Delivery Manager",
@@ -619,20 +623,16 @@ window.EMAIL_DATA = {
       "subject": "Your package has arrived!"
     },
     {
-      "sender": "Joel Grimes",
-      "subject": "The part that makes composites believable"
+      "sender": "GLO30",
+      "subject": "Smooth Forehead Lines, 11s & Crow's Feet \u2014 $425"
     },
     {
-      "sender": "French Language Accelerator",
-      "subject": "Leeroy Verot posted \"Challenge du jour... le mot de ta journ\u00e9e !\""
+      "sender": "DONNI.",
+      "subject": "Introducing: Fall Part II"
     },
     {
-      "sender": "Viski",
-      "subject": "Escape to the tropics (free garnish with every Tiki set) \ud83c\udf79"
-    },
-    {
-      "sender": "Customer Care",
-      "subject": "ORDER 45480"
+      "sender": "Honeydew",
+      "subject": "Clear skin by the holidays?"
     }
   ],
   "items": [
