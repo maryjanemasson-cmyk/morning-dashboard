@@ -592,11 +592,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "Google",
-      "subject": "Security alert for nathanielhinrichs1@gmail.com"
+      "sender": "Washington University in St. Louis",
+      "subject": "Register today to Discover WashU!"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Earn 175,000 Membership Rewards\u00ae points. Apply now."
+    },
+    {
+      "sender": "Bissinger's Handcrafted Chocolatier",
+      "subject": "FRESH Chocolate Covered Blackberry Season!"
     },
     {
       "sender": "Life360",
@@ -625,14 +633,6 @@ window.EMAIL_DATA = {
     {
       "sender": "GLO30",
       "subject": "Smooth Forehead Lines, 11s & Crow's Feet \u2014 $425"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "Introducing: Fall Part II"
-    },
-    {
-      "sender": "Honeydew",
-      "subject": "Clear skin by the holidays?"
     }
   ],
   "items": [
