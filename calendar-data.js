@@ -559,23 +559,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "ME+EM Orders",
-      "subject": "Your ME+EM parcel 5810962 is with USPS"
-    },
-    {
-      "sender": "Bissinger's Handcrafted Chocolatier",
-      "subject": "A shipment from order #210448 has been delivered"
-    },
-    {
-      "sender": "GreenDrop Information",
-      "subject": "Last chance to schedule for next week\u2019s pickup!"
-    },
-    {
-      "sender": "WAT THE BRAND",
-      "subject": "Your WAT Basket Could Be On Us \ud83d\udc40"
+      "sender": "Amazon.com",
+      "subject": "Shipped 7 items: Household, Cleaning Supplies, and more"
     },
     {
       "sender": "Optery",
@@ -600,6 +588,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Washington University in St. Louis",
       "subject": "Register today to Discover WashU!"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Earn 175,000 Membership Rewards\u00ae points. Apply now."
+    },
+    {
+      "sender": "Bissinger's Handcrafted Chocolatier",
+      "subject": "FRESH Chocolate Covered Blackberry Season!"
+    },
+    {
+      "sender": "Life360",
+      "subject": "Wait, you drove how many times? \ud83d\ude32"
     }
   ],
   "items": [
@@ -609,6 +609,13 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 7 items: Household, Cleaning Supplies, and more",
+      "date": "2026-09-11",
+      "id": "1a0922ddfb7301b2",
+      "sender": "Amazon.com"
     }
   ]
 };
