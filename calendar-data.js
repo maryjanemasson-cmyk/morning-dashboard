@@ -559,11 +559,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 21,
   "threads": [
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 11 Sep 2026"
+      "sender": "The Container Store",
+      "subject": "Please share your feedback on your recent purchase"
+    },
+    {
+      "sender": "School Nurse",
+      "subject": "Christian Hinrichs' health insurance card"
+    },
+    {
+      "sender": "American Express",
+      "subject": "Has your Card arrived yet?"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 2 items: Outdoor Supplies, Personal Care"
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Boston"
     },
     {
       "sender": "Shop Jamie Haller",
@@ -584,22 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Bissinger's Handcrafted Chocolatier",
       "subject": "FRESH Chocolate Covered Blackberry Season!"
-    },
-    {
-      "sender": "Life360",
-      "subject": "Wait, you drove how many times? \ud83d\ude32"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "The latest from KALLMEYER"
-    },
-    {
-      "sender": "Topgolf",
-      "subject": "Topgolf \ud83e\udd1d Taco Bell | Live M\u00e1s Open Qualifiers"
-    },
-    {
-      "sender": "Resy",
-      "subject": "A Look at New Openings Across the U.S."
     }
   ],
   "items": [
