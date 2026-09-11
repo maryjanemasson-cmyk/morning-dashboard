@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "OMS Visit",
-    "location": "Cambridge, MA",
-    "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 8 to 10, 2026",
-    "startTime": "",
-    "startDate": "2026-09-08",
-    "endTime": "",
-    "endDate": "2026-09-11",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: The Royal Sonesta Boston",
-    "location": "40 Edwin H. Land Boulevard, Cambridge, MA, 02142",
-    "description": "Thu, Sep 10\n11:00 AM EDT\n[Lodging] Depart The Royal Sonesta Boston\nCheck-Out: 11:00am\n40 Edwin H. Land Boulevard, Cambridge, MA, 02142\n1-617-806-4200",
-    "startTime": "2026-09-10T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-10T12:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "\u2708\ufe0f UA2104 BOS \u2192 EWR",
-    "location": "Boston (BOS)",
-    "description": "12:41 PM EDT\n[Flight] BOS to EWR\nUnited Airlines 2104, Terminal TERMINAL B, Gate\n2:08 PM EDT\nArrive Newark (EWR)\nTerminal TERMINAL A, Gate",
-    "startTime": "2026-09-10T12:41:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-10T14:08:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -592,8 +559,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 23,
   "threads": [
+    {
+      "sender": "Ezra Klein",
+      "subject": "The Ezra Klein Show: The A.I. Revolt Is Here"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $24,040.63 deposit was credited to your account."
+    },
+    {
+      "sender": "ChatGPT",
+      "subject": "Meet GPT-6 Astra"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
     {
       "sender": "Washington University in St. Louis",
       "subject": "Register today to Discover WashU!"
@@ -617,22 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Topgolf",
       "subject": "Topgolf \ud83e\udd1d Taco Bell | Live M\u00e1s Open Qualifiers"
-    },
-    {
-      "sender": "Resy",
-      "subject": "A Look at New Openings Across the U.S."
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment was delivered 538345591970"
-    },
-    {
-      "sender": "The Container Store",
-      "subject": "Your package has arrived!"
-    },
-    {
-      "sender": "GLO30",
-      "subject": "Smooth Forehead Lines, 11s & Crow's Feet \u2014 $425"
     }
   ],
   "items": [
