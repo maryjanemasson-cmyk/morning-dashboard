@@ -559,23 +559,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 19,
   "threads": [
     {
-      "sender": "Ezra Klein",
-      "subject": "The Ezra Klein Show: The A.I. Revolt Is Here"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 11 Sep 2026"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "A $24,040.63 deposit was credited to your account."
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Houndstooth!"
     },
     {
-      "sender": "ChatGPT",
-      "subject": "Meet GPT-6 Astra"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Chase",
+      "subject": "Your credit card payment is scheduled"
     },
     {
       "sender": "Washington University in St. Louis",
@@ -600,6 +596,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Topgolf",
       "subject": "Topgolf \ud83e\udd1d Taco Bell | Live M\u00e1s Open Qualifiers"
+    },
+    {
+      "sender": "Resy",
+      "subject": "A Look at New Openings Across the U.S."
     }
   ],
   "items": [
