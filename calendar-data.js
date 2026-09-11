@@ -562,20 +562,20 @@ window.EMAIL_DATA = {
   "unreadCount": 21,
   "threads": [
     {
-      "sender": "The Container Store",
-      "subject": "Please share your feedback on your recent purchase"
+      "sender": "Chan Luu",
+      "subject": "Your favorites are waiting"
     },
     {
-      "sender": "School Nurse",
-      "subject": "Christian Hinrichs' health insurance card"
+      "sender": "Trip.com",
+      "subject": "\ud83d\udea8 Last Call: Save 50% on Your Holiday Travel"
+    },
+    {
+      "sender": "Optery",
+      "subject": "Last chance to protect your data with 20% off Optery"
     },
     {
       "sender": "American Express",
       "subject": "Has your Card arrived yet?"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 2 items: Outdoor Supplies, Personal Care"
     },
     {
       "sender": "United Airlines",
