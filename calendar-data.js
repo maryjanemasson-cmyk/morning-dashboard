@@ -459,20 +459,20 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "Check-in: Mercure Paris Plaza Pont Mirabeau",
-        "location": "10, avenue Emile Zola, Paris, 75015, France",
-        "description": "",
-        "start": "2026-11-01T14:00:00+00:00",
-        "end": "2026-11-01T15:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "UA54 EWR to CDG",
         "location": "Newark (EWR)",
         "description": "",
         "start": "2026-11-02T02:55:00+00:00",
         "end": "2026-11-02T10:35:00+00:00",
         "type": "flight"
+      },
+      {
+        "summary": "Check-in: Mercure Paris Plaza Pont Mirabeau",
+        "location": "10, avenue Emile Zola, Paris, 75015, France",
+        "description": "",
+        "start": "2026-11-05T14:00:00+00:00",
+        "end": "2026-11-05T15:00:00+00:00",
+        "type": "hotel"
       },
       {
         "summary": "Check-out: Mercure Paris Plaza Pont Mirabeau",
@@ -559,15 +559,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 18,
   "threads": [
     {
-      "sender": "Chan Luu",
-      "subject": "Your favorites are waiting"
+      "sender": "Etsy",
+      "subject": "Small shop discovery alert \u2728"
     },
     {
-      "sender": "Trip.com",
-      "subject": "\ud83d\udea8 Last Call: Save 50% on Your Holiday Travel"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, your trip to Cambridge, MA is starting soon!"
     },
     {
       "sender": "Optery",
