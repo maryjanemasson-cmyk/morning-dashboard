@@ -562,12 +562,20 @@ window.EMAIL_DATA = {
   "unreadCount": 18,
   "threads": [
     {
-      "sender": "Etsy",
-      "subject": "Small shop discovery alert \u2728"
+      "sender": "ME+EM Orders",
+      "subject": "Your ME+EM parcel 5810962 is with USPS"
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, your trip to Cambridge, MA is starting soon!"
+      "sender": "Bissinger's Handcrafted Chocolatier",
+      "subject": "A shipment from order #210448 has been delivered"
+    },
+    {
+      "sender": "GreenDrop Information",
+      "subject": "Last chance to schedule for next week\u2019s pickup!"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Your WAT Basket Could Be On Us \ud83d\udc40"
     },
     {
       "sender": "Optery",
@@ -592,14 +600,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Washington University in St. Louis",
       "subject": "Register today to Discover WashU!"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Earn 175,000 Membership Rewards\u00ae points. Apply now."
-    },
-    {
-      "sender": "Bissinger's Handcrafted Chocolatier",
-      "subject": "FRESH Chocolate Covered Blackberry Season!"
     }
   ],
   "items": [
