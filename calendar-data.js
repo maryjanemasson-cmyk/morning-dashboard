@@ -581,27 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Google Calendar",
-      "subject": "Notification: Anne's birthday @ Sun Sep 13, 2026 (maryjanemasson@gmail.com)"
-    },
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "With up to 50% OFF, who says patio season is over?"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "In Focus: The Pop Cargo Pant"
-    },
-    {
-      "sender": "Schoolhouse",
-      "subject": "Your First Look at Fall"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Before the unlock closes"
+      "sender": "Moda Operandi",
+      "subject": "Just In: KHAITE"
     },
     {
       "sender": "Walgreens Pharmacy",
@@ -622,6 +606,22 @@ window.EMAIL_DATA = {
     {
       "sender": "Moda Operandi",
       "subject": "NEW & READY TO SHIP: Secure your favorite pieces now"
+    },
+    {
+      "sender": "KICKS CREW",
+      "subject": "This Week\u2019s Biggest Drops Are Here "
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "It\u2019s not too early for pumpkin cake, actually"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Celebrate your pets \ud83d\udc3e"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "LAST CHANCE FOR SALE"
     }
   ],
   "items": [
