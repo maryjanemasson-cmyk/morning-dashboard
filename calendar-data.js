@@ -581,8 +581,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Walgreens Pharmacy",
+      "subject": "Thank you for choosing our Rx delivery service"
+    },
+    {
+      "sender": "Topgolf",
+      "subject": "Fall Leagues | Registration Closes Soon"
+    },
+    {
+      "sender": "Studio",
+      "subject": "Claire Saffitz's app: Tomorrow is the last day to join!"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "BAPE\u00ae NEW ARRIVALS: VAN GOGH MUSEUM, BAPE STAs, GRAPHIC TEES, KIDS, WOMENS, ACCESSORIES, & MORE"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "NEW & READY TO SHIP: Secure your favorite pieces now"
+    },
     {
       "sender": "KICKS CREW",
       "subject": "This Week\u2019s Biggest Drops Are Here "
@@ -602,22 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "A Rational Use for an Irrational Number | Harlan Brothers in Science Spectrum"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered 1 item: Outdoor Supplies"
-    },
-    {
-      "sender": "Lydia from Claude Code",
-      "subject": "This week in Claude Code: /resume on desktop, start sessions from your phone, and more"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Earn miles on Lyft rides in Boston"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped 7 items: Household, Cleaning Supplies, and more"
     }
   ],
   "items": [
