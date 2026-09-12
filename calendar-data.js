@@ -581,19 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 8,
   "threads": [
     {
       "sender": "Chewy.com",
       "subject": "We're getting your Autoship order ready"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "KASSY EDIT"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
       "sender": "Amazon.com",
