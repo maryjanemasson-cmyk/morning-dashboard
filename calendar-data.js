@@ -559,8 +559,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Earn miles on Lyft rides in Boston"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "You're Invited: Sip & Shop with Jonathan Simkhai"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Shipped 7 items: Household, Cleaning Supplies, and more"
@@ -584,22 +592,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Chase",
       "subject": "Your credit card payment is scheduled"
-    },
-    {
-      "sender": "Washington University in St. Louis",
-      "subject": "Register today to Discover WashU!"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Earn 175,000 Membership Rewards\u00ae points. Apply now."
-    },
-    {
-      "sender": "Bissinger's Handcrafted Chocolatier",
-      "subject": "FRESH Chocolate Covered Blackberry Season!"
-    },
-    {
-      "sender": "Life360",
-      "subject": "Wait, you drove how many times? \ud83d\ude32"
     }
   ],
   "items": [
