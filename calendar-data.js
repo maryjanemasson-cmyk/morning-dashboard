@@ -141,6 +141,28 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "5"
+  },
+  {
+    "summary": "\u2708\ufe0f UA56 CDG \u2192 EWR",
+    "location": "Paris (CDG)",
+    "description": "Fri, Sep 25\n9:45 AM CEST\n[Flight] CDG to EWR\nUnited Airlines 56, Terminal AEROGARE 1, Gate\n11:55 AM EDT\nArrive Newark (EWR)\nTerminal TERMINAL B, Gate",
+    "startTime": "2026-09-25T03:45:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-25T11:55:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "7"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Le Bellune Paris",
+    "location": "35 Boulevard Victor, Paris, 75015, France",
+    "description": "11:00 AM CEST\n[Lodging] Depart Le Bellune Paris\nCheck-Out: 11:00am\n35 Boulevard Victor, Paris, 75015, France\n+33 1 85 72 62 62",
+    "startTime": "2026-09-25T05:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-25T06:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -559,15 +581,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Chewy.com",
+      "subject": "We're getting your Autoship order ready"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "KASSY EDIT"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Delivered 1 item: Outdoor Supplies"
+    },
+    {
+      "sender": "Lydia from Claude Code",
+      "subject": "This week in Claude Code: /resume on desktop, start sessions from your phone, and more"
+    },
     {
       "sender": "MileagePlus Program",
       "subject": "Earn miles on Lyft rides in Boston"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "You're Invited: Sip & Shop with Jonathan Simkhai"
     },
     {
       "sender": "Amazon.com",
@@ -584,14 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "What to know about your trip to Boston"
-    },
-    {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // Houndstooth!"
-    },
-    {
-      "sender": "Chase",
-      "subject": "Your credit card payment is scheduled"
     }
   ],
   "items": [
@@ -601,13 +631,6 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 7 items: Household, Cleaning Supplies, and more",
-      "date": "2026-09-11",
-      "id": "1a0922ddfb7301b2",
-      "sender": "Amazon.com"
     }
   ]
 };
