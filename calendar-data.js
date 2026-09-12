@@ -581,11 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "Chewy.com",
-      "subject": "We're getting your Autoship order ready"
+      "sender": "Medium Daily Digest",
+      "subject": "A Rational Use for an Irrational Number | Harlan Brothers in Science Spectrum"
     },
     {
       "sender": "Amazon.com",
@@ -606,14 +606,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Optery",
       "subject": "Last chance to protect your data with 20% off Optery"
-    },
-    {
-      "sender": "American Express",
-      "subject": "Has your Card arrived yet?"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Boston"
     }
   ],
   "items": [
