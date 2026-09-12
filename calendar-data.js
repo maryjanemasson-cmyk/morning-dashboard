@@ -581,11 +581,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "KHAITE",
-      "subject": "Tonight | On the Runway: Spring/Summer 2027"
+      "sender": "KICKS CREW",
+      "subject": "This Week\u2019s Biggest Drops Are Here "
+    },
+    {
+      "sender": "Bake Time",
+      "subject": "It\u2019s not too early for pumpkin cake, actually"
+    },
+    {
+      "sender": "Etsy",
+      "subject": "Celebrate your pets \ud83d\udc3e"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "LAST CHANCE FOR SALE"
     },
     {
       "sender": "Medium Daily Digest",
