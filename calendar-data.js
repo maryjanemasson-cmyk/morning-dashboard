@@ -584,6 +584,10 @@ window.EMAIL_DATA = {
   "unreadCount": 6,
   "threads": [
     {
+      "sender": "KHAITE",
+      "subject": "Tonight | On the Runway: Spring/Summer 2027"
+    },
+    {
       "sender": "Medium Daily Digest",
       "subject": "A Rational Use for an Irrational Number | Harlan Brothers in Science Spectrum"
     },
@@ -602,10 +606,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped 7 items: Household, Cleaning Supplies, and more"
-    },
-    {
-      "sender": "Optery",
-      "subject": "Last chance to protect your data with 20% off Optery"
     }
   ],
   "items": [
