@@ -584,20 +584,20 @@ window.EMAIL_DATA = {
   "unreadCount": 14,
   "threads": [
     {
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Personal Care"
+    },
+    {
+      "sender": "Emily Ley",
+      "subject": "Sunday Scroll #158"
+    },
+    {
       "sender": "Pini Parma",
       "subject": "This season's knitwear"
     },
     {
-      "sender": "Roucha",
-      "subject": "Fleece Drop \u2014\u00a0New Polar Fleece"
-    },
-    {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Tamara Kalinic from Material Witness",
-      "subject": "Everything I love and want right now"
     },
     {
       "sender": "Walgreens Pharmacy",
