@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Nathaniel \u2014 Math",
-    "location": "",
-    "description": "",
-    "startTime": "2026-09-12T10:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-12T11:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Anne's birthday",
     "location": "",
     "description": "",
@@ -163,6 +152,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "Nathaniel \u2014 Math",
+    "location": "",
+    "description": "",
+    "startTime": "2026-09-26T10:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-26T11:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -581,11 +581,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 13,
+  "unreadCount": 14,
   "threads": [
     {
-      "sender": "Medium Events",
-      "subject": "Last week to save your spot at Medium Day 2026!"
+      "sender": "Pini Parma",
+      "subject": "This season's knitwear"
+    },
+    {
+      "sender": "Roucha",
+      "subject": "Fleece Drop \u2014\u00a0New Polar Fleece"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Tamara Kalinic from Material Witness",
+      "subject": "Everything I love and want right now"
     },
     {
       "sender": "Walgreens Pharmacy",
@@ -610,18 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "KICKS CREW",
       "subject": "This Week\u2019s Biggest Drops Are Here "
-    },
-    {
-      "sender": "Bake Time",
-      "subject": "It\u2019s not too early for pumpkin cake, actually"
-    },
-    {
-      "sender": "Etsy",
-      "subject": "Celebrate your pets \ud83d\udc3e"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "LAST CHANCE FOR SALE"
     }
   ],
   "items": [
