@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wardrobe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #f7f3ed; color: #30281f; }
+
+    .banner {
+      height: 80px;
+      background: linear-gradient(135deg, #ded0c3 0%, #cbb9a5 30%, #bca681 60%, #a98f68 100%);
+      position: relative;
+    }
+    .banner::after { content:''; position:absolute; bottom:0; left:0; right:0; height:30px; background:linear-gradient(to top,#f7f3ed,transparent); }
+
+    .container { max-width: 1200px; margin: -10px auto 0; padding: 0 2rem 3rem; position: relative; }
+
+    .page-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;
+    }
+    .page-header h1 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:600; color:#2c2418; }
+    .page-header a { font-size:0.8rem; color:#756553; text-decoration:none; }
+    .page-header a:hover { color:#3d3529; text-decoration:underline; }
+
+    /* Tabs */
+    .tabs { display:flex; gap:0; margin-bottom:1.25rem; border-bottom:2px solid #d9cfc2; }
+    .tab {
+      padding:0.6rem 1.5rem; font-size:0.85rem; font-weight:600; color:#756553;
+      cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; transition:all 0.2s;
+    }
+    .tab:hover { color:#3d3529; }
+    .tab.active { color:#2c2418; border-bottom-color:#2c2418; }
+
+    /* Toolbar */
+    .toolbar { display:flex; gap:0.6rem; margin-bottom:1rem; flex-wrap:wrap; align-items:center; }
+    .search-input {
+      flex:1; min-width:180px; border:1px solid #d8cdbf; border-radius:8px;
+      padding:0.5rem 0.8rem; font-size:0.82rem; font-family:inherit; color:#3d3529; background:#fff; outline:none;
+    }
+    .search-input:focus { border-color:#c9b99a; }
+    .search-input::placeholder { color:#8b7c69; }
+    .filter-btn {
+      font-size:0.68rem; padding:0.35rem 0.65rem; border-radius:20px;
+      border:1px solid #d8cdbf; background:#fff; color:#514537; cursor:pointer; font-family:inherit;
+    }
+    .filter-btn:hover { border-color:#c9b99a; }
+    .filter-btn.active { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .item-count { font-size:0.7rem; color:#756553; margin-left:auto; }
+
+    /* Catalogue Grid */
+    .cat-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:0.5rem;
+    }
+    .cat-subheader {
+      grid-column: 1 / -1;
+      font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.5px; color: #756553;
+      padding: 0.75rem 0 0.25rem; border-top: 1px solid #d8cdbf;
+      margin-top: 0.5rem;
+    }
+    .cat-subheader:first-child { border-top: none; margin-top: 0; }
+    .cat-item {
+      background:#fff; border:1px solid #d8cdbf; border-radius:8px; overflow:hidden;
+      cursor:grab; position:relative; transition:border-color 0.2s, box-shadow 0.2s;
+    }
+    .cat-item:hover { border-color:#a99170; box-shadow:0 3px 10px rgba(48,40,31,0.12); }
+    .cat-item.dragging { opacity:0.3; }
+    .cat-item.drag-over { border-color:#c9b99a; box-shadow:0 0 0 2px #c9b99a; }
+    .cat-item.is-hidden { opacity:0.45; background:#f5f0e8; }
+    .cat-item.is-hidden::after { content:'HIDDEN'; position:absolute; top:0.4rem; left:0.4rem; font-size:0.55rem; font-weight:600; letter-spacing:1px; color:#9c8b76; background:rgba(255,255,255,0.85); padding:0.1rem 0.35rem; border-radius:3px; pointer-events:none; }
+    .cat-item img {
+      width:100%; height:150px; object-fit:contain; display:block;
+      background:#ebe9e5;
+      mix-blend-mode:multiply;
+      box-shadow:inset 0 -1px 0 #d8d3cb;
+    }
+    .cat-item-info { padding:0.25rem 0.4rem; }
+    .cat-item-cat { font-size:0.58rem; color:#756553; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
+    .cat-item-sub { font-size:0.7rem; color:#4f4336; }
+    .cat-item-cat, .cat-item-sub {
+      cursor:pointer; padding:0.1rem 0.2rem; border-radius:3px; margin:-0.1rem -0.2rem;
+      transition:background 0.15s;
+    }
+    .cat-item-cat:hover, .cat-item-sub:hover { background:#f0ebe4; }
+    .edit-input {
+      border:1px solid #c9b99a; border-radius:3px; padding:0.1rem 0.3rem;
+      font-size:inherit; font-family:inherit; color:#3d3529;
+      background:#fff; outline:none; width:100%;
+    }
+    .cat-item-outfits {
+      font-size:0.6rem; color:#fff; background:#9b835e;
+      padding:0.12rem 0.4rem; border-radius:10px; display:inline-block; margin-top:0.2rem;
+      cursor:pointer;
+    }
+    .cat-item-outfits:hover { background:#806b4d; }
+
+    .page-nav a:not(:first-child) {
+      color:#675846 !important;
+      border-color:#d8cdbf !important;
+      font-weight:500;
+    }
+
+    /* View panel */
+    .panel-section { display:none; }
+    .panel-section.active { display:block; }
+
+    /* Outfit Builder */
+    .outfit-area {
+      display:flex; gap:1.5rem; height:calc(100vh - 220px); min-height:500px;
+    }
+    .outfit-sidebar {
+      width:200px; flex-shrink:0; overflow-y:auto; background:#fff;
+      border:1px solid #ebe5dc; border-radius:8px; padding:0.75rem;
+    }
+    .outfit-sidebar-title {
+      font-size:0.65rem; font-weight:600; text-transform:uppercase; letter-spacing:1px;
+      color:#9c8b76; margin-bottom:0.5rem;
+    }
+    .outfit-sidebar .filter-btn { display:block; width:100%; text-align:left; margin-bottom:0.3rem; }
+    .outfit-pieces {
+      display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; margin-top:0.5rem;
+    }
+    .outfit-piece {
+      width:100%; aspect-ratio:1; object-fit:contain; border-radius:4px;
+      cursor:grab; border:1px solid #ebe5dc; background:#f9f7f4; padding:2px;
+    }
+    .outfit-piece:active { cursor:grabbing; }
+
+    .outfit-canvas-wrap { flex:1; display:flex; flex-direction:column; gap:0.75rem; }
+    .outfit-toolbar {
+      display:flex; gap:0.5rem; align-items:center;
+    }
+    .outfit-toolbar input {
+      flex:1; border:1px solid #ebe5dc; border-radius:6px;
+      padding:0.4rem 0.6rem; font-size:0.8rem; font-family:inherit; outline:none;
+    }
+    .outfit-toolbar input:focus { border-color:#c9b99a; }
+    .outfit-btn {
+      padding:0.4rem 0.8rem; border-radius:6px; border:1px solid #ebe5dc;
+      background:#fff; color:#6b5d4d; font-size:0.75rem; cursor:pointer; font-family:inherit;
+    }
+    .outfit-btn:hover { background:#f5f0e8; }
+    .outfit-btn.primary { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .outfit-btn.primary:hover { background:#2c2418; }
+    .outfit-btn.danger { color:#c2553a; border-color:#fde8e8; }
+    .outfit-btn.danger:hover { background:#fde8e8; }
+
+    .outfit-canvas {
+      flex:1; background:#fff; border:1px solid #ebe5dc; border-radius:10px;
+      position:relative; overflow:hidden; min-height:400px;
+    }
+    .outfit-canvas-empty {
+      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      text-align:center; color:#c9bfb0; font-size:0.85rem;
+    }
+    .canvas-item {
+      position:absolute; cursor:move; user-select:none;
+      border:2px solid transparent; border-radius:6px; transition:border-color 0.15s;
+    }
+    .canvas-item:hover { border-color:#c9b99a; }
+    .canvas-item.selected { border-color:#3d3529; }
+    .canvas-item img { width:100%; height:100%; object-fit:contain; border-radius:4px; pointer-events:none; }
+    .canvas-item .remove-btn {
+      position:absolute; top:-8px; right:-8px; width:20px; height:20px;
+      background:#c2553a; color:#fff; border-radius:50%; font-size:0.65rem;
+      display:none; align-items:center; justify-content:center; cursor:pointer; border:none;
+    }
+    .canvas-item:hover .remove-btn { display:flex; }
+    .canvas-item .resize-handle {
+      position:absolute; bottom:-4px; right:-4px; width:14px; height:14px;
+      background:#3d3529; border-radius:2px; cursor:se-resize;
+      display:none;
+    }
+    .canvas-item:hover .resize-handle { display:block; }
+
+    /* Saved Outfits */
+    .saved-outfits { margin-top:1rem; }
+    .saved-outfit {
+      display:inline-flex; align-items:center; gap:0.4rem;
+      padding:0.35rem 0.7rem; margin:0.25rem; border-radius:20px;
+      border:1px solid #ebe5dc; background:#fff; font-size:0.75rem;
+      color:#6b5d4d; cursor:pointer;
+    }
+    .saved-outfit:hover { border-color:#c9b99a; }
+    .saved-outfit.active { background:#3d3529; color:#fff; border-color:#3d3529; }
+    .saved-outfit .del { color:#c2553a; margin-left:0.3rem; font-size:0.65rem; }
+
+    /* Modal */
+    .modal-overlay {
+      display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+      background:rgba(44,36,24,0.5); z-index:1000; justify-content:center; align-items:center;
+    }
+    .modal-overlay.open { display:flex; }
+    .modal-overlay img {
+      max-width:90vw; max-height:85vh; border-radius:10px; box-shadow:0 8px 40px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <div class="page-header">
+      <h1>My Wardrobe</h1>
+    </div>
+
+    <div class="page-nav" style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:0.78rem;color:#fff;text-decoration:none;border:1px solid #2c2418;padding:0.35rem 0.9rem;border-radius:20px;background:#2c2418;">← Dashboard</a>
+      <a href="recipes.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Recipes</a>
+      <a href="outfit-gallery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Outfit Gallery</a>
+      <a  style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;"href="grocery.html">Grocery</a>
+      <a href="meals.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Meal Planner</a>
+      <a href="health.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Health</a>
+      <a href="weekend-plan.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Weekend Plan</a>
+      <a href="travel.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Travel</a>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('catalogue')">Catalogue</div>
+      <div class="tab" onclick="switchTab('outfits')">Outfit Builder</div>
+    </div>
+
+    <!-- CATALOGUE -->
+    <div id="panel-catalogue" class="panel-section active">
+      <div class="toolbar">
+        <input type="text" class="search-input" id="cat-search" placeholder="Search wardrobe..." oninput="renderCatalogue()" />
+        <div id="cat-filters"></div>
+        <span class="item-count" id="cat-count"></span>
+        <button id="show-hidden-toggle" onclick="toggleShowHidden()" style="padding:0.35rem 0.7rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#9c8b76;font-size:0.72rem;cursor:pointer;font-family:inherit;white-space:nowrap;display:none;">Show hidden</button>
+        <button onclick="resetAddItemModal(); document.getElementById('add-item-modal').classList.add('open'); refreshSubcategoryOptions();" style="padding:0.4rem 0.8rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">+ Add Item</button>
+      </div>
+      <div id="cat-grid" class="cat-grid"></div>
+    </div>
+
+    <!-- OUTFIT BUILDER -->
+    <div id="panel-outfits" class="panel-section">
+      <div class="outfit-area">
+        <!-- Left sidebar: outfit/item navigation -->
+        <div class="outfit-sidebar" style="width:240px;overflow-y:auto;">
+          <!-- Sidebar tabs -->
+          <div style="display:flex;border-bottom:2px solid #ebe5dc;margin-bottom:0.5rem;">
+            <div class="ob-tab active" onclick="switchObTab('outfits')" id="ob-tab-outfits" style="flex:1;text-align:center;padding:0.4rem;font-size:0.72rem;font-weight:600;color:#2c2418;cursor:pointer;border-bottom:2px solid #2c2418;margin-bottom:-2px;">By Outfit</div>
+            <div class="ob-tab" onclick="switchObTab('items')" id="ob-tab-items" style="flex:1;text-align:center;padding:0.4rem;font-size:0.72rem;font-weight:600;color:#9c8b76;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;">By Item</div>
+          </div>
+
+          <!-- By Outfit panel -->
+          <div id="ob-panel-outfits">
+            <input type="text" class="search-input" id="ob-outfit-search" placeholder="Search outfits..." oninput="renderObOutfits()" style="width:100%;margin-bottom:0.5rem;font-size:0.72rem;padding:0.3rem 0.5rem;" />
+            <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;" id="ob-season-filters"></div>
+            <div style="margin-bottom:0.5rem;">
+              <button onclick="aggregateSelected()" style="width:100%;padding:0.35rem;border-radius:6px;border:none;background:#013E7D;color:#fff;font-size:0.72rem;cursor:pointer;font-family:inherit;display:none;" id="ob-aggregate-btn">View Selected Together</button>
+            </div>
+            <div id="ob-outfit-list" style="max-height:calc(100vh - 350px);overflow-y:auto;"></div>
+          </div>
+
+          <!-- By Item panel -->
+          <div id="ob-panel-items" style="display:none;">
+            <input type="text" class="search-input" id="outfit-search" placeholder="Search items..." oninput="renderOutfitSidebar()" style="width:100%;margin-bottom:0.5rem;font-size:0.72rem;padding:0.3rem 0.5rem;" />
+            <div id="outfit-filters"></div>
+            <div id="outfit-pieces" class="outfit-pieces"></div>
+          </div>
+        </div>
+
+        <!-- Canvas area -->
+        <div class="outfit-canvas-wrap">
+          <div class="outfit-toolbar">
+            <span id="ob-canvas-title" style="font-size:0.85rem;font-weight:600;color:#2c2418;flex:1;"></span>
+            <select id="outfit-season" style="border:1px solid #ebe5dc;border-radius:4px;padding:0.2rem 0.4rem;font-size:0.72rem;font-family:inherit;color:#3d3529;">
+              <option>Spring</option><option>Summer</option><option>Fall</option><option>Winter</option>
+            </select>
+            <select id="outfit-occasion" style="border:1px solid #ebe5dc;border-radius:4px;padding:0.2rem 0.4rem;font-size:0.72rem;font-family:inherit;color:#3d3529;">
+              <option>Casual</option><option>Office</option><option>Evening</option><option>OOTD</option><option>Travel</option>
+            </select>
+            <input type="text" id="outfit-name" placeholder="Name (optional)..." style="border:1px solid #ebe5dc;border-radius:4px;padding:0.2rem 0.4rem;font-size:0.72rem;font-family:inherit;color:#3d3529;width:120px;" />
+            <button class="outfit-btn primary" onclick="saveOutfit()">Save</button>
+            <button class="outfit-btn" onclick="newOutfit()">New</button>
+            <button class="outfit-btn danger" onclick="clearCanvas()">Clear</button>
+          </div>
+          <div class="outfit-canvas" id="outfit-canvas"
+               ondragover="event.preventDefault()"
+               ondrop="dropOnCanvas(event)">
+            <div class="outfit-canvas-empty" id="canvas-empty">
+              Select an outfit from the left, or drag pieces to build one
+            </div>
+          </div>
+          <div class="saved-outfits" id="saved-outfits"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Item Modal -->
+  <div class="modal-overlay" id="add-item-modal">
+    <div style="background:#fff;border-radius:12px;max-width:500px;width:100%;padding:2rem;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+      <button onclick="document.getElementById('add-item-modal').classList.remove('open')" style="position:absolute;top:1rem;right:1.25rem;font-size:1.3rem;color:#b8a48e;cursor:pointer;background:none;border:none;">&times;</button>
+      <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#2c2418;margin-bottom:1rem;">Add Wardrobe Item</div>
+
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Photo</label>
+        <div style="display:flex;gap:0.5rem;margin-bottom:0.5rem;">
+          <button id="photo-tab-file" onclick="switchPhotoTab('file')" style="flex:1;padding:0.4rem;border-radius:6px;border:1px solid #013E7D;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;">Upload File</button>
+          <button id="photo-tab-url" onclick="switchPhotoTab('url')" style="flex:1;padding:0.4rem;border-radius:6px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.75rem;cursor:pointer;font-family:inherit;">Paste URL</button>
+        </div>
+        <div id="photo-file-section">
+          <input type="file" id="add-photo" accept="image/*" style="font-size:0.82rem;font-family:inherit;" />
+          <div style="font-size:0.68rem;color:#9c8b76;margin-top:0.35rem;">Tip: copy a screenshot or image (Cmd+C / Ctrl+C) and paste here with Cmd+V / Ctrl+V.</div>
+        </div>
+        <div id="photo-url-section" style="display:none;">
+          <div style="display:flex;gap:0.4rem;">
+            <input type="text" id="add-photo-url" placeholder="Paste product page or image URL..." style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+            <button onclick="fetchImageFromUrl()" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">Fetch</button>
+          </div>
+          <div id="url-status" style="font-size:0.7rem;color:#9c8b76;margin-top:0.3rem;"></div>
+        </div>
+        <div id="add-photo-preview" style="margin-top:0.5rem;"></div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;margin-bottom:1rem;">
+        <div style="flex:1;">
+          <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Category</label>
+          <select id="add-category" style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;">
+            <option>Tops</option><option>Pants</option><option>Dresses</option>
+            <option>Skirts</option><option>Shoes</option><option>Bags</option>
+            <option>Jewelry</option><option>Knitwear</option><option>Jackets & Coats</option>
+            <option>Casual</option><option>Shorts</option><option>Accessories</option>
+          </select>
+        </div>
+        <div style="flex:1;">
+          <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Subcategory</label>
+          <select id="add-subcategory-select" style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;background:#fff;">
+            <option value="">— pick category first —</option>
+          </select>
+          <input type="text" id="add-subcategory-custom" placeholder="New subcategory name..." style="display:none;width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;margin-top:0.3rem;" />
+        </div>
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Brand / Label</label>
+        <input type="text" id="add-brand" placeholder="e.g. Zara, Chanel..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;display:block;margin-bottom:0.3rem;">Color</label>
+        <input type="text" id="add-color" placeholder="e.g. black, navy, cream..." style="width:100%;border:1px solid #ebe5dc;border-radius:6px;padding:0.45rem 0.6rem;font-size:0.82rem;font-family:inherit;color:#3d3529;outline:none;" />
+      </div>
+
+      <div style="display:flex;gap:0.75rem;justify-content:flex-end;">
+        <button onclick="document.getElementById('add-item-modal').classList.remove('open')" style="padding:0.5rem 1rem;border-radius:8px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.82rem;cursor:pointer;font-family:inherit;">Cancel</button>
+        <button onclick="saveNewItem()" style="padding:0.5rem 1.2rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.82rem;cursor:pointer;font-family:inherit;">Add to Wardrobe</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image zoom modal -->
+  <div class="modal-overlay" id="zoom-modal">
+    <div style="position:relative;display:inline-block;">
+      <img id="zoom-img" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:10px;" />
+      <div style="text-align:center;margin-top:0.75rem;">
+        <button onclick="openWardrobeCrop()" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid #fff;background:rgba(0,111,237,0.9);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;">Crop This Image</button>
+        <button onclick="resetToOriginal()" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid #fff;background:rgba(200,100,0,0.9);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;margin-left:0.5rem;">Reset to Original</button>
+        <button onclick="document.getElementById('zoom-modal').classList.remove('open')" style="padding:0.5rem 1.2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.5);background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;font-family:inherit;margin-left:0.5rem;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crop modal -->
+  <div class="modal-overlay" id="wcrop-modal">
+    <div style="background:#fff;border-radius:12px;max-width:700px;width:100%;padding:2rem;position:relative;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+      <button onclick="closeWardrobeCrop()" style="position:absolute;top:1rem;right:1.25rem;font-size:1.3rem;color:#b8a48e;cursor:pointer;background:none;border:none;">&times;</button>
+      <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2c2418;margin-bottom:0.25rem;">Crop Image</div>
+      <p style="font-size:0.75rem;color:#8A8A9A;margin-bottom:0.75rem;">Click and drag to select the area you want to keep.</p>
+      <div id="wcrop-container" style="position:relative;display:inline-block;cursor:crosshair;user-select:none;">
+        <canvas id="wcrop-canvas" style="max-width:100%;border-radius:6px;border:1px solid #ebe5dc;"></canvas>
+        <div id="wcrop-box" style="position:absolute;border:2px dashed #006FED;background:rgba(0,111,237,0.1);display:none;pointer-events:none;"></div>
+      </div>
+      <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+        <button onclick="resetWardrobeCrop()" style="padding:0.4rem 0.8rem;border-radius:6px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.75rem;cursor:pointer;font-family:inherit;">Reset</button>
+        <button onclick="applyWardrobeCrop()" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:#013E7D;color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;">Apply Crop</button>
+        <button onclick="closeWardrobeCrop()" style="padding:0.4rem 0.8rem;border-radius:6px;border:1px solid #ebe5dc;background:#fff;color:#6b5d4d;font-size:0.75rem;cursor:pointer;font-family:inherit;">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <!-- Sandbox shim: activates when ?friend=1 -->
+  <script src="friend-mode.js"></script>
+  <script src="wardrobe-data.js?v=7"></script>
+  <script src="wardrobe-outfits.js"></script>
+  <script src="slides-data.js"></script>
+  <script src="outfit-data.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain:"morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL:"https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId:"morning-dashboard-4c62b",
+      storageBucket:"morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId:"289564921391",
+      appId:"1:289564921391:web:4ed9e388d5f63218f780da"
+    });
+    const db = firebase.database();
+
+    const items = window.WARDROBE_ITEMS || [];
+    const IMG_PATH = 'wardrobe-thumbs/';
+    let catFilter = 'All';
+    let outfitFilter = 'All';
+    let _savedCrops = {};
+
+    // ── Tabs ──
+    function switchTab(tab) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel-section').forEach(p => p.classList.remove('active'));
+      document.querySelector(`.tab[onclick*="${tab}"]`).classList.add('active');
+      document.getElementById('panel-' + (tab === 'catalogue' ? 'catalogue' : 'outfits')).classList.add('active');
+    }
+
+    // ── Catalogue ──
+    function getCats() { return ['All', ...new Set(items.map(i => i.category))].sort((a,b) => a==='All'?-1:b==='All'?1:a.localeCompare(b)); }
+
+    function renderCatFilters() {
+      const cats = getCats();
+      document.getElementById('cat-filters').innerHTML = cats.map(c =>
+        `<button class="filter-btn ${catFilter===c?'active':''}" onclick="catFilter='${c}';renderCatalogue();renderCatFilters();">${c}</button>`
+      ).join('');
+    }
+
+    let outfitMap = {};
+    let _itemOverrides = {}; // Firebase overrides for category/subcategory
+    // Must be declared before rebuildOutfitMap() / renderCatalogue() run — otherwise
+    // temporal-dead-zone on `let` crashes the whole script and the grid stays blank.
+    let _itemOrder = {};
+    let _hiddenItems = {};
+
+    // Build outfit map from three sources:
+    // 0. wardrobe-outfits.js baked map (slide piece → outfit IDs) — primary
+    // 1. outfitEdits (pieces added via outfit editor)
+    // 2. wardrobeOutfitLinks (manual links typed by user)
+    // Firebase overlays the baked map; it does not replace it.
+
+    let _outfitMapReady = false;
+    function rebuildOutfitMap() {
+      outfitMap = {};
+      _outfitMapReady = true;
+
+      function addLink(file, slide) {
+        if (!file || typeof file !== 'string' || file.startsWith('data:')) return;
+        // Strip path prefixes so keys match wardrobe item .file names
+        let name = file
+          .replace(/^\.\.\//, '')
+          .replace(/^wardrobe-thumbs\//, '')
+          .replace(/^wardrobe-images\//, '')
+          .replace(/^outfit-images\//, '');
+        if (!name || name.includes('/')) {
+          const parts = name.split('/');
+          name = parts[parts.length - 1] || name;
+        }
+        if (!name) return;
+        // piece_*.png hashes are display-only crops — real inventory id is _origFile
+        if (name.startsWith('piece_')) return;
+        const slideNum = parseInt(slide, 10);
+        if (isNaN(slideNum)) return;
+        // Register jpg/png/webp + extensionless id (manual links use C027 / s07_007_png)
+        const variants = new Set([name]);
+        variants.add(name.replace(/\.jpg$/i, '.png'));
+        variants.add(name.replace(/\.png$/i, '.jpg'));
+        variants.add(name.replace(/\.webp$/i, '.png'));
+        variants.add(name.replace(/\.jpeg$/i, '.jpg'));
+        const bare = name.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+        if (bare && bare !== name) variants.add(bare);
+        // Firebase keys sometimes use s07_007_png
+        variants.add(bare + '_png');
+        variants.add(bare + '_jpg');
+        if (name.startsWith('outfit_')) {
+          const stripped = name.slice(7);
+          variants.add(stripped);
+          variants.add(stripped.replace(/\.jpg$/i, '.png'));
+          variants.add(stripped.replace(/\.png$/i, '.jpg'));
+        }
+        variants.forEach(v => {
+          if (!v) return;
+          if (!outfitMap[v]) outfitMap[v] = [];
+          if (!outfitMap[v].includes(slideNum)) outfitMap[v].push(slideNum);
+        });
+      }
+
+      // Source 0: baked map from wardrobe-outfits.js (loaded as window.WARDROBE_OUTFIT_MAP)
+      const baked = window.WARDROBE_OUTFIT_MAP || {};
+      for (const [file, slides] of Object.entries(baked)) {
+        if (Array.isArray(slides)) slides.forEach(s => addLink(file, s));
+      }
+
+      // Source 1: wardrobe items added to outfits via editor
+      if (_outfitEditsData) {
+        const entries = Array.isArray(_outfitEditsData) ? _outfitEditsData.map((v,i) => [i,v]) : Object.entries(_outfitEditsData);
+        for (const [slideKey, edit] of entries) {
+          if (!edit || !edit.layout) continue;
+          const slide = parseInt(slideKey, 10);
+          for (const item of edit.layout) {
+            if (item.file) addLink(item.file, slide);
+            if (item._origFile) addLink(item._origFile, slide);
+          }
+        }
+      }
+
+      // Source 2: manual links typed by user
+      if (_manualOutfitLinks) {
+        for (const [fileKey, slides] of Object.entries(_manualOutfitLinks)) {
+          const filename = fileKey.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg');
+          if (slides && slides.length) {
+            slides.forEach(s => addLink(filename, s));
+          }
+        }
+      }
+
+      renderCatFilters();
+      renderCatalogue();
+    }
+
+    let _outfitEditsData = null;
+    let _manualOutfitLinks = null;
+
+    // Seed from baked wardrobe-outfits.js immediately so badges work before Firebase responds
+    rebuildOutfitMap();
+
+    db.ref('outfitEdits').on('value', snap => {
+      _outfitEditsData = snap.val() || {};
+      rebuildOutfitMap();
+    });
+
+    db.ref('wardrobeOutfitLinks').on('value', snap => {
+      _manualOutfitLinks = snap.val() || {};
+      rebuildOutfitMap();
+    });
+
+    // Load overrides from Firebase
+    db.ref('wardrobeEdits').on('value', snap => {
+      _itemOverrides = snap.val() || {};
+      // Apply overrides to items
+      items.forEach(i => {
+        const ov = _itemOverrides[i.id];
+        if (ov) {
+          if (ov.category) i.category = ov.category;
+          if (ov.subcategory) i.subcategory = ov.subcategory;
+        }
+      });
+      renderCatFilters();
+      renderCatalogue();
+    });
+
+    function catOrderKey(cat) { return cat !== 'All' ? cat.replace(/[.#$/\[\]]/g, '_') : 'all'; }
+
+    // The saved drag order is the single source of truth for sequence within a
+    // category. Sort a COPY — never mutate the shared items[] array. Mutating it
+    // used to let one category view scramble another, and let a freshly-dragged
+    // order silently drift back on the next background re-render (crops/outfit
+    // links streaming in), which is why reorders "reverted over time".
+    // Items with no saved position fall to the end in their natural order.
+    // (renderCatalogue then groups this by subcategory for display.)
+    function orderedForCat(cat) {
+      const saved = _itemOrder[catOrderKey(cat)];
+      const list = items.filter(i => cat === 'All' || i.category === cat);
+      if (Array.isArray(saved)) {
+        const orderMap = {};
+        saved.forEach((id, idx) => orderMap[id] = idx);
+        list.sort((a, b) => (orderMap[a.id] ?? 99999) - (orderMap[b.id] ?? 99999));
+      }
+      return list;
+    }
+
+    // Resolve outfit slides for a wardrobe item across filename variants
+    // (png/jpg, extensionless C027, Firebase s07_007_png keys).
+    function slidesForItem(item) {
+      if (!item) return [];
+      const file = item.file || '';
+      const id = item.id || '';
+      const bare = file.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+      const keys = [
+        file,
+        file.replace(/\.png$/i, '.jpg'),
+        file.replace(/\.jpg$/i, '.png'),
+        bare,
+        bare + '_png',
+        bare + '_jpg',
+        id,
+        id.replace(/_png$/, '.png').replace(/_jpg$/, '.jpg'),
+      ];
+      const seen = new Set();
+      const out = [];
+      keys.forEach(k => {
+        const slides = outfitMap[k];
+        if (!Array.isArray(slides)) return;
+        slides.forEach(s => {
+          if (!seen.has(s)) { seen.add(s); out.push(s); }
+        });
+      });
+      return out;
+    }
+
+    function renderCatalogue() {
+      const search = (document.getElementById('cat-search')?.value||'').toLowerCase();
+      const hiddenKey = (id) => id.replace(/[.#$/\[\]]/g, '_');
+      let filtered = orderedForCat(catFilter).filter(i => {
+        const isHidden = !!_hiddenItems[hiddenKey(i.id)];
+        if (isHidden && !_showHidden) return false;
+        if (search) {
+          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
+          if (!h.includes(search)) return false;
+        }
+        return true;
+      });
+
+      const outfitStatus = _outfitMapReady ? '' : ' (loading outfit links...)';
+      document.getElementById('cat-count').textContent = filtered.length + ' items' + outfitStatus;
+
+      // When viewing a single category, group items by subcategory so each
+      // subcategory's items stay together under one header (e.g. all Belts, then
+      // all Sunglasses). Group order follows first appearance in the saved order,
+      // so dragging an item up can carry its whole subcategory with it, and the
+      // saved drag order is preserved WITHIN each group (stable sort). This sorts
+      // `filtered` (a fresh array), never the shared items[] array.
+      if (catFilter !== 'All') {
+        const subOrder = {};
+        let nextIdx = 0;
+        filtered.forEach(i => {
+          const s = i.subcategory || '';
+          if (subOrder[s] === undefined) subOrder[s] = nextIdx++;
+        });
+        filtered.sort((a, b) => subOrder[a.subcategory || ''] - subOrder[b.subcategory || '']);
+      }
+
+      // Build HTML with subcategory headers when viewing a single category
+      let gridHtml = '';
+      let lastSub = '';
+      filtered.forEach(i => {
+        // Add subcategory header when it changes (only when filtering a single category)
+        if (catFilter !== 'All' && i.subcategory !== lastSub) {
+          lastSub = i.subcategory;
+          gridHtml += `<div class="cat-subheader">${i.subcategory}</div>`;
+        }
+
+        const outfitSlides = slidesForItem(i);
+        const outfitBadge = outfitSlides.length > 0
+          ? `<div class="cat-item-outfits" onclick="event.stopPropagation();viewOutfitsForItem('${i.file}')">${outfitSlides.length} outfit${outfitSlides.length>1?'s':''}</div>
+             <div style="font-size:0.55rem;color:#b8a48e;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">edit links</div>`
+          : `<div style="font-size:0.55rem;color:#c9bfb0;cursor:pointer;margin-top:0.1rem;" onclick="event.stopPropagation();editOutfitLinks('${i.file}',this)">+ link to outfits</div>`;
+        const isCustom = i.id && (i.id.startsWith('custom_') || i.id.match(/^C\d+$/));
+        const isHidden = !!_hiddenItems[hiddenKey(i.id)];
+        const btnStyle = 'position:absolute;top:0.35rem;right:0.35rem;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.5);color:#fff;font-size:0.85rem;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s;';
+        const deleteBtn = isHidden
+          ? `<button onclick="event.stopPropagation();unhideItem('${i.id}')" style="${btnStyle}background:rgba(74,140,111,0.85);" class="delete-custom-btn" title="Restore">&#x21A9;</button>`
+          : isCustom
+            ? `<button onclick="event.stopPropagation();deleteCustomItem('${i.id}')" style="${btnStyle}" class="delete-custom-btn" title="Delete">&times;</button>`
+            : `<button onclick="event.stopPropagation();hideItem('${i.id}')" style="${btnStyle}" class="delete-custom-btn" title="Hide">&times;</button>`;
+        gridHtml += `<div class="cat-item${isHidden ? ' is-hidden' : ''}" draggable="true"
+          data-id="${i.id}"
+          ondragstart="startItemDrag(event,'${i.id}')"
+          ondragover="event.preventDefault();this.classList.add('drag-over')"
+          ondragleave="this.classList.remove('drag-over')"
+          ondrop="dropItem(event,'${i.id}');this.classList.remove('drag-over')"
+          onmouseenter="var d=this.querySelector('.delete-custom-btn');if(d)d.style.opacity='1'"
+          onmouseleave="var d=this.querySelector('.delete-custom-btn');if(d)d.style.opacity='0'">
+          ${deleteBtn}
+          <img src="${_savedCrops[i.file.replace(/\./g,'_')] || i._customImage || (IMG_PATH + i.file)}" alt="${i.subcategory}" loading="lazy" onclick="zoomImage('${i.file}')" draggable="false" />
+          <div class="cat-item-info">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div class="cat-item-cat" onclick="event.stopPropagation();editField('${i.id}','category',this)" title="Click to edit category">${i.category}</div>
+              <span style="font-size:0.65rem;color:#6b5d4d;font-weight:600;font-family:monospace;">${i.id.match(/^C\d+$/) ? i.id : i.id.startsWith('custom_') ? 'C-' + i.id.slice(-4) : i.file.replace('.png','').replace('.jpg','').replace(/_/g,'-').toUpperCase()}</span>
+            </div>
+            <div class="cat-item-sub" onclick="event.stopPropagation();editField('${i.id}','subcategory',this)" title="Click to edit subcategory">${i.subcategory}</div>
+            ${outfitBadge}
+          </div>
+        </div>`;
+      });
+      document.getElementById('cat-grid').innerHTML = gridHtml;
+    }
+
+    const CATEGORIES = ['Tops','Pants','Dresses','Skirts','Shoes','Bags','Jewelry','Knitwear','Jackets & Coats','Casual','Shorts','Accessories'];
+
+    function editField(itemId, field, el) {
+      const currentVal = el.textContent;
+
+      if (field === 'category') {
+        // Build a button list for category selection
+        const container = document.createElement('div');
+        container.style.cssText = 'position:absolute;z-index:200;background:#fff;border:1px solid #c9b99a;border-radius:6px;padding:0.3rem;box-shadow:0 4px 16px rgba(0,0,0,0.15);max-height:280px;overflow-y:auto;width:140px;';
+        CATEGORIES.forEach(c => {
+          const btn = document.createElement('div');
+          btn.textContent = c;
+          btn.style.cssText = 'padding:0.35rem 0.5rem;font-size:0.75rem;font-family:inherit;cursor:pointer;border-radius:4px;color:#3d3529;' + (c === currentVal ? 'background:#013E7D;color:#fff;font-weight:600;' : '');
+          btn.addEventListener('mouseenter', () => { if (c !== currentVal) btn.style.background = '#f0ebe4'; });
+          btn.addEventListener('mouseleave', () => { if (c !== currentVal) btn.style.background = ''; });
+          btn.addEventListener('click', e => {
+            e.stopPropagation();
+            container.remove();
+            document.removeEventListener('mousedown', clickAway);
+            if (c !== currentVal) {
+              const isCustom = itemId.startsWith('custom_') || /^C\d+$/.test(itemId);
+              if (isCustom) {
+                db.ref('wardrobeCustomItems/' + itemId + '/category').set(c);
+              } else {
+                const updates = _itemOverrides[itemId] || {};
+                updates[field] = c;
+                db.ref('wardrobeEdits/' + itemId).set(updates);
+              }
+              // Update local item
+              const item = items.find(it => it.id === itemId);
+              if (item) item.category = c;
+              renderCatFilters();
+              renderCatalogue();
+            }
+          });
+          container.appendChild(btn);
+        });
+
+        // Position near the element
+        const rect = el.getBoundingClientRect();
+        container.style.left = rect.left + 'px';
+        container.style.top = (rect.bottom + 2) + 'px';
+        container.style.position = 'fixed';
+        document.body.appendChild(container);
+
+        container.addEventListener('mousedown', e => e.stopPropagation());
+
+        function clickAway(e) {
+          if (!container.contains(e.target)) {
+            container.remove();
+            document.removeEventListener('mousedown', clickAway);
+          }
+        }
+        setTimeout(() => document.addEventListener('mousedown', clickAway), 100);
+      } else {
+        // Use text input for subcategory
+        const input = document.createElement('input');
+        input.className = 'edit-input';
+        input.value = currentVal;
+        el.textContent = '';
+        el.appendChild(input);
+        input.focus();
+        input.select();
+
+        let saved = false;
+        function save() {
+          if (saved) return;
+          saved = true;
+          const newVal = input.value.trim();
+          if (newVal && newVal !== currentVal) {
+            const isCustom = itemId.startsWith('custom_') || /^C\d+$/.test(itemId);
+            if (isCustom) {
+              db.ref('wardrobeCustomItems/' + itemId + '/' + field).set(newVal);
+            } else {
+              const updates = _itemOverrides[itemId] || {};
+              updates[field] = newVal;
+              db.ref('wardrobeEdits/' + itemId).set(updates);
+            }
+            // Update local item immediately
+            const item = items.find(it => it.id === itemId);
+            if (item) item[field] = newVal;
+            renderCatalogue();
+          } else {
+            el.textContent = currentVal;
+          }
+        }
+        input.addEventListener('blur', save);
+        input.addEventListener('keydown', e => {
+          if (e.key === 'Enter') { e.preventDefault(); save(); }
+          if (e.key === 'Escape') { saved = true; el.textContent = currentVal; }
+        });
+      }
+    }
+
+    // Drag to reorder
+    let _dragItemId = null;
+
+    db.ref('wardrobeOrder').on('value', snap => {
+      _itemOrder = snap.val() || {};
+      renderCatalogue();
+    });
+
+    // Hidden items (soft-delete for non-custom items)
+    let _showHidden = false;
+    db.ref('wardrobeHidden').on('value', snap => {
+      _hiddenItems = snap.val() || {};
+      const count = Object.keys(_hiddenItems).length;
+      const btn = document.getElementById('show-hidden-toggle');
+      if (btn) {
+        btn.style.display = count > 0 ? 'inline-block' : 'none';
+        btn.textContent = _showHidden ? `Hide hidden (${count})` : `Show hidden (${count})`;
+      }
+      renderCatalogue();
+    });
+
+    function toggleShowHidden() {
+      _showHidden = !_showHidden;
+      const count = Object.keys(_hiddenItems).length;
+      const btn = document.getElementById('show-hidden-toggle');
+      if (btn) btn.textContent = _showHidden ? `Hide hidden (${count})` : `Show hidden (${count})`;
+      renderCatalogue();
+    }
+
+    function hideItem(id) {
+      if (!confirm('Hide this item from the catalogue? You can restore it later via "Show hidden".')) return;
+      db.ref('wardrobeHidden/' + id.replace(/[.#$/\[\]]/g, '_')).set(true);
+    }
+
+    function unhideItem(id) {
+      db.ref('wardrobeHidden/' + id.replace(/[.#$/\[\]]/g, '_')).remove();
+    }
+
+    function startItemDrag(e, id) {
+      _dragItemId = id;
+      e.dataTransfer.effectAllowed = 'move';
+      setTimeout(() => {
+        const el = document.querySelector(`[data-id="${id}"]`);
+        if (el) el.classList.add('dragging');
+      }, 0);
+    }
+
+    function dropItem(e, targetId) {
+      e.preventDefault();
+      if (!_dragItemId || _dragItemId === targetId) return;
+
+      // Reorder within the full ordered category list (the same sequence the user
+      // sees), then persist that exact sequence. Working on this list — rather
+      // than mutating the shared items[] array — is what makes the new order the
+      // single source of truth so it survives reload and background re-renders.
+      const list = orderedForCat(catFilter);
+      const srcIdx = list.findIndex(i => i.id === _dragItemId);
+      const tgtIdx = list.findIndex(i => i.id === targetId);
+      if (srcIdx === -1 || tgtIdx === -1) return;
+
+      const [moved] = list.splice(srcIdx, 1);
+      const insertAt = srcIdx < tgtIdx ? tgtIdx - 1 : tgtIdx;
+      list.splice(insertAt, 0, moved);
+
+      const safeKey = catOrderKey(catFilter);
+      const newOrder = list.map(i => i.id);
+      // Optimistically update local state so the re-render below uses the new order,
+      // not the stale one still in _itemOrder until Firebase round-trips back.
+      _itemOrder[safeKey] = newOrder;
+      db.ref('wardrobeOrder/' + safeKey).set(newOrder);
+
+      _dragItemId = null;
+      renderCatalogue();
+    }
+
+    document.addEventListener('dragend', () => {
+      document.querySelectorAll('.cat-item.dragging').forEach(el => el.classList.remove('dragging'));
+      _dragItemId = null;
+    });
+
+    // Quick-add outfit links from wardrobe
+    function editOutfitLinks(file, el) {
+      event.stopPropagation();
+      const currentSlides = outfitMap[file] || [];
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'edit-input';
+      input.style.cssText = 'font-size:0.65rem;width:100%;margin-top:0.2rem;';
+      input.value = currentSlides.join(', ');
+      input.placeholder = 'Outfit numbers: 1, 6, 10, 17';
+
+      el.insertAdjacentElement('afterend', input);
+      setTimeout(() => input.focus(), 50);
+
+      function save() {
+        const val = input.value.trim();
+        const slides = val ? val.split(',').map(s => parseInt(s.trim())).filter(n => !isNaN(n)) : [];
+        // Save to Firebase
+        const fileKey = file.replace(/\./g, '_');
+        db.ref('wardrobeOutfitLinks/' + fileKey).set(slides);
+        // Update local map
+        outfitMap[file] = slides;
+        input.remove();
+        renderCatalogue();
+      }
+
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); save(); }
+        if (e.key === 'Escape') { input.remove(); }
+      });
+      input.addEventListener('blur', save);
+    }
+
+    function viewOutfitsForItem(file) {
+      const item = items.find(it => it.file === file) || { file };
+      const slides = slidesForItem(item);
+      if (!slides.length) return;
+      // Navigate to outfit gallery filtered by these slides
+      const param = encodeURIComponent(slides.join(','));
+      window.location.href = `outfit-gallery.html?slides=${param}&from=${encodeURIComponent(file)}`;
+    }
+
+    let _zoomFile = null; // track original filename for crop tool
+
+    // Resolve an item's best image source. Handles three cases:
+    //   - "s10_003.png" → wardrobeCrops/s10_003_png (if override exists) or wardrobe-thumbs/…
+    //   - "C010" (custom) → wardrobeCrops/C010_png override, or items[].._customImage
+    //   - "data:image/png;..." → passthrough
+    function resolveItemSrc(file) {
+      if (!file) return '';
+      if (file.startsWith('data:')) return file;
+      const fileKey = file.replace(/\./g, '_');
+      // Try crop overrides with both the raw key and a "_png" suffix (used by
+      // custom items whose file is just the id with no extension).
+      if (_savedCrops && _savedCrops[fileKey]) return _savedCrops[fileKey];
+      if (_savedCrops && _savedCrops[fileKey + '_png']) return _savedCrops[fileKey + '_png'];
+      // Custom items: look up _customImage from items[] when file has no dot
+      if (!file.includes('.')) {
+        const it = items.find(x => x && (x.id === file || x.file === file));
+        if (it && it._customImage) return it._customImage;
+      }
+      return IMG_PATH + file;
+    }
+
+    function zoomImage(file) {
+      _zoomFile = file;
+      document.getElementById('zoom-img').src = resolveItemSrc(file);
+      document.getElementById('zoom-modal').classList.add('open');
+    }
+
+    renderCatFilters();
+    renderCatalogue();
+
+    // Deep-link support: ?item=sXX_YYY opens the zoom view for that piece.
+    // Wait for the Firebase crops listener to fire so resolveItemSrc() finds
+    // any custom-image or _savedCrops override before we render the zoom.
+    (function handleItemDeepLink() {
+      const params = new URLSearchParams(window.location.search);
+      const want = params.get('item');
+      if (!want) return;
+      const tryOpen = () => {
+        // Match by file basename (handles 's01_003' or 's01_003.png')
+        const norm = want.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+        const match = items.find(it => {
+          const id = (it.file || '').replace(/\.(png|jpg|jpeg|webp)$/i, '');
+          return id === norm || (it.id || '') === norm;
+        });
+        if (match) zoomImage(match.file);
+        else alert(`Item ${want} not found in your wardrobe.`);
+      };
+      // small delay so the Firebase _savedCrops listener has populated
+      setTimeout(tryOpen, 600);
+    })();
+
+    // ── Outfit Builder ──
+    let canvasItems = [];
+    let dragItemFile = null;
+    let savedOutfits = {};
+    let currentOutfitId = null;
+    let dragTarget = null;
+    let dragOffset = {x:0, y:0};
+    let resizeTarget = null;
+
+    // ── Outfit Builder V2: Slide Navigator ──
+    const slidesData = window.SLIDES_DATA || [];
+    let obSeasonFilter = 'All';
+    let selectedSlides = new Set();
+
+    function switchObTab(tab) {
+      document.getElementById('ob-tab-outfits').style.color = tab === 'outfits' ? '#2c2418' : '#9c8b76';
+      document.getElementById('ob-tab-outfits').style.borderBottomColor = tab === 'outfits' ? '#2c2418' : 'transparent';
+      document.getElementById('ob-tab-items').style.color = tab === 'items' ? '#2c2418' : '#9c8b76';
+      document.getElementById('ob-tab-items').style.borderBottomColor = tab === 'items' ? '#2c2418' : 'transparent';
+      document.getElementById('ob-panel-outfits').style.display = tab === 'outfits' ? '' : 'none';
+      document.getElementById('ob-panel-items').style.display = tab === 'items' ? '' : 'none';
+    }
+
+    function renderObOutfits() {
+      const search = (document.getElementById('ob-outfit-search')?.value || '').toLowerCase();
+
+      // Season filters
+      const seasons = ['All', ...new Set(slidesData.map(s => s.season).filter(Boolean))].sort();
+      document.getElementById('ob-season-filters').innerHTML = seasons.map(s =>
+        `<button style="font-size:0.6rem;padding:0.2rem 0.5rem;border-radius:10px;border:1px solid ${obSeasonFilter===s?'#013E7D':'#ebe5dc'};background:${obSeasonFilter===s?'#013E7D':'#fff'};color:${obSeasonFilter===s?'#fff':'#6b5d4d'};cursor:pointer;font-family:inherit;"
+          onclick="obSeasonFilter='${s}';renderObOutfits();">${s}</button>`
+      ).join('');
+
+      // Filter slides
+      let filtered = slidesData;
+      if (obSeasonFilter !== 'All') filtered = filtered.filter(s => s.season === obSeasonFilter);
+      if (search) filtered = filtered.filter(s =>
+        (s.occasion + ' ' + s.season + ' #' + s.slide).toLowerCase().includes(search)
+      );
+
+      // Render list
+      let html = '';
+      filtered.forEach(s => {
+        const checked = selectedSlides.has(s.slide);
+        const previewImgs = (s.images || []).slice(0, 6).map(f => {
+          const src = f.startsWith('..') ? f : f.startsWith('data:') ? f : 'outfit-images/' + f;
+          return `<img src="${src}" onclick="event.stopPropagation();showOutfitPreview(${s.slide})" style="width:70px;height:70px;object-fit:contain;border-radius:4px;background:#f5f0e8;cursor:pointer;" />`;
+        }).join('');
+
+        html += `<div style="padding:0.5rem;border-bottom:1px solid #f0ebe4;cursor:pointer;${checked?'background:#e7f0ff;border-radius:6px;':''}"
+          onclick="loadOutfitSlide(${s.slide})">
+          <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.35rem;">
+            <input type="checkbox" ${checked?'checked':''} onclick="event.stopPropagation();toggleSlideSelect(${s.slide})"
+              style="flex-shrink:0;cursor:pointer;" />
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:0.78rem;font-weight:500;color:#2c2418;">
+                <span style="color:#b8a48e;font-weight:400;">#${s.slide}</span> ${s.occasion}
+              </div>
+              <div style="font-size:0.65rem;color:#9c8b76;">${s.season} · ${s.pieceCount} pieces</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;padding-left:1.5rem;">${previewImgs}</div>
+        </div>`;
+      });
+
+      document.getElementById('ob-outfit-list').innerHTML = html || '<div style="color:#b8a48e;font-size:0.8rem;padding:1rem;">No outfits found</div>';
+
+      // Show/hide aggregate button
+      const aggBtn = document.getElementById('ob-aggregate-btn');
+      if (aggBtn) aggBtn.style.display = selectedSlides.size >= 2 ? '' : 'none';
+      if (aggBtn && selectedSlides.size >= 2) aggBtn.textContent = `View ${selectedSlides.size} Outfits Together`;
+    }
+
+    function showOutfitPreview(slideNum) {
+      const manifest = window.OUTFIT_DATA || [];
+      const outfit = manifest.find(o => o.slide === slideNum);
+      if (!outfit) return;
+
+      const layout = outfit.layout || [];
+      let imgsHtml = layout.map(item => {
+        const src = item.file.startsWith('data:') ? item.file :
+                    item.file.startsWith('..') ? item.file :
+                    'outfit-images/' + item.file;
+        return `<img src="${src}" style="height:120px;width:auto;object-fit:contain;border-radius:6px;background:#f5f0e8;" />`;
+      }).join('');
+
+      const modal = document.createElement('div');
+      modal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(44,36,24,0.5);z-index:2000;display:flex;justify-content:center;align-items:center;padding:2rem;';
+      modal.onclick = () => modal.remove();
+
+      modal.innerHTML = `
+        <div style="background:#fff;border-radius:12px;max-width:900px;width:100%;max-height:85vh;overflow-y:auto;padding:1.5rem;position:relative;" onclick="event.stopPropagation()">
+          <button onclick="this.closest('div[style*=fixed]').remove()" style="position:absolute;top:0.75rem;right:1rem;font-size:1.3rem;color:#b8a48e;cursor:pointer;background:none;border:none;">&times;</button>
+          <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#2c2418;margin-bottom:0.25rem;">
+            <span style="color:#b8a48e;font-weight:400;">#${slideNum}</span> ${outfit.occasion || ''}
+          </div>
+          <div style="font-size:0.75rem;color:#9c8b76;margin-bottom:1rem;">${outfit.season || ''} · ${layout.length} pieces</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            ${imgsHtml}
+          </div>
+          <div style="text-align:center;margin-top:1rem;">
+            <button onclick="this.closest('div[style*=fixed]').remove();loadOutfitSlide(${slideNum})" style="padding:0.5rem 1.2rem;border-radius:8px;border:none;background:#013E7D;color:#fff;font-size:0.82rem;cursor:pointer;font-family:inherit;">Load on Canvas</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+    }
+
+    function loadOutfitSlide(slideNum) {
+      // Load outfit onto canvas
+      const manifest = window.OUTFIT_DATA || [];
+      const outfit = manifest.find(o => o.slide === slideNum);
+      if (!outfit) return;
+
+      canvasItems = [];
+      const layout = outfit.layout || [];
+      layout.forEach(item => {
+        const src = item.file.startsWith('data:') ? item.file :
+                    item.file.startsWith('..') ? item.file :
+                    'outfit-images/' + item.file;
+        canvasItems.push({
+          file: src,
+          x: (item.left / 100) * 600,
+          y: (item.top / 100) * 400,
+          w: (item.width / 100) * 600,
+          h: (item.height / 100) * 400
+        });
+      });
+
+      document.getElementById('ob-canvas-title').textContent = `#${slideNum} ${outfit.occasion || ''} · ${outfit.season || ''}`;
+      renderCanvas();
+    }
+
+    function toggleSlideSelect(slideNum) {
+      if (selectedSlides.has(slideNum)) selectedSlides.delete(slideNum);
+      else selectedSlides.add(slideNum);
+      renderObOutfits();
+    }
+
+    function aggregateSelected() {
+      if (selectedSlides.size < 2) return;
+      const manifest = window.OUTFIT_DATA || [];
+      canvasItems = [];
+      let totalPieces = 0;
+      const titles = [];
+
+      // Collect all items from selected outfits, arrange in a grid
+      const allItems = [];
+      selectedSlides.forEach(slideNum => {
+        const outfit = manifest.find(o => o.slide === slideNum);
+        if (!outfit) return;
+        titles.push(`#${slideNum}`);
+        (outfit.layout || []).forEach(item => {
+          allItems.push(item);
+        });
+      });
+
+      // Arrange in a grid
+      const cols = Math.ceil(Math.sqrt(allItems.length));
+      const cellW = 600 / cols;
+      const cellH = 400 / Math.ceil(allItems.length / cols);
+
+      allItems.forEach((item, idx) => {
+        const col = idx % cols;
+        const row = Math.floor(idx / cols);
+        const src = item.file.startsWith('data:') ? item.file :
+                    item.file.startsWith('..') ? item.file :
+                    'outfit-images/' + item.file;
+        canvasItems.push({
+          file: src,
+          x: col * cellW + 5,
+          y: row * cellH + 5,
+          w: cellW - 10,
+          h: cellH - 10
+        });
+      });
+
+      document.getElementById('ob-canvas-title').textContent = `${titles.join(', ')} · ${allItems.length} pieces combined`;
+      renderCanvas();
+    }
+
+    // Initialize outfit list
+    setTimeout(() => {
+      if (slidesData.length) renderObOutfits();
+    }, 500);
+
+    function renderOutfitFilters() {
+      const cats = getCats();
+      document.getElementById('outfit-filters').innerHTML = cats.map(c =>
+        `<button class="filter-btn ${outfitFilter===c?'active':''}" onclick="outfitFilter='${c}';renderOutfitSidebar();renderOutfitFilters();" style="font-size:0.6rem;padding:0.25rem 0.5rem;">${c}</button>`
+      ).join('');
+    }
+
+    function renderOutfitSidebar() {
+      const search = (document.getElementById('outfit-search')?.value||'').toLowerCase();
+      let filtered = items.filter(i => {
+        if (outfitFilter !== 'All' && i.category !== outfitFilter) return false;
+        if (search) {
+          const h = [i.category, i.subcategory, ...i.labels].join(' ').toLowerCase();
+          if (!h.includes(search)) return false;
+        }
+        return true;
+      });
+      _outfitPieceSrcs = {};
+      document.getElementById('outfit-pieces').innerHTML = filtered.map((i, idx) => {
+        const src = _savedCrops[i.file.replace(/\./g,'_')] || i._customImage || (IMG_PATH + i.file);
+        _outfitPieceSrcs[idx] = { file: i.file, src: src, isCustom: !!i._customImage };
+        return `<img class="outfit-piece" src="${src}" alt="${i.subcategory}"
+              draggable="true" ondragstart="startPieceDrag(${idx})" />`;
+      }).join('');
+    }
+
+    let _outfitPieceSrcs = {};
+    let _dragPieceData = null;
+
+    function startPieceDrag(idx) {
+      _dragPieceData = _outfitPieceSrcs[idx];
+      dragItemFile = _dragPieceData ? _dragPieceData.file : null;
+    }
+
+    function dropOnCanvas(e) {
+      e.preventDefault();
+      if (!_dragPieceData && !dragItemFile) return;
+      const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
+      const x = e.clientX - rect.left - 50;
+      const y = e.clientY - rect.top - 50;
+      // Use the full image source for custom items (data URLs)
+      const file = _dragPieceData && _dragPieceData.isCustom ? _dragPieceData.src : (_dragPieceData ? _dragPieceData.file : dragItemFile);
+      canvasItems.push({ file: file, x: Math.max(0,x), y: Math.max(0,y), w: 120, h: 150 });
+      _dragPieceData = null;
+      dragItemFile = null;
+      renderCanvas();
+    }
+
+    function renderCanvas() {
+      const canvas = document.getElementById('outfit-canvas');
+      const empty = document.getElementById('canvas-empty');
+      empty.style.display = canvasItems.length ? 'none' : '';
+
+      // Remove old items
+      canvas.querySelectorAll('.canvas-item').forEach(el => el.remove());
+
+      canvasItems.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'canvas-item';
+        div.style.cssText = `left:${item.x}px;top:${item.y}px;width:${item.w}px;height:${item.h}px;`;
+        div.innerHTML = `
+          <img src="${(() => { const f = item.file.startsWith('../') ? item.file.substring(3) : item.file; return f.startsWith('data:') || f.startsWith('outfit-') || f.startsWith('wardrobe-') || f.startsWith('http') ? f : IMG_PATH + f; })()}" alt="" />
+          <button class="remove-btn" onclick="removeCanvasItem(${idx})">&times;</button>
+          <div class="resize-handle" onmousedown="startResize(event,${idx})"></div>
+        `;
+        div.onmousedown = function(e) {
+          if (e.target.classList.contains('resize-handle') || e.target.classList.contains('remove-btn')) return;
+          dragTarget = idx;
+          dragOffset = { x: e.clientX - item.x, y: e.clientY - item.y };
+          e.preventDefault();
+        };
+        canvas.appendChild(div);
+      });
+    }
+
+    document.addEventListener('mousemove', e => {
+      if (dragTarget !== null) {
+        const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
+        canvasItems[dragTarget].x = Math.max(0, e.clientX - dragOffset.x);
+        canvasItems[dragTarget].y = Math.max(0, e.clientY - dragOffset.y - rect.top + document.getElementById('outfit-canvas').offsetTop);
+        // Simpler: use relative to canvas
+        canvasItems[dragTarget].x = Math.max(0, e.clientX - rect.left - dragOffset.x + canvasItems[dragTarget].x);
+        canvasItems[dragTarget].x = e.clientX - rect.left - (dragOffset.x - canvasItems[dragTarget].x);
+        // Reset - just use direct position
+        canvasItems[dragTarget].x = Math.max(0, Math.min(e.clientX - rect.left - 60, rect.width - canvasItems[dragTarget].w));
+        canvasItems[dragTarget].y = Math.max(0, Math.min(e.clientY - rect.top - 75, rect.height - canvasItems[dragTarget].h));
+        renderCanvas();
+      }
+      if (resizeTarget !== null) {
+        const rect = document.getElementById('outfit-canvas').getBoundingClientRect();
+        const item = canvasItems[resizeTarget];
+        item.w = Math.max(60, e.clientX - rect.left - item.x);
+        item.h = Math.max(60, e.clientY - rect.top - item.y);
+        renderCanvas();
+      }
+    });
+
+    document.addEventListener('mouseup', () => { dragTarget = null; resizeTarget = null; });
+
+    function startResize(e, idx) { resizeTarget = idx; e.stopPropagation(); e.preventDefault(); }
+    function removeCanvasItem(idx) { canvasItems.splice(idx, 1); renderCanvas(); }
+    function clearCanvas() { canvasItems = []; currentOutfitId = null; document.getElementById('outfit-name').value = ''; renderCanvas(); renderSavedOutfits(); }
+
+    function newOutfit() {
+      canvasItems = [];
+      currentOutfitId = null;
+      document.getElementById('outfit-name').value = '';
+      renderCanvas();
+      renderSavedOutfits();
+    }
+
+    function saveOutfit() {
+      if (canvasItems.length === 0) { alert('Add some pieces first!'); return; }
+
+      const season = document.getElementById('outfit-season').value;
+      const occasion = document.getElementById('outfit-occasion').value;
+      const customName = document.getElementById('outfit-name').value.trim();
+
+      // Convert canvas items to outfit gallery layout format
+      const canvasEl = document.getElementById('outfit-canvas');
+      const cw = canvasEl.offsetWidth, ch = canvasEl.offsetHeight;
+      const layout = canvasItems.map(item => {
+        const pctLeft = (item.x / cw) * 100;
+        const pctTop = (item.y / ch) * 100;
+        const pctW = (item.w / cw) * 100;
+        const pctH = (item.h / ch) * 100;
+        return {
+          file: item.file.includes('wardrobe-thumbs/') ? item.file.replace('../wardrobe-thumbs/', 'wardrobe-thumbs/') : item.file,
+          _origFile: item.file.replace('../wardrobe-thumbs/', '').replace('wardrobe-thumbs/', ''),
+          left: Math.round(pctLeft * 10) / 10,
+          top: Math.round(pctTop * 10) / 10,
+          width: Math.round(pctW * 10) / 10,
+          height: Math.round(pctH * 10) / 10
+        };
+      });
+
+      if (currentOutfitId) {
+        // Update existing
+        const data = {
+          name: customName || occasion,
+          season, occasion, layout,
+          items: JSON.parse(JSON.stringify(canvasItems)),
+          updated: new Date().toISOString()
+        };
+        db.ref('outfits/' + currentOutfitId).set(data);
+        // Also update outfit gallery
+        db.ref('outfitEdits/' + currentOutfitId).update({ layout, season, occasion, name: customName || occasion });
+        alert('Outfit #' + currentOutfitId + ' updated!');
+      } else {
+        // Get next outfit number
+        db.ref('outfitEdits').once('value').then(snap => {
+          const edits = snap.val() || {};
+          const existingNums = Object.keys(edits).map(Number).filter(n => !isNaN(n));
+          const maxNum = existingNums.length ? Math.max(...existingNums) : 486;
+          const newNum = maxNum + 1;
+          currentOutfitId = newNum;
+
+          const name = customName || occasion + ' #' + newNum;
+
+          // Save to outfits (builder data)
+          db.ref('outfits/' + newNum).set({
+            name, season, occasion, layout,
+            items: JSON.parse(JSON.stringify(canvasItems)),
+            updated: new Date().toISOString()
+          });
+
+          // Save to outfitEdits (outfit gallery)
+          db.ref('outfitEdits/' + newNum).set({ layout, season, occasion, name });
+
+          document.getElementById('ob-canvas-title').textContent = '#' + newNum + ' ' + name;
+          alert('Saved as Outfit #' + newNum + ' (' + season + ' / ' + occasion + ')');
+          renderSavedOutfits();
+        });
+        return;
+      }
+      renderSavedOutfits();
+    }
+
+    function loadOutfit(id) {
+      const outfit = savedOutfits[id];
+      if (!outfit) return;
+      currentOutfitId = id;
+      canvasItems = JSON.parse(JSON.stringify(outfit.items || []));
+      document.getElementById('outfit-name').value = outfit.name || '';
+      if (outfit.season) document.getElementById('outfit-season').value = outfit.season;
+      if (outfit.occasion) document.getElementById('outfit-occasion').value = outfit.occasion;
+      document.getElementById('ob-canvas-title').textContent = '#' + id + ' ' + (outfit.name || '');
+      renderCanvas();
+      renderSavedOutfits();
+    }
+
+    function deleteOutfit(id, e) {
+      e.stopPropagation();
+      if (!confirm('Delete this outfit?')) return;
+      db.ref('outfits/' + id).remove();
+      if (currentOutfitId === id) newOutfit();
+    }
+
+    function renderSavedOutfits() {
+      const entries = Object.entries(savedOutfits);
+      if (!entries.length) { document.getElementById('saved-outfits').innerHTML = ''; return; }
+      document.getElementById('saved-outfits').innerHTML = '<div style="font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9c8b76;margin-bottom:0.4rem;">Saved Outfits</div>' +
+        entries.map(([id, o]) => {
+          const label = (isNaN(id) ? '' : '#' + id + ' ') + (o.name || o.occasion || 'Untitled');
+          const meta = [o.season, o.occasion].filter(Boolean).join(' / ');
+          return `<span class="saved-outfit ${currentOutfitId==id?'active':''}" onclick="loadOutfit('${id}')" title="${meta}">
+            ${label}
+            <span class="del" onclick="deleteOutfit('${id}',event)">&times;</span>
+          </span>`;
+        }).join('');
+    }
+
+    // Firebase sync for outfits
+    db.ref('outfits').on('value', snap => {
+      savedOutfits = snap.val() || {};
+      renderSavedOutfits();
+    });
+
+    renderOutfitFilters();
+    renderOutfitSidebar();
+    renderCanvas();
+
+    // ── Add New Item ──
+    let _urlImageData = null; // stores fetched URL image as data URL
+
+    // Repopulate the subcategory <select> with existing subcategories for the
+    // chosen category, so picking "Flats" merges with other flats instead of
+    // creating a near-duplicate via typo or capitalization.
+    function refreshSubcategoryOptions() {
+      const cat = document.getElementById('add-category').value;
+      const sel = document.getElementById('add-subcategory-select');
+      const custom = document.getElementById('add-subcategory-custom');
+      // Collect unique subcategories that already exist for this category
+      const seen = new Map(); // lowercase → original casing (preserve user's preferred form)
+      for (const it of items) {
+        if (it && it.category === cat && it.subcategory) {
+          const key = it.subcategory.toLowerCase();
+          if (!seen.has(key)) seen.set(key, it.subcategory);
+        }
+      }
+      const sorted = Array.from(seen.values()).sort((a, b) => a.localeCompare(b));
+      sel.innerHTML = '<option value="">— select —</option>'
+        + sorted.map(s => `<option value="${s}">${s}</option>`).join('')
+        + '<option value="__new__">+ New subcategory…</option>';
+      custom.style.display = 'none';
+      custom.value = '';
+    }
+    // Toggle the custom text input when "+ New subcategory…" is picked.
+    // This runs at script-load time; the script tag is at the bottom of <body>
+    // so the elements already exist in the DOM.
+    {
+      const sel = document.getElementById('add-subcategory-select');
+      const custom = document.getElementById('add-subcategory-custom');
+      const cat = document.getElementById('add-category');
+      if (sel) sel.addEventListener('change', () => {
+        if (sel.value === '__new__') { custom.style.display = ''; custom.focus(); }
+        else custom.style.display = 'none';
+      });
+      if (cat) cat.addEventListener('change', refreshSubcategoryOptions);
+    }
+
+    // Reset every field in the Add Item modal so reopening it doesn't show
+    // the previous item's photo/brand/color/etc. Called from the + Add Item
+    // button onclick and also after successful save.
+    function resetAddItemModal() {
+      _urlImageData = null;
+      const photoInput = document.getElementById('add-photo');
+      if (photoInput) photoInput.value = '';
+      const urlInput = document.getElementById('add-photo-url');
+      if (urlInput) urlInput.value = '';
+      const status = document.getElementById('url-status');
+      if (status) { status.textContent = ''; status.style.color = '#9c8b76'; }
+      const preview = document.getElementById('add-photo-preview');
+      if (preview) preview.innerHTML = '';
+      const brand = document.getElementById('add-brand');
+      if (brand) brand.value = '';
+      const color = document.getElementById('add-color');
+      if (color) color.value = '';
+      const subSel = document.getElementById('add-subcategory-select');
+      if (subSel) subSel.value = '';
+      const subCustom = document.getElementById('add-subcategory-custom');
+      if (subCustom) { subCustom.value = ''; subCustom.style.display = 'none'; }
+      // Default to File tab in case the user left it on URL
+      if (typeof switchPhotoTab === 'function') switchPhotoTab('file');
+    }
+
+    function switchPhotoTab(tab) {
+      const fileBtn = document.getElementById('photo-tab-file');
+      const urlBtn = document.getElementById('photo-tab-url');
+      const fileSection = document.getElementById('photo-file-section');
+      const urlSection = document.getElementById('photo-url-section');
+      if (tab === 'file') {
+        fileBtn.style.background = '#013E7D'; fileBtn.style.color = '#fff'; fileBtn.style.borderColor = '#013E7D';
+        urlBtn.style.background = '#fff'; urlBtn.style.color = '#6b5d4d'; urlBtn.style.borderColor = '#ebe5dc';
+        fileSection.style.display = ''; urlSection.style.display = 'none';
+        _urlImageData = null;
+      } else {
+        urlBtn.style.background = '#013E7D'; urlBtn.style.color = '#fff'; urlBtn.style.borderColor = '#013E7D';
+        fileBtn.style.background = '#fff'; fileBtn.style.color = '#6b5d4d'; fileBtn.style.borderColor = '#ebe5dc';
+        urlSection.style.display = ''; fileSection.style.display = 'none';
+      }
+    }
+
+    const CORS_PROXIES = [
+      url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+      url => 'https://corsproxy.io/?' + encodeURIComponent(url),
+      url => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+    ];
+
+    async function fetchImageFromUrl() {
+      const url = document.getElementById('add-photo-url').value.trim();
+      if (!url) return;
+      const status = document.getElementById('url-status');
+      const preview = document.getElementById('add-photo-preview');
+      _urlImageData = null;
+
+      // Check if it's a direct image URL
+      if (/\.(jpg|jpeg|png|webp|gif)(\?.*)?$/i.test(url)) {
+        status.textContent = 'Loading image...';
+        try {
+          const imgUrl = await fetchViaProxy(url);
+          if (imgUrl) {
+            _urlImageData = imgUrl;
+            preview.innerHTML = `<img src="${imgUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
+            status.textContent = 'Image loaded!';
+            status.style.color = '#4a8c6f';
+          }
+        } catch(e) {
+          status.textContent = 'Could not load image. Try a different URL.';
+          status.style.color = '#c2553a';
+        }
+        return;
+      }
+
+      // It's a product page URL — fetch and extract product image
+      status.textContent = 'Fetching product page...';
+      status.style.color = '#9c8b76';
+
+      for (const proxyFn of CORS_PROXIES) {
+        try {
+          const res = await fetch(proxyFn(url));
+          if (!res.ok) continue;
+          const html = await res.text();
+          const imgUrl = extractProductImage(html, url);
+          if (imgUrl) {
+            status.textContent = 'Loading product image...';
+            const dataUrl = await fetchViaProxy(imgUrl);
+            if (dataUrl) {
+              _urlImageData = dataUrl;
+              preview.innerHTML = `<img src="${dataUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
+              status.textContent = 'Product image loaded!';
+              status.style.color = '#4a8c6f';
+              return;
+            }
+          }
+        } catch(e) { continue; }
+      }
+      status.textContent = 'Could not extract image. Try pasting the image URL directly (right-click image → Copy image address).';
+      status.style.color = '#c2553a';
+    }
+
+    function extractProductImage(html, pageUrl) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      // Try og:image first
+      const og = doc.querySelector('meta[property="og:image"]');
+      if (og && og.content) return resolveUrl(og.content, pageUrl);
+      // Try twitter:image
+      const tw = doc.querySelector('meta[name="twitter:image"]');
+      if (tw && tw.content) return resolveUrl(tw.content, pageUrl);
+      // Try JSON-LD product data
+      const scripts = doc.querySelectorAll('script[type="application/ld+json"]');
+      for (const s of scripts) {
+        try {
+          const json = JSON.parse(s.textContent);
+          const img = findProductImage(json);
+          if (img) return resolveUrl(img, pageUrl);
+        } catch(e) {}
+      }
+      // Try first large image in body
+      const imgs = doc.querySelectorAll('img[src]');
+      for (const img of imgs) {
+        const w = parseInt(img.getAttribute('width') || '0');
+        const h = parseInt(img.getAttribute('height') || '0');
+        if (w > 200 || h > 200) return resolveUrl(img.src, pageUrl);
+      }
+      return null;
+    }
+
+    function findProductImage(obj) {
+      if (!obj) return null;
+      if (Array.isArray(obj)) {
+        for (const item of obj) { const r = findProductImage(item); if (r) return r; }
+        return null;
+      }
+      if (obj['@type'] && /Product/i.test(obj['@type']) && obj.image) {
+        return Array.isArray(obj.image) ? obj.image[0] : (typeof obj.image === 'string' ? obj.image : obj.image.url || null);
+      }
+      for (const k of Object.keys(obj)) {
+        if (typeof obj[k] === 'object') { const r = findProductImage(obj[k]); if (r) return r; }
+      }
+      return null;
+    }
+
+    function resolveUrl(imgUrl, pageUrl) {
+      if (!imgUrl) return null;
+      if (imgUrl.startsWith('//')) return 'https:' + imgUrl;
+      if (imgUrl.startsWith('/')) {
+        const u = new URL(pageUrl);
+        return u.origin + imgUrl;
+      }
+      if (imgUrl.startsWith('http')) return imgUrl;
+      return new URL(imgUrl, pageUrl).href;
+    }
+
+    async function fetchViaProxy(imgUrl) {
+      // Try direct fetch first (works for many CDN images)
+      try {
+        const res = await fetch(imgUrl, { mode: 'cors' });
+        if (res.ok) {
+          const blob = await res.blob();
+          if (blob.type.startsWith('image/')) {
+            return await blobToDataUrl(blob);
+          }
+        }
+      } catch(e) {}
+      // Fall back to CORS proxies
+      for (const proxyFn of CORS_PROXIES) {
+        try {
+          const res = await fetch(proxyFn(imgUrl));
+          if (!res.ok) continue;
+          const blob = await res.blob();
+          if (blob.type.startsWith('image/') || blob.size > 5000) {
+            return await blobToDataUrl(blob);
+          }
+        } catch(e) { continue; }
+      }
+      return null;
+    }
+
+    function blobToDataUrl(blob) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    document.getElementById('add-photo').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        document.getElementById('add-photo-preview').innerHTML =
+          `<img src="${ev.target.result}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Clipboard paste — when the Add Item modal is open, intercept any pasted
+    // image and route it through the same path as a URL-fetched image.
+    async function _handleModalPaste(e) {
+      const modal = document.getElementById('add-item-modal');
+      if (!modal || !modal.classList.contains('open')) return;
+      const cbItems = (e.clipboardData && e.clipboardData.items) || [];
+      for (const it of cbItems) {
+        if (it.type && it.type.startsWith('image/')) {
+          e.preventDefault();
+          const blob = it.getAsFile();
+          if (!blob) continue;
+          const dataUrl = await blobToDataUrl(blob);
+          _urlImageData = dataUrl;
+          document.getElementById('add-photo').value = '';
+          document.getElementById('add-photo-preview').innerHTML =
+            `<img src="${dataUrl}" style="max-height:150px;border-radius:6px;border:1px solid #ebe5dc;" />`
+          + `<div style="font-size:0.68rem;color:#4a8c6f;margin-top:0.25rem;">✓ Image pasted from clipboard</div>`;
+          return;
+        }
+      }
+    }
+    // Bind both at the document and modal level — iOS Safari sometimes drops
+    // document-level paste events if no element inside the page is focused.
+    document.addEventListener('paste', _handleModalPaste);
+    const _addModal = document.getElementById('add-item-modal');
+    if (_addModal) _addModal.addEventListener('paste', _handleModalPaste);
+
+    function saveNewItem() {
+      try {
+        _saveNewItemInner();
+      } catch (e) {
+        console.error('[saveNewItem]', e);
+        alert('Could not save: ' + (e && e.message ? e.message : e));
+      }
+    }
+    function _saveNewItemInner() {
+      const fileInput = document.getElementById('add-photo');
+      const category = document.getElementById('add-category').value;
+      // Subcategory: pick from existing list, or use "+ New" custom input.
+      let subcategory;
+      const subSel = document.getElementById('add-subcategory-select').value;
+      if (subSel === '__new__') {
+        subcategory = document.getElementById('add-subcategory-custom').value.trim();
+      } else {
+        subcategory = subSel.trim();
+      }
+      if (!subcategory) subcategory = category;
+      const brand = document.getElementById('add-brand').value.trim();
+      const color = document.getElementById('add-color').value.trim();
+
+      // Check if we have an image from URL or file
+      if (!_urlImageData && !fileInput.files[0]) { alert('Please select a photo or fetch from URL.'); return; }
+
+      function finishSave(dataUrl) {
+        // Generate short ID like C001, C002, etc.
+        const existingNums = items.filter(i => i.id && i.id.startsWith('C')).map(i => parseInt(i.id.slice(1)) || 0);
+        const nextNum = (existingNums.length ? Math.max(...existingNums) : 0) + 1;
+        const id = 'C' + String(nextNum).padStart(3, '0');
+        const itemData = {
+          id: id,
+          category: category,
+          subcategory: subcategory,
+          labels: brand ? [brand] : [],
+          colors: color ? color.split(',').map(c => c.trim()) : [],
+          image: dataUrl,
+          added: new Date().toISOString()
+        };
+        db.ref('wardrobeCustomItems/' + id).set(itemData);
+
+        const newItem = {
+          id: id,
+          file: id,
+          category: category,
+          subcategory: subcategory,
+          labels: brand ? [brand] : [],
+          colors: color ? color.split(',').map(c => c.trim()) : [],
+          _customImage: dataUrl
+        };
+
+        // Insert near matching items (same category + color) instead of at the end
+        const newColors = newItem.colors.map(c => c.toLowerCase());
+        let bestIdx = -1;
+        // First: find items with same category AND same color
+        for (let idx = items.length - 1; idx >= 0; idx--) {
+          const it = items[idx];
+          if (it.category === category && newColors.length > 0 && it.colors && it.colors.some(c => newColors.includes(c.toLowerCase()))) {
+            bestIdx = idx + 1; break;
+          }
+        }
+        // Fallback: find last item with same category + subcategory
+        if (bestIdx === -1) {
+          for (let idx = items.length - 1; idx >= 0; idx--) {
+            if (items[idx].category === category && items[idx].subcategory === subcategory) {
+              bestIdx = idx + 1; break;
+            }
+          }
+        }
+        // Fallback: find last item with same category
+        if (bestIdx === -1) {
+          for (let idx = items.length - 1; idx >= 0; idx--) {
+            if (items[idx].category === category) { bestIdx = idx + 1; break; }
+          }
+        }
+        if (bestIdx === -1) bestIdx = items.length;
+        // Idempotent: if the Firebase listener already added this id (it can
+        // fire synchronously from set() on a warm cache), skip the splice.
+        if (!items.some(it => it && it.id === id)) {
+          items.splice(bestIdx, 0, newItem);
+        }
+
+        // Save the new order to Firebase for the category view only.
+        // We intentionally don't write wardrobeOrder/all here: when a filter
+        // is active, items[] is sorted by that filter's order with non-matching
+        // items getting a 99999 fallback index — so items.map(id) would write
+        // a corrupted global order that scrambles other categories on the
+        // outfit-gallery Add Piece dropdown. The category-specific order is
+        // what matters for "right place" placement; the 'all' view falls back
+        // to the static catalogue order with custom items spliced in by
+        // category in outfit-gallery's loader.
+        const catKey = category.replace(/[.#$/\[\]]/g, '_');
+        // Insert the new id into the EXISTING saved order (near its subcategory
+        // siblings) rather than rewriting the order from scratch — otherwise
+        // adding one item would wipe out however you'd hand-arranged the category.
+        let order = Array.isArray(_itemOrder[catKey])
+          ? _itemOrder[catKey].slice()
+          : items.filter(it => it.category === category).map(it => it.id);
+        if (!order.includes(id)) {
+          let insertPos = order.length;
+          for (let k = order.length - 1; k >= 0; k--) {
+            const it = items.find(x => x && x.id === order[k]);
+            if (it && it.subcategory === subcategory) { insertPos = k + 1; break; }
+          }
+          order.splice(insertPos, 0, id);
+        }
+        _itemOrder[catKey] = order;
+        db.ref('wardrobeOrder/' + catKey).set(order);
+
+        // Close modal and reset
+        document.getElementById('add-item-modal').classList.remove('open');
+        fileInput.value = '';
+        document.getElementById('add-photo-preview').innerHTML = '';
+        document.getElementById('add-photo-url').value = '';
+        document.getElementById('url-status').textContent = '';
+        document.getElementById('add-subcategory-select').value = '';
+        document.getElementById('add-subcategory-custom').value = '';
+        document.getElementById('add-subcategory-custom').style.display = 'none';
+        document.getElementById('add-brand').value = '';
+        document.getElementById('add-color').value = '';
+        _urlImageData = null;
+        switchPhotoTab('file');
+        renderCatFilters();
+        renderCatalogue();
+      }
+
+      if (_urlImageData) {
+        finishSave(_urlImageData);
+      } else {
+        const reader = new FileReader();
+        reader.onload = function(ev) { finishSave(ev.target.result); };
+        reader.readAsDataURL(fileInput.files[0]);
+      }
+    }
+
+    function deleteCustomItem(id) {
+      if (!confirm('Delete this item from your wardrobe?')) return;
+      db.ref('wardrobeCustomItems/' + id).remove();
+      // Remove from local array
+      const idx = items.findIndex(i => i.id === id);
+      if (idx !== -1) items.splice(idx, 1);
+      renderCatFilters();
+      renderCatalogue();
+    }
+
+    // Load custom items from Firebase. Images live on disk (wardrobe-thumbs/)
+    // under data.file — do NOT pull multi‑MB base64 from Firebase (that used
+    // to freeze the page at ~40 MB). Optional data.image is only for brand-new
+    // items that have not been written to disk yet.
+    db.ref('wardrobeCustomItems').on('value', snap => {
+      const custom = snap.val() || {};
+      for (let i = items.length - 1; i >= 0; i--) {
+        const id = items[i].id;
+        if (id && (id.startsWith('custom_') || /^C\d+$/.test(id)) && !(id in custom)) {
+          items.splice(i, 1);
+        }
+      }
+      const existingIds = new Set(items.map(it => it && it.id).filter(Boolean));
+      for (const [id, data] of Object.entries(custom)) {
+        if (existingIds.has(id)) {
+          // Keep metadata fresh; prefer disk file over stale in-memory base64
+          const it = items.find(x => x.id === id);
+          if (it && data) {
+            if (data.file) it.file = data.file;
+            if (data.category) it.category = data.category;
+            if (data.subcategory) it.subcategory = data.subcategory;
+            if (data.file && !String(data.image || '').startsWith('data:')) delete it._customImage;
+          }
+          continue;
+        }
+        const file = data.file || id;
+        const entry = {
+          id: id,
+          file: file,
+          category: data.category || 'Accessories',
+          subcategory: data.subcategory || '',
+          labels: data.labels || [],
+          colors: data.colors || [],
+        };
+        // Only keep inline base64 if there is no on-disk file name yet
+        if (data.image && String(data.image).startsWith('data:') && (!data.file || data.file === id)) {
+          entry._customImage = data.image;
+        }
+        items.push(entry);
+      }
+      renderCatFilters();
+      renderCatalogue();
+    });
+
+    // ── Wardrobe Crop Tool ──
+    let _wcropImg = null;
+    let _wcropFile = null;
+    let _wcropStart = null;
+    let _wcropEnd = null;
+    let _wcropping = false;
+    let _wcropScale = 1;
+
+    function resetToOriginal() {
+      const filename = _zoomFile;
+      if (!filename) { alert('Cannot reset this image.'); return; }
+
+      if (!confirm('Reset this image to the original from the inventory? This will undo any cropping.')) return;
+
+      // Load original from wardrobe-images/
+      const origSrc = 'wardrobe-images/' + filename;
+
+      const imgEl = new window.Image();
+      imgEl.crossOrigin = 'anonymous';
+      imgEl.onload = function() {
+        // Fit original into 300x400 card with cream background - no content detection
+        const TW = 300, TH = 400;
+        const BG_R = 249, BG_G = 247, BG_B = 244;
+        const canvas = document.createElement('canvas');
+        canvas.width = TW;
+        canvas.height = TH;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = `rgb(${BG_R},${BG_G},${BG_B})`;
+        ctx.fillRect(0, 0, TW, TH);
+
+        // Scale to fit
+        let dw = imgEl.width, dh = imgEl.height;
+        const scale = Math.min((TW - 10) / dw, (TH - 10) / dh);
+        dw = Math.round(dw * scale);
+        dh = Math.round(dh * scale);
+        ctx.drawImage(imgEl, (TW - dw) / 2, (TH - dh) / 2, dw, dh);
+
+        const dataUrl = canvas.toDataURL('image/png');
+
+        // Save to Firebase (overwrite any existing crop)
+        const fileKey = filename.replace(/\./g, '_');
+        db.ref('wardrobeCrops/' + fileKey).set(dataUrl);
+
+        document.getElementById('zoom-img').src = dataUrl;
+        renderCatalogue();
+      };
+      imgEl.onerror = function() {
+        alert('Could not load original image.');
+      };
+      imgEl.src = origSrc;
+    }
+
+    function openWardrobeCrop() {
+      document.getElementById('zoom-modal').classList.remove('open');
+      // Use tracked filename, fallback to extracting from src
+      const src = document.getElementById('zoom-img').src;
+      _wcropFile = _zoomFile || src.split('/').pop();
+
+      // Prefer the existing wardrobeCrops override (e.g. a white-background
+      // version) as the crop source, so cropping doesn't undo the override.
+      // resolveItemSrc handles custom items (whose file is the bare id, no
+      // extension, and whose image lives in wardrobeCustomItems instead of disk).
+      const origSrc = resolveItemSrc(_wcropFile);
+
+      const imgEl = new window.Image();
+      imgEl.crossOrigin = 'anonymous';
+      imgEl.onload = function() {
+        _wcropImg = imgEl;
+        const canvas = document.getElementById('wcrop-canvas');
+        _wcropScale = Math.min(600 / imgEl.width, 500 / imgEl.height, 1);
+        canvas.width = imgEl.width * _wcropScale;
+        canvas.height = imgEl.height * _wcropScale;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgEl, 0, 0, canvas.width, canvas.height);
+        _wcropStart = null;
+        _wcropEnd = null;
+        document.getElementById('wcrop-box').style.display = 'none';
+        document.getElementById('wcrop-modal').classList.add('open');
+      };
+      imgEl.onerror = function() {
+        // Fallback to whatever is displayed in zoom
+        imgEl.crossOrigin = null;
+        imgEl.onload = imgEl.onerror = null;
+        const retry = new window.Image();
+        retry.onload = function() {
+          _wcropImg = retry;
+          const canvas = document.getElementById('wcrop-canvas');
+          _wcropScale = Math.min(600 / retry.width, 500 / retry.height, 1);
+          canvas.width = retry.width * _wcropScale;
+          canvas.height = retry.height * _wcropScale;
+          canvas.getContext('2d').drawImage(retry, 0, 0, canvas.width, canvas.height);
+          _wcropStart = null; _wcropEnd = null;
+          document.getElementById('wcrop-box').style.display = 'none';
+          document.getElementById('wcrop-modal').classList.add('open');
+        };
+        retry.src = src;
+      };
+      imgEl.src = origSrc;
+    }
+
+    (function() {
+      const container = document.getElementById('wcrop-container');
+      if (!container) return;
+
+      container.addEventListener('mousedown', e => {
+        if (!document.getElementById('wcrop-modal').classList.contains('open')) return;
+        const rect = document.getElementById('wcrop-canvas').getBoundingClientRect();
+        _wcropStart = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+        _wcropEnd = { ..._wcropStart };
+        _wcropping = true;
+        e.preventDefault();
+      });
+
+      document.addEventListener('mousemove', e => {
+        if (!_wcropping) return;
+        const rect = document.getElementById('wcrop-canvas').getBoundingClientRect();
+        _wcropEnd = {
+          x: Math.max(0, Math.min(e.clientX - rect.left, rect.width)),
+          y: Math.max(0, Math.min(e.clientY - rect.top, rect.height))
+        };
+        const box = document.getElementById('wcrop-box');
+        box.style.display = 'block';
+        box.style.left = Math.min(_wcropStart.x, _wcropEnd.x) + 'px';
+        box.style.top = Math.min(_wcropStart.y, _wcropEnd.y) + 'px';
+        box.style.width = Math.abs(_wcropEnd.x - _wcropStart.x) + 'px';
+        box.style.height = Math.abs(_wcropEnd.y - _wcropStart.y) + 'px';
+      });
+
+      document.addEventListener('mouseup', () => { _wcropping = false; });
+    })();
+
+    function resetWardrobeCrop() {
+      if (!_wcropImg) return;
+      const canvas = document.getElementById('wcrop-canvas');
+      canvas.getContext('2d').drawImage(_wcropImg, 0, 0, canvas.width, canvas.height);
+      document.getElementById('wcrop-box').style.display = 'none';
+      _wcropStart = null;
+    }
+
+    function applyWardrobeCrop() {
+      if (!_wcropStart || !_wcropEnd || !_wcropImg) return;
+      const x = Math.min(_wcropStart.x, _wcropEnd.x) / _wcropScale;
+      const y = Math.min(_wcropStart.y, _wcropEnd.y) / _wcropScale;
+      const w = Math.abs(_wcropEnd.x - _wcropStart.x) / _wcropScale;
+      const h = Math.abs(_wcropEnd.y - _wcropStart.y) / _wcropScale;
+      if (w < 10 || h < 10) { alert('Selection too small'); return; }
+
+      // Crop the selected area
+      const cropCanvas = document.createElement('canvas');
+      cropCanvas.width = w;
+      cropCanvas.height = h;
+      cropCanvas.getContext('2d').drawImage(_wcropImg, x, y, w, h, 0, 0, w, h);
+
+      // Now center it on a 300x400 cream background (matching wardrobe card style)
+      const TW = 300, TH = 400;
+      const BG = [249, 247, 244];
+      const finalCanvas = document.createElement('canvas');
+      finalCanvas.width = TW;
+      finalCanvas.height = TH;
+      const ctx = finalCanvas.getContext('2d');
+      ctx.fillStyle = `rgb(${BG[0]},${BG[1]},${BG[2]})`;
+      ctx.fillRect(0, 0, TW, TH);
+
+      // Fit cropped image to fill card as much as possible
+      let drawW = w, drawH = h;
+      const maxW = TW * 0.95, maxH = TH * 0.95;
+      const scale = Math.min(maxW / drawW, maxH / drawH);
+      drawW = Math.round(drawW * scale);
+      drawH = Math.round(drawH * scale);
+      const px = Math.round((TW - drawW) / 2);
+      const py = Math.round((TH - drawH) / 2);
+      ctx.drawImage(cropCanvas, 0, 0, w, h, px, py, drawW, drawH);
+
+      const dataUrl = finalCanvas.toDataURL('image/png');
+      const fileKey = _wcropFile.replace(/\./g, '_');
+      db.ref('wardrobeCrops/' + fileKey).set(dataUrl);
+
+      closeWardrobeCrop();
+      // Re-render to show the crop (Firebase listener will also update)
+      renderCatalogue();
+    }
+
+    function closeWardrobeCrop() {
+      document.getElementById('wcrop-modal').classList.remove('open');
+      _wcropImg = null;
+      _wcropping = false;
+    }
+
+    // Apply saved crops on load
+    db.ref('wardrobeCrops').on('value', snap => {
+      _savedCrops = snap.val() || {};
+      renderCatalogue();
+    });
+  </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>

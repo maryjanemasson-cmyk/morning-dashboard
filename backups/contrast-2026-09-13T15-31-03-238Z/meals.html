@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',-apple-system,sans-serif; background:#faf8f5; color:#3d3529; }
+
+    .banner { height:80px; background:linear-gradient(135deg,#e8ddd3,#d4c5b5 30%,#c9b99a 60%,#bfae8e); position:relative; }
+    .banner::after { content:''; position:absolute; bottom:0; left:0; right:0; height:30px; background:linear-gradient(to top,#faf8f5,transparent); }
+
+    .container { max-width:1200px; margin:-10px auto 0; padding:0 2rem 3rem; position:relative; }
+    .page-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; }
+    .page-header h1 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:600; color:#2c2418; }
+    .page-header a { font-size:0.8rem; color:#9c8b76; text-decoration:none; }
+    .page-header a:hover { color:#3d3529; text-decoration:underline; }
+
+    .main-layout { display:grid; grid-template-columns:1fr 320px; gap:1.5rem; }
+
+    /* Week Planner */
+    .week-nav { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; }
+    .week-nav button {
+      padding:0.3rem 0.8rem; border-radius:6px; border:1px solid #ebe5dc;
+      background:#fff; color:#6b5d4d; font-size:0.78rem; cursor:pointer; font-family:inherit;
+    }
+    .week-nav button:hover { background:#f5f0e8; }
+    .week-title { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:600; color:#2c2418; }
+
+    .day-card {
+      background:#fff; border:1px solid #ebe5dc; border-radius:10px;
+      padding:1rem; margin-bottom:0.75rem;
+    }
+    .day-card:hover { border-color:#d4c5b5; }
+    .day-header {
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:0.6rem; padding-bottom:0.5rem; border-bottom:1px solid #f0ebe4;
+    }
+    .day-name { font-size:0.85rem; font-weight:600; color:#2c2418; }
+    .day-name.today { color:#c2553a; }
+    .day-date { font-size:0.7rem; color:#9c8b76; }
+
+    .meal-slot {
+      display:flex; align-items:center; gap:0.5rem;
+      padding:0.4rem 0; border-bottom:1px solid #f9f7f4;
+    }
+    .meal-slot:last-child { border-bottom:none; }
+    .meal-label {
+      font-size:0.65rem; font-weight:600; text-transform:uppercase;
+      letter-spacing:1px; color:#b8a48e; min-width:3.5rem;
+    }
+    .meal-content { flex:1; font-size:0.82rem; color:#3d3529; }
+    .meal-content.empty { color:#c9bfb0; font-style:italic; cursor:pointer; }
+    .meal-content.filled { cursor:pointer; }
+    .meal-content.filled:hover { color:#c2553a; }
+    .meal-input {
+      flex: 1; font-size: 0.82rem; color: #3d3529;
+      background: transparent; border: 1px solid transparent;
+      border-radius: 4px; padding: 0.15rem 0.35rem; margin: -0.15rem -0.35rem;
+      font-family: inherit; outline: none; min-width: 0;
+    }
+    .meal-input::placeholder { color: #c9bfb0; font-style: italic; }
+    .meal-input:focus { border-color: #c9b99a; background: #faf5ec; }
+    .meal-remove {
+      font-size:0.65rem; color:#c9bfb0; cursor:pointer;
+    }
+    .meal-remove:hover { color:#c2553a; }
+
+    /* Right sidebar */
+    .sidebar-card {
+      background:#fff; border:1px solid #ebe5dc; border-radius:10px;
+      padding:1rem; margin-bottom:1rem;
+    }
+    .sidebar-title {
+      font-family:'Playfair Display',serif; font-size:0.95rem; font-weight:600;
+      color:#2c2418; margin-bottom:0.75rem;
+    }
+
+    /* Recipe picker */
+    .recipe-search {
+      width:100%; border:1px solid #ebe5dc; border-radius:6px;
+      padding:0.4rem 0.6rem; font-size:0.78rem; font-family:inherit;
+      color:#3d3529; outline:none; margin-bottom:0.5rem;
+    }
+    .recipe-search:focus { border-color:#c9b99a; }
+    .recipe-list { max-height:300px; overflow-y:auto; }
+    .recipe-pick {
+      padding:0.4rem 0.5rem; border-bottom:1px solid #f5f0e8;
+      font-size:0.78rem; color:#3d3529; cursor:pointer;
+      display:flex; align-items:center; gap:0.4rem;
+    }
+    .recipe-pick:hover { background:#f5f0e8; }
+    .recipe-pick img {
+      width:32px; height:32px; object-fit:cover; border-radius:4px;
+    }
+    .recipe-pick-name { flex:1; }
+    .recipe-pick-meta { font-size:0.65rem; color:#9c8b76; }
+
+    /* Grocery list */
+    .grocery-item {
+      display:flex; align-items:center; gap:0.4rem;
+      padding:0.3rem 0; font-size:0.78rem; border-bottom:1px solid #f9f7f4;
+    }
+    .grocery-item:last-child { border-bottom:none; }
+    .grocery-cb {
+      width:13px; height:13px; border:1.5px solid #c9b99a;
+      border-radius:3px; cursor:pointer; flex-shrink:0;
+      display:flex; align-items:center; justify-content:center;
+      background:#fff; font-size:0.55rem; color:transparent;
+    }
+    .grocery-cb.checked { background:#c9b99a; color:#fff; border-color:#c9b99a; }
+    .grocery-text {
+      flex:1; cursor:text;
+      padding:0.1rem 0.3rem; margin:-0.1rem -0.3rem;
+      border-radius:3px; outline:none;
+    }
+    .grocery-text:focus { background:#faf5ec; }
+    .grocery-text.done { text-decoration:line-through; color:#c9bfb0; }
+    .aisle-header {
+      font-size: 0.62rem; font-weight: 600;
+      color: #9c8b76; text-transform: uppercase; letter-spacing: 1px;
+      padding: 0.5rem 0 0.2rem; margin-top: 0.3rem;
+      border-bottom: 1px solid #ebe5dc;
+    }
+    .aisle-header:first-child { margin-top: 0; padding-top: 0.1rem; }
+    .grocery-del { font-size:0.65rem; color:#d4c5b5; cursor:pointer; }
+    .grocery-del:hover { color:#c2553a; }
+    .print-btn {
+      font-size: 0.7rem; padding: 0.3rem 0.7rem;
+      border-radius: 14px; border: 1px solid #ebe5dc; background: #fff;
+      color: #6b5d4d; cursor: pointer; font-family: inherit;
+      transition: border-color 0.15s;
+    }
+    .print-btn:hover { border-color: #c9b99a; background: #faf5ec; }
+
+    @media print {
+      body { background: #fff; }
+      /* Hide everything except the grocery card */
+      body > *:not(.print-host) { display: none !important; }
+      .print-host { display: block !important; }
+      .print-host * { visibility: visible; }
+      .print-host h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.8rem; margin: 0 0 1rem 0; color: #2c2418;
+      }
+      .print-host h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.1rem; margin: 1rem 0 0.3rem 0; color: #555;
+        text-transform: uppercase; letter-spacing: 1.5px;
+        border-bottom: 1px solid #ccc; padding-bottom: 0.2rem;
+      }
+      .print-host .print-meta {
+        font-size: 0.85rem; color: #555; margin-bottom: 1rem;
+      }
+      .print-host ul { list-style: none; padding: 0; margin: 0; }
+      .print-host li {
+        padding: 0.3rem 0; border-bottom: 1px solid #e5e0d7;
+        font-size: 0.95rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .print-host li::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 14px;
+        border: 1px solid #888; border-radius: 2px;
+        flex-shrink: 0;
+      }
+      .print-host li.done {
+        color: #999; text-decoration: line-through;
+      }
+      .print-host li.done::before {
+        background: #999;
+      }
+    }
+    .grocery-input-row { display:flex; gap:0.3rem; margin-bottom:0.5rem; }
+    .grocery-input {
+      flex:1; border:1px solid #ebe5dc; border-radius:5px;
+      padding:0.35rem 0.5rem; font-size:0.75rem; font-family:inherit;
+      color:#3d3529; outline:none;
+    }
+    .grocery-input:focus { border-color:#c9b99a; }
+    .add-btn {
+      padding:0.35rem 0.6rem; border-radius:5px; border:1px solid #d4c5b5;
+      background:#f5f0e8; font-size:0.72rem; color:#6b5d4d; cursor:pointer;
+      font-family:inherit;
+    }
+    .add-btn:hover { background:#ebe5dc; }
+    .generate-btn {
+      width:100%; padding:0.5rem; border-radius:6px; border:none;
+      background:#4a8c6f; color:#fff; font-size:0.78rem; cursor:pointer;
+      font-family:inherit; margin-top:0.5rem;
+    }
+    .generate-btn:hover { background:#3d7a5f; }
+
+    /* Modal */
+    .modal-overlay {
+      display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+      background:rgba(44,36,24,0.4); z-index:1000;
+      justify-content:center; align-items:center;
+    }
+    .modal-overlay.open { display:flex; }
+
+    @media (max-width:768px) {
+      .main-layout { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <div class="page-header">
+      <h1>Meal Planner</h1>
+    </div>
+
+    <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:0.78rem;color:#fff;text-decoration:none;border:1px solid #2c2418;padding:0.35rem 0.9rem;border-radius:20px;background:#2c2418;">← Dashboard</a>
+      <a href="grocery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Grocery</a>
+      <a href="recipes.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Recipes</a>
+      <a href="wardrobe.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Wardrobe</a>
+      <a href="outfit-gallery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Outfit Gallery</a>
+      <a href="health.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Health</a>
+      <a href="weekend-plan.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Weekend Plan</a>
+      <a href="travel.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Travel</a>
+    </div>
+
+    <div class="main-layout">
+      <!-- Left: Week planner -->
+      <div>
+        <div class="week-nav">
+          <button onclick="changeWeek(-1)">&larr; Prev</button>
+          <span class="week-title" id="week-title"></span>
+          <button onclick="changeWeek(1)">Next &rarr;</button>
+          <button onclick="goToThisWeek()">This Week</button>
+        </div>
+        <div id="week-grid"></div>
+      </div>
+
+      <!-- Right: Recipe picker + Grocery list -->
+      <div>
+        <div class="sidebar-card">
+          <div class="sidebar-title">Pick a Recipe</div>
+          <input type="text" class="recipe-search" id="recipe-search" placeholder="Search recipes..." oninput="renderRecipePicker()" />
+          <div class="recipe-list" id="recipe-list"></div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-title" style="display:flex;align-items:center;justify-content:space-between;">
+            <span>Grocery List</span>
+            <a href="grocery.html" style="font-size:0.7rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.25rem 0.65rem;border-radius:14px;background:#fff;">Open →</a>
+          </div>
+          <div style="font-size:0.78rem;color:#9c8b76;line-height:1.4;">
+            The grocery list has its own page now. Add and check off items there — and use the "+ From Meals" button to pull this week's ingredients in.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey:"AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain:"morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL:"https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId:"morning-dashboard-4c62b",
+      storageBucket:"morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId:"289564921391",
+      appId:"1:289564921391:web:4ed9e388d5f63218f780da"
+    });
+    const db = firebase.database();
+
+    // State
+    let weekOffset = 0;
+    let mealPlan = {};
+    let recipes = {};
+    let _pickingSlot = null; // {dateKey, meal}
+
+    // Date helpers
+    function getWeekStart(offset) {
+      const now = new Date();
+      const day = now.getDay();
+      const start = new Date(now);
+      start.setDate(now.getDate() - day + (offset * 7));
+      start.setHours(0,0,0,0);
+      return start;
+    }
+
+    function dateKey(d) { return d.toISOString().slice(0,10); }
+
+    function formatDate(d) {
+      return d.toLocaleDateString('en-US', { month:'short', day:'numeric' });
+    }
+
+    // Week navigation
+    function changeWeek(dir) { weekOffset += dir; renderWeek(); }
+    function goToThisWeek() { weekOffset = 0; renderWeek(); }
+
+    // Render week
+    function renderWeek() {
+      const start = getWeekStart(weekOffset);
+      const end = new Date(start); end.setDate(start.getDate() + 6);
+      document.getElementById('week-title').textContent =
+        `${formatDate(start)} - ${formatDate(end)}`;
+
+      const today = dateKey(new Date());
+      const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const meals = ['Breakfast', 'Lunch', 'Dinner'];
+      let html = '';
+
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(start);
+        d.setDate(start.getDate() + i);
+        const dk = dateKey(d);
+        const isToday = dk === today;
+        const dayMeals = mealPlan[dk] || {};
+
+        html += `<div class="day-card">
+          <div class="day-header">
+            <span class="day-name ${isToday?'today':''}">${dayNames[d.getDay()]}${isToday?' (Today)':''}</span>
+            <span class="day-date">${formatDate(d)}</span>
+          </div>`;
+
+        meals.forEach(meal => {
+          const mKey = meal.toLowerCase();
+          const slotVal = dayMeals[mKey];
+          // slotVal can be a Firebase recipe push-id (key in recipes{}) or
+          // a free-text meal the user typed.
+          const isRecipe = !!(slotVal && recipes[slotVal]);
+          const filledText = isRecipe ? recipes[slotVal].name : (slotVal || '');
+
+          if (filledText) {
+            const safe = String(filledText).replace(/"/g, '&quot;');
+            html += `<div class="meal-slot">
+              <span class="meal-label">${meal}</span>
+              ${isRecipe
+                ? `<span class="meal-content filled" onclick="openSlot('${dk}','${mKey}')">${safe}</span>`
+                : `<input class="meal-input" type="text" value="${safe}"
+                    onfocus="onSlotFocus(this)" data-dk="${dk}" data-meal="${mKey}"
+                    onkeydown="onSlotKeydown(event, this)"
+                    onblur="onSlotBlur(this)" />`}
+              <span class="meal-remove" onclick="removeMeal('${dk}','${mKey}')">&times;</span>
+            </div>`;
+          } else {
+            html += `<div class="meal-slot">
+              <span class="meal-label">${meal}</span>
+              <input class="meal-input" type="text" placeholder="+ type or pick a recipe"
+                data-dk="${dk}" data-meal="${mKey}"
+                onfocus="onSlotFocus(this)"
+                onkeydown="onSlotKeydown(event, this)"
+                onblur="onSlotBlur(this)" />
+            </div>`;
+          }
+        });
+
+        html += '</div>';
+      }
+
+      document.getElementById('week-grid').innerHTML = html;
+    }
+
+    // Slot selection
+    function openSlot(dk, meal) {
+      _pickingSlot = { dateKey: dk, meal };
+      // Highlight the slot
+      document.getElementById('recipe-search').focus();
+      document.getElementById('recipe-search').placeholder = `Pick recipe for ${meal}...`;
+      renderRecipePicker();
+    }
+
+    function pickRecipe(recipeId) {
+      if (!_pickingSlot) {
+        alert('Click "+ add meal" on a day first, then pick a recipe.');
+        return;
+      }
+      const dk = _pickingSlot.dateKey;
+      const meal = _pickingSlot.meal;
+
+      if (!mealPlan[dk]) mealPlan[dk] = {};
+      mealPlan[dk][meal] = recipeId;
+      db.ref('mealPlan/' + dk + '/' + meal).set(recipeId);
+
+      _pickingSlot = null;
+      document.getElementById('recipe-search').placeholder = 'Search recipes...';
+      renderWeek();
+    }
+
+    function removeMeal(dk, meal) {
+      if (mealPlan[dk]) delete mealPlan[dk][meal];
+      db.ref('mealPlan/' + dk + '/' + meal).remove();
+      renderWeek();
+    }
+
+    // Free-text + recipe-pick hybrid slot handlers
+    function onSlotFocus(input) {
+      _pickingSlot = { dateKey: input.dataset.dk, meal: input.dataset.meal };
+      document.getElementById('recipe-search').placeholder = `Pick recipe for ${input.dataset.meal}...`;
+      renderRecipePicker();
+    }
+    function onSlotKeydown(e, input) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (text) {
+          saveCustomMeal(text, input.dataset.dk, input.dataset.meal);
+        } else {
+          // Empty Enter: clear the slot if it was set
+          removeMeal(input.dataset.dk, input.dataset.meal);
+        }
+      } else if (e.key === 'Escape') {
+        input.blur();
+      }
+    }
+    function onSlotBlur(input) {
+      const text = input.value.trim();
+      const dk = input.dataset.dk;
+      const meal = input.dataset.meal;
+      const current = (mealPlan[dk] || {})[meal] || '';
+      const currentText = recipes[current] ? recipes[current].name : current;
+      // Only save on blur if the text actually changed (avoids fighting the
+      // recipe picker's pickRecipe() which navigates to a recipe id)
+      if (text && text !== currentText) {
+        saveCustomMeal(text, dk, meal);
+      } else if (!text && current && !recipes[current]) {
+        // User cleared a previously free-text slot
+        removeMeal(dk, meal);
+      }
+    }
+    function saveCustomMeal(text, dk, meal) {
+      if (!mealPlan[dk]) mealPlan[dk] = {};
+      mealPlan[dk][meal] = text;
+      db.ref('mealPlan/' + dk + '/' + meal).set(text);
+      _pickingSlot = null;
+      document.getElementById('recipe-search').placeholder = 'Search recipes...';
+      renderWeek();
+    }
+
+    // Recipe picker
+    function renderRecipePicker() {
+      const search = (document.getElementById('recipe-search')?.value || '').toLowerCase();
+      const entries = Object.entries(recipes);
+      let filtered = entries;
+      if (search) {
+        filtered = entries.filter(([id, r]) => {
+          return (r.name + ' ' + (r.category||'') + ' ' + (r.cuisine||'') + ' ' + (r.tags||'')).toLowerCase().includes(search);
+        });
+      }
+
+      const picking = _pickingSlot ? ` for ${_pickingSlot.meal}` : '';
+      let html = '';
+      if (_pickingSlot) {
+        html += `<div style="font-size:0.7rem;color:#4a8c6f;font-weight:500;padding:0.3rem 0.5rem;background:#e8f5e8;border-radius:4px;margin-bottom:0.4rem;">
+          Picking${picking} — click a recipe below
+        </div>`;
+      }
+
+      filtered.slice(0, 20).forEach(([id, r]) => {
+        const img = r.image ? `<img src="${r.image}" alt="" />` : '';
+        html += `<div class="recipe-pick" onclick="pickRecipe('${id}')">
+          ${img}
+          <div class="recipe-pick-name">${r.name}</div>
+          <div class="recipe-pick-meta">${r.category || ''}</div>
+        </div>`;
+      });
+
+      if (filtered.length === 0) html += '<div style="color:#b8a48e;font-size:0.78rem;padding:0.5rem;">No recipes found</div>';
+
+      document.getElementById('recipe-list').innerHTML = html;
+    }
+
+
+    // Firebase listeners
+    db.ref('recipes').on('value', snap => {
+      recipes = snap.val() || {};
+      renderRecipePicker();
+    });
+
+    db.ref('mealPlan').on('value', snap => {
+      mealPlan = snap.val() || {};
+      renderWeek();
+    });
+
+    // Init
+    renderWeek();
+  </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>

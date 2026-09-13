@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel - Morning Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dashboard">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5;
+      color: #3d3529;
+      min-height: 100vh;
+    }
+
+    .banner {
+      height: 120px;
+      background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%);
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40px;
+      background: linear-gradient(to top, #faf8f5, transparent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -30px auto 0;
+      padding: 0 2rem 2rem;
+      position: relative;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      color: #9c8b76;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #3d3529; }
+
+    .page-header { margin-bottom: 1.75rem; }
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #2c2418;
+    }
+    .page-header .subtitle {
+      font-size: 0.85rem;
+      color: #9c8b76;
+      margin-top: 0.2rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ebe5dc;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .card:hover { border-color: #d4c5b5; }
+
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2c2418;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-title .icon { font-size: 1.1rem; }
+
+    /* Countdown trips */
+    .trip-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .trip-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      border: 1px solid transparent;
+    }
+    .trip-row:hover { background: #faf8f5; }
+    .trip-row.active {
+      background: #f5f0e8;
+      border-color: #c9b99a;
+    }
+    .trip-row .trip-dest {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .trip-row .trip-dates {
+      font-size: 0.78rem;
+      color: #9c8b76;
+    }
+    .trip-row .trip-countdown {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #c9b99a;
+      white-space: nowrap;
+    }
+    .trip-row .trip-countdown.now {
+      color: #7a9a6d;
+    }
+
+    /* Next trip detail */
+    .detail-dest {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c2418;
+    }
+    .detail-dates {
+      font-size: 0.85rem;
+      color: #9c8b76;
+      margin-top: 0.15rem;
+      margin-bottom: 1rem;
+    }
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.5rem;
+    }
+    .weather-day {
+      text-align: center;
+      padding: 0.6rem 0.4rem;
+      background: #faf8f5;
+      border-radius: 6px;
+    }
+    .weather-day .wd-label {
+      font-size: 0.72rem;
+      color: #9c8b76;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    .weather-day .wd-icon { font-size: 1.4rem; }
+    .weather-day .wd-temps {
+      font-size: 0.78rem;
+      font-weight: 500;
+      margin-top: 0.15rem;
+    }
+    .weather-day .wd-rain {
+      font-size: 0.7rem;
+      color: #9c8b76;
+      margin-top: 0.1rem;
+    }
+    .weather-day.is-typical {
+      background: #f5f0e8;
+      border: 1px dashed #d4c5b5;
+    }
+    .weather-loading {
+      text-align: center;
+      color: #9c8b76;
+      font-size: 0.85rem;
+      padding: 1rem;
+    }
+    .itin-row {
+      display: flex; gap: 0.7rem; align-items: flex-start;
+      padding: 0.55rem 0; border-bottom: 1px solid #f5f0e8;
+    }
+    .itin-row:last-child { border-bottom: none; }
+    .itin-icon { font-size: 1rem; flex-shrink: 0; width: 1.5rem; text-align: center; }
+    .itin-main { flex: 1; min-width: 0; }
+    .itin-title { font-size: 0.85rem; color: #2c2418; font-weight: 500; }
+    .itin-sub { font-size: 0.72rem; color: #9c8b76; margin-top: 0.15rem; }
+
+    /* Flight details */
+    .flight-section { margin-bottom: 1rem; }
+    .flight-section:last-of-type { margin-bottom: 0.75rem; }
+    .flight-section h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2c2418;
+      margin-bottom: 0.5rem;
+    }
+    .flight-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+    .flight-fields label {
+      font-size: 0.75rem;
+      color: #9c8b76;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .flight-fields input {
+      width: 100%;
+      padding: 0.4rem 0.5rem;
+      border: 1px solid #ebe5dc;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #3d3529;
+      background: #faf8f5;
+      transition: border-color 0.2s;
+    }
+    .flight-fields input:focus {
+      outline: none;
+      border-color: #c9b99a;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.45rem 1rem;
+      border: 1px solid #c9b99a;
+      border-radius: 5px;
+      background: #fff;
+      color: #3d3529;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #f5f0e8; }
+    .btn-save { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .btn-save:hover { background: #bfae8e; }
+
+    /* Notes */
+    .notes-area {
+      width: 100%;
+      min-height: 120px;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #ebe5dc;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #3d3529;
+      background: #faf8f5;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .notes-area:focus { outline: none; border-color: #c9b99a; }
+    .notes-status {
+      font-size: 0.72rem;
+      color: #9c8b76;
+      margin-top: 0.35rem;
+      text-align: right;
+    }
+
+    /* Packing list */
+    .packing-input-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .packing-input-row input {
+      flex: 1;
+      padding: 0.4rem 0.5rem;
+      border: 1px solid #ebe5dc;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #3d3529;
+      background: #faf8f5;
+    }
+    .packing-input-row input:focus { outline: none; border-color: #c9b99a; }
+    .packing-items { list-style: none; }
+    .packing-category { margin-bottom: 0.9rem; }
+    .packing-category:last-child { margin-bottom: 0; }
+    .packing-cat-label {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.2px; color: #6b5d4d; margin-bottom: 0.3rem;
+      padding-bottom: 0.25rem; border-bottom: 1px solid #ebe5dc;
+    }
+    .packing-cat-list { list-style: none; }
+    .packing-item {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #f0ebe3;
+      font-size: 0.85rem;
+    }
+    .outfit-thumb {
+      display: block;
+      width: 140px;
+      padding-bottom: 78.75px; /* 56.25% of 140 */
+      position: relative;
+      margin: 0.15rem 0 0.15rem 1.6rem;
+      background: #f9f7f4;
+      border: 1px solid #ebe5dc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .outfit-thumb img {
+      position: absolute;
+      object-fit: contain;
+      background: #f9f7f4;
+    }
+    .outfit-thumb.empty { display: none; }
+    .packing-item:last-child { border-bottom: none; }
+    .packing-item input[type="checkbox"] {
+      accent-color: #c9b99a;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .packing-item .item-text { flex: 1; }
+    .packing-item .item-text.checked {
+      text-decoration: line-through;
+      color: #9c8b76;
+    }
+    .packing-item .item-delete {
+      background: none;
+      border: none;
+      color: #c9a9a9;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      transition: color 0.15s;
+    }
+    .packing-item .item-delete:hover { color: #b55; }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:0.78rem;color:#fff;text-decoration:none;border:1px solid #2c2418;padding:0.35rem 0.9rem;border-radius:20px;background:#2c2418;">← Dashboard</a>
+      <a href="recipes.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Recipes</a>
+      <a href="weekend-plan.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Weekend Plan</a>
+      <a href="wardrobe.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Wardrobe</a>
+      <a href="outfit-gallery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Outfit Gallery</a>
+      <a  style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;"href="grocery.html">Grocery</a>
+      <a href="meals.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Meal Planner</a>
+      <a href="health.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Health</a>
+    </div>
+
+    <div class="page-header">
+      <h1>Travel</h1>
+      <div class="subtitle" id="todayDate"></div>
+    </div>
+
+    <!-- Travel Countdown -->
+    <div class="card">
+      <div class="card-title"><span class="icon">&#9992;&#65039;</span> Upcoming Trips</div>
+      <div class="trip-list" id="tripList"></div>
+    </div>
+
+    <!-- Weather Forecast -->
+    <div class="card" id="detailCard">
+      <div class="card-title"><span class="icon">&#9925;</span> Weather Forecast</div>
+      <div class="detail-dest" id="detailDest">--</div>
+      <div class="detail-dates" id="detailDates"></div>
+      <div id="outfitLink" style="margin-top:0.5rem;display:none;"></div>
+      <div id="weatherContainer"><div class="weather-loading">Loading weather...</div></div>
+    </div>
+
+    <!-- TripIt Itinerary -->
+    <div class="card" id="itineraryCard" style="display:none;">
+      <div class="card-title"><span class="icon">&#128205;</span> Itinerary <span style="font-size:0.65rem;color:#9c8b76;font-weight:400;font-family:'Inter',sans-serif;margin-left:0.5rem;">from TripIt</span></div>
+      <div id="itineraryItems"></div>
+    </div>
+
+    <!-- Trip Notes -->
+    <div class="card">
+      <div class="card-title"><span class="icon">&#128221;</span> Trip Notes</div>
+      <textarea class="notes-area" id="notesArea" placeholder="Hotel, restaurants, things to do..."></textarea>
+      <div class="notes-status" id="notesStatus"></div>
+    </div>
+
+    <!-- Packing List -->
+    <div class="card">
+      <div class="card-title"><span class="icon">&#127890;</span> Packing List</div>
+      <div class="packing-input-row">
+        <input type="text" id="packingInput" placeholder="Add item...">
+        <button class="btn" id="addPackingBtn">Add</button>
+      </div>
+      <div class="packing-input-row">
+        <input type="number" id="outfitInput" min="1" placeholder="Outfit # to pack…" style="flex:0 0 9rem;">
+        <input type="text" id="outfitNote" placeholder="Note (optional)…">
+        <button class="btn" id="addOutfitBtn">Link outfit</button>
+      </div>
+      <ul class="packing-items" id="packingList"></ul>
+    </div>
+  </div>
+
+  <script src="calendar-data.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+      storageBucket: "morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId: "463122631261",
+      appId: "1:463122631261:web:b3a3e12c42a5389bbf82af"
+    });
+    const db = firebase.database();
+
+    // --- Helpers ---
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    document.getElementById('todayDate').textContent =
+      today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+    function tripKey(trip) {
+      if (trip.key) return trip.key;
+      return trip.destination.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/_+$/, '') + '_' + trip.start;
+    }
+
+    function parseDate(s) {
+      const [y, m, d] = s.split('-').map(Number);
+      return new Date(y, m - 1, d);
+    }
+
+    // Itinerary item times are stored as wall-clock with a nominal +00:00
+    // suffix. Build a local Date from the literal components so the displayed
+    // time is exactly what's in the string (no timezone conversion / shift).
+    function parseItinTime(s) {
+      const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(s || '');
+      if (!m) return new Date(s);
+      return new Date(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]);
+    }
+
+    function formatDateRange(start, end) {
+      const s = parseDate(start), e = parseDate(end);
+      const opts = { month: 'short', day: 'numeric' };
+      if (s.getFullYear() !== today.getFullYear()) opts.year = 'numeric';
+      return s.toLocaleDateString('en-US', opts) + ' \u2013 ' + e.toLocaleDateString('en-US', opts);
+    }
+
+    function daysUntil(dateStr) {
+      const d = parseDate(dateStr);
+      return Math.ceil((d - today) / 86400000);
+    }
+
+    function weatherIcon(desc) {
+      if (!desc) return '\u2601\ufe0f';
+      const d = desc.toLowerCase();
+      if (d.includes('thunder')) return '\u26c8\ufe0f';
+      if (d.includes('snow') || d.includes('sleet')) return '\u2744\ufe0f';
+      if (d.includes('rain')) return '\ud83c\udf27\ufe0f';
+      if (d.includes('fog') || d.includes('mist')) return '\ud83c\udf2b\ufe0f';
+      if (d.includes('overcast') || d === 'cloudy') return '\u2601\ufe0f';
+      if (d.includes('partly cloudy') || d.includes('partly')) return '\u26c5';
+      if (d.includes('sunny') || d.includes('clear')) return '\u2600\ufe0f';
+      return '\u2601\ufe0f';
+    }
+
+    function dayLabel(dateStr) {
+      const d = parseDate(dateStr);
+      return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+
+    // --- State ---
+    let selectedTrip = null;
+    const trips = (window.TRAVEL_DATA || []).filter(t => {
+      const end = parseDate(t.end);
+      return end >= today;
+    });
+
+    // --- Countdown ---
+    function renderCountdown() {
+      const list = document.getElementById('tripList');
+      if (!trips.length) {
+        list.innerHTML = '<div style="color:#9c8b76;font-size:0.85rem;">No upcoming trips.</div>';
+        return;
+      }
+      list.innerHTML = trips.map((t, i) => {
+        const start = parseDate(t.start), end = parseDate(t.end);
+        const isNow = today >= start && today <= end;
+        const days = daysUntil(t.start);
+        let countdownText;
+        if (isNow) countdownText = 'Now';
+        else if (days === 0) countdownText = 'Today';
+        else if (days === 1) countdownText = 'Tomorrow';
+        else countdownText = days + ' days';
+        const active = selectedTrip && tripKey(selectedTrip) === tripKey(t) ? ' active' : '';
+        return `<div class="trip-row${active}" data-idx="${i}">
+          <div>
+            <div class="trip-dest">${t.icon || ''} ${t.destination}</div>
+            <div class="trip-dates">${formatDateRange(t.start, t.end)}</div>
+          </div>
+          <div class="trip-countdown${isNow ? ' now' : ''}">${countdownText}</div>
+        </div>`;
+      }).join('');
+
+      list.querySelectorAll('.trip-row').forEach(row => {
+        row.addEventListener('click', () => {
+          selectTrip(trips[parseInt(row.dataset.idx)]);
+        });
+      });
+    }
+
+    // --- Select Trip ---
+    function selectTrip(trip) {
+      selectedTrip = trip;
+      renderCountdown();
+      renderDetail();
+      renderItinerary();
+      loadNotes();
+      loadPacking();
+    }
+
+    const ITIN_ICONS = { flight: '✈︎', hotel: '🏨', train: '🚆', car: '🚗', other: '•' };
+
+    function renderItinerary() {
+      const card = document.getElementById('itineraryCard');
+      const container = document.getElementById('itineraryItems');
+      const items = (selectedTrip && selectedTrip.items) || [];
+      if (!items.length) {
+        card.style.display = 'none';
+        return;
+      }
+      card.style.display = '';
+      container.innerHTML = items.map(it => {
+        // Trip item times are stored as local wall-clock with a nominal +00:00
+        // suffix (e.g. a 5:10 PM departure is "...T17:10:00+00:00"). Parse the
+        // literal Y-M-D H:M so we render the intended clock time instead of
+        // letting new Date() apply a UTC->local shift (was showing ~4h early).
+        const dt = parseItinTime(it.start);
+        const dateStr = dt.toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric' });
+        const timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
+        const icon = ITIN_ICONS[it.type] || '•';
+        const title = it.summary;
+        const sub = [it.location, it.type === 'hotel' ? '' : timeStr].filter(Boolean).join(' · ');
+        return `<div class="itin-row">
+          <span class="itin-icon">${icon}</span>
+          <div class="itin-main">
+            <div class="itin-title">${title}</div>
+            <div class="itin-sub">${dateStr}${sub ? ' · ' + sub : ''}</div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    // --- Trip Detail + Weather ---
+    function renderDetail() {
+      if (!selectedTrip) return;
+      document.getElementById('detailDest').textContent = selectedTrip.destination;
+      document.getElementById('detailDates').textContent = formatDateRange(selectedTrip.start, selectedTrip.end);
+      // Optional: link to a pre-planned outfit slide on the outfit-gallery page
+      const outfitEl = document.getElementById('outfitLink');
+      if (selectedTrip.outfitSlide) {
+        outfitEl.innerHTML = `<a href="outfit-gallery.html?slides=${selectedTrip.outfitSlide}" style="display:inline-block;padding:0.3rem 0.7rem;background:#013E7D;color:#fff;font-size:0.72rem;border-radius:6px;text-decoration:none;">👗 Pre-planned outfit (#${selectedTrip.outfitSlide})</a>`;
+        outfitEl.style.display = '';
+      } else {
+        outfitEl.style.display = 'none';
+      }
+      fetchWeather(selectedTrip);
+    }
+
+    // Open-Meteo WMO weather code \u2192 emoji
+    function wmoIcon(code) {
+      if (code === 0) return '\u2600\ufe0f';
+      if (code === 1 || code === 2) return '\u26c5';
+      if (code === 3) return '\u2601\ufe0f';
+      if (code === 45 || code === 48) return '\ud83c\udf2b\ufe0f';
+      if (code >= 51 && code <= 57) return '\ud83c\udf26\ufe0f';
+      if (code >= 61 && code <= 67) return '\ud83c\udf27\ufe0f';
+      if (code >= 71 && code <= 77) return '\u2744\ufe0f';
+      if (code >= 80 && code <= 82) return '\ud83c\udf27\ufe0f';
+      if (code >= 85 && code <= 86) return '\ud83c\udf28\ufe0f';
+      if (code >= 95) return '\u26c8\ufe0f';
+      return '\ud83c\udf24\ufe0f';
+    }
+
+    // 2-letter US state codes → full name. Used when destination is "City, ST".
+    const US_STATES = {
+      AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',
+      CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',
+      IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',
+      ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',
+      MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',
+      NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',
+      OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',
+      SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',
+      WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'District of Columbia'
+    };
+
+    function pickBestGeoMatch(results, destination) {
+      if (!results || !results.length) return null;
+      // Parse "City, XX" or "City, Country" into city + qualifier
+      const parts = destination.split(',').map(s => s.trim());
+      const qualifier = parts.length >= 2 ? parts[1] : '';
+      if (!qualifier) return results[0];
+
+      const qLower = qualifier.toLowerCase();
+      // If qualifier looks like a US state code, expand it
+      const isUsState = qualifier.length === 2 && US_STATES[qualifier.toUpperCase()];
+      const expanded = isUsState ? US_STATES[qualifier.toUpperCase()].toLowerCase() : qLower;
+
+      // Prefer exact match on admin1 (state/region) or country
+      let best = results.find(r =>
+        (r.admin1 || '').toLowerCase() === expanded ||
+        (r.country || '').toLowerCase() === qLower
+      );
+      if (best) return best;
+      // For US state qualifiers, force country = United States
+      if (isUsState) {
+        best = results.find(r => (r.country_code || '').toLowerCase() === 'us');
+        if (best) return best;
+      }
+      // Otherwise, pick the highest-population result that mentions the qualifier
+      best = results.find(r =>
+        ((r.admin1 || '') + ' ' + (r.country || '')).toLowerCase().includes(expanded)
+      );
+      return best || results[0];
+    }
+
+    // TripIt multi-city titles look like "Paris → Cologne" or
+    // "Bogotá → Cartagena → Medellín". Open-Meteo geocoding returns zero
+    // results for the full string — always pass a single city name.
+    const HOME_CITY_RE = /^(newark|ewr|princeton|home)\b/i;
+    function splitDestinationCities(dest) {
+      return String(dest || '')
+        .split(/\s*→\s*|\s+to\s+/i)
+        .map(s => s.split(',')[0].trim())
+        .filter(Boolean);
+    }
+    function primaryWeatherCity(dest) {
+      const parts = splitDestinationCities(dest);
+      if (!parts.length) return String(dest || '').split(',')[0].trim();
+      if (parts.length === 1) return parts[0];
+      const first = parts[0], last = parts[parts.length - 1];
+      // "Newark → London" → London; "Paris → Cologne" → Paris (first stay)
+      if (HOME_CITY_RE.test(first) && !HOME_CITY_RE.test(last)) return last;
+      if (HOME_CITY_RE.test(last) && !HOME_CITY_RE.test(first)) return first;
+      return first;
+    }
+    function weatherLabelFor(dest) {
+      // Keep full multi-city label for display when we only geocode one city
+      const city = primaryWeatherCity(dest);
+      const full = String(dest || '').trim();
+      if (full.includes('→') && city && full !== city) return `${city} (of ${full})`;
+      return full || city;
+    }
+
+    async function fetchWeather(trip) {
+      const container = document.getElementById('weatherContainer');
+      container.innerHTML = '<div class="weather-loading">Loading weather...</div>';
+
+      // Multi-city: trip.segments = [{city, start, end}, ...]. Each segment is
+      // weathered independently and the results render with city labels.
+      if (Array.isArray(trip.segments) && trip.segments.length > 1) {
+        return fetchWeatherSegments(trip.segments);
+      }
+
+      try {
+        const geoQuery = primaryWeatherCity(trip.destination);
+        const geoLabel = weatherLabelFor(trip.destination);
+        // 1. Geocode — fetch up to 10 matches, then pick the one that best
+        //    matches the destination's state/country qualifier.
+        const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(geoQuery)}&count=10`).then(r => r.json());
+        if (!geo.results || !geo.results.length) throw new Error('city not found: ' + geoQuery);
+        // Prefer qualifier from original destination when it looks like "City, Country"
+        const matchDest = (trip.destination.includes(',') && !trip.destination.includes('→'))
+          ? trip.destination
+          : geoQuery;
+        const match = pickBestGeoMatch(geo.results, matchDest);
+        if (!match) throw new Error('city not matched');
+        const { latitude, longitude } = match;
+
+        // 2. Build trip-day list (ISO YYYY-MM-DD)
+        const startD = parseDate(trip.start), endD = parseDate(trip.end);
+        const tripDays = [];
+        for (let d = new Date(startD); d <= endD; d.setDate(d.getDate() + 1)) {
+          tripDays.push(d.toISOString().slice(0, 10));
+        }
+
+        // 3. Forecast covers ~16 days; anything beyond falls back to historical
+        const today0 = new Date(); today0.setHours(0,0,0,0);
+        const horizonEnd = new Date(today0); horizonEnd.setDate(today0.getDate() + 15);
+        const forecastable = tripDays.filter(s => parseDate(s) <= horizonEnd);
+        const farOut       = tripDays.filter(s => parseDate(s) >  horizonEnd);
+
+        const dailyMap = {};
+
+        if (forecastable.length) {
+          const fc = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
+            `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max` +
+            `&forecast_days=16&temperature_unit=fahrenheit&timezone=auto`
+          ).then(r => r.json());
+          (fc.daily?.time || []).forEach((d, i) => {
+            dailyMap[d] = {
+              source: 'forecast',
+              high: Math.round(fc.daily.temperature_2m_max[i]),
+              low:  Math.round(fc.daily.temperature_2m_min[i]),
+              code: fc.daily.weather_code[i],
+              rain: fc.daily.precipitation_probability_max?.[i] ?? null,
+            };
+          });
+        }
+
+        if (farOut.length) {
+          // Use the same calendar dates from the prior year as a "typical" estimate
+          const histStart = new Date(parseDate(farOut[0]));            histStart.setFullYear(histStart.getFullYear() - 1);
+          const histEnd   = new Date(parseDate(farOut[farOut.length-1])); histEnd.setFullYear(histEnd.getFullYear() - 1);
+          const sIso = histStart.toISOString().slice(0,10);
+          const eIso = histEnd.toISOString().slice(0,10);
+          const hist = await fetch(
+            `https://archive-api.open-meteo.com/v1/archive?latitude=${latitude}&longitude=${longitude}` +
+            `&start_date=${sIso}&end_date=${eIso}` +
+            `&daily=temperature_2m_max,temperature_2m_min,weather_code` +
+            `&temperature_unit=fahrenheit&timezone=auto`
+          ).then(r => r.json());
+          (hist.daily?.time || []).forEach((d, i) => {
+            // Map year-prior date back to this year's matching date
+            const dt = parseDate(d); dt.setFullYear(dt.getFullYear() + 1);
+            const cur = dt.toISOString().slice(0,10);
+            dailyMap[cur] = {
+              source: 'typical',
+              high: Math.round(hist.daily.temperature_2m_max[i]),
+              low:  Math.round(hist.daily.temperature_2m_min[i]),
+              code: hist.daily.weather_code[i],
+              rain: null,
+            };
+          });
+        }
+
+        // Label which city we geocoded when the trip title is multi-city
+        const label = (trip.destination && trip.destination.includes('→')) ? geoLabel : null;
+        renderWeather(tripDays, dailyMap, farOut.length > 0, label);
+      } catch (e) {
+        container.innerHTML = '<div class="weather-loading">Weather unavailable' +
+          (e && e.message ? ` <span style="font-weight:400;color:#b8a48e;">(${e.message})</span>` : '') +
+          '</div>';
+      }
+    }
+
+    // Fetch + render weather for a multi-city trip's segments.
+    async function fetchWeatherSegments(segments) {
+      const container = document.getElementById('weatherContainer');
+      let combinedHtml = '';
+      let anyTypical = false;
+      for (const seg of segments) {
+        const city = primaryWeatherCity(seg.city || '');
+        try {
+          const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10`).then(r => r.json());
+          if (!geo.results || !geo.results.length) throw new Error('city not found: ' + city);
+          const match = pickBestGeoMatch(geo.results, seg.city);
+          if (!match) throw new Error('city not matched');
+          const { latitude, longitude } = match;
+
+          const startD = parseDate(seg.start), endD = parseDate(seg.end);
+          const segDays = [];
+          for (let d = new Date(startD); d <= endD; d.setDate(d.getDate() + 1)) {
+            segDays.push(d.toISOString().slice(0, 10));
+          }
+          const today0 = new Date(); today0.setHours(0,0,0,0);
+          const horizonEnd = new Date(today0); horizonEnd.setDate(today0.getDate() + 15);
+          const forecastable = segDays.filter(s => parseDate(s) <= horizonEnd);
+          const farOut       = segDays.filter(s => parseDate(s) >  horizonEnd);
+          const segMap = {};
+
+          if (forecastable.length) {
+            const fc = await fetch(
+              `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
+              `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max` +
+              `&forecast_days=16&temperature_unit=fahrenheit&timezone=auto`
+            ).then(r => r.json());
+            (fc.daily?.time || []).forEach((d, i) => {
+              if (segDays.includes(d)) segMap[d] = {
+                source: 'forecast',
+                high: Math.round(fc.daily.temperature_2m_max[i]),
+                low:  Math.round(fc.daily.temperature_2m_min[i]),
+                code: fc.daily.weather_code[i],
+                rain: fc.daily.precipitation_probability_max?.[i] ?? null,
+              };
+            });
+          }
+          if (farOut.length) {
+            const histStart = new Date(parseDate(farOut[0])); histStart.setFullYear(histStart.getFullYear()-1);
+            const histEnd   = new Date(parseDate(farOut[farOut.length-1])); histEnd.setFullYear(histEnd.getFullYear()-1);
+            const hist = await fetch(
+              `https://archive-api.open-meteo.com/v1/archive?latitude=${latitude}&longitude=${longitude}` +
+              `&start_date=${histStart.toISOString().slice(0,10)}&end_date=${histEnd.toISOString().slice(0,10)}` +
+              `&daily=temperature_2m_max,temperature_2m_min,weather_code` +
+              `&temperature_unit=fahrenheit&timezone=auto`
+            ).then(r => r.json());
+            (hist.daily?.time || []).forEach((d, i) => {
+              const dt = parseDate(d); dt.setFullYear(dt.getFullYear() + 1);
+              const cur = dt.toISOString().slice(0,10);
+              if (segDays.includes(cur)) segMap[cur] = {
+                source: 'typical',
+                high: Math.round(hist.daily.temperature_2m_max[i]),
+                low:  Math.round(hist.daily.temperature_2m_min[i]),
+                code: hist.daily.weather_code[i],
+                rain: null,
+              };
+            });
+            anyTypical = true;
+          }
+
+          // Per-segment header + grid
+          const days = segDays.map(s => {
+            const d = segMap[s];
+            if (!d) return `<div class="weather-day"><div class="wd-label">${dayLabel(s)}</div><div class="wd-icon">--</div><div class="wd-temps">--</div></div>`;
+            const subline = d.source === 'typical'
+              ? '<div class="wd-rain" style="color:#b8a48e;">typical</div>'
+              : (d.rain != null ? `<div class="wd-rain">${d.rain}% rain</div>` : '');
+            return `<div class="weather-day${d.source === 'typical' ? ' is-typical' : ''}"><div class="wd-label">${dayLabel(s)}</div><div class="wd-icon">${wmoIcon(d.code)}</div><div class="wd-temps">${d.high}° / ${d.low}°</div>${subline}</div>`;
+          }).join('');
+          combinedHtml += `<div style="font-size:0.72rem;font-weight:600;color:#6b5d4d;margin:0.8rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:1px;">${seg.city}</div><div class="weather-grid">${days}</div>`;
+        } catch (e) {
+          combinedHtml += `<div style="font-size:0.72rem;color:#6b5d4d;margin-top:0.6rem;"><strong>${seg.city}</strong>: weather unavailable (${e.message})</div>`;
+        }
+      }
+      const note = anyTypical
+        ? `<div style="font-size:0.7rem;color:#9c8b76;margin-top:0.5rem;">Days marked <em>typical</em> show last year's actual weather for the same dates — useful as a rough estimate until the trip is closer.</div>`
+        : '';
+      container.innerHTML = combinedHtml + note;
+    }
+
+    function renderWeather(tripDays, dailyMap, hasTypical, cityLabel) {
+      const container = document.getElementById('weatherContainer');
+      const html = tripDays.map(s => {
+        const d = dailyMap[s];
+        if (!d) return `<div class="weather-day">
+          <div class="wd-label">${dayLabel(s)}</div>
+          <div class="wd-icon">--</div>
+          <div class="wd-temps">--</div>
+        </div>`;
+        const subline = d.source === 'typical'
+          ? '<div class="wd-rain" style="color:#b8a48e;">typical</div>'
+          : (d.rain != null ? `<div class="wd-rain">${d.rain}% rain</div>` : '');
+        return `<div class="weather-day${d.source === 'typical' ? ' is-typical' : ''}">
+          <div class="wd-label">${dayLabel(s)}</div>
+          <div class="wd-icon">${wmoIcon(d.code)}</div>
+          <div class="wd-temps">${d.high}\u00b0 / ${d.low}\u00b0</div>
+          ${subline}
+        </div>`;
+      }).join('');
+      const cityNote = cityLabel
+        ? `<div style="font-size:0.7rem;color:#6b5d4d;margin:0 0 0.35rem 0;">Forecast for <strong>${cityLabel}</strong></div>`
+        : '';
+      const note = hasTypical
+        ? `<div style="font-size:0.7rem;color:#9c8b76;margin-top:0.5rem;">Days marked <em>typical</em> show last year's actual weather for the same dates \u2014 useful as a rough estimate until the trip is closer.</div>`
+        : '';
+      container.innerHTML = html ? `${cityNote}<div class="weather-grid">${html}</div>${note}` : '<div class="weather-loading">No forecast available for these dates</div>';
+    }
+
+    // --- Trip Notes ---
+    let notesTimer = null;
+    const notesArea = document.getElementById('notesArea');
+    const notesStatus = document.getElementById('notesStatus');
+
+    function loadNotes() {
+      if (!selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      db.ref('travelNotes/' + key).once('value').then(snap => {
+        notesArea.value = snap.val() || '';
+        notesStatus.textContent = '';
+      });
+    }
+
+    notesArea.addEventListener('input', () => {
+      if (!selectedTrip) return;
+      clearTimeout(notesTimer);
+      notesStatus.textContent = 'Saving...';
+      notesTimer = setTimeout(() => {
+        const key = tripKey(selectedTrip);
+        db.ref('travelNotes/' + key).set(notesArea.value).then(() => {
+          notesStatus.textContent = 'Saved';
+          setTimeout(() => { notesStatus.textContent = ''; }, 2000);
+        });
+      }, 800);
+    });
+
+    // --- Packing List ---
+    const packingInput = document.getElementById('packingInput');
+    const packingListEl = document.getElementById('packingList');
+
+    function tripNights(trip) {
+      const s = parseDate(trip.start), e = parseDate(trip.end);
+      return Math.round((e - s) / 86400000);
+    }
+
+    // Auto-calculated essentials. Each rule has a regex that detects an
+    // existing item (so we can recompute its count) and a `text` builder.
+    // Edit/delete behaviour: deleted auto items are NOT re-added on reload —
+    // only items that still match the pattern get their numbers refreshed.
+    const PACKING_RULES = [
+      { key: 'underwear',     match: /Underwear/i,
+        text: n => `${Math.ceil(n * 1.5)} pairs Underwear`,        category: 'Clothing' },
+      { key: 'bras',          match: /Bras/i,
+        text: n => `${Math.ceil(n * 0.5)} Bras`,                    category: 'Clothing' },
+      { key: 'pajamas',       match: /Pajamas/i,
+        text: n => `${n} set${n === 1 ? '' : 's'} Pajamas`,         category: 'Clothing' },
+      { key: 'socks',         match: /^\d+\s+pairs?\s+Socks\b/i,
+        text: () => `2 pairs Socks (baseline — adjust for shoes)`,  category: 'Clothing' },
+      { key: 'toothbrush',    match: /Toothbrush/i,
+        text: () => `Toothbrush`,                                    category: 'Toiletries' },
+      { key: 'toiletries',    match: /Toiletries(?! bag)|Toiletries bag/i,
+        text: () => `Toiletries bag`,                                category: 'Toiletries' },
+      { key: 'bath_puff',     match: /Bath puff/i,
+        text: () => `Bath puff`,                                     category: 'Toiletries' },
+      { key: 'curling_iron',  match: /Curling iron/i,
+        text: () => `Curling iron`,                                  category: 'Toiletries' },
+      { key: 'hair_supplies', match: /Hair supplies/i,
+        text: () => `Hair supplies (brush, hairties, product)`,      category: 'Toiletries' },
+      { key: 'makeup',        match: /^Makeup/i,
+        text: () => `Makeup`,                                        category: 'Toiletries' },
+      { key: 'medications',   match: /Medications/i,
+        text: () => `Medications`,                                   category: 'Toiletries' },
+      { key: 'chargers',      match: /Chargers/i,
+        text: () => `Chargers (phone + laptop)`,                     category: 'Electronics' },
+      { key: 'converters',    match: /Converters?|Plug adapter/i,
+        text: () => `Converters / plug adapters`,                    category: 'Electronics' },
+      { key: 'headphones',    match: /Headphones/i,
+        text: () => `Headphones`,                                    category: 'Electronics' },
+      { key: 'work_badge',    match: /Work badge/i,
+        text: () => `Work badge`,                                    category: 'Documents' },
+      { key: 'passport',      match: /^Passport \(if needed\)/i,
+        text: () => `Passport (if needed)`,                          category: 'Documents' },
+      { key: 'jewelry',       match: /Jewelry/i,
+        text: () => `Jewelry`,                                       category: 'Bags & Accessories' },
+      { key: 'belt',          match: /^Belt\b/i,
+        text: () => `Belt`,                                          category: 'Bags & Accessories' },
+    ];
+
+    const autoPopulateStarted = new Set();
+
+    function autoPopulatePacking(trip) {
+      const key = tripKey(trip);
+      if (autoPopulateStarted.has(key)) return;
+      autoPopulateStarted.add(key);
+      const nights = tripNights(trip);
+      const updates = {};
+      PACKING_RULES.forEach(rule => {
+        const id = db.ref('travelPacking/' + key).push().key;
+        updates[id] = { text: rule.text(nights), checked: false, auto: rule.key, category: rule.category || categorizeItem(rule.text(nights)) };
+      });
+      db.ref('travelPacking/' + key).update(updates);
+    }
+
+    // Refresh counts on existing auto items if the trip length changes or
+    // older items used a stale formula.
+    function syncAutoCounts(trip, items) {
+      const nights = tripNights(trip);
+      const key = tripKey(trip);
+      const updates = {};
+      Object.entries(items).forEach(([id, item]) => {
+        const rule = PACKING_RULES.find(r =>
+          item.auto ? item.auto === r.key : r.match.test(item.text || ''));
+        if (!rule) return;
+        const expected = rule.text(nights);
+        if (item.text !== expected || item.auto !== rule.key || (rule.category && item.category !== rule.category)) {
+          updates[id + '/text'] = expected;
+          updates[id + '/auto'] = rule.key;
+          if (rule.category) updates[id + '/category'] = rule.category;
+        }
+      });
+      if (Object.keys(updates).length) {
+        db.ref('travelPacking/' + key).update(updates);
+      }
+    }
+
+    // Essentials we always make sure exist (backfilled into trips that were
+    // created before a rule existed). Deleting one is remembered so it won't
+    // come back — see the delete handler + travelPackingDeleted.
+    const ALWAYS_PACK = ['passport', 'work_badge', 'converters', 'curling_iron'];
+
+    // Trip-specific additions that are not covered by the generic packing
+    // rules. These are tied to the confirmed Colombia itinerary and remain
+    // removable: deleting one records that choice so it does not return.
+    const COLOMBIA_2026_PACKING = [
+      { key: 'everyday_tops', text: '5 everyday tops, including 2 quick-dry tops', category: 'Clothing' },
+      { key: 'lightweight_pants', text: '2 pairs lightweight long pants', category: 'Clothing' },
+      { key: 'warm_weather_bottom', text: '1 pair shorts or skirt', category: 'Clothing' },
+      { key: 'riding_outfit', text: 'Full-length pants and tall socks for horseback riding', category: 'Clothing' },
+      { key: 'bogota_dinner', text: 'Smart-casual Bogotá dinner outfit for El Chato', category: 'Clothing' },
+      { key: 'cartagena_dinners', text: '2 breathable Cartagena dinner outfits for Carmen and Alma', category: 'Clothing' },
+      { key: 'light_sweater', text: 'Light sweater or cardigan for Bogotá', category: 'Clothing' },
+      { key: 'rain_jacket', text: 'Packable waterproof rain jacket', category: 'Clothing' },
+      { key: 'swimsuits', text: '2 swimsuits', category: 'Clothing' },
+      { key: 'cover_up', text: 'Swimsuit cover-up', category: 'Clothing' },
+      { key: 'rash_guard', text: 'Rash guard or sun shirt for speedboat day', category: 'Clothing' },
+      { key: 'walking_shoes', text: 'Comfortable walking sneakers with grip', category: 'Shoes' },
+      { key: 'dinner_shoes', text: 'Dinner flats, loafers, or clean refined sneakers', category: 'Shoes' },
+      { key: 'sandals', text: 'Comfortable sandals or flip-flops', category: 'Shoes' },
+      { key: 'umbrella', text: 'Compact umbrella', category: 'Bags & Accessories' },
+      { key: 'sun_hat', text: 'Sun hat', category: 'Bags & Accessories' },
+      { key: 'sunglasses', text: 'Sunglasses', category: 'Bags & Accessories' },
+      { key: 'daypack', text: 'Small daypack', category: 'Bags & Accessories' },
+      { key: 'dry_bag', text: 'Waterproof phone pouch or small dry bag', category: 'Bags & Accessories' },
+      { key: 'water_bottle', text: 'Refillable water bottle', category: 'Bags & Accessories' },
+      { key: 'sunscreen', text: 'High-SPF face and body sunscreen', category: 'Toiletries' },
+      { key: 'insect_repellent', text: 'Insect repellent with picaridin or DEET', category: 'Toiletries' },
+      { key: 'motion_sickness', text: 'Motion-sickness medication for speedboat', category: 'Toiletries' },
+      { key: 'electrolytes', text: 'Electrolyte packets', category: 'Toiletries' },
+      { key: 'power_bank', text: 'Power bank', category: 'Electronics' },
+      { key: 'passport_copy', text: 'Printed and digital passport copy', category: 'Documents' },
+      { key: 'travel_insurance', text: 'Travel-insurance policy and emergency instructions', category: 'Documents' },
+      { key: 'check_mig', text: 'Check-Mig confirmations for entry and departure', category: 'Documents' },
+      { key: 'itinerary_contacts', text: 'Offline itinerary, hotel addresses, and emergency contacts', category: 'Documents' },
+      { key: 'carry_on_backup', text: 'Carry-on: medication, one change of clothes, and one swimsuit', category: 'Other' },
+    ];
+
+    function isColombia2026Trip(trip) {
+      return trip && trip.start === '2026-08-21' && trip.end === '2026-08-30';
+    }
+
+    const tripSpecificBackfillStarted = new Set();
+
+    function backfillTripSpecificPacking(trip, items) {
+      if (!isColombia2026Trip(trip)) return;
+      const key = tripKey(trip);
+      if (tripSpecificBackfillStarted.has(key)) return;
+      tripSpecificBackfillStarted.add(key);
+      db.ref('travelPackingDeleted/' + key).once('value').then(snap => {
+        const deleted = snap.val() || {};
+        const updates = {};
+        COLOMBIA_2026_PACKING.forEach(rule => {
+          const autoKey = 'colombia_2026_' + rule.key;
+          if (deleted[autoKey]) return;
+          const present = Object.values(items).some(it =>
+            it.auto === autoKey || (it.text || '').toLowerCase() === rule.text.toLowerCase());
+          if (present) return;
+          const id = db.ref('travelPacking/' + key).push().key;
+          updates[id] = {
+            text: rule.text,
+            checked: false,
+            auto: autoKey,
+            category: rule.category
+          };
+        });
+        if (Object.keys(updates).length) {
+          db.ref('travelPacking/' + key).update(updates);
+        }
+      });
+    }
+
+    // Remove duplicate auto items (any rule, not only Colombia). Keep the
+    // first copy; if any duplicate is checked, keep that checked state.
+    function dedupeAutoPacking(trip, items) {
+      const key = tripKey(trip);
+      const seen = new Map();
+      const removals = {};
+      const keepChecked = {};
+      Object.entries(items).forEach(([id, item]) => {
+        const autoKey = item.auto || '';
+        if (!autoKey) return;
+        if (!seen.has(autoKey)) {
+          seen.set(autoKey, id);
+          return;
+        }
+        const keepId = seen.get(autoKey);
+        if (item.checked && !items[keepId].checked) {
+          keepChecked[keepId + '/checked'] = true;
+        }
+        removals[id] = null;
+      });
+      const updates = Object.assign(removals, keepChecked);
+      if (Object.keys(updates).length) {
+        db.ref('travelPacking/' + key).update(updates);
+        return true;
+      }
+      return false;
+    }
+
+    const autoBackfillStarted = new Set();
+
+    function backfillAutoRules(trip, items) {
+      const key = tripKey(trip);
+      if (autoBackfillStarted.has(key)) return;
+      autoBackfillStarted.add(key);
+      db.ref('travelPackingDeleted/' + key).once('value').then(snap => {
+        const deleted = snap.val() || {};
+        const nights = tripNights(trip);
+        const updates = {};
+        ALWAYS_PACK.forEach(ruleKey => {
+          if (deleted[ruleKey]) return; // user removed it on purpose
+          const rule = PACKING_RULES.find(r => r.key === ruleKey);
+          if (!rule) return;
+          const expected = rule.text(nights).toLowerCase();
+          const present = Object.values(items).some(it =>
+            it.auto === rule.key || (it.text || '').toLowerCase() === expected);
+          if (present) return;
+          const id = db.ref('travelPacking/' + key).push().key;
+          updates[id] = { text: rule.text(nights), checked: false, auto: rule.key,
+                          category: rule.category || categorizeItem(rule.text(nights)) };
+        });
+        if (Object.keys(updates).length) {
+          db.ref('travelPacking/' + key).update(updates); // re-fires the listener
+        }
+      });
+    }
+
+    let packingListener = null;
+
+    function loadPacking() {
+      if (!selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      if (packingListener) {
+        packingListener.off();
+        packingListener = null;
+      }
+      packingListener = db.ref('travelPacking/' + key);
+      packingListener.on('value', snap => {
+        const items = snap.val() || {};
+        // Auto-populate essentials if list is empty
+        if (Object.keys(items).length === 0) {
+          autoPopulatePacking(selectedTrip);
+          return; // The .on listener will fire again with the new data
+        }
+        if (dedupeAutoPacking(selectedTrip, items)) return;
+        backfillAutoRules(selectedTrip, items);
+        backfillTripSpecificPacking(selectedTrip, items);
+        syncAutoCounts(selectedTrip, items);
+        renderPacking(items);
+      });
+    }
+
+    // Same classifier as the Python seed script, used both for rendering
+    // existing items missing a category and for assigning one to new items.
+    function categorizeItem(text) {
+      const t = (text || '').toLowerCase();
+      if (/\b(passport|id|ticket|boarding pass|visa|insurance card|tsa|global entry)\b/.test(t)) return 'Documents';
+      if (/\b(charger|laptop|phone|headphones?|earbuds|adapter|cable|kindle|ipad|tablet|airpods)\b/.test(t)) return 'Electronics';
+      if (/\b(toothbrush|toothpaste|deodorant|sunscreen|shampoo|toiletries|razor|skincare|makeup|lotion|brush|comb|moisturizer|perfume|nail|q-tips|floss|contacts)\b/.test(t)) return 'Toiletries';
+      if (/\b(sneakers?|flats?|heels?|boots?|sandals?|loafers?)\b/.test(t)) return 'Shoes';
+      if (/\b(dress|walking|comfortable|tennis|running|hiking|gym|evening)\s+shoes?\b/.test(t)) return 'Shoes';
+      if (/\b(bag|wallet|sunglasses|umbrella|sun hat|jewelry|watch|belt|scarf|hat\b|necklace|bracelet|earrings)\b/.test(t)) return 'Bags & Accessories';
+      if (/\b(blazer|pants?|shirts?|dress|skirt|jacket|raincoat|trench|pajamas?|socks?|underwear|bras?|t-?shirts?|sundress|sweater|cardigan|tights|outfit|shorts|coat|workout|leggings)\b/.test(t)) return 'Clothing';
+      return 'Other';
+    }
+    const PACKING_CAT_ORDER = ['Clothing', 'Shoes', 'Bags & Accessories', 'Toiletries', 'Electronics', 'Documents', 'Other'];
+
+    function renderPacking(items) {
+      // Group by category; auto-classify any item missing one
+      const buckets = {};
+      Object.entries(items).forEach(([id, item]) => {
+        const cat = item.category || categorizeItem(item.text || '');
+        (buckets[cat] = buckets[cat] || []).push([id, item]);
+      });
+      // Render each category as a section with a header. If an item's text
+      // ends with a (sXX_YYY) or (CNNN) piece id, turn that suffix into a
+      // link that deep-opens the wardrobe page on that item.
+      const html = PACKING_CAT_ORDER.filter(c => buckets[c]).map(cat => {
+        const rows = buckets[cat].map(([id, item]) => {
+          const autoTag = item.auto ? ` <span style="font-size:0.6rem;color:#b8a48e;text-transform:uppercase;letter-spacing:0.5px;margin-left:0.3rem;" title="Auto-calculated from trip length">auto</span>` : '';
+          // Linkify trailing (pid) — escape body text, then re-attach as link
+          const text = item.text || '';
+          const outfitMatch = text.match(/^Outfit #(\d+)\s*(.*)$/);
+          const pidMatch = text.match(/^(.*?)\s*\((s\d+_\d+|C\d+)\)\s*$/);
+          let textHtml;
+          if (outfitMatch) {
+            const num = outfitMatch[1];
+            const note = outfitMatch[2] ? ' ' + escHtml(outfitMatch[2]) : '';
+            textHtml = `Outfit <a href="outfit-gallery.html?slides=${num}" target="_blank" style="color:#9c8b76;text-decoration:none;border-bottom:1px dotted #c9b99a;">#${num}</a>${note}`;
+          } else if (pidMatch) {
+            const body = escHtml(pidMatch[1]);
+            const pid = pidMatch[2];
+            textHtml = `${body} <a href="wardrobe.html?item=${pid}" target="_blank" style="font-size:0.7rem;color:#9c8b76;text-decoration:none;border-bottom:1px dotted #c9b99a;">(${pid})</a>`;
+          } else {
+            textHtml = escHtml(text);
+          }
+          const thumbHtml = outfitMatch
+            ? `<a class="outfit-thumb empty" data-slide="${outfitMatch[1]}" href="outfit-gallery.html?slides=${outfitMatch[1]}" target="_blank" title="Open outfit #${outfitMatch[1]}"></a>`
+            : '';
+          return `<li class="packing-item">
+            <input type="checkbox" ${item.checked ? 'checked' : ''} data-id="${id}">
+            <span class="item-text${item.checked ? ' checked' : ''}">${textHtml}${autoTag}</span>
+            <button class="item-delete" data-id="${id}" data-auto="${item.auto || ''}">&times;</button>
+            ${thumbHtml}
+          </li>`;
+        }).join('');
+        return `<div class="packing-category">
+          <div class="packing-cat-label">${cat} <span style="color:#b8a48e;font-weight:400;">(${buckets[cat].length})</span></div>
+          <ul class="packing-cat-list">${rows}</ul>
+        </div>`;
+      }).join('');
+      packingListEl.innerHTML = html;
+
+      packingListEl.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          const id = cb.dataset.id;
+          const key = tripKey(selectedTrip);
+          db.ref('travelPacking/' + key + '/' + id + '/checked').set(cb.checked);
+        });
+      });
+
+      packingListEl.querySelectorAll('.item-delete').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.id;
+          const key = tripKey(selectedTrip);
+          // Remember deletion of a backfilled essential so it won't re-appear.
+          if (btn.dataset.auto &&
+              (ALWAYS_PACK.includes(btn.dataset.auto) || btn.dataset.auto.startsWith('colombia_2026_'))) {
+            db.ref('travelPackingDeleted/' + key + '/' + btn.dataset.auto).set(true);
+          }
+          db.ref('travelPacking/' + key + '/' + id).remove();
+        });
+      });
+
+      if (packingListEl.querySelector('.outfit-thumb')) populateOutfitThumbs();
+    }
+
+    // --- Outfit thumbnails (lazy-loaded outfit data) ---
+    let _outfitMap = null;      // slide -> outfit (with layout/images)
+    let _outfitMapPromise = null;
+
+    function ensureOutfitData() {
+      if (_outfitMapPromise) return _outfitMapPromise;
+      _outfitMapPromise = new Promise(resolve => {
+        const finish = () => {
+          // Use the original outfit-data.js layouts only — every image in those
+          // resolves on disk. (Firebase edit-layouts reference wardrobe pieces
+          // that need the gallery's crop cache, so they're skipped here.)
+          const map = {};
+          (window.OUTFIT_DATA || []).forEach(o => { map[o.slide] = o; });
+          _outfitMap = map;
+          resolve(map);
+        };
+        if (window.OUTFIT_DATA) { finish(); return; }
+        const s = document.createElement('script');
+        s.src = 'outfit-data.js';
+        s.onload = finish;
+        s.onerror = () => { _outfitMap = {}; resolve({}); };
+        document.head.appendChild(s);
+      });
+      return _outfitMapPromise;
+    }
+
+    function outfitThumbInner(o) {
+      const IMG = 'outfit-images/';
+      if (o.layout && o.layout.length) {
+        return o.layout.map(item => {
+          let f = item.file.startsWith('../') ? item.file.substring(3) : item.file;
+          const src = f.startsWith('data:') ? f
+            : f.startsWith('wardrobe-thumbs/') ? f
+            : IMG + f;
+          return `<img src="${src}" alt="" loading="lazy"
+            style="left:${item.left}%;top:${item.top}%;width:${item.width}%;height:${item.height}%;">`;
+        }).join('');
+      }
+      if (o.images && o.images.length) {
+        // No layout — tile the first few images across the box.
+        return o.images.slice(0, 4).map((f, i) =>
+          `<img src="${IMG}${f}" alt="" loading="lazy"
+            style="left:${i * 25}%;top:0;width:25%;height:100%;">`
+        ).join('');
+      }
+      return '';
+    }
+
+    function populateOutfitThumbs() {
+      ensureOutfitData().then(map => {
+        packingListEl.querySelectorAll('.outfit-thumb').forEach(el => {
+          if (el.dataset.filled) return;
+          const o = map[parseInt(el.dataset.slide, 10)];
+          const inner = o ? outfitThumbInner(o) : '';
+          if (inner) {
+            el.innerHTML = inner;
+            el.classList.remove('empty');
+            el.dataset.filled = '1';
+          }
+        });
+      });
+    }
+
+    function escHtml(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    document.getElementById('addPackingBtn').addEventListener('click', addPackingItem);
+    packingInput.addEventListener('keydown', e => { if (e.key === 'Enter') addPackingItem(); });
+
+    function addPackingItem() {
+      const text = packingInput.value.trim();
+      if (!text || !selectedTrip) return;
+      const key = tripKey(selectedTrip);
+      db.ref('travelPacking/' + key).push({ text, checked: false, category: categorizeItem(text) });
+      packingInput.value = '';
+    }
+
+    // --- Link an outfit into the packing list ---
+    const outfitInput = document.getElementById('outfitInput');
+    const outfitNote = document.getElementById('outfitNote');
+    document.getElementById('addOutfitBtn').addEventListener('click', addOutfitItem);
+    outfitInput.addEventListener('keydown', e => { if (e.key === 'Enter') addOutfitItem(); });
+    outfitNote.addEventListener('keydown', e => { if (e.key === 'Enter') addOutfitItem(); });
+
+    function addOutfitItem() {
+      const num = parseInt(outfitInput.value, 10);
+      if (!num || num < 1 || !selectedTrip) return;
+      const note = outfitNote.value.trim();
+      const text = 'Outfit #' + num + (note ? ' ' + note : '');
+      const key = tripKey(selectedTrip);
+      db.ref('travelPacking/' + key).push({ text, checked: false, category: 'Clothing' });
+      outfitInput.value = '';
+      outfitNote.value = '';
+    }
+
+    // --- Init ---
+    if (trips.length) {
+      // Select first current trip, or first upcoming
+      const currentTrip = trips.find(t => {
+        const s = parseDate(t.start), e = parseDate(t.end);
+        return today >= s && today <= e;
+      });
+      selectTrip(currentTrip || trips[0]);
+    }
+    renderCountdown();
+  </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>

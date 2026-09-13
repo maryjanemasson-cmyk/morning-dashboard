@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekend Plan — Morning Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5; color: #3d3529; min-height: 100vh;
+    }
+    .banner { height: 90px; background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%); position: relative; }
+    .banner::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: linear-gradient(to top, #faf8f5, transparent); }
+    .container { max-width: 800px; margin: -22px auto 0; padding: 0 1.75rem 2rem; position: relative; }
+    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 600; color: #2c2418; margin-bottom: 0.2rem; }
+    h1 .sub { display: block; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 400; color: #9c8b76; margin-top: 0.2rem; }
+
+    .nav-strip { display:flex; gap:0.5rem; margin: 1rem 0 1.25rem; flex-wrap: wrap; }
+    .nav-strip a { font-size:0.78rem; color:#9c8b76; text-decoration:none; border:1px solid #ebe5dc; padding:0.35rem 0.9rem; border-radius:20px; background:#fff; }
+    .nav-strip a.back { background:#2c2418; color:#fff; border-color:#2c2418; }
+    .print-btn { font-size: 0.78rem; padding: 0.4rem 0.95rem; border-radius: 20px; border: 1px solid #c9b99a; background: #c9b99a; color: #fff; cursor: pointer; font-family: inherit; }
+    .print-btn:hover { background: #bfae8e; }
+
+    .day-card {
+      background: #fff; border: 1px solid #ebe5dc;
+      border-radius: 10px; padding: 1.4rem 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .day-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 0.5rem; padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f0ebe4;
+    }
+    .day-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem; font-weight: 600; color: #2c2418;
+    }
+    .day-date { font-size: 0.85rem; color: #9c8b76; }
+
+    .events-block { margin-top: 0.8rem; margin-bottom: 1rem; }
+    .events-title {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #9c8b76; margin-bottom: 0.4rem;
+    }
+    .event-item {
+      display: flex; gap: 0.75rem; padding: 0.35rem 0;
+      font-size: 0.88rem; color: #3d3529;
+      border-bottom: 1px dashed #f0ebe4;
+    }
+    .event-item:last-child { border-bottom: none; }
+    .event-time { width: 5rem; font-weight: 600; color: #6b5d4d; flex-shrink: 0; }
+    .event-summary { flex: 1; }
+    .event-summary .loc { font-size: 0.78rem; color: #9c8b76; }
+    .events-empty { font-size: 0.85rem; color: #b8a48e; font-style: italic; padding: 0.4rem 0; }
+
+    .checklist-block { margin-top: 0.8rem; }
+    .checklist {
+      list-style: none;
+    }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.4rem 0; border-bottom: 1px dashed #f0ebe4;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .check-cb {
+      width: 18px; height: 18px; border: 1.5px solid #c9b99a;
+      border-radius: 4px; cursor: pointer; flex-shrink: 0; margin-top: 1px;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.78rem; color: transparent;
+      transition: all 0.15s;
+    }
+    .check-cb.checked { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .check-text { flex: 1; font-size: 0.92rem; color: #3d3529; line-height: 1.4; }
+    .check-text.done { text-decoration: line-through; color: #c9bfb0; }
+    .check-del {
+      font-size: 0.85rem; color: #d4c5b5; cursor: pointer; padding: 0 0.3rem;
+      opacity: 0; transition: opacity 0.15s;
+    }
+    .checklist li:hover .check-del { opacity: 1; }
+    .check-del:hover { color: #c2553a; }
+
+    .add-row {
+      display: flex; gap: 0.4rem; margin-top: 0.7rem;
+    }
+    .add-input {
+      flex: 1; border: 1px solid #ebe5dc; border-radius: 6px;
+      padding: 0.4rem 0.65rem; font-family: inherit; font-size: 0.85rem;
+      color: #3d3529; outline: none; background: #faf8f5;
+    }
+    .add-input:focus { border-color: #c9b99a; background: #fff; }
+    .add-btn {
+      background: #c9b99a; color: #fff; border: none;
+      padding: 0.4rem 0.85rem; border-radius: 6px;
+      font-size: 0.78rem; font-weight: 500; cursor: pointer; font-family: inherit;
+    }
+    .add-btn:hover { background: #bfae8e; }
+
+    .src-badge {
+      display: inline-block;
+      font-size: 0.62rem; font-weight: 500;
+      padding: 1px 7px; border-radius: 8px;
+      margin-left: 0.4rem; vertical-align: middle;
+      text-transform: lowercase; letter-spacing: 0.02em;
+    }
+    .src-gmail  { background: #ebe5dc; color: #6b5d4d; }
+    .src-school { background: #e9dee8; color: #6e4d6a; }
+    .src-chore  { background: #e1e9dd; color: #4a5d40; }
+    .src-todo   { background: #e3dcce; color: #74614e; }
+    .src-recurring { background: #d4dee5; color: #4a6675; }
+    .src-manual { display: none; }
+
+    .day-tools {
+      display: flex; gap: 0.75rem; flex-wrap: wrap;
+      margin-top: 0.6rem; padding-top: 0.5rem;
+      border-top: 1px dashed #f0ebe4;
+    }
+    .day-tools a {
+      font-size: 0.7rem; color: #9c8b76; text-decoration: none;
+      cursor: pointer;
+    }
+    .day-tools a:hover { color: #6b5d4d; text-decoration: underline; }
+
+    /* Drag-and-drop */
+    .checklist li { cursor: grab; user-select: none; }
+    .checklist li:active { cursor: grabbing; }
+    .checklist li.dragging { opacity: 0.4; }
+    .checklist li.drop-before { box-shadow: 0 -2px 0 #c9b99a inset; background: #faf5ec; }
+    .checklist li.drop-after  { box-shadow: 0 2px 0 #c9b99a inset; background: #faf5ec; }
+    .drag-handle {
+      color: #d4c5b5; font-size: 0.85rem; line-height: 1;
+      margin-right: 0.3rem; flex-shrink: 0;
+      letter-spacing: -2px; user-select: none;
+    }
+    .move-btn {
+      font-size: 0.68rem; color: #9c8b76;
+      padding: 2px 7px; border-radius: 10px;
+      border: 1px solid #ebe5dc; background: #fff;
+      cursor: pointer; font-family: inherit;
+      margin-right: 0.3rem; flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .move-btn:hover { background: #faf5ec; border-color: #c9b99a; color: #6b5d4d; }
+
+    @media print {
+      body { background: #fff; }
+      .banner, .nav-strip, .print-btn, .add-row, .check-del { display: none !important; }
+      .container { max-width: 100%; padding: 0.5in; margin: 0; }
+      .day-card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; margin-bottom: 0.4in; }
+      h1 { font-size: 1.6rem; }
+      .check-cb { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      body.print-today #day-tomorrow { display: none; }
+      body.print-tomorrow #day-today { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <h1>
+      Weekend Plan
+      <span class="sub" id="weekend-range"></span>
+    </h1>
+
+    <div class="nav-strip">
+      <a class="back" href="index.html">← Dashboard</a>
+      <a href="outfit-gallery.html">Outfit Gallery</a>
+      <a href="wardrobe.html">Wardrobe</a>
+      <a href="travel.html">Travel</a>
+      <a href="health.html">Health</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="grocery.html">Grocery</a>
+      <a href="meals.html">Meal Planner</a>
+      <button class="print-btn" onclick="printDay('all')">🖨️ Print both</button>
+      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('today')" id="print-sat-btn">🖨️ Saturday only</button>
+      <button class="print-btn" style="background:#fff;color:#6b5d4d;border:1px solid #c9b99a;" onclick="printDay('tomorrow')" id="print-sun-btn">🖨️ Sunday only</button>
+    </div>
+
+    <div class="day-card" id="day-today">
+      <div class="day-header">
+        <div class="day-name" id="today-name">Today</div>
+        <div class="day-date" id="today-date"></div>
+      </div>
+      <div class="events-block">
+        <div class="events-title">Calendar</div>
+        <div id="today-events"></div>
+      </div>
+      <div class="checklist-block">
+        <div class="events-title">To do</div>
+        <ul class="checklist" id="today-list"></ul>
+        <div class="add-row">
+          <input class="add-input" id="today-add-input" placeholder="Add a task for Saturday…" onkeydown="if(event.key==='Enter')addItem('sat')">
+          <button class="add-btn" onclick="addItem('sat')">Add</button>
+        </div>
+        <div class="day-tools">
+          <a href="#" onclick="event.preventDefault();addRecurring('sat')">+ Repeat every Saturday</a>
+          <a href="#" onclick="event.preventDefault();manageRecurring('sat')">Manage recurring</a>
+          <a href="#" onclick="event.preventDefault();clearDone('sat')">Clear checked</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card" id="day-tomorrow">
+      <div class="day-header">
+        <div class="day-name" id="tomorrow-name">Tomorrow</div>
+        <div class="day-date" id="tomorrow-date"></div>
+      </div>
+      <div class="events-block">
+        <div class="events-title">Calendar</div>
+        <div id="tomorrow-events"></div>
+      </div>
+      <div class="checklist-block">
+        <div class="events-title">To do</div>
+        <ul class="checklist" id="tomorrow-list"></ul>
+        <div class="add-row">
+          <input class="add-input" id="tomorrow-add-input" placeholder="Add a task for Sunday…" onkeydown="if(event.key==='Enter')addItem('sun')">
+          <button class="add-btn" onclick="addItem('sun')">Add</button>
+        </div>
+        <div class="day-tools">
+          <a href="#" onclick="event.preventDefault();addRecurring('sun')">+ Repeat every Sunday</a>
+          <a href="#" onclick="event.preventDefault();manageRecurring('sun')">Manage recurring</a>
+          <a href="#" onclick="event.preventDefault();clearDone('sun')">Clear checked</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script src="calendar-data.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Date helpers — keys are calendar dates so plan rolls forward as days change
+    function isoDate(d) {
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
+    // Pick the upcoming weekend's Saturday + Sunday.
+    // Mon–Fri → next Sat+Sun. Sat → today + tomorrow. Sun → yesterday + today.
+    function computeWeekendDays() {
+      const today = new Date(); today.setHours(0,0,0,0);
+      const dow = today.getDay(); // 0=Sun .. 6=Sat
+      let sat = new Date(today);
+      if (dow === 6) {
+        // already Saturday
+      } else if (dow === 0) {
+        sat.setDate(today.getDate() - 1);
+      } else {
+        sat.setDate(today.getDate() + (6 - dow));
+      }
+      const sun = new Date(sat); sun.setDate(sat.getDate() + 1);
+      return { sat, sun };
+    }
+    const { sat: SAT, sun: SUN } = computeWeekendDays();
+    const SAT_KEY = isoDate(SAT);
+    const SUN_KEY = isoDate(SUN);
+
+    // Render headers
+    const fmtDay = d => d.toLocaleDateString('en-US', { weekday: 'long' });
+    const fmtDate = d => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    document.getElementById('today-name').textContent = fmtDay(SAT);
+    document.getElementById('today-date').textContent = fmtDate(SAT);
+    document.getElementById('tomorrow-name').textContent = fmtDay(SUN);
+    document.getElementById('tomorrow-date').textContent = fmtDate(SUN);
+    document.getElementById('weekend-range').textContent = fmtDate(SAT) + ' — ' + fmtDate(SUN);
+
+    // Calendar events
+    function renderEvents(targetEl, dateKey) {
+      const events = (window.CALENDAR_EVENTS || []).filter(e => {
+        const st = e.startTime || e.startDate || '';
+        return st.startsWith(dateKey);
+      });
+      const seen = new Set();
+      const unique = [];
+      for (const e of events) {
+        const k = (e.summary||'') + '|' + (e.startTime||e.startDate||'');
+        if (seen.has(k)) continue;
+        seen.add(k); unique.push(e);
+      }
+      if (unique.length === 0) {
+        targetEl.innerHTML = '<div class="events-empty">Nothing scheduled</div>';
+        return;
+      }
+      targetEl.innerHTML = unique.map(e => {
+        const t = e.startTime ? new Date(e.startTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : 'All day';
+        return `<div class="event-item">
+          <div class="event-time">${t}</div>
+          <div class="event-summary">${e.summary||''}${e.location ? '<div class="loc">' + e.location + '</div>' : ''}</div>
+        </div>`;
+      }).join('');
+    }
+    renderEvents(document.getElementById('today-events'), SAT_KEY);
+    renderEvents(document.getElementById('tomorrow-events'), SUN_KEY);
+
+    // Mirror of CHORE_TYPES from index.html — kept inline so weekend-plan can seed from chores without coupling.
+    const CHORE_TYPES = [
+      { id: 'book-pilates', name: 'Book Pilates & OTF classes', icon: '🧘', dueDays: 7 },
+      { id: 'dry-cleaning', name: 'Drop off dry cleaning', icon: '🧥', dueDays: 7 },
+      { id: 'call-mom', name: 'Call Mom', icon: '📞', dueDays: 7 },
+      { id: 'dog-poop', name: 'Pick up dog poop', icon: '🐶', dueDays: 7 },
+      { id: 'water-plants', name: 'Water plants', icon: '🌱', dueDays: 7 },
+      { id: 'weeding', name: 'Weed the garden', icon: '🌻', dueDays: 14 },
+      { id: 'pedicure', name: 'Pedicure', icon: '💅', dueDays: 30 },
+      { id: 'eyebrows', name: 'Eyebrow care', icon: '✨', dueDays: 30 },
+    ];
+
+    // Editable checklists, keyed by which weekend day
+    let _items = { sat: [], sun: [] };
+    // Track which day's list has loaded at least once from Firebase. The
+    // merge* functions MUST NOT write anything before the day's list has
+    // loaded — otherwise they'd push their additions onto an empty in-memory
+    // array and persist that empty-plus-merges list back, wiping the user's
+    // existing items.
+    let _listLoaded = { sat: false, sun: false };
+    function listKey(which) { return which === 'sat' ? SAT_KEY : SUN_KEY; }
+    function listDomId(which) { return (which === 'sat' ? 'today' : 'tomorrow') + '-list'; }
+    function addInputId(which) { return (which === 'sat' ? 'today' : 'tomorrow') + '-add-input'; }
+
+    function renderList(which) {
+      const ul = document.getElementById(listDomId(which));
+      const items = _items[which] || [];
+      ul.ondragover = (e) => { e.preventDefault(); };
+      ul.ondrop = (e) => {
+        // Drop on empty space → append to end
+        if (e.target === ul) { e.preventDefault(); dropOnList(which, items.length); }
+      };
+      if (items.length === 0) {
+        ul.innerHTML = '<li style="color:#b8a48e;font-style:italic;border:none;cursor:default;" data-empty="1">Nothing yet — add tasks below, or drag from the other day.</li>';
+        return;
+      }
+      const moveLabel = which === 'sat' ? '→ Sun' : '← Sat';
+      const otherWhich = which === 'sat' ? 'sun' : 'sat';
+      ul.innerHTML = items.map((it, i) => {
+        const src = it.source || 'manual';
+        const badge = src !== 'manual' ? `<span class="src-badge src-${src}">${src}</span>` : '';
+        return `<li draggable="true"
+          ondragstart="dragStart(event, '${which}', ${i})"
+          ondragend="dragEnd(event)"
+          ondragover="dragOverItem(event, '${which}', ${i})"
+          ondragleave="dragLeaveItem(event)"
+          ondrop="dropItem(event, '${which}', ${i})">
+          <span class="drag-handle" title="Drag to reorder">⋮⋮</span>
+          <div class="check-cb ${it.done ? 'checked' : ''}" onclick="toggleItem('${which}', ${i})">${it.done ? '✓' : ''}</div>
+          <div class="check-text ${it.done ? 'done' : ''}">${escapeHtml(it.text)}${badge}</div>
+          <button class="move-btn" onclick="moveToOtherDay('${which}', ${i})" title="Move to ${otherWhich === 'sat' ? 'Saturday' : 'Sunday'}">${moveLabel}</button>
+          <span class="check-del" onclick="deleteItem('${which}', ${i})">×</span>
+        </li>`;
+      }).join('');
+    }
+
+    // ── Drag and drop ──
+    let _drag = null;  // { fromWhich, fromIndex }
+
+    window.dragStart = function(event, which, index) {
+      _drag = { fromWhich: which, fromIndex: index };
+      event.currentTarget.classList.add('dragging');
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/plain', `${which}:${index}`);
+    };
+    window.dragEnd = function(event) {
+      event.currentTarget.classList.remove('dragging');
+      document.querySelectorAll('.checklist li').forEach(li => {
+        li.classList.remove('drop-before','drop-after');
+      });
+    };
+    window.dragOverItem = function(event, which, index) {
+      if (!_drag) return;
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      // Decide above-or-below based on cursor position
+      const li = event.currentTarget;
+      const rect = li.getBoundingClientRect();
+      const before = (event.clientY - rect.top) < rect.height / 2;
+      li.classList.toggle('drop-before', before);
+      li.classList.toggle('drop-after', !before);
+    };
+    window.dragLeaveItem = function(event) {
+      event.currentTarget.classList.remove('drop-before','drop-after');
+    };
+    window.dropItem = function(event, which, index) {
+      if (!_drag) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const li = event.currentTarget;
+      const rect = li.getBoundingClientRect();
+      const before = (event.clientY - rect.top) < rect.height / 2;
+      li.classList.remove('drop-before','drop-after');
+      const targetIndex = before ? index : index + 1;
+      moveItem(_drag.fromWhich, _drag.fromIndex, which, targetIndex);
+      _drag = null;
+    };
+    function dropOnList(which, atIndex) {
+      if (!_drag) return;
+      moveItem(_drag.fromWhich, _drag.fromIndex, which, atIndex);
+      _drag = null;
+    }
+
+    function moveItem(fromWhich, fromIndex, toWhich, toIndex) {
+      if (fromWhich === toWhich && (toIndex === fromIndex || toIndex === fromIndex + 1)) {
+        return; // no-op
+      }
+      const item = _items[fromWhich][fromIndex];
+      if (!item) return;
+      _items[fromWhich].splice(fromIndex, 1);
+      // Adjust insert index if we removed from earlier in same list
+      let insertAt = toIndex;
+      if (fromWhich === toWhich && fromIndex < toIndex) insertAt = toIndex - 1;
+      _items[toWhich].splice(insertAt, 0, item);
+
+      // If the item came from a merge source (recurring/chore), suppress it
+      // on the source day so the merge functions don't re-add it. Also lift
+      // any suppression on the destination day so the move actually sticks.
+      if (fromWhich !== toWhich && item.text) {
+        if (item.source === 'recurring' || item.source === 'chore') {
+          addToSuppress(fromWhich, item.text);
+        }
+        const lc = String(item.text).toLowerCase();
+        if (_suppress[toWhich].has(lc)) {
+          _suppress[toWhich].delete(lc);
+          db.ref('weekendPlan/_suppress/' + listKey(toWhich)).set([..._suppress[toWhich]]);
+        }
+      }
+
+      // Batched atomic write so the page doesn't flicker
+      const updates = {};
+      updates['weekendPlan/' + SAT_KEY] = _items.sat;
+      updates['weekendPlan/' + SUN_KEY] = _items.sun;
+      db.ref().update(updates);
+    }
+
+    // Seed the checklist with inbox items, overdue chores, manual TODOs — but only once per date.
+    // Marker at weekendPlan/_seeded/{dateKey} prevents re-seeding if the user clears the list.
+    async function maybeSeed(which) {
+      const dayKey = listKey(which);
+      const flagRef = db.ref('weekendPlan/_seeded/' + dayKey);
+      const flagSnap = await flagRef.once('value');
+      if (flagSnap.val()) return;
+      // Mark up front to prevent double-seed if the page reloads mid-seed
+      await flagRef.set(true);
+
+      const seed = [];
+      const today = new Date(); today.setHours(0,0,0,0);
+      const inboxItems = (window.EMAIL_DATA && window.EMAIL_DATA.items) || [];
+
+      if (which === 'sat') {
+        // Amazon returns collapse into one line (otherwise the list bloats).
+        const amazonReturns = inboxItems.filter(it =>
+          it.type === 'return' && /amazon/i.test(it.title || '')
+        );
+        const otherReturns = inboxItems.filter(it =>
+          it.type === 'return' && !/amazon/i.test(it.title || '')
+        );
+        if (amazonReturns.length === 1) {
+          seed.push({ text: amazonReturns[0].title, done: false, source: 'gmail' });
+        } else if (amazonReturns.length > 1) {
+          seed.push({
+            text: `Amazon returns (${amazonReturns.length} items to mail)`,
+            done: false, source: 'gmail'
+          });
+        }
+        otherReturns.forEach(it => {
+          seed.push({ text: it.title, done: false, source: 'gmail' });
+        });
+        // Other inbox actions
+        inboxItems.forEach(it => {
+          if (it.type === 'action') {
+            seed.push({ text: it.title, done: false, source: 'gmail' });
+          }
+        });
+        // School items dated within the weekend window
+        inboxItems.forEach(it => {
+          if (it.type !== 'school') return;
+          if (it.date === SAT_KEY) {
+            seed.push({ text: it.title, done: false, source: 'school' });
+          }
+        });
+        // Overdue / due-soon recurring chores
+        const choreSnap = await db.ref('chores').once('value');
+        const chores = choreSnap.val() || {};
+        CHORE_TYPES.forEach(c => {
+          const lastDate = chores[c.id];
+          let daysLeft = 0;
+          if (!lastDate) {
+            daysLeft = -1; // never done → overdue
+          } else {
+            const last = new Date(lastDate);
+            const daysAgo = Math.floor((today - last) / 86400000);
+            daysLeft = c.dueDays - daysAgo;
+          }
+          if (daysLeft <= 2) {
+            seed.push({ text: c.icon + ' ' + c.name, done: false, source: 'chore' });
+          }
+        });
+        // Manual TODOs from the dashboard's To Do card
+        const todoSnap = await db.ref('todos').once('value');
+        const todos = todoSnap.val();
+        if (todos) {
+          const arr = Array.isArray(todos) ? todos : Object.values(todos);
+          arr.forEach(t => {
+            if (t && !t.done && t.text) {
+              seed.push({ text: t.text, done: false, source: 'todo' });
+            }
+          });
+        }
+      } else if (which === 'sun') {
+        // Sunday gets school items specifically dated for Sunday
+        inboxItems.forEach(it => {
+          if (it.type !== 'school') return;
+          if (it.date === SUN_KEY) {
+            seed.push({ text: it.title, done: false, source: 'school' });
+          }
+        });
+      }
+
+      if (seed.length === 0) return;
+      await db.ref('weekendPlan/' + dayKey).set(seed);
+    }
+
+    async function loadList(which) {
+      await maybeSeed(which);
+      db.ref('weekendPlan/' + listKey(which)).on('value', snap => {
+        const v = snap.val();
+        _items[which] = Array.isArray(v) ? v : (v ? Object.values(v) : []);
+        _listLoaded[which] = true;
+        mergeRecurring(which);
+        mergeDueChores(which);
+        renderList(which);
+      });
+    }
+    function saveList(which) {
+      db.ref('weekendPlan/' + listKey(which)).set(_items[which]);
+    }
+
+    // ── Recurring weekday tasks ──
+    // recurringWeekly is keyed by JS day-of-week (0=Sun..6=Sat). Each value is
+    // an array of strings. Items get auto-added to that day's checklist on every
+    // load — deduped by lowercase text match, so a previously-deleted item from
+    // this week comes back next week.
+    let _recurringWeekly = {};
+    db.ref('recurringWeekly').on('value', snap => {
+      _recurringWeekly = snap.val() || {};
+      mergeRecurring('sat');
+      mergeRecurring('sun');
+    });
+
+    // ── Due chores ──
+    // Any chore (from the Reminders card on the dashboard) whose next-due date
+    // falls by Saturday gets auto-added to Saturday. Chores due specifically on
+    // Sunday land on Sunday. The list re-evaluates on every load so toggling
+    // "mark done" from the dashboard removes the chore from the weekend plan
+    // on the next refresh.
+    let _choresState = {};
+    db.ref('chores').on('value', snap => {
+      _choresState = snap.val() || {};
+      mergeDueChores('sat');
+      mergeDueChores('sun');
+    });
+
+    function mergeDueChores(which) {
+      if (!_listLoaded[which]) return; // don't write before the day's list has loaded
+      if (!Array.isArray(CHORE_TYPES) || !CHORE_TYPES.length) return;
+      const dayKey = listKey(which);
+      const dayDate = new Date(dayKey + 'T12:00:00');
+      const otherKey = which === 'sat' ? SUN_KEY : SAT_KEY;
+      const otherDate = new Date(otherKey + 'T12:00:00');
+      const have = new Set((_items[which] || []).map(it => (it.text || '').toLowerCase()));
+      const suppressed = _suppress[which] || new Set();
+      let added = false;
+      CHORE_TYPES.forEach(c => {
+        let dueDate;
+        const lastDate = _choresState[c.id];
+        if (!lastDate) {
+          // Never done — treat as already due
+          dueDate = new Date(0);
+        } else {
+          dueDate = new Date(lastDate);
+          dueDate.setDate(dueDate.getDate() + (c.dueDays || 0));
+        }
+        // Saturday gets everything due by Saturday inclusive.
+        // Sunday gets only chores that come due AFTER Saturday but by Sunday.
+        let shouldAdd;
+        if (which === 'sat') {
+          shouldAdd = dueDate <= dayDate;
+        } else {
+          shouldAdd = dueDate > otherDate && dueDate <= dayDate;
+        }
+        if (!shouldAdd) return;
+        const text = `${c.icon} ${c.name}`;
+        const lc = text.toLowerCase();
+        if (have.has(lc) || suppressed.has(lc)) return;
+        _items[which].push({ text, done: false, source: 'chore' });
+        added = true;
+      });
+      if (added) saveList(which);
+    }
+
+    // Per-date suppression: items the user removed (delete or move away) on
+    // this specific date won't be re-added by mergeRecurring / mergeDueChores.
+    // Stored at weekendPlan/_suppress/{date} = array of lowercase texts. New
+    // date → fresh slate, so a recurring chore still comes back next week.
+    let _suppress = { sat: new Set(), sun: new Set() };
+    function loadSuppress(which) {
+      db.ref('weekendPlan/_suppress/' + listKey(which)).on('value', snap => {
+        const v = snap.val() || [];
+        _suppress[which] = new Set(Array.isArray(v) ? v.map(s => String(s).toLowerCase()) : []);
+      });
+    }
+    loadSuppress('sat');
+    loadSuppress('sun');
+
+    function addToSuppress(which, text) {
+      if (!text) return;
+      const lc = String(text).toLowerCase();
+      _suppress[which].add(lc);
+      db.ref('weekendPlan/_suppress/' + listKey(which)).set([..._suppress[which]]);
+    }
+
+    function mergeRecurring(which) {
+      if (!_listLoaded[which]) return; // don't write before the day's list has loaded
+      const dayKey = listKey(which);
+      const dow = new Date(dayKey + 'T12:00:00').getDay();
+      const recurring = _recurringWeekly[dow];
+      if (!Array.isArray(recurring) || !recurring.length) return;
+      const have = new Set((_items[which] || []).map(it => (it.text || '').toLowerCase()));
+      const suppressed = _suppress[which] || new Set();
+      let added = false;
+      recurring.forEach(text => {
+        if (!text) return;
+        const lc = String(text).toLowerCase();
+        if (have.has(lc) || suppressed.has(lc)) return;
+        _items[which].push({ text: String(text), done: false, source: 'recurring' });
+        added = true;
+      });
+      if (added) saveList(which);
+    }
+
+    window.addRecurring = function(which) {
+      const dayName = which === 'sat' ? 'Saturday' : 'Sunday';
+      const text = prompt(`Recurring task that should appear every ${dayName}:`);
+      if (!text || !text.trim()) return;
+      const dayKey = listKey(which);
+      const dow = new Date(dayKey + 'T12:00:00').getDay();
+      const list = (_recurringWeekly[dow] || []).slice();
+      list.push(text.trim());
+      db.ref('recurringWeekly/' + dow).set(list);
+      // Also add to this week immediately
+      _items[which].push({ text: text.trim(), done: false, source: 'recurring' });
+      saveList(which);
+    };
+
+    window.manageRecurring = function(which) {
+      const dayName = which === 'sat' ? 'Saturday' : 'Sunday';
+      const dayKey = listKey(which);
+      const dow = new Date(dayKey + 'T12:00:00').getDay();
+      const list = (_recurringWeekly[dow] || []);
+      if (!list.length) { alert(`No recurring tasks for ${dayName} yet.`); return; }
+      const numbered = list.map((t, i) => `${i + 1}. ${t}`).join('\n');
+      const choice = prompt(`Recurring ${dayName} tasks:\n\n${numbered}\n\nType a number to remove that one, or Cancel:`);
+      if (!choice) return;
+      const idx = parseInt(choice, 10) - 1;
+      if (isNaN(idx) || idx < 0 || idx >= list.length) { alert('Not a valid number.'); return; }
+      const removed = list[idx];
+      const updated = list.filter((_, i) => i !== idx);
+      db.ref('recurringWeekly/' + dow).set(updated);
+      // Also drop it from this week's checklist if present
+      _items[which] = _items[which].filter(it => (it.text || '').toLowerCase() !== removed.toLowerCase());
+      saveList(which);
+    };
+
+    window.clearDone = function(which) {
+      const before = _items[which].length;
+      _items[which] = _items[which].filter(it => !it.done);
+      const removed = before - _items[which].length;
+      if (!removed) { return; }
+      saveList(which);
+    };
+
+    window.addItem = function(which) {
+      const inp = document.getElementById(addInputId(which));
+      const text = inp.value.trim();
+      if (!text) return;
+      _items[which].push({ text, done: false, source: 'manual' });
+      saveList(which);
+      inp.value = '';
+    };
+    window.toggleItem = function(which, i) {
+      _items[which][i].done = !_items[which][i].done;
+      saveList(which);
+    };
+    window.deleteItem = function(which, i) {
+      const removed = _items[which][i];
+      _items[which].splice(i, 1);
+      // Suppress for this date so merge functions don't re-add it.
+      if (removed && removed.text && (removed.source === 'recurring' || removed.source === 'chore')) {
+        addToSuppress(which, removed.text);
+      }
+      saveList(which);
+    };
+    window.moveToOtherDay = function(which, i) {
+      const other = which === 'sat' ? 'sun' : 'sat';
+      moveItem(which, i, other, _items[other].length);
+    };
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    loadList('sat');
+    loadList('sun');
+
+    window.printDay = function(which) {
+      if (which === 'all') { window.print(); return; }
+      document.body.classList.add('print-' + which);
+      window.print();
+      // Remove class after print dialog closes
+      setTimeout(() => document.body.classList.remove('print-' + which), 100);
+    };
+  </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>

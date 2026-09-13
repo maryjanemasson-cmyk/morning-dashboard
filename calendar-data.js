@@ -581,20 +581,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 4,
   "threads": [
-    {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Up to 50% OFF! Sunday Deals are on \ud83d\udc49"
-    },
-    {
-      "sender": "Courtyard by Marriott",
-      "subject": "Check-In Instructions for Courtyard by Marriott"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 13 Sep 2026"
-    },
     {
       "sender": "BrandsMart Deals",
       "subject": "Final Hours. Final Savings."
@@ -610,18 +598,6 @@ window.EMAIL_DATA = {
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "Walgreens Pharmacy",
-      "subject": "Thank you for choosing our Rx delivery service"
-    },
-    {
-      "sender": "Topgolf",
-      "subject": "Fall Leagues | Registration Closes Soon"
-    },
-    {
-      "sender": "Studio",
-      "subject": "Claire Saffitz's app: Tomorrow is the last day to join!"
     }
   ],
   "items": [

@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Recipes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #faf8f5;
+      color: #3d3529;
+      min-height: 100vh;
+    }
+
+    .banner {
+      height: 100px;
+      background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%);
+      position: relative;
+    }
+    .banner::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 40px; background: linear-gradient(to top, #faf8f5, transparent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -20px auto 0;
+      padding: 0 2rem 3rem;
+      position: relative;
+    }
+
+    .page-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem; font-weight: 600; color: #2c2418;
+    }
+    .page-header a {
+      font-size: 0.8rem; color: #9c8b76; text-decoration: none;
+    }
+    .page-header a:hover { color: #3d3529; text-decoration: underline; }
+
+    /* Search & Filter Bar */
+    .toolbar {
+      display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;
+    }
+    .search-input {
+      flex: 1; min-width: 200px; border: 1px solid #ebe5dc; border-radius: 8px;
+      padding: 0.6rem 1rem; font-size: 0.85rem; font-family: inherit;
+      color: #3d3529; background: #fff; outline: none;
+    }
+    .search-input:focus { border-color: #c9b99a; }
+    .search-input::placeholder { color: #c9bfb0; }
+
+    .filter-btn {
+      font-size: 0.72rem; padding: 0.4rem 0.75rem; border-radius: 20px;
+      border: 1px solid #ebe5dc; background: #fff; color: #6b5d4d;
+      cursor: pointer; font-family: inherit; transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: #c9b99a; }
+    .filter-btn.active { background: #3d3529; color: #fff; border-color: #3d3529; }
+
+    .add-btn {
+      padding: 0.6rem 1.2rem; border-radius: 8px; border: none;
+      background: #3d3529; color: #fff; font-size: 0.82rem;
+      font-family: inherit; cursor: pointer; font-weight: 500;
+    }
+    .add-btn:hover { background: #2c2418; }
+
+    /* Recipe Cards */
+    .recipe-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .recipe-card {
+      background: #fff; border: 1px solid #ebe5dc; border-radius: 10px;
+      padding: 1.25rem; cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .recipe-card:hover { border-color: #c9b99a; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+
+    .rc-image {
+      width: 100%; height: 140px; object-fit: cover; border-radius: 6px;
+      margin-bottom: 0.6rem; background: #f0ebe4;
+    }
+    .rc-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem; font-weight: 600; color: #2c2418; margin-bottom: 0.4rem;
+    }
+    .rc-tags { margin-bottom: 0.5rem; }
+    .rc-tag {
+      display: inline-block; font-size: 0.6rem; color: #9c8b76; background: #f5f0e8;
+      padding: 0.15rem 0.45rem; border-radius: 10px; margin-right: 0.3rem; margin-bottom: 0.2rem;
+    }
+    .rc-meta { font-size: 0.72rem; color: #9c8b76; display: flex; gap: 0.75rem; margin-bottom: 0.4rem; }
+    .rc-stars { color: #c9b99a; font-size: 0.85rem; letter-spacing: 1px; }
+    .rc-stars .filled { color: #b8860b; }
+    .rc-desc {
+      font-size: 0.78rem; color: #6b5d4d; line-height: 1.5;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center; padding: 4rem 2rem; color: #b8a48e;
+    }
+    .empty-state .emoji { font-size: 3rem; margin-bottom: 1rem; }
+    .empty-state p { font-size: 0.9rem; margin-bottom: 1rem; }
+
+    /* Modal */
+    .modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(44,36,24,0.4); z-index: 1000;
+      justify-content: center; align-items: flex-start; padding: 3rem 1rem;
+      overflow-y: auto;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: #fff; border-radius: 12px; width: 100%; max-width: 600px;
+      padding: 2rem; position: relative; box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+    .modal-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem; font-weight: 600; color: #2c2418; margin-bottom: 1.25rem;
+    }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1.25rem; font-size: 1.2rem;
+      color: #b8a48e; cursor: pointer; background: none; border: none;
+    }
+    .modal-close:hover { color: #3d3529; }
+
+    .form-group { margin-bottom: 1rem; }
+    .form-label {
+      display: block; font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px; color: #9c8b76;
+      margin-bottom: 0.35rem;
+    }
+    .form-input, .form-textarea, .form-select {
+      width: 100%; border: 1px solid #ebe5dc; border-radius: 6px;
+      padding: 0.55rem 0.75rem; font-size: 0.85rem; font-family: inherit;
+      color: #3d3529; background: #faf8f5; outline: none;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: #c9b99a; }
+    .form-textarea { min-height: 100px; resize: vertical; }
+    .form-row { display: flex; gap: 0.75rem; }
+    .form-row .form-group { flex: 1; }
+
+    .star-picker { display: flex; gap: 0.3rem; margin-top: 0.2rem; }
+    .star-picker span {
+      font-size: 1.3rem; cursor: pointer; color: #d4c5b5; transition: color 0.1s;
+    }
+    .star-picker span.filled { color: #b8860b; }
+    .star-picker span:hover { color: #b8860b; }
+
+    .form-actions { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.25rem; }
+    .btn-save {
+      padding: 0.6rem 1.5rem; border-radius: 8px; border: none;
+      background: #3d3529; color: #fff; font-size: 0.85rem;
+      font-family: inherit; cursor: pointer; font-weight: 500;
+    }
+    .btn-save:hover { background: #2c2418; }
+    .btn-cancel {
+      padding: 0.6rem 1.5rem; border-radius: 8px;
+      border: 1px solid #ebe5dc; background: #fff; color: #6b5d4d;
+      font-size: 0.85rem; font-family: inherit; cursor: pointer;
+    }
+    .btn-cancel:hover { background: #f5f0e8; }
+    .btn-delete {
+      padding: 0.6rem 1rem; border-radius: 8px;
+      border: 1px solid #fde8e8; background: #fff; color: #c2553a;
+      font-size: 0.8rem; font-family: inherit; cursor: pointer; margin-right: auto;
+    }
+    .btn-delete:hover { background: #fde8e8; }
+
+    /* View modal */
+    .view-field { margin-bottom: 1rem; }
+    .view-label {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #b8a48e; margin-bottom: 0.25rem;
+    }
+    .view-value { font-size: 0.88rem; color: #3d3529; line-height: 1.6; white-space: pre-wrap; }
+    .ingredient-list { list-style: none; padding: 0; margin: 0; }
+    .ingredient-item {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 0.5rem; padding: 0.4rem 0.5rem;
+      cursor: pointer; border-bottom: 1px solid #f0ebe4;
+      transition: background 0.15s;
+    }
+    .ingredient-item:last-child { border-bottom: none; }
+    .ingredient-item:hover { background: #faf5ec; }
+    .ingredient-item .ing-text { flex: 1; }
+    .ingredient-item .ing-add {
+      width: 22px; text-align: center; font-size: 0.95rem;
+      color: #c9b99a; flex-shrink: 0;
+    }
+    .ingredient-item.added { color: #9c8b76; }
+    .ingredient-item.added .ing-text { text-decoration: line-through; }
+    .ingredient-item.added .ing-add { color: #4a8c6f; }
+    @media print {
+      .ingredient-item { cursor: default; border-bottom: none; padding: 0.15rem 0; }
+      .ingredient-item .ing-add { display: none; }
+    }
+    .view-stars { font-size: 1.2rem; color: #b8860b; letter-spacing: 2px; }
+
+    .btn-print {
+      padding: 0.6rem 1.2rem; border-radius: 8px;
+      border: 1px solid #ebe5dc; background: #fff; color: #6b5d4d;
+      font-size: 0.85rem; font-family: inherit; cursor: pointer;
+    }
+    .btn-print:hover { background: #f5f0e8; }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 1rem 2rem; }
+      .recipe-grid { grid-template-columns: 1fr; }
+      .form-row { flex-direction: column; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .banner, .page-header, .toolbar, .recipe-grid, .empty-state,
+      #edit-modal, .form-actions, .btn-print, .btn-save, .btn-cancel, .btn-delete { display: none !important; }
+
+      #view-modal {
+        display: block !important; position: static; background: none;
+        padding: 0; overflow: visible;
+      }
+      #view-modal .modal {
+        box-shadow: none; border: none; padding: 1rem 0; max-width: 100%;
+      }
+      #view-modal .modal-close { display: none; }
+
+      .modal-title { font-size: 24pt !important; margin-bottom: 0.3rem; }
+      .view-label { font-size: 10pt; color: #666; }
+      .view-value { font-size: 12pt; color: #000; }
+      .view-stars { font-size: 14pt; }
+      .rc-tag { border: 1px solid #ccc; background: #f5f5f5; }
+
+      #view-modal img {
+        max-height: 200px; width: auto; border-radius: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="container">
+    <div class="page-header">
+      <h1>My Recipes</h1>
+    </div>
+
+    <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:0.78rem;color:#fff;text-decoration:none;border:1px solid #2c2418;padding:0.35rem 0.9rem;border-radius:20px;background:#2c2418;">← Dashboard</a>
+      <a href="wardrobe.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Wardrobe</a>
+      <a href="outfit-gallery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Outfit Gallery</a>
+      <a  style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;"href="grocery.html">Grocery</a>
+      <a href="meals.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Meal Planner</a>
+      <a href="health.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Health</a>
+      <a href="weekend-plan.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Weekend Plan</a>
+      <a href="travel.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Travel</a>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" class="search-input" id="search" placeholder="Search recipes..." oninput="renderRecipes()" />
+      <div id="filter-buttons"></div>
+      <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+      <button class="add-btn" onclick="openPasteModal()" style="background:#7b648c;">+ Paste Recipe</button>
+      <button class="add-btn" onclick="openUrlModal()" style="background:#4a8c6f;">+ Add by URL</button>
+      <button class="add-btn" onclick="openIgModal()" style="background:linear-gradient(45deg,#e1306c,#fd8d32);">+ From Instagram</button>
+    </div>
+
+    <div id="recipe-grid" class="recipe-grid"></div>
+    <div id="empty-state" class="empty-state" style="display:none">
+      <div class="emoji">&#x1F373;</div>
+      <p>No recipes yet. Add your first one!</p>
+      <button class="add-btn" onclick="openAddModal()">+ Add Recipe</button>
+    </div>
+  </div>
+
+  <!-- Paste Recipe Modal -->
+  <div class="modal-overlay" id="paste-modal">
+    <div class="modal" style="max-width:600px;">
+      <button class="modal-close" onclick="closeModal('paste-modal')">&times;</button>
+      <div class="modal-title">Paste Any Recipe</div>
+      <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Copy an entire recipe from a website, email, note, or message. The dashboard will sort it into the normal recipe fields for you to review before saving.</p>
+
+      <div class="form-group">
+        <label class="form-label">Recipe text</label>
+        <textarea class="form-textarea" id="paste-recipe-text" placeholder="Paste everything here — title, timing, servings, ingredients, instructions, and notes..." style="min-height:280px;"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Source <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#b8a48e;">(optional)</span></label>
+        <input class="form-input" id="paste-recipe-source" placeholder="Website URL, cookbook, email, or person" />
+      </div>
+
+      <div id="paste-status" style="font-size:0.78rem;color:#c2553a;margin-bottom:0.8rem;display:none;"></div>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeModal('paste-modal')">Cancel</button>
+        <button class="btn-save" onclick="parsePastedRecipe()" style="background:#7b648c;">Organize Recipe</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram Import Modal -->
+  <div class="modal-overlay" id="ig-modal">
+    <div class="modal" style="max-width:560px;">
+      <button class="modal-close" onclick="closeModal('ig-modal')">&times;</button>
+      <div class="modal-title">Import Recipe from Instagram</div>
+      <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Instagram blocks direct fetching — but if you paste the Reel's caption text, the parser will split it into title / ingredients / steps.</p>
+
+      <div class="form-group">
+        <label class="form-label">Instagram URL</label>
+        <div style="display:flex;gap:0.4rem;">
+          <input class="form-input" id="ig-url-input" placeholder="https://www.instagram.com/reel/..." style="flex:1;" />
+          <button onclick="igFetchCaption()" id="ig-fetch-btn" style="padding:0.4rem 0.8rem;border-radius:6px;border:none;background:linear-gradient(45deg,#e1306c,#fd8d32);color:#fff;font-size:0.75rem;cursor:pointer;font-family:inherit;white-space:nowrap;">Fetch caption</button>
+        </div>
+        <div style="font-size:0.65rem;color:#9c8b76;margin-top:0.3rem;">Fetch caption also imports the post's cover image when Instagram provides one. Manual paste cannot retrieve the image.</div>
+      </div>
+
+      <div id="ig-cover-preview" style="display:none;margin:0 0 1rem;padding:0.65rem;border:1px solid #ebe5dc;border-radius:10px;background:#faf8f5;align-items:center;gap:0.75rem;">
+        <img id="ig-cover-image" alt="Instagram cover preview" style="width:76px;height:76px;object-fit:cover;border-radius:8px;background:#eee;" />
+        <div style="font-size:0.75rem;color:#6b5d4d;"><strong style="display:block;color:#3d3529;margin-bottom:0.2rem;">Cover image found</strong>This still image will be added to the recipe. You can confirm or replace it on the next screen.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Caption text</label>
+        <textarea class="form-textarea" id="ig-caption-input" placeholder="Paste the caption manually here, OR click Fetch caption above to pull it automatically..." style="min-height:200px;"></textarea>
+      </div>
+
+      <div id="ig-status" style="font-size:0.8rem;color:#9c8b76;margin-bottom:1rem;display:none;"></div>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeModal('ig-modal')">Cancel</button>
+        <button class="btn-save" onclick="parseIgCaption()" style="background:linear-gradient(45deg,#e1306c,#fd8d32);">Parse Caption</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- URL Import Modal -->
+  <div class="modal-overlay" id="url-modal">
+    <div class="modal" style="max-width:500px;">
+      <button class="modal-close" onclick="closeModal('url-modal')">&times;</button>
+      <div class="modal-title">Add Recipe by URL</div>
+      <p style="font-size:0.82rem;color:#9c8b76;margin-bottom:1rem;">Paste a recipe URL and we'll fetch the details automatically.</p>
+
+      <div class="form-group">
+        <label class="form-label">Recipe URL</label>
+        <input class="form-input" id="url-input" placeholder="https://www.example.com/recipe/..." />
+      </div>
+
+      <div id="url-status" style="font-size:0.8rem;color:#9c8b76;margin-bottom:1rem;display:none;"></div>
+
+      <div id="url-fallback" style="display:none;margin-bottom:1rem;">
+        <p style="font-size:0.8rem;color:#6b5d4d;margin-bottom:0.5rem;">Couldn't auto-fetch. Paste the recipe text below and we'll parse it:</p>
+        <textarea class="form-textarea" id="url-paste-text" placeholder="Paste the recipe name, ingredients, and instructions here..." style="min-height:150px;"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeModal('url-modal')">Cancel</button>
+        <button class="btn-save" onclick="fetchRecipeFromUrl()" id="url-fetch-btn">Fetch Recipe</button>
+        <button class="btn-save" onclick="parseFromPaste()" id="url-paste-btn" style="display:none;">Add from Paste</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit Modal -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('edit-modal')">&times;</button>
+      <div class="modal-title" id="modal-title">Add Recipe</div>
+      <div id="import-review-note" style="display:none;margin:-0.35rem 0 1rem;padding:0.7rem 0.85rem;border-left:4px solid #7b648c;background:#f7f2fa;color:#5f4d69;font-size:0.78rem;line-height:1.45;"></div>
+
+      <div class="form-group">
+        <label class="form-label">Recipe Name</label>
+        <input class="form-input" id="f-name" placeholder="e.g. Lemon Herb Chicken" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <select class="form-select" id="f-category">
+            <option value="Dinner">Dinner</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Appetizer">Appetizer</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Snack">Snack</option>
+            <option value="Side">Side</option>
+            <option value="Soup">Soup</option>
+            <option value="Salad">Salad</option>
+            <option value="Drink">Drink</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cuisine</label>
+          <input class="form-input" id="f-cuisine" placeholder="e.g. Italian, Mexican" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Prep Time</label>
+          <input class="form-input" id="f-prep" placeholder="e.g. 15 min" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cook Time</label>
+          <input class="form-input" id="f-cook" placeholder="e.g. 30 min" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Servings</label>
+          <input class="form-input" id="f-servings" placeholder="e.g. 4" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Tags</label>
+        <input class="form-input" id="f-tags" placeholder="e.g. quick, weeknight, kid-friendly (comma-separated)" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Ingredients</label>
+        <textarea class="form-textarea" id="f-ingredients" placeholder="One per line&#10;2 chicken breasts&#10;1 lemon, juiced&#10;2 tbsp olive oil"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Instructions</label>
+        <textarea class="form-textarea" id="f-instructions" placeholder="Step by step..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Photo URL</label>
+        <input class="form-input" id="f-image" oninput="updateImagePreview()" placeholder="Paste an image URL (right-click image > Copy Image Address)" />
+        <div id="f-image-preview-wrap" style="display:none;margin-top:0.65rem;padding:0.55rem;border:1px solid #ebe5dc;border-radius:10px;background:#faf8f5;">
+          <img id="f-image-preview" alt="Recipe photo preview" onerror="showImagePreviewError()" style="display:block;width:100%;max-height:240px;object-fit:cover;border-radius:7px;" />
+          <div id="f-image-preview-error" style="display:none;color:#c2553a;font-size:0.75rem;padding:0.35rem;">This image could not be previewed. Replace the URL or leave it blank.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Source / URL</label>
+        <input class="form-input" id="f-source" placeholder="e.g. https://... or Grandma's cookbook" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Rating</label>
+        <div class="star-picker" id="f-stars">
+          <span onclick="setRating(1)">&#9733;</span>
+          <span onclick="setRating(2)">&#9733;</span>
+          <span onclick="setRating(3)">&#9733;</span>
+          <span onclick="setRating(4)">&#9733;</span>
+          <span onclick="setRating(5)">&#9733;</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Notes / Improvements</label>
+        <textarea class="form-textarea" id="f-notes" placeholder="e.g. Double the garlic next time, use less salt..." style="min-height:70px"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-delete" id="btn-delete" style="display:none" onclick="deleteRecipe()">Delete</button>
+        <button class="btn-cancel" onclick="closeModal('edit-modal')">Cancel</button>
+        <button class="btn-save" onclick="saveRecipe()">Save Recipe</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Modal -->
+  <div class="modal-overlay" id="view-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('view-modal')">&times;</button>
+      <div id="view-content"></div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+      storageBucket: "morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId: "289564921391",
+      appId: "1:289564921391:web:4ed9e388d5f63218f780da"
+    });
+    const db = firebase.database();
+
+    let recipes = {};
+    let igFetchedMeta = {};
+
+    // Normalize a recipe.image value to a URL string.
+    // Imported recipes (JSON-LD) sometimes arrive with image as {url,width,height}
+    // or [url1, url2]. The bare object form, if left to be set on an input via
+    // .value =, coerces to the literal string "[object Object]" — which then
+    // gets saved back to Firebase on the next edit. Normalize everywhere.
+    function imageUrlOf(v) {
+      if (!v) return '';
+      if (typeof v === 'string') {
+        return v === '[object Object]' ? '' : v;
+      }
+      if (Array.isArray(v)) return imageUrlOf(v[0]);
+      if (typeof v === 'object') return imageUrlOf(v.url || v.src || v.contentUrl || '');
+      return '';
+    }
+
+    function updateImagePreview() {
+      const input = document.getElementById('f-image');
+      const wrap = document.getElementById('f-image-preview-wrap');
+      const image = document.getElementById('f-image-preview');
+      const error = document.getElementById('f-image-preview-error');
+      if (!input || !wrap || !image || !error) return;
+      const url = imageUrlOf(input.value.trim());
+      wrap.style.display = url ? '' : 'none';
+      image.style.display = url ? 'block' : 'none';
+      error.style.display = 'none';
+      if (url) image.src = url;
+      else image.removeAttribute('src');
+    }
+
+    function showImagePreviewError() {
+      document.getElementById('f-image-preview').style.display = 'none';
+      document.getElementById('f-image-preview-error').style.display = '';
+    }
+
+    function escapeAttr(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function renderClickableIngredients(text) {
+      const lines = String(text || '').split('\n').map(l => l.trim()).filter(l => l && !/^optional:?\s*$/i.test(l));
+      if (!lines.length) return '';
+      return '<ul class="ingredient-list">' + lines.map(line => {
+        const safe = escapeAttr(line);
+        return `<li class="ingredient-item" data-text="${safe}" onclick="addIngredientToGrocery(this)">
+          <span class="ing-text">${safe}</span>
+          <span class="ing-add" title="Add to grocery list">+</span>
+        </li>`;
+      }).join('') + '</ul>';
+    }
+
+    window.addIngredientToGrocery = function(el) {
+      if (!el || el.classList.contains('added')) return;
+      const text = el.dataset.text;
+      if (!text) return;
+      el.classList.add('added');
+      const add = el.querySelector('.ing-add');
+      if (add) add.textContent = '✓';
+      // Append to mealGroceries (the Meal Planner page's grocery list).
+      db.ref('mealGroceries').once('value').then(snap => {
+        const v = snap.val();
+        const list = Array.isArray(v) ? v : (v ? Object.values(v) : []);
+        // Soft dedup — if a matching un-checked item already exists, just leave it.
+        const already = list.some(it => it && !it.done && (it.text || '').toLowerCase() === text.toLowerCase());
+        if (!already) {
+          list.push({ text, done: false });
+          db.ref('mealGroceries').set(list);
+        }
+      }).catch(() => {
+        // On failure, revert the visual feedback so the user knows it didn't stick.
+        el.classList.remove('added');
+        if (add) add.textContent = '+';
+      });
+    };
+    let editingId = null;
+    let currentRating = 0;
+    let activeFilter = 'All';
+
+    // Listen for recipe changes
+    db.ref('recipes').on('value', snap => {
+      recipes = snap.val() || {};
+      renderRecipes();
+      renderFilters();
+    });
+
+    function renderFilters() {
+      const cats = [...new Set(Object.values(recipes).map(r => r.category).filter(Boolean))].sort();
+      // 'All' first, then 'Weeknight Dinners' as a tag-based pill, then categories.
+      const pills = ['All', 'Weeknight Dinners', ...cats];
+      let html = '';
+      pills.forEach(c => {
+        html += `<button class="filter-btn ${activeFilter===c?'active':''}" onclick="activeFilter='${c}';renderRecipes();renderFilters();">${c}</button>`;
+      });
+      document.getElementById('filter-buttons').innerHTML = html;
+    }
+
+    function renderRecipes() {
+      const search = (document.getElementById('search')?.value || '').toLowerCase();
+      const entries = Object.entries(recipes);
+
+      const filtered = entries.filter(([id, r]) => {
+        if (activeFilter === 'Weeknight Dinners') {
+          const tagList = (r.tags || '').toLowerCase().split(',').map(t => t.trim());
+          if (!tagList.includes('weeknight')) return false;
+        } else if (activeFilter !== 'All' && r.category !== activeFilter) {
+          return false;
+        }
+        if (search) {
+          const haystack = [r.name, r.category, r.cuisine, r.tags, r.ingredients, r.notes].join(' ').toLowerCase();
+          if (!haystack.includes(search)) return false;
+        }
+        return true;
+      });
+
+      // Sort by name
+      filtered.sort((a, b) => (a[1].name || '').localeCompare(b[1].name || ''));
+
+      if (entries.length === 0) {
+        document.getElementById('recipe-grid').innerHTML = '';
+        document.getElementById('empty-state').style.display = '';
+        return;
+      }
+      document.getElementById('empty-state').style.display = 'none';
+
+      if (filtered.length === 0) {
+        document.getElementById('recipe-grid').innerHTML = '<div class="empty-state"><p>No recipes match your search.</p></div>';
+        return;
+      }
+
+      let html = '';
+      filtered.forEach(([id, r]) => {
+        const stars = renderStars(r.rating || 0);
+        const tags = (r.tags || '').split(',').map(t => t.trim()).filter(Boolean);
+        let tagHtml = `<span class="rc-tag">${r.category || 'Uncategorized'}</span>`;
+        if (r.cuisine) tagHtml += `<span class="rc-tag">${r.cuisine}</span>`;
+        tags.forEach(t => tagHtml += `<span class="rc-tag">${t}</span>`);
+
+        const meta = [];
+        if (r.prep) meta.push('Prep: ' + r.prep);
+        if (r.cook) meta.push('Cook: ' + r.cook);
+        if (r.servings) meta.push('Serves: ' + r.servings);
+
+        html += `<div class="recipe-card" onclick="viewRecipe('${id}')">
+          ${imageUrlOf(r.image) ? '<img class="rc-image" src="'+imageUrlOf(r.image)+'" alt="" onerror="this.style.display=\'none\'" />' : ''}
+          <div class="rc-title">${r.name || 'Untitled'}</div>
+          <div class="rc-tags">${tagHtml}</div>
+          ${meta.length ? '<div class="rc-meta">' + meta.join(' &middot; ') + '</div>' : ''}
+          <div class="rc-stars">${stars}</div>
+          ${r.notes ? '<div class="rc-desc">' + r.notes + '</div>' : ''}
+        </div>`;
+      });
+      document.getElementById('recipe-grid').innerHTML = html;
+    }
+
+    function renderStars(n) {
+      let s = '';
+      for (let i = 1; i <= 5; i++) s += `<span class="${i<=n?'filled':''}">&#9733;</span>`;
+      return s;
+    }
+
+    // View recipe
+    function viewRecipe(id) {
+      const r = recipes[id];
+      if (!r) return;
+      const stars = renderStars(r.rating || 0);
+      const tags = (r.tags || '').split(',').map(t => t.trim()).filter(Boolean);
+      let tagHtml = `<span class="rc-tag">${r.category || 'Uncategorized'}</span>`;
+      if (r.cuisine) tagHtml += `<span class="rc-tag">${r.cuisine}</span>`;
+      tags.forEach(t => tagHtml += `<span class="rc-tag">${t}</span>`);
+
+      let html = '';
+      { const _u = imageUrlOf(r.image); if (_u) html += `<img src="${_u}" alt="" style="width:100%;max-height:250px;object-fit:cover;border-radius:8px;margin-bottom:1rem;" onerror="this.style.display='none'" />`; }
+      html += `<div class="modal-title" style="margin-bottom:0.5rem">${r.name}</div>`;
+      html += `<div style="margin-bottom:1rem">${tagHtml}</div>`;
+      html += `<div class="view-stars" style="margin-bottom:1rem">${stars}</div>`;
+
+      const meta = [];
+      if (r.prep) meta.push('Prep: ' + r.prep);
+      if (r.cook) meta.push('Cook: ' + r.cook);
+      if (r.servings) meta.push('Serves: ' + r.servings);
+      if (meta.length) html += `<div class="view-field"><div class="view-label">Timing</div><div class="view-value">${meta.join(' &middot; ')}</div></div>`;
+
+      if (r.ingredients) html += `<div class="view-field"><div class="view-label">Ingredients <span style="font-weight:400;color:#b8a48e;text-transform:none;letter-spacing:0;font-size:0.7rem;">&middot; click to add to grocery list</span></div>${renderClickableIngredients(r.ingredients)}</div>`;
+      if (r.instructions) html += `<div class="view-field"><div class="view-label">Instructions</div><div class="view-value">${r.instructions}</div></div>`;
+      if (r.source) {
+        const isUrl = r.source.startsWith('http');
+        html += `<div class="view-field"><div class="view-label">Source</div><div class="view-value">${isUrl ? '<a href="'+r.source+'" target="_blank" style="color:#7ca3c7">'+r.source+'</a>' : r.source}</div></div>`;
+      }
+      if (r.notes) html += `<div class="view-field"><div class="view-label">Notes / Improvements</div><div class="view-value">${r.notes}</div></div>`;
+
+      html += `<div class="form-actions" style="margin-top:1.5rem">
+        <button class="btn-print" onclick="window.print()">Print Recipe</button>
+        <button class="btn-delete" onclick="deleteRecipeFromView('${id}')">Delete</button>
+        <button class="btn-cancel" onclick="closeModal('view-modal')">Close</button>
+        <button class="btn-save" onclick="closeModal('view-modal');openEditModal('${id}')">Edit</button>
+      </div>`;
+
+      document.getElementById('view-content').innerHTML = html;
+      document.getElementById('view-modal').classList.add('open');
+    }
+
+    // Add/Edit
+    // URL Import
+    function openUrlModal() {
+      document.getElementById('url-input').value = '';
+      document.getElementById('url-status').style.display = 'none';
+      document.getElementById('url-fetch-btn').disabled = false;
+      document.getElementById('url-fetch-btn').textContent = 'Fetch Recipe';
+      document.getElementById('url-modal').classList.add('open');
+      setTimeout(() => document.getElementById('url-input').focus(), 100);
+    }
+
+    function hasSchemaType(value, expectedType) {
+      const types = value && value['@type'];
+      return Array.isArray(types) ? types.includes(expectedType) : types === expectedType;
+    }
+
+    function findSchemaNode(value, expectedType, seen = new Set()) {
+      if (!value || typeof value !== 'object' || seen.has(value)) return null;
+      seen.add(value);
+      if (hasSchemaType(value, expectedType)) return value;
+      if (Array.isArray(value)) {
+        for (const item of value) {
+          const found = findSchemaNode(item, expectedType, seen);
+          if (found) return found;
+        }
+        return null;
+      }
+      for (const child of Object.values(value)) {
+        const found = findSchemaNode(child, expectedType, seen);
+        if (found) return found;
+      }
+      return null;
+    }
+
+    function cleanRecipeText(value) {
+      if (value === null || value === undefined) return '';
+      const doc = new DOMParser().parseFromString(String(value), 'text/html');
+      return (doc.body.textContent || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function normalizeImportedRecipeTitle(value) {
+      let title = cleanRecipeText(value)
+        .replace(/^[*_-]+|[*_-]+$/g, '')
+        .replace(/^(?:recipe|title)\s*[:\-]\s*/i, '')
+        .trim();
+      if (title.length > 3 && title === title.toUpperCase()) {
+        const smallWords = new Set(['and', 'or', 'of', 'the', 'with', 'in', 'on', 'for', 'to', 'a', 'an']);
+        title = title.toLowerCase().replace(/\b[\p{L}\p{N}][\p{L}\p{N}'’-]*\b/gu, (word, offset) =>
+          offset > 0 && smallWords.has(word) ? word : word.charAt(0).toUpperCase() + word.slice(1));
+      }
+      title = title.replace(/\b[A-Z]{4,}\b/g, word => word.charAt(0) + word.slice(1).toLowerCase());
+      return title;
+    }
+
+    function flattenRecipeInstructions(value, steps = []) {
+      if (!value) return steps;
+      if (Array.isArray(value)) {
+        value.forEach(item => flattenRecipeInstructions(item, steps));
+      } else if (typeof value === 'string') {
+        const text = cleanRecipeText(value);
+        if (text) steps.push(text);
+      } else if (typeof value === 'object') {
+        if (value.text) {
+          const text = cleanRecipeText(value.text);
+          if (text) steps.push(text);
+        } else if (value.itemListElement) {
+          flattenRecipeInstructions(value.itemListElement, steps);
+        } else if (value.name && hasSchemaType(value, 'HowToStep')) {
+          const text = cleanRecipeText(value.name);
+          if (text) steps.push(text);
+        }
+      }
+      return steps;
+    }
+
+    function firstRecipeImage(value) {
+      if (!value) return '';
+      if (typeof value === 'string') return value;
+      if (Array.isArray(value)) {
+        for (const item of value) {
+          const image = firstRecipeImage(item);
+          if (image) return image;
+        }
+        return '';
+      }
+      if (typeof value === 'object') {
+        return firstRecipeImage(value.url || value.contentUrl || value['@id']);
+      }
+      return '';
+    }
+
+    function extractRecipeData(html) {
+      const scripts = html.match(/<script[^>]*type\s*=\s*["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi) || [];
+      for (const script of scripts) {
+        try {
+          const json = script.replace(/^[\s\S]*?<script[^>]*>/i, '').replace(/<\/script>[\s\S]*$/i, '').trim();
+          const recipe = findSchemaNode(JSON.parse(json), 'Recipe');
+          if (recipe) return recipe;
+        } catch (e) {}
+      }
+
+      // Older sites sometimes expose recipe microdata without JSON-LD.
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const ingredients = [...doc.querySelectorAll('[itemprop="recipeIngredient"]')]
+        .map(node => cleanRecipeText(node.textContent)).filter(Boolean);
+      const instructions = [...doc.querySelectorAll('[itemprop="recipeInstructions"]')]
+        .map(node => cleanRecipeText(node.textContent)).filter(Boolean);
+      if (!ingredients.length || !instructions.length) return null;
+      const nameNode = doc.querySelector('[itemprop="name"]') || doc.querySelector('h1');
+      const imageNode = doc.querySelector('[itemprop="image"]');
+      return {
+        name: nameNode ? cleanRecipeText(nameNode.textContent || nameNode.getAttribute('content')) : '',
+        image: imageNode ? (imageNode.getAttribute('content') || imageNode.getAttribute('src')) : '',
+        recipeIngredient: ingredients,
+        recipeInstructions: instructions,
+      };
+    }
+
+    function cleanReaderMarkdown(value) {
+      return cleanRecipeText(String(value || '')
+        .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+        .replace(/[*_~`]+/g, '')
+        .replace(/^#+\s*/, ''));
+    }
+
+    // Jina Reader supplies a clean text version when a live HTTPS dashboard
+    // cannot contact the local helper. Extract only the compact recipe card,
+    // not the surrounding article.
+    function extractRecipeFromReaderText(text) {
+      const lines = text.replace(/\r/g, '').split('\n').map(line => line.trim());
+      const titleLine = lines.find(line => /^Title:\s*\S/i.test(line));
+      const name = titleLine ? cleanReaderMarkdown(titleLine.replace(/^Title:\s*/i, '')) : '';
+      const prepIndex = lines.findIndex(line => /^Prep(?:aration)?\s+Time\b/i.test(cleanReaderMarkdown(line)));
+      const ingredientHeaderIndex = lines.findIndex(line => /^(?:#{1,5}\s*)?Ingredients?\s*:?$/i.test(line));
+      const startIndex = prepIndex >= 0 ? prepIndex : ingredientHeaderIndex;
+      if (!name || startIndex < 0) return null;
+
+      const nearby = lines.slice(startIndex, startIndex + 14).map(cleanReaderMarkdown).join('\n');
+      const prep = nearby.match(/Prep(?:aration)?\s+Time\s*[:\-]?\s*([^\n]+)/i);
+      const cook = nearby.match(/Cook(?:ing)?\s+Time\s*[:\-]?\s*([^\n]+)/i);
+      const servings = nearby.match(/(?:Servings?|Yield|Makes)\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?)/i);
+      const imperative = /^(?:preheat|prepare|grease|line|combine|mix|whisk|beat|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest|place|divide|allow|set|arrange|bring|blend|pulse|proof|knead|roll|cut)\b/i;
+      const ingredients = [];
+      const instructions = [];
+      let mode = ingredientHeaderIndex === startIndex ? 'ingredients' : 'scan';
+
+      for (let i = startIndex + 1; i < lines.length; i++) {
+        const rawLine = lines[i];
+        if (!rawLine) continue;
+        if (/^#{1,3}\s+/.test(rawLine) && instructions.length) break;
+        if (/^(?:#{1,5}\s*)?Ingredients?\s*:?$/i.test(rawLine)) { mode = 'ingredients'; continue; }
+        if (/^(?:#{1,5}\s*)?(?:Instructions?|Directions?|Method|Steps?)\s*:?$/i.test(rawLine)) { mode = 'instructions'; continue; }
+        if (/^#{4,6}\s+/.test(rawLine)) continue;
+
+        const bullet = rawLine.match(/^(?:[*+\-]\s+|\d+[.)]\s+)(.+)$/);
+        if (!bullet) continue;
+        const item = cleanReaderMarkdown(bullet[1]);
+        if (!item) continue;
+        if (mode !== 'instructions' && imperative.test(item) && ingredients.length >= 2) mode = 'instructions';
+        if (mode === 'instructions') instructions.push(item);
+        else {
+          mode = 'ingredients';
+          ingredients.push(item);
+        }
+      }
+
+      if (!ingredients.length || !instructions.length) return null;
+      const imageMatch = text.match(/!\[[^\]]*\]\((https?:\/\/[^)\s]+)\)/i);
+      return {
+        name,
+        image: imageMatch ? imageMatch[1] : '',
+        recipeIngredient: ingredients,
+        recipeInstructions: instructions,
+        prepTime: prep ? prep[1].trim() : '',
+        cookTime: cook ? cook[1].trim() : '',
+        recipeYield: servings ? servings[1].trim() : '',
+        recipeCategory: inferRecipeCategory(name, ingredients),
+      };
+    }
+
+    async function fetchRecipeFromUrl() {
+      const url = document.getElementById('url-input').value.trim();
+      if (!url) { alert('Please enter a URL'); return; }
+
+      const status = document.getElementById('url-status');
+      const btn = document.getElementById('url-fetch-btn');
+      status.style.display = '';
+      status.textContent = 'Fetching recipe...';
+      status.style.color = '#9c8b76';
+      btn.disabled = true;
+      btn.textContent = 'Fetching...';
+
+      try {
+        // Prefer the local helper. Public CORS proxies are retained as fallbacks.
+        let html = null;
+        try {
+          if (location.protocol !== 'https:') {
+            const localRes = await fetch('http://127.0.0.1:8768/recipe-page', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ url }),
+              signal: AbortSignal.timeout(30000),
+            });
+            if (localRes.ok) {
+              const localData = await localRes.json();
+              if (localData.html && localData.html.length > 1000) html = localData.html;
+            }
+          }
+        } catch (e) {}
+
+        let readerRecipe = null;
+        if (!html) {
+          try {
+            status.textContent = 'Reading recipe...';
+            const cleanUrl = url.replace(/^https?:\/\//i, '').replace(/#.*$/, '');
+            const readerRes = await fetch('https://r.jina.ai/http://' + cleanUrl, {
+              signal: AbortSignal.timeout(30000),
+            });
+            if (readerRes.ok) readerRecipe = extractRecipeFromReaderText(await readerRes.text());
+          } catch (e) {}
+        }
+
+        const proxies = [
+          'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+          'https://corsproxy.io/?' + encodeURIComponent(url),
+          'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+        ];
+
+        for (const proxyUrl of (html || readerRecipe) ? [] : proxies) {
+          try {
+            const res = await fetch(proxyUrl, {signal: AbortSignal.timeout(10000)});
+            if (res.ok) {
+              const text = await res.text();
+              if (text.length > 1000 && !text.includes('Just a moment')) {
+                html = text;
+                break;
+              }
+            }
+          } catch(e) {}
+        }
+
+        if (!html && !readerRecipe) {
+          // Show paste fallback
+          status.textContent = 'This site blocked auto-fetch. Copy the recipe from the website and paste below:';
+          status.style.color = '#b8860b';
+          document.getElementById('url-fallback').style.display = '';
+          document.getElementById('url-paste-btn').style.display = '';
+          btn.disabled = false;
+          btn.textContent = 'Try Again';
+          return;
+        }
+
+        const recipe = readerRecipe || extractRecipeData(html);
+
+        if (!recipe || !recipe.name || !recipe.recipeIngredient || !recipe.recipeInstructions) {
+          status.textContent = 'The page opened, but no complete recipe card was found. Copy the recipe from the website and paste it below.';
+          status.style.color = '#c2553a';
+          document.getElementById('url-fallback').style.display = '';
+          document.getElementById('url-paste-btn').style.display = '';
+          btn.disabled = false;
+          btn.textContent = 'Try Again';
+          return;
+        }
+
+        // Close URL modal and open edit modal with pre-filled data
+        closeModal('url-modal');
+        openAddModal();
+
+        // Pre-fill the form
+        document.getElementById('f-name').value = normalizeImportedRecipeTitle(recipe.name) || '';
+        document.getElementById('f-source').value = url;
+
+        // Image
+        if (recipe.image) {
+          const imgUrl = firstRecipeImage(recipe.image);
+          if (imgUrl) {
+            document.getElementById('f-image').value = imgUrl;
+            updateImagePreview();
+          }
+        }
+
+        // Ingredients
+        if (recipe.recipeIngredient) {
+          document.getElementById('f-ingredients').value = (Array.isArray(recipe.recipeIngredient) ? recipe.recipeIngredient : [recipe.recipeIngredient])
+            .map(cleanRecipeText).filter(Boolean).join('\n');
+        }
+
+        // Instructions
+        if (recipe.recipeInstructions) {
+          const instructions = flattenRecipeInstructions(recipe.recipeInstructions);
+          document.getElementById('f-instructions').value = instructions.map((step, i) => `${i + 1}. ${step}`).join('\n\n');
+        }
+
+        // Times
+        function parseDuration(d) {
+          if (!d) return '';
+          const m = d.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
+          if (!m) return d;
+          const h = m[1] ? m[1] + ' hr ' : '';
+          const min = m[2] ? m[2] + ' min' : '';
+          return (h + min).trim();
+        }
+        document.getElementById('f-prep').value = parseDuration(recipe.prepTime) || '';
+        document.getElementById('f-cook').value = parseDuration(recipe.cookTime) || '';
+
+        // Servings
+        if (recipe.recipeYield) {
+          const servings = Array.isArray(recipe.recipeYield) ? recipe.recipeYield[0] : recipe.recipeYield;
+          document.getElementById('f-servings').value = servings;
+        }
+
+        // Category / cuisine. Sites often use free-form values such as
+        // “Cookies” rather than our fixed category list, so infer a sensible
+        // dashboard category instead of falling back to Dinner.
+        const inferredCategory = inferRecipeCategory(
+          document.getElementById('f-name').value,
+          document.getElementById('f-ingredients').value.split('\n').filter(Boolean)
+        );
+        if (recipe.recipeCategory) {
+          const cat = Array.isArray(recipe.recipeCategory) ? recipe.recipeCategory[0] : recipe.recipeCategory;
+          const catMap = {'main course':'Dinner','dinner':'Dinner','lunch':'Lunch','breakfast':'Breakfast','dessert':'Dessert','appetizer':'Appetizer','snack':'Snack','drink':'Drink','side dish':'Side','soup':'Soup','salad':'Salad'};
+          document.getElementById('f-category').value = catMap[cat.toLowerCase()] || inferredCategory;
+        } else document.getElementById('f-category').value = inferredCategory;
+        if (recipe.recipeCuisine) {
+          const cuisine = Array.isArray(recipe.recipeCuisine) ? recipe.recipeCuisine[0] : recipe.recipeCuisine;
+          document.getElementById('f-cuisine').value = cuisine;
+        }
+
+      } catch(e) {
+        status.textContent = 'Error fetching URL. Check the link and try again.';
+        status.style.color = '#c2553a';
+        console.error(e);
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Fetch Recipe';
+    }
+
+    function openIgModal() {
+      igFetchedMeta = {};
+      document.getElementById('ig-url-input').value = '';
+      document.getElementById('ig-caption-input').value = '';
+      document.getElementById('ig-status').style.display = 'none';
+      document.getElementById('ig-cover-preview').style.display = 'none';
+      document.getElementById('ig-cover-image').removeAttribute('src');
+      document.getElementById('ig-modal').classList.add('open');
+    }
+
+    // Hit the local ig-server to fetch the caption text from an IG URL.
+    // Requires the launchd-managed Python service on port 8768.
+    async function igFetchCaption() {
+      const url = document.getElementById('ig-url-input').value.trim();
+      if (!url) { alert('Paste an Instagram URL first.'); return; }
+      const btn = document.getElementById('ig-fetch-btn');
+      const status = document.getElementById('ig-status');
+      btn.disabled = true;
+      const orig = btn.textContent;
+      btn.textContent = 'Fetching…';
+      status.style.display = '';
+      status.textContent = 'Asking ig-server to fetch caption…';
+      status.style.color = '#9c8b76';
+      try {
+        const res = await fetch('http://127.0.0.1:8768/caption', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url }),
+        });
+        if (!res.ok) {
+          const errBody = await res.text();
+          throw new Error(`server returned ${res.status}: ${errBody}`);
+        }
+        const data = await res.json();
+        igFetchedMeta = {
+          title: cleanRecipeText(data.title || ''),
+          image: imageUrlOf(data.image_url || ''),
+        };
+        if (igFetchedMeta.image) {
+          document.getElementById('ig-cover-image').src = igFetchedMeta.image;
+          document.getElementById('ig-cover-preview').style.display = 'flex';
+        }
+        if (data.caption && data.caption.trim()) {
+          document.getElementById('ig-caption-input').value = data.caption;
+          status.textContent = `✓ Caption fetched${igFetchedMeta.image ? ' with cover image' : ''} (${data.caption.length} chars${data.cached ? ', cached' : ''}). Click Parse below.`;
+          status.style.color = '#4a8c6f';
+        } else {
+          status.textContent = 'Server returned no caption — paste manually below.';
+          status.style.color = '#c2553a';
+        }
+      } catch (e) {
+        status.innerHTML = `Could not reach ig-server: <code>${(e && e.message) || e}</code><br>`
+          + 'Either run <code>bash ~/tripit-sync/setup-ig-server.sh</code> first, '
+          + 'or paste the caption manually below.';
+        status.style.color = '#c2553a';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = orig;
+      }
+    }
+
+    // Heuristic parser tuned for Instagram Reel captions.
+    async function parseIgCaption() {
+      const pastedRaw = document.getElementById('ig-caption-input').value.trim();
+      const url = document.getElementById('ig-url-input').value.trim();
+      if (!pastedRaw) { alert('Paste the caption first.'); return; }
+
+      // Instagram's metadata sometimes wraps the caption in
+      // “123 likes — account on April 24, 2025: \"caption\"”. Remove that shell.
+      const wrappedCaption = pastedRaw.match(/\bon\s+(?:Instagram|(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4})\s*:\s*["“]([\s\S]*)/i);
+      const raw = wrappedCaption ? wrappedCaption[1].replace(/["”]\s*$/, '').trim() : pastedRaw;
+
+      // If the post links to a complete recipe page, its recipe card is more
+      // reliable than the promotional Instagram caption.
+      const linkedRecipeUrl = (raw.match(/https?:\/\/[^\s"”]+/gi) || [])
+        .map(link => link.replace(/[),.;!?]+$/, ''))
+        .find(link => !/instagram\.com/i.test(link));
+      if (linkedRecipeUrl) {
+        const linkedHashtags = [...raw.matchAll(/#([A-Za-z0-9_]+)/g)].map(m => m[1]);
+        closeModal('ig-modal');
+        document.getElementById('url-input').value = linkedRecipeUrl;
+        document.getElementById('url-status').style.display = 'none';
+        document.getElementById('url-fallback').style.display = 'none';
+        document.getElementById('url-paste-btn').style.display = 'none';
+        document.getElementById('url-modal').classList.add('open');
+        await fetchRecipeFromUrl();
+        if (document.getElementById('edit-modal').classList.contains('open')) {
+          document.getElementById('modal-title').textContent = 'Review Instagram Recipe';
+          const reviewNote = document.getElementById('import-review-note');
+          reviewNote.textContent = 'A complete recipe page was linked in the Instagram caption, so its title, ingredients, timing, category, and photo were used. Give them a quick confirmation before saving.';
+          reviewNote.style.display = '';
+          if (linkedHashtags.length) document.getElementById('f-tags').value = linkedHashtags.slice(0, 8).join(', ');
+          if (!document.getElementById('f-image').value && igFetchedMeta.image) {
+            document.getElementById('f-image').value = igFetchedMeta.image;
+            updateImagePreview();
+          }
+        }
+        return;
+      }
+
+      // Strip leading "engagement" lines that aren't part of the recipe
+      const noiseRe = /^(save this|comment|tag a friend|follow|follow @|recipe below|recipe in (the )?comments|full recipe|written recipe)/i;
+      // Remove all hashtags (collect them as tags) and trim emoji-only lines.
+      const allHashtags = [...raw.matchAll(/#([A-Za-z0-9_]+)/g)].map(m => m[1]);
+      let text = raw.replace(/#[A-Za-z0-9_]+/g, '').replace(/‍|️/g, '');
+      const lines = text.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+
+      // Detect a section header anywhere on the line
+      const isIngHeader = s => /\b(ingredients?|you'?ll need|what you need|grocery list)\b/i.test(s);
+      const isInsHeader = s => /\b(instructions?|directions?|method|steps?|how to|to make|preparation|recipe)\b/i.test(s) && !/\bsave\b/i.test(s);
+
+      // Strip common bullet characters from the start of an ingredient/step line
+      const stripBullet = s => s.replace(/^[•‣◦⁃∙\-\*▫◾▢○·→☛✍✋✍]+\s*/, '')
+                                .replace(/^\d+[\.\)]\s*/, '')   // "1." or "1)"
+                                .replace(/^[0-9]️?⃣\s*/, '') // 1️⃣
+                                .trim();
+
+      // Find the title: first line that isn't pure emoji/noise, after stripping decorations
+      let titleIdx = 0;
+      while (titleIdx < lines.length && (noiseRe.test(lines[titleIdx]) || /^[\s\p{Emoji}✀-➿]+$/u.test(lines[titleIdx]))) titleIdx++;
+      const titleLine = (lines[titleIdx] || '').replace(/[✀-➿\u{1F300}-\u{1FAFF}\u{2600}-\u{26FF}]/gu, '').trim();
+      let title = normalizeImportedRecipeTitle(titleLine);
+
+      // Walk through remaining lines, assign to ingredients / instructions
+      const measure = /\b(\d+[\d./\s]*)?\s*(cups?|tbsp|tablespoons?|tsp|teaspoons?|oz|ounces?|lb|lbs|pounds?|g|grams?|kg|ml|l|liters?|pinch|dash|cloves?|sticks?|cans?|jars?|bunch|handful)\b/i;
+      let mode = 'scan';
+      const ingredients = [];
+      const instructions = [];
+
+      // Metadata-style lines like "Serves: 4" / "Prep: 5 min" — already pulled
+      // out separately for f-servings/f-prep/f-cook; skip from ing/ins.
+      const isMeta = s => /^(serves?|servings?|yields?|makes|prep|cook|total)\s*(time)?\s*[:\-]/i.test(s);
+
+      for (let i = titleIdx + 1; i < lines.length; i++) {
+        const line = lines[i];
+        if (noiseRe.test(line)) continue;
+        if (isMeta(line)) continue;
+        if (/^https?:\/\//i.test(line) || /^["”'.]+$/.test(line)) continue;
+        if (isIngHeader(line) && !isInsHeader(line)) { mode = 'ing'; continue; }
+        if (isInsHeader(line)) { mode = 'ins'; continue; }
+
+        const stripped = stripBullet(line);
+        if (!stripped) continue;
+
+        // Heuristic: in "scan" mode, lines with measurements go to ingredients,
+        // sentences starting with imperative verbs go to instructions. The verb
+        // must be followed by a space + letter (so "Cook: 15 min" or "Serves: 4"
+        // are NOT mistaken for imperative — those have `:` after the verb).
+        const isMeasure = measure.test(stripped);
+        const startsImperative = /^(preheat|combine|mix|whisk|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest)\s+[a-z]/i.test(stripped);
+
+        if (mode === 'ing') ingredients.push(stripped);
+        else if (mode === 'ins') instructions.push(stripped);
+        else if (isMeasure && !startsImperative) { ingredients.push(stripped); mode = 'ing'; }
+        else if (startsImperative) { instructions.push(stripped); mode = 'ins'; }
+        else ingredients.push(stripped);  // default — usually still ingredients in scan mode
+      }
+
+      // Extract servings / prep / cook hints from anywhere in the text
+      const servingsM = raw.match(/(?:serves|servings|makes|yields?)[:\s]+(\d+[\d\-\s]*)/i);
+      const prepM = raw.match(/prep(?:\s*time)?[:\s]+(\d+\s*(?:min|hr|hour|hours|minutes))/i);
+      const cookM = raw.match(/cook(?:\s*time)?[:\s]+(\d+\s*(?:min|hr|hour|hours|minutes))/i);
+
+      // If the opening line was a promotional sentence, prefer a short line
+      // immediately before the Ingredients heading.
+      if (!title || title.length > 90 || /[.!?]$/.test(title)) {
+        const ingredientsAt = lines.findIndex(isIngHeader);
+        if (ingredientsAt > 0) {
+          for (let i = ingredientsAt - 1; i >= Math.max(0, ingredientsAt - 8); i--) {
+            const candidate = normalizeImportedRecipeTitle(stripBullet(lines[i]));
+            if (candidate && candidate.length <= 80 && !noiseRe.test(candidate) && !isMeta(candidate) && !/[.!?]$/.test(candidate)) {
+              title = candidate;
+              break;
+            }
+          }
+        }
+      }
+      if (!title) title = 'Instagram Recipe';
+
+      // Open the existing edit modal and pre-fill it
+      closeModal('ig-modal');
+      openAddModal();
+      document.getElementById('modal-title').textContent = 'Review Instagram Recipe';
+      const reviewNote = document.getElementById('import-review-note');
+      reviewNote.textContent = 'Check the title, category, and cover image below. Instagram captions vary, so these three fields always need a quick confirmation before saving.';
+      reviewNote.style.display = '';
+      document.getElementById('f-name').value = title;
+      document.getElementById('f-category').value = inferRecipeCategory(title, ingredients);
+      document.getElementById('f-source').value = url;
+      document.getElementById('f-ingredients').value = ingredients.join('\n');
+      document.getElementById('f-instructions').value = instructions
+        .map((s, i) => `${i+1}. ${s}`).join('\n\n');
+      if (igFetchedMeta.image) {
+        document.getElementById('f-image').value = igFetchedMeta.image;
+        updateImagePreview();
+      }
+      if (servingsM) document.getElementById('f-servings').value = servingsM[1].trim();
+      if (prepM) document.getElementById('f-prep').value = prepM[1].trim();
+      if (cookM) document.getElementById('f-cook').value = cookM[1].trim();
+      if (allHashtags.length) document.getElementById('f-tags').value = allHashtags.slice(0, 8).join(', ');
+    }
+
+    function parseFromPaste() {
+      const text = document.getElementById('url-paste-text').value.trim();
+      const url = document.getElementById('url-input').value.trim();
+      if (!text) { alert('Please paste the recipe text'); return; }
+      const parsed = parseLooseRecipeText(text);
+      closeModal('url-modal');
+      populateRecipeForm(parsed, url);
+    }
+
+    function openPasteModal() {
+      document.getElementById('paste-recipe-text').value = '';
+      document.getElementById('paste-recipe-source').value = '';
+      document.getElementById('paste-status').style.display = 'none';
+      document.getElementById('paste-modal').classList.add('open');
+      setTimeout(() => document.getElementById('paste-recipe-text').focus(), 100);
+    }
+
+    function stripLooseBullet(line) {
+      return line.replace(/^[•‣◦⁃∙\-*▫◾▢○·→☛✓☐]+\s*/, '')
+        .replace(/^\s*(?:step\s*)?\d+[.)\-:]\s*/i, '')
+        .trim();
+    }
+
+    function inferRecipeCategory(title, ingredients) {
+      const text = `${title} ${ingredients.join(' ')}`.toLowerCase();
+      if (/cake|cookie|brownie|pie|tart|pudding|ice cream|frosting|dessert|muffin|cupcake|chocolate|cobbler/.test(text)) return 'Dessert';
+      if (/smoothie|cocktail|mocktail|lemonade|latte|drink/.test(text)) return 'Drink';
+      if (/pancake|waffle|omelet|omelette|breakfast|granola|french toast/.test(text)) return 'Breakfast';
+      if (/soup|stew|chowder|bisque/.test(text)) return 'Soup';
+      if (/salad/.test(text)) return 'Salad';
+      if (/dip|appetizer|starter|crosti|bruschetta/.test(text)) return 'Appetizer';
+      if (/side dish|roasted vegetables|mashed potato|slaw/.test(text)) return 'Side';
+      return 'Dinner';
+    }
+
+    function parseExplicitRecipeSections(lines, raw) {
+      const isIngredientsHeader = line => /^(?:ingredients?|what you need|you(?:'|’)ll need)\s*:?$/i.test(line);
+      const isInstructionsHeader = line => /^(?:instructions?|directions?|method|preparation|steps?|how to make(?: it)?)\s*:?$/i.test(line);
+      const ingredientsIndex = lines.findIndex(isIngredientsHeader);
+      const instructionsIndex = lines.findIndex((line, i) => i > ingredientsIndex && isInstructionsHeader(line));
+      if (ingredientsIndex < 0 || instructionsIndex < 0) return null;
+
+      const titleNoise = /^(?:video|print recipe|pin recipe|jump to recipe|save recipe|recipe|prep(?:aration)? time|cook(?:ing)? time|total time|servings?|yield|makes|mins?|minutes?|hrs?|hours?|ingredients?|instructions?|directions?|method|steps?)$/i;
+      let title = '';
+      for (let i = ingredientsIndex - 1; i >= Math.max(0, ingredientsIndex - 45); i--) {
+        const candidate = stripLooseBullet(lines[i]).replace(/^(?:recipe\s*[:\-]\s*)/i, '').trim();
+        if (!candidate || titleNoise.test(candidate)) continue;
+        if (/^(?:prep(?:aration)?(?:\s*time)?|cook(?:ing)?\s*time|total\s*time|serves|servings|yield|makes)\b/i.test(candidate)) continue;
+        if (/^\d|\b(?:votes?|reviews?|stars?)\b/i.test(candidate)) continue;
+        if (/\b(?:food scientist|chef|author)\b/i.test(candidate)) continue;
+        if (candidate.length > 100 || /[.!?]$/.test(candidate)) continue;
+        if (candidate === candidate.toUpperCase() && candidate.length > 3) continue;
+        title = candidate;
+        break;
+      }
+
+      const ingredients = [];
+      const instructions = [];
+      const notes = [];
+      for (let i = ingredientsIndex + 1; i < instructionsIndex; i++) {
+        const original = lines[i];
+        if (!original) continue;
+        if (/^\*+\s*\S/.test(original)) notes.push(original.replace(/^\*+\s*/, '').trim());
+        else ingredients.push(stripLooseBullet(original));
+      }
+
+      const stopAfterRecipe = /^(?:more\s+(?:recipes?|cakes?|desserts?|ideas?)|you may also like|related recipes?|leave a comment(?: and rating)?|rate this recipe|recipe rating|nutrition(?: information)?|share this recipe|comments?)$/i;
+      let mode = 'instructions';
+      for (let i = instructionsIndex + 1; i < lines.length; i++) {
+        const original = lines[i];
+        if (!original) continue;
+        if (stopAfterRecipe.test(original)) break;
+        if (/^(?:notes?|tips?|storage|variations?)\s*:?$/i.test(original)) { mode = 'notes'; continue; }
+        if (/^(?:course|cuisine|keyword|author)\s*:?/i.test(original)) break;
+        const cleaned = stripLooseBullet(original);
+        if (!cleaned) continue;
+        if (mode === 'notes') notes.push(cleaned);
+        else instructions.push(cleaned);
+      }
+
+      const metadata = raw.replace(/\u00a0/g, ' ');
+      const prep = metadata.match(/prep(?:aration)?\s*time\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?\s*(?:hours?|hrs?|hr|minutes?|mins?|min))/i);
+      const cook = metadata.match(/cook(?:ing)?\s*time\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?\s*(?:hours?|hrs?|hr|minutes?|mins?|min))/i);
+      const servings = metadata.match(/(?:serves|servings?|yield|makes)\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?)/i);
+      const url = metadata.match(/https?:\/\/[^\s)]+/i);
+
+      if (!ingredients.length || !instructions.length) return null;
+      return {
+        name: title || 'Untitled Recipe',
+        ingredients: ingredients.filter(Boolean),
+        instructions,
+        prep: prep ? prep[1].replace(/\s+/g, ' ').trim() : '',
+        cook: cook ? cook[1].replace(/\s+/g, ' ').trim() : '',
+        servings: servings ? servings[1].trim() : '',
+        notes,
+        source: url ? url[0] : '',
+        category: inferRecipeCategory(title, ingredients),
+      };
+    }
+
+    function parseLooseRecipeText(raw) {
+      const normalized = raw
+        .replace(/\r/g, '')
+        .replace(/[ \t]*[•▪◦][ \t]*/g, '\n')
+        .replace(/[ \t]+(?=step\s*\d+[.)\-:]\s+[A-Z])/gi, '\n')
+        .replace(/\u00a0/g, ' ');
+      const lines = normalized.split('\n').map(line => line.trim()).filter(Boolean);
+
+      // Copied recipe cards and full web pages normally retain these headings.
+      // Use them as hard boundaries so surrounding article text cannot leak in.
+      const explicitRecipe = parseExplicitRecipeSections(lines, raw);
+      if (explicitRecipe) return explicitRecipe;
+
+      const ingredientHeader = /^(ingredients?|what you need|you(?:'|’)ll need|for the (?:batter|dough|filling|sauce|topping|frosting))\s*:?[\s—-]*$/i;
+      const instructionHeader = /^(instructions?|directions?|method|preparation|steps?|how to make(?: it)?)\s*:?[\s—-]*$/i;
+      const notesHeader = /^(notes?|tips?|variations?|storage)\s*:?[\s—-]*$/i;
+      const metadataLine = /^(?:prep(?:aration)?(?:\s*time)?|cook(?:ing)?\s*time|total\s*time|serves|servings|yield|makes)\b\s*[:\-]?/i;
+      const measurement = /^(?:about\s+|approximately\s+|approx\.?\s+|a\s+|an\s+)?(?:\d+[\d\s./-]*|[¼½¾⅓⅔⅛⅜⅝⅞]|one|two|three|four|five|six|seven|eight|nine|ten)?\s*(?:cups?|c\b|tbsp\b|tablespoons?|tsp\b|teaspoons?|oz\b|ounces?|lb\b|lbs\b|pounds?|g\b|grams?|kg\b|ml\b|l\b|liters?|pinch(?:es)?|dash(?:es)?|cloves?|sticks?|cans?|jars?|packages?|pkg\b|bunch(?:es)?|handfuls?|slices?|large\b|medium\b|small\b)/i;
+      const ingredientStart = /^(?:\d+[\d\s./-]*|[¼½¾⅓⅔⅛⅜⅝⅞]|one|two|three|four|five|six|seven|eight|nine|ten|a|an)\b/i;
+      const imperative = /^(?:preheat|prepare|grease|line|combine|mix|whisk|beat|add|stir|bake|cook|heat|fry|sauté|saute|simmer|boil|chop|slice|dice|grate|pour|toss|melt|fold|spread|sprinkle|drizzle|garnish|serve|transfer|remove|cover|reduce|brown|sear|roast|grill|let|season|drain|rinse|rest|place|divide|allow|set|arrange|bring|blend|pulse|proof|knead|roll|cut)\b/i;
+      const noise = /^(?:jump to recipe|print recipe|pin recipe|rate this recipe|nutrition(?: information)?|calories?\b|advertisement|subscribe|save recipe|share|reviews?\b|comments?\b)/i;
+
+      const metadata = raw.replace(/\u00a0/g, ' ');
+      const servingsMatch = metadata.match(/(?:serves?|servings?|yield|makes)\s*[:\-]?\s*(\d+(?:\s*[-–]\s*\d+)?)/i);
+      const prepMatch = metadata.match(/prep(?:aration)?(?:\s*time)?\s*[:\-]?\s*((?:\d+\s*(?:hours?|hrs?|hr|minutes?|mins?|min)\s*)+)/i);
+      const cookMatch = metadata.match(/cook(?:ing)?(?:\s*time)?\s*[:\-]?\s*((?:\d+\s*(?:hours?|hrs?|hr|minutes?|mins?|min)\s*)+)/i);
+      const urlMatch = metadata.match(/https?:\/\/[^\s)]+/i);
+
+      let title = '';
+      let mode = 'scan';
+      const ingredients = [];
+      const instructions = [];
+      const notes = [];
+
+      for (const originalLine of lines) {
+        if (noise.test(originalLine)) continue;
+        if (ingredientHeader.test(originalLine)) { mode = 'ingredients'; continue; }
+        if (instructionHeader.test(originalLine)) { mode = 'instructions'; continue; }
+        if (notesHeader.test(originalLine)) { mode = 'notes'; continue; }
+        if (metadataLine.test(originalLine)) continue;
+        if (/^https?:\/\//i.test(originalLine)) continue;
+
+        const hadStepNumber = /^\s*(?:step\s*)?\d+[.)\-:]\s+/i.test(originalLine);
+        const line = stripLooseBullet(originalLine);
+        if (!line) continue;
+        const looksInstruction = imperative.test(line) || hadStepNumber || (line.length > 100 && /[.!?]$/.test(line));
+        const looksIngredient = measurement.test(line) || ingredientStart.test(line);
+
+        if (!title && mode === 'scan' && !looksIngredient && !looksInstruction && line.length < 120) {
+          title = line.replace(/^(?:recipe\s*[:\-]\s*)/i, '').trim();
+          continue;
+        }
+
+        if (mode === 'notes') {
+          notes.push(line);
+        } else if (mode === 'instructions') {
+          instructions.push(line);
+        } else if (mode === 'ingredients') {
+          if (looksInstruction && !looksIngredient) {
+            mode = 'instructions';
+            instructions.push(line);
+          } else {
+            ingredients.push(line);
+          }
+        } else if (looksInstruction && !looksIngredient) {
+          mode = 'instructions';
+          instructions.push(line);
+        } else if (looksIngredient) {
+          mode = 'ingredients';
+          ingredients.push(line);
+        } else if (instructions.length) {
+          instructions.push(line);
+        } else if (ingredients.length) {
+          ingredients.push(line);
+        }
+      }
+
+      // A long instructions paragraph may contain several clearly marked actions.
+      if (instructions.length === 1 && instructions[0].length > 260) {
+        const split = instructions[0].split(/(?<=[.!?])\s+(?=(?:Preheat|Prepare|Combine|Mix|Whisk|Beat|Add|Stir|Bake|Cook|Heat|Place|Divide|Allow|Serve)\b)/);
+        if (split.length > 1) instructions.splice(0, 1, ...split);
+      }
+
+      return {
+        name: title || 'Untitled Recipe',
+        ingredients,
+        instructions,
+        prep: prepMatch ? prepMatch[1].trim() : '',
+        cook: cookMatch ? cookMatch[1].trim() : '',
+        servings: servingsMatch ? servingsMatch[1].trim() : '',
+        notes,
+        source: urlMatch ? urlMatch[0] : '',
+        category: inferRecipeCategory(title, ingredients),
+      };
+    }
+
+    function populateRecipeForm(parsed, source = '') {
+      openAddModal();
+      document.getElementById('f-name').value = parsed.name || '';
+      document.getElementById('f-category').value = parsed.category || 'Dinner';
+      document.getElementById('f-prep').value = parsed.prep || '';
+      document.getElementById('f-cook').value = parsed.cook || '';
+      document.getElementById('f-servings').value = parsed.servings || '';
+      document.getElementById('f-ingredients').value = (parsed.ingredients || []).join('\n');
+      document.getElementById('f-instructions').value = (parsed.instructions || [])
+        .map((step, i) => `${i + 1}. ${step}`).join('\n\n');
+      document.getElementById('f-notes').value = (parsed.notes || []).join('\n');
+      document.getElementById('f-source').value = source || parsed.source || '';
+    }
+
+    function parsePastedRecipe() {
+      const raw = document.getElementById('paste-recipe-text').value.trim();
+      const source = document.getElementById('paste-recipe-source').value.trim();
+      const status = document.getElementById('paste-status');
+      if (!raw) {
+        status.textContent = 'Paste the recipe text first.';
+        status.style.display = '';
+        return;
+      }
+      const parsed = parseLooseRecipeText(raw);
+      if (!parsed.ingredients.length && !parsed.instructions.length) {
+        status.textContent = 'I could not identify ingredients or instructions. Include those headings if possible, then try again.';
+        status.style.display = '';
+        return;
+      }
+      closeModal('paste-modal');
+      populateRecipeForm(parsed, source);
+    }
+
+    function openAddModal() {
+      editingId = null;
+      currentRating = 0;
+      document.getElementById('modal-title').textContent = 'Add Recipe';
+      document.getElementById('import-review-note').style.display = 'none';
+      document.getElementById('btn-delete').style.display = 'none';
+      clearForm();
+      updateStarPicker();
+      document.getElementById('edit-modal').classList.add('open');
+    }
+
+    function openEditModal(id) {
+      const r = recipes[id];
+      if (!r) return;
+      editingId = id;
+      currentRating = r.rating || 0;
+      document.getElementById('modal-title').textContent = 'Edit Recipe';
+      document.getElementById('btn-delete').style.display = '';
+      document.getElementById('f-name').value = r.name || '';
+      document.getElementById('f-category').value = r.category || 'Dinner';
+      document.getElementById('f-cuisine').value = r.cuisine || '';
+      document.getElementById('f-prep').value = r.prep || '';
+      document.getElementById('f-cook').value = r.cook || '';
+      document.getElementById('f-servings').value = r.servings || '';
+      document.getElementById('f-tags').value = r.tags || '';
+      document.getElementById('f-ingredients').value = r.ingredients || '';
+      document.getElementById('f-instructions').value = r.instructions || '';
+      document.getElementById('f-image').value = imageUrlOf(r.image);
+      document.getElementById('f-source').value = r.source || '';
+      document.getElementById('f-notes').value = r.notes || '';
+      document.getElementById('import-review-note').style.display = 'none';
+      updateImagePreview();
+      updateStarPicker();
+      document.getElementById('edit-modal').classList.add('open');
+    }
+
+    function clearForm() {
+      ['f-name','f-cuisine','f-prep','f-cook','f-servings','f-tags','f-ingredients','f-instructions','f-image','f-source','f-notes'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('f-category').value = 'Dinner';
+      updateImagePreview();
+    }
+
+    function setRating(n) { currentRating = n; updateStarPicker(); }
+    function updateStarPicker() {
+      const stars = document.getElementById('f-stars').children;
+      for (let i = 0; i < 5; i++) {
+        stars[i].classList.toggle('filled', i < currentRating);
+      }
+    }
+
+    function saveRecipe() {
+      const name = document.getElementById('f-name').value.trim();
+      if (!name) { alert('Please enter a recipe name.'); return; }
+
+      const data = {
+        name,
+        category: document.getElementById('f-category').value,
+        cuisine: document.getElementById('f-cuisine').value.trim(),
+        prep: document.getElementById('f-prep').value.trim(),
+        cook: document.getElementById('f-cook').value.trim(),
+        servings: document.getElementById('f-servings').value.trim(),
+        tags: document.getElementById('f-tags').value.trim(),
+        ingredients: document.getElementById('f-ingredients').value.trim(),
+        instructions: document.getElementById('f-instructions').value.trim(),
+        image: document.getElementById('f-image').value.trim(),
+        source: document.getElementById('f-source').value.trim(),
+        notes: document.getElementById('f-notes').value.trim(),
+        rating: currentRating,
+        updated: new Date().toISOString(),
+      };
+
+      if (editingId) {
+        db.ref('recipes/' + editingId).set(data);
+      } else {
+        db.ref('recipes').push(data);
+      }
+      closeModal('edit-modal');
+    }
+
+    function deleteRecipeFromView(id) {
+      const r = recipes[id];
+      if (!r) return;
+      if (!confirm(`Delete "${r.name}"? This can't be undone.`)) return;
+      db.ref('recipes/' + id).remove();
+      closeModal('view-modal');
+    }
+
+    function deleteRecipe() {
+      if (!editingId) return;
+      if (!confirm('Delete this recipe?')) return;
+      db.ref('recipes/' + editingId).remove();
+      closeModal('edit-modal');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+
+    // Close modal on overlay click
+    document.querySelectorAll('.modal-overlay').forEach(el => {
+      el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); });
+    });
+  </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>

@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dashboard">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5;
+      color: #3d3529;
+      min-height: 100vh;
+    }
+
+    .banner {
+      height: 120px;
+      background: linear-gradient(135deg, #e8ddd3 0%, #d4c5b5 30%, #c9b99a 60%, #bfae8e 100%);
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40px;
+      background: linear-gradient(to top, #faf8f5, transparent);
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: -30px auto 0;
+      padding: 0 2.5rem 2rem;
+      position: relative;
+    }
+
+    .header { margin-bottom: 1.75rem; }
+    .header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem; font-weight: 600; color: #2c2418;
+    }
+    .header .date { font-size: 0.85rem; color: #9c8b76; margin-top: 0.2rem; }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 280px;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ebe5dc;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .card:hover { border-color: #d4c5b5; }
+
+    .card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem; font-weight: 600; color: #2c2418;
+      margin-bottom: 0.85rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .card-title .icon { font-size: 1.1rem; }
+
+    /* Weather */
+    .wx-top-row {
+      display: flex; gap: 0.75rem; margin-bottom: 0.5rem;
+    }
+    .wx-now, .wx-today-forecast {
+      flex: 1; text-align: center;
+      padding: 0.5rem 0;
+    }
+    .wx-now {
+      border-right: 1px solid #f0ebe4;
+    }
+    .wx-col-label {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #b8a48e; margin-bottom: 0.3rem;
+    }
+    .wx-big-icon { font-size: 1.8rem; margin-bottom: 0.15rem; }
+    .wx-big-temp {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem; font-weight: 400; color: #2c2418; line-height: 1;
+    }
+    .wx-big-temp .deg { font-size: 0.9rem; color: #9c8b76; }
+    .wx-cond-text { font-size: 0.78rem; color: #6b5d4d; font-weight: 500; margin-top: 0.2rem; }
+    .wx-hilo {
+      color: #6b5d4d; margin-top: 0.2rem; line-height: 1;
+    }
+    .wx-hilo .hi {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem; font-weight: 400; color: #2c2418;
+    }
+    .wx-hilo .lo {
+      font-size: 0.85rem; color: #9c8b76; margin-left: 0.35rem; vertical-align: middle;
+    }
+    .wx-location { font-size: 0.72rem; color: #9c8b76; text-align: center; margin-bottom: 0.5rem; }
+    .wx-details {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;
+      padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+      font-size: 0.72rem; color: #9c8b76;
+    }
+    .wx-forecast-row {
+      display: flex; justify-content: space-between;
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+    }
+    .wx-fday { text-align: center; flex: 1; }
+    .wx-fday .fname { font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #9c8b76; }
+    .wx-fday .ficon { font-size: 1rem; margin: 0.15rem 0; }
+    .wx-fday .ftemps { font-size: 1.5rem; color: #6b5d4d; line-height: 1.1; }
+    .wx-fday .ftemps .fhi { font-weight: 500; color: #3d3529; }
+    .wx-fday .frain { font-size: 0.58rem; color: #7ca3c7; margin-top: 0.1rem; }
+    .wx-fday .frain.none { color: #4a8c6f; }
+    /* "Look up another city" mini form */
+    .wx-lookup {
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+      display: flex; gap: 0.3rem; align-items: center; font-size: 0.7rem;
+    }
+    .wx-lookup label {
+      color: #9c8b76; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; font-size: 0.58rem;
+    }
+    .wx-lookup input {
+      flex: 1; padding: 0.3rem 0.5rem; border: 1px solid #ebe5dc;
+      border-radius: 6px; font-family: inherit; font-size: 0.78rem;
+      color: #2c2418; background: #fff;
+    }
+    .wx-lookup input:focus { outline: none; border-color: #c9b99a; }
+    .wx-lookup button {
+      padding: 0.3rem 0.7rem; border: none; border-radius: 6px;
+      background: #013E7D; color: #fff; font-family: inherit;
+      font-size: 0.7rem; cursor: pointer;
+    }
+    .wx-lookup .home-pill {
+      padding: 0.2rem 0.5rem; border: 1px solid #c9b99a; border-radius: 999px;
+      background: #faf5ed; color: #6b5d4d; font-size: 0.65rem; cursor: pointer;
+      font-family: inherit; display: none;
+    }
+    /* Hourly rain strip (only shown when any hour today has rain) */
+    .wx-rain-strip {
+      margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid #f0ebe4;
+    }
+    .wx-rain-strip-label {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #9c8b76; margin-bottom: 0.35rem;
+    }
+    .wx-rain-strip-hours {
+      display: flex; gap: 0.2rem;
+    }
+    .wx-rain-hour {
+      flex: 1; text-align: center; padding: 0.3rem 0.1rem;
+      border-radius: 6px; background: #f5f0e8;
+    }
+    .wx-rain-hour .rh-time {
+      font-size: 0.58rem; color: #9c8b76; font-weight: 600;
+    }
+    .wx-rain-hour .rh-pct {
+      font-size: 0.72rem; color: #2c2418; font-weight: 500; margin-top: 0.1rem;
+    }
+    .wx-rain-hour .rh-intensity {
+      font-size: 0.52rem; text-transform: uppercase; letter-spacing: 0.5px;
+      color: #6b5d4d; margin-top: 0.05rem; font-weight: 600;
+    }
+    .wx-rain-hour.dry  { background: #f5f0e8; }
+    .wx-rain-hour.lite { background: #d9e6f1; }
+    .wx-rain-hour.med  { background: #a8c8e1; color: #1a2f47; }
+    .wx-rain-hour.heavy{ background: #6b94c2; color: #fff; }
+    .wx-rain-hour.heavy .rh-time,
+    .wx-rain-hour.heavy .rh-intensity { color: rgba(255,255,255,0.85); }
+
+    /* Mini Calendar */
+    .mini-cal { width: 100%; }
+    .mini-cal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .mini-cal-month { font-size: 0.8rem; font-weight: 600; color: #3d3529; }
+    .mini-cal-nav {
+      background: none; border: none; cursor: pointer; padding: 0 0.4rem;
+      font-size: 1rem; color: #9c8b76; line-height: 1; user-select: none;
+    }
+    .mini-cal-nav:hover { color: #3d3529; }
+    .mini-cal table { width: 100%; border-collapse: collapse; }
+    .mini-cal th {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #b8a48e; padding: 0.2rem;
+      text-align: center;
+    }
+    .mini-cal td {
+      text-align: center; padding: 0.25rem; font-size: 0.72rem; color: #6b5d4d;
+      cursor: pointer; position: relative;
+      transition: background 0.15s;
+    }
+    .mini-cal td:hover:not(.other-month) { background: #f5f0e8; border-radius: 4px; }
+    .mini-cal td.selected {
+      font-weight: 700; color: #fff;
+    }
+    .mini-cal td.selected::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #c9b99a; z-index: 0;
+    }
+    .mini-cal td.selected span { position: relative; z-index: 1; }
+    .mini-cal td.today {
+      font-weight: 700; color: #fff;
+    }
+    .mini-cal td.today::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #c2553a; z-index: 0;
+    }
+    .mini-cal td.today span { position: relative; z-index: 1; }
+    .mini-cal td.has-event::after {
+      content: ''; position: absolute;
+      bottom: 1px; left: 50%; transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: #c9b99a;
+    }
+    .mini-cal td.other-month { color: #d4c5b5; }
+
+    /* Schedule */
+    .cal-day-section { margin-bottom: 1rem; }
+    .cal-day-section:last-child { margin-bottom: 0; }
+    .cal-day-header {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.5px; color: #9c8b76;
+      margin-bottom: 0.6rem; padding-bottom: 0.4rem; border-bottom: 1px solid #f0ebe4;
+    }
+    .cal-event { display: flex; gap: 0.6rem; padding: 0.45rem 0; align-items: flex-start; }
+    .cal-time-pip {
+      width: 3px; min-height: 28px; border-radius: 2px;
+      background: #d4c5b5; margin-top: 2px; flex-shrink: 0;
+    }
+    .cal-info { flex: 1; }
+    .cal-title { font-size: 0.85rem; color: #3d3529; font-weight: 500; }
+    .cal-time { font-size: 0.72rem; color: #9c8b76; margin-top: 0.1rem; }
+    .cal-location { font-size: 0.7rem; color: #b8a48e; margin-top: 0.1rem; }
+    .cal-tag {
+      font-size: 0.55rem; color: #9c8b76; background: #f5f0e8;
+      padding: 0.1rem 0.4rem; border-radius: 3px; margin-top: 0.15rem;
+      display: inline-block; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .cal-empty { font-size: 0.8rem; color: #b8a48e; font-style: italic; padding: 0.25rem 0; }
+
+    /* This Week */
+    .week-row {
+      display: flex; gap: 0.5rem; padding: 0.35rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: flex-start;
+    }
+    .week-row:last-child { border-bottom: none; }
+    .week-day-label {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #9c8b76; min-width: 2.2rem;
+      padding-top: 0.1rem;
+    }
+    .week-day-label.is-today { color: #c2553a; }
+    .week-events { flex: 1; }
+    .week-event-item {
+      font-size: 0.75rem; color: #3d3529; padding: 0.1rem 0;
+    }
+    .week-event-time { color: #b8a48e; font-size: 0.68rem; }
+    .week-empty { font-size: 0.72rem; color: #d4c5b5; font-style: italic; }
+
+    /* Travel */
+    .trip-item {
+      display: flex; gap: 0.6rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #f0ebe4; align-items: center;
+    }
+    .trip-item:last-child { border-bottom: none; }
+    .trip-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .trip-info { flex: 1; }
+    .trip-dest { font-size: 0.82rem; font-weight: 500; color: #3d3529; }
+    .trip-dates { font-size: 0.7rem; color: #9c8b76; margin-top: 0.1rem; }
+    .trip-countdown {
+      font-size: 0.65rem; font-weight: 600; color: #fff;
+      background: #c9b99a; padding: 0.15rem 0.45rem; border-radius: 10px;
+      white-space: nowrap;
+    }
+    .trip-countdown.soon { background: #c2553a; }
+    .trip-countdown.now { background: #4a8c6f; }
+
+    /* Countdown */
+    .countdown-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.55rem 0; border-bottom: 1px solid #f5f0e8;
+    }
+    .countdown-item:last-child { border-bottom: none; }
+    .countdown-days {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem; font-weight: 600; color: #2c2418;
+      min-width: 2.5rem; text-align: center; line-height: 1;
+    }
+    .countdown-unit { font-size: 0.55rem; color: #9c8b76; font-weight: 400; display: block; }
+    .countdown-label { flex: 1; }
+    .countdown-dest { font-size: 0.82rem; font-weight: 500; color: #3d3529; }
+    .countdown-dates { font-size: 0.68rem; color: #9c8b76; }
+    .countdown-icon { font-size: 1rem; }
+
+    /* Weekly Reminders */
+    .reminder-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.8rem;
+    }
+    .reminder-item:last-child { border-bottom: none; }
+    .reminder-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .reminder-text { flex: 1; color: #3d3529; }
+    .reminder-day {
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #9c8b76;
+      background: #f5f0e8; padding: 0.15rem 0.4rem; border-radius: 4px;
+    }
+    .reminder-day.is-today {
+      color: #fff; background: #c2553a;
+    }
+
+    /* To-Do List */
+    .todo-input-row { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .todo-input {
+      flex: 1; border: 1px solid #ebe5dc; border-radius: 5px;
+      padding: 0.4rem 0.6rem; font-size: 0.78rem; font-family: inherit;
+      color: #3d3529; background: #faf8f5; outline: none;
+    }
+    .todo-input:focus { border-color: #c9b99a; }
+    .todo-input::placeholder { color: #c9bfb0; }
+    .todo-add-btn {
+      border: 1px solid #d4c5b5; background: #f5f0e8; border-radius: 5px;
+      padding: 0.4rem 0.65rem; font-size: 0.75rem; color: #6b5d4d;
+      cursor: pointer; font-family: inherit;
+    }
+    .todo-add-btn:hover { background: #ebe5dc; }
+    .todo-list { list-style: none; }
+    .todo-list li {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.35rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.8rem; color: #3d3529;
+      cursor: grab;
+    }
+    .todo-list li:last-child { border-bottom: none; }
+    .todo-list li.drag-over { background: #faf5ec; box-shadow: 0 -2px 0 #c9b99a inset; }
+    .todo-handle {
+      color: #d4c5b5; font-size: 0.7rem; letter-spacing: -1px;
+      flex-shrink: 0; user-select: none; cursor: grab;
+    }
+    .todo-cb {
+      width: 14px; height: 14px; border: 1.5px solid #c9b99a;
+      border-radius: 3px; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.6rem; color: transparent;
+      transition: all 0.15s;
+    }
+    .todo-cb.checked { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .todo-text { flex: 1; }
+    .todo-text.done { text-decoration: line-through; color: #c9bfb0; }
+    .todo-del {
+      font-size: 0.7rem; color: #d4c5b5; cursor: pointer; padding: 0 0.2rem;
+      transition: color 0.15s;
+    }
+    .todo-del:hover { color: #c2553a; }
+
+    /* Shopping wishlist (bottom of home) */
+    .shop-wish-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr auto;
+      gap: 0.4rem;
+      margin-bottom: 0.65rem;
+    }
+    @media (max-width: 640px) {
+      .shop-wish-grid { grid-template-columns: 1fr; }
+    }
+    .shop-wish-list { list-style: none; }
+    .shop-wish-list li {
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      padding: 0.45rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.8rem; color: #3d3529;
+    }
+    .shop-wish-list li:last-child { border-bottom: none; }
+    .shop-wish-main { flex: 1; min-width: 0; }
+    .shop-wish-note {
+      display: block; font-size: 0.68rem; color: #9c8b76; margin-top: 0.12rem;
+    }
+    .shop-wish-empty {
+      font-size: 0.78rem; color: #b8a48e; padding: 0.35rem 0;
+    }
+    .shop-wish-actions {
+      display: flex; gap: 0.5rem; align-items: center; margin-top: 0.55rem;
+      flex-wrap: wrap;
+    }
+    .shop-wish-actions button {
+      border: 1px solid #ebe5dc; background: #faf8f5; border-radius: 5px;
+      padding: 0.3rem 0.55rem; font-size: 0.68rem; color: #6b5d4d;
+      cursor: pointer; font-family: inherit;
+    }
+    .shop-wish-actions button:hover { background: #ebe5dc; }
+    .shop-wish-hint {
+      font-size: 0.68rem; color: #b8a48e; margin: -0.35rem 0 0.65rem;
+    }
+    .shop-wish-hint a { color: #9c8b76; }
+
+    /* Upcoming Events */
+    .upcoming-event {
+      display: flex; gap: 0.6rem; padding: 0.45rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: center;
+    }
+    .upcoming-event:last-child { border-bottom: none; }
+    .upcoming-days {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2rem; font-weight: 600; color: #2c2418;
+      min-width: 2rem; text-align: center; line-height: 1;
+    }
+    .upcoming-days-unit { font-size: 0.5rem; color: #9c8b76; font-weight: 400; display: block; }
+    .upcoming-days.imminent { color: #c2553a; }
+    .upcoming-info { flex: 1; }
+    .upcoming-name { font-size: 0.78rem; color: #3d3529; }
+    .upcoming-date-label { font-size: 0.65rem; color: #b8a48e; }
+
+    /* Chores */
+    .chore-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0; border-bottom: 1px solid #f5f0e8;
+    }
+    .chore-item:last-child { border-bottom: none; }
+    .chore-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .chore-name { flex: 1; font-size: 0.78rem; color: #3d3529; font-weight: 500; }
+    .chore-ago {
+      font-size: 0.63rem; font-weight: 600;
+      padding: 0.15rem 0.4rem; border-radius: 10px; white-space: nowrap;
+    }
+    .chore-ago.overdue { background: #fde8e8; color: #c2553a; }
+    .chore-ago.soon { background: #fef3cd; color: #b8860b; }
+    .chore-ago.ok { background: #e8f5e8; color: #4a8c6f; }
+    .chore-ago.never { background: #f5f0e8; color: #b8a48e; }
+    .chore-done-btn {
+      font-size: 0.6rem; color: #4a8c6f; cursor: pointer;
+      border: 1px solid #c9e8d8; background: #f0faf5;
+      border-radius: 4px; padding: 0.15rem 0.35rem;
+      font-family: inherit; white-space: nowrap;
+    }
+    .chore-done-btn:hover { background: #c9e8d8; }
+
+    /* Checkups */
+    .checkup-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.78rem;
+    }
+    .checkup-item:last-child { border-bottom: none; }
+    .checkup-name { flex: 1; color: #3d3529; font-weight: 500; }
+    .checkup-status {
+      font-size: 0.65rem; font-weight: 600;
+      padding: 0.15rem 0.45rem; border-radius: 10px;
+      white-space: nowrap; cursor: default;
+    }
+    .checkup-status.overdue { background: #fde8e8; color: #c2553a; }
+    .checkup-status.due-soon { background: #fef3cd; color: #b8860b; }
+    .checkup-status.ok { background: #e8f5e8; color: #4a8c6f; }
+    .checkup-date {
+      font-size: 0.65rem; color: #b8a48e;
+      cursor: pointer; text-decoration: underline dotted;
+      text-underline-offset: 2px;
+    }
+    .checkup-date:hover { color: #6b5d4d; }
+    .checkup-never { font-size: 0.65rem; color: #d4c5b5; font-style: italic; }
+    .checkup-ctrl {
+      font-size: 0.7rem; color: #9c8b76; cursor: pointer;
+      padding: 0 0.2rem; user-select: none;
+    }
+    .checkup-ctrl:hover { color: #c2553a; }
+    .checkup-ctrl.disabled { color: #e0d6c8; cursor: default; }
+    .checkup-add {
+      display: inline-block; margin-top: 0.5rem; font-size: 0.72rem;
+      color: #4a8c6f; cursor: pointer; font-weight: 600;
+    }
+    .checkup-add:hover { text-decoration: underline; }
+
+    /* News */
+    .section-label {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; margin-bottom: 0.65rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ebe5dc;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .section-label.politics { color: #c2553a; }
+    .section-label.biotech { color: #4a8c6f; }
+    .section-label.economy { color: #b8860b; }
+    .section-label.other { color: #9c8b76; }
+    .cat-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 0.3rem; }
+    .cat-dot.politics { background: #c2553a; }
+    .cat-dot.biotech { background: #4a8c6f; }
+    .cat-dot.economy { background: #b8860b; }
+    .news-list { list-style: none; }
+    .news-list li { padding: 0.5rem 0; border-bottom: 1px solid #f5f0e8; line-height: 1.5; }
+    .news-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-list li:first-child { padding-top: 0; }
+    .news-list a { color: #3d3529; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .news-list a:hover { color: #c2553a; text-decoration: underline; }
+    .news-source { font-size: 0.68rem; color: #b8a48e; margin-left: 0.3rem; }
+    .news-section { margin-bottom: 1.25rem; }
+    .news-section:last-child { margin-bottom: 0; }
+
+    /* Grocery List */
+    .grocery-input-row { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .grocery-input {
+      flex: 1; border: 1px solid #ebe5dc; border-radius: 5px;
+      padding: 0.4rem 0.6rem; font-size: 0.78rem; font-family: inherit;
+      color: #3d3529; background: #faf8f5; outline: none;
+    }
+    .grocery-input:focus { border-color: #c9b99a; }
+    .grocery-input::placeholder { color: #c9bfb0; }
+    .grocery-list { list-style: none; }
+    .grocery-list li {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.3rem 0; border-bottom: 1px solid #f5f0e8;
+      font-size: 0.78rem; color: #3d3529;
+    }
+    .grocery-list li:last-child { border-bottom: none; }
+    .grocery-cb {
+      width: 13px; height: 13px; border: 1.5px solid #c9b99a;
+      border-radius: 3px; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.55rem; color: transparent;
+      transition: all 0.15s;
+    }
+    .grocery-cb.checked { background: #c9b99a; color: #fff; border-color: #c9b99a; }
+    .grocery-text { flex: 1; }
+    .grocery-text.done { text-decoration: line-through; color: #c9bfb0; }
+    .grocery-del {
+      font-size: 0.65rem; color: #d4c5b5; cursor: pointer; padding: 0 0.2rem;
+    }
+    .grocery-del:hover { color: #c2553a; }
+    .grocery-clear {
+      font-size: 0.65rem; color: #b8a48e; cursor: pointer; text-align: right;
+      margin-top: 0.4rem; text-decoration: underline dotted;
+    }
+    .grocery-clear:hover { color: #c2553a; }
+
+    /* Meal Planner */
+    .meal-row {
+      display: flex; gap: 0.5rem; padding: 0.35rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: center;
+    }
+    .meal-row:last-child { border-bottom: none; }
+    .meal-day {
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #9c8b76; min-width: 2.2rem;
+    }
+    .meal-day.is-today { color: #c2553a; }
+    .meal-input {
+      flex: 1; border: none; border-bottom: 1px solid #f0ebe4;
+      padding: 0.25rem 0.3rem; font-size: 0.75rem; font-family: inherit;
+      color: #3d3529; background: transparent; outline: none;
+    }
+    .meal-input:focus { border-bottom-color: #c9b99a; }
+    .meal-input::placeholder { color: #d4c5b5; }
+
+    /* TV Watchlist */
+    .watchlist-scroll {
+      max-height: 400px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #d4c5b5 transparent;
+    }
+    .watchlist-scroll::-webkit-scrollbar { width: 4px; }
+    .watchlist-scroll::-webkit-scrollbar-thumb { background: #d4c5b5; border-radius: 4px; }
+    .wl-item {
+      display: flex; gap: 0.5rem; padding: 0.5rem 0;
+      border-bottom: 1px solid #f5f0e8; align-items: flex-start;
+    }
+    .wl-item:last-child { border-bottom: none; }
+    .wl-item.watched { opacity: 0.5; }
+    .wl-cb {
+      width: 14px; height: 14px; border: 1.5px solid #c9b99a;
+      border-radius: 3px; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; font-size: 0.6rem; color: transparent;
+      transition: all 0.15s; margin-top: 2px;
+    }
+    .wl-cb.checked { background: #4a8c6f; color: #fff; border-color: #4a8c6f; }
+    .wl-info { flex: 1; min-width: 0; }
+    .wl-title { font-size: 0.82rem; color: #3d3529; font-weight: 500; }
+    .wl-title.done { text-decoration: line-through; color: #b8a48e; }
+    .wl-meta { font-size: 0.65rem; color: #9c8b76; margin-top: 0.1rem; }
+    .wl-track {
+      flex-shrink: 0; cursor: pointer; font-size: 0.56rem; font-weight: 700;
+      letter-spacing: 0.02em; text-transform: uppercase; padding: 0.12rem 0.36rem;
+      border-radius: 999px; border: 1px solid #d8c9b0; color: #8a6a3d;
+      background: #faf6ef; white-space: nowrap; margin-top: 1px;
+    }
+    .wl-track.on { background: #8a6a3d; color: #fff; border-color: #8a6a3d; }
+    .wl-track.new { background: #c2553a; color: #fff; border-color: #c2553a; }
+    .wl-new {
+      display: inline-block; font-size: 0.5rem; font-weight: 800; letter-spacing: 0.04em;
+      color: #fff; background: #c2553a; border-radius: 999px; padding: 0.06rem 0.32rem;
+      vertical-align: middle; margin-right: 0.2rem;
+    }
+    .wl-genre {
+      font-size: 0.55rem; color: #9c8b76; background: #f5f0e8;
+      padding: 0.1rem 0.35rem; border-radius: 3px;
+      display: inline-block; margin-right: 0.3rem;
+    }
+    .wl-genre-header {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.85rem; font-weight: 600; color: #2c2418;
+      margin-top: 0.7rem; margin-bottom: 0.3rem;
+      padding-bottom: 0.2rem; border-bottom: 1px solid #ebe5dc;
+    }
+    .wl-genre-header:first-child { margin-top: 0; }
+    .wl-rating {
+      font-size: 0.6rem; font-weight: 600; color: #4a8c6f;
+      white-space: nowrap;
+    }
+    .wl-rating.low { color: #c2553a; }
+    .wl-rating.mid { color: #b8860b; }
+    .wl-filter-row {
+      display: flex; gap: 0.3rem; margin-bottom: 0.6rem; flex-wrap: wrap;
+    }
+    .wl-filter-btn {
+      font-size: 0.6rem; padding: 0.2rem 0.5rem; border-radius: 10px;
+      border: 1px solid #ebe5dc; background: #fff; color: #9c8b76;
+      cursor: pointer; font-family: inherit;
+    }
+    .wl-filter-btn:hover { border-color: #c9b99a; }
+    .wl-filter-btn.active { background: #3d3529; color: #fff; border-color: #3d3529; }
+    .wl-count { font-size: 0.65rem; color: #b8a48e; margin-top: 0.5rem; text-align: right; }
+
+    .loading { text-align: center; padding: 1.5rem; color: #b8a48e; font-size: 0.8rem; }
+    .spinner {
+      display: inline-block; width: 16px; height: 16px;
+      border: 2px solid #ebe5dc; border-top-color: #c9b99a;
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 0.3rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .last-updated { text-align: center; font-size: 0.65rem; color: #c9bfb0; margin-top: 1.5rem; }
+
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .dashboard { padding: 0 1.25rem 1.5rem; }
+      .banner { height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"></div>
+  <div class="dashboard">
+    <div class="header" style="position:relative;">
+      <h1 id="greeting">Good Morning</h1>
+      <div class="date" id="date-display"></div>
+      <button id="refresh-now-btn" onclick="refreshNow()" title="Refresh email + calendar now"
+        style="position:absolute;top:0;right:0;font-size:0.72rem;color:#9c8b76;background:#fff;border:1px solid #ebe5dc;border-radius:20px;padding:0.35rem 0.85rem;cursor:pointer;font-family:inherit;transition:all 0.15s;">
+        ↻ Refresh now
+      </button>
+    </div>
+
+    <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;flex-wrap:wrap;">
+      <a href="recipes.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;transition:border-color 0.2s;">My Recipes</a>
+      <a href="wardrobe.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;transition:border-color 0.2s;">My Wardrobe</a>
+      <a href="outfit-gallery.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Outfit Gallery</a>
+      <a  style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;"href="grocery.html">Grocery</a>
+      <a href="meals.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Meal Planner</a>
+      <a href="weekend-plan.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Weekend Plan</a>
+      <a href="health.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Health</a>
+      <a href="travel.html" style="font-size:0.78rem;color:#9c8b76;text-decoration:none;border:1px solid #ebe5dc;padding:0.35rem 0.9rem;border-radius:20px;background:#fff;">Travel</a>
+    </div>
+
+    <div class="main-grid">
+      <!-- LEFT -->
+      <div class="col-left">
+        <div class="card">
+          <div class="card-title"><span class="icon">~</span> Weather</div>
+          <div id="weather-content" class="loading"><div class="spinner"></div></div>
+        </div>
+
+        <div class="card">
+          <div id="mini-calendar"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">+</span> Schedule</div>
+          <div id="calendar-events"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+      </div>
+
+      <!-- CENTER -->
+      <div class="col-center">
+        <div class="card" style="padding:1.5rem">
+          <div class="card-title" style="font-size:1.15rem;margin-bottom:1rem"><span class="icon">&gt;</span> Headlines</div>
+          <div id="news-sections"><div class="loading"><div class="spinner"></div><br>Loading headlines...</div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-right">
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Reminders</div>
+          <div id="chores-section"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&check;</span> To Do</div>
+          <div id="todo-section"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title" style="display:flex;align-items:center;justify-content:space-between">
+            <span><span class="icon">&bull;</span> Checkups</span>
+            <span id="checkups-edit-toggle" onclick="toggleEditCheckups()" style="font-size:0.65rem;color:#9c8b76;cursor:pointer;font-weight:400;">Edit</span>
+          </div>
+          <div id="checkups-section"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Coming Up</div>
+          <div id="upcoming-events"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="icon">&bull;</span> Sunrise &amp; Sunset</div>
+          <div id="sun-times" style="font-size:0.8rem;color:#9c8b76;"><div class="loading"><div class="spinner"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:1.5rem;margin-top:1.25rem;">
+      <div class="card-title" style="font-size:1.05rem;display:flex;align-items:center;justify-content:space-between;">
+        <span><span class="icon">&bull;</span> Movies &amp; TV</span>
+        <span id="wl-key-status" onclick="setOmdbKey()" style="font-size:0.65rem;color:#9c8b76;cursor:pointer;font-weight:400;" title="Click to set or change your OMDb API key"></span>
+      </div>
+      <div style="display:flex;gap:0.25rem;margin-bottom:0.35rem;flex-wrap:wrap;">
+        <button type="button" id="wl-type-all" class="wl-filter-btn active" onclick="setWlSearchType('all')" style="background:#f3efe8;border-color:#c9b99a;color:#3d3529;font-weight:600;">All</button>
+        <button type="button" id="wl-type-movie" class="wl-filter-btn" onclick="setWlSearchType('movie')">Movies</button>
+        <button type="button" id="wl-type-tv" class="wl-filter-btn" onclick="setWlSearchType('tv')">TV</button>
+      </div>
+      <div style="display:flex;gap:0.3rem;margin-bottom:0.4rem;">
+        <input type="text" id="wl-add-title" placeholder="Search movie or show…" onkeydown="if(event.key==='Enter')searchAndAddShow()" style="flex:1;border:1px solid #ebe5dc;border-radius:6px;padding:0.25rem 0.5rem;font-size:0.72rem;font-family:inherit;color:#3d3529;outline:none;" />
+        <button onclick="searchAndAddShow()" style="padding:0.25rem 0.5rem;border-radius:6px;border:none;background:#c9b99a;color:#fff;font-size:0.7rem;cursor:pointer;font-family:inherit;">+</button>
+      </div>
+      <div id="wl-search-results" style="margin-bottom:0.3rem;"></div>
+      <div id="watchlist-filters" class="wl-filter-row"></div>
+      <div id="watchlist" class="watchlist-scroll"></div>
+      <div id="watchlist-count" class="wl-count"></div>
+    </div>
+
+    <div class="card" style="padding:1.5rem;margin-top:1.25rem;">
+      <div class="card-title" style="font-size:1.05rem;">
+        <span class="icon">$</span> Shopping Wishlist
+      </div>
+      <p class="shop-wish-hint">Things you want to buy (not weekly food). Groceries stay on <a href="grocery.html">Grocery</a>.</p>
+      <div class="shop-wish-grid">
+        <input type="text" class="todo-input" id="shop-wish-item" placeholder="Item (e.g. new desk lamp)" onkeydown="if(event.key==='Enter')addShopWish()" />
+        <input type="text" class="todo-input" id="shop-wish-note" placeholder="Note / store / link (optional)" onkeydown="if(event.key==='Enter')addShopWish()" />
+        <button class="todo-add-btn" type="button" onclick="addShopWish()">Add</button>
+      </div>
+      <div id="shop-wishlist"></div>
+      <div class="shop-wish-actions">
+        <button type="button" onclick="clearBoughtShopWishes()" title="Remove checked items">Clear bought</button>
+        <span id="shop-wish-count" style="font-size:0.68rem;color:#b8a48e;"></span>
+      </div>
+    </div>
+
+    <div class="last-updated" id="last-updated"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script src="calendar-data.js"></script>
+  <script>
+    // ── Firebase Setup ──
+    const firebaseConfig = {
+      apiKey: "AIzaSyCedyhhnkomtrW3ynwAkzSbtrePMTyZPmQ",
+      authDomain: "morning-dashboard-4c62b.firebaseapp.com",
+      databaseURL: "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
+      projectId: "morning-dashboard-4c62b",
+      storageBucket: "morning-dashboard-4c62b.firebasestorage.app",
+      messagingSenderId: "289564921391",
+      appId: "1:289564921391:web:4ed9e388d5f63218f780da"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Keep the installed (home-screen) app up to date: register a network-first
+    // service worker so it always loads the latest version when online.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+
+    // Helper: sync a key between Firebase and render
+    function fbSet(key, data) {
+      db.ref(key).set(data);
+    }
+    function fbGet(key, callback) {
+      db.ref(key).on('value', snap => {
+        callback(snap.val());
+      });
+    }
+  </script>
+  <script>
+    // ── Greeting ──
+    (function() {
+      const hour = new Date().getHours();
+      let greet = 'Good Morning';
+      if (hour >= 12 && hour < 17) greet = 'Good Afternoon';
+      else if (hour >= 17) greet = 'Good Evening';
+      document.getElementById('greeting').textContent = greet;
+      const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('date-display').textContent = new Date().toLocaleDateString('en-US', opts);
+    })();
+
+    function weatherIcon(desc) {
+      const d = desc.toLowerCase();
+      if (d.includes('sunny') || d.includes('clear')) return '\u2600\uFE0F';
+      if (d.includes('partly') || d.includes('cloud')) return '\u26C5';
+      if (d.includes('overcast')) return '\u2601\uFE0F';
+      if (d.includes('rain') || d.includes('drizzle') || d.includes('shower')) return '\uD83C\uDF27\uFE0F';
+      if (d.includes('thunder') || d.includes('storm')) return '\u26C8\uFE0F';
+      if (d.includes('snow') || d.includes('blizzard')) return '\uD83C\uDF28\uFE0F';
+      if (d.includes('fog') || d.includes('mist')) return '\uD83C\uDF2B\uFE0F';
+      return '\uD83C\uDF24\uFE0F';
+    }
+
+    // Abort a fetch if it stalls — keeps the page from "loading forever"
+    // when an external service (wttr.in, RSS aggregator) is sluggish.
+    function fetchWithTimeout(url, ms = 8000) {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), ms);
+      return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(t));
+    }
+
+    // ── Weather ──
+    // Detect where the user actually is today. Preference order:
+    //   1. TRAVEL_DATA's active trip (and its current segment if multi-city)
+    //   2. A "Trip — X" calendar event with a city-shaped location
+    // The calendar-event path filters out junk like "Microsoft Teams Meeting"
+    // that TripIt imports as a placeholder.
+    function currentLocation() {
+      const now = new Date();
+      const todayIso = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+
+      // (1) TRAVEL_DATA — durable, manually-maintained
+      const trips = window.TRAVEL_DATA || [];
+      const active = trips.find(t => t.start && t.end && t.start <= todayIso && todayIso <= t.end);
+      if (active) {
+        // Multi-city: find the segment that contains today
+        if (Array.isArray(active.segments) && active.segments.length) {
+          const seg = active.segments.find(s => s.start <= todayIso && todayIso <= s.end)
+            || active.segments[0];
+          if (seg && seg.city) return seg.city;
+        }
+        // Single-city (or multi-city title without segments): one geocodable city
+        const dest = active.destination || '';
+        if (dest) return weatherCityFromInput(dest);
+      }
+
+      // (2) Calendar event fallback, with junk-location filter
+      const events = window.CALENDAR_EVENTS || [];
+      const junkLoc = /(teams|zoom|meet\.google|webex|skype|http|microsoft)/i;
+      const trip = events.find(e => {
+        const isTrip = (e.summary || '').toLowerCase().includes('trip');
+        if (!isTrip || !e.location) return false;
+        if (junkLoc.test(e.location)) return false;
+        const start = e.startDate || (e.startTime || '').slice(0, 10);
+        const end   = e.endDate   || (e.endTime   || '').slice(0, 10);
+        return start && end && start <= todayIso && todayIso < end;
+      });
+      return trip ? trip.location : null;
+    }
+
+    // Home base for the weather card when no active trip — overrides wttr.in's
+    // auto-detection (which guesses based on the CDN node and often picks NYC).
+    const WEATHER_HOME = 'Princeton, NJ';
+
+    // When set, overrides the auto-detected location for one-off lookups
+    // (e.g. "what's the weather in NYC today?"). Cleared by the "Home" pill.
+    let weatherOverride = null;
+
+    // Map WMO weather code → short text description (also fed to weatherIcon).
+    function wmoDesc(c) {
+      if (c === 0) return 'Sunny';
+      if (c === 1) return 'Mainly clear';
+      if (c === 2) return 'Partly cloudy';
+      if (c === 3) return 'Overcast';
+      if (c === 45 || c === 48) return 'Fog';
+      if (c === 51 || c === 53 || c === 55) return 'Drizzle';
+      if (c === 56 || c === 57) return 'Freezing drizzle';
+      if (c === 61) return 'Light rain';
+      if (c === 63) return 'Rain';
+      if (c === 65) return 'Heavy rain';
+      if (c === 66 || c === 67) return 'Freezing rain';
+      if (c === 71) return 'Light snow';
+      if (c === 73) return 'Snow';
+      if (c === 75) return 'Heavy snow';
+      if (c === 77) return 'Snow grains';
+      if (c === 80 || c === 81 || c === 82) return 'Rain showers';
+      if (c === 85 || c === 86) return 'Snow showers';
+      if (c === 95) return 'Thunderstorm';
+      if (c === 96 || c === 99) return 'Thunderstorm with hail';
+      return 'Cloudy';
+    }
+    const isSnowCode = c => (c >= 71 && c <= 77) || c === 85 || c === 86;
+
+    // US state abbreviation → full name (for "Princeton, NJ" style inputs)
+    const US_STATES = {
+      AL:'Alabama', AK:'Alaska', AZ:'Arizona', AR:'Arkansas', CA:'California',
+      CO:'Colorado', CT:'Connecticut', DE:'Delaware', DC:'District of Columbia',
+      FL:'Florida', GA:'Georgia', HI:'Hawaii', ID:'Idaho', IL:'Illinois',
+      IN:'Indiana', IA:'Iowa', KS:'Kansas', KY:'Kentucky', LA:'Louisiana',
+      ME:'Maine', MD:'Maryland', MA:'Massachusetts', MI:'Michigan',
+      MN:'Minnesota', MS:'Mississippi', MO:'Missouri', MT:'Montana',
+      NE:'Nebraska', NV:'Nevada', NH:'New Hampshire', NJ:'New Jersey',
+      NM:'New Mexico', NY:'New York', NC:'North Carolina', ND:'North Dakota',
+      OH:'Ohio', OK:'Oklahoma', OR:'Oregon', PA:'Pennsylvania', RI:'Rhode Island',
+      SC:'South Carolina', SD:'South Dakota', TN:'Tennessee', TX:'Texas',
+      UT:'Utah', VT:'Vermont', VA:'Virginia', WA:'Washington', WV:'West Virginia',
+      WI:'Wisconsin', WY:'Wyoming'
+    };
+
+    // Geocode → cache in localStorage so we only geocode each city once.
+    // Handles "City", "City, ST" (US state code), and "City, Country" inputs.
+    // Multi-city trip titles ("Paris → Cologne", "Bogotá → Cartagena → Medellín")
+    // must be reduced to one city — Open-Meteo returns nothing for the full string.
+    function weatherCityFromInput(input) {
+      let s = String(input || '').trim();
+      if (!s) return s;
+      // Prefer the destination side of home → dest (e.g. Newark → London)
+      const arrowParts = s.split(/\s*→\s*|\s+to\s+/i).map(p => p.trim()).filter(Boolean);
+      if (arrowParts.length > 1) {
+        const homeRe = /^(newark|ewr|princeton|home)\b/i;
+        const first = arrowParts[0].split(',')[0].trim();
+        const last = arrowParts[arrowParts.length - 1].split(',')[0].trim();
+        s = (homeRe.test(first) && !homeRe.test(last)) ? last : first;
+      }
+      return s;
+    }
+
+    async function geocode(input) {
+      // Cache key is versioned (v3) so older multi-city failures flush.
+      const normalized = weatherCityFromInput(input);
+      const key = 'wx-geo3-' + normalized.toLowerCase();
+      const cached = localStorage.getItem(key);
+      if (cached) return JSON.parse(cached);
+
+      // Parse "City, suffix" — suffix might be a US state code or a country.
+      let city = normalized.trim(), suffix = '';
+      const parts = normalized.split(',').map(s => s.trim());
+      if (parts.length >= 2) {
+        city = parts[0];
+        suffix = parts.slice(1).join(', ');
+      } else {
+        // No comma: detect a trailing US state code, e.g. "Princeton NJ".
+        const m = city.match(/^(.*\S)\s+([A-Za-z]{2})$/);
+        if (m && US_STATES[m[2].toUpperCase()]) {
+          city = m[1].trim();
+          suffix = m[2];
+        }
+      }
+      const stateFull = US_STATES[suffix.toUpperCase()];
+
+      // Query with bare city to keep Open-Meteo happy, get up to 10 results,
+      // then filter to one matching the suffix if provided.
+      const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10&language=en&format=json`;
+      const res = await fetchWithTimeout(url, 8000);
+      const json = await res.json();
+      if (!json.results || !json.results.length) throw new Error(`Location not found: ${normalized}`);
+
+      const byPopulation = (a, b) => (b.population || 0) - (a.population || 0);
+      let pick = null;
+      if (suffix) {
+        const want = (stateFull || suffix).toLowerCase();
+        // There can be several same-state matches — take the most populous.
+        const matches = json.results.filter(r =>
+          (r.admin1 || '').toLowerCase() === want ||
+          (r.country || '').toLowerCase() === want ||
+          (r.country_code || '').toLowerCase() === suffix.toLowerCase()
+        );
+        if (matches.length) pick = matches.sort(byPopulation)[0];
+      }
+      // No suffix, or suffix didn't match anything: the API orders by relevance
+      // (which surfaces tiny towns first), so fall back to the most populous
+      // result instead of results[0].
+      if (!pick) pick = json.results.slice().sort(byPopulation)[0];
+
+      const geo = { lat: pick.latitude, lon: pick.longitude, name: pick.name, region: pick.admin1 || '', country: pick.country_code || '' };
+      localStorage.setItem(key, JSON.stringify(geo));
+      return geo;
+    }
+
+    async function loadWeather() {
+      try {
+        const tripLoc = currentLocation();
+        const queryLoc = weatherOverride || tripLoc || WEATHER_HOME;
+        const geo = await geocode(queryLoc);
+
+        // Open-Meteo: no API key, reliable CORS, broadly unblocked.
+        const cb = Math.floor(Date.now() / 300000);
+        const fcUrl = `https://api.open-meteo.com/v1/forecast`
+          + `?latitude=${geo.lat}&longitude=${geo.lon}`
+          + `&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,visibility`
+          + `&hourly=temperature_2m,precipitation_probability,precipitation,snowfall,weather_code`
+          + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset`
+          + `&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
+          + `&timezone=auto&forecast_days=5&_=${cb}`;
+        const res = await fetchWithTimeout(fcUrl, 10000);
+        const data = await res.json();
+
+        const curr = data.current;
+        const desc = wmoDesc(curr.weather_code);
+        const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+        const todayDesc = wmoDesc(data.daily.weather_code[0]);
+        const todayMax  = Math.round(data.daily.temperature_2m_max[0]);
+        const todayRain = Math.round(data.daily.precipitation_probability_max[0] || 0);
+
+        // Build hourly precip strip from today's hours, current hour onward.
+        const todayDateStr = (data.daily.time && data.daily.time[0]) || curr.time.slice(0,10);
+        const nowH = new Date().getHours();
+        const hourlyIdxs = data.hourly.time
+          .map((t, i) => ({ t, i, h: parseInt(t.slice(11,13)) }))
+          .filter(o => o.t.startsWith(todayDateStr) && o.h >= Math.floor(nowH / 3) * 3 && o.h % 3 === 0);
+
+        const maxRainSoon = Math.max(0, ...hourlyIdxs.map(o => data.hourly.precipitation_probability[o.i] || 0));
+        let rainStripHTML = '';
+        if (maxRainSoon >= 20) {
+          const bucket = pct => pct >= 70 ? 'heavy' : pct >= 40 ? 'med' : pct >= 20 ? 'lite' : 'dry';
+          const fmtHour = h => h === 0 ? '12a' : h === 12 ? '12p' : (h < 12 ? `${h}a` : `${h-12}p`);
+          // precipitation here is in inches per hour, converted to mm for NWS thresholds
+          // (<0.1mm trace, 0.1-2.5 light, 2.5-7.6 moderate, >7.6 heavy)
+          const intensity = (inch, pct) => {
+            if (pct < 20) return '';
+            const mm = inch * 25.4;
+            if (mm < 0.1) return 'trace';
+            if (mm < 2.5) return 'light';
+            if (mm < 7.6) return 'moderate';
+            return 'heavy';
+          };
+          rainStripHTML = '<div class="wx-rain-strip"><div class="wx-rain-strip-label">Precipitation hours today</div><div class="wx-rain-strip-hours">';
+          hourlyIdxs.forEach(o => {
+            const pct = Math.round(data.hourly.precipitation_probability[o.i] || 0);
+            const inch = data.hourly.precipitation[o.i] || 0;
+            const code = data.hourly.weather_code[o.i];
+            const lab = intensity(inch, pct);
+            const icon = pct < 20 ? '' : (isSnowCode(code) ? '❄' : '💧');
+            rainStripHTML += `<div class="wx-rain-hour ${bucket(pct)}"><div class="rh-time">${fmtHour(o.h)}</div><div class="rh-pct">${icon} ${pct}%</div>${lab ? `<div class="rh-intensity">${lab}</div>` : ''}</div>`;
+          });
+          rainStripHTML += '</div></div>';
+        }
+
+        // Future days (skip today)
+        let fHTML = '<div class="wx-forecast-row">';
+        for (let i = 1; i < data.daily.time.length; i++) {
+          const date = new Date(data.daily.time[i] + 'T12:00:00');
+          const name = dayNames[date.getDay()];
+          const dd = wmoDesc(data.daily.weather_code[i]);
+          const mr = Math.round(data.daily.precipitation_probability_max[i] || 0);
+          fHTML += `<div class="wx-fday"><div class="fname">${name}</div><div class="ficon">${weatherIcon(dd)}</div><div class="ftemps"><span class="fhi">${Math.round(data.daily.temperature_2m_max[i])}°</span> ${Math.round(data.daily.temperature_2m_min[i])}°</div><div class="frain ${mr===0?'none':''}">${mr>0?mr+'%':'dry'}</div></div>`;
+        }
+        fHTML += '</div>';
+
+        const locLabel = geo.region ? `${geo.name}, ${geo.region}` : geo.name;
+        document.getElementById('weather-content').innerHTML = `
+          <div class="wx-location">${locLabel}</div>
+          <div class="wx-top-row">
+            <div class="wx-now">
+              <div class="wx-col-label">Now</div>
+              <div class="wx-big-icon">${weatherIcon(desc)}</div>
+              <div class="wx-big-temp">${Math.round(curr.temperature_2m)}<span class="deg">°</span></div>
+              <div class="wx-cond-text">${desc}</div>
+            </div>
+            <div class="wx-today-forecast">
+              <div class="wx-col-label">Today</div>
+              <div class="wx-big-icon">${weatherIcon(todayDesc)}</div>
+              <div class="wx-hilo"><span class="hi">${todayMax}°</span></div>
+              <div class="wx-cond-text">${todayDesc}</div>
+              ${todayRain > 0 ? '<div style="font-size:0.7rem;color:#7ca3c7;margin-top:0.15rem;">' + todayRain + '% rain</div>' : ''}
+            </div>
+          </div>
+          <div class="wx-details"><span>Humidity ${curr.relative_humidity_2m}%</span><span>Wind ${Math.round(curr.wind_speed_10m)}mph</span><span>Feels ${Math.round(curr.apparent_temperature)}°</span><span>Vis ${Math.round((curr.visibility || 0) / 1609)}mi</span></div>
+          ${rainStripHTML}
+          ${fHTML}
+          <div class="wx-lookup">
+            <label>Other city</label>
+            <input type="text" id="wx-lookup-input" placeholder="e.g. NYC, Boston, Paris" />
+            <button id="wx-lookup-btn">Look up</button>
+            <button class="home-pill" id="wx-home-pill" style="display:${weatherOverride ? 'inline-block' : 'none'};">↺ Home</button>
+          </div>`;
+
+        const input = document.getElementById('wx-lookup-input');
+        const submit = () => {
+          const v = input.value.trim();
+          if (!v) return;
+          weatherOverride = v;
+          loadWeather();
+        };
+        document.getElementById('wx-lookup-btn').onclick = submit;
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+        document.getElementById('wx-home-pill').onclick = () => {
+          weatherOverride = null;
+          loadWeather();
+        };
+
+        const sunrise = (data.daily.sunrise[0] || '').slice(11, 16);
+        const sunset  = (data.daily.sunset[0]  || '').slice(11, 16);
+        document.getElementById('sun-times').innerHTML = `<div style="display:flex;justify-content:space-between;padding:0.25rem 0;"><span>🌅 ${sunrise}</span><span>🌇 ${sunset}</span></div>`;
+      } catch(e) {
+        console.error('[weather] loadWeather failed:', e);
+        document.getElementById('weather-content').innerHTML =
+          `<span style="color:#b8a48e">Weather unavailable</span>
+           <div style="font-size:0.65rem;color:#c2553a;margin-top:0.3rem;">${(e && e.message) || e}</div>
+           <button onclick="loadWeather()" style="margin-top:0.4rem;padding:0.25rem 0.6rem;border:1px solid #ebe5dc;border-radius:6px;background:#fff;font-family:inherit;font-size:0.7rem;cursor:pointer;">Retry</button>`;
+      }
+    }
+
+    // ── Mini Calendar (interactive) ──
+    let selectedCalDate = null;
+    let calMonthOffset = 0;  // 0 = current month, +1 = next, -1 = prev
+
+    function getEventsForDate(dateStr) {
+      const cal = window.CALENDAR_EVENTS || [];
+      const travel = window.TRAVEL_DATA || [];
+      const results = [];
+      // Dedupe by summary+start (Personal + Family calendars sometimes both contain the same event)
+      const seen = new Set();
+      for (const ev of cal) {
+        const evDate = ev.startTime ? ev.startTime.slice(0, 10) : (ev.startDate || '');
+        let hit = false;
+        if (ev.startDate && ev.endDate) {
+          if (dateStr >= ev.startDate && dateStr < ev.endDate) hit = true;
+        } else if (evDate === dateStr) {
+          hit = true;
+        }
+        if (!hit) continue;
+        const k = (ev.summary || '') + '|' + (ev.startTime || ev.startDate || '');
+        if (seen.has(k)) continue;
+        seen.add(k);
+        results.push(ev);
+      }
+      // Add trip-wrapper synthetic events for any date inside a trip range
+      for (const trip of travel) {
+        if (dateStr >= trip.start && dateStr <= trip.end) {
+          results.push({
+            summary: `${trip.icon || '✈'} Trip — ${trip.destination}`,
+            startDate: trip.start,
+            endDate: trip.end,
+            location: trip.destination,
+          });
+        }
+      }
+      return results;
+    }
+
+    function onCalDayClick(day) {
+      const base = new Date();
+      const target = new Date(base.getFullYear(), base.getMonth() + calMonthOffset, 1);
+      const dateStr = `${target.getFullYear()}-${String(target.getMonth()+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      selectedCalDate = dateStr;
+      renderMiniCalendar();
+      showDayEvents(dateStr, day);
+    }
+
+    function shiftCalMonth(delta) {
+      calMonthOffset += delta;
+      renderMiniCalendar();
+    }
+
+    function showDayEvents(dateStr, day) {
+      const events = getEventsForDate(dateStr);
+      const d = new Date(dateStr + 'T12:00:00');
+      const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const label = `${dayNames[d.getDay()]}, ${d.toLocaleDateString('en-US', {month:'long', day:'numeric'})}`;
+
+      function fmtTime(s) { if (!s) return null; return new Date(s).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}); }
+
+      let html = `<div class="cal-day-section">
+        <div class="cal-day-header">${label}</div>`;
+      if (events.length === 0) {
+        html += '<div class="cal-empty">Nothing scheduled</div>';
+      } else {
+        events.forEach(ev => {
+          const s = fmtTime(ev.startTime), e = fmtTime(ev.endTime);
+          const t = s ? `${s} \u2013 ${e}` : 'All day';
+          const loc = ev.location ? `<div class="cal-location">${ev.location}</div>` : '';
+          html += `<div class="cal-event"><div class="cal-time-pip"></div><div class="cal-info"><div class="cal-title">${ev.summary}</div><div class="cal-time">${t}</div>${loc}</div></div>`;
+        });
+      }
+      html += '</div>';
+      // Add a "back to today" link
+      html += `<div style="text-align:center;margin-top:0.5rem;"><span style="font-size:0.7rem;color:#b8a48e;cursor:pointer;text-decoration:underline dotted;" onclick="resetToToday()">Back to today/tomorrow</span></div>`;
+      document.getElementById('calendar-events').innerHTML = html;
+    }
+
+    function resetToToday() {
+      selectedCalDate = null;
+      calMonthOffset = 0;
+      renderMiniCalendar();
+      renderCalendar();
+    }
+
+    function renderMiniCalendar() {
+      const now = new Date();
+      const target = new Date(now.getFullYear(), now.getMonth() + calMonthOffset, 1);
+      const year = target.getFullYear(), month = target.getMonth();
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const daysInPrev = new Date(year, month, 0).getDate();
+      // Only mark "today" if we're actually viewing the current month
+      const isCurrentMonth = (year === now.getFullYear() && month === now.getMonth());
+      const today = isCurrentMonth ? now.getDate() : -1;
+      const monthName = target.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+      // Collect event dates from CALENDAR_EVENTS + TRAVEL_DATA
+      const eventDates = new Set();
+      const cal = window.CALENDAR_EVENTS || [];
+      cal.forEach(ev => {
+        const startStr = ev.startTime ? ev.startTime.slice(0,10) : (ev.startDate || '');
+        if (startStr && startStr.slice(0,7) === `${year}-${String(month+1).padStart(2,'0')}`) {
+          eventDates.add(parseInt(startStr.slice(8,10)));
+        }
+        if (ev.startDate && ev.endDate) {
+          const s = new Date(ev.startDate + 'T12:00:00');
+          const e = new Date(ev.endDate + 'T12:00:00');
+          for (let d = new Date(s); d < e; d.setDate(d.getDate()+1)) {
+            if (d.getMonth() === month && d.getFullYear() === year) eventDates.add(d.getDate());
+          }
+        }
+      });
+      const travel = window.TRAVEL_DATA || [];
+      travel.forEach(trip => {
+        const s = new Date(trip.start + 'T12:00:00');
+        const e = new Date(trip.end + 'T12:00:00');
+        for (let d = new Date(s); d <= e; d.setDate(d.getDate()+1)) {
+          if (d.getMonth() === month && d.getFullYear() === year) eventDates.add(d.getDate());
+        }
+      });
+
+      // Only highlight the selected day if it's actually in the month we're viewing
+      const selectedMonthStr = `${year}-${String(month+1).padStart(2,'0')}`;
+      const selectedDay = (selectedCalDate && selectedCalDate.slice(0,7) === selectedMonthStr)
+        ? parseInt(selectedCalDate.slice(8,10)) : null;
+
+      let html = `<div class="mini-cal"><div class="mini-cal-header">`
+        + `<button class="mini-cal-nav" onclick="shiftCalMonth(-1)" title="Previous month">&lsaquo;</button>`
+        + `<span class="mini-cal-month">${monthName}</span>`
+        + `<button class="mini-cal-nav" onclick="shiftCalMonth(1)" title="Next month">&rsaquo;</button>`
+        + `</div>`;
+      html += '<table><tr>';
+      ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(d => html += `<th>${d}</th>`);
+      html += '</tr><tr>';
+
+      let dayCount = 0;
+      for (let i = 0; i < firstDay; i++) {
+        const d = daysInPrev - firstDay + i + 1;
+        html += `<td class="other-month"><span>${d}</span></td>`;
+        dayCount++;
+      }
+      for (let d = 1; d <= daysInMonth; d++) {
+        let cls = '';
+        if (d === today) cls += ' today';
+        if (d === selectedDay && d !== today) cls += ' selected';
+        if (eventDates.has(d)) cls += ' has-event';
+        html += `<td class="${cls.trim()}" onclick="onCalDayClick(${d})"><span>${d}</span></td>`;
+        dayCount++;
+        if (dayCount % 7 === 0 && d < daysInMonth) html += '</tr><tr>';
+      }
+      const remaining = 7 - (dayCount % 7);
+      if (remaining < 7) {
+        for (let i = 1; i <= remaining; i++) {
+          html += `<td class="other-month"><span>${i}</span></td>`;
+        }
+      }
+      html += '</tr></table></div>';
+      document.getElementById('mini-calendar').innerHTML = html;
+    }
+    renderMiniCalendar();
+
+    // ── Schedule (Today/Tomorrow) ──
+    function renderCalendar() {
+      const events = window.CALENDAR_EVENTS || [];
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0,10);
+      const tomorrow = new Date(now); tomorrow.setDate(tomorrow.getDate()+1);
+      const tomorrowStr = tomorrow.toISOString().slice(0,10);
+      const todayEv = [], tomorrowEv = [];
+      for (const ev of events) {
+        const ds = ev.startTime ? ev.startTime.slice(0,10) : ev.startDate;
+        if (ds === todayStr) todayEv.push(ev);
+        else if (ds === tomorrowStr) tomorrowEv.push(ev);
+      }
+      function fmtTime(s) { if (!s) return null; return new Date(s).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}); }
+      function renderEv(list) {
+        if (!list.length) return '<div class="cal-empty">Nothing scheduled</div>';
+        return list.map(ev => {
+          const s=fmtTime(ev.startTime),e=fmtTime(ev.endTime);
+          const t=s?`${s} \u2013 ${e}`:'All day';
+          const loc=ev.location?`<div class="cal-location">${ev.location}</div>`:'';
+          const tag=ev.calendar&&ev.calendar!=='Personal'?`<span class="cal-tag">${ev.calendar}</span>`:'';
+          return `<div class="cal-event"><div class="cal-time-pip"></div><div class="cal-info"><div class="cal-title">${ev.summary}</div><div class="cal-time">${t}</div>${loc}${tag}</div></div>`;
+        }).join('');
+      }
+      const dn=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      document.getElementById('calendar-events').innerHTML =
+        `<div class="cal-day-section"><div class="cal-day-header">Today \u2014 ${dn[now.getDay()]}</div>${renderEv(todayEv)}</div>` +
+        `<div class="cal-day-section"><div class="cal-day-header">Tomorrow \u2014 ${dn[tomorrow.getDay()]}</div>${renderEv(tomorrowEv)}</div>`;
+    }
+    renderCalendar();
+
+    // ── To-Do List (Firebase) ──
+    let _todos = [];
+    function renderTodos() {
+      let html = `<div class="todo-input-row"><input type="text" class="todo-input" id="todo-input" placeholder="Add a task..." /><button class="todo-add-btn" onclick="addTodo()">Add</button></div>`;
+      html += '<ul class="todo-list">';
+      _todos.forEach((t, i) => {
+        html += `<li draggable="true"
+          ondragstart="todoDragStart(event, ${i})"
+          ondragover="event.preventDefault();this.classList.add('drag-over')"
+          ondragleave="this.classList.remove('drag-over')"
+          ondrop="todoDrop(event, ${i});this.classList.remove('drag-over')">
+          <span class="todo-handle" title="Drag to reorder">\u22ee\u22ee</span>
+          <div class="todo-cb ${t.done?'checked':''}" onclick="toggleTodo(${i})">${t.done?'\u2713':''}</div>
+          <span class="todo-text ${t.done?'done':''}">${t.text}</span>
+          <span class="todo-del" onclick="deleteTodo(${i})">\u2715</span>
+        </li>`;
+      });
+      html += '</ul>';
+      document.getElementById('todo-section').innerHTML = html;
+      setTimeout(() => {
+        const inp = document.getElementById('todo-input');
+        if (inp) inp.addEventListener('keydown', e => { if(e.key==='Enter') addTodo(); });
+      }, 0);
+    }
+
+    let _todoDragIdx = null;
+    function todoDragStart(e, idx) {
+      _todoDragIdx = idx;
+      e.dataTransfer.effectAllowed = 'move';
+    }
+    function todoDrop(e, targetIdx) {
+      e.preventDefault();
+      if (_todoDragIdx === null || _todoDragIdx === targetIdx) return;
+      const [moved] = _todos.splice(_todoDragIdx, 1);
+      const insertAt = _todoDragIdx < targetIdx ? targetIdx - 1 : targetIdx;
+      _todos.splice(insertAt, 0, moved);
+      _todoDragIdx = null;
+      fbSet('todos', _todos);
+    }
+    function addTodo() {
+      const inp = document.getElementById('todo-input');
+      const text = inp.value.trim();
+      if (!text) return;
+      _todos.push({ text, done: false });
+      fbSet('todos', _todos);
+    }
+    function toggleTodo(i) {
+      _todos[i].done = !_todos[i].done;
+      fbSet('todos', _todos);
+    }
+    function deleteTodo(i) {
+      const t = _todos[i];
+      if (!t) return;
+      if (!confirm(`Delete "${t.text}"?`)) return;
+      _todos.splice(i, 1);
+      fbSet('todos', _todos);
+    }
+    // Seed and listen
+    fbGet('todos', data => {
+      if (data === null) {
+        _todos = [
+          { text: 'Add doorknobs to basement', done: false },
+          { text: 'Return clothing', done: false },
+          { text: 'Organize closet', done: false },
+        ];
+        fbSet('todos', _todos);
+      } else {
+        _todos = Array.isArray(data) ? data : Object.values(data);
+      }
+      renderTodos();
+    });
+
+    // ── Shopping Wishlist (Firebase) — non-grocery wants ──
+    let _shopWishes = [];
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+    function linkifyNote(note) {
+      const raw = String(note || '').trim();
+      if (!raw) return '';
+      // Plain URL → clickable; otherwise escaped text
+      if (/^https?:\/\/\S+$/i.test(raw)) {
+        const safe = escapeHtml(raw);
+        return `<a href="${safe}" target="_blank" rel="noopener" style="color:#6b7a9c;word-break:break-all;">${safe}</a>`;
+      }
+      return escapeHtml(raw);
+    }
+    function renderShopWishlist() {
+      const el = document.getElementById('shop-wishlist');
+      const countEl = document.getElementById('shop-wish-count');
+      if (!el) return;
+      if (!_shopWishes.length) {
+        el.innerHTML = '<div class="shop-wish-empty">Nothing on the list yet — add something you want to buy.</div>';
+        if (countEl) countEl.textContent = '';
+        return;
+      }
+      const open = _shopWishes.filter(w => !w.done).length;
+      const bought = _shopWishes.length - open;
+      // Open items first, then bought
+      const order = _shopWishes
+        .map((w, i) => ({ w, i }))
+        .sort((a, b) => (a.w.done === b.w.done ? 0 : a.w.done ? 1 : -1));
+      let html = '<ul class="shop-wish-list">';
+      order.forEach(({ w, i }) => {
+        const noteHtml = w.note
+          ? `<span class="shop-wish-note">${linkifyNote(w.note)}</span>`
+          : '';
+        html += `<li>
+          <div class="todo-cb ${w.done ? 'checked' : ''}" onclick="toggleShopWish(${i})" title="Mark bought">${w.done ? '\u2713' : ''}</div>
+          <div class="shop-wish-main">
+            <span class="todo-text ${w.done ? 'done' : ''}">${escapeHtml(w.text)}</span>
+            ${noteHtml}
+          </div>
+          <span class="todo-del" onclick="deleteShopWish(${i})" title="Remove">\u2715</span>
+        </li>`;
+      });
+      html += '</ul>';
+      el.innerHTML = html;
+      if (countEl) {
+        countEl.textContent = bought
+          ? `${open} open · ${bought} bought`
+          : `${open} item${open === 1 ? '' : 's'}`;
+      }
+    }
+    function addShopWish() {
+      const itemEl = document.getElementById('shop-wish-item');
+      const noteEl = document.getElementById('shop-wish-note');
+      const text = (itemEl && itemEl.value || '').trim();
+      if (!text) return;
+      const note = (noteEl && noteEl.value || '').trim();
+      _shopWishes.push({ text, note, done: false, added: new Date().toISOString().slice(0, 10) });
+      if (itemEl) itemEl.value = '';
+      if (noteEl) noteEl.value = '';
+      fbSet('shoppingWishlist', _shopWishes);
+      if (itemEl) itemEl.focus();
+    }
+    function toggleShopWish(i) {
+      if (!_shopWishes[i]) return;
+      _shopWishes[i].done = !_shopWishes[i].done;
+      fbSet('shoppingWishlist', _shopWishes);
+    }
+    function deleteShopWish(i) {
+      const w = _shopWishes[i];
+      if (!w) return;
+      if (!confirm(`Remove "${w.text}" from wishlist?`)) return;
+      _shopWishes.splice(i, 1);
+      fbSet('shoppingWishlist', _shopWishes);
+    }
+    function clearBoughtShopWishes() {
+      const n = _shopWishes.filter(w => w.done).length;
+      if (!n) return;
+      if (!confirm(`Remove ${n} bought item${n === 1 ? '' : 's'}?`)) return;
+      _shopWishes = _shopWishes.filter(w => !w.done);
+      fbSet('shoppingWishlist', _shopWishes);
+    }
+    fbGet('shoppingWishlist', data => {
+      if (data === null) {
+        _shopWishes = [];
+        // Do not seed placeholder items — empty is fine
+      } else {
+        _shopWishes = Array.isArray(data) ? data : Object.values(data || {});
+        _shopWishes = _shopWishes.filter(w => w && typeof w.text === 'string');
+      }
+      renderShopWishlist();
+    });
+
+    // ── Upcoming Events (holidays, etc.) ──
+    function renderUpcoming() {
+      const events = window.UPCOMING_EVENTS || [];
+      if (!events.length) { document.getElementById('upcoming-events').innerHTML='<div class="cal-empty">Nothing coming up</div>'; return; }
+      const now = new Date(); now.setHours(0,0,0,0);
+      // Filter to future events and show next 8
+      const future = events.filter(ev => new Date(ev.date + 'T12:00:00') >= now).slice(0, 8);
+      let html = '';
+      future.forEach(ev => {
+        const d = new Date(ev.date + 'T12:00:00');
+        const diff = Math.ceil((d - now) / 86400000);
+        const ds = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const imminent = diff <= 7 ? ' imminent' : '';
+        let dayLabel, unitLabel;
+        if (diff === 0) { dayLabel = '!'; unitLabel = 'today'; }
+        else if (diff === 1) { dayLabel = '1'; unitLabel = 'day'; }
+        else { dayLabel = diff; unitLabel = 'days'; }
+        const nameStyle = diff <= 7 ? 'font-weight:500;color:#c2553a;' : '';
+        html += `<div class="upcoming-event">
+          <div class="upcoming-days${imminent}">${dayLabel}<span class="upcoming-days-unit">${unitLabel}</span></div>
+          <div class="upcoming-info">
+            <div class="upcoming-name" style="${nameStyle}">${ev.name}</div>
+            <div class="upcoming-date-label">${ds}</div>
+          </div>
+        </div>`;
+      });
+      document.getElementById('upcoming-events').innerHTML = html;
+    }
+    renderUpcoming();
+
+    // ── Reminders ──
+    const CHORE_TYPES = [
+      { id: 'book-pilates', name: 'Book Pilates & OTF classes', icon: '\uD83E\uDDD8', dueDays: 7 },
+      { id: 'dry-cleaning', name: 'Drop off dry cleaning', icon: '\uD83E\uDDE5', dueDays: 7 },
+      { id: 'call-mom', name: 'Call Mom', icon: '\uD83D\uDCDE', dueDays: 7 },
+      { id: 'dog-poop', name: 'Pick up dog poop', icon: '\uD83D\uDC36', dueDays: 7 },
+      { id: 'water-plants', name: 'Water plants', icon: '\uD83C\uDF31', dueDays: 7 },
+      { id: 'weeding', name: 'Weed the garden', icon: '\uD83C\uDF3B', dueDays: 14 },
+      { id: 'pedicure', name: 'Pedicure', icon: '\uD83D\uDC85', dueDays: 30 },
+      { id: 'eyebrows', name: 'Eyebrow care', icon: '\u2728', dueDays: 30 },
+    ];
+
+    let _chores = {};
+    function renderChores() {
+      const data = _chores;
+      const now = new Date(); now.setHours(0,0,0,0);
+      let html = '';
+      CHORE_TYPES.forEach(c => {
+        const lastDate = data[c.id];
+        let statusHtml, detailHtml;
+
+        if (!lastDate) {
+          statusHtml = '<span class="chore-ago overdue">Due now</span>';
+          detailHtml = `<span style="font-size:0.7rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Never done</span>`;
+        } else {
+          const last = new Date(lastDate);
+          const daysAgo = Math.floor((now - last) / 86400000);
+          const daysLeft = c.dueDays - daysAgo;
+          const lastStr = last.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+
+          let cls, statusLabel;
+          if (daysLeft <= 0) {
+            cls = 'overdue';
+            statusLabel = Math.abs(daysLeft) === 0 ? 'Due today!' : Math.abs(daysLeft) + 'd overdue!';
+          } else if (daysLeft <= 2) {
+            cls = 'soon';
+            statusLabel = daysLeft === 1 ? 'Due tomorrow' : 'Due in ' + daysLeft + 'd';
+          } else {
+            cls = 'ok';
+            statusLabel = daysLeft + 'd left';
+          }
+
+          statusHtml = `<span class="chore-ago ${cls}">${statusLabel}</span>`;
+          detailHtml = `<span style="font-size:0.7rem;color:#b8a48e;">Every ${c.dueDays}d &middot; Last: ${lastStr}</span>`;
+        }
+
+        html += `<div class="chore-item" style="flex-wrap:wrap;">
+          <span class="chore-icon">${c.icon}</span>
+          <span class="chore-name" style="flex:1;">${c.name}</span>
+          ${statusHtml}
+          <button class="chore-done-btn" onclick="markChoreDone('${c.id}')">Done</button>
+          <div style="width:100%;padding-left:1.8rem;">${detailHtml}</div>
+        </div>`;
+      });
+      document.getElementById('chores-section').innerHTML = html;
+    }
+
+    function markChoreDone(id) {
+      _chores[id] = new Date().toISOString().slice(0, 10);
+      fbSet('chores', _chores);
+    }
+    fbGet('chores', data => { _chores = data || {}; renderChores(); });
+
+    // ── Checkups ──
+    // Default list, used to seed Firebase the first time. After that the list
+    // itself lives in Firebase ('checkupTypes') so it can be edited on any device.
+    const DEFAULT_CHECKUP_TYPES = [
+      { id: 'physical', name: 'Annual Physical', months: 12 },
+      { id: 'dentist', name: 'Dentist', months: 6 },
+      { id: 'dermatologist', name: 'Dermatologist', months: 12 },
+      { id: 'eye', name: 'Eye Exam', months: 12 },
+      { id: 'mammogram', name: 'Mammogram', months: 12 },
+      { id: 'gyn', name: 'GYN', months: 12 },
+    ];
+
+    let _checkups = {};        // { id: 'YYYY-MM-DD' } last-visit dates
+    let _checkupTypes = null;  // [ {id, name, months} ] the editable list
+    let _editCheckups = false; // edit-mode toggle
+
+    function slugifyCheckup(name) {
+      let base = (name || 'checkup').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'checkup';
+      let id = base, n = 2;
+      const taken = (_checkupTypes || []).map(c => c.id);
+      while (taken.includes(id)) { id = base + '-' + n; n++; }
+      return id;
+    }
+
+    function saveCheckupTypes() { fbSet('checkupTypes', _checkupTypes); }
+
+    function renderCheckups() {
+      if (!_checkupTypes) return;
+      const data = _checkups;
+      const now = new Date();
+      let html = '';
+      _checkupTypes.forEach((c, i) => {
+        const lastDate = data[c.id];
+        let statusHtml, dateHtml;
+        if (!lastDate) {
+          statusHtml = '<span class="checkup-status overdue">Schedule</span>';
+          dateHtml = '<span class="checkup-never">No date set</span>';
+        } else {
+          const last = new Date(lastDate);
+          const due = new Date(last);
+          due.setMonth(due.getMonth() + c.months);
+          const daysUntil = Math.ceil((due - now) / 86400000);
+          const lastStr = last.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+          if (daysUntil < 0) {
+            const overdueDays = Math.abs(daysUntil);
+            statusHtml = `<span class="checkup-status overdue">${overdueDays}d overdue</span>`;
+          } else if (daysUntil <= 60) {
+            statusHtml = `<span class="checkup-status due-soon">Due in ${daysUntil}d</span>`;
+          } else {
+            statusHtml = `<span class="checkup-status ok">${daysUntil}d</span>`;
+          }
+          dateHtml = `<span class="checkup-date" onclick="updateCheckup('${c.id}')" title="Click to update">${lastStr}</span>`;
+        }
+
+        if (_editCheckups) {
+          const upCls = i === 0 ? 'checkup-ctrl disabled' : 'checkup-ctrl';
+          const downCls = i === _checkupTypes.length - 1 ? 'checkup-ctrl disabled' : 'checkup-ctrl';
+          html += `<div class="checkup-item">
+            <span class="${upCls}" onclick="moveCheckup('${c.id}',-1)" title="Move up">&#9650;</span>
+            <span class="${downCls}" onclick="moveCheckup('${c.id}',1)" title="Move down">&#9660;</span>
+            <div class="checkup-name" onclick="renameCheckup('${c.id}')" title="Click to rename" style="cursor:pointer">${c.name}</div>
+            <span class="checkup-date" onclick="changeCheckupInterval('${c.id}')" title="Change interval">every ${c.months}mo</span>
+            <span class="checkup-ctrl" onclick="deleteCheckup('${c.id}')" title="Delete">&times;</span>
+          </div>`;
+        } else {
+          html += `<div class="checkup-item">
+            <div class="checkup-name">${c.name}</div>
+            <div style="text-align:right">
+              ${statusHtml}<br>${dateHtml}
+              ${!lastDate ? '<br><span class="checkup-date" onclick="updateCheckup(\'' + c.id + '\')">Set date</span>' : ''}
+            </div>
+          </div>`;
+        }
+      });
+      if (_editCheckups) {
+        html += `<span class="checkup-add" onclick="addCheckup()">+ Add checkup</span>`;
+      }
+      document.getElementById('checkups-section').innerHTML = html;
+    }
+
+    function toggleEditCheckups() {
+      _editCheckups = !_editCheckups;
+      const t = document.getElementById('checkups-edit-toggle');
+      if (t) t.textContent = _editCheckups ? 'Done' : 'Edit';
+      renderCheckups();
+    }
+
+    function addCheckup() {
+      const name = prompt('Name of the checkup? (e.g. "Bloodwork")');
+      if (!name || !name.trim()) return;
+      const mo = prompt('How often, in months? (e.g. 12 for yearly, 6 for twice a year)', '12');
+      const months = parseInt(mo, 10);
+      if (!months || months < 1) { alert('Please enter a whole number of months.'); return; }
+      _checkupTypes.push({ id: slugifyCheckup(name.trim()), name: name.trim(), months });
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function renameCheckup(id) {
+      const c = _checkupTypes.find(c => c.id === id);
+      if (!c) return;
+      const name = prompt('Rename checkup:', c.name);
+      if (!name || !name.trim()) return;
+      c.name = name.trim();
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function changeCheckupInterval(id) {
+      const c = _checkupTypes.find(c => c.id === id);
+      if (!c) return;
+      const mo = prompt('How often, in months?', String(c.months));
+      const months = parseInt(mo, 10);
+      if (!months || months < 1) { alert('Please enter a whole number of months.'); return; }
+      c.months = months;
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function deleteCheckup(id) {
+      const c = _checkupTypes.find(c => c.id === id);
+      if (!c) return;
+      if (!confirm('Delete "' + c.name + '"? Its saved date will also be removed.')) return;
+      _checkupTypes = _checkupTypes.filter(c => c.id !== id);
+      if (_checkups[id]) { delete _checkups[id]; fbSet('checkups', _checkups); }
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function moveCheckup(id, dir) {
+      const i = _checkupTypes.findIndex(c => c.id === id);
+      const j = i + dir;
+      if (i < 0 || j < 0 || j >= _checkupTypes.length) return;
+      const tmp = _checkupTypes[i];
+      _checkupTypes[i] = _checkupTypes[j];
+      _checkupTypes[j] = tmp;
+      saveCheckupTypes();
+      renderCheckups();
+    }
+
+    function updateCheckup(id) {
+      const input = prompt('When was your last visit? (e.g. "March 15, 2026" or "2026-03-15")');
+      if (!input) return;
+      const parsed = new Date(input);
+      if (isNaN(parsed.getTime())) { alert('Could not parse that date. Try again.'); return; }
+      _checkups[id] = parsed.toISOString().slice(0, 10);
+      fbSet('checkups', _checkups);
+    }
+
+    fbGet('checkups', data => { _checkups = data || {}; renderCheckups(); });
+    fbGet('checkupTypes', data => {
+      if (Array.isArray(data) && data.length) {
+        _checkupTypes = data;
+      } else {
+        // First run: seed Firebase from the defaults so the list is editable.
+        _checkupTypes = DEFAULT_CHECKUP_TYPES.slice();
+        saveCheckupTypes();
+      }
+      renderCheckups();
+    });
+
+    // ── News ──
+    const categories = {
+      politics: { label:'US Politics',color:'politics',keywords:['trump','biden','congress','senate','house','republican','democrat','gop','election','vote','poll','legislat','governor','white house','supreme court','political','party','campaign','impeach','filibuster','bipartisan','lawmaker','washington','capitol','oval office','attorney general','doj','fbi','cia','secretary','cabinet','executive order','veto','amendment','redistrict','ballot','swing state','primary','caucus','lobby','pac','midterm','inaugur','pardon','indictment','special counsel','nomination','confirmation','appropriation','shutdown','debt ceiling','state of the union','virginia','georgia','california','navy secretary','federal appeals','federal agents']},
+      biotech: { label:'Biotech & Health',color:'biotech',keywords:['biotech','pharma','drug','fda','vaccine','gene','crispr','therapy','clinical trial','medical','health','cancer','disease','hospital','doctor','patient','treatment','diagnosis','biologic','molecule','protein','antibod','mrna','genomic','stem cell','rare disease','orphan drug','nih','cdc','epidemic','pandemic','outbreak','mental health','opioid','insulin','pharmaceutical','biomarker','diagnostic','surgical','transplant','chemical','lab','science','research','study finds']},
+      economy: { label:'Economy & Markets',color:'economy',keywords:['economy','economic','market','stock','inflation','fed','interest rate','gdp','trade','tariff','bank','financial','wall street','dow','nasdaq','s&p','treasury','debt','deficit','recession','jobs','employment','unemployment','wage','labor','consumer','retail','oil','energy','crypto','bitcoin','commodity','bond','yield','currency','dollar','euro','import','export','supply chain','manufacturing','housing','mortgage','real estate','pipeline','loan','investor','ipo','merger','acquisition','earnings','revenue','profit','sanction','budget','spending','tax','fiscal']}
+    };
+    function categorize(title) {
+      const t=title.toLowerCase(); let best=null,bc=0;
+      for (const [cat,info] of Object.entries(categories)) { const c=info.keywords.filter(k=>t.includes(k)).length; if(c>bc){bc=c;best=cat;} }
+      return best;
+    }
+    async function loadNews() {
+      try {
+        // Source tiers:
+        // SUBSCRIBED (unlimited): WSJ, NYT
+        // FREE (unlimited): AP, Reuters, NPR, The Hill, ProPublica, PBS,
+        //                   Fierce Biotech, Fierce Pharma
+        // METERED (track usage): Politico (~5/mo), STAT News (~5/mo), The Atlantic (~5/mo)
+        const feedGroups = {
+          top: [
+            'https://feeds.apnews.com/rss/apf-topnews',
+            'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml',
+            'https://feeds.npr.org/1001/rss.xml',
+            'https://feeds.a.dj.com/rss/RSSWorldNews.xml',
+          ],
+          politics: [
+            'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
+            'https://feeds.npr.org/1014/rss.xml',
+            'https://thehill.com/feed/',
+            'https://rss.politico.com/politics-news.xml',
+          ],
+          biotech: [
+            'https://www.statnews.com/feed/',
+            'https://www.fiercebiotech.com/rss/xml',
+            'https://www.fiercepharma.com/rss/xml',
+            'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml',
+            'https://feeds.npr.org/103537970/rss.xml',
+            'https://news.google.com/rss/search?q=biotech+pharma+FDA',
+          ],
+          economy: [
+            'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
+            'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',
+            'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
+            'https://feeds.npr.org/1006/rss.xml',
+            'https://news.google.com/rss/search?q=economy+markets+wall+street',
+          ]
+        };
+
+        // Source classification
+        const subscribedDomains = ['wsj.com', 'nytimes.com'];
+        const freeDomains = ['apnews.com', 'reuters.com', 'npr.org',
+          'thehill.com', 'propublica.org', 'pbs.org',
+          'fiercebiotech.com', 'fiercepharma.com'];
+        const meteredDomains = {
+          'politico.com': { name: 'Politico', limit: 5 },
+          'statnews.com': { name: 'STAT News', limit: 5 },
+          'theatlantic.com': { name: 'The Atlantic', limit: 5 },
+        };
+        const blockedDomains = ['bloomberg.com', 'ft.com', 'economist.com',
+          'theathletic.com', 'barrons.com', 'seekingalpha.com',
+          'bbc.co.uk', 'bbc.com'];
+
+        // Load metered usage from Firebase
+        const monthKey = new Date().toISOString().slice(0, 7); // "2026-04"
+        let meteredUsage = {};
+        try {
+          const snap = await db.ref('newsMetered/' + monthKey).once('value');
+          meteredUsage = snap.val() || {};
+        } catch(e) {}
+
+        // Fetch all feeds
+        const allUrls = Object.values(feedGroups).flat();
+        const results = await Promise.allSettled(
+          allUrls.map(u =>
+            fetchWithTimeout('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(u), 5000)
+              .then(r => r.json())
+          )
+        );
+
+        // Collect items with smart filtering
+        const seen = new Set();
+        const allItems = [];
+        const meteredShown = {};  // track how many metered articles we show this load
+
+        for (const r of results) {
+          if (r.status === 'fulfilled' && r.value.items) {
+            for (const item of r.value.items) {
+              const ct = item.title.replace(/ - .*$/, '').trim();
+              const url = (item.link || '').toLowerCase();
+              if (seen.has(ct)) continue;
+
+              // Block hard paywalls
+              if (blockedDomains.some(d => url.includes(d))) continue;
+
+              // Check if metered and over limit
+              const meteredMatch = Object.keys(meteredDomains).find(d => url.includes(d));
+              if (meteredMatch) {
+                const info = meteredDomains[meteredMatch];
+                const used = (meteredUsage[meteredMatch] || 0) + (meteredShown[meteredMatch] || 0);
+                if (used >= info.limit) continue;  // skip - over monthly limit
+                meteredShown[meteredMatch] = (meteredShown[meteredMatch] || 0) + 1;
+              }
+
+              // Determine source tag
+              let sourceTag = '';
+              if (subscribedDomains.some(d => url.includes(d))) sourceTag = ' [subscribed]';
+              else if (meteredMatch) sourceTag = ` [${meteredDomains[meteredMatch].limit - (meteredUsage[meteredMatch] || 0)} left]`;
+
+              item._sourceTag = sourceTag;
+              item._metered = meteredMatch || null;
+
+              seen.add(ct);
+              allItems.push(item);
+            }
+          }
+        }
+
+        // Categorize
+        const buckets = { politics: [], biotech: [], economy: [], other: [] };
+        for (const item of allItems) {
+          const cat = categorize(item.title);
+          buckets[cat || 'other'].push(item);
+        }
+
+        function rl(items, max) {
+          if (!items.length) return '<p style="color:#b8a48e;font-size:0.8rem;font-style:italic;">No stories right now</p>';
+          let h = '<ul class="news-list">';
+          items.slice(0, max).forEach(item => {
+            const hl = item.title.replace(/ - .*$/, '');
+            const src = item.title.includes(' - ') ? item.title.split(' - ').pop() : '';
+            const tag = item._sourceTag || '';
+            const meteredAttr = item._metered ? ` onclick="trackMeteredClick('${item._metered}')"` : '';
+            const tagStyle = tag.includes('subscribed') ? 'color:#4a8c6f;' : tag.includes('left') ? 'color:#b8860b;' : '';
+            const tagHtml = tag ? `<span style="font-size:0.55rem;${tagStyle}margin-left:0.3rem;">${tag}</span>` : '';
+            h += `<li><a href="${item.link}" target="_blank"${meteredAttr}>${hl}</a><span class="news-source">${src}</span>${tagHtml}</li>`;
+          });
+          return h + '</ul>';
+        }
+
+        // Show fewer, higher quality headlines
+        let html = '';
+        html += `<div class="news-section"><div class="section-label politics"><span class="cat-dot politics"></span> US Politics</div>${rl(buckets.politics, 5)}</div>`;
+        html += `<div class="news-section"><div class="section-label biotech"><span class="cat-dot biotech"></span> Biotech & Health</div>${rl(buckets.biotech, 5)}</div>`;
+        html += `<div class="news-section"><div class="section-label economy"><span class="cat-dot economy"></span> Economy & Markets</div>${rl(buckets.economy, 5)}</div>`;
+        if (buckets.other.length) html += `<div class="news-section" style="opacity:0.7"><div class="section-label other">Other Headlines</div>${rl(buckets.other, 6)}</div>`;
+        document.getElementById('news-sections').innerHTML = html;
+      } catch(e) { document.getElementById('news-sections').innerHTML = '<p style="color:#b8a48e">Unable to load news.</p>'; }
+    }
+
+    // ── Movies & TV watchlist (built-in TV suggestions; watched state + custom adds in Firebase) ──
+    // Search: TVMaze (TV) + Cinemeta (movies, free/no key) + optional OMDb (ratings + extra hits when key set).
+    // Refreshed 2026-08-15 — movies were failing because iTunes search no longer returns theatrical titles.
+    let _wlSearchType = 'all'; // all | movie | tv
+    window.setWlSearchType = function(t) {
+      _wlSearchType = t;
+      ['all','movie','tv'].forEach(k => {
+        const el = document.getElementById('wl-type-' + k);
+        if (!el) return;
+        const on = k === t;
+        el.classList.toggle('active', on);
+        el.style.background = on ? '#f3efe8' : '#fff';
+        el.style.borderColor = on ? '#c9b99a' : '#ebe5dc';
+        el.style.color = on ? '#3d3529' : '#6b5d4d';
+        el.style.fontWeight = on ? '600' : '400';
+      });
+      if (typeof renderWatchlist === 'function') renderWatchlist();
+      const q = document.getElementById('wl-add-title')?.value?.trim();
+      if (q) searchAndAddShow();
+    };
+    const WATCHLIST = [
+      {id:'dept-q',title:'Dept. Q',where:'Netflix',genre:'Crime / Mystery',rating:'TVMaze 8.1',score:81},
+      {id:'slow-horses',title:'Slow Horses',where:'Apple TV+',genre:'Spy Thriller',rating:'TVMaze 8.1',score:81},
+      {id:'severance',title:'Severance',where:'Apple TV+',genre:'Sci-Fi / Mystery',rating:'TVMaze 7.7',score:77},
+      {id:'murderbot',title:'Murderbot',where:'Apple TV+',genre:'Sci-Fi Comedy',rating:'TVMaze 7.4',score:74},
+      {id:'widows-bay',title:'Widow\'s Bay',where:'Apple TV+',genre:'Comedy / Horror',rating:'TVMaze 7.7',score:77},
+      {id:'your-friends-neighbors',title:'Your Friends & Neighbors',where:'Apple TV+',genre:'Drama',rating:'TVMaze 7.1',score:71},
+      {id:'presumed-innocent',title:'Presumed Innocent',where:'Apple TV+',genre:'Legal Thriller',rating:'TVMaze 7.5',score:75},
+      {id:'day-of-jackal',title:'The Day of the Jackal',where:'Peacock / Sky',genre:'Thriller',rating:'TVMaze 8.0',score:80},
+      {id:'mobland',title:'MobLand',where:'Paramount+',genre:'Crime Drama',rating:'TVMaze 8.1',score:81},
+      {id:'reacher',title:'Reacher',where:'Prime Video',genre:'Action Thriller',rating:'TVMaze 8.1',score:81},
+      {id:'fallout',title:'Fallout',where:'Prime Video',genre:'Sci-Fi / Adventure',rating:'TVMaze 7.9',score:79},
+      {id:'sterling-point',title:'Sterling Point',where:'Prime Video',genre:'Drama',rating:'TVMaze 8.1',score:81},
+      {id:'bait',title:'Bait',where:'Prime Video',genre:'Comedy Drama',rating:'Critics\' pick 2026',score:85},
+      {id:'task',title:'Task',where:'HBO / Max',genre:'Crime Drama',rating:'TVMaze 7.4',score:74},
+      {id:'knight-seven',title:'A Knight of the Seven Kingdoms',where:'HBO / Max',genre:'Fantasy',rating:'TVMaze 8.2',score:82},
+      {id:'industry',title:'Industry',where:'HBO / Max',genre:'Drama',rating:'TVMaze 6.4',score:64},
+      {id:'black-doves',title:'Black Doves',where:'Netflix',genre:'Spy Thriller',rating:'TVMaze 7.1',score:71},
+      {id:'adolescence',title:'Adolescence',where:'Netflix',genre:'Crime Drama',rating:'TVMaze 7.7',score:77},
+      {id:'residence',title:'The Residence',where:'Netflix',genre:'Comedy Mystery',rating:'TVMaze 7.2',score:72},
+      {id:'paradise',title:'Paradise',where:'Hulu / Disney+',genre:'Sci-Fi Thriller',rating:'TVMaze 7.4',score:74},
+      {id:'shogun',title:'Shōgun',where:'Hulu / Disney+',genre:'Historical Drama',rating:'TVMaze 8.5',score:85},
+      {id:'andor',title:'Andor',where:'Disney+',genre:'Sci-Fi / Espionage',rating:'TVMaze 8.0',score:80},
+      {id:'dark-winds',title:'Dark Winds',where:'AMC+ / Netflix',genre:'Crime Drama',rating:'TVMaze 7.5',score:75},
+      {id:'karen-pirie',title:'Karen Pirie',where:'BritBox',genre:'Crime / Mystery',rating:'RT 91%',score:91},
+      {id:'ludwig',title:'Ludwig',where:'BritBox',genre:'Comedy / Mystery',rating:'RT 97%',score:97},
+      {id:'riot-women',title:'Riot Women',where:'BritBox / BBC',genre:'Drama',rating:'TVMaze 6.9',score:69},
+      {id:'tokyo-vice',title:'Tokyo Vice',where:'Max (HBO)',genre:'Crime Drama',rating:'RT 90%',score:90},
+      {id:'criminal-record',title:'Criminal Record',where:'Apple TV+',genre:'Crime Drama',rating:'RT 86%',score:86},
+      {id:'jury-duty',title:'Jury Duty',where:'Prime Video',genre:'Mockumentary Comedy',rating:'RT 94%',score:94},
+      {id:'dying-for-sex',title:'Dying for Sex',where:'Hulu',genre:'Drama / Comedy',rating:'TVMaze 7.2',score:72},
+    ];
+
+    let _watchedShows = {};
+    let _wlFilter = 'all';
+    let _customWatchlist = [];
+    let _hiddenShows = {}; // built-in shows the user has removed (id -> true)
+    let _caughtUp = {};    // shows the user is caught up on, watching for new eps (id -> true)
+    let _nextEp = {};      // cache of TVMaze next-episode lookups (id -> {status,airdate,code})
+    const _nextEpLoading = new Set();
+
+    // ── OMDb live ratings (replaces the hardcoded RT/IMDb strings above) ──
+    const OMDB_CACHE_KEY = 'omdbRatingsCache_v1';
+    const OMDB_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+    function getOmdbKey() { return localStorage.getItem('omdbKey') || ''; }
+    window.setOmdbKey = function() {
+      const cur = getOmdbKey();
+      const v = prompt('OMDb API key (get one free at omdbapi.com/apikey.aspx):', cur);
+      if (v === null) return;
+      const trimmed = v.trim();
+      if (trimmed) localStorage.setItem('omdbKey', trimmed);
+      else localStorage.removeItem('omdbKey');
+      localStorage.removeItem(OMDB_CACHE_KEY); // force re-fetch with new key
+      updateKeyStatus();
+      enrichWatchlistRatings();
+    };
+    function updateKeyStatus() {
+      const el = document.getElementById('wl-key-status');
+      if (!el) return;
+      el.textContent = getOmdbKey() ? '✓ live ratings' : 'set free ratings key';
+      el.title = getOmdbKey()
+        ? 'OMDb key set — live RT/IMDb scores. Click to change.'
+        : 'Optional free OMDb key (omdbapi.com) for RT/IMDb scores. Movies & TV search works without it.';
+    }
+
+    function loadRatingsCache() {
+      try { return JSON.parse(localStorage.getItem(OMDB_CACHE_KEY) || '{}'); }
+      catch (_) { return {}; }
+    }
+    function saveRatingsCache(c) {
+      try { localStorage.setItem(OMDB_CACHE_KEY, JSON.stringify(c)); } catch (_) {}
+    }
+
+    async function fetchOmdbRating(title, year, kind, imdbID) {
+      const key = getOmdbKey();
+      if (!key) return null;
+      let url = `https://www.omdbapi.com/?apikey=${encodeURIComponent(key)}`;
+      if (imdbID) {
+        url += `&i=${encodeURIComponent(imdbID)}`;
+      } else {
+        url += `&t=${encodeURIComponent(title)}`;
+        if (year) url += `&y=${encodeURIComponent(String(year).slice(0, 4))}`;
+        if (kind === 'movie') url += '&type=movie';
+        if (kind === 'tv') url += '&type=series';
+      }
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!data || data.Response === 'False') return null;
+        let rt = '', imdb = '', meta = '';
+        (data.Ratings || []).forEach(r => {
+          if (r.Source === 'Internet Movie Database') imdb = r.Value;
+          else if (r.Source === 'Rotten Tomatoes') rt = r.Value;
+          else if (r.Source === 'Metacritic') meta = r.Value;
+        });
+        return { rt, imdb, meta, year: data.Year || '', type: data.Type || '' };
+      } catch (_) { return null; }
+    }
+
+    async function searchOmdbMulti(query) {
+      const key = getOmdbKey();
+      if (!key) return [];
+      const types = _wlSearchType === 'movie' ? ['movie'] : _wlSearchType === 'tv' ? ['series'] : ['movie', 'series'];
+      const out = [];
+      await Promise.all(types.map(async (type) => {
+        try {
+          const url = `https://www.omdbapi.com/?apikey=${encodeURIComponent(key)}&s=${encodeURIComponent(query)}&type=${type}`;
+          const res = await fetch(url);
+          const data = await res.json();
+          if (!data || data.Response === 'False' || !Array.isArray(data.Search)) return;
+          data.Search.slice(0, 6).forEach(r => {
+            out.push({
+              kind: r.Type === 'movie' ? 'movie' : 'tv',
+              title: r.Title || '',
+              year: (r.Year || '').slice(0, 4),
+              where: r.Type === 'movie' ? 'Movie' : 'TV',
+              genre: r.Type === 'movie' ? 'Movie' : 'TV',
+              rating: '',
+              score: 0,
+              poster: r.Poster && r.Poster !== 'N/A' ? r.Poster : '',
+              source: 'omdb',
+              imdbID: r.imdbID || ''
+            });
+          });
+        } catch (_) {}
+      }));
+      return out;
+    }
+
+    async function searchTvMaze(query) {
+      if (_wlSearchType === 'movie') return [];
+      try {
+        const res = await fetch('https://api.tvmaze.com/search/shows?q=' + encodeURIComponent(query));
+        const data = await res.json();
+        if (!Array.isArray(data)) return [];
+        return data.slice(0, 8).map(r => {
+          const show = r.show || {};
+          const network = show.webChannel ? show.webChannel.name : (show.network ? show.network.name : '');
+          const genres = (show.genres || []).join(' / ') || 'TV';
+          const ratingNum = show.rating && show.rating.average ? show.rating.average : 0;
+          const year = (show.premiered || '').slice(0, 4);
+          return {
+            kind: 'tv',
+            title: show.name || '',
+            year,
+            where: network || 'TV',
+            genre: genres,
+            rating: ratingNum ? String(ratingNum) : '',
+            score: ratingNum ? Math.round(ratingNum * 10) : 0,
+            poster: (show.image && (show.image.medium || show.image.original)) || '',
+            source: 'tvmaze'
+          };
+        });
+      } catch (_) { return []; }
+    }
+
+    async function searchCinemeta(query, type) {
+      // Free Stremio Cinemeta catalog — no API key, CORS open. type: 'movie' | 'series'
+      try {
+        const url = 'https://v3-cinemeta.strem.io/catalog/' + type + '/top/search=' +
+          encodeURIComponent(query) + '.json';
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!data || !Array.isArray(data.metas)) return [];
+        return data.metas.slice(0, 8).map(m => {
+          const year = String(m.releaseInfo || m.year || '').slice(0, 4);
+          const kind = (m.type === 'series' || type === 'series') ? 'tv' : 'movie';
+          return {
+            kind,
+            title: m.name || '',
+            year,
+            where: kind === 'movie' ? 'Movie' : 'TV',
+            genre: kind === 'movie' ? ('Movie' + (year ? ' · ' + year : '')) : ('TV' + (year ? ' · ' + year : '')),
+            rating: '',
+            score: 0,
+            poster: m.poster || m.background || '',
+            source: 'cinemeta',
+            imdbID: m.imdb_id || ''
+          };
+        }).filter(x => x.title);
+      } catch (_) { return []; }
+    }
+
+    async function searchCinemetaMovies(query) {
+      if (_wlSearchType === 'tv') return [];
+      return searchCinemeta(query, 'movie');
+    }
+
+    async function searchCinemetaSeries(query) {
+      // Extra TV hits when TVMaze is thin; de-duped later against TVMaze.
+      if (_wlSearchType === 'movie') return [];
+      return searchCinemeta(query, 'series');
+    }
+
+    function dedupeWatchResults(list) {
+      const seen = new Set();
+      const out = [];
+      for (const item of list) {
+        const key = ((item.kind || '') + '|' + (item.title || '').toLowerCase() + '|' + (item.year || '')).trim();
+        if (!item.title || seen.has(key)) continue;
+        seen.add(key);
+        out.push(item);
+      }
+      return out;
+    }
+
+    function applyRatingToShow(show, r) {
+      // Prefer Rotten Tomatoes %, then IMDb (X.X/10), then Metacritic
+      if (r.rt) {
+        show.rating = 'RT ' + r.rt;
+        show.score = parseInt(r.rt, 10) || show.score;
+      } else if (r.imdb) {
+        const v = parseFloat(r.imdb);
+        show.rating = 'IMDb ' + r.imdb.replace('/10', '');
+        if (!isNaN(v)) show.score = Math.round(v * 10);
+      } else if (r.meta) {
+        show.rating = 'MC ' + r.meta;
+        show.score = parseInt(r.meta, 10) || show.score;
+      }
+    }
+
+    async function enrichWatchlistRatings() {
+      updateKeyStatus();
+      if (!getOmdbKey()) return; // No key → keep hardcoded ratings
+      const cache = loadRatingsCache();
+      const now = Date.now();
+      const fetches = [];
+      let anyChange = false;
+      for (const show of WATCHLIST) {
+        const cached = cache[show.title];
+        if (cached && (now - cached.ts) < OMDB_CACHE_TTL_MS) {
+          applyRatingToShow(show, cached);
+          anyChange = true;
+          continue;
+        }
+        fetches.push(fetchOmdbRating(show.title).then(r => {
+          if (r) {
+            cache[show.title] = { ...r, ts: now };
+            applyRatingToShow(show, r);
+            anyChange = true;
+          }
+        }));
+      }
+      await Promise.all(fetches);
+      saveRatingsCache(cache);
+      if (anyChange) renderWatchlist();
+    }
+
+    async function searchAndAddShow() {
+      const query = document.getElementById('wl-add-title').value.trim();
+      if (!query) return;
+      const resultsDiv = document.getElementById('wl-search-results');
+      resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#9c8b76;">Searching movies &amp; TV…</div>';
+
+      try {
+        const [tv, movies, seriesExtra, omdb] = await Promise.all([
+          searchTvMaze(query),
+          searchCinemetaMovies(query),
+          searchCinemetaSeries(query),
+          searchOmdbMulti(query)
+        ]);
+        // Prefer TVMaze (network names) + Cinemeta (movies); fill gaps with OMDb; de-dupe.
+        let merged = dedupeWatchResults([...tv, ...movies, ...seriesExtra, ...omdb]);
+        // Movies first when browsing All (films were the common miss before)
+        if (_wlSearchType === 'all') {
+          merged.sort((a, b) => {
+            if (a.kind !== b.kind) return a.kind === 'movie' ? -1 : 1;
+            return (a.title || '').localeCompare(b.title || '');
+          });
+        }
+        if (!merged.length) {
+          resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#c2553a;">No results. Try a different title' +
+            (getOmdbKey() ? '.' : ' — optional: click “set ratings key” (free OMDb) for more hits + RT/IMDb scores.') + '</div>';
+          return;
+        }
+        let html = '';
+        merged.slice(0, 10).forEach((r, i) => {
+          const kindLabel = r.kind === 'movie' ? 'Movie' : 'TV';
+          const kindColor = r.kind === 'movie' ? '#8a6a3d' : '#3d6b8a';
+          const meta = [r.where, r.year, r.genre].filter(Boolean).join(' · ');
+          const esc = (s) => String(s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+          html += `<div onclick="pickShow(this)" data-idx="${i}"
+            data-kind="${esc(r.kind)}" data-name="${esc(r.title)}" data-where="${esc(r.where)}"
+            data-genre="${esc(r.genre)}" data-rating="${esc(r.rating)}" data-score="${r.score||0}" data-year="${esc(r.year)}" data-imdb="${esc(r.imdbID || '')}"
+            style="padding:0.3rem 0.4rem;font-size:0.68rem;cursor:pointer;border-bottom:1px solid #f0ebe4;display:flex;justify-content:space-between;align-items:center;gap:0.4rem;">
+            <div style="min-width:0;">
+              <div style="font-weight:500;color:#3d3529;display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap;">
+                <span style="font-size:0.55rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:${kindColor};border:1px solid ${kindColor}44;border-radius:3px;padding:0.05rem 0.28rem;">${kindLabel}</span>
+                <span>${esc(r.title)}${r.year ? ' <span style="color:#9c8b76;font-weight:400;font-size:0.62rem;">(' + esc(r.year) + ')</span>' : ''}</span>
+              </div>
+              <div style="font-size:0.6rem;color:#9c8b76;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(meta)}</div>
+            </div>
+            ${r.rating ? '<span style="font-size:0.6rem;color:#4a8c6f;font-weight:600;flex-shrink:0;">'+esc(r.rating)+'</span>' : ''}
+          </div>`;
+        });
+        resultsDiv.innerHTML = '<div style="border:1px solid #ebe5dc;border-radius:6px;overflow:hidden;background:#fff;">' + html + '</div>';
+      } catch (e) {
+        resultsDiv.innerHTML = '<div style="font-size:0.65rem;color:#c2553a;">Search failed. Check connection and try again.</div>';
+      }
+    }
+
+    async function pickShow(el) {
+      const title = el.dataset.name;
+      const where = el.dataset.where || '';
+      const genre = el.dataset.genre || '';
+      const kind = el.dataset.kind || 'tv';
+      const year = el.dataset.year || '';
+      const imdbID = el.dataset.imdb || '';
+      let ratingStr = el.dataset.rating || '';
+      let score = parseInt(el.dataset.score, 10) || 0;
+      if (!score && ratingStr) {
+        const n = parseFloat(ratingStr);
+        if (!isNaN(n)) score = n <= 10 ? Math.round(n * 10) : Math.round(n);
+        if (n && n <= 10 && !ratingStr.includes('/')) ratingStr = n + '/10';
+      }
+
+      // Upgrade ratings from OMDb when key is set (especially helpful for movies)
+      if (getOmdbKey() && (imdbID || title)) {
+        const r = await fetchOmdbRating(title, year, kind, imdbID);
+        if (r) {
+          const tmp = { rating: ratingStr, score };
+          applyRatingToShow(tmp, r);
+          ratingStr = tmp.rating || ratingStr;
+          score = tmp.score || score;
+        }
+      }
+
+      // Clean genre for movies: "Movie · 2025" → "Movie" so list groups cleanly
+      let cleanGenre = genre || (kind === 'movie' ? 'Movie' : 'TV');
+      if (kind === 'movie' && /^Movie\b/i.test(cleanGenre)) cleanGenre = 'Movie';
+
+      const item = {
+        id: 'custom_' + Date.now(),
+        title,
+        where: kind === 'movie' ? (where && where !== 'Movie' ? where : 'Movie') : where,
+        genre: cleanGenre,
+        rating: ratingStr,
+        score,
+        kind,
+        year,
+        imdbID: imdbID || undefined,
+        _custom: true
+      };
+      // Avoid exact duplicate titles already on the custom list
+      if (_customWatchlist.some(w => (w.title || '').toLowerCase() === title.toLowerCase() && (w.kind || 'tv') === kind)) {
+        document.getElementById('wl-search-results').innerHTML =
+          '<div style="font-size:0.65rem;color:#9c8b76;">Already on your list.</div>';
+        return;
+      }
+      // Write this item under its own key so concurrent syncs / other devices
+      // can never clobber the whole list (the old whole-array write caused adds
+      // to appear then vanish on the next sync).
+      _customWatchlist.push(item);
+      db.ref('customWatchlist/' + item.id).set(item);
+      document.getElementById('wl-add-title').value = '';
+      document.getElementById('wl-search-results').innerHTML = '';
+      renderWatchlist();
+    }
+
+    function removeFromWatchlist(id) {
+      const isCustom = _customWatchlist.some(w => w.id === id);
+      if (isCustom) {
+        _customWatchlist = _customWatchlist.filter(w => w.id !== id);
+        db.ref('customWatchlist/' + id).remove();
+      } else {
+        // Built-in show: can't delete the hardcoded entry, so hide it.
+        _hiddenShows[id] = true;
+        db.ref('hiddenWatchlist/' + id).set(true);
+      }
+      renderWatchlist();
+    }
+
+    // Stored as an object keyed by item id; tolerate legacy array shape too.
+    fbGet('customWatchlist', data => {
+      _customWatchlist = data ? Object.values(data).filter(Boolean) : [];
+      renderWatchlist();
+    });
+
+    fbGet('hiddenWatchlist', data => {
+      _hiddenShows = data || {};
+      renderWatchlist();
+    });
+
+    fbGet('caughtUp', data => {
+      _caughtUp = data || {};
+      renderWatchlist();
+    });
+
+    // Collapse the many raw genre strings into a few main buckets.
+    // For multi-genre strings the most distinctive genre wins (first match).
+    const WL_GENRE_ORDER = ['Action','Comedy','Drama','Mystery/Crime','Thriller','Other'];
+    function mainGenre(w) {
+      const g = String((w && w.genre) || '').toLowerCase();
+      if (/crime|mystery|murder|detective|police|heist/.test(g)) return 'Mystery/Crime';
+      if (/thriller|spy|espionage|suspense/.test(g)) return 'Thriller';
+      if (/action|adventure/.test(g)) return 'Action';
+      if (/comedy|sitcom|mockumentary/.test(g)) return 'Comedy';
+      if (/drama|legal|medical|romance|historical|history|war|western|family/.test(g)) return 'Drama';
+      return 'Other';
+    }
+
+    function renderWatchlist() {
+      // Filters
+      let filterHtml = `<button class="wl-filter-btn ${_wlFilter==='all'?'active':''}" onclick="setWlFilter('all')">All</button>`;
+      filterHtml += `<button class="wl-filter-btn ${_wlFilter==='unwatched'?'active':''}" onclick="setWlFilter('unwatched')">Unwatched</button>`;
+      document.getElementById('watchlist-filters').innerHTML = filterHtml;
+
+      // Merge built-in + custom items, dropping any built-ins the user removed
+      let items = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
+
+      // Movies / TV tab filters the visible list (not just the search box)
+      if (_wlSearchType !== 'all') {
+        items = items.filter(w => {
+          const t = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+          return t === _wlSearchType;
+        });
+      }
+
+      // Tracked shows (watching for new eps) vs untracked.
+      const tracked = items.filter(w => _caughtUp[w.id]);
+      let untracked = items.filter(w => !_caughtUp[w.id]);
+      if (_wlFilter === 'unwatched') untracked = untracked.filter(w => !_watchedShows[w.id]);
+      // Tracked shows split: a newer episode aired since you caught up -> "new" (top);
+      // otherwise still waiting -> bottom.
+      const newItems = tracked.filter(w => hasNewEp(w));
+      const waitingItems = tracked.filter(w => !hasNewEp(w));
+
+      let html = '';
+
+      // TOP: new episodes available
+      if (newItems.length) {
+        newItems.sort((a, b) => {
+          const pa = (_nextEp[a.id] && _nextEp[a.id].prevStamp) || '';
+          const pb = (_nextEp[b.id] && _nextEp[b.id].prevStamp) || '';
+          if (pa !== pb) return pb.localeCompare(pa); // most recently aired first
+          return (a.title || '').localeCompare(b.title || '');
+        });
+        html += `<div class="wl-genre-header" style="color:#c2553a;">🔴 New episodes available</div>`;
+        newItems.forEach(w => { html += wlRowHtml(w, 'new'); });
+      }
+
+      // MIDDLE: untracked shows, grouped by genre
+      untracked.sort((a, b) => {
+        const ga = mainGenre(a), gb = mainGenre(b);
+        if (ga !== gb) return WL_GENRE_ORDER.indexOf(ga) - WL_GENRE_ORDER.indexOf(gb);
+        return (a.title || '').localeCompare(b.title || '');
+      });
+      let lastGenre = '';
+      untracked.forEach(w => {
+        const bucket = mainGenre(w);
+        if (bucket !== lastGenre) {
+          lastGenre = bucket;
+          html += `<div class="wl-genre-header">${bucket}</div>`;
+        }
+        html += wlRowHtml(w, 'active');
+      });
+
+      // BOTTOM: caught up, waiting for new episodes
+      if (waitingItems.length) {
+        waitingItems.sort((a, b) => {
+          const da = (_nextEp[a.id] && _nextEp[a.id].airdate) || '';
+          const db2 = (_nextEp[b.id] && _nextEp[b.id].airdate) || '';
+          if (!!da !== !!db2) return da ? -1 : 1;
+          if (da && db2 && da !== db2) return da.localeCompare(db2);
+          return (a.title || '').localeCompare(b.title || '');
+        });
+        html += `<div class="wl-genre-header" style="margin-top:0.5rem;color:#8a6a3d;border-top:1px solid #ece4d8;padding-top:0.5rem;">⏳ Watching for new episodes</div>`;
+        waitingItems.forEach(w => { html += wlRowHtml(w, 'waiting'); });
+      }
+
+      document.getElementById('watchlist').innerHTML = html || '<div class="cal-empty">All caught up!</div>';
+
+      const allItems = [...WATCHLIST, ..._customWatchlist].filter(w => !_hiddenShows[w.id]);
+      const watchedCount = allItems.filter(w => _watchedShows[w.id]).length;
+      const bits = [];
+      if (newItems.length) bits.push(`${newItems.length} with new`);
+      if (waitingItems.length) bits.push(`${waitingItems.length} waiting`);
+      const suffix = bits.length ? ` · ${bits.join(' · ')}` : '';
+      document.getElementById('watchlist-count').textContent = `${watchedCount} of ${allItems.length} watched${suffix}`;
+
+      // Look up next/previous episodes for tracked TV shows (cached, background)
+      enrichNextEpisodes(tracked);
+    }
+
+    // Baseline (last-aired episode airstamp) captured when the show was marked caught up.
+    function trackBase(w) {
+      const c = _caughtUp[w.id];
+      return (c && typeof c === 'object') ? (c.base || '') : '';
+    }
+    // A newer episode has aired than the one you were caught up to.
+    function hasNewEp(w) {
+      const ne = _nextEp[w.id];
+      const base = trackBase(w);
+      return !!(base && ne && ne.prevStamp && ne.prevStamp > base);
+    }
+
+    // Build one watchlist row. mode: 'active' | 'waiting' | 'new'.
+    function wlRowHtml(w, mode) {
+      const isNew = mode === 'new';
+      const isTracked = mode === 'waiting' || mode === 'new';
+      const watched = _watchedShows[w.id] || false;
+      const ratingClass = w.score >= 85 ? '' : w.score >= 70 ? 'mid' : 'low';
+      const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+      const kindTag = kind === 'movie'
+        ? '<span style="font-size:0.52rem;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:#8a6a3d;margin-right:0.25rem;">Film</span>'
+        : '';
+      const yearBit = w.year ? ` · ${w.year}` : '';
+      let meta = `${w.where || ''}${yearBit && kind!=='movie' ? yearBit : ''}`;
+      if (mode === 'waiting') meta = nextEpText(w, kind);
+      else if (mode === 'new') meta = newEpText(w);
+      const newBadge = isNew ? '<span class="wl-new">NEW</span>' : '';
+      let pill = '';
+      if (kind !== 'movie') {
+        if (mode === 'new') pill = `<span class="wl-track new" onclick="markCaughtUpNow('${w.id}')" title="Mark caught up on the new episodes">✓ Caught up</span>`;
+        else if (mode === 'waiting') pill = `<span class="wl-track on" onclick="toggleCaughtUp('${w.id}')" title="Watching for new episodes — click to stop">🔔 Tracking</span>`;
+        else pill = `<span class="wl-track" onclick="toggleCaughtUp('${w.id}')" title="Caught up on available episodes — watch for new">🔔 New?</span>`;
+      }
+      const dim = watched && mode === 'active';
+      return `<div class="wl-item ${dim?'watched':''}">
+          <div class="wl-cb ${watched?'checked':''}" onclick="toggleWatched('${w.id}')">${watched?'✓':''}</div>
+          <div class="wl-info">
+            <div class="wl-title ${dim?'done':''}">${newBadge}${kindTag}${w.title}${w.year && kind==='movie' ? ' <span style="font-weight:400;color:#9c8b76;font-size:0.72em;">('+w.year+')</span>' : ''}</div>
+            <div class="wl-meta"${isTracked?` style="color:${isNew?'#c2553a':'#8a6a3d'};"`:''}>${meta}</div>
+          </div>
+          <span class="wl-rating ${ratingClass}">${w.rating || ''}</span>
+          ${pill}
+          <span onclick="removeFromWatchlist('${w.id}')" style="font-size:0.7rem;color:#c9bfb0;cursor:pointer;margin-left:0.3rem;" title="Remove">&times;</span>
+        </div>`;
+    }
+
+    function newEpText(w) {
+      const ne = _nextEp[w.id];
+      if (!ne) return 'new episode available';
+      let s = 'New episode';
+      if (ne.prevCode) s += ` ${ne.prevCode}`;
+      if (ne.prevDate) s += ` · aired ${fmtAirDate(ne.prevDate)}`;
+      if (ne.airdate) s += ` · next ${fmtAirDate(ne.airdate)}`;
+      return s;
+    }
+
+    function nextEpText(w, kind) {
+      if (kind === 'movie') return w.where || '';
+      const ne = _nextEp[w.id];
+      if (!ne) return 'checking for new episodes…';
+      if (ne.airdate) {
+        const when = fmtAirDate(ne.airdate);
+        const days = daysUntil(ne.airdate);
+        const rel = days === 0 ? 'today' : days === 1 ? 'tomorrow' : (days > 1 && days <= 60 ? `in ${days} days` : '');
+        return `Next episode: ${when}${rel ? ' · ' + rel : ''}${ne.code ? ' · ' + ne.code : ''}`;
+      }
+      if (ne.status === 'Ended') return 'Series ended — nothing new coming';
+      if (ne.status === 'Running' || ne.status === 'To Be Determined' || ne.status === 'In Development') return 'Returning — no date announced yet';
+      return ne.status || 'No date announced yet';
+    }
+
+    function fmtAirDate(d) {
+      const p = String(d).split('-'); if (p.length < 3) return d;
+      const mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][(+p[1]) - 1] || '';
+      return `${mo} ${+p[2]}, ${p[0]}`;
+    }
+    function daysUntil(d) {
+      const p = String(d).split('-').map(Number);
+      const target = new Date(p[0], p[1] - 1, p[2]);
+      const now = new Date(); now.setHours(0, 0, 0, 0);
+      return Math.round((target - now) / 86400000);
+    }
+
+    function toggleCaughtUp(id) {
+      if (_caughtUp[id]) {
+        delete _caughtUp[id];
+        db.ref('caughtUp/' + id).remove();
+      } else {
+        // base (last-aired baseline) gets filled in by enrichNextEpisodes once TVMaze responds
+        _caughtUp[id] = { base: '' };
+        db.ref('caughtUp/' + id).set({ base: '' });
+      }
+      renderWatchlist();
+    }
+
+    // Re-baseline a show to the current last-aired episode (used from the "new" section).
+    function markCaughtUpNow(id) {
+      const ne = _nextEp[id];
+      const base = (ne && ne.prevStamp) || new Date().toISOString();
+      _caughtUp[id] = { base };
+      db.ref('caughtUp/' + id).set({ base });
+      renderWatchlist();
+    }
+
+    async function enrichNextEpisodes(list) {
+      let changed = false;
+      for (const w of list) {
+        const kind = w.kind || (String(w.genre || '').toLowerCase() === 'movie' ? 'movie' : 'tv');
+        if (kind === 'movie') continue;
+        if (!(w.id in _nextEp) && !_nextEpLoading.has(w.id)) {
+          _nextEpLoading.add(w.id);
+          try {
+            const r = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' +
+              encodeURIComponent(w.title) + '&embed[]=nextepisode&embed[]=previousepisode');
+            if (r.ok) {
+              const s = await r.json();
+              const emb = s._embedded || {};
+              const ne = emb.nextepisode, pe = emb.previousepisode;
+              _nextEp[w.id] = {
+                status: s.status || '',
+                airdate: (ne && ne.airdate) || '',
+                code: (ne && ne.season) ? ('S' + ne.season + 'E' + (ne.number || '')) : '',
+                prevStamp: (pe && pe.airstamp) || '',
+                prevDate: (pe && pe.airdate) || '',
+                prevCode: (pe && pe.season) ? ('S' + pe.season + 'E' + (pe.number || '')) : ''
+              };
+            } else {
+              _nextEp[w.id] = { status: '', airdate: '', code: '', prevStamp: '', prevDate: '', prevCode: '' };
+            }
+          } catch (_) {
+            _nextEp[w.id] = { status: '', airdate: '', code: '', prevStamp: '', prevDate: '', prevCode: '' };
+          }
+          _nextEpLoading.delete(w.id);
+          changed = true;
+        }
+        // Backfill the caught-up baseline the first time we learn the last-aired episode
+        // (covers legacy `true` values and freshly-tracked shows with an empty base).
+        const cu = _caughtUp[w.id];
+        if (cu && (w.id in _nextEp)) {
+          const base = (typeof cu === 'object') ? (cu.base || '') : '';
+          if (!base) {
+            const nb = _nextEp[w.id].prevStamp || '';
+            if (nb) {
+              _caughtUp[w.id] = { base: nb };
+              db.ref('caughtUp/' + w.id).set({ base: nb });
+              changed = true;
+            }
+          }
+        }
+      }
+      if (changed) renderWatchlist();
+    }
+
+    function toggleWatched(id) {
+      _watchedShows[id] = !_watchedShows[id];
+      // Write just this show's key so a concurrent sync can't wipe other toggles.
+      if (_watchedShows[id]) {
+        db.ref('watchlist/' + id).set(true);
+      } else {
+        delete _watchedShows[id];
+        db.ref('watchlist/' + id).remove();
+      }
+      renderWatchlist();
+    }
+
+    function setWlFilter(f) {
+      _wlFilter = f;
+      renderWatchlist();
+    }
+
+    fbGet('watchlist', data => {
+      _watchedShows = data || {};
+      renderWatchlist();
+      enrichWatchlistRatings(); // refresh ratings from OMDb in the background
+    });
+
+    // Track metered article clicks
+    function trackMeteredClick(domain) {
+      const monthKey = new Date().toISOString().slice(0, 7);
+      db.ref('newsMetered/' + monthKey + '/' + domain).transaction(current => {
+        return (current || 0) + 1;
+      });
+    }
+
+    loadWeather(); loadNews();
+    function stamp(){document.getElementById('last-updated').textContent='Last updated \u2022 '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});}
+    stamp();
+    setInterval(()=>{loadWeather();loadNews();stamp();},15*60*1000);
+    function scheduleRefreshAt5am(){const now=new Date(),n5=new Date(now);n5.setHours(5,0,0,0);if(now>=n5)n5.setDate(n5.getDate()+1);setTimeout(()=>location.reload(),n5-now);}
+    scheduleRefreshAt5am();
+
+    // ── Refresh-now button ──
+    // Calls a local HTTP server (refresh-server.py on 127.0.0.1:8765)
+    // that runs refresh-calendar.sh on demand. Only reachable from this
+    // Mac since the server binds to loopback. If the server is unreachable
+    // (e.g., dashboard opened on another device), this just reloads the
+    // page with a cache-buster so the freshest already-pushed data shows.
+    window.refreshNow = async function() {
+      const btn = document.getElementById('refresh-now-btn');
+      if (btn) { btn.disabled = true; btn.textContent = '↻ Refreshing…'; }
+      let triggered = false;
+      try {
+        const resp = await fetch('http://127.0.0.1:8765/refresh', {
+          method: 'POST', mode: 'cors',
+          headers: { 'Content-Type': 'application/json' }, body: '{}',
+        });
+        if (resp.ok) triggered = true;
+      } catch (_) { /* fall through to reload */ }
+      const wait = triggered ? 12000 : 600;
+      if (btn) btn.textContent = triggered ? '↻ Refreshing… (~12s)' : '↻ Reloading…';
+      setTimeout(() => {
+        const u = new URL(window.location.href);
+        u.searchParams.set('_cb', Date.now());
+        window.location.href = u.toString();
+      }, wait);
+    };
+  </script>
+<button id="jump-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to top" style="position:fixed;bottom:1.25rem;right:1.25rem;width:42px;height:42px;border-radius:50%;border:1px solid #ebe5dc;background:#013E7D;color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;align-items:center;justify-content:center;z-index:9000;line-height:1;font-family:inherit;">&uarr;</button>
+<script>(function(){var b=document.getElementById('jump-to-top');function u(){b.style.display=window.scrollY>300?'flex':'none';}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>
