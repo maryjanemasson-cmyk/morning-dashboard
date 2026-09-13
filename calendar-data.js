@@ -581,8 +581,20 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 5,
+  "unreadCount": 8,
   "threads": [
+    {
+      "sender": "& Other Stories",
+      "subject": "Denim destination"
+    },
+    {
+      "sender": "Tony Bianco USA",
+      "subject": "Sending Back Your Tony Bianco USA Return"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Hours left on the unlock"
+    },
     {
       "sender": "Princeton Film Festival",
       "subject": "Upcoming Francophone Screenings"

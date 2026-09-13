@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-09-13T15:00:14",
+    "captured_at": "2026-09-13T17:00:15",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -56163,22 +56163,6 @@
     "2320": {
       "layout": [
         {
-          "_origFile": "s12_012.png",
-          "file": "wardrobe-thumbs/s12_012.png",
-          "height": 25,
-          "left": 0,
-          "top": 13,
-          "width": 15
-        },
-        {
-          "_origFile": "s18_003.png",
-          "file": "wardrobe-thumbs/s18_003.png",
-          "height": 18.5,
-          "left": 17.3,
-          "top": 7.1,
-          "width": 9.8
-        },
-        {
           "_origFile": "s31_015.png",
           "file": "wardrobe-thumbs/s31_015.png",
           "height": 21.9,
@@ -56206,8 +56190,8 @@
           "_origFile": "s21_011.png",
           "file": "wardrobe-thumbs/s21_011.png",
           "height": 13.5,
-          "left": 32.8,
-          "top": 11.1,
+          "left": 33.3,
+          "top": 8.6,
           "width": 8.1
         },
         {
@@ -56225,14 +56209,6 @@
           "left": 41.8,
           "top": 7.8,
           "width": 11.5
-        },
-        {
-          "_origFile": "s12_012.png",
-          "file": "wardrobe-thumbs/s12_012.png",
-          "height": 20.8,
-          "left": 70.7,
-          "top": 14,
-          "width": 9.4
         },
         {
           "_origFile": "s17_001.png",
@@ -56257,6 +56233,38 @@
           "left": 59.7,
           "top": 50.2,
           "width": 7.6
+        },
+        {
+          "_origFile": "s13_015.png",
+          "file": "wardrobe-thumbs/s13_015.png",
+          "height": 25,
+          "left": 0,
+          "top": 9.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s13_015.png",
+          "file": "wardrobe-thumbs/s13_015.png",
+          "height": 25,
+          "left": 67.9,
+          "top": 11.8,
+          "width": 15
+        },
+        {
+          "_origFile": "s22_002.png",
+          "file": "wardrobe-thumbs/s22_002.png",
+          "height": 17.5,
+          "left": 16.5,
+          "top": 5.2,
+          "width": 11.5
+        },
+        {
+          "_origFile": "C053.png",
+          "file": "wardrobe-thumbs/C053.png",
+          "height": 13.4,
+          "left": 33.3,
+          "top": 18.7,
+          "width": 7.5
         }
       ],
       "name": "Boston 3-day late summer",
