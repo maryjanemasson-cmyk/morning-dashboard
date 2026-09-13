@@ -581,11 +581,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 13,
   "threads": [
     {
-      "sender": "Moda Operandi",
-      "subject": "Just In: KHAITE"
+      "sender": "Medium Events",
+      "subject": "Last week to save your spot at Medium Day 2026!"
     },
     {
       "sender": "Walgreens Pharmacy",
