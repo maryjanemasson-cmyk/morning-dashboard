@@ -581,23 +581,19 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 8,
+  "unreadCount": 7,
   "threads": [
     {
-      "sender": "& Other Stories",
-      "subject": "Denim destination"
+      "sender": "United Airlines",
+      "subject": "Wi-Fi and entertainment options for your September 14 flight"
     },
     {
-      "sender": "Tony Bianco USA",
-      "subject": "Sending Back Your Tony Bianco USA Return"
+      "sender": "Uber",
+      "subject": "Everyone's favorites, now with 30% off"
     },
     {
       "sender": "Joel Grimes",
       "subject": "Hours left on the unlock"
-    },
-    {
-      "sender": "Princeton Film Festival",
-      "subject": "Upcoming Francophone Screenings"
     },
     {
       "sender": "BrandsMart Deals",
