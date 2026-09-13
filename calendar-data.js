@@ -581,19 +581,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "Dr. Spitz, Honeydew Co-Founder",
-      "subject": "Low-dose vs standard-dose Accutane?"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Up to 50% OFF! Sunday Deals are on \ud83d\udc49"
     },
     {
       "sender": "Courtyard by Marriott",
       "subject": "Check-In Instructions for Courtyard by Marriott"
-    },
-    {
-      "sender": "Suzie Kondi",
-      "subject": "Autumn Chapter 02"
     },
     {
       "sender": "Sleep-Insights@sleeptracker.com",
@@ -622,6 +618,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Topgolf",
       "subject": "Fall Leagues | Registration Closes Soon"
+    },
+    {
+      "sender": "Studio",
+      "subject": "Claire Saffitz's app: Tomorrow is the last day to join!"
     }
   ],
   "items": [
