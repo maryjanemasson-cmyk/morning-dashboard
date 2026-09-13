@@ -581,15 +581,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Personal Care"
+      "sender": "Dr. Spitz, Honeydew Co-Founder",
+      "subject": "Low-dose vs standard-dose Accutane?"
     },
     {
-      "sender": "Emily Ley",
-      "subject": "Sunday Scroll #158"
+      "sender": "Courtyard by Marriott",
+      "subject": "Check-In Instructions for Courtyard by Marriott"
+    },
+    {
+      "sender": "Suzie Kondi",
+      "subject": "Autumn Chapter 02"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 13 Sep 2026"
+    },
+    {
+      "sender": "BrandsMart Deals",
+      "subject": "Final Hours. Final Savings."
+    },
+    {
+      "sender": "The Washington Post",
+      "subject": "The Week In Ideas: Ukraine\u2019s way of fighting war can\u2019t match what\u2019s coming"
     },
     {
       "sender": "Pini Parma",
@@ -606,22 +622,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Topgolf",
       "subject": "Fall Leagues | Registration Closes Soon"
-    },
-    {
-      "sender": "Studio",
-      "subject": "Claire Saffitz's app: Tomorrow is the last day to join!"
-    },
-    {
-      "sender": "A BATHING APE\u00ae",
-      "subject": "BAPE\u00ae NEW ARRIVALS: VAN GOGH MUSEUM, BAPE STAs, GRAPHIC TEES, KIDS, WOMENS, ACCESSORIES, & MORE"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "NEW & READY TO SHIP: Secure your favorite pieces now"
-    },
-    {
-      "sender": "KICKS CREW",
-      "subject": "This Week\u2019s Biggest Drops Are Here "
     }
   ],
   "items": [
