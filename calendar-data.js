@@ -581,8 +581,12 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 4,
+  "unreadCount": 5,
   "threads": [
+    {
+      "sender": "Princeton Film Festival",
+      "subject": "Upcoming Francophone Screenings"
+    },
     {
       "sender": "BrandsMart Deals",
       "subject": "Final Hours. Final Savings."

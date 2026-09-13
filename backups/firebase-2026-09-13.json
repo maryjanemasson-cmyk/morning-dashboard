@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-09-13T13:00:15",
+    "captured_at": "2026-09-13T15:00:14",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -56159,6 +56159,109 @@
       "name": "Colombia Trip",
       "occasion": "Travel",
       "season": "Summer"
+    },
+    "2320": {
+      "layout": [
+        {
+          "_origFile": "s12_012.png",
+          "file": "wardrobe-thumbs/s12_012.png",
+          "height": 25,
+          "left": 0,
+          "top": 13,
+          "width": 15
+        },
+        {
+          "_origFile": "s18_003.png",
+          "file": "wardrobe-thumbs/s18_003.png",
+          "height": 18.5,
+          "left": 17.3,
+          "top": 7.1,
+          "width": 9.8
+        },
+        {
+          "_origFile": "s31_015.png",
+          "file": "wardrobe-thumbs/s31_015.png",
+          "height": 21.9,
+          "left": 14.8,
+          "top": 24.4,
+          "width": 13.8
+        },
+        {
+          "_origFile": "s08_007.png",
+          "file": "wardrobe-thumbs/s08_007.png",
+          "height": 19,
+          "left": 16.7,
+          "top": 44.8,
+          "width": 10.2
+        },
+        {
+          "_origFile": "s27_003.png",
+          "file": "wardrobe-thumbs/s27_003.png",
+          "height": 25,
+          "left": 29.4,
+          "top": 25.1,
+          "width": 15
+        },
+        {
+          "_origFile": "s21_011.png",
+          "file": "wardrobe-thumbs/s21_011.png",
+          "height": 13.5,
+          "left": 32.8,
+          "top": 11.1,
+          "width": 8.1
+        },
+        {
+          "_origFile": "C056.webp",
+          "file": "wardrobe-thumbs/C056.webp",
+          "height": 11.7,
+          "left": 32.2,
+          "top": 51.6,
+          "width": 9.3
+        },
+        {
+          "_origFile": "s12_009.png",
+          "file": "wardrobe-thumbs/s12_009.png",
+          "height": 19.8,
+          "left": 41.8,
+          "top": 7.8,
+          "width": 11.5
+        },
+        {
+          "_origFile": "s12_012.png",
+          "file": "wardrobe-thumbs/s12_012.png",
+          "height": 20.8,
+          "left": 70.7,
+          "top": 14,
+          "width": 9.4
+        },
+        {
+          "_origFile": "s17_001.png",
+          "file": "wardrobe-thumbs/s17_001.png",
+          "height": 16.5,
+          "left": 58,
+          "top": 13.2,
+          "width": 10.3
+        },
+        {
+          "_origFile": "C019.png",
+          "file": "wardrobe-thumbs/C019.png",
+          "height": 25,
+          "left": 56,
+          "top": 28.6,
+          "width": 15
+        },
+        {
+          "_origFile": "C008.png",
+          "file": "wardrobe-thumbs/C008.png",
+          "height": 16.8,
+          "left": 59.7,
+          "top": 50.2,
+          "width": 7.6
+        }
+      ],
+      "name": "Boston 3-day late summer",
+      "occasion": "Travel",
+      "season": "Summer"
     }
   },
   "wardrobeCustomItems": {
@@ -60043,6 +60146,70 @@
         "text": "Add doorknobs to basement"
       }
     ],
+    "2026-09-12": [
+      {
+        "done": false,
+        "source": "gmail",
+        "text": "Mail Amazon return: Vanity Fair Women's Beauty"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🧥 Drop off dry cleaning"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🌱 Water plants"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "💅 Pedicure"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "✨ Eyebrow care"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "clean basement"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "ceh closet door"
+      },
+      {
+        "done": false,
+        "source": "todo",
+        "text": "Add doorknobs to basement"
+      }
+    ],
+    "2026-09-13": [
+      {
+        "done": false,
+        "source": "chore",
+        "text": "📞 Call Mom"
+      },
+      {
+        "done": false,
+        "source": "chore",
+        "text": "🐶 Pick up dog poop"
+      }
+    ],
     "_seeded": {
       "2026-05-16": true,
       "2026-05-17": true,
@@ -60063,7 +60230,9 @@
       "2026-08-01": true,
       "2026-08-02": true,
       "2026-08-29": true,
-      "2026-08-30": true
+      "2026-08-30": true,
+      "2026-09-12": true,
+      "2026-09-13": true
     },
     "_suppress": {
       "2026-05-23": [
