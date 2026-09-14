@@ -581,8 +581,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 9,
   "threads": [
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "The September Wedding Guest Edit"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "You have great taste"
+    },
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your September 14 flight"
