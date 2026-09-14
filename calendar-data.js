@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Anne's birthday",
-    "location": "",
-    "description": "",
-    "startTime": "",
-    "startDate": "2026-09-13",
-    "endTime": "",
-    "endDate": "2026-09-14",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "\u2708\ufe0f Trip from Newark \u2192 Boston",
     "location": "Cambridge, MA",
     "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 14 to 16, 2026",
@@ -581,8 +570,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped 1 item: Personal Care"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped 1 item: Household Supplies"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "TURQUOISE TREND"
+    },
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Your Paris trip: Earn extra miles with Vrbo"
+    },
+    {
+      "sender": "Studio",
+      "subject": "6 hours left! Last chance to join Casey Neistat's app"
+    },
+    {
+      "sender": "Studio",
+      "subject": "6 hours left! Last chance to join Claire Saffitz's app"
+    },
     {
       "sender": "Rat & Boa USA",
       "subject": "The September Wedding Guest Edit"
@@ -594,30 +611,6 @@ window.EMAIL_DATA = {
     {
       "sender": "United Airlines",
       "subject": "Wi-Fi and entertainment options for your September 14 flight"
-    },
-    {
-      "sender": "Uber",
-      "subject": "Everyone's favorites, now with 30% off"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Hours left on the unlock"
-    },
-    {
-      "sender": "BrandsMart Deals",
-      "subject": "Final Hours. Final Savings."
-    },
-    {
-      "sender": "The Washington Post",
-      "subject": "The Week In Ideas: Ukraine\u2019s way of fighting war can\u2019t match what\u2019s coming"
-    },
-    {
-      "sender": "Pini Parma",
-      "subject": "This season's knitwear"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     }
   ],
   "items": [
@@ -627,6 +620,20 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 1 item: Personal Care",
+      "date": "2026-09-14",
+      "id": "1a09f2513426f2f0",
+      "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 1 item: Household Supplies",
+      "date": "2026-09-14",
+      "id": "1a09ea8fee82e3da",
+      "sender": "Amazon.com"
     }
   ]
 };
