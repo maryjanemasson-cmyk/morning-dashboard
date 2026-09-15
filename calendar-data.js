@@ -570,47 +570,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 6,
   "threads": [
     {
-      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
-      "subject": "New shareholder documents are available online"
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Here, Kitty Kitty"
     },
     {
-      "sender": "Valeria from Holafly",
-      "subject": "Wait\u2026 we've got something for your next trip!"
+      "sender": "Booking.com",
+      "subject": "Stand a chance to win a trip to the WORLD SERIES\u2122 \u26be"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "Made For The Season Ahead.."
+      "sender": "DoorDash Order",
+      "subject": "Order Confirmation for Mary Jane from CAVA"
     },
     {
-      "sender": "IDnotify",
-      "subject": "Your Monthly Update From IDnotify"
+      "sender": "Amex Offers from American Express",
+      "subject": "Christian, your new Amex Offers are inside!"
     },
     {
-      "sender": "Tony Bianco US",
-      "subject": "MUST-HAVE MATISSE \ud83d\udda4"
+      "sender": "Eleanor Dath",
+      "subject": "Checking In and Thinking of You"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "UPS",
-      "subject": "UPS Update: New Scheduled Delivery Date and Estimated Delivery Time"
-    },
-    {
-      "sender": "La Felicit\u00e0",
-      "subject": "BIGFEST #4 : le festival food & teuf"
-    },
-    {
-      "sender": "FedEx Delivery Manager",
-      "subject": "Your shipment is on the way 540927671590"
-    },
-    {
-      "sender": "LinkedIn",
-      "subject": "You have 3 new invitations"
+      "sender": "Chan Luu",
+      "subject": "The Curved Cuff"
     }
   ],
   "items": [
