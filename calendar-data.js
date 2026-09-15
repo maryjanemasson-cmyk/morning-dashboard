@@ -11,39 +11,6 @@ window.CALENDAR_EVENTS = [
     "colorId": "7"
   },
   {
-    "summary": "\u2708\ufe0f UA593 EWR \u2192 BOS",
-    "location": "Newark (EWR)",
-    "description": "Mon, Sep 14\n7:00 AM EDT\n[Flight] EWR to BOS\nUnited Airlines 593, Terminal C, Gate\n8:17 AM EDT\nArrive Boston (BOS)\nTerminal B, Gate",
-    "startTime": "2026-09-14T07:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-14T08:17:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "Weekly planning \u2014 update task tracker",
-    "location": "",
-    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
-    "startTime": "2026-09-14T08:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-14T08:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "5"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-in: Courtyard by Marriott Boston Cambridge",
-    "location": "777 Memorial Dr, Cambridge, MA, 02139",
-    "description": "3:00 PM EDT\n[Lodging] Arrive Courtyard by Marriott Boston Cambridge\nCheck-In: 3:00pm\n777 Memorial Dr, Cambridge, MA, 02139\n617-492-7777",
-    "startTime": "2026-09-14T15:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-14T16:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
     "summary": "\ud83c\udfe8 Check-out: Courtyard by Marriott Boston Cambridge",
     "location": "777 Memorial Dr, Cambridge, MA, 02139",
     "description": "Wed, Sep 16\n11:00 AM EDT\n[Lodging] Depart Courtyard by Marriott Boston Cambridge\nCheck-Out: 11:00am\n777 Memorial Dr, Cambridge, MA, 02139\n617-492-7777",
@@ -152,6 +119,39 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": ""
+  },
+  {
+    "summary": "OMS visit",
+    "location": "Cambridge, MA",
+    "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 28 to 30, 2026",
+    "startTime": "",
+    "startDate": "2026-09-28",
+    "endTime": "",
+    "endDate": "2026-10-01",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
+    "summary": "Weekly planning \u2014 update task tracker",
+    "location": "",
+    "description": "Open your PersonalTaskTracker.html file and:\n1. Check off what got done last week\n2. Add any new tasks\n3. Review the week ahead for travel conflicts",
+    "startTime": "2026-09-28T08:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-28T08:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "5"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-in: Courtyard by Marriott Boston Cambridge",
+    "location": "777 Memorial Dr, Cambridge, MA, 02139",
+    "description": "Mon, Sep 28\n3:00 PM EDT\n[Lodging] Arrive Courtyard by Marriott Boston Cambridge\nCheck-In: 3:00pm\n777 Memorial Dr, Cambridge, MA, 02139\n+1 617 492-7777",
+    "startTime": "2026-09-28T15:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-28T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
   }
 ];
 
@@ -570,8 +570,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "AMERIPRISE FINANCIAL SERVICES, LLC",
+      "subject": "New shareholder documents are available online"
+    },
+    {
+      "sender": "Valeria from Holafly",
+      "subject": "Wait\u2026 we've got something for your next trip!"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "Made For The Season Ahead.."
+    },
+    {
+      "sender": "IDnotify",
+      "subject": "Your Monthly Update From IDnotify"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "MUST-HAVE MATISSE \ud83d\udda4"
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "UPS",
+      "subject": "UPS Update: New Scheduled Delivery Date and Estimated Delivery Time"
+    },
+    {
+      "sender": "La Felicit\u00e0",
+      "subject": "BIGFEST #4 : le festival food & teuf"
+    },
     {
       "sender": "FedEx Delivery Manager",
       "subject": "Your shipment is on the way 540927671590"
@@ -579,38 +611,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn",
       "subject": "You have 3 new invitations"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Delivered 1 item: Household Supplies"
-    },
-    {
-      "sender": "Booking.com",
-      "subject": "Stand a chance to win a trip to the WORLD SERIES\u2122 \u26be"
-    },
-    {
-      "sender": "DoorDash Order",
-      "subject": "Order Confirmation for Mary Jane from CAVA"
-    },
-    {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "Checking In and Thinking of You"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "The Curved Cuff"
-    },
-    {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // Introducing the Silk Scarf and Tie in the JH Signature Stripe."
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 14 Sep 2026"
     }
   ],
   "items": [
@@ -620,27 +620,6 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 1 item: Personal Care",
-      "date": "2026-09-14",
-      "id": "1a09f2513426f2f0",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 1 item: Household Supplies",
-      "date": "2026-09-14",
-      "id": "1a09ea8fee82e3da",
-      "sender": "Amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "FedEx shipped #540927671590",
-      "date": "2026-09-14",
-      "id": "1a0a287fb808c50c",
-      "sender": "FedEx Delivery Manager"
     }
   ]
 };
