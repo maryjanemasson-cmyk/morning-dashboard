@@ -570,47 +570,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 15,
   "threads": [
     {
+      "sender": "FedEx Delivery Manager",
+      "subject": "Your shipment is on the way 540927671590"
+    },
+    {
+      "sender": "LinkedIn",
+      "subject": "You have 3 new invitations"
+    },
+    {
       "sender": "Amazon.com",
-      "subject": "Shipped 1 item: Personal Care"
+      "subject": "Delivered 1 item: Household Supplies"
     },
     {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+      "sender": "Booking.com",
+      "subject": "Stand a chance to win a trip to the WORLD SERIES\u2122 \u26be"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped 1 item: Household Supplies"
+      "sender": "DoorDash Order",
+      "subject": "Order Confirmation for Mary Jane from CAVA"
     },
     {
-      "sender": "Tony Bianco US",
-      "subject": "TURQUOISE TREND"
+      "sender": "Amex Offers from American Express",
+      "subject": "Christian, your new Amex Offers are inside!"
     },
     {
-      "sender": "MileagePlus Program",
-      "subject": "Your Paris trip: Earn extra miles with Vrbo"
+      "sender": "Eleanor Dath",
+      "subject": "Checking In and Thinking of You"
     },
     {
-      "sender": "Studio",
-      "subject": "6 hours left! Last chance to join Casey Neistat's app"
+      "sender": "Chan Luu",
+      "subject": "The Curved Cuff"
     },
     {
-      "sender": "Studio",
-      "subject": "6 hours left! Last chance to join Claire Saffitz's app"
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Introducing the Silk Scarf and Tie in the JH Signature Stripe."
     },
     {
-      "sender": "Rat & Boa USA",
-      "subject": "The September Wedding Guest Edit"
-    },
-    {
-      "sender": "Moda Operandi",
-      "subject": "You have great taste"
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "Wi-Fi and entertainment options for your September 14 flight"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 14 Sep 2026"
     }
   ],
   "items": [
@@ -634,6 +634,13 @@ window.EMAIL_DATA = {
       "date": "2026-09-14",
       "id": "1a09ea8fee82e3da",
       "sender": "Amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "FedEx shipped #540927671590",
+      "date": "2026-09-14",
+      "id": "1a0a287fb808c50c",
+      "sender": "FedEx Delivery Manager"
     }
   ]
 };
