@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "captured_at": "2026-09-16T17:12:49",
+    "captured_at": "2026-09-16T19:19:21",
     "db_url": "https://morning-dashboard-4c62b-default-rtdb.firebaseio.com",
     "paths": [
       "outfitEdits",
@@ -60781,16 +60781,7 @@
     "shogun": true,
     "slow-horses": true
   },
-  "chores": {
-    "book-pilates": "2026-09-12",
-    "call-mom": "2026-09-06",
-    "dog-poop": "2026-09-06",
-    "dry-cleaning": "2026-09-14",
-    "eyebrows": "2026-08-16",
-    "pedicure": "2026-08-10",
-    "water-plants": "2026-09-14",
-    "weeding": "2026-09-05"
-  },
+  "chores": null,
   "todos": [
     {
       "done": false,

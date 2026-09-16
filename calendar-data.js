@@ -554,8 +554,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 16,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "MileagePlus Program",
+      "subject": "Mary Jane, multiply your miles with this special offer"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "Introducing Premium. $100 Every Month."
+    },
     {
       "sender": "Instacart",
       "subject": "Here\u2019s $5 off, on us"
@@ -587,14 +595,6 @@ window.EMAIL_DATA = {
     {
       "sender": "NOLS Communications",
       "subject": "Complete Our Survey for a Chance to Win Amazing Gear!"
-    },
-    {
-      "sender": "Eleanor Dath",
-      "subject": "Checking In and Thinking of You"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Skin Care"
     }
   ],
   "items": [
