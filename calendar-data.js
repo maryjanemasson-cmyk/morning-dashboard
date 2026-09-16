@@ -366,22 +366,6 @@ window.TRAVEL_DATA = [
     "icon": "\u2708\ufe0f",
     "items": [
       {
-        "summary": "UA593 EWR to BOS",
-        "location": "Newark (EWR)",
-        "description": "",
-        "start": "2026-09-14T11:00:00+00:00",
-        "end": "2026-09-14T12:17:00+00:00",
-        "type": "flight"
-      },
-      {
-        "summary": "Check-in: Courtyard by Marriott Boston Cambridge",
-        "location": "777 Memorial Dr, Cambridge, MA, 02139",
-        "description": "",
-        "start": "2026-09-14T19:00:00+00:00",
-        "end": "2026-09-14T20:00:00+00:00",
-        "type": "hotel"
-      },
-      {
         "summary": "Check-out: Courtyard by Marriott Boston Cambridge",
         "location": "777 Memorial Dr, Cambridge, MA, 02139",
         "description": "",
@@ -570,31 +554,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 6,
+  "unreadCount": 16,
   "threads": [
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // Here, Kitty Kitty"
+      "sender": "Instacart",
+      "subject": "Here\u2019s $5 off, on us"
     },
     {
-      "sender": "Booking.com",
-      "subject": "Stand a chance to win a trip to the WORLD SERIES\u2122 \u26be"
+      "sender": "PayPal",
+      "subject": "Get what you love. Pay at a pace that works for you."
     },
     {
-      "sender": "DoorDash Order",
-      "subject": "Order Confirmation for Mary Jane from CAVA"
+      "sender": "Reformation",
+      "subject": "OLIVIA JADE FOR REF"
     },
     {
-      "sender": "Amex Offers from American Express",
-      "subject": "Christian, your new Amex Offers are inside!"
+      "sender": "COS",
+      "subject": "Outerwear: AW26 edition"
+    },
+    {
+      "sender": "PURE Insurance",
+      "subject": "The latest from PURE: What members should know"
+    },
+    {
+      "sender": "Bergdorf Goodman Concierge",
+      "subject": "Exclusive Polo Ralph Lauren Pop-up at Goodman's"
+    },
+    {
+      "sender": "Shameless Snacks",
+      "subject": "NEW DROP ALERT! 16 flavors, 28 bags, one pack"
+    },
+    {
+      "sender": "NOLS Communications",
+      "subject": "Complete Our Survey for a Chance to Win Amazing Gear!"
     },
     {
       "sender": "Eleanor Dath",
       "subject": "Checking In and Thinking of You"
     },
     {
-      "sender": "Chan Luu",
-      "subject": "The Curved Cuff"
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Skin Care"
     }
   ],
   "items": [
@@ -604,6 +604,13 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 1 item: Personal Care",
+      "date": "2026-09-16",
+      "id": "1a0a81e37bd7be07",
+      "sender": "Amazon.com"
     }
   ]
 };
