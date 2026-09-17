@@ -508,8 +508,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 19,
+  "unreadCount": 24,
   "threads": [
+    {
+      "sender": "Hotels.com",
+      "subject": "Discover a smarter way to book your work trips"
+    },
+    {
+      "sender": "Topgolf",
+      "subject": "Live M\u00e1s Open | Earn Your Spot This Weekend"
+    },
+    {
+      "sender": "National Building Museum",
+      "subject": "Discover the New Season of Spotlight on Design"
+    },
+    {
+      "sender": "DONNI.",
+      "subject": "Discover: The Silk Taffeta Board Pant"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "\ud83e\uddcaYour FREE gift is coming 9/19"
+    },
     {
       "sender": "LinkedIn Sales Navigator",
       "subject": "Close the Impact Gap with B2B Network Intelligence"
@@ -529,26 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Walpole Outdoors",
       "subject": "Before Guests Arrive, Start Outside"
-    },
-    {
-      "sender": "Diana @ Shameless Snacks",
-      "subject": "Diana here. Mini Bites finally landed \ud83c\udf6c"
-    },
-    {
-      "sender": "PURE Insurance",
-      "subject": "Schedule Your Free PURE Watertight Home Check"
-    },
-    {
-      "sender": "The Shade Store",
-      "subject": "20% off your order ends soon"
-    },
-    {
-      "sender": "Optery",
-      "subject": "Protect your data with 20% off Optery"
-    },
-    {
-      "sender": "French Language Accelerator (Skool)",
-      "subject": "Weekly digest for Thu, Sep 10 2026"
     }
   ],
   "items": [
