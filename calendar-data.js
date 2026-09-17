@@ -1,38 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "\u2708\ufe0f Trip from Newark \u2192 Boston",
-    "location": "Cambridge, MA",
-    "description": "Mary Jane Hinrichs is in Cambridge, MA from Sep 14 to 16, 2026",
-    "startTime": "",
-    "startDate": "2026-09-14",
-    "endTime": "",
-    "endDate": "2026-09-17",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
-    "summary": "\ud83c\udfe8 Check-out: Courtyard by Marriott Boston Cambridge",
-    "location": "777 Memorial Dr, Cambridge, MA, 02139",
-    "description": "Wed, Sep 16\n11:00 AM EDT\n[Lodging] Depart Courtyard by Marriott Boston Cambridge\nCheck-Out: 11:00am\n777 Memorial Dr, Cambridge, MA, 02139\n617-492-7777",
-    "startTime": "2026-09-16T11:00:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-16T12:00:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "2"
-  },
-  {
-    "summary": "\u2708\ufe0f UA2104 BOS \u2192 EWR",
-    "location": "Boston (BOS)",
-    "description": "12:41 PM EDT\n[Flight] BOS to EWR\nUnited Airlines 2104, Terminal B, Gate\n2:08 PM EDT\nArrive Newark (EWR)\nTerminal A, Gate",
-    "startTime": "2026-09-16T12:41:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-16T14:08:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": "7"
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -149,6 +116,17 @@ window.CALENDAR_EVENTS = [
     "startTime": "2026-09-28T15:00:00-04:00",
     "startDate": "",
     "endTime": "2026-09-28T16:00:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": "2"
+  },
+  {
+    "summary": "\ud83c\udfe8 Check-out: Courtyard by Marriott Boston Cambridge",
+    "location": "777 Memorial Dr, Cambridge, MA, 02139",
+    "description": "Wed, Sep 30\n11:00 AM EDT\n[Lodging] Depart Courtyard by Marriott Boston Cambridge\nCheck-Out: 11:00am\n777 Memorial Dr, Cambridge, MA, 02139\n+1 617 492-7777",
+    "startTime": "2026-09-30T11:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-30T12:00:00-04:00",
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
@@ -530,8 +508,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 18,
   "threads": [
+    {
+      "sender": "Roucha",
+      "subject": "Fall Favorites"
+    },
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The Gingham Set Is Here"
+    },
+    {
+      "sender": "Dropbox",
+      "subject": "Updates to our Terms of Service and Privacy Policy"
+    },
+    {
+      "sender": "Valeria from Holafly",
+      "subject": "There\u2019s still time for one more trip \u2708\ufe0f"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "ROSETTE REVIVAL"
+    },
+    {
+      "sender": "POA Patient Statements",
+      "subject": "Patient Statement"
+    },
     {
       "sender": "MileagePlus Program",
       "subject": "Mary Jane, multiply your miles with this special offer"
@@ -547,30 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Get what you love. Pay at a pace that works for you."
-    },
-    {
-      "sender": "Reformation",
-      "subject": "OLIVIA JADE FOR REF"
-    },
-    {
-      "sender": "COS",
-      "subject": "Outerwear: AW26 edition"
-    },
-    {
-      "sender": "PURE Insurance",
-      "subject": "The latest from PURE: What members should know"
-    },
-    {
-      "sender": "Bergdorf Goodman Concierge",
-      "subject": "Exclusive Polo Ralph Lauren Pop-up at Goodman's"
-    },
-    {
-      "sender": "Shameless Snacks",
-      "subject": "NEW DROP ALERT! 16 flavors, 28 bags, one pack"
-    },
-    {
-      "sender": "NOLS Communications",
-      "subject": "Complete Our Survey for a Chance to Win Amazing Gear!"
     }
   ],
   "items": [
@@ -580,13 +558,6 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
-    },
-    {
-      "type": "delivery",
-      "title": "Shipped 1 item: Personal Care",
-      "date": "2026-09-16",
-      "id": "1a0a81e37bd7be07",
-      "sender": "Amazon.com"
     }
   ]
 };
