@@ -508,8 +508,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 15,
+  "unreadCount": 17,
   "threads": [
+    {
+      "sender": "French Language Accelerator (Skool)",
+      "subject": "Weekly digest for Thu, Sep 10 2026"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Glam that takes two clicks"
+    },
     {
       "sender": "Medium Daily Digest",
       "subject": "Karl Marx and Why Societies Stop Growing | Peter D'Autry in Philosophy Today"
@@ -541,14 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Get what you love. Pay at a pace that works for you."
-    },
-    {
-      "sender": "Reformation",
-      "subject": "OLIVIA JADE FOR REF"
-    },
-    {
-      "sender": "COS",
-      "subject": "Outerwear: AW26 edition"
     }
   ],
   "items": [
