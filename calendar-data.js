@@ -508,15 +508,15 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 15,
   "threads": [
     {
-      "sender": "Roucha",
-      "subject": "Fall Favorites"
+      "sender": "Medium Daily Digest",
+      "subject": "Karl Marx and Why Societies Stop Growing | Peter D'Autry in Philosophy Today"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "The Gingham Set Is Here"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 17 Sep 2026"
     },
     {
       "sender": "Dropbox",
@@ -525,14 +525,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Valeria from Holafly",
       "subject": "There\u2019s still time for one more trip \u2708\ufe0f"
-    },
-    {
-      "sender": "Tony Bianco US",
-      "subject": "ROSETTE REVIVAL"
-    },
-    {
-      "sender": "POA Patient Statements",
-      "subject": "Patient Statement"
     },
     {
       "sender": "MileagePlus Program",
@@ -549,6 +541,14 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Get what you love. Pay at a pace that works for you."
+    },
+    {
+      "sender": "Reformation",
+      "subject": "OLIVIA JADE FOR REF"
+    },
+    {
+      "sender": "COS",
+      "subject": "Outerwear: AW26 edition"
     }
   ],
   "items": [
