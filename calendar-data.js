@@ -360,30 +360,6 @@ window.TRAVEL_DATA = [
     ]
   },
   {
-    "destination": "Newark \u2192 Boston",
-    "start": "2026-09-14",
-    "end": "2026-09-16",
-    "icon": "\u2708\ufe0f",
-    "items": [
-      {
-        "summary": "Check-out: Courtyard by Marriott Boston Cambridge",
-        "location": "777 Memorial Dr, Cambridge, MA, 02139",
-        "description": "",
-        "start": "2026-09-16T15:00:00+00:00",
-        "end": "2026-09-16T16:00:00+00:00",
-        "type": "hotel"
-      },
-      {
-        "summary": "UA2104 BOS to EWR",
-        "location": "Boston (BOS)",
-        "description": "",
-        "start": "2026-09-16T16:41:00+00:00",
-        "end": "2026-09-16T18:08:00+00:00",
-        "type": "flight"
-      }
-    ]
-  },
-  {
     "destination": "Paris, France",
     "start": "2026-09-20",
     "end": "2026-09-25",
@@ -554,7 +530,7 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 18,
+  "unreadCount": 17,
   "threads": [
     {
       "sender": "MileagePlus Program",
