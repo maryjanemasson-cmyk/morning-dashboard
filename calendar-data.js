@@ -511,6 +511,22 @@ window.EMAIL_DATA = {
   "unreadCount": 19,
   "threads": [
     {
+      "sender": "LinkedIn Sales Navigator",
+      "subject": "Close the Impact Gap with B2B Network Intelligence"
+    },
+    {
+      "sender": "Reformation",
+      "subject": "NEW LEAF"
+    },
+    {
+      "sender": "LinkedIn Premium",
+      "subject": "Mary Jane, thanks for being a valued member"
+    },
+    {
+      "sender": "Sol de Janeiro",
+      "subject": "Your free fall gifts are here \ud83c\udf42\u2728"
+    },
+    {
       "sender": "Walpole Outdoors",
       "subject": "Before Guests Arrive, Start Outside"
     },
@@ -533,22 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "French Language Accelerator (Skool)",
       "subject": "Weekly digest for Thu, Sep 10 2026"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Glam that takes two clicks"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Karl Marx and Why Societies Stop Growing | Peter D'Autry in Philosophy Today"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 17 Sep 2026"
-    },
-    {
-      "sender": "Dropbox",
-      "subject": "Updates to our Terms of Service and Privacy Policy"
     }
   ],
   "items": [
