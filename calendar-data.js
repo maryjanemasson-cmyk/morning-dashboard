@@ -508,11 +508,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 23,
+  "unreadCount": 20,
   "threads": [
     {
-      "sender": "AT&T",
-      "subject": "We\u2019re updating the AT&T Consumer Service Agreement"
+      "sender": "NBC",
+      "subject": "The Traitors: New Blood Awaits..."
     },
     {
       "sender": "PNC Branch Survey",
