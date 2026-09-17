@@ -508,27 +508,27 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 24,
+  "unreadCount": 23,
   "threads": [
     {
-      "sender": "Hotels.com",
-      "subject": "Discover a smarter way to book your work trips"
+      "sender": "AT&T",
+      "subject": "We\u2019re updating the AT&T Consumer Service Agreement"
     },
     {
-      "sender": "Topgolf",
-      "subject": "Live M\u00e1s Open | Earn Your Spot This Weekend"
+      "sender": "PNC Branch Survey",
+      "subject": "PNC Bank Branch Feedback - Take our quick Survey"
     },
     {
-      "sender": "National Building Museum",
-      "subject": "Discover the New Season of Spotlight on Design"
+      "sender": "The 101: Fund",
+      "subject": "\u2b50\ufe0f\ud83c\udf55\ud83c\udf7bPsst\u2026 Hang out with 101: Fund!"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Eyes, skin, hair in a few clicks"
     },
     {
       "sender": "DONNI.",
       "subject": "Discover: The Silk Taffeta Board Pant"
-    },
-    {
-      "sender": "MyLowe's Rewards",
-      "subject": "\ud83e\uddcaYour FREE gift is coming 9/19"
     },
     {
       "sender": "LinkedIn Sales Navigator",
