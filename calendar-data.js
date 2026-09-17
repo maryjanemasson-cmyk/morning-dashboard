@@ -508,8 +508,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 19,
   "threads": [
+    {
+      "sender": "Walpole Outdoors",
+      "subject": "Before Guests Arrive, Start Outside"
+    },
+    {
+      "sender": "Diana @ Shameless Snacks",
+      "subject": "Diana here. Mini Bites finally landed \ud83c\udf6c"
+    },
+    {
+      "sender": "PURE Insurance",
+      "subject": "Schedule Your Free PURE Watertight Home Check"
+    },
+    {
+      "sender": "The Shade Store",
+      "subject": "20% off your order ends soon"
+    },
+    {
+      "sender": "Optery",
+      "subject": "Protect your data with 20% off Optery"
+    },
     {
       "sender": "French Language Accelerator (Skool)",
       "subject": "Weekly digest for Thu, Sep 10 2026"
@@ -529,26 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Dropbox",
       "subject": "Updates to our Terms of Service and Privacy Policy"
-    },
-    {
-      "sender": "Valeria from Holafly",
-      "subject": "There\u2019s still time for one more trip \u2708\ufe0f"
-    },
-    {
-      "sender": "MileagePlus Program",
-      "subject": "Mary Jane, multiply your miles with this special offer"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "Introducing Premium. $100 Every Month."
-    },
-    {
-      "sender": "Instacart",
-      "subject": "Here\u2019s $5 off, on us"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Get what you love. Pay at a pace that works for you."
     }
   ],
   "items": [
