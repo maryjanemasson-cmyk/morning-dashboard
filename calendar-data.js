@@ -530,8 +530,24 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 14,
   "threads": [
+    {
+      "sender": "Chloe at Sur La Table",
+      "subject": "Mary, Discover Your New Favorite Fall Flavors"
+    },
+    {
+      "sender": "Gem + Jewel",
+      "subject": "\ud83d\udc8e Our Top 5 Jewelry Looks From the 2026 Emmy Awards"
+    },
+    {
+      "sender": "Design Decor",
+      "subject": "15% Fall Collection This Weekend"
+    },
+    {
+      "sender": "Croissant",
+      "subject": "More In Your Wallet Every Month"
+    },
     {
       "sender": "Amazon.com",
       "subject": "Ordered 1 item: Pet Supplies"
@@ -539,10 +555,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Shipped 3 items: Bakeware, Cosmetic Bags, and more"
-    },
-    {
-      "sender": "chrislovesjulia",
-      "subject": "9 things for a boy's bedroom"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -559,18 +571,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered 1 item: Electronics"
-    },
-    {
-      "sender": "NBC",
-      "subject": "The Traitors: New Blood Awaits..."
-    },
-    {
-      "sender": "PNC Branch Survey",
-      "subject": "PNC Bank Branch Feedback - Take our quick Survey"
-    },
-    {
-      "sender": "The 101: Fund",
-      "subject": "\u2b50\ufe0f\ud83c\udf55\ud83c\udf7bPsst\u2026 Hang out with 101: Fund!"
     }
   ],
   "items": [
