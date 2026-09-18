@@ -519,47 +519,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 30,
+  "unreadCount": 38,
   "threads": [
     {
-      "sender": "Pinterest",
-      "subject": "We\u2019re updating our Terms of Service and Privacy Policy"
+      "sender": "French Language Accelerator",
+      "subject": "Sabrina Bery posted \"Vos projets pour le weekend \""
     },
     {
-      "sender": "Balaji Srinivasan",
-      "subject": "Ipsen / causaLens: My COO would like to connect"
+      "sender": "PNC Alerts",
+      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
     },
     {
-      "sender": "USPS Informed Delivery",
-      "subject": "Your Daily Digest for Fri, 9/18 is ready to view"
+      "sender": "Medium Events",
+      "subject": "Medium Day is happening today!"
     },
     {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
+      "sender": "KICKS CREW",
+      "subject": "Your Next Game-Day Pair Awaits"
     },
     {
-      "sender": "Abby Arad from Your Stylist Says...",
-      "subject": "Outfits for a great time"
+      "sender": "MICHELIN Guide",
+      "subject": "And the winners are..."
     },
     {
-      "sender": "BrandsMart Deals",
-      "subject": "Up to 20% Off Logitech G + 24 Months No Interest"
+      "sender": "COS",
+      "subject": "Jeans: daily signatures"
     },
     {
-      "sender": "Medium Daily Digest",
-      "subject": "Stop Wasting Cash on These 10 Overpriced Modern Lifestyle Habits Today | Rahul K. in Activated Thinker"
+      "sender": "Lowe\u2019s Home Improvement",
+      "subject": "Fall\u2019s #trending items just dropped \ud83c\udf41"
     },
     {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 18 Sep 2026"
+      "sender": "TurboTax Monthly",
+      "subject": "\ud83c\udfcb\ufe0f\u200d\u2640\ufe0f Mary, is your money working hard enough?"
     },
     {
-      "sender": "TB INSIDER",
-      "subject": "Mary jane, don't forget your $20 OFF"
+      "sender": "Support at TripIt",
+      "subject": "Mary Jane, check out your TripIt itinerary for"
     },
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // The Ballet Flats in White are BACK"
+      "sender": "Shameless Snacks",
+      "subject": "Ten times more fiber than sugar. Yes, really."
     }
   ],
   "items": [
