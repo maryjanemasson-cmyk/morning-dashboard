@@ -530,31 +530,23 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 9,
   "threads": [
     {
-      "sender": "Chloe at Sur La Table",
-      "subject": "Mary, Discover Your New Favorite Fall Flavors"
+      "sender": "Pura",
+      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
+    },
+    {
+      "sender": "Chan Luu",
+      "subject": "NEW: The Snap Collection"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "Eyes, skin, hair before midnight"
     },
     {
       "sender": "Gem + Jewel",
       "subject": "\ud83d\udc8e Our Top 5 Jewelry Looks From the 2026 Emmy Awards"
-    },
-    {
-      "sender": "Design Decor",
-      "subject": "15% Fall Collection This Weekend"
-    },
-    {
-      "sender": "Croissant",
-      "subject": "More In Your Wallet Every Month"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Pet Supplies"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Shipped 3 items: Bakeware, Cosmetic Bags, and more"
     },
     {
       "sender": "firebase-noreply@google.com",
@@ -571,6 +563,10 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered 1 item: Electronics"
+    },
+    {
+      "sender": "NBC",
+      "subject": "The Traitors: New Blood Awaits..."
     }
   ],
   "items": [
