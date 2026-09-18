@@ -519,31 +519,31 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 26,
+  "unreadCount": 25,
   "threads": [
     {
-      "sender": "matina@nexus-conference.com",
-      "subject": "Join Industry Leaders at Our BioPharma Cell & Gene Therapy Nexus Conference, San Diego, CA"
+      "sender": "TB INSIDER",
+      "subject": "Mary jane, don't forget your $20 OFF"
+    },
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // The Ballet Flats in White are BACK"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 8 items: Bakeware, Cosmetic Bags, and more"
     },
     {
       "sender": "PNC Alerts",
-      "subject": "A $7,708.74 deposit was credited to your account."
+      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
     },
     {
       "sender": "firebase-noreply@google.com",
       "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "Tony Bianco US",
-      "subject": "THE OCCASION EDIT"
-    },
-    {
       "sender": "PayPal",
       "subject": "Mary Jane, your August account statement is available."
-    },
-    {
-      "sender": "United Airlines",
-      "subject": "What to know about your trip to Paris"
     },
     {
       "sender": "Rat & Boa USA",
