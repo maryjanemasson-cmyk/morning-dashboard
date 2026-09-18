@@ -519,8 +519,40 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 25,
+  "unreadCount": 30,
   "threads": [
+    {
+      "sender": "Pinterest",
+      "subject": "We\u2019re updating our Terms of Service and Privacy Policy"
+    },
+    {
+      "sender": "Balaji Srinivasan",
+      "subject": "Ipsen / causaLens: My COO would like to connect"
+    },
+    {
+      "sender": "USPS Informed Delivery",
+      "subject": "Your Daily Digest for Fri, 9/18 is ready to view"
+    },
+    {
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
+    },
+    {
+      "sender": "Abby Arad from Your Stylist Says...",
+      "subject": "Outfits for a great time"
+    },
+    {
+      "sender": "BrandsMart Deals",
+      "subject": "Up to 20% Off Logitech G + 24 Months No Interest"
+    },
+    {
+      "sender": "Medium Daily Digest",
+      "subject": "Stop Wasting Cash on These 10 Overpriced Modern Lifestyle Habits Today | Rahul K. in Activated Thinker"
+    },
+    {
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 18 Sep 2026"
+    },
     {
       "sender": "TB INSIDER",
       "subject": "Mary jane, don't forget your $20 OFF"
@@ -528,38 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Shop Jamie Haller",
       "subject": "1st Dibs // The Ballet Flats in White are BACK"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 8 items: Bakeware, Cosmetic Bags, and more"
-    },
-    {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to LILIAM TOBAR"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Mary Jane, your August account statement is available."
-    },
-    {
-      "sender": "Rat & Boa USA",
-      "subject": "Back In Stock"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Electronics"
-    },
-    {
-      "sender": "NBC",
-      "subject": "The Traitors: New Blood Awaits..."
-    },
-    {
-      "sender": "PNC Branch Survey",
-      "subject": "PNC Bank Branch Feedback - Take our quick Survey"
     }
   ],
   "items": [
