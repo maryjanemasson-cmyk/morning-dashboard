@@ -508,8 +508,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 20,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Rat & Boa USA",
+      "subject": "Back In Stock"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Electronics"
+    },
     {
       "sender": "NBC",
       "subject": "The Traitors: New Blood Awaits..."
@@ -541,14 +549,6 @@ window.EMAIL_DATA = {
     {
       "sender": "LinkedIn Premium",
       "subject": "Mary Jane, thanks for being a valued member"
-    },
-    {
-      "sender": "Sol de Janeiro",
-      "subject": "Your free fall gifts are here \ud83c\udf42\u2728"
-    },
-    {
-      "sender": "Walpole Outdoors",
-      "subject": "Before Guests Arrive, Start Outside"
     }
   ],
   "items": [
