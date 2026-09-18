@@ -530,15 +530,11 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 9,
+  "unreadCount": 7,
   "threads": [
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
-    },
-    {
-      "sender": "Chan Luu",
-      "subject": "NEW: The Snap Collection"
     },
     {
       "sender": "Joel Grimes",
@@ -563,10 +559,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Amazon.com",
       "subject": "Ordered 1 item: Electronics"
-    },
-    {
-      "sender": "NBC",
-      "subject": "The Traitors: New Blood Awaits..."
     }
   ],
   "items": [
