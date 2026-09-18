@@ -130,6 +130,17 @@ window.CALENDAR_EVENTS = [
     "endDate": "",
     "calendar": "Personal",
     "colorId": "2"
+  },
+  {
+    "summary": "Your Appointment at Suite Blend Color Bar",
+    "location": "315 Route 206 Suite 502, Hillsborough, NJ 08844",
+    "description": "SERVICES\nSingle Color Root Touch Up, Haircut\n\nWITH\nLauren C\n\nNeed to make changes to this appointment?\n\nManage my appointment here:\nhttps://suiteblendcolorbar.glossgenius.com/a/958b5bb8f0fbd381eef06afb9d61f404372e",
+    "startTime": "2026-10-01T13:00:00-04:00",
+    "startDate": "",
+    "endTime": "2026-10-01T15:45:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
   }
 ];
 
@@ -508,8 +519,32 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 22,
+  "unreadCount": 26,
   "threads": [
+    {
+      "sender": "matina@nexus-conference.com",
+      "subject": "Join Industry Leaders at Our BioPharma Cell & Gene Therapy Nexus Conference, San Diego, CA"
+    },
+    {
+      "sender": "PNC Alerts",
+      "subject": "A $7,708.74 deposit was credited to your account."
+    },
+    {
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "THE OCCASION EDIT"
+    },
+    {
+      "sender": "PayPal",
+      "subject": "Mary Jane, your August account statement is available."
+    },
+    {
+      "sender": "United Airlines",
+      "subject": "What to know about your trip to Paris"
+    },
     {
       "sender": "Rat & Boa USA",
       "subject": "Back In Stock"
@@ -525,30 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PNC Branch Survey",
       "subject": "PNC Bank Branch Feedback - Take our quick Survey"
-    },
-    {
-      "sender": "The 101: Fund",
-      "subject": "\u2b50\ufe0f\ud83c\udf55\ud83c\udf7bPsst\u2026 Hang out with 101: Fund!"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Eyes, skin, hair in a few clicks"
-    },
-    {
-      "sender": "DONNI.",
-      "subject": "Discover: The Silk Taffeta Board Pant"
-    },
-    {
-      "sender": "LinkedIn Sales Navigator",
-      "subject": "Close the Impact Gap with B2B Network Intelligence"
-    },
-    {
-      "sender": "Reformation",
-      "subject": "NEW LEAF"
-    },
-    {
-      "sender": "LinkedIn Premium",
-      "subject": "Mary Jane, thanks for being a valued member"
     }
   ],
   "items": [
