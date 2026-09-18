@@ -1,5 +1,16 @@
 window.CALENDAR_EVENTS = [
   {
+    "summary": "Reservation at Roots Ocean Prime",
+    "location": "Roots Ocean Prime, 98 University Place, Princeton, NJ 08540",
+    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM6PkB8vwE2V8VXLAcP75wT4R5RHZU8m0w\n",
+    "startTime": "2026-09-18T17:15:00-04:00",
+    "startDate": "",
+    "endTime": "2026-09-18T18:15:00-04:00",
+    "endDate": "",
+    "calendar": "Personal",
+    "colorId": ""
+  },
+  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -519,47 +530,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 38,
+  "unreadCount": 12,
   "threads": [
     {
-      "sender": "French Language Accelerator",
-      "subject": "Sabrina Bery posted \"Vos projets pour le weekend \""
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Pet Supplies"
     },
     {
-      "sender": "PNC Alerts",
-      "subject": "You sent a Zelle\u00ae payment to OTTO RENE GONZALEZ"
+      "sender": "Amazon.com",
+      "subject": "Shipped 3 items: Bakeware, Cosmetic Bags, and more"
     },
     {
-      "sender": "Medium Events",
-      "subject": "Medium Day is happening today!"
+      "sender": "chrislovesjulia",
+      "subject": "9 things for a boy's bedroom"
     },
     {
-      "sender": "KICKS CREW",
-      "subject": "Your Next Game-Day Pair Awaits"
+      "sender": "firebase-noreply@google.com",
+      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
     },
     {
-      "sender": "MICHELIN Guide",
-      "subject": "And the winners are..."
+      "sender": "PayPal",
+      "subject": "Mary Jane, your August account statement is available."
     },
     {
-      "sender": "COS",
-      "subject": "Jeans: daily signatures"
+      "sender": "Rat & Boa USA",
+      "subject": "Back In Stock"
     },
     {
-      "sender": "Lowe\u2019s Home Improvement",
-      "subject": "Fall\u2019s #trending items just dropped \ud83c\udf41"
+      "sender": "Amazon.com",
+      "subject": "Ordered 1 item: Electronics"
     },
     {
-      "sender": "TurboTax Monthly",
-      "subject": "\ud83c\udfcb\ufe0f\u200d\u2640\ufe0f Mary, is your money working hard enough?"
+      "sender": "NBC",
+      "subject": "The Traitors: New Blood Awaits..."
     },
     {
-      "sender": "Support at TripIt",
-      "subject": "Mary Jane, check out your TripIt itinerary for"
+      "sender": "PNC Branch Survey",
+      "subject": "PNC Bank Branch Feedback - Take our quick Survey"
     },
     {
-      "sender": "Shameless Snacks",
-      "subject": "Ten times more fiber than sugar. Yes, really."
+      "sender": "The 101: Fund",
+      "subject": "\u2b50\ufe0f\ud83c\udf55\ud83c\udf7bPsst\u2026 Hang out with 101: Fund!"
     }
   ],
   "items": [
@@ -569,6 +580,13 @@ window.EMAIL_DATA = {
       "date": "2026-09-06",
       "id": "1a0783eac2b1ba87",
       "sender": "return@amazon.com"
+    },
+    {
+      "type": "delivery",
+      "title": "Shipped 3 items: Bakeware, Cosmetic Bags, and more",
+      "date": "2026-09-18",
+      "id": "1a0b56708b19186e",
+      "sender": "Amazon.com"
     }
   ]
 };
