@@ -519,47 +519,47 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 12,
+  "unreadCount": 17,
   "threads": [
     {
-      "sender": "Shop Jamie Haller",
-      "subject": "1st Dibs // Introducing Leather Head to Toe"
+      "sender": "Snowden Posts",
+      "subject": "***De Lorenzo's Tomato Pies***"
     },
     {
-      "sender": "Google Nest",
-      "subject": "Mary Jane, update your Google Home Premium Standard (Home) payment information"
+      "sender": "Sleep-Insights@sleeptracker.com",
+      "subject": "Sleeptracker-AI\u00ae Insights for 19 Sep 2026"
     },
     {
-      "sender": "WAT THE BRAND",
-      "subject": "The Jacket Everyone\u2019s Wearing!"
+      "sender": "Balaji Srinivasan",
+      "subject": "Re: Ipsen / causaLens: My COO would like to connect"
     },
     {
-      "sender": "PURE Insurance",
-      "subject": "You have new policy documents"
+      "sender": "Schoolhouse",
+      "subject": "Stripes that tell a story"
     },
     {
-      "sender": "Tony Bianco US",
-      "subject": "SAVANT HEEL"
+      "sender": "Suzie Kondi",
+      "subject": "The Anna Jumpsuit Now in Velour"
     },
     {
-      "sender": "Amazon.com",
-      "subject": "Shipped 2 items: Hair Care"
+      "sender": "Grok xAI",
+      "subject": "Your receipt from Grok xAI #2355-4036"
     },
     {
-      "sender": "Lydia from Claude Code",
-      "subject": "This week in Claude Code: Projects, and Claude Design, Slides & Docs on desktop and web"
+      "sender": "Unroll.Me",
+      "subject": "\ud83c\udf89 Today's Rollup"
     },
     {
-      "sender": "NBC",
-      "subject": "Click to Reveal Your NBC Fall Lineup \ud83c\udf42"
+      "sender": "Venmo",
+      "subject": "Your August 2026 transaction history"
     },
     {
-      "sender": "DoorDash",
-      "subject": "Details of your no-contact delivery from Poke Bros."
+      "sender": "BrandsMart Deals",
+      "subject": "\ud83c\udfc8 A Bigger TV for Football Season"
     },
     {
-      "sender": "Pura",
-      "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
+      "sender": "Medium Daily Digest",
+      "subject": "Linear Regression: When it feels complicated, you\u2019re probably reading a stats book | Irene Markelic, PhD in Towards AI"
     }
   ],
   "items": [
