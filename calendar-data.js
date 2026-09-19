@@ -519,8 +519,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 21,
+  "unreadCount": 22,
   "threads": [
+    {
+      "sender": "Google",
+      "subject": "You shared some Google Account data with Adobe Acrobat"
+    },
+    {
+      "sender": "ULTA Beauty",
+      "subject": "Your e-receipt from ULTA"
+    },
     {
       "sender": "Shop Jamie Haller",
       "subject": "1st Dibs // THE HIGH VAMP PREORDER"
@@ -552,14 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Schoolhouse",
       "subject": "Stripes that tell a story"
-    },
-    {
-      "sender": "Suzie Kondi",
-      "subject": "The Anna Jumpsuit Now in Velour"
-    },
-    {
-      "sender": "Grok xAI",
-      "subject": "Your receipt from Grok xAI #2355-4036"
     }
   ],
   "items": [
