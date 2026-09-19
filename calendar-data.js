@@ -533,6 +533,14 @@ window.EMAIL_DATA = {
   "unreadCount": 7,
   "threads": [
     {
+      "sender": "NBC",
+      "subject": "Click to Reveal Your NBC Fall Lineup \ud83c\udf42"
+    },
+    {
+      "sender": "DoorDash",
+      "subject": "Details of your no-contact delivery from Poke Bros."
+    },
+    {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
     },
@@ -551,14 +559,6 @@ window.EMAIL_DATA = {
     {
       "sender": "PayPal",
       "subject": "Mary Jane, your August account statement is available."
-    },
-    {
-      "sender": "Rat & Boa USA",
-      "subject": "Back In Stock"
-    },
-    {
-      "sender": "Amazon.com",
-      "subject": "Ordered 1 item: Electronics"
     }
   ],
   "items": [
