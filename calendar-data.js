@@ -519,20 +519,8 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 17,
+  "unreadCount": 14,
   "threads": [
-    {
-      "sender": "Snowden Posts",
-      "subject": "***De Lorenzo's Tomato Pies***"
-    },
-    {
-      "sender": "Sleep-Insights@sleeptracker.com",
-      "subject": "Sleeptracker-AI\u00ae Insights for 19 Sep 2026"
-    },
-    {
-      "sender": "Balaji Srinivasan",
-      "subject": "Re: Ipsen / causaLens: My COO would like to connect"
-    },
     {
       "sender": "Schoolhouse",
       "subject": "Stripes that tell a story"
@@ -560,6 +548,18 @@ window.EMAIL_DATA = {
     {
       "sender": "Medium Daily Digest",
       "subject": "Linear Regression: When it feels complicated, you\u2019re probably reading a stats book | Irene Markelic, PhD in Towards AI"
+    },
+    {
+      "sender": "Joel Grimes",
+      "subject": "lets make your work gallery-ready"
+    },
+    {
+      "sender": "Google Nest",
+      "subject": "Mary Jane, update your Google Home Premium Standard (Home) payment information"
+    },
+    {
+      "sender": "NBC",
+      "subject": "Click to Reveal Your NBC Fall Lineup \ud83c\udf42"
     }
   ],
   "items": [
