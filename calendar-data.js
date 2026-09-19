@@ -519,8 +519,16 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 10,
+  "unreadCount": 12,
   "threads": [
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // Introducing Leather Head to Toe"
+    },
+    {
+      "sender": "Google Nest",
+      "subject": "Mary Jane, update your Google Home Premium Standard (Home) payment information"
+    },
     {
       "sender": "WAT THE BRAND",
       "subject": "The Jacket Everyone\u2019s Wearing!"
@@ -552,14 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Pura",
       "subject": "Your Office diffuser is out of Himalayan Salt & Rosewater"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "Eyes, skin, hair before midnight"
-    },
-    {
-      "sender": "Gem + Jewel",
-      "subject": "\ud83d\udc8e Our Top 5 Jewelry Looks From the 2026 Emmy Awards"
     }
   ],
   "items": [
