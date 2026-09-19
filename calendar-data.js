@@ -519,8 +519,36 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 14,
+  "unreadCount": 21,
   "threads": [
+    {
+      "sender": "Shop Jamie Haller",
+      "subject": "1st Dibs // THE HIGH VAMP PREORDER"
+    },
+    {
+      "sender": "House of Beauty by Fran\u00e7ois",
+      "subject": "Thinking about microblading? Let's talk about the investment!"
+    },
+    {
+      "sender": "MyLowe's Rewards",
+      "subject": "These concert perks? Goated \ud83e\udea9"
+    },
+    {
+      "sender": "A BATHING APE\u00ae",
+      "subject": "BAPE\u00ae NEW ARRIVALS: \u00a9SAINT\u00a0Mxxxxx, COLOR CAMO COLLECTION, & MORE"
+    },
+    {
+      "sender": "Moda Operandi",
+      "subject": "NEW & READY TO SHIP: Secure your favorite pieces now"
+    },
+    {
+      "sender": "University of Toronto",
+      "subject": "[CORRECTION] U of T ranked among world's top 25 universities by ShanghaiRanking Consultancy"
+    },
+    {
+      "sender": "SIMONMILLER",
+      "subject": "Our Most Wanted Knits"
+    },
     {
       "sender": "Schoolhouse",
       "subject": "Stripes that tell a story"
@@ -532,34 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Grok xAI",
       "subject": "Your receipt from Grok xAI #2355-4036"
-    },
-    {
-      "sender": "Unroll.Me",
-      "subject": "\ud83c\udf89 Today's Rollup"
-    },
-    {
-      "sender": "Venmo",
-      "subject": "Your August 2026 transaction history"
-    },
-    {
-      "sender": "BrandsMart Deals",
-      "subject": "\ud83c\udfc8 A Bigger TV for Football Season"
-    },
-    {
-      "sender": "Medium Daily Digest",
-      "subject": "Linear Regression: When it feels complicated, you\u2019re probably reading a stats book | Irene Markelic, PhD in Towards AI"
-    },
-    {
-      "sender": "Joel Grimes",
-      "subject": "lets make your work gallery-ready"
-    },
-    {
-      "sender": "Google Nest",
-      "subject": "Mary Jane, update your Google Home Premium Standard (Home) payment information"
-    },
-    {
-      "sender": "NBC",
-      "subject": "Click to Reveal Your NBC Fall Lineup \ud83c\udf42"
     }
   ],
   "items": [
