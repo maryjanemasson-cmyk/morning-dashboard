@@ -1,16 +1,5 @@
 window.CALENDAR_EVENTS = [
   {
-    "summary": "Reservation at Roots Ocean Prime",
-    "location": "Roots Ocean Prime, 98 University Place, Princeton, NJ 08540",
-    "description": "To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\n\nThis event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM6PkB8vwE2V8VXLAcP75wT4R5RHZU8m0w\n",
-    "startTime": "2026-09-18T17:15:00-04:00",
-    "startDate": "",
-    "endTime": "2026-09-18T18:15:00-04:00",
-    "endDate": "",
-    "calendar": "Personal",
-    "colorId": ""
-  },
-  {
     "summary": "Nathaniel \u2014 Math",
     "location": "",
     "description": "",
@@ -530,8 +519,28 @@ window.TRAVEL_DATA = [
 ];
 
 window.EMAIL_DATA = {
-  "unreadCount": 7,
+  "unreadCount": 10,
   "threads": [
+    {
+      "sender": "WAT THE BRAND",
+      "subject": "The Jacket Everyone\u2019s Wearing!"
+    },
+    {
+      "sender": "PURE Insurance",
+      "subject": "You have new policy documents"
+    },
+    {
+      "sender": "Tony Bianco US",
+      "subject": "SAVANT HEEL"
+    },
+    {
+      "sender": "Amazon.com",
+      "subject": "Shipped 2 items: Hair Care"
+    },
+    {
+      "sender": "Lydia from Claude Code",
+      "subject": "This week in Claude Code: Projects, and Claude Design, Slides & Docs on desktop and web"
+    },
     {
       "sender": "NBC",
       "subject": "Click to Reveal Your NBC Fall Lineup \ud83c\udf42"
@@ -551,14 +560,6 @@ window.EMAIL_DATA = {
     {
       "sender": "Gem + Jewel",
       "subject": "\ud83d\udc8e Our Top 5 Jewelry Looks From the 2026 Emmy Awards"
-    },
-    {
-      "sender": "firebase-noreply@google.com",
-      "subject": "[Firebase] Your Realtime Database 'morning-dashboard-4c62b-default-rtdb' has insecure rules"
-    },
-    {
-      "sender": "PayPal",
-      "subject": "Mary Jane, your August account statement is available."
     }
   ],
   "items": [
@@ -571,9 +572,9 @@ window.EMAIL_DATA = {
     },
     {
       "type": "delivery",
-      "title": "Shipped 3 items: Bakeware, Cosmetic Bags, and more",
-      "date": "2026-09-18",
-      "id": "1a0b56708b19186e",
+      "title": "Shipped 2 items: Hair Care",
+      "date": "2026-09-19",
+      "id": "1a0b7d0db535fd13",
       "sender": "Amazon.com"
     }
   ]
